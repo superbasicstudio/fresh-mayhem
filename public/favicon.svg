@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#080808"/>
+  <g transform="translate(4,4)">
+    <!-- Top-left: 8-bit stepped arcs -->
+    <path d="M2 12 h2 v-2 h2 v-2 h2 v-2 h2 v-2 h2" stroke="#7fff00" stroke-width="2" stroke-linejoin="miter" fill="none" opacity="0.2"/>
+    <path d="M5 12 h1 v-1 h2 v-2 h2 v-2 h2" stroke="#7fff00" stroke-width="2" stroke-linejoin="miter" fill="none" opacity="0.4"/>
+    <path d="M8 12 h1 v-1 h1 v-1 h2" stroke="#7fff00" stroke-width="2" stroke-linejoin="miter" fill="none" opacity="0.6"/>
+    <!-- Center -->
+    <circle cx="12" cy="12" r="2.5" fill="#7fff00" opacity="0.9"/>
+    <!-- Bottom-right: smooth arcs -->
+    <path d="M12 16a4 4 0 0 1 4-4" stroke="#7fff00" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.6"/>
+    <path d="M12 19a7 7 0 0 1 7-7" stroke="#7fff00" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4"/>
+    <path d="M12 22a10 10 0 0 1 10-10" stroke="#7fff00" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.2"/>
+  </g>
+</svg>

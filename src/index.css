@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2 {
+    font-family: "Press Start 2P", monospace;
+  }
+
+  :focus-visible {
+    outline: 2px solid #7fff00;
+    outline-offset: 2px;
+  }
+}
+
+/* Hardware zone hover transitions (PortaPack SVG mockup) */
+.hw-zone { transition: filter 0.2s ease-out; }
+.hw-zone rect,
+.hw-zone circle,
+.hw-zone text,
+.hw-zone line {
+  transition: fill 0.2s ease-out, stroke 0.2s ease-out;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

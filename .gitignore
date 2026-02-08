@@ -1,0 +1,68 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+._*
+Desktop.ini
+ehthumbs.db
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.bak
+*.sublime-project
+*.sublime-workspace
+
+# Environment and secrets
+.env
+.env.*
+.env*.local
+*.local
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test output
+coverage/
+test-output/
+.vitest-results/
+
+# Vercel
+.vercel
+
+# Claude Code local data
+.claude/
+
+# Claude Anchor framework files (private)
+_RAM.md
+_GOLDEN-RULES.md
+_TODOS.md
+_LESSONS-LEARNED.md
+_VOICE-AND-TONE.md
+_CONVERSATION-PREFERENCES.md
+_DESIGN-PREFERENCES.md
+_LONG-TERM-MEMORY.md
+_SHORT-TERM-MEMORY.md
+_SYSTEM_ARCHITECTURE.md
+_PROJECT-PROMOTION-IDEAS.md
+CLAUDE.md
+
+# OS temp files
+*.tmp
+*.temp
