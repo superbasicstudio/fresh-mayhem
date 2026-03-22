@@ -19,7 +19,7 @@ export default function QuickStartPage() {
   }, []);
 
   return (
-    <PageSection id="quickstart" title="HackRF + PortaPack — Quick Start" subtitle="Step-by-step walkthrough for your first FM receive session on the HackRF One with Mayhem firmware. Check off each step as you go — progress is saved locally." icon={RocketLaunchIcon}>
+    <PageSection id="quickstart" title="HackRF + PortaPack — Quick Start" subtitle="Complete setup walkthrough from unboxing to your first FM receive session. Covers SD card prep, firmware, calibration, safety, and shutdown. Check off each step — progress is saved locally." icon={RocketLaunchIcon}>
       <div className="flex items-center justify-between mb-3">
         <button
           onClick={handleClear}
@@ -37,7 +37,7 @@ export default function QuickStartPage() {
       </div>
       <div className="space-y-2" key={resetKey}>
         {quickStartSteps.map((step, i) => (
-          <QuickStartStep key={i} num={i + 1} text={step} storageKey={`qs-step-${i}`} />
+          <QuickStartStep key={i} num={i + 1} text={step.text} section={step.section} storageKey={`qs-step-${i}`} />
         ))}
       </div>
     </PageSection>

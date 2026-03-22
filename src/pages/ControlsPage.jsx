@@ -1,4 +1,4 @@
-import { AdjustmentsHorizontalIcon } from '@heroicons/react/24/outline';
+import { TbDeviceGamepad } from 'react-icons/tb';
 import PageSection from '../../components/PageSection';
 import ExpandableCard from '../../components/ExpandableCard';
 import PortaPackMockup from '../../components/viz/PortaPackMockup';
@@ -8,7 +8,7 @@ import ExpandableImage from '../../components/ExpandableImage';
 
 export default function ControlsPage() {
   return (
-    <PageSection id="controls" title="Controls & Navigation" subtitle="Interactive PortaPack H4M simulator, gain chain calculator, and waterfall display. Learn the hardware controls before powering on." icon={AdjustmentsHorizontalIcon}>
+    <PageSection id="controls" title="Controls & Navigation" subtitle="Interactive PortaPack H4M simulator, gain chain calculator, and waterfall display. Learn the hardware controls before powering on." icon={TbDeviceGamepad}>
       <div className="grid md:grid-cols-2 gap-3">
         <ExpandableCard title="PortaPack H4M" modalMaxWidth="max-w-7xl">
           {({ expanded }) => <PortaPackMockup expanded={expanded} />}
@@ -50,10 +50,10 @@ export default function ControlsPage() {
         <div className="card bg-base-200 p-4">
           <h3 className="font-semibold text-sm mb-2 text-error">Emergency TX Stop</h3>
           <ol className="text-sm space-y-1.5 text-base-content/60 leading-relaxed list-none">
-            <li className="flex gap-2"><span className="badge badge-error badge-sm font-mono text-[10px] !text-black shrink-0">1</span> Press Start/Stop in the TX app</li>
-            <li className="flex gap-2"><span className="badge badge-error badge-sm font-mono text-[10px] !text-black shrink-0">2</span> Tap back arrow to exit TX app</li>
-            <li className="flex gap-2"><span className="badge badge-error badge-sm font-mono text-[10px] !text-black shrink-0">3</span> Press RESET button (panic)</li>
-            <li className="flex gap-2"><span className="badge badge-error badge-sm font-mono text-[10px] !text-black shrink-0">4</span> Power switch OFF (nuclear)</li>
+            <li className="flex gap-2"><span className="fm-badge-number shrink-0">1</span> Press Start/Stop in the TX app</li>
+            <li className="flex gap-2"><span className="fm-badge-number shrink-0">2</span> Tap back arrow to exit TX app</li>
+            <li className="flex gap-2"><span className="fm-badge-number shrink-0">3</span> Press RESET button (panic)</li>
+            <li className="flex gap-2"><span className="fm-badge-number shrink-0">4</span> Power switch OFF (nuclear)</li>
           </ol>
         </div>
         <div className="md:col-span-2">

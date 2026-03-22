@@ -2,29 +2,24 @@ import { useState, useEffect, useCallback } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import HackRFIcon from './HackRFIcon';
 import {
-  HomeIcon,
-  AdjustmentsHorizontalIcon,
-  SignalIcon,
-  BoltIcon,
   WrenchScrewdriverIcon,
   ShieldExclamationIcon,
-  ChartBarIcon,
-  FilmIcon,
   RocketLaunchIcon,
   ChevronLeftIcon,
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
+import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook } from 'react-icons/tb';
 
 const sections = [
-  { path: '/', label: 'Overview', icon: HomeIcon },
-  { path: '/controls', label: 'Controls', icon: AdjustmentsHorizontalIcon },
-  { path: '/receive', label: 'Receive Apps', icon: SignalIcon },
-  { path: '/transmit', label: 'Transmit Apps', icon: BoltIcon },
+  { path: '/', label: 'Overview', icon: TbRadar },
+  { path: '/controls', label: 'Controls', icon: TbDeviceGamepad },
+  { path: '/receive', label: 'Receive (RX) Apps', icon: TbAntenna },
+  { path: '/transmit', label: 'Transmit (TX) Apps', icon: TbBroadcast },
   { path: '/tools', label: 'Tools', icon: WrenchScrewdriverIcon },
   { path: '/safety', label: 'Safety Center', icon: ShieldExclamationIcon },
-  { path: '/frequencies', label: 'Frequencies', icon: ChartBarIcon },
-  { path: '/learn', label: 'Videos / Learning', icon: FilmIcon },
+  { path: '/frequencies', label: 'Frequencies', icon: TbWaveSine },
+  { path: '/learn', label: 'Videos / Learning', icon: TbBook },
   { path: '/quickstart', label: 'Quick Start', icon: RocketLaunchIcon },
 ];
 
@@ -74,12 +69,12 @@ export default function Sidebar() {
             className={({ isActive }) =>
               `flex items-center ${!isMobile && collapsed ? 'justify-center px-0 py-2.5' : 'gap-2.5 px-3 py-2.5'} rounded-lg text-sm transition-colors ${
                 isActive
-                  ? 'text-primary bg-primary/10'
-                  : 'text-base-content/70 hover:text-base-content hover:bg-base-300/60'
+                  ? 'text-primary bg-primary/10 border border-primary/30'
+                  : 'text-base-content/70 hover:text-base-content hover:bg-base-300/60 border border-transparent'
               }`
             }
           >
-            <s.icon className="w-[18px] h-[18px] shrink-0 opacity-60" />
+            <span className="w-[18px] h-[18px] shrink-0 opacity-60 flex items-center justify-center"><s.icon className="w-full h-full" /></span>
             {(isMobile || !collapsed) && <span className="font-medium whitespace-nowrap">{s.label}</span>}
           </NavLink>
           {!isMobile && collapsed && (

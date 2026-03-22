@@ -197,16 +197,16 @@ export default function PortaPackMockup({ expanded = false }) {
   const infoLines = info ? wrapText(info.text, infoChars) : [];
 
   return (
-    <div className={`flex ${expanded ? 'flex-row gap-6' : 'flex-col sm:flex-row gap-4'} items-start`}>
+    <div className={`flex ${expanded ? 'flex-row gap-8 items-center justify-center min-h-[70vh]' : 'flex-col sm:flex-row gap-4 items-start'}`}>
       {/* Interactive device */}
       <div
         ref={containerRef}
         tabIndex={0}
-        className={`outline-none shrink-0 ${expanded ? 'sticky top-0 self-start' : ''}`}
+        className={`outline-none shrink-0 ${expanded ? '' : ''}`}
         role="application"
         aria-label="PortaPack H4M simulator. Use arrow keys to navigate menus, Enter to select, Left/Backspace to go back."
       >
-        <svg viewBox={`0 0 ${vw} ${vh}`} className={expanded ? 'w-64 lg:w-72' : 'w-56 sm:w-64'}>
+        <svg viewBox={`0 0 ${vw} ${vh}`} className={expanded ? 'w-72 md:w-80 lg:w-96' : 'w-56 sm:w-64'}>
           <defs>
             <linearGradient id="bz" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#1a1a1a" /><stop offset="100%" stopColor="#111" />

@@ -43,6 +43,46 @@
   height: 100%;
 }
 
+/* Shared page title style — used by HeroHeader h1 and PageSection h2 */
+.page-title {
+  @apply font-display text-sm sm:text-lg lg:text-xl text-primary tracking-wider leading-relaxed;
+}
+
+/* Badge system — consistent status indicators across the app */
+.fm-badge {
+  @apply badge badge-sm font-bold tracking-wider font-mono text-[10px] border-0;
+}
+.fm-badge-safe {
+  @apply badge badge-sm font-bold tracking-wider font-mono text-[10px] border-0 bg-white text-black;
+}
+.fm-badge-caution {
+  @apply badge badge-sm font-bold tracking-wider font-mono text-[10px] border-0 badge-warning text-black;
+}
+.fm-badge-danger {
+  @apply badge badge-sm font-bold tracking-wider font-mono text-[10px] border-0 badge-error text-black;
+}
+.fm-badge-extreme {
+  @apply badge badge-sm font-bold tracking-wider font-mono text-[10px] bg-error/20 text-error border border-error/30;
+}
+.fm-badge-utility {
+  @apply badge badge-sm font-bold tracking-wider font-mono text-[10px] border-0 bg-base-content/80 text-base-200;
+}
+.fm-badge-number {
+  @apply badge badge-sm font-bold tracking-wider font-mono text-[10px] border-0 bg-white text-black;
+}
+
+/* 404 page icon — slow drift animation */
+@keyframes signalDrift {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.25; }
+  25% { transform: translateY(-6px) rotate(3deg); opacity: 0.35; }
+  50% { transform: translateY(-2px) rotate(-2deg); opacity: 0.3; }
+  75% { transform: translateY(-8px) rotate(1deg); opacity: 0.2; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 0.25; }
+}
+.animate-signal-drift {
+  animation: signalDrift 8s ease-in-out infinite;
+}
+
 /* Hide scrollbar for horizontal-scroll tab bars on mobile */
 .scrollbar-none {
   -ms-overflow-style: none;

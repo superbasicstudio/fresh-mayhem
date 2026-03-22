@@ -1,4 +1,4 @@
-import { ChartBarIcon } from '@heroicons/react/24/outline';
+import { TbWaveSine } from 'react-icons/tb';
 import PageSection from '../../components/PageSection';
 import ExpandableCard from '../../components/ExpandableCard';
 import ExpandableImage from '../../components/ExpandableImage';
@@ -7,8 +7,8 @@ import { frequencies } from '../../data/safety';
 
 export default function FrequenciesPage() {
   return (
-    <PageSection id="frequencies" title="Frequency Reference" subtitle="RF spectrum coverage from 1 MHz to 6 GHz — no-go zones, legal TX bands, and penalty reference for the US." icon={ChartBarIcon}>
-      <ExpandableCard title="RF Spectrum Coverage">
+    <PageSection id="frequencies" title="Learn About Radio Frequencies (RF)" subtitle="RF spectrum coverage from 1 MHz to 6 GHz — no-go zones, legal TX bands, and penalty reference for the US." icon={TbWaveSine}>
+      <ExpandableCard title="RF Spectrum Coverage" titleColor="text-base-content">
         {() => <FrequencySpectrum />}
       </ExpandableCard>
       <div className="mt-3">

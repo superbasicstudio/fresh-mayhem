@@ -10,9 +10,9 @@ import {
 
 // Visual config per signal (static — not in React state)
 const SIGNAL_CONFIG = [
-  { icon: MusicalNoteIcon, activeClass: 'btn-warning', color: '#facc15', ring: 'ring-warning/40' },
-  { icon: CpuChipIcon, activeClass: 'btn-success', color: '#4ade80', ring: 'ring-success/40' },
-  { icon: SignalIcon, activeClass: 'btn-secondary', color: '#a78bfa', ring: 'ring-secondary/40' },
+  { icon: MusicalNoteIcon, color: '#facc15', bg: 'bg-yellow-500/15', border: 'border-yellow-500/50', text: 'text-yellow-400', dot: 'bg-yellow-400', hover: 'hover:bg-yellow-500/25 hover:border-yellow-400/70 hover:shadow-yellow-500/10 hover:shadow-md' },
+  { icon: CpuChipIcon, color: '#4ade80', bg: 'bg-emerald-500/15', border: 'border-emerald-500/50', text: 'text-emerald-400', dot: 'bg-emerald-400', hover: 'hover:bg-emerald-500/25 hover:border-emerald-400/70 hover:shadow-emerald-500/10 hover:shadow-md' },
+  { icon: SignalIcon, color: '#a78bfa', bg: 'bg-violet-500/15', border: 'border-violet-500/50', text: 'text-violet-400', dot: 'bg-violet-400', hover: 'hover:bg-violet-500/25 hover:border-violet-400/70 hover:shadow-violet-500/10 hover:shadow-md' },
 ];
 
 const DEFAULT_SIGNALS = [
@@ -45,7 +45,7 @@ export default function WaterfallSim({ expanded = false }) {
   const tooltipRef = useRef(null);
   const instanceRef = useRef(null);
   const [gain, setGain] = useState(20);
-  const [speed, setSpeed] = useState(0);
+  const [speed, setSpeed] = useState(1);
   const [signals, setSignals] = useState(DEFAULT_SIGNALS);
   const [paused, setPaused] = useState(false);
   const [eventCount, setEventCount] = useState(0);
@@ -407,7 +407,11 @@ export default function WaterfallSim({ expanded = false }) {
       <div className="flex items-center gap-3 mb-3">
         <button
           onClick={togglePause}
-          className={`btn btn-xs gap-1 ${paused ? 'btn-primary' : 'btn-ghost'}`}
+          className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-mono transition-all border ${
+            paused
+              ? 'bg-cyan-500/15 border-cyan-500/40 text-cyan-400'
+              : 'bg-base-300/50 border-base-content/10 text-base-content/50 hover:text-base-content/70'
+          }`}
           aria-label={paused ? 'Resume waterfall' : 'Pause waterfall'}
         >
           {paused
@@ -461,7 +465,7 @@ export default function WaterfallSim({ expanded = false }) {
         </div>
       </div>
 
-      {/* Signal toggles — each with unique color, icon, style */}
+      {/* Signal toggles — each with unique color identity */}
       <div className="flex flex-wrap gap-2 mt-4" role="group" aria-label="Signal toggles">
         {signals.map((s, i) => {
           const cfg = SIGNAL_CONFIG[i];
@@ -470,13 +474,18 @@ export default function WaterfallSim({ expanded = false }) {
             <button
               key={s.label}
               onClick={() => toggleSignal(i)}
-              className={`btn btn-sm gap-1.5 ${s.enabled ? cfg.activeClass : 'btn-ghost'} ${s.enabled ? 'ring-2 ' + cfg.ring : ''}`}
+              className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm transition-all duration-150 border cursor-pointer ${
+                s.enabled
+                  ? `${cfg.bg} ${cfg.border} ${cfg.text} ${cfg.hover}`
+                  : 'bg-base-300/50 border-base-content/10 text-base-content/30 hover:bg-base-300 hover:border-base-content/20 hover:text-base-content/50'
+              }`}
               aria-pressed={s.enabled}
               aria-label={`${s.label} at ${s.freq}: ${s.enabled ? 'on' : 'off'}`}
             >
-              <Icon className="w-4 h-4" aria-hidden="true" />
-              <span className="font-bold">{s.label}</span>
-              <span className="opacity-70 text-xs">{s.freq}</span>
+              <span className={`w-2 h-2 rounded-full transition-colors ${s.enabled ? cfg.dot : 'bg-base-content/20'}`} />
+              <Icon className="w-3.5 h-3.5" aria-hidden="true" />
+              <span className="font-medium">{s.label}</span>
+              <span className="opacity-60 text-xs font-mono">{s.freq}</span>
             </button>
           );
         })}

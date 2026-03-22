@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { SignalIcon } from '@heroicons/react/24/outline';
+import { TbAntenna } from 'react-icons/tb';
 import PageSection from '../../components/PageSection';
 import { RxAppCard } from '../../components/AppCard';
 import SafetyBadge from '../../components/SafetyBadge';
@@ -18,7 +18,7 @@ export default function ReceivePage() {
   });
 
   return (
-    <PageSection id="rx-apps" title="Receive Apps" subtitle="All 29 receive-only applications in Mayhem firmware. No transmission involved — legality of passive reception varies by region. Always check local laws." icon={SignalIcon} badge={<SafetyBadge level="safe" />}>
+    <PageSection id="rx-apps" title="Receive Apps" subtitle="All 29 receive-only applications in Mayhem firmware. No transmission involved — legality of passive reception varies by region. Always check local laws." icon={TbAntenna} badge={<SafetyBadge level="safe" />}>
       <CategoryBreakdown onFilterCategory={setRxCategory} activeCategory={rxCategory} />
       <div className="mb-3 flex flex-wrap items-center gap-2 sm:gap-3">
         <SearchFilter value={rxFilter} onChange={setRxFilter} placeholder="Filter receive apps..." aria-label="Filter receive apps" />

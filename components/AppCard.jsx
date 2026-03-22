@@ -44,8 +44,9 @@ const TOOL_ICONS = {
 
 export function RxAppCard({ app }) {
   return (
-    <div className="card bg-base-200">
-      <div className="card-body p-3 sm:p-4">
+    <div className="card bg-base-200 relative overflow-hidden">
+      <SignalIcon className="absolute -bottom-3 -right-3 w-20 h-20 text-success/[0.04] pointer-events-none" aria-hidden="true" />
+      <div className="card-body p-3 sm:p-4 relative">
         <div className="flex items-center justify-between">
           <h3 className="card-title text-base font-semibold text-success gap-1.5">
             <SignalIcon className="w-4 h-4 text-base-content/40 shrink-0" />
@@ -81,8 +82,9 @@ const DANGER_DOT_COLORS = {
 
 export function TxAppCard({ app }) {
   return (
-    <div className="card bg-base-200">
-      <div className="card-body p-3 sm:p-4">
+    <div className="card bg-base-200 relative overflow-hidden">
+      <ExclamationTriangleIcon className="absolute -bottom-3 -right-3 w-20 h-20 text-error/[0.04] pointer-events-none" aria-hidden="true" />
+      <div className="card-body p-3 sm:p-4 relative">
         <div className="flex items-center justify-between">
           <h3 className="card-title text-base font-semibold gap-1.5">
             <ExclamationTriangleIcon className="w-4 h-4 shrink-0 text-base-content/40" />
@@ -107,14 +109,15 @@ export function TxAppCard({ app }) {
 export function ToolCard({ tool }) {
   const Icon = TOOL_ICONS[tool.name] || WrenchIcon;
   return (
-    <div className="card bg-base-200">
-      <div className="card-body p-3 sm:p-4">
+    <div className="card bg-base-200 relative overflow-hidden">
+      <Icon className="absolute -bottom-3 -right-3 w-20 h-20 text-base-content/[0.03] pointer-events-none" aria-hidden="true" />
+      <div className="card-body p-3 sm:p-4 relative">
         <div className="flex items-center justify-between">
           <h3 className="text-base font-semibold gap-1.5 flex items-center">
             <Icon className="w-4 h-4 text-base-content/40 shrink-0" />
             {tool.name}
           </h3>
-          {tool.tx ? <SafetyBadge level="caution" /> : <span className="badge badge-ghost badge-sm font-mono text-[10px]">Utility</span>}
+          {tool.tx ? <SafetyBadge level="caution" /> : <span className="fm-badge-utility">Utility</span>}
         </div>
         <p className="text-sm text-base-content/60 leading-relaxed">{tool.description}</p>
         {tool.wiki && (

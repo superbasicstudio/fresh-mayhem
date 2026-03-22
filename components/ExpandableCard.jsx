@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { ArrowsPointingOutIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { CursorArrowRaysIcon } from '@heroicons/react/20/solid';
 
-export default function ExpandableCard({ title, children, className = '', modalMaxWidth = 'max-w-5xl' }) {
+export default function ExpandableCard({ title, children, className = '', modalMaxWidth = 'max-w-5xl', titleColor = 'text-primary' }) {
   const [expanded, setExpanded] = useState(false);
   const contentId = useId();
   const headerId = useId();
@@ -55,7 +55,7 @@ export default function ExpandableCard({ title, children, className = '', modalM
           <div className={`relative z-10 bg-base-200 rounded-xl w-full ${modalMaxWidth} max-h-[90vh] flex flex-col border border-base-content/10`}>
             {/* Header */}
             <div className="flex items-center justify-between px-5 py-3 border-b border-base-content/10 shrink-0">
-              <h3 className="font-semibold text-base text-primary" id={headerId}>{title}</h3>
+              <h3 className={`font-semibold text-base ${titleColor}`} id={headerId}>{title}</h3>
               <button
                 ref={closeRef}
                 onClick={close}
@@ -85,7 +85,7 @@ export default function ExpandableCard({ title, children, className = '', modalM
         <div className="flex items-center justify-between px-4 pt-4 pb-2">
           <div className="flex items-center gap-2">
             <CursorArrowRaysIcon className="w-3.5 h-3.5 text-primary/40" />
-            <h3 className="font-semibold text-base text-primary">{title}</h3>
+            <h3 className={`font-semibold text-base ${titleColor}`}>{title}</h3>
           </div>
           <button
             ref={triggerRef}

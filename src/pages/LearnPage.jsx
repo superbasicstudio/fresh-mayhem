@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { AcademicCapIcon, LinkIcon } from '@heroicons/react/24/outline';
+import { LinkIcon } from '@heroicons/react/24/outline';
+import { TbBook } from 'react-icons/tb';
 import PageSection from '../../components/PageSection';
 import VideoEmbed from '../../components/VideoEmbed';
 import { videos, resources } from '../../data/videos';
@@ -21,7 +22,7 @@ export default function LearnPage() {
 
   return (
     <>
-      <PageSection id="learn" title="Learn" icon={AcademicCapIcon}>
+      <PageSection id="learn" title="Learn" icon={TbBook}>
         <div className="flex gap-1.5 sm:gap-2 mb-6 mt-2 border-b border-base-content/10 pb-3 overflow-x-auto -mx-3 px-3 sm:mx-0 sm:px-0 scrollbar-none" role="tablist" aria-label="Learning content tabs">
           {videoTabs.map(({ key, label }) => (
             <button key={key} role="tab" aria-selected={videoTab === key}
