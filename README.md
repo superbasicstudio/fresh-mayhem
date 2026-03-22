@@ -3,6 +3,10 @@
 Interactive learning dashboard for the HackRF One + PortaPack H4M
 running Mayhem firmware v2.3.2.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=superbasicstudio/fresh-mayhem&type=Date)](https://star-history.com/#superbasicstudio/fresh-mayhem&Date)
+
 - 9 pages: Overview, Controls, RX Apps, TX Apps, Tools, Safety, Frequencies, Learn, Quick Start
 - Interactive PortaPack simulator with click wheel navigation
 - D3.js gain chain visualizer, frequency spectrum, danger donut
@@ -30,10 +34,6 @@ React 18, Vite 5, Tailwind CSS 3, DaisyUI 4, D3.js 7, p5.js, react-router-dom
 ## License
 
 GPL-3.0 — See LICENSE file.
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=superbasicstudio/fresh-mayhem&type=Date)](https://star-history.com/#superbasicstudio/fresh-mayhem&Date)
 
 ## Disclaimer
 
