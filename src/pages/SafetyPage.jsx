@@ -18,10 +18,10 @@ export default function SafetyPage() {
 
   return (
     <PageSection id="safety" title="Safety Center" subtitle="Common mistakes, real damage stories, TX danger ratings, and amplifier behavior for the HackRF One + PortaPack." icon={ShieldExclamationIcon}>
-      <div className="flex gap-2 mb-6 mt-2 border-b border-base-content/10 pb-3" role="tablist" aria-label="Safety information tabs">
+      <div className="flex gap-1.5 sm:gap-2 mb-6 mt-2 border-b border-base-content/10 pb-3 overflow-x-auto -mx-3 px-3 sm:mx-0 sm:px-0 scrollbar-none" role="tablist" aria-label="Safety information tabs">
         {safetyTabs.map(({ key, label }) => (
           <button key={key} role="tab" aria-selected={safetyTab === key}
-            className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors ${safetyTab === key ? 'bg-base-300 text-base-content border border-primary/50' : 'text-base-content/40 hover:text-base-content/70 hover:bg-base-300/50 border border-transparent'}`}
+            className={`px-2.5 sm:px-4 py-2 rounded-lg text-[11px] sm:text-xs font-mono transition-colors whitespace-nowrap shrink-0 ${safetyTab === key ? 'bg-base-300 text-base-content border border-primary/50' : 'text-base-content/40 hover:text-base-content/70 hover:bg-base-300/50 border border-transparent'}`}
             onClick={() => setSafetyTab(key)}>{label}</button>
         ))}
       </div>

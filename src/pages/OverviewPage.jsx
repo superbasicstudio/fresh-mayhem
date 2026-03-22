@@ -44,20 +44,20 @@ export default function OverviewPage() {
     <>
       <HeroHeader />
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
         {pages.map(p => (
-          <Link key={p.path} to={p.path} className="card bg-base-200 hover:bg-base-300 transition-colors group overflow-hidden">
+          <Link key={p.path} to={p.path} className="card bg-base-200 border border-base-content/10 hover:border-base-content/20 hover:bg-base-300 transition-colors group overflow-hidden flex-row sm:flex-col">
             {p.img && (
-              <div className="h-28 overflow-hidden">
+              <div className="w-24 sm:w-full h-auto sm:h-28 overflow-hidden shrink-0">
                 <img src={p.img} alt="" className="w-full h-full object-cover object-center opacity-60 group-hover:opacity-80 transition-opacity" loading="lazy" />
               </div>
             )}
-            <div className="p-4">
-              <div className="flex items-center gap-2.5 mb-2">
-                <p.icon className="w-5 h-5 text-base-content/40 shrink-0" />
-                <h3 className="text-sm font-semibold text-base-content/90 group-hover:text-base-content">{p.label}</h3>
+            <div className="p-3 sm:p-4 flex-1 min-w-0">
+              <div className="flex items-center gap-2 sm:gap-2.5 mb-1 sm:mb-2">
+                <p.icon className="w-4 h-4 sm:w-5 sm:h-5 text-base-content/40 shrink-0" />
+                <h3 className="text-xs sm:text-sm font-semibold text-base-content/90 group-hover:text-base-content truncate">{p.label}</h3>
               </div>
-              <p className="text-xs text-base-content/50 leading-relaxed mb-2">{p.desc}</p>
+              <p className="text-[11px] sm:text-xs text-base-content/50 leading-relaxed mb-1.5 sm:mb-2 line-clamp-2">{p.desc}</p>
               {p.path === '/quickstart' ? (
                 <div className="flex items-center gap-2">
                   <div className="flex-1 bg-base-300 rounded-full h-1.5">

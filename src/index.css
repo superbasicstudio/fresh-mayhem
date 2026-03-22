@@ -42,3 +42,12 @@
   width: 100%;
   height: 100%;
 }
+
+/* Hide scrollbar for horizontal-scroll tab bars on mobile */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

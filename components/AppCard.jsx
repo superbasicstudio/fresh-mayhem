@@ -45,7 +45,7 @@ const TOOL_ICONS = {
 export function RxAppCard({ app }) {
   return (
     <div className="card bg-base-200">
-      <div className="card-body p-4">
+      <div className="card-body p-3 sm:p-4">
         <div className="flex items-center justify-between">
           <h3 className="card-title text-base font-semibold text-success gap-1.5">
             <SignalIcon className="w-4 h-4 text-base-content/40 shrink-0" />
@@ -82,7 +82,7 @@ const DANGER_DOT_COLORS = {
 export function TxAppCard({ app }) {
   return (
     <div className="card bg-base-200">
-      <div className="card-body p-4">
+      <div className="card-body p-3 sm:p-4">
         <div className="flex items-center justify-between">
           <h3 className="card-title text-base font-semibold gap-1.5">
             <ExclamationTriangleIcon className="w-4 h-4 shrink-0 text-base-content/40" />
@@ -108,7 +108,7 @@ export function ToolCard({ tool }) {
   const Icon = TOOL_ICONS[tool.name] || WrenchIcon;
   return (
     <div className="card bg-base-200">
-      <div className="card-body p-4">
+      <div className="card-body p-3 sm:p-4">
         <div className="flex items-center justify-between">
           <h3 className="text-base font-semibold gap-1.5 flex items-center">
             <Icon className="w-4 h-4 text-base-content/40 shrink-0" />

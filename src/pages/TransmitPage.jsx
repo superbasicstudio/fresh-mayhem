@@ -24,7 +24,7 @@ export default function TransmitPage() {
 
       <DangerDonut onFilterDanger={setDangerFilter} activeFilter={dangerFilter} />
 
-      <div className="mb-3 mt-4 flex items-center gap-3">
+      <div className="mb-3 mt-4 flex flex-wrap items-center gap-2 sm:gap-3">
         <SearchFilter value={txFilter} onChange={setTxFilter} placeholder="Filter transmit apps..." aria-label="Filter transmit apps" />
         <span className="text-xs text-base-content/40 font-mono">{filteredTx.length} apps</span>
       </div>

@@ -12,7 +12,7 @@ export default function ToolsPage() {
           {tools.map(t => <ToolCard key={t.name} tool={t} />)}
         </div>
         <h3 className="font-semibold text-sm text-primary mb-2">Games</h3>
-        <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3">
           {games.map(g => (
             <div key={g.name} className="card bg-base-200 p-4">
               <h4 className="text-sm font-semibold">{g.name}</h4>

@@ -20,7 +20,7 @@ export default function ReceivePage() {
   return (
     <PageSection id="rx-apps" title="Receive Apps" subtitle="All 29 receive-only applications in Mayhem firmware. No transmission involved — legality of passive reception varies by region. Always check local laws." icon={SignalIcon} badge={<SafetyBadge level="safe" />}>
       <CategoryBreakdown onFilterCategory={setRxCategory} activeCategory={rxCategory} />
-      <div className="mb-3 flex items-center gap-3">
+      <div className="mb-3 flex flex-wrap items-center gap-2 sm:gap-3">
         <SearchFilter value={rxFilter} onChange={setRxFilter} placeholder="Filter receive apps..." aria-label="Filter receive apps" />
         <span className="text-xs text-base-content/40 font-mono">{filteredRx.length} apps</span>
         {rxCategory && <span className="badge badge-info badge-sm font-mono text-[10px] !text-black">{rxCategory} <button className="ml-1" onClick={() => setRxCategory(null)} aria-label={`Clear ${rxCategory} filter`}>x</button></span>}
