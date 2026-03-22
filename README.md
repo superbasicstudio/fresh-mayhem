@@ -31,6 +31,10 @@ React 18, Vite 5, Tailwind CSS 3, DaisyUI 4, D3.js 7, p5.js, react-router-dom
 
 GPL-3.0 — See LICENSE file.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=superbasicstudio/fresh-mayhem&type=Date)](https://star-history.com/#superbasicstudio/fresh-mayhem&Date)
+
 ## Disclaimer
 
 Educational resource for learning about SDR and RF concepts.
