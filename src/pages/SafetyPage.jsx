@@ -17,7 +17,7 @@ export default function SafetyPage() {
   const [safetyTab, setSafetyTab] = useState('mistakes');
 
   return (
-    <PageSection id="safety" title="Safety Center" subtitle="Common mistakes, real damage stories, TX danger ratings, and amplifier behavior for the HackRF One + PortaPack." icon={ShieldExclamationIcon}>
+    <PageSection id="safety" title="Safety Center" subtitle="Common mistakes, real damage stories, TX danger ratings, and amplifier behavior for the HackRF One + PortaPack. Information is for educational purposes only — not legal advice. Always check your local regulations." icon={ShieldExclamationIcon}>
       <div className="flex gap-1.5 sm:gap-2 mb-6 mt-2 border-b border-base-content/10 pb-3 overflow-x-auto -mx-3 px-3 sm:mx-0 sm:px-0 scrollbar-none" role="tablist" aria-label="Safety information tabs">
         {safetyTabs.map(({ key, label }) => (
           <button key={key} role="tab" aria-selected={safetyTab === key}

@@ -16,7 +16,7 @@ export default function FrequenciesPage() {
       </div>
       <div className="space-y-4 mt-4">
         <div>
-          <h3 className="font-semibold text-sm text-error mb-2">No-Go Frequencies (Federal Crimes)</h3>
+          <h3 className="font-semibold text-sm text-error mb-2">No-Go Frequencies — US Federal Restrictions</h3>
           <div className="overflow-x-auto">
             <table className="table table-xs">
               <thead><tr><th scope="col">Band</th><th scope="col">Range</th><th scope="col">Service</th></tr></thead>
@@ -42,7 +42,7 @@ export default function FrequenciesPage() {
           </div>
         </div>
         <div>
-          <h3 className="font-semibold text-sm text-warning mb-2">Legal Consequences</h3>
+          <h3 className="font-semibold text-sm text-warning mb-2">Legal Consequences (US Federal Law)</h3>
           <div className="overflow-x-auto">
             <table className="table table-xs">
               <thead><tr><th scope="col">Violation</th><th scope="col">Law</th><th scope="col">Penalty</th></tr></thead>
@@ -54,6 +54,7 @@ export default function FrequenciesPage() {
             </table>
           </div>
         </div>
+        <p className="text-[10px] text-base-content/30 mt-4 leading-relaxed">Frequency restrictions and penalties shown are based on US federal regulations (FCC/FAA). Laws vary significantly by country and region. This is not legal advice — always verify regulations in your jurisdiction before transmitting.</p>
       </div>
     </PageSection>
   );
