@@ -59,8 +59,8 @@ export default function QuickStartStep({ num, text, storageKey, section }) {
       <div className={`flex items-start gap-3 px-3 py-2.5 rounded-lg transition-colors ${checked ? 'bg-success/10' : 'bg-base-200'}`}>
         <input id={checkId} type="checkbox" className="checkbox checkbox-success checkbox-sm mt-0.5" checked={checked} onChange={toggle}
           aria-label={`Step ${num}: ${text}`} />
-        <label htmlFor={checkId} className="cursor-pointer">
-          <span className="fm-badge-number mr-2">{num}</span>
+        <label htmlFor={checkId} className={`cursor-pointer ${checked ? 'line-through text-base-content/30' : ''}`}>
+          <span className={`fm-badge-number mr-2 ${checked ? '!bg-base-content/20 !text-base-content/40' : ''}`}>{num}</span>
           <span className="text-sm font-body">{text}</span>
         </label>
       </div>

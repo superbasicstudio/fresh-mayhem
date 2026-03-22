@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="sq">
+      <path d="M 300 0 L 724 0 C 964 0, 1024 60, 1024 300 L 1024 724 C 1024 964, 964 1024, 724 1024 L 300 1024 C 60 1024, 0 964, 0 724 L 0 300 C 0 60, 60 0, 300 0 Z"/>
+    </clipPath>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7fff00" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#080808" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Bottom layer: full squircle, darkest -->
+  <path d="M 300 0 L 724 0 C 964 0, 1024 60, 1024 300 L 1024 724 C 1024 964, 964 1024, 724 1024 L 300 1024 C 60 1024, 0 964, 0 724 L 0 300 C 0 60, 60 0, 300 0 Z" fill="#050505"/>
+
+  <g clip-path="url(#sq)">
+    <!-- Mid layer: subtle depth -->
+    <rect x="0" y="0" width="1024" height="980" fill="#0a0a0a"/>
+    <!-- Top face -->
+    <rect x="0" y="0" width="1024" height="940" fill="#0f0f0f"/>
+
+    <!-- Subtle center glow -->
+    <circle cx="512" cy="512" r="400" fill="url(#glow)"/>
+
+    <!-- Signal icon scaled to fill the icon (viewBox 0 0 24 24 -> scaled 32x centered) -->
+    <g transform="translate(512, 512) scale(32) translate(-12, -12)">
+      <!-- Top-left: 8-bit stepped arcs (pixelated quarter circles) -->
+      <path d="M2 12 h2 v-2 h2 v-2 h2 v-2 h2 v-2 h2" stroke="#7fff00" stroke-width="1.4" stroke-linejoin="miter" fill="none" opacity="0.25"/>
+      <path d="M5 12 h1 v-1 h2 v-2 h2 v-2 h2" stroke="#7fff00" stroke-width="1.4" stroke-linejoin="miter" fill="none" opacity="0.45"/>
+      <path d="M8 12 h1 v-1 h1 v-1 h2" stroke="#7fff00" stroke-width="1.4" stroke-linejoin="miter" fill="none" opacity="0.7"/>
+
+      <!-- Center point -->
+      <circle cx="12" cy="12" r="2" fill="#7fff00" opacity="0.95"/>
+
+      <!-- Bottom-right: smooth modern arcs -->
+      <path d="M12 16a4 4 0 0 1 4-4" stroke="#7fff00" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.7"/>
+      <path d="M12 19a7 7 0 0 1 7-7" stroke="#7fff00" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.45"/>
+      <path d="M12 22a10 10 0 0 1 10-10" stroke="#7fff00" stroke-width="1.4" stroke-linecap="round" fill="none" opacity="0.25"/>
+    </g>
+  </g>
+</svg>

@@ -234,7 +234,7 @@ export default function DangerDonut({ onFilterDanger, activeFilter }) {
     <div className="flex flex-col items-center">
       <div
         ref={containerRef}
-        className="rounded-lg cursor-pointer"
+        className="rounded-lg cursor-pointer mx-auto [&>canvas]:block [&>canvas]:mx-auto"
         style={{ width: 220, height: 220 }}
         role="img"
         aria-label="Interactive donut chart showing TX app danger level distribution"

@@ -96,7 +96,22 @@ export default function PortaPackMockup({ expanded = false }) {
   const [hovBtn, setHovBtn] = useState(null); // hovered d-pad button
   const [pressBtn, setPressBtn] = useState(null); // pressed d-pad button
   const [powerOn, setPowerOn] = useState(true);   // power switch state
+  const [powerTransition, setPowerTransition] = useState(null); // 'booting' | 'shutting-down' | null
   const containerRef = useRef(null);
+
+  const togglePower = () => {
+    if (powerTransition) return; // debounce — no toggling during animation
+    if (powerOn) {
+      // Shutting down
+      setPowerTransition('shutting-down');
+      setTimeout(() => { setPowerOn(false); setPowerTransition(null); }, 800);
+    } else {
+      // Booting up
+      setPowerOn(true);
+      setPowerTransition('booting');
+      setTimeout(() => { setPowerTransition(null); }, 1500);
+    }
+  };
 
   const currentMenuId = stack[stack.length - 1];
   const currentMenu = MENUS[currentMenuId];
@@ -285,8 +300,38 @@ export default function PortaPackMockup({ expanded = false }) {
           )}
 
           {/* Power-off screen overlay */}
-          {!powerOn && (
+          {!powerOn && !powerTransition && (
             <rect x={sx} y={sy} width={sw} height={sh} rx="2" fill="#050505" opacity="0.95" />
+          )}
+
+          {/* Shutdown animation — screen contracts to center line then off */}
+          {powerTransition === 'shutting-down' && (
+            <g>
+              <rect x={sx} y={sy} width={sw} height={sh} rx="2" fill="#050505" opacity="0.85">
+                <animate attributeName="opacity" from="0" to="0.95" dur="0.6s" fill="freeze" />
+              </rect>
+              {/* White center line flash then fade */}
+              <line x1={sx + 10} y1={sy + sh / 2} x2={sx + sw - 10} y2={sy + sh / 2} stroke="#fff" strokeWidth="1.5">
+                <animate attributeName="opacity" values="0;0.8;0.6;0" dur="0.8s" fill="freeze" />
+              </line>
+            </g>
+          )}
+
+          {/* Boot animation — dark screen with loading text */}
+          {powerTransition === 'booting' && (
+            <g>
+              <rect x={sx} y={sy} width={sw} height={sh} rx="2" fill="#050505">
+                <animate attributeName="opacity" from="0.95" to="0" dur="1.4s" fill="freeze" />
+              </rect>
+              <text x={sx + sw / 2} y={sy + sh / 2 - 6} textAnchor="middle" fill="#4ade80" fontSize="7" fontFamily="monospace" fontWeight="bold">
+                MAYHEM
+                <animate attributeName="opacity" values="0;1;1;0" dur="1.4s" fill="freeze" />
+              </text>
+              <text x={sx + sw / 2} y={sy + sh / 2 + 6} textAnchor="middle" fill="#333" fontSize="5" fontFamily="monospace">
+                Loading...
+                <animate attributeName="opacity" values="0;0;0.5;0" dur="1.4s" fill="freeze" />
+              </text>
+            </g>
           )}
 
           {/* ── HARDWARE ZONES ── */}
@@ -312,8 +357,8 @@ export default function PortaPackMockup({ expanded = false }) {
           </g>
 
           {/* Power — interactive toggle switch */}
-          <g className="hw-zone" style={{ cursor: 'pointer', filter: glow('power', '#4ade80') }}
-            onClick={() => setPowerOn(p => !p)}
+          <g className="hw-zone" style={{ cursor: powerTransition ? 'wait' : 'pointer', filter: glow('power', '#4ade80') }}
+            onClick={togglePower}
             onMouseEnter={() => setActive('power')} onMouseLeave={() => setActive(null)}>
             {/* Track (thinner) */}
             <rect x="196" y="68" width="7" height="40" rx="3.5" fill="#111" stroke={st('power', '#4ade80')} strokeWidth="0.5" />
