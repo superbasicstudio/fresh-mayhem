@@ -1,15 +1,37 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Sidebar from '../../components/Sidebar';
+
+const STORAGE_KEY = 'fm-sidebar-collapsed';
 
 export default function DashboardLayout() {
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
 
+  const [collapsed, setCollapsed] = useState(() => {
+    try { return localStorage.getItem(STORAGE_KEY) === 'true'; } catch { return false; }
+  });
+
+  useEffect(() => {
+    const onStorage = () => {
+      try { setCollapsed(localStorage.getItem(STORAGE_KEY) === 'true'); } catch {}
+    };
+    window.addEventListener('storage', onStorage);
+    const observer = new MutationObserver(() => {
+      setCollapsed(document.documentElement.dataset.sidebarCollapsed === 'true');
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-sidebar-collapsed'] });
+    return () => { window.removeEventListener('storage', onStorage); observer.disconnect(); };
+  }, []);
+
   return (
     <div className="flex">
       <Sidebar />
-      <main id="main-content" role="main" className="lg:ml-56 flex-1 p-6 max-w-6xl mx-auto">
+      <main
+        id="main-content"
+        role="main"
+        className={`flex-1 p-6 max-w-6xl mx-auto transition-[margin-left] duration-300 ease-in-out ${collapsed ? 'lg:ml-[68px]' : 'lg:ml-64'}`}
+      >
         <Outlet />
         <footer className="text-center text-xs text-base-content/20 py-8 font-mono tracking-wide">
           Fresh Mayhem <span className="text-base-content/10 mx-1">/</span> Mayhem Firmware <span className="text-base-content/10 mx-1">/</span> PortaPack H4M + HackRF One

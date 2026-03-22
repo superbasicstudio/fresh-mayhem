@@ -18,10 +18,10 @@ export default function SafetyPage() {
 
   return (
     <PageSection id="safety" title="Safety Center" subtitle="Common mistakes, real damage stories, TX danger ratings, and amplifier behavior for the HackRF One + PortaPack." icon={ShieldExclamationIcon}>
-      <div className="flex gap-1 mb-4" role="tablist" aria-label="Safety information tabs">
+      <div className="flex gap-2 mb-6 mt-2 border-b border-base-content/10 pb-3" role="tablist" aria-label="Safety information tabs">
         {safetyTabs.map(({ key, label }) => (
           <button key={key} role="tab" aria-selected={safetyTab === key}
-            className={`px-3 py-1.5 rounded text-xs font-mono transition-colors ${safetyTab === key ? 'bg-base-300 text-base-content' : 'text-base-content/40 hover:text-base-content/70 hover:bg-base-300/50'}`}
+            className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors ${safetyTab === key ? 'bg-base-300 text-base-content border border-primary/50' : 'text-base-content/40 hover:text-base-content/70 hover:bg-base-300/50 border border-transparent'}`}
             onClick={() => setSafetyTab(key)}>{label}</button>
         ))}
       </div>
@@ -32,9 +32,9 @@ export default function SafetyPage() {
             <div key={i} className="collapse collapse-arrow bg-base-200">
               <input type="radio" name="mistake-accordion" aria-label={m.title} />
               <div className="collapse-title text-sm font-medium py-2 min-h-0">
-                <span className="badge badge-error badge-sm font-mono text-[10px] !text-black mr-2">{i + 1}</span>
+                <span className="badge badge-sm font-mono text-[10px] bg-base-content text-base-200 mr-2">{i + 1}</span>
                 {m.title}
-                {m.severity && <SafetyBadge level={m.severity} />}
+                {m.severity && <span className="ml-2"><SafetyBadge level={m.severity} /></span>}
               </div>
               <div className="collapse-content space-y-3">
                 <p className="text-sm text-base-content/70 leading-relaxed">{m.description}</p>

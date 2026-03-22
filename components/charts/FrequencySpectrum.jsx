@@ -126,9 +126,9 @@ export default function FrequencySpectrum() {
   return (
     <div className="mb-4">
       <div className="flex gap-2 mb-2">
-        <button className={`btn btn-xs ${layers.nogo ? 'btn-error' : 'btn-ghost'}`} onClick={() => toggle('nogo')} aria-pressed={layers.nogo}>No-Go TX</button>
-        <button className={`btn btn-xs ${layers.legal ? 'btn-success' : 'btn-ghost'}`} onClick={() => toggle('legal')} aria-pressed={layers.legal}>Legal TX</button>
-        <button className={`btn btn-xs ${layers.rx ? 'btn-info' : 'btn-ghost'}`} onClick={() => toggle('rx')} aria-pressed={layers.rx}>RX Apps</button>
+        <button className={`btn btn-xs !text-black ${layers.nogo ? 'btn-error' : 'btn-ghost !text-base-content'}`} onClick={() => toggle('nogo')} aria-pressed={layers.nogo}>No-Go TX</button>
+        <button className={`btn btn-xs !text-black ${layers.legal ? 'btn-success' : 'btn-ghost !text-base-content'}`} onClick={() => toggle('legal')} aria-pressed={layers.legal}>Legal TX</button>
+        <button className={`btn btn-xs !text-black ${layers.rx ? 'btn-info' : 'btn-ghost !text-base-content'}`} onClick={() => toggle('rx')} aria-pressed={layers.rx}>RX Apps</button>
       </div>
       <div className="relative overflow-x-auto">
         <svg ref={svgRef} className="w-full" role="img" aria-label="RF spectrum coverage chart from 1 MHz to 6 GHz showing no-go, legal, and RX app frequency bands" />

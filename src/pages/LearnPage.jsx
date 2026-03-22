@@ -22,10 +22,10 @@ export default function LearnPage() {
   return (
     <>
       <PageSection id="learn" title="Learn" icon={AcademicCapIcon}>
-        <div className="flex gap-1 mb-4" role="tablist" aria-label="Learning content tabs">
+        <div className="flex gap-2 mb-6 mt-2 border-b border-base-content/10 pb-3" role="tablist" aria-label="Learning content tabs">
           {videoTabs.map(({ key, label }) => (
             <button key={key} role="tab" aria-selected={videoTab === key}
-              className={`px-3 py-1.5 rounded text-xs font-mono transition-colors ${videoTab === key ? 'bg-base-300 text-base-content' : 'text-base-content/40 hover:text-base-content/70 hover:bg-base-300/50'}`}
+              className={`px-4 py-2 rounded-lg text-xs font-mono transition-colors ${videoTab === key ? 'bg-base-300 text-base-content border border-primary/50' : 'text-base-content/40 hover:text-base-content/70 hover:bg-base-300/50 border border-transparent'}`}
               onClick={() => setVideoTab(key)}>{label}</button>
           ))}
         </div>

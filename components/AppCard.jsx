@@ -1,6 +1,46 @@
 import SafetyBadge from './SafetyBadge';
 import ExpandableImage from './ExpandableImage';
 import { SignalIcon, ExclamationTriangleIcon, WrenchIcon } from '@heroicons/react/16/solid';
+import {
+  SignalIcon as SignalOutline,
+  CalculatorIcon,
+  LockClosedIcon,
+  FolderIcon,
+  BoltIcon,
+  ClipboardDocumentListIcon,
+  ScissorsIcon,
+  MusicalNoteIcon,
+  DocumentTextIcon,
+  QueueListIcon,
+  KeyIcon,
+  CircleStackIcon,
+  ClockIcon,
+  AdjustmentsVerticalIcon,
+  MapIcon,
+  SpeakerWaveIcon,
+  TrashIcon,
+} from '@heroicons/react/16/solid';
+
+const TOOL_ICONS = {
+  'Antenna Length': SignalOutline,
+  'Calculator': CalculatorIcon,
+  'Cart Lock': LockClosedIcon,
+  'File Manager': FolderIcon,
+  'Flash Utility': BoltIcon,
+  'Freq Manager': ClipboardDocumentListIcon,
+  'IQ Trim': ScissorsIcon,
+  'Metronome': MusicalNoteIcon,
+  'Notepad': DocumentTextIcon,
+  'Playlist Editor': QueueListIcon,
+  'Random Password': KeyIcon,
+  'SD over USB': CircleStackIcon,
+  'Signal Generator': SignalOutline,
+  'Stopwatch': ClockIcon,
+  'Tuner': AdjustmentsVerticalIcon,
+  'WardriveMap': MapIcon,
+  'WAV Viewer': SpeakerWaveIcon,
+  'Wipe SD Card': TrashIcon,
+};
 
 export function RxAppCard({ app }) {
   return (
@@ -65,17 +105,23 @@ export function TxAppCard({ app }) {
 }
 
 export function ToolCard({ tool }) {
+  const Icon = TOOL_ICONS[tool.name] || WrenchIcon;
   return (
     <div className="card bg-base-200">
       <div className="card-body p-4">
         <div className="flex items-center justify-between">
           <h3 className="text-base font-semibold gap-1.5 flex items-center">
-            <WrenchIcon className="w-4 h-4 text-base-content/40 shrink-0" />
+            <Icon className="w-4 h-4 text-base-content/40 shrink-0" />
             {tool.name}
           </h3>
           {tool.tx ? <SafetyBadge level="caution" /> : <span className="badge badge-ghost badge-sm font-mono text-[10px]">Utility</span>}
         </div>
         <p className="text-sm text-base-content/60 leading-relaxed">{tool.description}</p>
+        {tool.wiki && (
+          <div className="mt-1.5">
+            <a href={tool.wiki} target="_blank" rel="noopener noreferrer" className="link link-primary text-xs font-medium" aria-label={`${tool.name} wiki (opens in new tab)`}>Wiki</a>
+          </div>
+        )}
       </div>
     </div>
   );
