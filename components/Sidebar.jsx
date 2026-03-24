@@ -90,17 +90,17 @@ export default function Sidebar() {
   return (
     <>
       {/* Mobile top bar */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-base-200/95 backdrop-blur-sm border-b border-base-content/5 px-3 py-2.5 flex items-center justify-between">
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-base-200 backdrop-blur-sm border-b border-primary/20 px-4 py-3 flex items-center justify-between">
         <NavLink to="/" className="flex items-center gap-2">
           <HackRFIcon className="w-6 h-6 text-primary shrink-0" />
           <span className="font-display text-xs text-primary tracking-wider">FRESH MAYHEM</span>
         </NavLink>
         <button
           onClick={() => setMobileOpen(o => !o)}
-          className="btn btn-ghost btn-sm btn-square"
+          className="btn btn-ghost btn-sm btn-square text-primary hover:text-primary/80"
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
         >
-          {mobileOpen ? <XMarkIcon className="w-5 h-5" /> : <Bars3Icon className="w-5 h-5" />}
+          {mobileOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
         </button>
       </div>
 
