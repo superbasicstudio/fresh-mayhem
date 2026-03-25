@@ -114,7 +114,7 @@ export default function SafetyPage() {
       )}
 
       <div className="mt-4">
-        <ExpandableImage src="/screenshots/amp-comparison.png" alt="AMP ON vs OFF signal comparison — real RF data" />
+        <ExpandableImage src="/screenshots/amp-comparison.webp" alt="AMP ON vs OFF signal comparison — real RF data" />
       </div>
     </PageSection>
   );

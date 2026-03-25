@@ -23,7 +23,7 @@ export default function ToolsPage() {
       </PageSection>
 
       <PageSection id="settings" title="Settings Reference" icon={Cog6ToothIcon}>
-        <ExpandableImage src="/screenshots/app-manager.png" alt="App Manager — show/hide apps and configure autostart" className="mb-3" />
+        <ExpandableImage src="/screenshots/app-manager.webp" alt="App Manager — show/hide apps and configure autostart" className="mb-3" />
         <div className="grid sm:grid-cols-2 gap-3">
           {settings.map(s => (
             <div key={s.name} className="collapse collapse-arrow bg-base-200">

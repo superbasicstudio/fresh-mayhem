@@ -12,7 +12,7 @@ export default function FrequenciesPage() {
         {() => <FrequencySpectrum />}
       </ExpandableCard>
       <div className="mt-3">
-        <ExpandableImage src="/screenshots/full-spectrum.png" alt="HackRF One full spectrum 70 MHz - 6 GHz (live capture)" />
+        <ExpandableImage src="/screenshots/full-spectrum.webp" alt="HackRF One full spectrum 70 MHz - 6 GHz (live capture)" />
       </div>
       <div className="space-y-4 mt-4">
         <div>

@@ -57,7 +57,7 @@ export default function ControlsPage() {
           </ol>
         </div>
         <div className="md:col-span-2">
-          <ExpandableImage src="/screenshots/main-menu.png" alt="Mayhem main menu" />
+          <ExpandableImage src="/screenshots/main-menu.webp" alt="Mayhem main menu" />
         </div>
       </div>
     </PageSection>

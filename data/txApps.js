@@ -12,7 +12,7 @@ export const txApps = [
   { name: "Jammer", description: "Broadband RF jammer. Noise across up to 24 MHz bandwidth.", danger: "extreme", legal: "RF jamming is a federal crime in virtually all countries." },
   { name: "LGE Tool", description: "LGE protocol transmitter. Limited documentation.", danger: "illegal", legal: "Likely unauthorized use." },
   { name: "Morse TX", description: "Morse code via FM tone or CW.", danger: "caution", legal: "Legal with amateur radio license on appropriate frequencies." },
-  { name: "OOK TX", description: "On-Off Keying signals. PT2262 remotes, doorbells, garage doors.", danger: "caution", legal: "Legal for your own devices only.", screenshot: "ook-tx.png" },
+  { name: "OOK TX", description: "On-Off Keying signals. PT2262 remotes, doorbells, garage doors.", danger: "caution", legal: "Legal for your own devices only.", screenshot: "ook-tx.webp" },
   { name: "OOK Editor", description: "Custom OOK signal pattern construction and transmission.", danger: "caution", legal: "Legal for your own devices only." },
   { name: "POCSAG TX", description: "Spoofed POCSAG pager messages to specific RIC addresses.", danger: "danger", legal: "Unauthorized transmission on licensed frequencies." },
   { name: "RDS", description: "FM broadcast with Radio Data System metadata.", danger: "caution", legal: "Requires broadcast license. Low power may be tolerated." },

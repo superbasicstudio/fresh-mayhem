@@ -72,6 +72,8 @@ export default function ExpandableImage({ src, alt, className = '' }) {
         <img
           src={src}
           alt={alt}
+          loading="lazy"
+          decoding="async"
           className="w-full rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300"
           onLoad={() => setLoaded(true)}
           onError={() => setErrored(true)}
