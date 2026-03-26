@@ -134,6 +134,14 @@ Two wrapper components enforce a clear visual language so users know what they'r
   - Trigger: `Ctrl+K` / `Cmd+K`, sidebar search button (desktop), search icon (mobile top bar)
   - Lives in `components/CommandPalette.jsx`, integrated via `DashboardLayout.jsx`
 
+### Sidebar Download Link
+
+- Desktop app (BETA) download link in both desktop and mobile sidebars
+- Points to GitHub releases: `superbasicstudio/fresh-mayhem-PUBLIC/releases/tag/v0.9.3`
+- Umami event tracking: `desktop-app-download` with `version` and `source` properties
+- Shows download icon, "Desktop App BETA" label, "Linux · v0.9.3" subtext
+- When updating the release version, update both sidebar links and the Umami event version property
+
 ## Testing
 
 Test suite uses Vitest + @testing-library/react. Run with:
