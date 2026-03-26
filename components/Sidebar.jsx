@@ -213,7 +213,7 @@ export default function Sidebar({ onSearchClick }) {
             <span className="w-[18px] h-[18px] shrink-0 flex items-center justify-center"><TbDownload className="w-full h-full" /></span>
             {!collapsed && (
               <span className="flex flex-col min-w-0">
-                <span className="font-medium text-xs whitespace-nowrap">Desktop App</span>
+                <span className="font-medium text-xs whitespace-nowrap">Desktop App <span className="text-[9px] text-warning/60 font-mono">BETA</span></span>
                 <span className="text-[10px] text-base-content/25 font-mono">Linux &middot; v0.9.3</span>
               </span>
             )}
