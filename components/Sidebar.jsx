@@ -9,7 +9,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook } from 'react-icons/tb';
+import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook, TbSearch } from 'react-icons/tb';
 
 const sections = [
   { path: '/', label: 'Overview', icon: TbRadar },
@@ -25,7 +25,7 @@ const sections = [
 
 const STORAGE_KEY = 'fm-sidebar-collapsed';
 
-export default function Sidebar() {
+export default function Sidebar({ onSearchClick }) {
   const location = useLocation();
   const [collapsed, setCollapsed] = useState(() => {
     try { return localStorage.getItem(STORAGE_KEY) === 'true'; } catch { return false; }
@@ -95,13 +95,22 @@ export default function Sidebar() {
           <HackRFIcon className="w-6 h-6 text-primary shrink-0" />
           <span className="font-display text-xs text-primary tracking-wider">FRESH MAYHEM</span>
         </NavLink>
-        <button
-          onClick={() => setMobileOpen(o => !o)}
-          className="btn btn-ghost btn-sm btn-square text-primary hover:text-primary/80"
-          aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-        >
-          {mobileOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
-        </button>
+        <div className="flex items-center gap-1">
+          <button
+            onClick={onSearchClick}
+            className="btn btn-ghost btn-sm btn-square text-primary/60 hover:text-primary"
+            aria-label="Search"
+          >
+            <TbSearch className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => setMobileOpen(o => !o)}
+            className="btn btn-ghost btn-sm btn-square text-primary hover:text-primary/80"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+          >
+            {mobileOpen ? <XMarkIcon className="w-6 h-6" /> : <Bars3Icon className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile drawer backdrop */}
@@ -150,6 +159,27 @@ export default function Sidebar() {
           </NavLink>
         </div>
         <nav className={`pb-6 flex-1 transition-[padding] duration-300 ${collapsed ? 'px-1.5' : 'px-3'}`}>
+          {/* Search button */}
+          <button
+            onClick={onSearchClick}
+            className={`flex items-center w-full ${collapsed ? 'justify-center px-0 py-2.5' : 'gap-2.5 px-3 py-2.5'} rounded-lg text-sm text-base-content/40 hover:text-base-content/70 hover:bg-base-300/60 border border-dashed border-base-content/10 hover:border-base-content/20 transition-colors mb-3 group relative`}
+            aria-label="Search"
+          >
+            <span className="w-[18px] h-[18px] shrink-0 flex items-center justify-center"><TbSearch className="w-full h-full" /></span>
+            {!collapsed && (
+              <>
+                <span className="font-medium whitespace-nowrap">Search</span>
+                <kbd className="ml-auto text-[10px] font-mono text-base-content/20 bg-base-300 px-1.5 py-0.5 rounded border border-base-content/10">
+                  {navigator.platform?.includes('Mac') ? '\u2318' : 'Ctrl'}K
+                </kbd>
+              </>
+            )}
+            {collapsed && (
+              <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 rounded bg-base-300 text-xs font-medium text-base-content whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-150 z-[60] shadow-lg">
+                Search (Ctrl+K)
+              </div>
+            )}
+          </button>
           {navLinks(false)}
         </nav>
         <button

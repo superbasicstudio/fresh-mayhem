@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Sidebar from '../../components/Sidebar';
+import CommandPalette from '../../components/CommandPalette';
 
 const STORAGE_KEY = 'fm-sidebar-collapsed';
 
@@ -11,6 +12,20 @@ export default function DashboardLayout() {
   const [collapsed, setCollapsed] = useState(() => {
     try { return localStorage.getItem(STORAGE_KEY) === 'true'; } catch { return false; }
   });
+
+  const [paletteOpen, setPaletteOpen] = useState(false);
+
+  // Ctrl+K / Cmd+K to open command palette
+  useEffect(() => {
+    const onKey = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setPaletteOpen(o => !o);
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, []);
 
   useEffect(() => {
     const onStorage = () => {
@@ -26,7 +41,8 @@ export default function DashboardLayout() {
 
   return (
     <div className="flex min-h-screen pb-8">
-      <Sidebar />
+      <Sidebar onSearchClick={() => setPaletteOpen(true)} />
+      <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} />
       <main
         id="main-content"
         role="main"
