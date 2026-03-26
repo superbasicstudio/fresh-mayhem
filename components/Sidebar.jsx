@@ -9,7 +9,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook, TbSearch } from 'react-icons/tb';
+import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook, TbSearch, TbDownload } from 'react-icons/tb';
 
 const sections = [
   { path: '/', label: 'Overview', icon: TbRadar },
@@ -132,6 +132,23 @@ export default function Sidebar({ onSearchClick }) {
           <p className="text-[10px] text-base-content/30 font-mono px-3 mb-3">NAVIGATION</p>
           {navLinks(true)}
         </div>
+        <div className="px-3 pb-4">
+          <a
+            href="https://github.com/superbasicstudio/fresh-mayhem-PUBLIC/releases/tag/v0.9.3"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-umami-event="desktop-app-download"
+            data-umami-event-version="v0.9.3"
+            data-umami-event-source="mobile-sidebar"
+            className="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-sm text-base-content/40 hover:text-primary border border-base-content/10 hover:border-primary/30 hover:bg-primary/5 transition-colors"
+          >
+            <TbDownload className="w-[18px] h-[18px] shrink-0" />
+            <span className="flex flex-col">
+              <span className="font-medium text-xs">Desktop App</span>
+              <span className="text-[10px] text-base-content/25 font-mono">Linux &middot; v0.9.3</span>
+            </span>
+          </a>
+        </div>
         <div className="px-6 pb-6 border-t border-base-content/5 pt-4">
           <p className="text-[10px] text-primary/60 font-mono font-medium">Mayhem Firmware Guide</p>
           <p className="text-[9px] text-base-content/30 font-mono mt-0.5">PortaPack H4M + HackRF One</p>
@@ -182,6 +199,31 @@ export default function Sidebar({ onSearchClick }) {
           </button>
           {navLinks(false)}
         </nav>
+        {/* Desktop app download */}
+        <div className={`shrink-0 transition-[padding] duration-300 ${collapsed ? 'px-1.5' : 'px-3'} mb-3`}>
+          <a
+            href="https://github.com/superbasicstudio/fresh-mayhem-PUBLIC/releases/tag/v0.9.3"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-umami-event="desktop-app-download"
+            data-umami-event-version="v0.9.3"
+            data-umami-event-source="sidebar"
+            className={`flex items-center ${collapsed ? 'justify-center px-0 py-2.5' : 'gap-2.5 px-3 py-2.5'} rounded-lg text-sm text-base-content/40 hover:text-primary border border-base-content/10 hover:border-primary/30 hover:bg-primary/5 transition-colors group relative`}
+          >
+            <span className="w-[18px] h-[18px] shrink-0 flex items-center justify-center"><TbDownload className="w-full h-full" /></span>
+            {!collapsed && (
+              <span className="flex flex-col min-w-0">
+                <span className="font-medium text-xs whitespace-nowrap">Desktop App</span>
+                <span className="text-[10px] text-base-content/25 font-mono">Linux &middot; v0.9.3</span>
+              </span>
+            )}
+            {collapsed && (
+              <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 rounded bg-base-300 text-xs font-medium text-base-content whitespace-nowrap opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-150 z-[60] shadow-lg">
+                Desktop App (Linux)
+              </div>
+            )}
+          </a>
+        </div>
         <button
           onClick={() => setCollapsed(c => !c)}
           className="hidden lg:flex items-center justify-center w-7 h-7 rounded-full bg-base-300 hover:bg-base-content/20 text-base-content/50 hover:text-base-content transition-colors mx-auto mb-4 shrink-0"
