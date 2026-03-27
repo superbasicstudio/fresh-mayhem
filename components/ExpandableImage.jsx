@@ -70,14 +70,14 @@ export default function ExpandableImage({ src, alt, className = '' }) {
           <ArrowsPointingOutIcon className="w-2.5 h-2.5" />
         </span>
         <img
+          ref={(el) => { if (el && el.complete && el.naturalWidth > 0) setLoaded(true); }}
           src={src}
           alt={alt}
           loading="lazy"
           decoding="async"
-          className="w-full rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300"
+          className={`w-full rounded-lg grayscale group-hover:grayscale-0 transition-all duration-300 ${loaded ? '' : 'h-0 overflow-hidden'}`}
           onLoad={() => setLoaded(true)}
           onError={() => setErrored(true)}
-          style={{ display: loaded ? 'block' : 'none' }}
         />
         {!loaded && <div className="w-full h-24 bg-base-300 rounded-lg animate-pulse" />}
         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/30 rounded-lg">

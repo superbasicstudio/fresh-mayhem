@@ -57,7 +57,7 @@ export default function DashboardLayout() {
       </main>
       {/* Sticky bottom bar */}
       <div className="fixed bottom-0 left-0 right-0 z-40 bg-base-200/90 backdrop-blur-sm border-t border-base-content/5 py-1.5 text-center">
-        <p className="text-[10px] text-base-content/25 font-mono">A <a href="https://superbasic.studio/projects" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 transition-colors underline underline-offset-2">Super Basic Studio</a> open-source project <span className="text-base-content/15 mx-1">·</span> Updated {new Date(__BUILD_TIME__).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</p>
+        <p className="text-[10px] text-base-content/25 font-mono">A <a href="https://superbasic.studio/projects" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 transition-colors underline underline-offset-2">Super Basic Studio</a> open-source project <span className="text-base-content/15 mx-1">·</span> Site Last Updated: {new Date(__BUILD_TIME__).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</p>
       </div>
     </div>
   );
