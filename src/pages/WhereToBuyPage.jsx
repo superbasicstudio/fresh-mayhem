@@ -47,13 +47,13 @@ export default function WhereToBuyPage() {
           <div className="flex flex-wrap gap-1.5 items-center">
             <span className="text-[10px] font-mono text-base-content/30 mr-1">TYPE</span>
             <button
-              className={`badge ${!categoryFilter ? 'badge-primary' : 'badge-ghost'} badge-sm font-mono text-[10px] cursor-pointer`}
+              className={`badge badge-sm font-mono text-[10px] cursor-pointer ${!categoryFilter ? 'bg-primary text-primary-content' : 'badge-ghost'}`}
               onClick={() => setCategoryFilter(null)}
             >All</button>
             {vendorCategories.map(cat => (
               <button
                 key={cat.id}
-                className={`badge ${categoryFilter === cat.id ? cat.color : 'badge-ghost'} badge-sm font-mono text-[10px] cursor-pointer`}
+                className={`badge badge-sm font-mono text-[10px] cursor-pointer ${categoryFilter === cat.id ? 'bg-primary text-primary-content' : 'badge-ghost'}`}
                 onClick={() => setCategoryFilter(categoryFilter === cat.id ? null : cat.id)}
               >{cat.label}</button>
             ))}
@@ -61,13 +61,13 @@ export default function WhereToBuyPage() {
           <div className="flex flex-wrap gap-1.5 items-center">
             <span className="text-[10px] font-mono text-base-content/30 mr-1">REGION</span>
             <button
-              className={`badge ${!regionFilter ? 'badge-primary' : 'badge-ghost'} badge-sm font-mono text-[10px] cursor-pointer`}
+              className={`badge badge-sm font-mono text-[10px] cursor-pointer ${!regionFilter ? 'bg-primary text-primary-content' : 'badge-ghost'}`}
               onClick={() => setRegionFilter(null)}
             >All</button>
             {vendorRegions.map(r => (
               <button
                 key={r.id}
-                className={`badge ${regionFilter === r.id ? 'badge-secondary' : 'badge-ghost'} badge-sm font-mono text-[10px] cursor-pointer`}
+                className={`badge badge-sm font-mono text-[10px] cursor-pointer ${regionFilter === r.id ? 'bg-primary text-primary-content' : 'badge-ghost'}`}
                 onClick={() => setRegionFilter(regionFilter === r.id ? null : r.id)}
               >{r.flag} {r.label}</button>
             ))}
