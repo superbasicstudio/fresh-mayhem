@@ -1,13 +1,24 @@
 import { useState, useCallback } from 'react';
-import { RocketLaunchIcon } from '@heroicons/react/24/outline';
 import PageSection from '../../components/PageSection';
 import QuickStartStep, { quickStartSteps } from '../../components/QuickStartStep';
 
+function getCompleted() {
+  let count = 0;
+  try {
+    for (let i = 0; i < quickStartSteps.length; i++) {
+      if (localStorage.getItem(`qs-step-${i}`) === 'true') count++;
+    }
+  } catch {}
+  return count;
+}
+
 export default function QuickStartPage() {
   const [resetKey, setResetKey] = useState(0);
+  const [completed, setCompleted] = useState(getCompleted);
 
-  let completed = 0;
-  try { completed = quickStartSteps.filter((_, i) => localStorage.getItem(`qs-step-${i}`) === 'true').length; } catch {}
+  const handleCheck = useCallback(() => {
+    setCompleted(getCompleted());
+  }, []);
 
   const handleClear = useCallback(() => {
     try {
@@ -16,10 +27,11 @@ export default function QuickStartPage() {
       }
     } catch {}
     setResetKey(k => k + 1);
+    setCompleted(0);
   }, []);
 
   return (
-    <PageSection id="quickstart" title="HackRF + PortaPack — Quick Start" subtitle="Complete setup walkthrough from unboxing to your first FM receive session. Covers SD card prep, firmware, calibration, safety, and shutdown. Check off each step — progress is saved locally." icon={RocketLaunchIcon}>
+    <PageSection id="quickstart" title="HackRF + PortaPack — Quick Start" subtitle="Complete setup walkthrough from unboxing to your first FM receive session. Covers SD card prep, firmware, calibration, safety, and shutdown. Check off each step — progress is saved locally.">
       <div className="flex items-center justify-between mb-3">
         <button
           onClick={handleClear}
@@ -37,7 +49,7 @@ export default function QuickStartPage() {
       </div>
       <div className="space-y-2" key={resetKey}>
         {quickStartSteps.map((step, i) => (
-          <QuickStartStep key={i} num={i + 1} text={step.text} section={step.section} storageKey={`qs-step-${i}`} />
+          <QuickStartStep key={i} num={i + 1} text={step.text} section={step.section} storageKey={`qs-step-${i}`} onToggle={handleCheck} />
         ))}
       </div>
     </PageSection>

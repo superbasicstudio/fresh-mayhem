@@ -88,7 +88,7 @@ fresh-mayhem/
 
 ## Pages
 
-9 interactive pages: Overview, Controls, RX Apps, TX Apps, Tools, Safety, Frequencies, Learn, Quick Start
+10 interactive pages: Overview, Controls, RX Apps, TX Apps, Tools, Safety, Frequencies, Learn, Quick Start, Where to Buy
 
 ## Data Files
 
@@ -99,6 +99,7 @@ fresh-mayhem/
 | `data/tools.js` | Tools, settings, games | 19 + 18 + 10 |
 | `data/safety.js` | Damage scenarios, stories, frequency data | 10 + 7 + 3 arrays |
 | `data/frequencyMap.js` | Frequency allocation data | — |
+| `data/vendors.js` | Where to buy — vendor listings and buying tips | 11 vendors |
 | `data/links.js` | External resource links | — |
 | `data/videos.js` | Educational video references | — |
 | `data/appDetails.js` | Detailed app documentation | — |
@@ -158,7 +159,7 @@ npm run test:coverage # With V8 coverage
 |----------|-------|---------------|
 | Data integrity | `tests/data/*.test.js` | All data arrays have required fields, valid values, no duplicates |
 | Components | `tests/components/*.test.jsx` | SafetyBadge, ErrorBoundary rendering and behavior |
-| Routing | `tests/app/routing.test.jsx` | All 9 routes render without crashing |
+| Routing | `tests/app/routing.test.jsx` | All 10 routes render without crashing |
 | Security | `tests/security/pii.test.js` | No PII, secrets, or credentials in source files |
 | Anchor | `tests/anchor/framework.test.js` | All Anchor files exist, have correct content, no PII |
 

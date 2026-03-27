@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import SafetyBadge from './SafetyBadge';
 import ExpandableImage from './ExpandableImage';
-import { SignalIcon, ExclamationTriangleIcon, WrenchIcon } from '@heroicons/react/16/solid';
+import { SignalIcon, ExclamationTriangleIcon, WrenchIcon, ChevronDownIcon } from '@heroicons/react/16/solid';
 import {
   SignalIcon as SignalOutline,
   CalculatorIcon,
@@ -43,6 +44,7 @@ const TOOL_ICONS = {
 };
 
 export function RxAppCard({ app }) {
+  const [expanded, setExpanded] = useState(false);
   return (
     <div className="card bg-base-200 relative overflow-hidden">
       <SignalIcon className="absolute -bottom-3 -right-3 w-20 h-20 text-success/[0.04] pointer-events-none" aria-hidden="true" />
@@ -61,6 +63,22 @@ export function RxAppCard({ app }) {
             <a href={app.wiki} target="_blank" rel="noopener noreferrer" className="link link-primary text-xs font-medium" aria-label={`${app.name} wiki (opens in new tab)`}>Wiki</a>
           )}
         </div>
+        {app.learn && (
+          <>
+            <button
+              onClick={() => setExpanded(e => !e)}
+              className="flex items-center gap-1 text-[11px] font-mono text-primary/60 hover:text-primary mt-1.5 transition-colors"
+            >
+              <ChevronDownIcon className={`w-3 h-3 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+              {expanded ? 'Less' : 'Learn more'}
+            </button>
+            {expanded && (
+              <p className="text-xs text-base-content/50 leading-relaxed mt-2 border-t border-base-content/5 pt-2">
+                {app.learn}
+              </p>
+            )}
+          </>
+        )}
         {app.screenshot && (
           <ExpandableImage
             src={`/screenshots/${app.screenshot}`}
@@ -81,6 +99,7 @@ const DANGER_DOT_COLORS = {
 };
 
 export function TxAppCard({ app }) {
+  const [expanded, setExpanded] = useState(false);
   return (
     <div className="card bg-base-200 relative overflow-hidden">
       <ExclamationTriangleIcon className="absolute -bottom-3 -right-3 w-20 h-20 text-error/[0.04] pointer-events-none" aria-hidden="true" />
@@ -94,6 +113,22 @@ export function TxAppCard({ app }) {
         </div>
         <p className="text-sm text-base-content/60 leading-relaxed">{app.description}</p>
         <p className="text-xs text-base-content/40 mt-1 leading-relaxed">{app.legal}</p>
+        {app.learn && (
+          <>
+            <button
+              onClick={() => setExpanded(e => !e)}
+              className="flex items-center gap-1 text-[11px] font-mono text-primary/60 hover:text-primary mt-1.5 transition-colors"
+            >
+              <ChevronDownIcon className={`w-3 h-3 transition-transform ${expanded ? 'rotate-180' : ''}`} />
+              {expanded ? 'Less' : 'Learn more'}
+            </button>
+            {expanded && (
+              <p className="text-xs text-base-content/50 leading-relaxed mt-2 border-t border-base-content/5 pt-2">
+                {app.learn}
+              </p>
+            )}
+          </>
+        )}
         {app.screenshot && (
           <ExpandableImage
             src={`/screenshots/${app.screenshot}`}

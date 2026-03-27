@@ -38,7 +38,7 @@ export const quickStartSteps = [
   { text: "Slide the power switch DOWN to power off — always power off before disconnecting antenna" },
 ];
 
-export default function QuickStartStep({ num, text, storageKey, section }) {
+export default function QuickStartStep({ num, text, storageKey, section, onToggle }) {
   const [checked, setChecked] = useState(false);
   const checkId = useId();
   useEffect(() => {
@@ -48,6 +48,7 @@ export default function QuickStartStep({ num, text, storageKey, section }) {
     const next = !checked;
     setChecked(next);
     try { localStorage.setItem(storageKey, String(next)); } catch {}
+    if (onToggle) onToggle();
   };
   return (
     <>
@@ -60,7 +61,6 @@ export default function QuickStartStep({ num, text, storageKey, section }) {
         <input id={checkId} type="checkbox" className="checkbox checkbox-success checkbox-sm mt-0.5" checked={checked} onChange={toggle}
           aria-label={`Step ${num}: ${text}`} />
         <label htmlFor={checkId} className={`cursor-pointer ${checked ? 'line-through text-base-content/30' : ''}`}>
-          <span className={`fm-badge-number mr-2 ${checked ? '!bg-base-content/20 !text-base-content/40' : ''}`}>{num}</span>
           <span className="text-sm font-body">{text}</span>
         </label>
       </div>

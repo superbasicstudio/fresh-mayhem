@@ -7,6 +7,7 @@ import { mistakes } from '../data/safety';
 import { noGoBands, legalBands } from '../data/frequencyMap';
 import { links } from '../data/links';
 import { videos } from '../data/videos';
+import { vendors } from '../data/vendors';
 import {
   TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook,
   TbSearch, TbArrowRight,
@@ -32,6 +33,7 @@ function buildIndex() {
     { path: '/frequencies', label: 'Frequencies', desc: 'Frequency spectrum, no-go bands, legal bands', icon: 'page' },
     { path: '/learn', label: 'Videos / Learning', desc: 'Educational videos and resources', icon: 'page' },
     { path: '/quickstart', label: 'Quick Start', desc: 'Step-by-step setup guide', icon: 'page' },
+    { path: '/where-to-buy', label: 'Where to Buy', desc: 'Authentic vendors for HackRF and PortaPack', icon: 'page' },
   ];
   pages.forEach(p => items.push({
     id: `page-${p.path}`,
@@ -134,6 +136,16 @@ function buildIndex() {
     keywords: `${v.title} ${v.creator} ${v.category || ''} video learn`.toLowerCase(),
   }));
 
+  // Vendors
+  vendors.forEach(v => items.push({
+    id: `vendor-${v.name}`,
+    type: 'vendor',
+    title: v.name,
+    description: v.description,
+    path: '/where-to-buy',
+    keywords: `${v.name} ${v.description} ${v.products.join(' ')} ${v.category} vendor buy purchase shop hackrf portapack`.toLowerCase(),
+  }));
+
   // Links / Resources
   links.forEach(l => items.push({
     id: `link-${l.title}`,
@@ -160,6 +172,7 @@ const typeMeta = {
   safety:    { label: 'Safety',    color: 'badge-error' },
   frequency: { label: 'Frequency', color: 'badge-secondary' },
   video:     { label: 'Video',     color: 'badge-info' },
+  vendor:    { label: 'Vendor',    color: 'badge-accent' },
   link:      { label: 'Link',      color: 'badge-ghost' },
 };
 

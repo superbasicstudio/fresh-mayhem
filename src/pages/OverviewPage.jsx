@@ -5,11 +5,12 @@ import {
   ShieldExclamationIcon,
   RocketLaunchIcon,
 } from '@heroicons/react/24/outline';
-import { TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook } from 'react-icons/tb';
+import { TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook, TbShoppingCart } from 'react-icons/tb';
 import HeroHeader from '../../components/HeroHeader';
 import { rxApps } from '../../data/rxApps';
 import { txApps } from '../../data/txApps';
 import { tools, games } from '../../data/tools';
+import { vendors } from '../../data/vendors';
 import { quickStartSteps } from '../../components/QuickStartStep';
 
 const pages = [
@@ -21,6 +22,7 @@ const pages = [
   { path: '/frequencies', label: 'Frequency Reference', icon: TbWaveSine, stat: '1 MHz – 6 GHz', statColor: 'text-primary', desc: 'RF spectrum chart, no-go frequencies, legal TX bands, penalties', img: '/screenshots/full-spectrum.png' },
   { path: '/learn', label: 'Learn & Resources', icon: TbBook, stat: 'Videos & links', statColor: 'text-primary', desc: 'Setup tutorials, app demos, SDR courses, community resources', img: '/screenshots/fm-broadcast.png' },
   { path: '/quickstart', label: 'Quick Start', icon: RocketLaunchIcon, stat: null, statColor: 'text-primary', desc: 'Step-by-step first receive session walkthrough', img: '/screenshots/looking-glass.png' },
+  { path: '/where-to-buy', label: 'Where to Buy', icon: TbShoppingCart, stat: `${vendors.length} vendors`, statColor: 'text-primary', desc: 'Community-referenced sources for authentic HackRF and PortaPack hardware', img: null },
 ];
 
 export default function OverviewPage() {

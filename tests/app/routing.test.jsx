@@ -77,4 +77,9 @@ describe('App routing', () => {
     renderWithRouter('/quickstart');
     expect(document.body.textContent.length).toBeGreaterThan(0);
   });
+
+  test('renders where-to-buy page at /where-to-buy', () => {
+    renderWithRouter('/where-to-buy');
+    expect(document.body.textContent.length).toBeGreaterThan(0);
+  });
 });

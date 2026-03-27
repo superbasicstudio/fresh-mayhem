@@ -18,7 +18,7 @@ export default function TransmitPage() {
 
   return (
     <PageSection id="tx-apps" title="Transmit Apps" subtitle="All 22 transmit applications in Mayhem firmware. Each rated by danger level — always use a dummy load or matched antenna." icon={TbBroadcast}>
-      <p className="text-xs text-base-content/40 mb-4 leading-relaxed pl-3">
+      <p className="text-xs sm:text-sm text-base-content/60 mb-4 leading-relaxed">
         All TX apps require an antenna or dummy load. Never TX without a load connected. Hide Jammer, GPS Sim, and ADS-B TX via App Manager.
       </p>
 

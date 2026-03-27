@@ -108,6 +108,8 @@ export default function WaterfallSim({ expanded = false }) {
       instanceRef.current.remove();
       instanceRef.current = null;
     }
+    // Remove any leftover canvases (React StrictMode double-mount)
+    containerRef.current.querySelectorAll('canvas').forEach(c => c.remove());
 
     eventsRef.current = [];
     clipCooldownRef.current = 0;

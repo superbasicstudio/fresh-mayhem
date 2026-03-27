@@ -34,6 +34,8 @@ export default function DangerDonut({ onFilterDanger, activeFilter }) {
   useEffect(() => {
     if (!containerRef.current) return;
     if (instanceRef.current) { instanceRef.current.remove(); instanceRef.current = null; }
+    // Remove any leftover canvases (React StrictMode double-mount)
+    containerRef.current.querySelectorAll('canvas').forEach(c => c.remove());
 
     const counts = {};
     const appsByLevel = {};

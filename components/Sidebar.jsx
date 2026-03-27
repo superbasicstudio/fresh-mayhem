@@ -9,7 +9,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook, TbSearch, TbDownload } from 'react-icons/tb';
+import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook, TbSearch, TbDownload, TbShoppingCart } from 'react-icons/tb';
 
 const sections = [
   { path: '/', label: 'Overview', icon: TbRadar },
@@ -21,6 +21,7 @@ const sections = [
   { path: '/frequencies', label: 'Frequencies', icon: TbWaveSine },
   { path: '/learn', label: 'Videos / Learning', icon: TbBook },
   { path: '/quickstart', label: 'Quick Start', icon: RocketLaunchIcon },
+  { path: '/where-to-buy', label: 'Where to Buy', icon: TbShoppingCart },
 ];
 
 const STORAGE_KEY = 'fm-sidebar-collapsed';
