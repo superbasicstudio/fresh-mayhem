@@ -34,7 +34,7 @@ export default function WhereToBuyPage() {
             <div>
               <p className="text-sm font-semibold text-warning mb-1">No Affiliation · No Endorsement</p>
               <p className="text-xs text-base-content/50 leading-relaxed">
-                Fresh Mayhem is <strong>not affiliated with, sponsored by, or endorsed by</strong> any vendor listed on this page.
+                Super Basic Studio, LLC / Fresh Mayhem is <strong>not affiliated with, sponsored by, or endorsed by</strong> any vendor listed on this page.
                 Inclusion here is based on community mentions in r/hackrf, r/RTLSDR, and other SDR forums — it does not guarantee
                 product quality, authenticity, or service. <strong>Always do your own research before purchasing.</strong>
               </p>
