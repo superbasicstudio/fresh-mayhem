@@ -130,7 +130,7 @@ export const vendorRegions = [
 export const buyingTips = [
   {
     title: 'Buy from the source when possible',
-    description: 'Great Scott Gadgets makes the HackRF One. OpenSourceSDRLab makes the PortaPack H4M. Buying direct means guaranteed authenticity.',
+    description: 'Great Scott Gadgets designed and sells the HackRF One. OpenSourceSDRLab designed and manufactures the PortaPack H4M. Purchasing directly from the original manufacturer is generally the most reliable way to ensure you receive authentic hardware.',
     severity: 'tip',
   },
   {
