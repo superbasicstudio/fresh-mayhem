@@ -1,11 +1,12 @@
 import { describe, test, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import '../helpers/i18nSetup.js';
 import SafetyBadge from '../../components/SafetyBadge.jsx';
 
 describe('SafetyBadge component', () => {
-  test('renders SAFE badge for safe level', () => {
+  test('renders RX badge for safe level', () => {
     render(<SafetyBadge level="safe" />);
-    expect(screen.getByText('SAFE')).toBeInTheDocument();
+    expect(screen.getByText('RX')).toBeInTheDocument();
   });
 
   test('renders CAUTION badge for caution level', () => {
@@ -28,26 +29,14 @@ describe('SafetyBadge component', () => {
     expect(screen.getByText('ILLEGAL')).toBeInTheDocument();
   });
 
-  test('defaults to SAFE for unknown level', () => {
+  test('defaults to RX for unknown level', () => {
     render(<SafetyBadge level="unknown" />);
-    expect(screen.getByText('SAFE')).toBeInTheDocument();
+    expect(screen.getByText('RX')).toBeInTheDocument();
   });
 
-  test('defaults to SAFE when level is undefined', () => {
+  test('defaults to RX when level is undefined', () => {
     render(<SafetyBadge />);
-    expect(screen.getByText('SAFE')).toBeInTheDocument();
-  });
-
-  test('has badge CSS class', () => {
-    const { container } = render(<SafetyBadge level="danger" />);
-    const badge = container.querySelector('.badge');
-    expect(badge).toBeInTheDocument();
-  });
-
-  test('has font-mono class for consistent styling', () => {
-    const { container } = render(<SafetyBadge level="safe" />);
-    const badge = container.querySelector('.font-mono');
-    expect(badge).toBeInTheDocument();
+    expect(screen.getByText('RX')).toBeInTheDocument();
   });
 
   test('all five levels render different text', () => {

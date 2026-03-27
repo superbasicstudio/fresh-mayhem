@@ -35,7 +35,7 @@ describe('ErrorBoundary component', () => {
         <ThrowingChild />
       </ErrorBoundary>
     );
-    expect(screen.getByText('Something went wrong')).toBeInTheDocument();
+    expect(screen.getByText('Signal Lost')).toBeInTheDocument();
   });
 
   test('shows reload button on error', () => {
