@@ -110,7 +110,7 @@ export default function WhereToBuyPage() {
         )}
       </PageSection>
 
-      <PageSection id="buying-tips" title="Buying Tips" subtitle="Things the community wishes they knew before their first purchase." icon={null}>
+      <PageSection id="buying-tips" title="Tips on Buying" subtitle="Things the community wishes they knew before their first purchase." icon={null}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {buyingTips.map(tip => {
             const style = severityStyles[tip.severity] || severityStyles.info;
