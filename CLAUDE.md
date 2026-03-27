@@ -167,14 +167,13 @@ npm run test:coverage # With V8 coverage
 
 ## Maintenance Mode
 
-Toggle a clean "updating" page for production during deploys or downtime.
+Toggle a clean multilingual "we'll be right back" page during deploys or downtime.
 
-```bash
-bash scripts/maintenance-on.sh    # Enable: redirects all traffic to maintenance.html, pushes to Vercel
-bash scripts/maintenance-off.sh   # Disable: removes redirect, pushes to Vercel
-```
+**Enable:** Set `VITE_MAINTENANCE_MODE=true` in Vercel environment variables and redeploy.
+**Disable:** Set `VITE_MAINTENANCE_MODE=false` (or remove it) and redeploy.
+**Local testing:** Add `VITE_MAINTENANCE_MODE=true` to `.env.local` and restart dev server.
 
-The maintenance page is a standalone HTML file at `public/maintenance.html` with no JS dependencies. It shows a simple dark themed page matching the site aesthetic with a pulsing status indicator.
+The maintenance page (`src/MaintenancePage.jsx`) rotates through all 13 supported languages with a fade animation every 3.5 seconds. Same approach as the Super Basic Studio site. Renders instead of the app when the env var is set, no routes or middleware needed.
 
 ## Git Commit Style
 
