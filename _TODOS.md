@@ -22,6 +22,56 @@
 
 ---
 
+## High Priority (Active)
+
+### i18n — Full Internationalization (13 languages)
+**Started:** 2026-03-27 | **Status:** In progress
+
+#### Infrastructure (DONE)
+- [x] Install react-i18next, i18next, i18next-browser-languagedetector
+- [x] Create i18n config (`src/i18n.js`) with browser detection + localStorage
+- [x] Create English master locale (`locales/en.json`)
+- [x] Generate 12 translated locale files (cs, da, de, es, fi, fr, it, ja, nl, pt, pt-BR, sv)
+- [x] Create custom LanguageSwitcher component (dark theme, no native select)
+- [x] Add switcher to desktop + mobile sidebar
+- [x] Wire i18n into main.jsx entry point
+
+#### UI Chrome Translation (DONE)
+- [x] Sidebar nav labels, brand text
+- [x] DashboardLayout footer (all text + locale-formatted dates)
+- [x] All 10 page titles, subtitles, section headers
+- [x] SafetyBadge labels + tooltips
+- [x] AppCard "Learn more" / "Less" / "Wiki" / "Utility"
+- [x] Controls page — all instructions, emergency stop steps
+- [x] QuickStart page — title, subtitle, clear button
+- [x] Where to Buy — disclaimers, filters, tips labels
+- [x] Frequencies — table headers, disclaimers
+- [x] Safety — tabs, section headers, amp insight content
+- [x] Learn — tabs, resources heading, links subtitle
+- [x] Tools — section titles
+- [x] 404 page — all text
+- [x] Command palette — placeholder, hints, type labels
+
+#### Data Content Translation (IN PROGRESS)
+- [ ] DangerDonut chart labels (Extreme, Danger, etc.)
+- [ ] TX apps — descriptions, legal, learn text (22 apps × 12 languages)
+- [ ] RX apps — descriptions, learn text (30 apps × 12 languages)
+- [ ] Vendor data — descriptions, notes, buying tips (11 vendors × 12 languages)
+- [ ] Safety data — mistakes, stories content
+- [ ] QuickStart step text (26 steps × 12 languages)
+- [ ] Frequency band names, services, penalties
+- [ ] Overview page card descriptions + stats
+- [ ] HeroHeader stats
+- [ ] Link/video titles + descriptions
+
+#### Final QA
+- [ ] Test all 13 languages end-to-end
+- [ ] Verify no missing keys (console warnings)
+- [ ] Mobile responsive test with longer translated strings
+- [ ] Commit + push to prod
+
+---
+
 ## High Priority
 
 - [ ] **Strip EXIF metadata from all screenshots**

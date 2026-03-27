@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { WrenchScrewdriverIcon, Cog6ToothIcon } from '@heroicons/react/24/outline';
 import PageSection from '../../components/PageSection';
 import { ToolCard } from '../../components/AppCard';
@@ -5,13 +6,14 @@ import ExpandableImage from '../../components/ExpandableImage';
 import { tools, settings, games } from '../../data/tools';
 
 export default function ToolsPage() {
+  const { t } = useTranslation();
   return (
     <>
-      <PageSection id="tools" title="Tools & Utilities" icon={WrenchScrewdriverIcon}>
+      <PageSection id="tools" title={t('tools.title')} subtitle={t('tools.subtitle')}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-4">
           {tools.map(t => <ToolCard key={t.name} tool={t} />)}
         </div>
-        <h3 className="font-semibold text-sm text-primary mb-2">Games</h3>
+        <h3 className="font-semibold text-sm text-primary mb-2">{t('tools.gamesTitle')}</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 sm:gap-3">
           {games.map(g => (
             <div key={g.name} className="card bg-base-200 p-4">
@@ -22,7 +24,7 @@ export default function ToolsPage() {
         </div>
       </PageSection>
 
-      <PageSection id="settings" title="Settings Reference" icon={Cog6ToothIcon}>
+      <PageSection id="settings" title={t('tools.settingsTitle')} icon={Cog6ToothIcon}>
         <ExpandableImage src="/screenshots/app-manager.webp" alt="App Manager — show/hide apps and configure autostart" className="mb-3" />
         <div className="grid sm:grid-cols-2 gap-3">
           {settings.map(s => (

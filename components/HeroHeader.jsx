@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { getFirmwareVersion, getFirmwareUrl, fetchLatestFirmware } from '../data/firmware';
 import HackRFIcon from './HackRFIcon';
 
@@ -14,6 +15,7 @@ function StatCell({ label, value, color = 'text-base-content/80', href }) {
 }
 
 export default function HeroHeader() {
+  const { t } = useTranslation();
   const [fwVersion, setFwVersion] = useState(getFirmwareVersion);
 
   useEffect(() => {
@@ -22,11 +24,10 @@ export default function HeroHeader() {
 
   return (
     <div id="hero" className="bg-base-200 rounded-box px-3 py-3 sm:px-5 sm:py-4 lg:px-6 lg:py-5 mb-4 sm:mb-6">
-      {/* Top row: title + firmware badge */}
       <div className="flex items-center justify-between mb-3 sm:mb-4">
         <div className="flex items-center gap-2.5">
           <HackRFIcon className="w-6 h-6 sm:w-7 sm:h-7 text-primary/50" />
-          <h1 className="page-title">Overview</h1>
+          <h1 className="page-title">{t('hero.title')}</h1>
         </div>
         <a
           href={getFirmwareUrl()}
@@ -39,22 +40,20 @@ export default function HeroHeader() {
         </a>
       </div>
 
-      {/* Stats grid */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-1.5 sm:gap-2">
-        <StatCell label="Model" value="HackRF One R10C" />
-        <StatCell label="PortaPack" value="H4M" />
-        <StatCell label="Frequency" value="1 MHz – 6 GHz" color="text-base-content/90" />
-        <StatCell label="TX Power" value="~15 dBm (32 mW)" color="text-error" />
-        <StatCell label="RX Apps" value="29 apps" color="text-primary" />
-        <StatCell label="TX Apps" value="22 apps" color="text-error/70" />
+        <StatCell label={t('hero.model')} value={t('hero.modelValue')} />
+        <StatCell label={t('hero.portapack')} value={t('hero.portapackValue')} />
+        <StatCell label={t('hero.frequency')} value={t('hero.frequencyValue')} color="text-base-content/90" />
+        <StatCell label={t('hero.txPower')} value={t('hero.txPowerValue')} color="text-error" />
+        <StatCell label={t('hero.rxApps')} value={`29 ${t('common.apps')}`} color="text-primary" />
+        <StatCell label={t('hero.txApps')} value={`22 ${t('common.apps')}`} color="text-error/70" />
       </div>
 
-      {/* Bottom row: secondary specs */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 mt-1.5 sm:mt-2">
-        <StatCell label="USB" value="1d50:6018" color="text-base-content/50" />
-        <StatCell label="TCXO" value="0.5 ppm" color="text-base-content/50" />
-        <StatCell label="ADC" value="8-bit / 20 Msps" color="text-base-content/50" />
-        <StatCell label="Status" value="Operational" color="text-primary" />
+        <StatCell label={t('hero.usb')} value="1d50:6018" color="text-base-content/50" />
+        <StatCell label={t('hero.tcxo')} value="0.5 ppm" color="text-base-content/50" />
+        <StatCell label={t('hero.adc')} value={t('hero.adcValue')} color="text-base-content/50" />
+        <StatCell label={t('hero.status')} value={t('hero.statusValue')} color="text-primary" />
       </div>
     </div>
   );

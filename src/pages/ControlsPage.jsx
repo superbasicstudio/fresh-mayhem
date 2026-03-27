@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { TbDeviceGamepad } from 'react-icons/tb';
 import PageSection from '../../components/PageSection';
 import ExpandableCard from '../../components/ExpandableCard';
@@ -7,53 +8,54 @@ import WaterfallSim from '../../components/viz/WaterfallSim';
 import ExpandableImage from '../../components/ExpandableImage';
 
 export default function ControlsPage() {
+  const { t } = useTranslation();
   return (
-    <PageSection id="controls" title="Controls & Navigation" subtitle="Interactive PortaPack H4M simulator, gain chain calculator, and waterfall display. Learn the hardware controls before powering on." icon={TbDeviceGamepad}>
+    <PageSection id="controls" title={t('controls.title')} subtitle={t('controls.subtitle')} icon={TbDeviceGamepad}>
       <div className="grid md:grid-cols-2 gap-3">
-        <ExpandableCard title="PortaPack H4M" modalMaxWidth="max-w-7xl">
+        <ExpandableCard title={t('controls.portapackTitle')} modalMaxWidth="max-w-7xl">
           {({ expanded }) => <PortaPackMockup expanded={expanded} />}
         </ExpandableCard>
 
         <div className="space-y-3">
           <div className="card bg-base-200 p-4">
-            <h3 className="font-semibold text-sm mb-2 text-primary">Click Wheel</h3>
+            <h3 className="font-semibold text-sm mb-2 text-primary">{t('controls.clickWheel')}</h3>
             <ul className="text-sm space-y-1 text-base-content/60 leading-relaxed">
-              <li><strong className="text-base-content/80">Rotate CW:</strong> Scroll down / increase value</li>
-              <li><strong className="text-base-content/80">Rotate CCW:</strong> Scroll up / decrease value</li>
-              <li><strong className="text-base-content/80">SELECT (short):</strong> Confirm / open keypad</li>
-              <li><strong className="text-base-content/80">SELECT (long):</strong> Digit-by-digit tune mode</li>
-              <li><strong className="text-base-content/80">LEFT/RIGHT:</strong> Move between fields</li>
-              <li><strong className="text-base-content/80">UP (from app):</strong> Jump to title bar icons</li>
+              <li><strong className="text-base-content/80">{t('controls.rotateCW')}</strong> {t('controls.rotateCWDesc')}</li>
+              <li><strong className="text-base-content/80">{t('controls.rotateCCW')}</strong> {t('controls.rotateCCWDesc')}</li>
+              <li><strong className="text-base-content/80">{t('controls.selectShort')}</strong> {t('controls.selectShortDesc')}</li>
+              <li><strong className="text-base-content/80">{t('controls.selectLong')}</strong> {t('controls.selectLongDesc')}</li>
+              <li><strong className="text-base-content/80">{t('controls.leftRight')}</strong> {t('controls.leftRightDesc')}</li>
+              <li><strong className="text-base-content/80">{t('controls.upFromApp')}</strong> {t('controls.upFromAppDesc')}</li>
             </ul>
           </div>
           <div className="card bg-base-200 p-4">
-            <h3 className="font-semibold text-sm mb-2 text-primary">Frequency Tuning</h3>
+            <h3 className="font-semibold text-sm mb-2 text-primary">{t('controls.freqTuning')}</h3>
             <ul className="text-sm space-y-1 text-base-content/60 leading-relaxed">
-              <li><strong className="text-base-content/80">Wheel:</strong> Select freq field, rotate to change by step size</li>
-              <li><strong className="text-base-content/80">Keypad:</strong> Short-press SELECT on freq field, type digits</li>
-              <li><strong className="text-base-content/80">Digit mode:</strong> Long-press SELECT, digit turns blue, wheel to change</li>
-              <li><strong className="text-base-content/80">Steps:</strong> 10M down to 10 Hz (18 options)</li>
+              <li><strong className="text-base-content/80">{t('controls.wheel')}</strong> {t('controls.wheelDesc')}</li>
+              <li><strong className="text-base-content/80">{t('controls.keypad')}</strong> {t('controls.keypadDesc')}</li>
+              <li><strong className="text-base-content/80">{t('controls.digitMode')}</strong> {t('controls.digitModeDesc')}</li>
+              <li><strong className="text-base-content/80">{t('controls.steps')}</strong> {t('controls.stepsDesc')}</li>
             </ul>
           </div>
         </div>
 
-        <ExpandableCard title="Gain Chain Calculator">
+        <ExpandableCard title={t('controls.gainChain')}>
           {({ expanded }) => <GainChain expanded={expanded} />}
         </ExpandableCard>
 
-        <ExpandableCard title="Waterfall Display Simulation">
+        <ExpandableCard title={t('controls.waterfall')}>
           {({ expanded }) => <WaterfallSim expanded={expanded} />}
         </ExpandableCard>
       </div>
 
       <div className="grid md:grid-cols-3 gap-3 mt-3">
         <div className="card bg-base-200 p-4">
-          <h3 className="font-semibold text-sm mb-2 text-error">Emergency TX Stop</h3>
+          <h3 className="font-semibold text-sm mb-2 text-error">{t('controls.emergencyStop')}</h3>
           <ol className="text-sm space-y-1.5 text-base-content/60 leading-relaxed list-none">
-            <li className="flex gap-2"><span className="fm-badge-number shrink-0">1</span> Press Start/Stop in the TX app</li>
-            <li className="flex gap-2"><span className="fm-badge-number shrink-0">2</span> Tap back arrow to exit TX app</li>
-            <li className="flex gap-2"><span className="fm-badge-number shrink-0">3</span> Press RESET button (panic)</li>
-            <li className="flex gap-2"><span className="fm-badge-number shrink-0">4</span> Power switch OFF (nuclear)</li>
+            <li className="flex gap-2"><span className="fm-badge-number shrink-0">1</span> {t('controls.emergencyStep1')}</li>
+            <li className="flex gap-2"><span className="fm-badge-number shrink-0">2</span> {t('controls.emergencyStep2')}</li>
+            <li className="flex gap-2"><span className="fm-badge-number shrink-0">3</span> {t('controls.emergencyStep3')}</li>
+            <li className="flex gap-2"><span className="fm-badge-number shrink-0">4</span> {t('controls.emergencyStep4')}</li>
           </ol>
         </div>
         <div className="md:col-span-2">

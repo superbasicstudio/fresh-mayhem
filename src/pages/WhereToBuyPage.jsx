@@ -1,19 +1,24 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 import PageSection from '../../components/PageSection';
 import { vendors, vendorCategories, vendorRegions, buyingTips } from '../../data/vendors';
-
-const severityStyles = {
-  tip: { badge: 'badge-primary', label: 'Tip' },
-  warning: { badge: 'badge-warning', label: 'Heads Up' },
-  info: { badge: 'badge-info', label: 'Info' },
-};
+import { useTranslatedVendors, useTranslatedBuyingTips } from '../useTranslatedData';
 
 export default function WhereToBuyPage() {
+  const { t } = useTranslation();
+  const translatedVendors = useTranslatedVendors(vendors);
+  const translatedTips = useTranslatedBuyingTips(buyingTips);
+
+  const severityStyles = {
+    tip: { badge: 'badge-primary', label: t('whereToBuy.tipLabel') },
+    warning: { badge: 'badge-warning', label: t('whereToBuy.headsUpLabel') },
+    info: { badge: 'badge-info', label: t('whereToBuy.infoLabel') },
+  };
   const [categoryFilter, setCategoryFilter] = useState(null);
   const [regionFilter, setRegionFilter] = useState(null);
 
-  const filtered = vendors.filter(v => {
+  const filtered = translatedVendors.filter(v => {
     if (categoryFilter && v.category !== categoryFilter) return false;
     if (regionFilter && v.region !== regionFilter) return false;
     return true;
@@ -23,8 +28,8 @@ export default function WhereToBuyPage() {
     <>
       <PageSection
         id="where-to-buy"
-        title="Where to Buy"
-        subtitle="Community-referenced sources for HackRF One, PortaPack, and accessories. Not an endorsement — always do your own research."
+        title={t('whereToBuy.title')}
+        subtitle={t('whereToBuy.subtitle')}
         icon={null}
       >
         {/* Disclaimer banner */}
@@ -32,12 +37,8 @@ export default function WhereToBuyPage() {
           <div className="flex gap-3">
             <ExclamationTriangleIcon className="w-5 h-5 text-warning shrink-0 mt-0.5" />
             <div>
-              <p className="text-sm font-semibold text-warning mb-1">No Affiliation · No Endorsement</p>
-              <p className="text-xs text-base-content/50 leading-relaxed">
-                Super Basic Studio, LLC / Fresh Mayhem is <strong>not affiliated with, sponsored by, or endorsed by</strong> any vendor listed on this page.
-                Inclusion here is based on community mentions in r/hackrf, r/RTLSDR, and other SDR forums — it does not guarantee
-                product quality, authenticity, or service. <strong>Always do your own research before purchasing.</strong>
-              </p>
+              <p className="text-sm font-semibold text-warning mb-1">{t('whereToBuy.disclaimerTitle')}</p>
+              <p className="text-xs text-base-content/50 leading-relaxed" dangerouslySetInnerHTML={{ __html: t('whereToBuy.disclaimerText') }} />
             </div>
           </div>
         </div>
@@ -45,11 +46,11 @@ export default function WhereToBuyPage() {
         {/* Filters */}
         <div className="flex flex-wrap gap-4 mb-4">
           <div className="flex flex-wrap gap-1.5 items-center">
-            <span className="text-[10px] font-mono text-base-content/30 mr-1">TYPE</span>
+            <span className="text-[10px] font-mono text-base-content/30 mr-1">{t('whereToBuy.typeLabel')}</span>
             <button
               className={`badge badge-sm font-mono text-[10px] cursor-pointer ${!categoryFilter ? 'bg-primary text-primary-content' : 'badge-ghost'}`}
               onClick={() => setCategoryFilter(null)}
-            >All</button>
+            >{t('whereToBuy.all')}</button>
             {vendorCategories.map(cat => (
               <button
                 key={cat.id}
@@ -59,11 +60,11 @@ export default function WhereToBuyPage() {
             ))}
           </div>
           <div className="flex flex-wrap gap-1.5 items-center">
-            <span className="text-[10px] font-mono text-base-content/30 mr-1">REGION</span>
+            <span className="text-[10px] font-mono text-base-content/30 mr-1">{t('whereToBuy.regionLabel')}</span>
             <button
               className={`badge badge-sm font-mono text-[10px] cursor-pointer ${!regionFilter ? 'bg-primary text-primary-content' : 'badge-ghost'}`}
               onClick={() => setRegionFilter(null)}
-            >All</button>
+            >{t('whereToBuy.all')}</button>
             {vendorRegions.map(r => (
               <button
                 key={r.id}
@@ -110,13 +111,13 @@ export default function WhereToBuyPage() {
           })}
         </div>
         {filtered.length === 0 && (
-          <p className="text-sm text-base-content/30 text-center py-8 font-mono">No vendors match the selected filters.</p>
+          <p className="text-sm text-base-content/30 text-center py-8 font-mono">{t('whereToBuy.noResults')}</p>
         )}
       </PageSection>
 
-      <PageSection id="buying-tips" title="Tips on Buying" subtitle="Things the community wishes they knew before their first purchase." icon={null}>
+      <PageSection id="buying-tips" title={t('whereToBuy.tipsTitle')} subtitle={t('whereToBuy.tipsSubtitle')} icon={null}>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          {buyingTips.map(tip => {
+          {translatedTips.map(tip => {
             const style = severityStyles[tip.severity] || severityStyles.info;
             return (
               <div key={tip.title} className="card bg-base-200 p-4">

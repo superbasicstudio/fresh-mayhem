@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import {
   WrenchScrewdriverIcon,
   ShieldExclamationIcon,
@@ -13,19 +14,8 @@ import { tools, games } from '../../data/tools';
 import { vendors } from '../../data/vendors';
 import { quickStartSteps } from '../../components/QuickStartStep';
 
-const pages = [
-  { path: '/controls', label: 'Controls & Navigation', icon: TbDeviceGamepad, stat: 'Interactive simulators', statColor: 'text-primary', desc: 'PortaPack mockup, waterfall display, gain chain calculator', img: '/screenshots/main-menu.png' },
-  { path: '/receive', label: 'Receive Apps', icon: TbAntenna, stat: `${rxApps.length} apps`, statColor: 'text-primary', desc: 'Passive reconnaissance — ADS-B, POCSAG, SubGhzD, BLE, and more', img: '/screenshots/adsb.png' },
-  { path: '/transmit', label: 'Transmit Apps', icon: TbBroadcast, stat: `${txApps.length} apps`, statColor: 'text-error', desc: 'Active testing — OOK, replay, FlipperTX, BLE TX (authorized use only)', img: '/screenshots/ook-tx.png' },
-  { path: '/tools', label: 'Tools & Settings', icon: WrenchScrewdriverIcon, stat: `${tools.length} tools, ${games.length} games`, statColor: 'text-primary', desc: 'Freq manager, signal gen, file manager, app manager, and more', img: '/screenshots/app-manager.png' },
-  { path: '/safety', label: 'Safety Center', icon: ShieldExclamationIcon, stat: 'Damage prevention', statColor: 'text-error', desc: 'Beginner mistakes, damage stories, TX danger ratings, amp insight', img: '/screenshots/amp-comparison.png' },
-  { path: '/frequencies', label: 'Frequency Reference', icon: TbWaveSine, stat: '1 MHz – 6 GHz', statColor: 'text-primary', desc: 'RF spectrum chart, no-go frequencies, legal TX bands, penalties', img: '/screenshots/full-spectrum.png' },
-  { path: '/learn', label: 'Learn & Resources', icon: TbBook, stat: 'Videos & links', statColor: 'text-primary', desc: 'Setup tutorials, app demos, SDR courses, community resources', img: '/screenshots/fm-broadcast.png' },
-  { path: '/quickstart', label: 'Quick Start', icon: RocketLaunchIcon, stat: null, statColor: 'text-primary', desc: 'Step-by-step first receive session walkthrough', img: '/screenshots/looking-glass.png' },
-  { path: '/where-to-buy', label: 'Where to Buy', icon: TbShoppingCart, stat: `${vendors.length} vendors`, statColor: 'text-primary', desc: 'Community-referenced sources for authentic HackRF and PortaPack hardware', img: null },
-];
-
 export default function OverviewPage() {
+  const { t } = useTranslation();
   const [qsProgress, setQsProgress] = useState(0);
 
   useEffect(() => {
@@ -37,6 +27,18 @@ export default function OverviewPage() {
       setQsProgress(completed);
     } catch {}
   }, []);
+
+  const pages = [
+    { path: '/controls', label: t('overview.cards.controls.label'), icon: TbDeviceGamepad, stat: t('overview.cards.controls.stat'), statColor: 'text-primary', desc: t('overview.cards.controls.desc'), img: '/screenshots/main-menu.png' },
+    { path: '/receive', label: t('overview.cards.receive.label'), icon: TbAntenna, stat: `${rxApps.length} ${t('common.apps')}`, statColor: 'text-primary', desc: t('overview.cards.receive.desc'), img: '/screenshots/adsb.png' },
+    { path: '/transmit', label: t('overview.cards.transmit.label'), icon: TbBroadcast, stat: `${txApps.length} ${t('common.apps')}`, statColor: 'text-error', desc: t('overview.cards.transmit.desc'), img: '/screenshots/ook-tx.png' },
+    { path: '/tools', label: t('overview.cards.tools.label'), icon: WrenchScrewdriverIcon, stat: `${tools.length} tools, ${games.length} games`, statColor: 'text-primary', desc: t('overview.cards.tools.desc'), img: '/screenshots/app-manager.png' },
+    { path: '/safety', label: t('overview.cards.safety.label'), icon: ShieldExclamationIcon, stat: t('overview.cards.safety.stat'), statColor: 'text-error', desc: t('overview.cards.safety.desc'), img: '/screenshots/amp-comparison.png' },
+    { path: '/frequencies', label: t('overview.cards.frequencies.label'), icon: TbWaveSine, stat: t('overview.cards.frequencies.stat'), statColor: 'text-primary', desc: t('overview.cards.frequencies.desc'), img: '/screenshots/full-spectrum.png' },
+    { path: '/learn', label: t('overview.cards.learn.label'), icon: TbBook, stat: t('overview.cards.learn.stat'), statColor: 'text-primary', desc: t('overview.cards.learn.desc'), img: '/screenshots/fm-broadcast.png' },
+    { path: '/quickstart', label: t('overview.cards.quickstart.label'), icon: RocketLaunchIcon, stat: null, statColor: 'text-primary', desc: t('overview.cards.quickstart.desc'), img: '/screenshots/looking-glass.png' },
+    { path: '/where-to-buy', label: t('overview.cards.whereToBuy.label'), icon: TbShoppingCart, stat: `${vendors.length} ${t('common.vendors')}`, statColor: 'text-primary', desc: t('overview.cards.whereToBuy.desc'), img: null },
+  ];
 
   return (
     <>

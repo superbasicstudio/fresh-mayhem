@@ -1,6 +1,8 @@
 import { useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import PageSection from '../../components/PageSection';
 import QuickStartStep, { quickStartSteps } from '../../components/QuickStartStep';
+import { useTranslatedQuickStart } from '../useTranslatedData';
 
 function getCompleted() {
   let count = 0;
@@ -13,6 +15,8 @@ function getCompleted() {
 }
 
 export default function QuickStartPage() {
+  const { t } = useTranslation();
+  const translatedSteps = useTranslatedQuickStart(quickStartSteps);
   const [resetKey, setResetKey] = useState(0);
   const [completed, setCompleted] = useState(getCompleted);
 
@@ -31,14 +35,14 @@ export default function QuickStartPage() {
   }, []);
 
   return (
-    <PageSection id="quickstart" title="HackRF + PortaPack — Quick Start" subtitle="Complete setup walkthrough from unboxing to your first FM receive session. Covers SD card prep, firmware, calibration, safety, and shutdown. Check off each step — progress is saved locally.">
+    <PageSection id="quickstart" title={t('quickstart.title')} subtitle={t('quickstart.subtitle')}>
       <div className="flex items-center justify-between mb-3">
         <button
           onClick={handleClear}
           className="btn btn-xs font-mono text-[10px] text-error bg-error/10 border-0 hover:bg-error/20 shrink-0 ml-4"
           aria-label="Clear all checklist progress"
         >
-          CLEAR
+          {t('quickstart.clear')}
         </button>
       </div>
       <div className="flex items-center gap-2 mb-3">
@@ -48,7 +52,7 @@ export default function QuickStartPage() {
         <span className="text-[10px] font-mono text-accent">{completed}/{quickStartSteps.length}</span>
       </div>
       <div className="space-y-2" key={resetKey}>
-        {quickStartSteps.map((step, i) => (
+        {translatedSteps.map((step, i) => (
           <QuickStartStep key={i} num={i + 1} text={step.text} section={step.section} storageKey={`qs-step-${i}`} onToggle={handleCheck} />
         ))}
       </div>

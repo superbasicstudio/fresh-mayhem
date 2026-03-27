@@ -1,11 +1,13 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import { useState, useEffect, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import Sidebar from '../../components/Sidebar';
 import CommandPalette from '../../components/CommandPalette';
 
 const STORAGE_KEY = 'fm-sidebar-collapsed';
 
 export default function DashboardLayout() {
+  const { t, i18n } = useTranslation();
   const { pathname } = useLocation();
   useEffect(() => { window.scrollTo(0, 0); }, [pathname]);
 
@@ -39,6 +41,9 @@ export default function DashboardLayout() {
     return () => { window.removeEventListener('storage', onStorage); observer.disconnect(); };
   }, []);
 
+  // Format date in current locale
+  const buildDate = new Date(__BUILD_TIME__).toLocaleDateString(i18n.language, { year: 'numeric', month: 'short', day: 'numeric' });
+
   return (
     <div className="flex min-h-screen pb-8">
       <Sidebar onSearchClick={() => setPaletteOpen(true)} />
@@ -50,14 +55,14 @@ export default function DashboardLayout() {
       >
         <Outlet />
         <footer className="text-center text-[10px] sm:text-xs text-base-content/20 py-6 sm:py-8 font-mono tracking-wide">
-          Fresh Mayhem <span className="text-base-content/10 mx-1">/</span> Mayhem Firmware <span className="text-base-content/10 mx-1">/</span> PortaPack H4M + HackRF One
-          <p className="mt-2 text-base-content/15">Educational resource only — not legal advice. Always comply with local RF regulations.</p>
-          <p className="mt-3 text-base-content/25 text-[10px] max-w-xl mx-auto leading-relaxed">HackRF and PortaPack are trademarks of their respective owners. Mayhem firmware is an open-source project by its contributors. This site is an independent, unofficial reference and is not affiliated with, endorsed by, or sponsored by <a href="https://greatscottgadgets.com/" target="_blank" rel="noopener noreferrer" className="text-base-content/40 hover:text-primary transition-colors underline underline-offset-2">Great Scott Gadgets</a>, PortaPack, or the Mayhem project.</p>
+          {t('footer.freshMayhem')} <span className="text-base-content/10 mx-1">/</span> {t('footer.mayhemFirmware')} <span className="text-base-content/10 mx-1">/</span> {t('footer.portapackHackrf')}
+          <p className="mt-2 text-base-content/15">{t('footer.educationalOnly')}</p>
+          <p className="mt-3 text-base-content/25 text-[10px] max-w-xl mx-auto leading-relaxed">{t('footer.trademarkNotice')} <a href="https://greatscottgadgets.com/" target="_blank" rel="noopener noreferrer" className="text-base-content/40 hover:text-primary transition-colors underline underline-offset-2">{t('footer.greatScottGadgets')}</a>{t('footer.trademarkSuffix')}</p>
         </footer>
       </main>
       {/* Sticky bottom bar */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-base-200/90 backdrop-blur-sm border-t border-base-content/5 py-1.5 text-center">
-        <p className="text-[10px] text-base-content/25 font-mono">A <a href="https://superbasic.studio/projects" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 transition-colors underline underline-offset-2">Super Basic Studio</a> open-source project <span className="text-base-content/15 mx-1">·</span> Site Last Updated: {new Date(__BUILD_TIME__).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</p>
+      <div className={`fixed bottom-0 right-0 z-40 bg-base-200/90 backdrop-blur-sm border-t border-base-content/5 py-1.5 text-center left-0 transition-[left] duration-300 ease-in-out ${collapsed ? 'lg:left-[68px]' : 'lg:left-64'}`}>
+        <p className="text-[10px] text-base-content/25 font-mono">A <a href="https://superbasic.studio/projects" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 transition-colors underline underline-offset-2">Super Basic Studio</a> open-source project <span className="text-base-content/15 mx-1">·</span> {t('footer.lastUpdated')} {buildDate}</p>
       </div>
     </div>
   );

@@ -55,12 +55,12 @@ export const links = [
 ];
 
 export const linkCategories = [
-  { id: "mayhem", label: "Mayhem Firmware", color: "badge-primary" },
-  { id: "hackrf", label: "HackRF Hardware", color: "badge-secondary" },
-  { id: "learn", label: "Learning", color: "badge-accent" },
-  { id: "tools", label: "Tools & Repos", color: "badge-info" },
-  { id: "software", label: "SDR Software", color: "badge-success" },
-  { id: "awesome", label: "Collections", color: "badge-warning" },
-  { id: "legal", label: "Legal / Regulatory", color: "badge-error" },
+  { id: "mayhem", label: "Mayhem Firmware", color: "badge-ghost" },
+  { id: "hackrf", label: "HackRF Hardware", color: "badge-ghost" },
+  { id: "learn", label: "Learning", color: "badge-ghost" },
+  { id: "tools", label: "Tools & Repos", color: "badge-ghost" },
+  { id: "software", label: "SDR Software", color: "badge-ghost" },
+  { id: "awesome", label: "Collections", color: "badge-ghost" },
+  { id: "legal", label: "Regulatory Reference", color: "badge-ghost" },
   { id: "community", label: "Community", color: "badge-ghost" },
 ];

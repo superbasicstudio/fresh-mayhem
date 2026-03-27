@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { rxApps } from '../data/rxApps';
 import { txApps } from '../data/txApps';
 import { tools, settings, games } from '../data/tools';
@@ -8,6 +9,7 @@ import { noGoBands, legalBands } from '../data/frequencyMap';
 import { links } from '../data/links';
 import { videos } from '../data/videos';
 import { vendors } from '../data/vendors';
+import { communities } from '../data/communities';
 import {
   TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBook,
   TbSearch, TbArrowRight,
@@ -19,21 +21,21 @@ import {
 
 /* ── search index ─────────────────────────────────────────── */
 
-function buildIndex() {
+function buildIndex(t) {
   const items = [];
 
   // Pages
   const pages = [
-    { path: '/', label: 'Overview', desc: 'Dashboard overview and quick stats', icon: 'page' },
-    { path: '/controls', label: 'Controls', desc: 'PortaPack controls, gain chain, waterfall', icon: 'page' },
-    { path: '/receive', label: 'Receive (RX) Apps', desc: 'All receive applications', icon: 'page' },
-    { path: '/transmit', label: 'Transmit (TX) Apps', desc: 'All transmit applications with danger ratings', icon: 'page' },
-    { path: '/tools', label: 'Tools', desc: 'Utilities, settings, and games', icon: 'page' },
-    { path: '/safety', label: 'Safety Center', desc: 'Damage scenarios, stories, and warnings', icon: 'page' },
-    { path: '/frequencies', label: 'Frequencies', desc: 'Frequency spectrum, no-go bands, legal bands', icon: 'page' },
-    { path: '/learn', label: 'Videos / Learning', desc: 'Educational videos and resources', icon: 'page' },
-    { path: '/quickstart', label: 'Quick Start', desc: 'Step-by-step setup guide', icon: 'page' },
-    { path: '/where-to-buy', label: 'Where to Buy', desc: 'Authentic vendors for HackRF and PortaPack', icon: 'page' },
+    { path: '/', label: t('nav.overview'), desc: t('search.pageDescriptions.overview'), icon: 'page' },
+    { path: '/controls', label: t('nav.controls'), desc: t('search.pageDescriptions.controls'), icon: 'page' },
+    { path: '/receive', label: t('nav.receive'), desc: t('search.pageDescriptions.receive'), icon: 'page' },
+    { path: '/transmit', label: t('nav.transmit'), desc: t('search.pageDescriptions.transmit'), icon: 'page' },
+    { path: '/tools', label: t('nav.tools'), desc: t('search.pageDescriptions.tools'), icon: 'page' },
+    { path: '/safety', label: t('nav.safety'), desc: t('search.pageDescriptions.safety'), icon: 'page' },
+    { path: '/frequencies', label: t('nav.frequencies'), desc: t('search.pageDescriptions.frequencies'), icon: 'page' },
+    { path: '/learn', label: t('nav.learn'), desc: t('search.pageDescriptions.learn'), icon: 'page' },
+    { path: '/quickstart', label: t('nav.quickstart'), desc: t('search.pageDescriptions.quickstart'), icon: 'page' },
+    { path: '/where-to-buy', label: t('nav.whereToBuy'), desc: t('search.pageDescriptions.whereToBuy'), icon: 'page' },
   ];
   pages.forEach(p => items.push({
     id: `page-${p.path}`,
@@ -44,116 +46,94 @@ function buildIndex() {
     keywords: p.label.toLowerCase(),
   }));
 
+  // Helper: get translated text with English fallback for keywords
+  const td = (key, fallback) => { const v = t(key, { defaultValue: '' }); return v || fallback; };
+
   // RX Apps
-  rxApps.forEach(app => items.push({
-    id: `rx-${app.name}`,
-    type: 'rx',
-    title: app.name,
-    description: app.description,
-    path: '/receive',
-    keywords: `${app.name} ${app.description} ${app.category || ''} ${app.frequency || ''} receive rx`.toLowerCase(),
-  }));
+  rxApps.forEach(app => {
+    const desc = td(`data.rxApps.${app.name}.description`, app.description);
+    items.push({
+      id: `rx-${app.name}`, type: 'rx', title: app.name, description: desc, path: '/receive',
+      keywords: `${app.name} ${app.description} ${desc} ${app.category || ''} ${app.frequency || ''} receive rx`.toLowerCase(),
+    });
+  });
 
   // TX Apps
-  txApps.forEach(app => items.push({
-    id: `tx-${app.name}`,
-    type: 'tx',
-    title: app.name,
-    description: app.description,
-    path: '/transmit',
-    keywords: `${app.name} ${app.description} ${app.danger || ''} transmit tx`.toLowerCase(),
-    danger: app.danger,
-  }));
+  txApps.forEach(app => {
+    const desc = td(`data.txApps.${app.name}.description`, app.description);
+    items.push({
+      id: `tx-${app.name}`, type: 'tx', title: app.name, description: desc, path: '/transmit',
+      keywords: `${app.name} ${app.description} ${desc} ${app.danger || ''} transmit tx`.toLowerCase(),
+      danger: app.danger,
+    });
+  });
 
   // Tools
-  tools.forEach(t => items.push({
-    id: `tool-${t.name}`,
-    type: 'tool',
-    title: t.name,
-    description: t.description,
-    path: '/tools',
-    keywords: `${t.name} ${t.description} tool utility`.toLowerCase(),
+  tools.forEach(tool => items.push({
+    id: `tool-${tool.name}`, type: 'tool', title: tool.name, description: tool.description, path: '/tools',
+    keywords: `${tool.name} ${tool.description} tool utility`.toLowerCase(),
   }));
 
   // Settings
   settings.forEach(s => items.push({
-    id: `setting-${s.name}`,
-    type: 'setting',
-    title: s.name,
-    description: s.description,
-    path: '/tools',
+    id: `setting-${s.name}`, type: 'setting', title: s.name, description: s.description, path: '/tools',
     keywords: `${s.name} ${s.description} setting config`.toLowerCase(),
   }));
 
   // Games
   games.forEach(g => items.push({
-    id: `game-${g.name}`,
-    type: 'game',
-    title: g.name,
-    description: g.description,
-    path: '/tools',
+    id: `game-${g.name}`, type: 'game', title: g.name, description: g.description, path: '/tools',
     keywords: `${g.name} ${g.description} game`.toLowerCase(),
   }));
 
   // Safety / Mistakes
-  mistakes.forEach(m => items.push({
-    id: `safety-${m.title}`,
-    type: 'safety',
-    title: m.title,
-    description: m.description,
-    path: '/safety',
-    keywords: `${m.title} ${m.description} safety damage ${m.severity || ''}`.toLowerCase(),
-  }));
+  mistakes.forEach(m => {
+    const desc = td(`data.safety.mistakes.${m.title}.description`, m.description);
+    items.push({
+      id: `safety-${m.title}`, type: 'safety', title: m.title, description: desc, path: '/safety',
+      keywords: `${m.title} ${m.description} ${desc} safety damage ${m.severity || ''}`.toLowerCase(),
+    });
+  });
 
   // No-Go Bands
   noGoBands.forEach(b => items.push({
-    id: `nogo-${b.name}`,
-    type: 'frequency',
-    title: `${b.name} (No-Go)`,
-    description: `${b.service} — ${b.startMHz}–${b.endMHz} MHz`,
-    path: '/frequencies',
-    keywords: `${b.name} ${b.service} ${b.startMHz} ${b.endMHz} no-go prohibited frequency`.toLowerCase(),
+    id: `nogo-${b.name}`, type: 'frequency', title: `${b.name}`, description: `${b.service} — ${b.startMHz}–${b.endMHz} MHz`, path: '/frequencies',
+    keywords: `${b.name} ${b.service} ${b.startMHz} ${b.endMHz} no-go restricted frequency`.toLowerCase(),
   }));
 
   // Legal Bands
   legalBands.forEach(b => items.push({
-    id: `legal-${b.name}`,
-    type: 'frequency',
-    title: `${b.name} (Legal)`,
-    description: `${b.requirements} — ${b.startMHz}–${b.endMHz} MHz`,
-    path: '/frequencies',
-    keywords: `${b.name} ${b.requirements} ${b.startMHz} ${b.endMHz} legal allowed frequency`.toLowerCase(),
+    id: `legal-${b.name}`, type: 'frequency', title: `${b.name}`, description: `${b.requirements} — ${b.startMHz}–${b.endMHz} MHz`, path: '/frequencies',
+    keywords: `${b.name} ${b.requirements} ${b.startMHz} ${b.endMHz} ism frequency`.toLowerCase(),
   }));
 
   // Videos
   videos.forEach(v => items.push({
-    id: `video-${v.title}`,
-    type: 'video',
-    title: v.title,
-    description: `by ${v.creator}`,
-    path: '/learn',
-    url: v.url,
+    id: `video-${v.title}`, type: 'video', title: v.title, description: `by ${v.creator}`, path: '/learn', url: v.url,
     keywords: `${v.title} ${v.creator} ${v.category || ''} video learn`.toLowerCase(),
   }));
 
   // Vendors
-  vendors.forEach(v => items.push({
-    id: `vendor-${v.name}`,
-    type: 'vendor',
-    title: v.name,
-    description: v.description,
-    path: '/where-to-buy',
-    keywords: `${v.name} ${v.description} ${v.products.join(' ')} ${v.category} vendor buy purchase shop hackrf portapack`.toLowerCase(),
-  }));
+  vendors.forEach(v => {
+    const desc = td(`data.vendors.${v.name}.description`, v.description);
+    items.push({
+      id: `vendor-${v.name}`, type: 'vendor', title: v.name, description: desc, path: '/where-to-buy',
+      keywords: `${v.name} ${v.description} ${desc} ${v.products.join(' ')} ${v.category} vendor buy purchase shop hackrf portapack`.toLowerCase(),
+    });
+  });
+
+  // Communities
+  communities.forEach(c => {
+    const desc = td(`data.communities.${c.name}.description`, c.description);
+    items.push({
+      id: `community-${c.name}`, type: 'community', title: c.name, description: desc, url: c.url, path: '/learn',
+      keywords: `${c.name} ${c.description} ${desc} ${c.tags.join(' ')} community reddit subreddit forum`.toLowerCase(),
+    });
+  });
 
   // Links / Resources
   links.forEach(l => items.push({
-    id: `link-${l.title}`,
-    type: 'link',
-    title: l.title,
-    description: l.description,
-    url: l.url,
-    path: '/learn',
+    id: `link-${l.title}`, type: 'link', title: l.title, description: l.description, url: l.url, path: '/learn',
     keywords: `${l.title} ${l.description} ${l.category || ''} link resource`.toLowerCase(),
   }));
 
@@ -162,30 +142,32 @@ function buildIndex() {
 
 /* ── type labels & colors ─────────────────────────────────── */
 
-const typeMeta = {
-  page:      { label: 'Page',      color: 'badge-primary' },
-  rx:        { label: 'RX App',    color: 'badge-info' },
-  tx:        { label: 'TX App',    color: 'badge-error' },
-  tool:      { label: 'Tool',      color: 'badge-accent' },
-  setting:   { label: 'Setting',   color: 'badge-ghost' },
-  game:      { label: 'Game',      color: 'badge-warning' },
-  safety:    { label: 'Safety',    color: 'badge-error' },
-  frequency: { label: 'Frequency', color: 'badge-secondary' },
-  video:     { label: 'Video',     color: 'badge-info' },
-  vendor:    { label: 'Vendor',    color: 'badge-accent' },
-  link:      { label: 'Link',      color: 'badge-ghost' },
+const typeColors = {
+  page: 'badge-primary', rx: 'badge-info', tx: 'badge-error', tool: 'badge-accent',
+  setting: 'badge-ghost', game: 'badge-warning', safety: 'badge-error',
+  frequency: 'badge-secondary', video: 'badge-info', vendor: 'badge-accent',
+  link: 'badge-ghost', community: 'badge-ghost',
 };
 
 /* ── component ────────────────────────────────────────────── */
 
 export default function CommandPalette({ open, onClose }) {
+  const { t, i18n } = useTranslation();
   const [query, setQuery] = useState('');
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef(null);
   const listRef = useRef(null);
   const navigate = useNavigate();
 
-  const index = useMemo(() => buildIndex(), []);
+  const typeMeta = useMemo(() => {
+    const labels = {};
+    Object.keys(typeColors).forEach(k => {
+      labels[k] = { label: t(`search.types.${k}`, { defaultValue: k }), color: typeColors[k] };
+    });
+    return labels;
+  }, [t, i18n.language]);
+
+  const index = useMemo(() => buildIndex(t), [t, i18n.language]);
 
   const results = useMemo(() => {
     if (!query.trim()) {
@@ -281,7 +263,7 @@ export default function CommandPalette({ open, onClose }) {
             <input
               ref={inputRef}
               type="text"
-              placeholder="Search apps, tools, frequencies, pages..."
+              placeholder={t('search.placeholder')}
               className="flex-1 bg-transparent text-sm text-base-content placeholder:text-base-content/30 outline-none font-body"
               value={query}
               onChange={e => setQuery(e.target.value)}
@@ -303,7 +285,7 @@ export default function CommandPalette({ open, onClose }) {
           >
             {results.length === 0 && (
               <li className="px-4 py-8 text-center text-sm text-base-content/30 font-mono">
-                No results for &ldquo;{query}&rdquo;
+                {t('search.noResults', { query })}
               </li>
             )}
             {results.map((item, i) => {
@@ -340,9 +322,9 @@ export default function CommandPalette({ open, onClose }) {
 
           {/* Footer hint */}
           <div className="px-4 py-2 border-t border-base-content/5 flex items-center gap-4 text-[10px] text-base-content/25 font-mono">
-            <span><kbd className="px-1 py-0.5 rounded bg-base-300 border border-base-content/10">&uarr;&darr;</kbd> navigate</span>
-            <span><kbd className="px-1 py-0.5 rounded bg-base-300 border border-base-content/10">&crarr;</kbd> select</span>
-            <span><kbd className="px-1 py-0.5 rounded bg-base-300 border border-base-content/10">esc</kbd> close</span>
+            <span><kbd className="px-1 py-0.5 rounded bg-base-300 border border-base-content/10">&uarr;&darr;</kbd> {t('search.navigate')}</span>
+            <span><kbd className="px-1 py-0.5 rounded bg-base-300 border border-base-content/10">&crarr;</kbd> {t('search.select')}</span>
+            <span><kbd className="px-1 py-0.5 rounded bg-base-300 border border-base-content/10">esc</kbd> {t('search.close')}</span>
           </div>
         </div>
       </div>

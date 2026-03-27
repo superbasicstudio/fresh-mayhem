@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import SafetyBadge from './SafetyBadge';
 import ExpandableImage from './ExpandableImage';
 import { SignalIcon, ExclamationTriangleIcon, WrenchIcon, ChevronDownIcon } from '@heroicons/react/16/solid';
@@ -44,6 +45,7 @@ const TOOL_ICONS = {
 };
 
 export function RxAppCard({ app }) {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   return (
     <div className="card bg-base-200 relative overflow-hidden">
@@ -60,7 +62,7 @@ export function RxAppCard({ app }) {
         <div className="flex items-center justify-between mt-1.5">
           <span className="badge badge-ghost badge-sm font-mono text-[10px]">{app.frequency}</span>
           {app.wiki && (
-            <a href={app.wiki} target="_blank" rel="noopener noreferrer" className="link link-primary text-xs font-medium" aria-label={`${app.name} wiki (opens in new tab)`}>Wiki</a>
+            <a href={app.wiki} target="_blank" rel="noopener noreferrer" className="link link-primary text-xs font-medium" aria-label={`${app.name} wiki (opens in new tab)`}>{t('common.wiki')}</a>
           )}
         </div>
         {app.learn && (
@@ -70,7 +72,7 @@ export function RxAppCard({ app }) {
               className="flex items-center gap-1 text-[11px] font-mono text-primary/60 hover:text-primary mt-1.5 transition-colors"
             >
               <ChevronDownIcon className={`w-3 h-3 transition-transform ${expanded ? 'rotate-180' : ''}`} />
-              {expanded ? 'Less' : 'Learn more'}
+              {expanded ? t('common.less') : t('common.learnMore')}
             </button>
             {expanded && (
               <p className="text-xs text-base-content/50 leading-relaxed mt-2 border-t border-base-content/5 pt-2">
@@ -99,6 +101,7 @@ const DANGER_DOT_COLORS = {
 };
 
 export function TxAppCard({ app }) {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   return (
     <div className="card bg-base-200 relative overflow-hidden">
@@ -120,7 +123,7 @@ export function TxAppCard({ app }) {
               className="flex items-center gap-1 text-[11px] font-mono text-primary/60 hover:text-primary mt-1.5 transition-colors"
             >
               <ChevronDownIcon className={`w-3 h-3 transition-transform ${expanded ? 'rotate-180' : ''}`} />
-              {expanded ? 'Less' : 'Learn more'}
+              {expanded ? t('common.less') : t('common.learnMore')}
             </button>
             {expanded && (
               <p className="text-xs text-base-content/50 leading-relaxed mt-2 border-t border-base-content/5 pt-2">
@@ -142,6 +145,7 @@ export function TxAppCard({ app }) {
 }
 
 export function ToolCard({ tool }) {
+  const { t } = useTranslation();
   const Icon = TOOL_ICONS[tool.name] || WrenchIcon;
   return (
     <div className="card bg-base-200 relative overflow-hidden">
@@ -152,12 +156,12 @@ export function ToolCard({ tool }) {
             <Icon className="w-4 h-4 text-base-content/40 shrink-0" />
             {tool.name}
           </h3>
-          {tool.tx ? <SafetyBadge level="caution" /> : <span className="fm-badge-utility">Utility</span>}
+          {tool.tx ? <SafetyBadge level="caution" /> : <span className="fm-badge-utility">{t('tools.utility')}</span>}
         </div>
         <p className="text-sm text-base-content/60 leading-relaxed">{tool.description}</p>
         {tool.wiki && (
           <div className="mt-1.5">
-            <a href={tool.wiki} target="_blank" rel="noopener noreferrer" className="link link-primary text-xs font-medium" aria-label={`${tool.name} wiki (opens in new tab)`}>Wiki</a>
+            <a href={tool.wiki} target="_blank" rel="noopener noreferrer" className="link link-primary text-xs font-medium" aria-label={`${tool.name} wiki (opens in new tab)`}>{t('common.wiki')}</a>
           </div>
         )}
       </div>

@@ -1,0 +1,1054 @@
+{
+  "metadata": {
+    "locale": "de",
+    "name": "Deutsch",
+    "version": "1.0.0"
+  },
+  "nav": {
+    "overview": "Übersicht",
+    "controls": "Steuerung",
+    "receive": "Empfangs-Apps (RX)",
+    "transmit": "Sende-Apps (TX)",
+    "tools": "Werkzeuge",
+    "safety": "Sicherheitszentrale",
+    "frequencies": "Frequenzen",
+    "learn": "Videos / Lernen",
+    "quickstart": "Schnellstart",
+    "whereToBuy": "Bezugsquellen",
+    "search": "Suche",
+    "navigation": "NAVIGATION",
+    "expandSidebar": "Seitenleiste ausklappen",
+    "collapseSidebar": "Seitenleiste einklappen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "brand": {
+    "name": "FRESH MAYHEM",
+    "subtitle": "Mayhem Firmware-Handbuch",
+    "device": "PortaPack H4M + HackRF One",
+    "desktopApp": "Desktop-App",
+    "desktopAppTooltip": "Desktop-App (Linux)"
+  },
+  "search": {
+    "placeholder": "Apps, Werkzeuge, Frequenzen, Seiten durchsuchen...",
+    "noResults": "Keine Ergebnisse für \"{query}\"",
+    "navigate": "navigieren",
+    "select": "auswählen",
+    "close": "schließen",
+    "types": {
+      "page": "Seite",
+      "rx": "RX-App",
+      "tx": "TX-App",
+      "tool": "Werkzeug",
+      "setting": "Einstellung",
+      "game": "Spiel",
+      "safety": "Sicherheit",
+      "frequency": "Frequenz",
+      "video": "Video",
+      "vendor": "Händler",
+      "link": "Link"
+    },
+    "pageDescriptions": {
+      "overview": "Dashboard-Übersicht und Kurzstatistiken",
+      "controls": "PortaPack-Steuerung, Gain-Kette, Wasserfall",
+      "receive": "Alle Empfangsanwendungen",
+      "transmit": "Alle Sendeanwendungen mit Gefahrenstufen",
+      "tools": "Hilfsprogramme, Einstellungen und Spiele",
+      "safety": "Schadensszenarien, Erfahrungsberichte und Warnungen",
+      "frequencies": "Frequenzspektrum, Sperrbereiche, legale Sendebänder",
+      "learn": "Lernvideos und Ressourcen",
+      "quickstart": "Schritt-für-Schritt-Einrichtungsanleitung",
+      "whereToBuy": "Seriöse Händler für HackRF und PortaPack"
+    }
+  },
+  "overview": {
+    "title": "Übersicht",
+    "cards": {
+      "controls": {
+        "label": "Steuerung & Navigation",
+        "stat": "Interaktive Simulatoren",
+        "desc": "PortaPack-Mockup, Wasserfallanzeige, Gain-Ketten-Rechner"
+      },
+      "receive": {
+        "label": "Empfangs-Apps",
+        "desc": "Passive Aufklärung — ADS-B, POCSAG, SubGhzD, BLE und mehr"
+      },
+      "transmit": {
+        "label": "Sende-Apps",
+        "desc": "Aktives Testen — OOK, Replay, FlipperTX, BLE TX (nur autorisierte Nutzung)"
+      },
+      "tools": {
+        "label": "Werkzeuge & Einstellungen",
+        "desc": "Frequenzmanager, Signalgenerator, Dateimanager, App-Manager und mehr"
+      },
+      "safety": {
+        "label": "Sicherheitszentrale",
+        "stat": "Schadensprävention",
+        "desc": "Anfängerfehler, Schadensberichte, TX-Gefahrenstufen, Verstärker-Einblicke"
+      },
+      "frequencies": {
+        "label": "Frequenzreferenz",
+        "stat": "1 MHz – 6 GHz",
+        "desc": "HF-Spektrumdiagramm, Sperrfrequenzen, legale TX-Bänder, Strafen"
+      },
+      "learn": {
+        "label": "Lernen & Ressourcen",
+        "stat": "Videos & Links",
+        "desc": "Einrichtungs-Tutorials, App-Demos, SDR-Kurse, Community-Ressourcen"
+      },
+      "quickstart": {
+        "label": "Schnellstart",
+        "desc": "Schritt-für-Schritt-Anleitung für die erste Empfangssitzung"
+      },
+      "whereToBuy": {
+        "label": "Bezugsquellen",
+        "desc": "Community-empfohlene Quellen für originale HackRF- und PortaPack-Hardware"
+      }
+    }
+  },
+  "hero": {
+    "title": "Übersicht",
+    "model": "Modell",
+    "modelValue": "HackRF One R10C",
+    "portapack": "PortaPack",
+    "portapackValue": "H4M",
+    "frequency": "Frequenz",
+    "frequencyValue": "1 MHz – 6 GHz",
+    "txPower": "TX-Leistung",
+    "txPowerValue": "~15 dBm (32 mW)",
+    "rxApps": "RX-Apps",
+    "txApps": "TX-Apps",
+    "usb": "USB",
+    "tcxo": "TCXO",
+    "adc": "ADC",
+    "adcValue": "8 Bit / 20 Msps",
+    "status": "Status",
+    "statusValue": "Betriebsbereit"
+  },
+  "controls": {
+    "title": "Steuerung & Navigation",
+    "subtitle": "Interaktiver PortaPack H4M-Simulator, Gain-Ketten-Rechner und Wasserfallanzeige. Lerne die Hardware-Bedienelemente kennen, bevor du einschaltest.",
+    "portapackTitle": "PortaPack H4M",
+    "clickWheel": "Drehrad",
+    "rotateCW": "Im Uhrzeigersinn drehen:",
+    "rotateCWDesc": "Nach unten scrollen / Wert erhöhen",
+    "rotateCCW": "Gegen Uhrzeigersinn drehen:",
+    "rotateCCWDesc": "Nach oben scrollen / Wert verringern",
+    "selectShort": "SELECT (kurz):",
+    "selectShortDesc": "Bestätigen / Ziffernfeld öffnen",
+    "selectLong": "SELECT (lang):",
+    "selectLongDesc": "Ziffernweiser Abstimmmodus",
+    "leftRight": "LINKS/RECHTS:",
+    "leftRightDesc": "Zwischen Feldern wechseln",
+    "upFromApp": "HOCH (aus App):",
+    "upFromAppDesc": "Zu den Titelleistensymbolen springen",
+    "freqTuning": "Frequenzabstimmung",
+    "wheel": "Drehrad:",
+    "wheelDesc": "Frequenzfeld auswählen, drehen um Schrittweite zu ändern",
+    "keypad": "Ziffernfeld:",
+    "keypadDesc": "Kurz SELECT auf Frequenzfeld drücken, Ziffern eingeben",
+    "digitMode": "Ziffernmodus:",
+    "digitModeDesc": "Lang SELECT drücken, Ziffer wird blau, Drehrad zum Ändern",
+    "steps": "Schritte:",
+    "stepsDesc": "10 MHz bis 10 Hz (18 Optionen)",
+    "gainChain": "Gain-Ketten-Rechner",
+    "waterfall": "Wasserfall-Anzeigesimulation",
+    "emergencyStop": "TX-Notabschaltung",
+    "emergencyStep1": "Start/Stopp in der TX-App drücken",
+    "emergencyStep2": "Zurück-Pfeil antippen, um die TX-App zu verlassen",
+    "emergencyStep3": "RESET-Taste drücken (Notfall)",
+    "emergencyStep4": "Netzschalter AUS (letzte Rettung)"
+  },
+  "receive": {
+    "title": "Empfangs-Apps",
+    "subtitle": "Alle {{count}} reinen Empfangsanwendungen der Mayhem-Firmware. Kein Senden — die Legalität passiven Empfangs variiert je nach Region. Informiere dich über die lokalen Gesetze.",
+    "filterPlaceholder": "Empfangs-Apps filtern...",
+    "apps": "Apps",
+    "learnMore": "Mehr erfahren",
+    "less": "Weniger",
+    "wiki": "Wiki"
+  },
+  "transmit": {
+    "title": "Sende-Apps",
+    "subtitle": "Alle {{count}} Sendeanwendungen der Mayhem-Firmware. Jede mit Gefahrenstufe bewertet — immer einen Dummy Load oder eine angepasste Antenne verwenden.",
+    "warning": "Alle TX-Apps benötigen eine Antenne oder einen Dummy Load. Niemals ohne angeschlossene Last senden. Jammer, GPS Sim und ADS-B TX über den App-Manager ausblenden.",
+    "filterPlaceholder": "Sende-Apps filtern...",
+    "apps": "Apps",
+    "learnMore": "Mehr erfahren",
+    "less": "Weniger"
+  },
+  "tools": {
+    "title": "Werkzeuge & Hilfsprogramme",
+    "gamesTitle": "Spiele",
+    "settingsTitle": "Einstellungsreferenz",
+    "utility": "Hilfsprogramm"
+  },
+  "safety": {
+    "title": "Sicherheitszentrale",
+    "subtitle": "Häufige Fehler, reale Schadensberichte, TX-Gefahrenstufen und Verstärkerverhalten für den HackRF One + PortaPack. Informationen dienen nur Bildungszwecken — keine Rechtsberatung. Informiere dich immer über die lokalen Vorschriften.",
+    "tabs": {
+      "mistakes": "Anfängerfehler",
+      "stories": "Schadensberichte",
+      "ratings": "TX-Gefahrenstufen",
+      "amp": "Verstärker-Einblick"
+    },
+    "symptoms": "SYMPTOME",
+    "prevention": "PRÄVENTION",
+    "technicalDetail": "TECHNISCHES DETAIL",
+    "source": "Quelle:",
+    "tableApp": "App",
+    "tableDescription": "Beschreibung",
+    "tableRating": "Bewertung",
+    "ampTitle": "Der Verstärker sieht alles",
+    "ampDesc": "Der Frontend-Verstärker des HackRF arbeitet gleichzeitig über seine gesamte Bandbreite von 6+ GHz. Vor dem Verstärker gibt es keinen schmalen Bandpassfilter. Abstimmung/Filterung erfolgt nach der Verstärkung.",
+    "ampBullet1": "Auf 433 MHz abgestimmt, aber Mobilfunkmast bei 900 MHz in der Nähe? Der Verstärker empfängt trotzdem das volle Mobilfunksignal.",
+    "ampBullet2": "Deine eingestellte Frequenz bietet dem Verstärker KEINEN Schutz vor Signalen außerhalb des Bandes.",
+    "ampBullet3": "Externe Bandpassfilter vor dem HackRF-Eingang sind die richtige Gegenmaßnahme.",
+    "ampBullet4": "Ein Inline-Dämpfungsglied ist in der Nähe starker Signalquellen unverzichtbar."
+  },
+  "frequencies": {
+    "title": "Über Funkfrequenzen (RF) lernen",
+    "subtitle": "HF-Spektrumabdeckung von 1 MHz bis 6 GHz — Sperrzonen, legale TX-Bänder und Strafenreferenz für die USA.",
+    "spectrumTitle": "HF-Spektrumabdeckung",
+    "bandMapTitle": "Bandkarte — Sperrbereiche vs. Legale TX-Bänder (1 MHz – 6 GHz)",
+    "bandMapDesc": "Interaktive Karte mit eingeschränkten (rot) und erlaubten (grün) Frequenzbändern auf logarithmischer Skala. Für Details über ein Band hovern. Gelbe Überlappungen zeigen, wo legale ISM-Bänder sich mit eingeschränkten Diensten überschneiden.",
+    "noGoTitle": "Sperrfrequenzen — US-Bundesbeschränkungen",
+    "legalTitle": "Legale TX-Bänder (mit Bedingungen)",
+    "penaltiesTitle": "Rechtliche Konsequenzen (US-Bundesrecht)",
+    "band": "Band",
+    "range": "Bereich",
+    "service": "Dienst",
+    "requirements": "Anforderungen",
+    "violation": "Verstoß",
+    "law": "Gesetz",
+    "penalty": "Strafe",
+    "disclaimer": "Frequenzbeschränkungen und Strafen basieren auf US-Bundesvorschriften (FCC/FAA). Gesetze variieren erheblich je nach Land und Region. Dies ist keine Rechtsberatung — überprüfe immer die Vorschriften in deiner Gerichtsbarkeit, bevor du sendest."
+  },
+  "learn": {
+    "title": "Lernen",
+    "tabs": {
+      "setup": "Einrichtung",
+      "firmware": "Firmware",
+      "demos": "App-Demos",
+      "safety": "Sicherheit",
+      "course": "SDR-Kurs"
+    },
+    "resources": "Ressourcen",
+    "linksTitle": "Links & Ressourcen",
+    "linksSubtitle": "Kuratierte Links zu Mayhem-Firmware, HackRF-Hardware, SDR-Lernressourcen, Community-Werkzeugen und Rechtsreferenzen.",
+    "all": "Alle"
+  },
+  "quickstart": {
+    "title": "HackRF + PortaPack — Schnellstart",
+    "subtitle": "Komplette Einrichtungsanleitung vom Auspacken bis zur ersten FM-Empfangssitzung. Umfasst SD-Karten-Vorbereitung, Firmware, Kalibrierung, Sicherheit und Herunterfahren. Hake jeden Schritt ab — der Fortschritt wird lokal gespeichert.",
+    "clear": "LÖSCHEN",
+    "sections": {
+      "beforePowerOn": "Vor dem Einschalten",
+      "firstPowerOn": "Erstes Einschalten",
+      "firstReceive": "Dein erster FM-Empfang",
+      "calibration": "Frequenzkalibrierung",
+      "safetyShutdown": "Sicherheit & Herunterfahren"
+    },
+    "steps": {
+      "s1": "Stelle sicher, dass dein USB-Kabel datenfähig ist (nicht nur zum Laden) — das ist das häufigste Einrichtungsproblem",
+      "s2": "Setze eine MicroSD-Karte ein (FAT32, 8–32 GB empfohlen) — speichert Aufnahmen, Einstellungen und Apps",
+      "s3": "Lade die neueste Mayhem-Firmware von GitHub Releases herunter und kopiere die .ppfw.tar auf das SD-Stammverzeichnis",
+      "s4": "Bringe die Teleskopantenne (40 MHz–6 GHz) am SMA-Anschluss an — nur handfest, niemals mit Werkzeug",
+      "s5": "Erde dich vor dem Anfassen — ESD am SMA-Mittelpin kann den LNA beschädigen",
+      "s6": "Halte einen 50-Ohm-Dummy-Load bereit, wenn du TX-Apps testen möchtest",
+      "s7": "Schiebe den Netzschalter HOCH — warte, bis das Mayhem-Hauptmenü erscheint",
+      "s8": "Überprüfe die Firmware-Version in der Statusleiste (aktuell: v2.3.2)",
+      "s9": "Gehe zu Einstellungen → SD-Karte → Test, um zu überprüfen, ob die SD-Karte erkannt wird",
+      "s10": "Gehe zu Einstellungen → UI → Encoder-Empfindlichkeit nach Wunsch einstellen (niedrig/normal/hoch)",
+      "s11": "Gehe zu Einstellungen → Datum/Uhrzeit → stelle die Echtzeituhr für genaue Aufnahme-Zeitstempel ein",
+      "s12": "Navigiere zu Empfang → Audio",
+      "s13": "Setze den Modus auf 'WFM' (Breitband-FM)",
+      "s14": "Stelle die Frequenz auf einen lokalen FM-Sender ein (z.B. 101,1 MHz)",
+      "s15": "Setze die Verstärkung: LNA=16, VGA=20, AMP=0 (AUS) — beginne immer mit AMP aus",
+      "s16": "Drehe die Lautstärke auf 40–60 — du solltest den Sender hören",
+      "s17": "Prüfe den RSSI-Balken und das Wasserfall-Display — ein starkes Signal zeigt ein helles vertikales Band",
+      "s18": "Bei schwachem Signal: zuerst VGA erhöhen, dann LNA. Bei Clipping/Verzerrung: Verstärkung verringern",
+      "s19": "Stimme auf einen bekannten FM-Sender ab und prüfe, ob die Frequenz leicht abweicht",
+      "s20": "Gehe zu Einstellungen → Radio → Frequenzkorrektur und justiere, bis der Sender korrekt zentriert ist",
+      "s21": "Dies korrigiert den TCXO-Offset — verbessert die Genauigkeit in allen Apps",
+      "s22": "Vor jedem TX: 50-Ohm-Dummy-Load oder frequenzangepasste Antenne anschließen — niemals ohne Last senden",
+      "s23": "Lerne die TX-Notabschaltung: Stopp-Taste → Zurück-Pfeil → RESET → Ausschalten",
+      "s24": "Niemals innerhalb von 3 Metern aktiver Sender (Funkgeräte, Router) empfangen",
+      "s25": "Tippe auf den Zurück-Pfeil, um zu den Menüs zurückzukehren",
+      "s26": "Schiebe den Netzschalter HERUNTER zum Ausschalten — immer ausschalten, bevor die Antenne getrennt wird"
+    }
+  },
+  "whereToBuy": {
+    "title": "Bezugsquellen",
+    "subtitle": "Community-empfohlene Quellen für HackRF One, PortaPack und Zubehör. Keine Empfehlung — informiere dich immer selbst.",
+    "disclaimerTitle": "Keine Verbindung · Keine Empfehlung",
+    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem ist <strong>nicht verbunden mit, gesponsert von oder unterstützt durch</strong> einen der auf dieser Seite aufgeführten Händler. Die Aufnahme basiert auf Community-Erwähnungen in r/hackrf, r/RTLSDR und anderen SDR-Foren — sie garantiert keine Produktqualität, Authentizität oder Service. <strong>Informiere dich immer selbst vor dem Kauf.</strong>",
+    "typeLabel": "TYP",
+    "regionLabel": "REGION",
+    "all": "Alle",
+    "noResults": "Keine Händler entsprechen den ausgewählten Filtern.",
+    "tipsTitle": "Kauftipps",
+    "tipsSubtitle": "Dinge, die die Community vor dem ersten Kauf gerne gewusst hätte.",
+    "tipLabel": "Tipp",
+    "headsUpLabel": "Hinweis",
+    "infoLabel": "Info"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Frequenz nicht gefunden",
+    "message": "Kein Signal an dieser Adresse erkannt. Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "backButton": "Zurück zur Übersicht",
+    "footer": "Fresh Mayhem — Ein Super Basic Studio-Projekt"
+  },
+  "chart": {
+    "extreme": "Extrem",
+    "danger": "Gefahr",
+    "illegal": "Illegal",
+    "caution": "Vorsicht",
+    "all": "Alle",
+    "txApps": "TX-Apps"
+  },
+  "bandMap": {
+    "title": "Bandkarte — Ausgewählte eingeschränkte und ISM-Bänder (1 MHz – 6 GHz)",
+    "description": "Dieses Diagramm zeigt eine <strong>teilweise</strong> Übersicht der US-amerikanischen <strong>Sende (TX)</strong>-Beschränkungen. Rot = ausgewählte Bänder, in denen Senden bundesstaatlich eingeschränkt ist. Grün = ISM-Bänder, in denen Senden unter FCC Part 15-Bedingungen grundsätzlich erlaubt ist. <strong>Empfang (RX) / Zuhören ist in den meisten Rechtsgebieten grundsätzlich erlaubt — überprüfen Sie stets Ihre lokalen Gesetze.</strong> Dies ist keine vollständige Liste aller eingeschränkten Frequenzen.",
+    "disclaimer": "<strong>Haftungsausschluss:</strong> Nach US-Bundesrecht (47 U.S.C. § 301) ist das Senden auf <strong>jeder</strong> Funkfrequenz ohne ordnungsgemäße Genehmigung verboten. Unlizenziertes Senden ist nur auf bestimmten ISM-Bändern unter strengen FCC Part 15-Leistungsgrenzen und -Bedingungen erlaubt. Leere Stellen in diesem Diagramm sind <strong>kein</strong> Hinweis darauf, dass Senden erlaubt ist. Dieses Diagramm dient nur als Bildungsreferenz und stellt keine Rechtsberatung dar. Frequenzvorschriften variieren je nach Land — überprüfen Sie stets die Gesetze in Ihrem Rechtsgebiet vor dem Senden. Super Basic Studio, LLC übernimmt keine Haftung für unautorisierte Sendungen.",
+    "restrictedLabel": "EINGESCHRÄNKTES TX — NICHT SENDEN (AUSGEWÄHLTE US-BUNDESBÄNDER)",
+    "ismLabel": "ISM-BÄNDER — GRUNDSÄTZLICH ERLAUBTES TX (FCC PART 15, BEDINGUNGEN GELTEN)",
+    "doNotTransmit": "NICHT SENDEN (TX)",
+    "listeningPermitted": "Zuhören (RX) ist grundsätzlich erlaubt — lokale Gesetze überprüfen",
+    "ismConditions": "ISM — Grundsätzlich erlaubt unter FCC Part 15 mit Bedingungen",
+    "clickToZoom": "Klicken zum Zoomen",
+    "scrollHint": "Scrollen zum Zoomen · Ziehen zum Verschieben · Band anklicken zum Fokussieren",
+    "resetZoom": "Zoom zurücksetzen"
+  },
+  "spectrum": {
+    "restrictedTx": "Eingeschränktes TX",
+    "ismTx": "ISM TX",
+    "rxApps": "RX-Apps",
+    "scrollHint": "Scrollen zum Zoomen · Ziehen zum Verschieben · Band anklicken zum Fokussieren",
+    "omitted": "Breitbandige Apps (Audio, Scanner usw.) der Übersichtlichkeit halber ausgelassen.",
+    "clickToZoom": "Klicken zum Zoomen",
+    "resetZoom": "Zoom zurücksetzen"
+  },
+  "penalties": {
+    "maxPenalty": "Max. Einzelstrafe (PIRATE Act)",
+    "maxPrison": "Max. Bundesgefängnisstrafe",
+    "aviationCases": "Luftfahrtfälle — Bundesermittlung",
+    "scaleTitle": "GELDSTRAFENSKALA (US-BUNDESEBENE)",
+    "severe": "SCHWERWIEGEND",
+    "high": "HOCH",
+    "significant": "ERHEBLICH",
+    "violations": {
+      "unauthorizedTx": {
+        "violation": "Unautorisiertes Senden",
+        "law": "47 U.S.C. § 301",
+        "penalty": "Beschlagnahme der Ausrüstung + Geldstrafen + strafrechtliche Verfolgung",
+        "detail": "Die FCC kann Ausrüstung ohne Vorwarnung beschlagnahmen. Erster Verstoß führt typischerweise zu einer Mitteilung über offensichtliche Haftung (NAL) mit Geldstrafen."
+      },
+      "willfulInterference": {
+        "violation": "Vorsätzliche Störung",
+        "law": "47 U.S.C. § 333",
+        "penalty": "Bis zu $100,000 Geldstrafe / 1 Jahr Gefängnis",
+        "detail": "Vorsätzliche Störung lizenzierter Funkkommunikation. Die FCC untersucht aktiv Störungsbeschwerden mittels Peilung."
+      },
+      "gpsJamming": {
+        "violation": "GPS- / Mobilfunk-Jamming",
+        "law": "PIRATE Act",
+        "penalty": "Bis zu $119,555/Tag — max. $2.39M",
+        "detail": "PIRATE Act (2020) hat die Strafen drastisch erhöht. GPS-Jammer beeinträchtigen Luftfahrt, Schifffahrt, Notruf und Finanzsysteme."
+      },
+      "intercepting": {
+        "violation": "Abfangen von Kommunikation",
+        "law": "18 U.S.C. § 2511",
+        "penalty": "Bis zu 5 Jahre Bundesgefängnis",
+        "detail": "Bundes-Abhörgesetz. Gilt für das absichtliche Abfangen privater Kommunikation, nicht für passives Scannen von Sendesignalen."
+      },
+      "aviation": {
+        "violation": "Luftfahrtstörung",
+        "law": "18 U.S.C. § 32",
+        "penalty": "Bundesverbrechen — FBI + FAA-Ermittlung",
+        "detail": "Flugzeugsabotagegesetz. ADS-B-Spoofing oder GPS-Jamming in der Nähe von Flughäfen löst sofortige Bundesermittlung aus. Kein Mindestschwellenwert."
+      }
+    }
+  },
+  "badges": {
+    "rx": "RX",
+    "rxTooltip": "Nur Empfang — kein Senden. Legalität des Abhörens variiert je nach Region.",
+    "caution": "VORSICHT",
+    "cautionTooltip": "Mit Vorsicht verwenden — lokale Vorschriften prüfen",
+    "danger": "GEFAHR",
+    "dangerTooltip": "Gefährlich — kann Schäden oder rechtliche Probleme verursachen. Lokale Vorschriften prüfen.",
+    "extreme": "EXTREM",
+    "extremeTooltip": "Extremes Risiko — in den meisten Rechtsgebieten wahrscheinlich illegal. Keine Rechtsberatung.",
+    "illegal": "ILLEGAL",
+    "illegalTooltip": "In den meisten bekannten Rechtsgebieten illegal. Überprüfe deine lokalen Gesetze."
+  },
+  "footer": {
+    "freshMayhem": "Fresh Mayhem",
+    "mayhemFirmware": "Mayhem Firmware",
+    "portapackHackrf": "PortaPack H4M + HackRF One",
+    "educationalOnly": "Nur zu Bildungszwecken — keine Rechtsberatung. Halte dich immer an die lokalen HF-Vorschriften.",
+    "trademarkNotice": "HackRF und PortaPack sind Marken ihrer jeweiligen Eigentümer. Mayhem-Firmware ist ein Open-Source-Projekt seiner Mitwirkenden. Diese Seite ist eine unabhängige, inoffizielle Referenz und ist nicht verbunden mit, unterstützt von oder gesponsert durch",
+    "greatScottGadgets": "Great Scott Gadgets",
+    "trademarkSuffix": ", PortaPack oder das Mayhem-Projekt.",
+    "stickyFooter": "Ein <1>Super Basic Studio</1> Open-Source-Projekt",
+    "lastUpdated": "Seite zuletzt aktualisiert:"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "less": "Weniger",
+    "wiki": "Wiki",
+    "all": "Alle",
+    "apps": "Apps",
+    "vendors": "Händler",
+    "language": "Sprache"
+  },
+  "data": {
+    "txApps": {
+      "ADS-B(S) TX": {
+        "description": "Gefälschte Flugzeugtransponder-Daten.",
+        "legal": "Bundesverbrechen — Spoofing von Flugzeugtranspondern gefährdet die Flugsicherheit.",
+        "learn": "ADS-B steht für Automatic Dependent Surveillance–Broadcast. So melden Flugzeuge ihre Position, Höhe und Geschwindigkeit an die Flugsicherung und andere Maschinen. Das (S) bezieht sich auf die ‚S-Mode'-Transponder-Variante von Mode S bei 1090 MHz. Diese App erzeugt gefälschte ADS-B-Pakete — Phantomflugzeuge, die auf ATC-Radar und FlightAware/FlightRadar24 erscheinen. Bereits das Testen auf Sendung ist ein Bundesverbrechen nach 18 U.S.C. § 32 (Flugzeugsabotage). Nur mit dummy load in abgeschirmter Umgebung verwenden."
+      },
+      "APRS TX": {
+        "description": "APRS-Positions-/Datenpakete.",
+        "legal": "Legal mit Amateurfunklizenz auf vorgesehenen APRS-Frequenzen.",
+        "learn": "APRS (Automatic Packet Reporting System) ist ein digitales Amateurfunkprotokoll zum Teilen von Echtzeit-Position, Wetter, Nachrichten und Telemetrie. Es arbeitet auf 144.390 MHz (Nordamerika) mit AX.25-Paketfunk bei 1200 Baud. APRS-Pakete werden über Digipeater weitergeleitet und können auf aprs.fi eingesehen werden. Eine gültige Amateurfunklizenz (Technician-Klasse oder höher) ist zum Senden erforderlich. Diese App ermöglicht das Aussenden benutzerdefinierter Positions- und Statuspakete."
+      },
+      "BHT Xy/EP": {
+        "description": "Europäische Straßenbeleuchtungs-Steuersignale.",
+        "legal": "Unbefugte Steuerung öffentlicher Infrastruktur.",
+        "learn": "BHT Xy/EP bezieht sich auf das Berliner Hoch-Technologie-Funksteuerungsprotokoll zur Steuerung europäischer Straßenbeleuchtungssysteme. Diese Systeme arbeiten auf bestimmten Frequenzen und verwenden einfach codierte Befehle. Kommunen nutzen dies zur zentralen Verwaltung der öffentlichen Beleuchtung. Das Senden dieser Signale kann Straßenbeleuchtung in einem Gebiet abschalten und so die öffentliche Sicherheit gefährden. Dies ist unbefugte Steuerung kommunaler Infrastruktur und in allen EU-Rechtsordnungen illegal."
+      },
+      "BLE TX": {
+        "description": "BLE-Advertisement-Pakete mit konfigurierbarer MAC-Adresse und Nutzlast.",
+        "legal": "Legal zum Testen eigener Geräte. Spoofing anderer kann gegen Gesetze verstoßen.",
+        "learn": "BLE (Bluetooth Low Energy) ist ein Kurzstrecken-Funkprotokoll bei 2,4 GHz, das von Fitness-Trackern, Smart Locks, Beacons und IoT-Geräten genutzt wird. BLE-Advertisement-Pakete sind Broadcast-Nachrichten, die nahegelegene Geräte ohne Pairing erkennen können. Diese App ermöglicht das Erstellen benutzerdefinierter Advertisement-Pakete mit konfigurierbarer MAC-Adresse und Nutzlast — nützlich zum Testen eigener BLE-Peripheriegeräte, iBeacon/Eddystone-Experimente oder zum Verständnis der BLE-Protokollstruktur. Die Reichweite beträgt typisch 10–30 Meter."
+      },
+      "BLESpam": {
+        "description": "Flutet BLE-Advertisements an nahegelegene Geräte.",
+        "legal": "Kann nahegelegene BLE-Geräte stören. Kann gegen Störungsgesetze verstoßen.",
+        "learn": "BLESpam sendet schnell eine große Menge an BLE-Advertisement-Paketen, ähnlich dem Flipper Zero BLE-Spam-Angriff. Es kann Pairing-Popups auf iOS- und Android-Geräten in der Nähe auslösen, legitime BLE-Verbindungen stören (Kopfhörer, Smartwatches, Tastaturen) und BLE-Scanner überlasten. Dies funktioniert, weil die meisten Geräte ständig auf BLE-Advertisements lauschen. Obwohl es 2,4 GHz mit kurzer Reichweite ist, beeinträchtigt das Fluten der BLE-Advertisement-Kanäle (37, 38, 39) alle BLE-Geräte in der Umgebung."
+      },
+      "Burger Pager": {
+        "description": "Restaurant-Paging-Signale im Untersetzerstil.",
+        "legal": "Unbefugte Aktivierung kommerzieller Geräte.",
+        "learn": "Restaurant-Paging-Systeme (z. B. von Long Range Systems) verwenden einfache OOK- oder FSK-Modulation um 400–470 MHz, um die vibrierenden/blinkenden Untersetzer auszulösen, die Kunden mitteilen, dass ihre Bestellung fertig ist. Jeder Pager hat einen eindeutigen ID-Code. Diese App kann bestimmte Pager oder alle Pager gleichzeitig auslösen, indem sie das Aktivierungssignal wiedergibt oder erstellt. Obwohl es harmlos erscheint, ist es unbefugte Nutzung kommerzieller Funkgeräte und kann den Restaurantbetrieb stören."
+      },
+      "CVS Spam": {
+        "description": "Störung des CVS-Apotheken-Paging-/Benachrichtigungssystems.",
+        "legal": "Unbefugte Störung kommerzieller Systeme.",
+        "learn": "CVS-Apotheken verwenden ein drahtloses Benachrichtigungssystem, um Personal zu alarmieren, wenn Rezepte fertig sind oder Kunden Hilfe benötigen. Dieses System arbeitet auf bestimmten UHF-Frequenzen mit einfacher digitaler Codierung. Die CVS-Spam-App flutet diese Frequenzen mit schnellen Sendungen und stört so die interne Kommunikation der Apotheke. Dies ist absichtliche Störung eines kommerziellen Kommunikationssystems und verstößt gegen die FCC Part 15-Vorschriften unabhängig von der Sendeleistung."
+      },
+      "FlipperTX": {
+        "description": "Gibt Flipper Zero .sub-Dateien direkt vom PortaPack wieder.",
+        "legal": "Legal nur für eigene Geräte. Wiedergabe fremder Signale ist illegal.",
+        "learn": "FlipperTX liest Flipper Zero .sub-Aufnahmedateien von der SD-Karte und gibt sie über das HackRF wieder. Das .sub-Format des Flipper Zero speichert Rohsignalaufnahmen einschließlich Frequenz, Modulationstyp und der tatsächlichen Datenbits. Das bedeutet, dass jedes mit einem Flipper Zero aufgenommene Signal über das HackRF mit höherer Leistung und besseren Antennenoptionen wiedergegeben werden kann. Häufige Anwendungen sind das Testen eigener Garagentore, Tore und ferngesteuerter Geräte. Der breitere Frequenzbereich des HackRF (1 MHz–6 GHz) geht weit über den nativen Sub-GHz-Bereich des Flipper hinaus."
+      },
+      "GPS Sim": {
+        "description": "Erzeugt und sendet gefälschte GPS-Satellitensignale aus .C8-Dateien.",
+        "legal": "Bundesverbrechen — GPS-Spoofing betrifft Luftfahrt, Schifffahrt, Rettungsdienste.",
+        "learn": "GPS-Satelliten senden auf L1 (1575,42 MHz) mit präzisen Zeitsignalen, die Empfänger zur Positionsbestimmung triangulieren. GPS Sim erzeugt gefälschte Satellitensignale, die echtes GPS überlagern und Empfänger eine falsche Position und Zeit melden lassen. Die .C8-Dateien enthalten vorberechnete IQ-Samples für bestimmte Orte/Zeiten. Dies betrifft ALLE GPS-Empfänger in Reichweite — Handys, Autos, Flugzeuge, Schiffe, Rettungsdienste, Finanzhandelssysteme (die GPS für Zeitsynchronisation nutzen). GPS-Spoofing ist ein Bundesverbrechen nach 18 U.S.C. § 32 mit schweren Strafen. Schon kurzes Testen auf Sendung kann nahegelegene Infrastruktur beeinträchtigen."
+      },
+      "Hopper": {
+        "description": "Frequenzsprung-Sender. Flutet über definierte Frequenzbereiche.",
+        "legal": "Gleichbedeutend mit Jamming. Immer illegal.",
+        "learn": "Hopper wechselt die Sendefrequenz schnell über einen benutzerdefinierten Frequenzbereich, verweilt kurz auf jeder Frequenz und springt dann zur nächsten. Anders als die dedizierte Jammer-App deckt Hopper ein potenziell viel breiteres Spektrum durch Springen statt Breitbandrauschen ab. Dies macht sie wirksam gegen Frequenzsprung-Spreizspektrum-Systeme (FHSS) wie WLAN, Bluetooth und einige militärische Kommunikation. Die Wirkung ist dieselbe wie Jamming — Dienstverweigerung über das Zielband. In allen Rechtsordnungen nach internationalen Funkvorschriften (ITU-Funkreglement, Artikel 15) illegal."
+      },
+      "Jammer": {
+        "description": "Breitband-HF-Störsender. Rauschen über bis zu 24 MHz Bandbreite.",
+        "legal": "HF-Jamming ist in praktisch allen Ländern ein Verbrechen.",
+        "learn": "Die Jammer-App sendet breitbandiges Rauschen über eine konfigurierbare Bandbreite von bis zu 24 MHz um eine Zielfrequenz. Dies erzeugt eine Wand aus Störsignalen, die legitime Signale im Band übertönt. Bei der Ausgangsleistung des HackRF (~-10 dBm, etwa 0,1 mW) ist die effektive Reichweite begrenzt, aber mit dem eingebauten HF-Verstärker steigt sie erheblich. Jamming verstößt gegen 47 U.S.C. § 333 in den USA mit Geldstrafen bis zu 112.500 $ pro Verstoß und strafrechtlichen Konsequenzen. Die FCC ermittelt aktiv bei Jamming-Beschwerden mit Peilgeräten."
+      },
+      "LGE Tool": {
+        "description": "LGE-Protokoll-Sender. Begrenzte Dokumentation.",
+        "legal": "Wahrscheinlich unbefugte Nutzung eines proprietären Protokolls.",
+        "learn": "LGE bezieht sich auf ein proprietäres Funkprotokoll mit begrenzter öffentlicher Dokumentation. Die genaue Anwendung und die Zielsysteme sind im Mayhem-Firmware-Wiki nicht gut dokumentiert. Es scheint mit bestimmten industriellen oder kommerziellen Funksteuerungssystemen zusammenzuhängen, die in bestimmten europäischen Märkten im Einsatz sind. Aufgrund der fehlenden Dokumentation und der proprietären Natur des Protokolls ist jede Übertragung wahrscheinlich unbefugt. Vorsicht walten lassen und das spezifische Protokoll vor jeder Nutzung recherchieren."
+      },
+      "Morse TX": {
+        "description": "Morsecode über FM-Ton oder CW.",
+        "legal": "Legal mit Amateurfunklizenz auf geeigneten Frequenzen.",
+        "learn": "Morsecode (CW — Continuous Wave) ist der älteste digitale Modus im Funk, der Text als Muster aus kurzen (Dit) und langen (Dah) Signalen codiert. Diese App sendet Morse entweder als CW (Ein-/Aus-Tastung eines Trägers) oder als FM-Audiosignal. CW wird immer noch häufig von Amateurfunkern verwendet, weil es äußerst effizient ist — lesbar bei Signalpegeln weit unter Sprache. Amateurfunker können CW auf allen Amateurbändern verwenden. Die App nimmt Texteingaben entgegen und wandelt sie in korrekt getimten Morsecode bei konfigurierbarer Wörter-pro-Minute-Geschwindigkeit um."
+      },
+      "OOK TX": {
+        "description": "On-Off-Keying-Signale. PT2262-Fernbedienungen, Türklingeln, Garagentore.",
+        "legal": "Legal nur für eigene Geräte.",
+        "learn": "OOK (On-Off Keying) ist die einfachste Form der digitalen Modulation — der Träger ist entweder an oder aus und repräsentiert Einsen und Nullen. Die meisten günstigen 315/433 MHz-Fernbedienungen verwenden OOK mit dem PT2262-Encoder-Chip (oder kompatible Klone wie EV1527). Dazu gehören Garagentoröffner, Funktürklingeln, Funksteckdosen, Auto-Schlüsselanhänger (ältere) und einfache Alarmsensoren. Die App kann bestimmte Codes senden, um diese Geräte auszulösen. Viele ältere Systeme verwenden feste Codes ohne Verschlüsselung, was sie trivial wiederholbar macht. Neuere Systeme verwenden Rolling Codes (wie KeeLoq), die durch einfaches Replay nicht zu überwinden sind."
+      },
+      "OOK Editor": {
+        "description": "Erstellung und Sendung benutzerdefinierter OOK-Signalmuster.",
+        "legal": "Legal nur für eigene Geräte.",
+        "learn": "Der OOK-Editor ermöglicht die manuelle Erstellung von On-Off-Keying-Signalmustern Bit für Bit, anstatt ein aufgenommenes Signal wiederzugeben. Man definiert das Symbol-Timing, die Datenbits, die Präambel und Sync-Muster. Dies ist nützlich für das Reverse-Engineering unbekannter OOK-Protokolle, das Testen selbst gebauter Empfänger oder das Erstellen von Signalen für Geräte, deren Protokoll bekannt ist, aber keine Aufnahme vorliegt. Es ist im Wesentlichen ein visueller Bitstream-Editor mit direkter HF-Sendefähigkeit. In Kombination mit einer Logikanalysator-Ansicht hilft es, zu verstehen, wie einfache HF-Protokolle ihre Daten codieren."
+      },
+      "POCSAG TX": {
+        "description": "Gefälschte POCSAG-Pager-Nachrichten an bestimmte RIC-Adressen.",
+        "legal": "Unbefugtes Senden auf lizenzierten Frequenzen.",
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) ist das Protokoll traditioneller numerischer und alphanumerischer Pager, das im Bereich 150–170 MHz oder 450–470 MHz arbeitet, je nach Region. Jeder Pager hat einen RIC (Radio Identity Code) — eine eindeutige Adresse. Diese App erstellt und sendet POCSAG-Nachrichten an bestimmte RIC-Adressen, d. h. man kann Text an einzelne Pager senden. Pager-Netzwerke werden weiterhin aktiv von Krankenhäusern, Rettungsdiensten und einigen Unternehmen genutzt. Das Senden auf diesen lizenzierten Frequenzen ohne Genehmigung ist illegal."
+      },
+      "RDS": {
+        "description": "FM-Rundfunk mit Radio Data System-Metadaten.",
+        "legal": "Erfordert Rundfunklizenz. Niedrige Leistung wird in einigen Regionen toleriert.",
+        "learn": "RDS (Radio Data System) ist die Technologie hinter dem Sendernamen, Songtitel und Verkehrsdurchsagen, die auf dem Display des Autoradios erscheinen, wenn man FM (88–108 MHz) hört. RDS ist ein 57-kHz-Hilfsträger, der dem FM-Stereosignal aufmoduliert wird. Diese App sendet ein FM-Signal mit vollständigen RDS-Daten — man kann den Sendernamen (PS), Radiotext (RT), Programmtyp (PTY) und Verkehrsdurchsagen (TA/TP) einstellen. Bei niedriger Leistung und kurzer Reichweite wird dies häufig für persönliche FM-Sender verwendet, aber jeder FM-Rundfunk erfordert technisch eine Lizenz der nationalen Regulierungsbehörde."
+      },
+      "Soundboard": {
+        "description": "WAV-Audio über FM. CTCSS-Töne, Schnurlosmikrofon-Kompatibilität.",
+        "legal": "Erfordert Lizenz auf den meisten Frequenzen.",
+        "learn": "Soundboard spielt WAV-Dateien von der SD-Karte als FM-Audiosendungen ab. Es kann auch CTCSS-Töne (Continuous Tone-Coded Squelch System) erzeugen — die niederfrequenten Töne (67–254,1 Hz), die Betriebsfunkgeräte verwenden, um unerwünschten Verkehr auf gemeinsam genutzten Frequenzen herauszufiltern. Dies macht es nützlich zum Testen von Funk-Squelch-Systemen und CTCSS-ausgestatteten Repeatern. Die Schnurlosmikrofon-Kompatibilität bedeutet, dass es auf Frequenzen senden kann, die von drahtlosen Mikrofonsystemen genutzt werden (typisch VHF/UHF), und somit als drahtloses Mikrofon fungiert."
+      },
+      "Spectrum Painter": {
+        "description": "Bild/Text im HF-Spektrum gezeichnet, sichtbar auf Wasserfall-Displays.",
+        "legal": "Spielerei, aber dennoch unbefugtes Senden auf den meisten Frequenzen.",
+        "learn": "Spectrum Painter wandelt ein Bild oder Text in ein HF-Signal um, das bei Betrachtung auf einem Wasserfall-Display (wie SDR++ oder GQRX) als sichtbares Bild oder Nachricht im Spektrum erscheint. Es funktioniert durch Variation der Sendefrequenz über die Zeit, um jede Pixelreihe zu ‚malen' — hellere Pixel bekommen mehr Leistung, dunklere weniger. Das Ergebnis ist rein visuelle Kunst, sichtbar nur auf Spektrumanalysatoren. Obwohl kreativ und bei Demos beliebt, ist es dennoch eine HF-Sendung und unterliegt denselben Vorschriften wie jeder andere Sender. Am besten mit dummy load oder auf einer unbelegten Frequenz mit minimaler Leistung verwenden."
+      },
+      "SSTV TX": {
+        "description": "Slow Scan Television-Bilder über FM. Scottie/Martin/SC2-Modi.",
+        "legal": "Legal mit Amateurfunklizenz auf vorgesehenen Frequenzen.",
+        "learn": "SSTV (Slow Scan Television) ist eine Methode zur Übertragung von Standbildern über Funk, die seit den 1960er Jahren von Amateurfunkern genutzt wird. Anders als Rundfunkfernsehen sendet SSTV ein Bild über 30–120 Sekunden, indem die Pixelhelligkeit als Audiotöne (1200–2300 Hz) codiert wird. Scottie, Martin und SC2 sind verschiedene Codierungsmodi, die Auflösung gegen Übertragungszeit abwägen. SSTV wird häufig auf 14.230 MHz (20-m-Band), 21.340 MHz (15-m-Band) und 145.500 MHz (2-m-FM) genutzt. Die ISS sendet regelmäßig SSTV-Bilder, die jeder empfangen kann. Diese App sendet Bilder von der SD-Karte in diesen Standardformaten."
+      },
+      "TEDI/LCR": {
+        "description": "Französische Straßeninfrastruktur-Steuerrahmen. Bell 202 FSK.",
+        "legal": "Unbefugte Steuerung von Straßeninfrastruktur.",
+        "learn": "TEDI (Transmission Élémentaire d'Informations) und LCR (Liaisons à Concentration de Relais) sind französische Straßeninfrastruktur-Protokolle zur Steuerung elektronischer Autobahnschilder, Tunnelbelüftungssysteme und Verkehrsmanagementeinrichtungen. Sie verwenden Bell 202 FSK-Modulation (Frequency Shift Keying) — einen Modem-Standard aus den 1970er Jahren, der Daten als zwei Audiofrequenzen (1200/2200 Hz) codiert. Diese Systeme steuern kritische Sicherheitsinfrastruktur auf französischen Autobahnen. Unbefugtes Senden von TEDI/LCR-Rahmen könnte Autobahnschild-Nachrichten ändern oder Tunnelsicherheitssysteme stören."
+      },
+      "TouchTunes": {
+        "description": "TouchTunes-Jukebox-Fernsteuerungsbefehle.",
+        "legal": "Unbefugte Steuerung kommerzieller Geräte.",
+        "learn": "TouchTunes ist die größte vernetzte Jukebox-Plattform in Bars und Restaurants in ganz Nordamerika. Ihre Jukeboxen akzeptieren Befehle von einer proprietären HF-Fernbedienung, die um 433 MHz mit einem einfachen digitalen Protokoll arbeitet. Diese App kann Befehle wiedergeben, um kostenlose Credits hinzuzufügen, Lieder zu überspringen, die Lautstärke zu regeln oder andere Jukebox-Funktionen ohne Bezahlung zu steuern. Obwohl es wie ein harmloser Bar-Trick wirkt, ist es unbefugter Zugriff auf ein kommerzielles System und stellt Diebstahl von Dienstleistungen dar. TouchTunes weiß seit Jahren von dieser Schwachstelle, aber die installierte Hardware bleibt anfällig."
+      }
+    },
+    "rxApps": {
+      "ADS-B": {
+        "description": "Flugzeugtransponder-Tracking. Zeigt ICAO-ID, Rufzeichen, Höhe, Position, Geschwindigkeit.",
+        "learn": "ADS-B (Automatic Dependent Surveillance–Broadcast) ist das System, mit dem moderne Flugzeuge alle halbe Sekunde ihre Identität, Position, Höhe und Geschwindigkeit auf 1090 MHz aussenden. Jedes Flugzeug hat eine eindeutige 24-Bit-ICAO-Adresse (wie ein Kennzeichen). Das PortaPack decodiert diese Mode-S-Transponder-Signale in Echtzeit und zeigt eine Live-Flugzeugliste — dieselben Daten, die FlightRadar24 und FlightAware antreiben. ADS-B ist rein empfangend und völlig legal zu überwachen. Mit einer guten Antenne und Sichtlinie kann man Flugzeuge in über 160 km Entfernung verfolgen. Dies ist eine der beliebtesten ersten Apps für neue HackRF-Besitzer."
+      },
+      "ACARS": {
+        "description": "Flugzeugdatenlink-Nachrichten zwischen Flugzeug und Bodenstation.",
+        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) ist ein digitales Textnachrichtensystem, das von Fluggesellschaften seit den 1970er Jahren genutzt wird. Es arbeitet auf VHF-Frequenzen um 129–137 MHz und überträgt kurze Datennachrichten zwischen Flugzeug und Bodenstation — Triebwerksleistungsberichte, Wetteranfragen, Gate-Zuweisungen, Treibstoffdaten und Crew-Kommunikation. Nachrichten werden im Klartext ohne Verschlüsselung gesendet, sodass man sie direkt lesen kann. Jede Nachricht enthält die Registrierung und Flugnummer des Flugzeugs. ACARS ist das Äquivalent von Textnachrichten in der Luftfahrt, und das Mithören gibt einen Blick hinter die Kulissen des Flugbetriebs."
+      },
+      "AFSK": {
+        "description": "Audio Frequency Shift Keying-Decoder. Bell 202-Modemsignale, TEDI/LCR.",
+        "learn": "AFSK (Audio Frequency Shift Keying) codiert digitale Daten als zwei Audiotöne — typischerweise 1200 Hz für Mark (1) und 2200 Hz für Space (0), gemäß dem Bell 202-Modemstandard aus den 1970er Jahren. Diese Modulation wird in vielen Protokollen verwendet: APRS-Amateurfunk, Anruferkennung, Einwahl-Telefonmodems und französische Straßeninfrastruktursysteme (TEDI/LCR). Der Decoder lauscht dem FM-Audio und extrahiert die digitalen Daten aus den Tonwechseln. Wer jemals das Kreischen eines Einwahlmodems gehört hat — das war FSK. Dies ist ein Allzweck-Decoder für jedes System, das Audio-Frequency-Shift-Keying verwendet."
+      },
+      "AIS Boats": {
+        "description": "Schiffsverfolgung. MMSI, Position, Kurs, Geschwindigkeit. Zwei Kanäle.",
+        "learn": "AIS (Automatic Identification System) ist das maritime Äquivalent zu ADS-B — alle großen Schiffe (und viele kleine) sind verpflichtet, ihre Identität, Position, Geschwindigkeit, Kurs und Ziel auf zwei VHF-Kanälen auszusenden: AIS1 (161,975 MHz) und AIS2 (162,025 MHz). Jedes Schiff hat eine eindeutige 9-stellige MMSI-Nummer (Maritime Mobile Service Identity). Das PortaPack decodiert beide Kanäle gleichzeitig und zeigt eine Live-Schiffsliste. AIS-Daten treiben MarineTraffic.com und VesselFinder an. In der Nähe einer Küste, eines Flusses oder Hafens sieht man Schlepper, Frachtschiffe, Tanker, Fähren und sogar einige Fischerboote. Die Reichweite hängt von der Antennenhöhe ab — 30–65 km sind typisch in Wassernähe."
+      },
+      "Analog TV": {
+        "description": "Analoger PAL-Fernsehempfang. Reduzierte Auflösung (52x128).",
+        "learn": "Diese App empfängt analoge Fernsehsignale im PAL-Standard (Phase Alternating Line), der in Europa, Asien und Teilen Südamerikas vor der Umstellung auf Digitalfernsehen verwendet wurde. Sie decodiert das Composite-Videosignal in ein kleines 52x128-Pixel-Bild auf dem PortaPack-Bildschirm — genug, um zu sehen, was gesendet wird, aber nicht komfortabel zum Ansehen. Die meisten Länder haben analoges Fernsehen abgeschaltet, aber es gibt möglicherweise noch aktive Signale von älteren Überwachungskameras, Amateurfernseh-Betreibern (ATV) oder Ländern, die noch nicht vollständig auf Digital umgestellt haben. Es ist eher eine unterhaltsame historische Demo als ein praktisches Werkzeug in den meisten Regionen."
+      },
+      "APRS RX": {
+        "description": "Amateurfunk-Positions-/Wetter-/Telemetriepakete. AX.25 über AFSK.",
+        "learn": "APRS (Automatic Packet Reporting System) ist ein Echtzeit-Amateurfunknetzwerk zum Teilen von Position, Wetter, Nachrichten und Telemetrie. Es verwendet AX.25-Paketfunk bei 1200 Baud über AFSK-Modulation auf einer einzigen nationalen Frequenz — 144.390 MHz in Nordamerika, 144.800 MHz in Europa. Stationen (Handfunkgeräte, Autotracker, Wetterstationen, Ballone) senden Pakete aus, die über Digipeater über weite Gebiete weitergeleitet werden. Der gesamte APRS-Verkehr ist auf aprs.fi einsehbar. Das PortaPack decodiert diese Pakete und zeigt Rufzeichen, Positionen und Nachrichteninhalte. Zum Zuhören braucht man keine Lizenz — nur zum Senden. In der Nähe bevölkerter Gebiete sieht man regelmäßige APRS-Aktivität."
+      },
+      "Audio": {
+        "description": "Allgemeiner analoger Audioempfänger. AM, NFM, WFM, SSB (USB/LSB). Aufnahme als WAV.",
+        "learn": "Die Audio-App ist der vielseitigste Empfänger auf dem PortaPack — ein Allzweck-Radio, das alle gängigen analogen Modulationsarten unterstützt. AM (Amplitudenmodulation) für Rundfunk und Flugfunk. NFM (Schmalband-FM) für Walkie-Talkies, Amateurfunk-Repeater und Betriebsfunk. WFM (Breitband-FM) für UKW-Radiosender wie lokale Musiksender bei 88–108 MHz. SSB (Einseitenband — USB/LSB) für Amateurfunk auf Kurzwelle und Seefunk. Es nimmt auch Audio direkt als WAV-Dateien auf die SD-Karte auf. Dies ist die App, mit der die meisten beginnen — einen lokalen FM-Sender im WFM-Modus einstellen und sofort Musik hören."
+      },
+      "BLE RX": {
+        "description": "BLE-Advertisement-Sniffer. Kanäle 37/38/39. MAC-Hersteller-Lookup.",
+        "learn": "BLE (Bluetooth Low Energy) ist ein Kurzstrecken-Funkprotokoll bei 2,4 GHz, das von Milliarden von Geräten genutzt wird — Handys, Fitness-Tracker, Smartwatches, AirTags, Beacons, Smart-Home-Sensoren und kabellose Kopfhörer. BLE-Geräte senden ständig Advertisement-Pakete auf drei dedizierten Kanälen (37, 38, 39), um ihre Präsenz anzukündigen. Diese App fängt diese Advertisements ab und zeigt MAC-Adresse, Signalstärke und Herstellernamen (aus der IEEE-OUI-Datenbank — die ersten 3 Bytes der MAC identifizieren den Hersteller). An jedem öffentlichen Ort sieht man Dutzende BLE-Geräte. Dies ist rein passive Überwachung — kein Pairing oder Verbindungsaufbau."
+      },
+      "Detector": {
+        "description": "Breitband-Signaldetektor mit RSSI-Verlaufsanzeige.",
+        "learn": "Die Detektor-App überwacht eine bestimmte Frequenz und zeichnet den RSSI (Received Signal Strength Indicator) über die Zeit als scrollende Verlaufsanzeige auf. Man kann sie sich als einfachen Bewegungsmelder für HF vorstellen — wenn ein Signal auf der Zielfrequenz erscheint oder sich in der Stärke ändert, sieht man eine Spitze im Diagramm. Dies ist nützlich, um zu bestätigen, dass ein Gerät sendet, zu messen, wie oft ein Sensor meldet, intermittierende Störungen zu erkennen oder einfache HF-Untersuchungen durchzuführen. Es streift die gesamte Komplexität der Demodulation ab und beantwortet einfach die Frage: ‚Sendet hier etwas, und wie stark ist es?'"
+      },
+      "ERT Meter": {
+        "description": "Smart-Meter-Ablesung (Strom, Gas, Wasser).",
+        "learn": "ERT (Encoder Receiver Transmitter) ist das Funkprotokoll, das von Smart Metern in ganz Nordamerika genutzt wird, um Strom-, Gas- und Wasserverbrauch zu melden. Anstatt dass ein Ableser zu jedem Haus läuft, senden ERT-ausgestattete Zähler ihre Messwerte auf ~900 MHz im ISM-Band mit OOK-Modulation. Ein Versorgungsfahrzeug mit Empfänger fährt durch die Nachbarschaften und sammelt die Messwerte ein. Jede Übertragung enthält die Zähler-ID und den aktuellen Verbrauchswert. Das PortaPack decodiert diese und zeigt Zähler-IDs und Messwerte in der Umgebung. All dies ist unverschlüsselt — ein bekanntes Datenschutzproblem, das in der Sicherheitsforschung ausführlich diskutiert wurde."
+      },
+      "Flex RX": {
+        "description": "FLEX-Pager-Protokoll-Decoder. Farbwechselanzeige.",
+        "learn": "FLEX ist ein Paging-Protokoll, das in den 1990er Jahren von Motorola als schnellerer und effizienterer Nachfolger von POCSAG entwickelt wurde. Es unterstützt Datenraten von 1600, 3200 und 6400 bps — deutlich schneller als POCSAGs 512–2400 bps. FLEX-Pager werden immer noch von Krankenhäusern und Rettungsdiensten verwendet, weil Pager-Netzwerke eine bessere Gebäudedurchdringung als Mobilfunk haben und bei Überlastung des Mobilfunknetzes weiterarbeiten. Die App decodiert FLEX-Nachrichten und zeigt sie mit Farbwechselanzeige zur Unterscheidung der Nachrichtentypen. Wie bei POCSAG werden diese Nachrichten unverschlüsselt gesendet — ein langjähriges Sicherheitsproblem im Gesundheitswesen, wo Patientendaten enthalten sein können."
+      },
+      "Fox Hunt": {
+        "description": "Sendersuche-Assistent. Signalstärke-Visualisierung. GPS-/Kartenintegration.",
+        "learn": "Fuchsjagd (auch Senderjagd, T-Hunting oder ARDF — Amateur Radio Direction Finding) ist ein Sport/Freizeitaktivität, bei der Teilnehmer einen versteckten Funksender nur mit einem Empfänger und einer Richtantenne aufspüren. Die Fox-Hunt-App verwandelt das PortaPack in ein Suchwerkzeug — sie zeigt die Signalstärke als visuellen Indikator und integriert GPS zum Aufzeichnen des Wegs und zur Schätzung der Senderrichtung. Beim Annähern an den Fuchs wird das Signal stärker. Dies ist eine beliebte Amateurfunkclub-Aktivität und wird auch in realen Szenarien verwendet, z. B. zum Aufspüren von Störquellen oder zum Lokalisieren von Notfunkbaken."
+      },
+      "gfxEQ": {
+        "description": "Grafische Audio-Equalizer-Visualisierung für WFM-Radio.",
+        "learn": "gfxEQ ist ein visueller Audio-Spektrumanalysator, der beim Empfang von FM-Rundfunk (WFM) läuft. Er zeigt einen Echtzeit-Grafik-Equalizer — dieselbe hüpfende Balkenanzeige wie bei einer Stereoanlage — und stellt den Frequenzinhalt des empfangenen Audios dar. Bässe links, Höhen rechts, mit Balken, die zur Musik hüpfen. Es ist ein unterhaltsames Visualisierungstool, das das PortaPack in ein Retro-aussehendes FM-Radio mit Spektrumanzeige verwandelt. Einen Musiksender im WFM-Modus einstellen und zuschauen, wie es auf die Musik reagiert. Rein kosmetisch, aber unterhaltsam."
+      },
+      "Level": {
+        "description": "Signalpegelmesser auf einer bestimmten Frequenz. Externe App.",
+        "learn": "Level ist ein einfacher, aber nützlicher Signalstärkemesser, der den Empfangspegel auf einer einzelnen Frequenz als große, leicht lesbare Zahl und Balkendiagramm anzeigt. Anders als der Detektor (der den Verlauf über die Zeit zeigt) oder Looking Glass (das ein breites Spektrum zeigt), konzentriert sich Level auf eine Frequenz und liefert die genaueste Echtzeit-Leistungsmessung. Dies ist eine externe .ppma-App, die von der SD-Karte geladen wird. Sie ist nützlich für Antennentests (Vergleich der Signalstärke zwischen Antennen), das Finden der besten Empfangsposition oder die Überprüfung, ob ein Sender den erwarteten Leistungspegel ausgibt."
+      },
+      "Looking Glass": {
+        "description": "Breitband-Spektrum-Wasserfall. Drei Anzeigemodi: SPECTR, LIVE-V, PEAK-V.",
+        "learn": "Looking Glass ist ein Breitband-Spektrumanalysator, der über einen konfigurierbaren Frequenzbereich scannt und die Ergebnisse als Wasserfall darstellt. Anders als die Audio-App (die auf eine Frequenz abstimmt) scannt Looking Glass ein breites Band, um alles zu zeigen, was aktiv ist. Drei Anzeigemodi: SPECTR zeigt die klassische Spektrumansicht (Leistung vs. Frequenz), LIVE-V zeigt einen vertikalen Live-Wasserfall (Zeit scrollt nach unten, Frequenz links-rechts, Helligkeit = Signalstärke) und PEAK-V hält die Spitzenwerte. Dies ist das bevorzugte Werkzeug zum Erkunden, was in einem Band auf Sendung ist — man kann ganze ISM-Bänder, den UKW-Rundfunkbereich oder jede vom HackRF abgedeckte Spanne (1 MHz–6 GHz) scannen."
+      },
+      "Morse RX": {
+        "description": "Decodiert Morsecode (CW) zu Text.",
+        "learn": "Morsecode (CW — Continuous Wave) codiert Buchstaben und Zahlen als Folgen kurzer Signale (Dits: ·) und langer Signale (Dahs: —). In den 1830er Jahren entwickelt, wird er heute noch von Amateurfunkern verwendet, weil CW-Signale bei extrem niedrigen Signalpegeln decodiert werden können — weit unter dem, was für Sprache nötig ist. Die Morse-RX-App lauscht auf CW-Signale und decodiert sie automatisch auf dem Bildschirm zu Text. Sie erkennt das Ein-/Aus-Muster des Trägers und misst die Zeitdauer der Dits und Dahs. Aktiven Morsecode findet man auf Amateurfunk-Kurzwellenbändern (besonders um 7.000–7.040 MHz und 14.000–14.070 MHz). Die automatische Decodierung kann bei schlechten Signalen oder ungewöhnlichem Timing Schwierigkeiten haben, funktioniert aber gut mit starken, sauber getakteten Übertragungen."
+      },
+      "NOAA": {
+        "description": "NOAA-APT-Wettersatelliten-Bilddecoder.",
+        "learn": "NOAA betreibt eine Flotte polarumlaufender Wettersatelliten (NOAA-15, 18, 19), die während ihrer Umrundung der Erde alle ~100 Minuten kontinuierlich Live-Wetterbilder senden. Das APT-Signal (Automatic Picture Transmission) ist ein analoges Format im VHF-Band (137 MHz), das seit den 1960er Jahren verwendet wird. Während der Satellit überfliegt (für ca. 10–15 Minuten sichtbar), überträgt er ein Graustufenbild Zeile für Zeile — man baut buchstäblich in Echtzeit ein Wetterfoto auf. Das PortaPack decodiert dieses APT-Signal direkt zu einem Bild auf dem Bildschirm. Man braucht eine gute Antenne (ein V-Dipol oder QFH-Antenne funktioniert gut) und einen freien Überflug. Auf n2yo.com oder Heavens-Above kann man die Überflugzeiten für den eigenen Standort prüfen."
+      },
+      "NRF": {
+        "description": "Nordic nRF24L01-Protokoll-Decoder. Funktastaturen, Mäuse, IoT.",
+        "learn": "Der nRF24L01 ist ein weit verbreiteter 2,4-GHz-Funktransceiver-Chip von Nordic Semiconductor, der in Millionen von Geräten steckt — Funktastaturen, Mäuse, Game-Controller, RC-Spielzeug, IoT-Sensoren und DIY Arduino/ESP-Projekte. Er verwendet ein einfaches paketbasiertes Protokoll mit Adressen und Kanälen. Die NRF-App decodiert diese Übertragungen und zeigt die rohen Paketdaten. Dies ist besonders interessant für Sicherheitsforschung: Einige ältere Funktastaturen mit nRF24L01 übertragen Tastatureingaben mit schwacher oder keiner Verschlüsselung (die ‚MouseJack'-Schwachstellenklasse). Die App hilft zu verstehen, was die eigenen kabellosen Peripheriegeräte senden und wie exponiert diese Daten sind."
+      },
+      "POCSAG RX": {
+        "description": "POCSAG-Pager-Nachrichten-Decoder. Numerisch und Text. Manuelle Baudrate.",
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) ist das am weitesten verbreitete Pager-Protokoll, 1982 entwickelt und heute noch aktiv in Nutzung — besonders in Krankenhäusern, Feuerwehren und Rettungsdiensten. Pager werden für kritische Kommunikation bevorzugt, weil Pager-Netzwerke eine bessere Gebäudedurchdringung als Mobilfunk haben und bei Mobilfunknetz-Ausfällen weiterarbeiten. POCSAG-Nachrichten werden unverschlüsselt bei 512, 1200 oder 2400 Baud auf Frequenzen gesendet, die je nach Land variieren (üblich: 148–170 MHz, 450–470 MHz). Das PortaPack decodiert sowohl numerische als auch alphanumerische Nachrichten. In vielen Gebieten sieht man Krankenhausrufe, Restaurantbenachrichtigungen und Notdienst-Meldungen — alles im Klartext, was ein erhebliches Datenschutzproblem bleibt."
+      },
+      "ProtoView": {
+        "description": "Generischer Sub-GHz-Protokollanalysator. Visualisiert rohe Protokolldaten.",
+        "learn": "ProtoView ist ein protokollunabhängiger Signalanalysator für Sub-GHz-Frequenzen (typisch 300–928 MHz ISM-Bänder). Anstatt ein bestimmtes Protokoll zu decodieren, erfasst es das rohe digitale Signal und zeigt das Bit-Level-Timing — die tatsächlichen Einsen und Nullen, Pulsbreiten und Signalstruktur. Dies ist unschätzbar für das Reverse-Engineering unbekannter Protokolle: Man kann Präambel, Sync-Wort, Datennutzlast und Muster erkennen. Es ist wie ein Logikanalysator für HF-Signale. Wenn man auf ein Gerät trifft, das ein nicht in Mayhem eingebautes Protokoll verwendet, hilft ProtoView herauszufinden, was es tut. Funktioniert am besten mit einfachen OOK- und FSK-Modulationen, wie sie bei Fernbedienungen, Sensoren und IoT-Geräten üblich sind."
+      },
+      "Radiosonde": {
+        "description": "Wetterballon-Tracker. M10, M20, M2K2, RS41-SG. GPS, Höhe, Batterie.",
+        "learn": "Radiosonden sind kleine Instrumentenpakete, die zweimal täglich von ~900 Stationen weltweit an Wetterballons gestartet werden (um 00:00 und 12:00 UTC). Während der Ballon über ca. 90 Minuten auf ~30 km Höhe aufsteigt, sendet die Radiosonde Temperatur, Luftfeuchtigkeit, Druck, Windgeschwindigkeit/-richtung und GPS-Position auf 400–406 MHz. Das PortaPack decodiert mehrere gängige Typen: Vaisala RS41-SG (weltweit am häufigsten), Meteomodem M10/M20 und M2K2. Man kann die GPS-Position, Höhe und Batteriespannung des Ballons in Echtzeit verfolgen und sogar vorhersagen, wo er landen wird. Radiosondenjagd — das Bergen des heruntergefallenen Instrumentenpakets — ist ein beliebtes Hobby. Auf radiosondy.info kann man Startstationen in der Nähe prüfen."
+      },
+      "Scanner": {
+        "description": "Frequenzscanner. ~20 Freq./Sek. Farbcodiert (grau/gelb/grün).",
+        "learn": "Die Scanner-App stimmt schnell durch eine Liste von Frequenzen (etwa 20 pro Sekunde) und hält an, wenn Aktivität erkannt wird — genau wie ein traditioneller Polizeiscanner. Frequenzen sind farbcodiert: Grau bedeutet kein Signal, Gelb bedeutet schwaches Signal erkannt, Grün bedeutet aktives Signal und der Scanner hat angehalten, damit man zuhören kann. Man kann Frequenzlisten von der SD-Karte laden (Freqman-Dateien) oder Frequenzen manuell eingeben. Der Scanner setzt die Suche fort, nachdem das Signal abklingt. Dies ist nützlich zum Überwachen mehrerer Kanäle — Rettungsdienste, Amateurfunk-Repeater, Betriebsfunk oder jede Gruppe bekannter aktiver Frequenzen in der Umgebung. Community-Frequenzlisten für die meisten Regionen sind im Mayhem-Freqman-Repository verfügbar."
+      },
+      "Search": {
+        "description": "Frequenzbereichssuche mit Wasserfall. ‚Suchen und bleiben'-Modus.",
+        "learn": "Search ist wie Scanner, aber zum Entdecken unbekannter Signale. Anstatt eine Liste bekannter Frequenzen zu prüfen, scannt es kontinuierlich einen Frequenzbereich und hält an, wenn es ein aktives Signal findet. Der integrierte Wasserfall zeigt Signalaktivität über die Zeit, was das Erkennen intermittierender Sendungen erleichtert. Der ‚Suchen und bleiben'-Modus rastet auf ein gefundenes Signal ein und bleibt dort, bis es aufhört, und setzt dann die Suche fort. Dies ist die App, wenn man ein Frequenzband erkunden und herausfinden will, was aktiv ist — man muss die genauen Frequenzen nicht im Voraus kennen. Kombiniert mit Looking Glass: Looking Glass nutzen, um visuell belebte Bänder zu identifizieren, dann Search verwenden, um zu hören, was dort ist."
+      },
+      "SSTV RX": {
+        "description": "Slow Scan Television-Empfänger. Decodiert Bildübertragungen.",
+        "learn": "SSTV (Slow Scan Television) überträgt Standbilder über Funk, indem die Pixelhelligkeit als Audiotöne (1200–2300 Hz) codiert wird. Ein einzelnes Bild braucht 30–120 Sekunden zur Übertragung und baut sich Zeile für Zeile auf dem Bildschirm auf. SSTV wird seit den 1960er Jahren von Amateurfunkern genutzt und ist heute noch aktiv — häufige Anruffrequenzen sind 14.230 MHz (20-m-Band) und 145.500 MHz (2-m-FM). Die Internationale Raumstation (ISS) sendet bei besonderen Anlässen regelmäßig SSTV-Bilder auf 145.800 MHz, und jeder mit einem Empfänger kann sie decodieren. Die PortaPack SSTV-RX-App erkennt automatisch den Codierungsmodus (Scottie, Martin, Robot usw.) und baut das Bild auf dem Bildschirm auf, während es empfangen wird."
+      },
+      "SubCar": {
+        "description": "FM-Rundfunk-Unterträger-Decoder (SCA-Dienste).",
+        "learn": "FM-Rundfunksender können versteckte Audiokanäle namens Unterträger (SCA — Subsidiary Communications Authorization) neben ihrem Hauptstereo-Audio übertragen. Diese Unterträger liegen oberhalb des Stereosignals bei 67 kHz oder 92 kHz und tragen separate Audioinhalte: Hintergrundmusikdienste (wie das originale Muzak), Vorlesedienste für Sehbehinderte, fremdsprachige Programme oder Datendienste. SubCar decodiert diese versteckten Kanäle, auf die ein normales FM-Radio keinen Zugriff hat. Die meisten Menschen wissen nicht, dass diese existieren — sie sind seit den 1950er Jahren ein Feature des FM-Rundfunks. Die Verfügbarkeit variiert je nach Sender und Region; viele Sender nutzen keine Unterträger mehr, aber einige führen noch Vorlesedienste oder Nischen-Audioinhalte."
+      },
+      "SubGhzD": {
+        "description": "Sub-GHz-Protokoll-Decoder. Schlüsselanhänger, Garagenfernbedienungen, Wetterstationen, ISM-Geräte. Empfohlen: AMP 0, LNA 32, VGA 20.",
+        "learn": "SubGhzD (Sub-GHz Decoder) ist eine der beliebtesten Mayhem-Apps — sie decodiert die Protokolle hunderter gängiger drahtloser Geräte, die in den ISM-Bändern bei 315, 433, 868 und 915 MHz arbeiten. Dazu gehören Auto-Schlüsselanhänger (feste und einige Rolling Codes), Garagentoröffner, Funktürklingeln, Wetterstationen, Reifendrucksensoren, Funkthermometer, Bodenfeuchtesensoren und viele IoT-Geräte. Die App identifiziert das Protokoll, zeigt die Rohdaten und kann Aufnahmen auf der SD-Karte speichern. Mit AMP aus, LNA 32, VGA 20 starten — das sind die empfohlenen Gain-Einstellungen. Eine Fernbedienung drücken oder auf die Sendung einer Wetterstation warten, und die decodierten Daten erscheinen."
+      },
+      "TPMS RX": {
+        "description": "Reifendrucksensor-Decoder. Sensor-IDs, Druck, Temperatur.",
+        "learn": "TPMS-Sensoren (Tire Pressure Monitoring System) sind in allen Neuwagen in den USA (seit 2007) und der EU (seit 2014) vorgeschrieben. Jeder Reifen enthält einen kleinen Funksensor, der etwa alle 60 Sekunden Reifendruck und Temperatur auf 315 MHz (Nordamerika) oder 433 MHz (Europa) sendet. Jeder Sensor hat eine eindeutige 32-Bit-ID, die einem bestimmten Reifen zugeordnet ist. Das PortaPack decodiert diese Übertragungen und zeigt Sensor-ID, Druck (PSI oder kPa) und Temperatur für Fahrzeuge in der Nähe. Auf einem Parkplatz sieht man Dutzende meldende Sensoren. Dies ist ein bekanntes Datenschutzproblem — TPMS-IDs können zur Verfolgung bestimmter Fahrzeuge verwendet werden, was in akademischer Sicherheitsforschung demonstriert wurde."
+      },
+      "Weather": {
+        "description": "Funk-Wetterstation-Decoder. Temperatur, Luftfeuchtigkeit, Sensor-ID.",
+        "learn": "Drahtlose Verbraucher-Wetterstationen (Acurite, LaCrosse, Oregon Scientific, Ambient Weather usw.) verwenden einfache unverschlüsselte Protokolle auf ISM-Bändern — typisch 433,92 MHz (weltweit), 868 MHz (Europa) oder 915 MHz (Nordamerika). Außensensoren senden alle 30–60 Sekunden Temperatur, Luftfeuchtigkeit, Windgeschwindigkeit, Niederschlag und UV-Index. Die Weather-App decodiert diese Übertragungen und zeigt die Messwerte mit der eindeutigen Sensor-ID. Man kann die eigene Wetterstation drahtlos überwachen, oder in jeder Nachbarschaft Messwerte von Wetterstationen der Nachbarn im Umkreis von ca. 100 Metern empfangen. Die Protokolle sind gut dokumentiert und verwenden einfache OOK- oder FSK-Modulation."
+      },
+      "WeFax": {
+        "description": "KW-Wetterfax-Empfänger/-Decoder. Marine- und Luftfahrtsendungen.",
+        "learn": "Radiofax (WeFax, oder Wetterfax) ist eine Methode zur Übertragung von Wetterkarten, Meeresoberflächentemperaturkarten und Eiszustandsberichten über KW-Funk. Seit den 1940er Jahren in Gebrauch, wird es heute noch aktiv von Küstenfunkstellen weltweit für Seefahrer gesendet, die auf See Wetterkarten ohne Internet benötigen. Das Signal codiert Bilddaten als variierende Audiotöne (FM-Modulation) und baut ein Bild Zeile für Zeile auf — ähnlich einem Faxgerät, aber über Funk. Wichtige Stationen sind NOAA (Boston, New Orleans, Kodiak), JMH Tokio und DWD Hamburg. Übliche Frequenzen: 3–25 MHz KW-Bänder. Das PortaPack decodiert das Audio in eine Wetterkarte auf dem Bildschirm. Beste Ergebnisse mit einer KW-fähigen Antenne und während der geplanten Sendezeiten der Station (veröffentlicht in offiziellen Sendeplänen)."
+      }
+    },
+    "vendors": {
+      "Great Scott Gadgets": {
+        "description": "Ursprünglicher Entwickler und Designer des HackRF One. Michael Ossmanns Unternehmen. Die definitive Quelle für authentische HackRF-Boards.",
+        "note": "Verkauft keine PortaPack-Erweiterungen — nur das HackRF One selbst."
+      },
+      "OpenSourceSDRLab": {
+        "description": "Designer und Hersteller des PortaPack H4M (die beliebteste PortaPack-Variante). Verkauft direkt und über Wiederverkäufer.",
+        "note": "Verkauft auch auf AliExpress im OpenSourceSDRLab-Shop."
+      },
+      "Hacker Warehouse": {
+        "description": "Langjähriger US-basierter Einzelhändler für Sicherheits- und Hacking-Hardware. Häufig im HackRF-Subreddit empfohlen."
+      },
+      "SparkFun Electronics": {
+        "description": "Großer US-Elektronikhändler und Bildungsplattform. Autorisierter HackRF One-Wiederverkäufer."
+      },
+      "Adafruit Industries": {
+        "description": "Bekannter US-Elektronik- und Maker-Händler. Führt originale HackRF One-Boards."
+      },
+      "Lab401": {
+        "description": "Europäischer Sicherheitshardware-Händler mit Sitz in Frankreich. Führt HackRF, PortaPack und andere Pentest-Werkzeuge."
+      },
+      "Hak5": {
+        "description": "Beliebte Sicherheits-/Hacking-Hardwaremarke und -händler. Bekannt für eigene Pentest-Geräte, führt auch HackRF."
+      },
+      "Mouser Electronics": {
+        "description": "Großer globaler Elektronikdistributor. Führt das offizielle HackRF One von Great Scott Gadgets."
+      },
+      "Digikey": {
+        "description": "Einer der größten globalen Elektronikdistributoren. Autorisierte HackRF One-Quelle."
+      },
+      "Amazon": {
+        "description": "Verfügbar von verschiedenen Verkäufern. Qualität variiert erheblich — Bewertungen sorgfältig lesen und Verkäuferbewertungen prüfen.",
+        "note": "Hohes Risiko für Klone und Fälschungen. Nach Verkäufern mit etablierter Historie und positiven Bewertungen suchen, die speziell authentische Hardware erwähnen."
+      },
+      "AliExpress": {
+        "description": "Häufige Quelle für HackRF + PortaPack-Bundles, oft zu günstigeren Preisen. OpenSourceSDRLab hat hier einen offiziellen Shop.",
+        "note": "Mischung aus authentischen und geklonten Produkten. Bei gut bewerteten Shops mit hohen Bewertungen bleiben. Der offizielle OpenSourceSDRLab-Shop gilt allgemein als zuverlässig."
+      }
+    },
+    "buyingTips": {
+      "0": {
+        "title": "Wenn möglich, direkt beim Hersteller kaufen",
+        "description": "Great Scott Gadgets hat das HackRF One entwickelt und verkauft es. OpenSourceSDRLab hat das PortaPack H4M entwickelt und stellt es her. Der Kauf direkt beim Originalhersteller ist generell der zuverlässigste Weg, authentische Hardware zu erhalten."
+      },
+      "1": {
+        "title": "Klone existieren — und sie sind verbreitet",
+        "description": "HackRF ist Open-Source-Hardware, jeder kann es herstellen. Klone reichen von ‚funktioniert einwandfrei' bis ‚bei Ankunft defekt'. Das Risiko liegt bei dir."
+      },
+      "2": {
+        "title": "Wenn der Preis zu gut erscheint, um wahr zu sein...",
+        "description": "Je nach Verkäufer, Region und Verfügbarkeit kann ein echtes HackRF One ab 200–350 USD aufwärts bei etablierten Quellen kosten. Die Preise variieren, aber Boards, die deutlich unter dem üblichen Bereich angeboten werden, sind eher Klone. Manche Klone funktionieren gut, viele nicht — Erfahrungen können abweichen."
+      },
+      "3": {
+        "title": "Erst die Community fragen",
+        "description": "Vor dem Kauf bei einem unbekannten Verkäufer r/hackrf und r/RTLSDR nach Bewertungen durchsuchen. Die Community ist in der Regel schnell darin, schlechte Verkäufer zu melden."
+      },
+      "4": {
+        "title": "PortaPack-Versionen sind wichtig",
+        "description": "Das H4M ist das aktuell empfohlene PortaPack mit der besten Mayhem-Firmware-Unterstützung. Ältere H1/H2-Versionen haben weniger Funktionen und unterschiedliche Hardware."
+      },
+      "5": {
+        "title": "Marketplace-Bundles — sorgfältig prüfen",
+        "description": "Amazon- und AliExpress-Bundles enthalten oft Antennen, Gehäuse und Zubehör. Die Qualität des mitgelieferten Zubehörs variiert stark, unabhängig vom Board selbst."
+      }
+    },
+    "communities": {
+      "r/hackrf": {
+        "description": "Dedizierte HackRF-Community. Fragen, Projekte, Firmware-Updates, Fehlerbehebung und PortaPack-Diskussion."
+      },
+      "r/RTLSDR": {
+        "description": "Größte SDR-Community auf Reddit. Deckt alle SDR-Hardware ab, einschließlich HackRF, RTL-SDR und SDRplay. Projektvorstellungen, Antennenbauten und Signalidentifikation."
+      },
+      "r/amateurradio": {
+        "description": "Amateurfunk (Ham)-Community. Lizenzen, Gerätetests, Ausbreitung, digitale Betriebsarten und Feldbetrieb. SDR-Themen willkommen, wenn amateurfunkbezogen."
+      },
+      "r/hacking": {
+        "description": "Allgemeine Hacking- und Sicherheits-Community. RF-Hacking, Penetrationstests und Sicherheitsforschung sind häufige Themen. Bildungsfokus."
+      },
+      "r/signals": {
+        "description": "Signalidentifikation und -analyse. Aufnahmen unbekannter Signale, Wasserfall-Screenshots und Protokoll-Reverse-Engineering."
+      },
+      "r/rfelectronics": {
+        "description": "HF-Technik und Elektronik. Antennendesign, Filtertheorie, PCB-Layout für HF und Diskussion über Messgeräte."
+      },
+      "r/GNURadio": {
+        "description": "GNU Radio Signalverarbeitungs-Framework. Hilfe bei Flowgraphen, Entwicklung benutzerdefinierter Blöcke und DSP-Konzepte mit HackRF als häufige Quelle/Senke."
+      },
+      "r/ADSB": {
+        "description": "Flugzeugverfolgung über ADS-B. Empfänger-Setups, Antennenoptimierung, Feeder-Stationsbauten und Flugverfolgungsprojekte."
+      },
+      "r/FlipperZero": {
+        "description": "Flipper Zero-Community. Überschneidet sich häufig mit HackRF für Sub-GHz-Arbeit. Signalaufnahmen, .sub-Datei-Sharing und RF-Protokollanalyse."
+      }
+    },
+    "safety": {
+      "mistakes": {
+        "Leaving the internal amp ON near strong signal sources": {
+          "description": "Der Frontend-Verstärker des HackRF (MGA-81563) hat keinen Bandpassfilter davor — er verstärkt den gesamten Bereich von 1 MHz bis 6 GHz gleichzeitig, unabhängig davon, auf welche Frequenz man abgestimmt ist.",
+          "symptoms": [
+            "Amp AN macht Signale schwächer statt stärker",
+            "Reduzierte Empfindlichkeit über alle Bänder",
+            "Kein sichtbarer Schaden — der Ausfall ist lautlos"
+          ],
+          "prevention": [
+            "AMP AUS lassen, es sei denn, man benötigt ihn gezielt",
+            "Einen externen Bandpassfilter vor dem HackRF-Eingang verwenden",
+            "Einen 10–20 dB Inline-Dämpfer in der Nähe starker Sender verwenden"
+          ],
+          "technical": "Maximale sichere Eingangsleistung mit AMP AN ist -5 dBm. Ein Mobilfunkmast bei 900 MHz in 100 m Entfernung liefert ca. +5 bis +10 dBm — genug, um den MGA-81563 zu zerstören, selbst wenn auf 433 MHz abgestimmt."
+        },
+        "Using a 5W handheld radio within inches": {
+          "description": "Das am häufigsten gemeldete Schadensszenario in der HackRF-Community. Handfunkgeräte geben 5 W (37 dBm) ab, und bei geringem Abstand koppelt das Signal direkt in den Antennenport des HackRF ein.",
+          "symptoms": [
+            "Frontend-Verstärker dauerhaft zerstört",
+            "Empfangsempfindlichkeit drastisch reduziert",
+            "Amp-Schalter hat keine Wirkung oder kehrt das Verhalten um"
+          ],
+          "prevention": [
+            "Mindestens 3 Meter Abstand zu jedem sendenden Funkgerät einhalten",
+            "HackRF-Antenne vor dem Senden mit einem Funkgerät in der Nähe abklemmen",
+            "Beim Testen in der Nähe einen dummy load am Handfunkgerät verwenden"
+          ],
+          "technical": "Ein 5-W-Handfunkgerät in 2,5 cm Entfernung erzeugt ca. +7 bis +10 dBm am Antennenanschluss durch Nahfeldkopplung. Der absolute Maximaleingang ist +10 dBm (AMP AUS) bzw. -5 dBm (AMP AN). Schon ein einziges Senden kann tödlich sein."
+        },
+        "Connecting a satellite LNB directly": {
+          "description": "Satelliten-LNBs (Low-Noise Block Downconverter) haben 50–65 dB eingebaute Verstärkung und sind für Satellitenempfänger ausgelegt, nicht für SDR. Direktes Anschließen zerstört sofort die Eingangsstufe.",
+          "symptoms": [
+            "Sofortiger und totaler LNA-Ausfall",
+            "Gerät scheint zu funktionieren, empfängt aber nichts",
+            "Keine Reparatur ohne Bauteilaustausch möglich"
+          ],
+          "prevention": [
+            "Immer einen 20–30 dB Dämpfer zwischen LNB und HackRF verwenden",
+            "Vor dem Anschließen die Verstärkungsspezifikation des LNB prüfen",
+            "Ein Bias-Tee mit ordnungsgemäßer Leistungsisolation in Betracht ziehen"
+          ],
+          "technical": "Ein LNB mit 60 dB Verstärkung speist +23 bis +26 dBm in ein Gerät ein, das für maximal -5 dBm (AMP AN) ausgelegt ist. Das sind 28–31 dB über dem absoluten Maximum — etwa das 1000-fache des sicheren Leistungspegels."
+        },
+        "Airport radar exposure": {
+          "description": "Flughafenradaranlagen arbeiten mit extrem hoher Leistung. Selbst im reinen Empfangsmodus mit AMP AUS kann die elektromagnetische Feldstärke in der Nähe eines Flughafens die Eingangsgrenzen des HackRF überschreiten.",
+          "symptoms": [
+            "MMIC-Eingangsverstärker durchgebrannt",
+            "Breitbandig reduzierter Empfang",
+            "Gerät funktioniert auf einigen Bändern, aber nicht auf anderen"
+          ],
+          "prevention": [
+            "Niemals innerhalb von 2 km bekannter Radaranlagen betreiben",
+            "In unbekannten HF-Umgebungen externe Filterung und Dämpfung verwenden",
+            "Lokale NOTAM/Flugsicherungsdatenbanken auf Radarstandorte prüfen"
+          ],
+          "technical": "Ein 17-kW-Flughafenradar hat eine EIRP von mehreren MW mit Antennengewinn. In 2 km Entfernung kann die Feldstärke an einer resonanten Antenne +20 dBm überschreiten. Der MAX2837-Mischer des HackRF hat einen absoluten Maximaleingang von +10 dBm."
+        },
+        "Transmitting without an antenna or load": {
+          "description": "Ein offener SMA-Anschluss reflektiert 100 % der gesendeten Leistung zurück in den Leistungsverstärker. Die reflektierte Energie hat nirgendwo hin und wird als Wärme im PA-Transistor abgegeben, der dadurch zerstört wird.",
+          "symptoms": [
+            "TX-Leistung sinkt dauerhaft auf nahezu null",
+            "Gerät scheint in der Software zu senden, aber kein Signal auf der Luft",
+            "Mögliche Beschädigung des MAX2837-Transceiver-ICs"
+          ],
+          "prevention": [
+            "Vor jedem TX-Betrieb immer einen 50-Ohm-Dummy-Load oder eine angepasste Antenne anschließen",
+            "Sicherstellen, dass die Antenne angeschlossen ist und der SMA handfest angezogen",
+            "Einen dummy load als Standard-Sicherheitsabschluss im Kit bereithalten"
+          ],
+          "technical": "Ein offener SMA hat ein VSWR von unendlich (Rückflussdämpfung 0 dB). Bei 15 dBm (~32 mW) wird die gesamte Leistung reflektiert. Der RFFC5072-PA im HackRF ist für begrenzte reflektierte Leistung ausgelegt und hat keinen eingebauten Isolator."
+        },
+        "ESD while connecting antennas": {
+          "description": "Statische Entladung vom Körper oder einer geladenen Antenne geht direkt über den SMA-Mittelpin in das HF-Frontend. Der Schaden ist oft subtil und progressiv — man bemerkt ihn möglicherweise wochenlang nicht.",
+          "symptoms": [
+            "Amp wirkt als Dämpfer statt Verstärkung zu liefern",
+            "Allmählicher Empfindlichkeitsverlust über die Zeit",
+            "Intermittierende Empfangsqualitätsprobleme"
+          ],
+          "prevention": [
+            "Vor dem Anfassen des SMA-Steckers eine geerdete Metalloberfläche berühren",
+            "Sich selbst und die Antenne vor dem Anschließen erden",
+            "In trockenen Umgebungen ein Antistatik-Armband verwenden"
+          ],
+          "technical": "ESD vom menschlichen Körper beträgt typisch 2–15 kV mit Spitzenströmen von 10–30 A für Nanosekunden. Der MGA-81563 LNA hat eine ESD-Festigkeit von nur ~200 V (HBM). Selbst eine kleine statische Entladung, die man nicht spürt (<3 kV), kann den Verstärker beschädigen."
+        },
+        "TX at max gain with mismatched antenna": {
+          "description": "Volle TX-Verstärkung mit einer Antenne, die nicht zur Frequenz passt, verursacht erhebliche Leistungsreflexion. Obwohl das HackRF nur ~15 dBm ausgibt, verschlechtert wiederholter Stress durch reflektierte Leistung den PA über die Zeit.",
+          "symptoms": [
+            "Allmählich abnehmende TX-Ausgangsleistung",
+            "Antennen-SWR-Messgerät zeigt hohe reflektierte Leistung",
+            "TX funktioniert auf einigen Frequenzen, aber nicht auf anderen"
+          ],
+          "prevention": [
+            "Eine für die Zielfrequenz ausgelegte Antenne verwenden",
+            "Vor dem Senden SWR prüfen — Ziel ist < 2:1",
+            "Bei niedriger TX-Verstärkung beginnen und unter Überwachung schrittweise erhöhen"
+          ],
+          "technical": "Bei 15 dBm mit einem 10:1-VSWR-Mismatch werden ca. 70 % der Leistung reflektiert. Dem HackRF fehlt ein Zirkulator oder Isolator, sodass reflektierte Leistung direkt in die PA-Stufe zurückfließt."
+        },
+        "Not using a data-capable USB cable": {
+          "description": "Viele USB-Kabel sind reine Ladekabel — sie haben Stromleitungen, aber keine Datenleitungen. Dies ist das mit Abstand häufigste ‚Mein HackRF funktioniert nicht'-Problem und verschwendet Stunden an Debugging-Zeit.",
+          "symptoms": [
+            "‚Device not found' oder ‚No HackRF boards found'-Fehler",
+            "Gerät schaltet sich ein (LEDs leuchten), wird aber nicht von Software erkannt",
+            "Intermittierende Verbindungsabbrüche"
+          ],
+          "prevention": [
+            "Bekannt funktionierende Datenkabel beschriften",
+            "Mit 3–5 verschiedenen Kabeln testen, bevor Hardware verdächtigt wird",
+            "Kurze Kabel verwenden (< 1 m) — USB 2.0-Signalqualität verschlechtert sich mit der Länge",
+            "USB 3.0-Ports und -Kabel neigen dazu, zuverlässiger zu sein"
+          ],
+          "technical": "HackRF benötigt USB 2.0 High Speed (480 Mbps). Reine Ladekabel haben keine D+- und D--Datenleitungen. Manche billige Datenkabel haben unzureichende Abschirmung, was bei hoher Geschwindigkeit zu intermittierenden Verbindungen führt."
+        },
+        "Connecting signals to CLK_in carelessly": {
+          "description": "Am CLK_in-SMA-Port liegt immer das interne 10-MHz-TCXO-Taktsignal des HackRF an. Das Einspeisen eines externen Takts ohne ordnungsgemäße Isolation verbindet zwei Oszillatoren parallel.",
+          "symptoms": [
+            "TCXO-Oszillator beschädigt oder frequenzverschoben",
+            "Frequenzgenauigkeit über alle Operationen verschlechtert",
+            "Gerät kann möglicherweise nicht mehr richtig auf Signale einrasten"
+          ],
+          "prevention": [
+            "Nur eine 10-MHz-Referenz über einen geeigneten Clock-Distribution-Verstärker anschließen",
+            "Niemals einen Signalgenerator direkt an CLK_in anschließen",
+            "CLK_in trennen, wenn keine externe Referenz verwendet wird"
+          ],
+          "technical": "Die Ausgangsimpedanz des Si5351C-Taktgenerators und des TCXO beträgt ~50 Ohm. Das Anschließen einer 50-Ohm-Signalquelle erzeugt eine direkte Parallelverbindung, die möglicherweise den maximalen Ausgangsstrom des TCXO überschreitet und permanente Drift verursacht."
+        },
+        "Unplugging during firmware flash": {
+          "description": "Das Trennen der USB-Stromversorgung während eines Firmware-Updates beschädigt den SPI-Flash. Die gute Nachricht: Der DFU-Bootloader liegt im ROM und kann nicht beschädigt werden, sodass das Gerät immer wiederherstellbar ist.",
+          "symptoms": [
+            "Gerät startet im DFU-Modus statt in Mayhem",
+            "Leerer oder verzerrter Bildschirm am PortaPack",
+            "USB erkennt DFU-Gerät (1fc9:000c) statt HackRF"
+          ],
+          "prevention": [
+            "Während des Flashens eine zuverlässige USB-Verbindung und ein gutes Kabel verwenden",
+            "Das Gerät während des Flashens nicht anstoßen oder bewegen",
+            "Die DFU-Wiederherstellungsprozedur griffbereit halten"
+          ],
+          "technical": "Mayhem-Firmware wird auf externem SPI-Flash (W25Q80) gespeichert. Der LPC4320 hat einen werksseitigen ROM-Bootloader, der bei beschädigtem Flash in den DFU-Modus wechselt. Wiederherstellung: DFU-Taste halten, USB anschließen, über hackrf_spiflash oder DFU-Tool flashen."
+        }
+      },
+      "damageStories": {
+        "The 50W HF Transmitter": {
+          "description": "Benutzer tastete einen 50-W-KW-Sender bei 18 MHz für eine Sekunde, während die Antennen weniger als 30 cm voneinander entfernt waren. RX-Verstärker dauerhaft zerstört. Symptom: Einschalten des Amp ließ das Signal schwächer werden.",
+          "source": "hackrf-dev Mailingliste"
+        },
+        "The 17kW Airport Radar": {
+          "description": "Benutzer stellte HackRF innerhalb von 2 km eines Flughafenradars mit 17 kW auf. Selbst im reinen Empfangsmodus wurde der MMIC-Eingangsverstärker durchgebrannt.",
+          "source": "GitHub Issue #541"
+        },
+        "The Satellite LNB": {
+          "description": "Benutzer schloss einen Satelliten-LNB mit ~60 dB Verstärkung direkt an. Das am Eingang ankommende Signal betrug +23 bis +26 dBm. LNA sofort zerstört.",
+          "source": "GitHub Issue #974"
+        },
+        "The Full-Power DAB Transmission": {
+          "description": "Benutzer sendete auf europäischem DAB mit voller Leistung (TXgain=63) mit der ANT500-Antenne. Schlechte Impedanzanpassung verursachte Leistungsreflexion. TX-PA ausgefallen.",
+          "source": "GitHub Issue #1051"
+        },
+        "The Invisible Continuing TX": {
+          "description": "Benutzer stoppte eine TX-App, aber das HackRF sendete weiter. Schloss während der Phantomsendung einen externen PA an/ab und zerstörte den PA.",
+          "source": "GitHub Issue #1051 Kommentar"
+        },
+        "The Amp That Attenuated": {
+          "description": "Über Wochen allmählich schlechter werdende Empfindlichkeit. AMP AUS = klarer FM-Empfang, AMP AN = Signal verschwand. ESD-beschädigtes Bauteil wirkte als Dämpfer.",
+          "source": "oneSDR Reparaturanleitung"
+        },
+        "The 5W Handheld at One Inch": {
+          "description": "5-W-Handfunkgerät 2,5 cm vom HackRF entfernt gehalten. ~+7 bis +10 dBm am Antennenanschluss. Frontend zerstört.",
+          "source": "GitHub Issue #974"
+        }
+      },
+      "frequencies": {
+        "noGo": {
+          "Aviation VOR/ILS": {
+            "range": "108 - 117,975 MHz",
+            "service": "Flugzeugnavigation"
+          },
+          "Aviation Voice": {
+            "range": "118 - 136,975 MHz",
+            "service": "Flugverkehrskontrolle"
+          },
+          "Aviation Emergency": {
+            "range": "121,5 MHz",
+            "service": "Internationaler Notruf"
+          },
+          "Aviation ELT": {
+            "range": "243 MHz",
+            "service": "Militärischer Notruf"
+          },
+          "GPS L1": {
+            "range": "1575,42 MHz",
+            "service": "Ziviles GPS"
+          },
+          "GPS L2": {
+            "range": "1227,60 MHz",
+            "service": "Präzisions-GPS"
+          },
+          "GPS L5": {
+            "range": "1176,45 MHz",
+            "service": "Luftfahrt-/Seefahrt-GPS"
+          },
+          "GLONASS L1": {
+            "range": "1602 MHz",
+            "service": "Russisches GNSS"
+          },
+          "GLONASS L2": {
+            "range": "1246 MHz",
+            "service": "Russisches GNSS"
+          },
+          "Galileo E1": {
+            "range": "1575,42 MHz",
+            "service": "EU-GNSS"
+          },
+          "Cellular": {
+            "range": "698-894, 1710-2155 MHz",
+            "service": "Alle Mobilfunkbetreiber"
+          },
+          "Public Safety": {
+            "range": "764-776, 794-806 MHz",
+            "service": "FirstNet, Polizei, Feuerwehr, Rettung"
+          },
+          "Marine VHF": {
+            "range": "156,0 - 162,025 MHz",
+            "service": "Schiff-zu-Schiff/Küste"
+          },
+          "Marine Distress": {
+            "range": "156,8 MHz (Kanal 16)",
+            "service": "Internationaler Notruf"
+          },
+          "NOAA Weather": {
+            "range": "162,400 - 162,550 MHz",
+            "service": "Unwetterwarnungen"
+          },
+          "Radar": {
+            "range": "960-1215, 2700-3100, 5250-5925 MHz",
+            "service": "Flugsicherung, Wetter, Militär"
+          }
+        },
+        "legal": {
+          "ISM 433 MHz": {
+            "range": "433,05-434,79 MHz",
+            "requirements": "Nur Region 1 (EU); Leistungsbegrenzungen"
+          },
+          "ISM 902-928 MHz": {
+            "range": "902-928 MHz",
+            "requirements": "USA; bis zu 1 W mit Spreizspektrum"
+          },
+          "ISM 2.4 GHz": {
+            "range": "2400-2483,5 MHz",
+            "requirements": "Weltweit; Leistungsbegrenzungen variieren"
+          },
+          "ISM 5.8 GHz": {
+            "range": "5725-5875 MHz",
+            "requirements": "Leistungsbegrenzungen variieren"
+          },
+          "Amateur bands": {
+            "range": "Verschiedene",
+            "requirements": "Erfordert Amateurfunklizenz + Rufzeichen"
+          }
+        },
+        "penalties": {
+          "Unauthorized transmission": {
+            "law": "Section 301",
+            "penalty": "Gerätebeschlagnahme + Geldstrafen + Strafverfolgung"
+          },
+          "Willful interference": {
+            "law": "47 USC 333",
+            "penalty": "Bis zu 100.000 $ Geldstrafe / 1 Jahr Gefängnis"
+          },
+          "GPS/cellular jamming": {
+            "law": "PIRATE Act",
+            "penalty": "Bis zu 119.555 $/Tag, max. 2,39 Mio. $"
+          },
+          "Intercepting comms": {
+            "law": "18 USC 2511",
+            "penalty": "Bis zu 5 Jahre Bundesgefängnis"
+          },
+          "Aviation interference": {
+            "law": "18 USC 32",
+            "penalty": "Bundesverbrechen, FBI + FAA"
+          }
+        }
+      }
+    },
+    "quickStartSteps": {
+      "s1": "Stelle sicher, dass dein USB-Kabel datenfähig ist (nicht nur zum Laden) — das ist das häufigste Einrichtungsproblem",
+      "s2": "Setze eine MicroSD-Karte ein (FAT32, 8–32 GB empfohlen) — speichert Aufnahmen, Einstellungen und Apps",
+      "s3": "Lade die neueste Mayhem-Firmware von GitHub Releases herunter und kopiere die .ppfw.tar auf das SD-Stammverzeichnis",
+      "s4": "Bringe die Teleskopantenne (40 MHz–6 GHz) am SMA-Anschluss an — nur handfest, niemals mit Werkzeug",
+      "s5": "Erde dich vor dem Anfassen — ESD am SMA-Mittelpin kann den LNA beschädigen",
+      "s6": "Halte einen 50-Ohm-Dummy-Load bereit, wenn du TX-Apps testen möchtest",
+      "s7": "Schiebe den Netzschalter HOCH — warte, bis das Mayhem-Hauptmenü erscheint",
+      "s8": "Überprüfe die Firmware-Version in der Statusleiste (aktuell: v2.3.2)",
+      "s9": "Gehe zu Einstellungen → SD-Karte → Test, um zu überprüfen, ob die SD-Karte erkannt wird",
+      "s10": "Gehe zu Einstellungen → UI → Encoder-Empfindlichkeit nach Wunsch einstellen (niedrig/normal/hoch)",
+      "s11": "Gehe zu Einstellungen → Datum/Uhrzeit → stelle die Echtzeituhr für genaue Aufnahme-Zeitstempel ein",
+      "s12": "Navigiere zu Empfang → Audio",
+      "s13": "Setze den Modus auf 'WFM' (Breitband-FM)",
+      "s14": "Stelle die Frequenz auf einen lokalen FM-Sender ein (z. B. 101,1 MHz)",
+      "s15": "Setze die Verstärkung: LNA=16, VGA=20, AMP=0 (AUS) — beginne immer mit AMP aus",
+      "s16": "Drehe die Lautstärke auf 40–60 — du solltest den Sender hören",
+      "s17": "Prüfe den RSSI-Balken und das Wasserfall-Display — ein starkes Signal zeigt ein helles vertikales Band",
+      "s18": "Bei schwachem Signal: zuerst VGA erhöhen, dann LNA. Bei Clipping/Verzerrung: Verstärkung verringern",
+      "s19": "Stimme auf einen bekannten FM-Sender ab und prüfe, ob die Frequenz leicht abweicht",
+      "s20": "Gehe zu Einstellungen → Radio → Frequenzkorrektur und justiere, bis der Sender korrekt zentriert ist",
+      "s21": "Dies korrigiert den TCXO-Offset — verbessert die Genauigkeit in allen Apps",
+      "s22": "Vor jedem TX: 50-Ohm-Dummy-Load oder frequenzangepasste Antenne anschließen — niemals ohne Last senden",
+      "s23": "Lerne die TX-Notabschaltung: Stopp-Taste → Zurück-Pfeil → RESET → Ausschalten",
+      "s24": "Niemals innerhalb von 3 Metern aktiver Sender (Funkgeräte, Router) empfangen",
+      "s25": "Tippe auf den Zurück-Pfeil, um zu den Menüs zurückzukehren",
+      "s26": "Schiebe den Netzschalter HERUNTER zum Ausschalten — immer ausschalten, bevor die Antenne getrennt wird"
+    },
+    "quickStartSections": {
+      "beforePowerOn": "Vor dem Einschalten",
+      "firstPowerOn": "Erstes Einschalten",
+      "firstReceive": "Dein erster FM-Empfang",
+      "calibration": "Frequenzkalibrierung",
+      "safetyShutdown": "Sicherheit & Herunterfahren"
+    }
+  }
+}
