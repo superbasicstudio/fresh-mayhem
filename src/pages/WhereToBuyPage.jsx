@@ -116,9 +116,9 @@ export default function WhereToBuyPage() {
             const style = severityStyles[tip.severity] || severityStyles.info;
             return (
               <div key={tip.title} className="card bg-base-200 p-4">
-                <div className="flex items-center gap-2 mb-1">
-                  <h4 className="text-sm font-semibold text-base-content/90">{tip.title}</h4>
-                  <span className={`badge ${style.badge} badge-xs font-mono text-[9px] font-bold`}>{style.label}</span>
+                <div className="flex items-start gap-2 mb-1">
+                  <h4 className="text-sm font-semibold text-base-content/90 min-w-0">{tip.title}</h4>
+                  <span className={`badge ${style.badge} badge-xs font-mono text-[9px] font-bold shrink-0 mt-0.5`}>{style.label}</span>
                 </div>
                 <p className="text-xs text-base-content/50 leading-relaxed">{tip.description}</p>
               </div>
