@@ -3,6 +3,7 @@ import PageSection from '../../components/PageSection';
 import ExpandableCard from '../../components/ExpandableCard';
 import ExpandableImage from '../../components/ExpandableImage';
 import FrequencySpectrum from '../../components/charts/FrequencySpectrum';
+import BandMap from '../../components/charts/BandMap';
 import { frequencies } from '../../data/safety';
 
 export default function FrequenciesPage() {
@@ -11,6 +12,7 @@ export default function FrequenciesPage() {
       <ExpandableCard title="RF Spectrum Coverage" titleColor="text-base-content">
         {() => <FrequencySpectrum />}
       </ExpandableCard>
+      <BandMap />
       <div className="mt-3">
         <ExpandableImage src="/screenshots/full-spectrum.webp" alt="HackRF One full spectrum 70 MHz - 6 GHz (live capture)" />
       </div>
