@@ -85,6 +85,10 @@ export default function WhereToBuyPage() {
                 href={v.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="vendor-click"
+                data-umami-event-vendor={v.name}
+                data-umami-event-category={v.category}
+                data-umami-event-region={v.region}
                 className="card bg-base-200 p-4 hover:bg-base-300 transition-colors border border-transparent hover:border-base-content/10"
               >
                 <div className="flex items-start justify-between gap-2 mb-1.5">
