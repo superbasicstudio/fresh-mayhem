@@ -140,7 +140,7 @@ export const buyingTips = [
   },
   {
     title: 'If the price seems too good to be true...',
-    description: 'A genuine HackRF One typically costs $300+ USD from official sources. Significantly cheaper boards are almost certainly clones. Some clones work, many don\'t.',
+    description: 'Depending on the seller, region, and availability, a genuine HackRF One can cost upwards of $200–$350 USD from established sources. Pricing varies, but boards listed well below the typical range are more likely to be clones. Some clones work fine, many don\'t — your mileage may vary.',
     severity: 'warning',
   },
   {
