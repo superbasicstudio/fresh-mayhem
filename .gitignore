@@ -46,24 +46,11 @@ test-output/
 # Vercel
 .vercel
 
-# Claude Code local data
+# Local config
 .claude/
-
-# Claude Anchor framework files (private)
-_RAM.md
-_GOLDEN-RULES.md
-_TODOS.md
-_LESSONS-LEARNED.md
-_VOICE-AND-TONE.md
-_CONVERSATION-PREFERENCES.md
-_DESIGN-PREFERENCES.md
-_LONG-TERM-MEMORY.md
-_SHORT-TERM-MEMORY.md
-_SYSTEM_ARCHITECTURE.md
-_PROJECT-PROMOTION-IDEAS.md
 CLAUDE.md
+_*.md
 
 # OS temp files
 *.tmp
 *.temp
-CLAUDE.md

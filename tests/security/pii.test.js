@@ -93,8 +93,8 @@ describe('PII security scan', () => {
     const passwordPattern = /(?:password|passwd|pwd)\s*[:=]\s*['"][^'"]{3,}['"]/i;
     for (const file of sourceFiles) {
       if (file.endsWith('package-lock.json')) continue;
-      // Skip anchor/memory files and test files
-      if (file.includes('_GOLDEN-RULES') || file.includes('_LESSONS-LEARNED') || file.includes('/tests/')) continue;
+      // Skip local config and test files
+      if (file.includes('/tests/')) continue;
       const content = fs.readFileSync(file, 'utf-8');
       const match = content.match(passwordPattern);
       expect(match, `Found hardcoded password in ${path.relative(PROJECT_ROOT, file)}: ${match?.[0]}`).toBeNull();
@@ -124,9 +124,9 @@ describe('.gitignore coverage', () => {
     expect(content).toContain('*.pem');
   });
 
-  test('.gitignore covers _RAM.md (volatile session file)', () => {
+  test('.gitignore covers local markdown config files', () => {
     const content = fs.readFileSync(path.join(PROJECT_ROOT, '.gitignore'), 'utf-8');
-    expect(content).toContain('_RAM.md');
+    expect(content).toContain('_*.md');
   });
 
   test('.gitignore covers coverage output', () => {
