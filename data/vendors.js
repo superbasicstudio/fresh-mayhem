@@ -115,10 +115,10 @@ export const vendors = [
 ];
 
 export const vendorCategories = [
-  { id: 'official', label: 'Original Manufacturers', color: 'badge-primary', description: 'Companies that design and manufacture the hardware' },
-  { id: 'retailer', label: 'Established Retailers', color: 'badge-accent', description: 'Dedicated hardware stores with established reputations' },
-  { id: 'distributor', label: 'Major Distributors', color: 'badge-info', description: 'Large-scale electronics distributors' },
-  { id: 'marketplace', label: 'Marketplaces', color: 'badge-warning', description: 'Online marketplaces — extra caution advised' },
+  { id: 'official', label: 'Original Manufacturers', color: 'badge-ghost', description: 'Companies that design and manufacture the hardware' },
+  { id: 'retailer', label: 'Established Retailers', color: 'badge-ghost', description: 'Dedicated hardware stores with established reputations' },
+  { id: 'distributor', label: 'Major Distributors', color: 'badge-ghost', description: 'Large-scale electronics distributors' },
+  { id: 'marketplace', label: 'Marketplaces', color: 'badge-ghost', description: 'Online marketplaces — extra caution advised' },
 ];
 
 export const vendorRegions = [
