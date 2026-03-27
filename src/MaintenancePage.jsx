@@ -35,20 +35,22 @@ export default function MaintenancePage() {
 
   return (
     <div className="bg-[#080808] text-[#c8e6c9] min-h-screen flex items-center justify-center font-mono">
-      <div className="text-center px-6 max-w-lg">
+      <div className="text-center px-6 w-full max-w-lg">
         <div className="flex justify-center mb-8">
           <svg viewBox="0 0 40 40" className="w-16 h-16 text-[#7fff00] opacity-30" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="20" cy="20" r="18" />
             <path d="M20 8v12l6 3" />
           </svg>
         </div>
-        <div className={`transition-opacity duration-[400ms] ${fade ? 'opacity-100' : 'opacity-0'}`}>
-          <h1 className="text-lg sm:text-xl mb-4 text-[#7fff00] font-bold tracking-wider">
-            {msg.text}
-          </h1>
-          <p className="text-[#6a9f6a] text-sm leading-relaxed">
-            {msg.sub}
-          </p>
+        <div className="h-24 flex flex-col items-center justify-center">
+          <div className={`transition-opacity duration-[400ms] ${fade ? 'opacity-100' : 'opacity-0'}`}>
+            <h1 className="text-lg sm:text-xl mb-4 text-[#7fff00] font-bold tracking-wider">
+              {msg.text}
+            </h1>
+            <p className="text-[#6a9f6a] text-sm leading-relaxed">
+              {msg.sub}
+            </p>
+          </div>
         </div>
         <div className="border border-[#1a3a1a] rounded p-4 bg-[#0a150a] mt-8">
           <pre className="text-[#4a8a4a] text-xs text-left">
