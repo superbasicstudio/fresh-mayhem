@@ -111,7 +111,7 @@ export default function WhereToBuyPage() {
       </PageSection>
 
       <PageSection id="buying-tips" title="Buying Tips" subtitle="Things the community wishes they knew before their first purchase." icon={null}>
-        <div className="flex flex-col gap-3">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {buyingTips.map(tip => {
             const style = severityStyles[tip.severity] || severityStyles.info;
             return (
