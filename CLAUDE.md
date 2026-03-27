@@ -165,6 +165,23 @@ npm run test:coverage # With V8 coverage
 
 ---
 
+## Maintenance Mode
+
+Toggle a clean "updating" page for production during deploys or downtime.
+
+```bash
+bash scripts/maintenance-on.sh    # Enable: redirects all traffic to maintenance.html, pushes to Vercel
+bash scripts/maintenance-off.sh   # Disable: removes redirect, pushes to Vercel
+```
+
+The maintenance page is a standalone HTML file at `public/maintenance.html` with no JS dependencies. It shows a simple dark themed page matching the site aesthetic with a pulsing status indicator.
+
+## Git Commit Style
+
+Never use em dashes, en dashes, or emojis in commit messages or code comments. Use semicolons sparingly. Write commits as a human developer would. Never reference AI, agents, or automated generation in commit messages or comments.
+
+---
+
 ## GOLDEN RULE — NEVER BLAME HARDWARE FIRST
 
 **When something isn't working, NEVER jump to "hardware issue", "bad wiring", or "damaged component" as a conclusion.**

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Mayhem - Updating</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #080808;
+      color: #e0e0e0;
+      font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+      padding: 2rem;
+    }
+    .container {
+      text-align: center;
+      max-width: 480px;
+    }
+    .icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 2rem;
+      opacity: 0.3;
+    }
+    .icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #7fff00;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 0.875rem;
+      line-height: 1.7;
+      color: #888;
+      margin-bottom: 0.75rem;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: #555;
+      margin-top: 2rem;
+      padding: 0.5rem 1rem;
+      border: 1px solid #222;
+      border-radius: 8px;
+      background: #111;
+    }
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #7fff00;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    .footer {
+      margin-top: 3rem;
+      font-size: 0.625rem;
+      color: #333;
+    }
+    .footer a {
+      color: #4ade80;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#7fff00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+        <path d="M12 6v6l4 2"/>
+      </svg>
+    </div>
+    <h1>UPDATING</h1>
+    <p>Fresh Mayhem is being updated with new features and improvements.</p>
+    <p>This should only take a few minutes. Please check back shortly.</p>
+    <div class="status">
+      <span class="pulse"></span>
+      Deployment in progress
+    </div>
+    <div class="footer">
+      A <a href="https://superbasic.studio" target="_blank" rel="noopener noreferrer">Super Basic Studio</a> project
+    </div>
+  </div>
+</body>
+</html>
