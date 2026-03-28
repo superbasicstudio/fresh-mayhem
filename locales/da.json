@@ -279,6 +279,47 @@
       "s26": "Skub strømafbryderen NED for at slukke — sluk altid, før du afmonterer antennen"
     }
   },
+  "firmwareUpdate": {
+    "title": "Firmwareopdateringsvejledning",
+    "subtitle": "Trin-for-trin vejledning til opdatering af Mayhem-firmware ved hjælp af den indbyggede Flash Utility. Virker til enhver Mayhem-til-Mayhem-opdatering fra v2.0 og fremefter.",
+    "beforeYouStart": "Før du begynder",
+    "prereq1": "Du skal have en HackRF One + PortaPack, der allerede kører Mayhem v2.0 eller nyere",
+    "prereq2": "Et MicroSD-kort (FAT32, 8 til 32 GB anbefales)",
+    "prereq3": "En computer med en MicroSD-kortlæser til download og kopiering af filer",
+    "prereq4": "Dine personlige indstillinger og optagelser bevares under opdateringen",
+    "downloadButton": "Download nyeste firmware",
+    "troubleshooting": "Fejlfinding",
+    "dfuNote": "Flash Utility-metoden på enheden virker til enhver Mayhem-til-Mayhem-opdatering fra v2.0 og fremefter. Til førstegangsinstallationer fra standardfirmware eller gendannelse efter en mislykket flash, brug DFU-metoden via USB med dfu-util og hackrf_spiflash på en computer.",
+    "sections": {
+      "downloadPrepare": "Download og forbered",
+      "flashFirmware": "Flash firmwaren",
+      "installOnDevice": "Installer på enheden",
+      "afterUpdating": "Efter opdatering"
+    },
+    "steps": {
+      "s1": "Sluk PortaPack. Skub hardwarestrømafbryderen NED og vent til skærmen bliver mørk. Tryk ikke bare på RESET.",
+      "s2": "Fjern MicroSD-kortet. Tryk forsigtigt ind for at udløse fra det fjederbelastede slot, og træk derefter ud. Hold i kanterne.",
+      "s3": "Download firmwaren (.ppfw.tar) og SD-kortindholdet (.zip) fra GitHub releases-siden for din enhedsmodel.",
+      "s4": "Tilslut SD-kortet til din computer. Det bør vises som et FAT32-volumen med eksisterende Mayhem-mapper.",
+      "s5": "Kopiér .ppfw.tar firmwarefilen til FIRMWARE/-mappen på SD-kortet. Opret mappen, hvis den ikke findes.",
+      "s6": "Udpak COPY_TO_SDCARD-zip'en til roden af SD-kortet. Vælg overskriv/erstat alle, når du bliver bedt om det. Dine personlige indstillinger og optagelser bliver ikke overskrevet.",
+      "s7": "Skub SD-kortet sikkert ud fra din computer. På Linux, kør sync først. På Windows/macOS, brug Sikker fjernelse eller Skub ud.",
+      "s8": "Sæt SD-kortet tilbage i PortaPack, indtil det klikker. Guldkontakterne vender mod PCB.",
+      "s9": "Tænd og naviger til Utilities > Flash Utility. Brug klikhjulet eller touchskærmen.",
+      "s10": "Vælg .ppfw.tar-filen fra FIRMWARE/-mappen. Kun .ppfw.tar-filer virker med den indbyggede Flash Utility. Du kan også se en .bin-fil på SD-kortet fra zip'en. Den fil er kun til PC-side flashing via hackrf_spiflash over USB. Flash Utility accepterer den ikke. Ignorer den. Enheden flasher i 15 til 30 sekunder. Sluk ikke og fjern ikke SD-kortet under flashning.",
+      "s11": "Enheden genstarter automatisk. Bekræft den nye version i statuslinjen eller under Settings > About.",
+      "s12": "Gennemgå nye apps og funktioner i Receive- og Transmit-menuerne.",
+      "s13": "Tjek Settings for nye sikkerheds- eller konfigurationsmuligheder tilføjet i opdateringen.",
+      "s14": "Kalibrer touchskærmen igen, hvis det er nødvendigt: Utilities > Touch Calibrate."
+    },
+    "troubleshootingItems": {
+      "noFile": { "problem": "Flash Utility kan ikke se filen", "fix": "Sørg for, at filen er i FIRMWARE/ (ikke indlejret i en undermappe), og at filnavnet ender på .ppfw.tar" },
+      "noBoot": { "problem": "Enheden starter ikke efter flash", "fix": "Hold DFU-knappen nede + tryk RESET for at gå ind i DFU-gendannelsestilstand. Bootloaderen er i ROM og kan ikke brickes. Reflash via dfu-util + hackrf_spiflash fra en computer." },
+      "missingApps": { "problem": "Apps mangler efter opdatering", "fix": "SD-kortindholdet blev ikke opdateret. Udpak COPY_TO_SDCARD-zip'en igen til SD-kortets rod med overskrivning aktiveret." },
+      "noSd": { "problem": "SD-kort ikke registreret", "fix": "Omformater som FAT32 (ikke exFAT). Kort over 32 GB kan kræve et tredjepartsværktøj til FAT32-formatering." },
+      "binFile": { "problem": "Jeg ser en .bin-fil på SD-kortet, skal jeg bruge den?", "fix": "Nej. .bin-filen er kun til PC-side flashing via hackrf_spiflash over USB. Den indbyggede Flash Utility accepterer kun .ppfw.tar-filer. .bin-filen kan vises rødt eller som ikke-valgbar i filbrowseren. Den kan ikke skade enheden. Ignorer den." }
+    }
+  },
   "whereToBuy": {
     "title": "Hvor kan man købe",
     "subtitle": "Fællesskabsrefererede kilder til HackRF One, PortaPack og tilbehør. Ingen anbefaling — gør altid din egen research.",

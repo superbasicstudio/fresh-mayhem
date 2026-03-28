@@ -279,6 +279,47 @@
       "s26": "Schuif de aan/uit schakelaar OMLAAG om uit te schakelen — schakel altijd uit voordat je de antenne loskoppelt"
     }
   },
+  "firmwareUpdate": {
+    "title": "Firmware-updatehandleiding",
+    "subtitle": "Stap-voor-stap handleiding voor het bijwerken van Mayhem-firmware met de ingebouwde Flash Utility. Werkt voor elke Mayhem-naar-Mayhem-update vanaf v2.0.",
+    "beforeYouStart": "Voordat je begint",
+    "prereq1": "Je hebt een HackRF One + PortaPack nodig die al Mayhem v2.0 of nieuwer draait",
+    "prereq2": "Een MicroSD-kaart (FAT32, 8 tot 32 GB aanbevolen)",
+    "prereq3": "Een computer met een MicroSD-kaartlezer om bestanden te downloaden en te kopiëren",
+    "prereq4": "Je persoonlijke instellingen en opnames blijven behouden tijdens de update",
+    "downloadButton": "Download nieuwste firmware",
+    "troubleshooting": "Probleemoplossing",
+    "dfuNote": "De Flash Utility-methode op het apparaat werkt voor elke Mayhem-naar-Mayhem-update vanaf v2.0. Voor eerste installaties vanuit de standaardfirmware of herstel na een mislukte flash, gebruik de DFU-methode via USB met dfu-util en hackrf_spiflash op een computer.",
+    "sections": {
+      "downloadPrepare": "Downloaden en voorbereiden",
+      "flashFirmware": "Firmware flashen",
+      "installOnDevice": "Installeren op het apparaat",
+      "afterUpdating": "Na het bijwerken"
+    },
+    "steps": {
+      "s1": "Schakel de PortaPack uit. Schuif de hardwarematige aan/uit schakelaar OMLAAG en wacht tot het scherm donker wordt. Druk niet alleen op RESET.",
+      "s2": "Verwijder de MicroSD-kaart. Duw voorzichtig in om los te maken uit het veerbelaste slot en trek eruit. Houd vast aan de randen.",
+      "s3": "Download de firmware (.ppfw.tar) en SD-kaartinhoud (.zip) van de GitHub releases-pagina voor je apparaatmodel.",
+      "s4": "Koppel de SD-kaart aan je computer. Deze zou moeten verschijnen als een FAT32-volume met bestaande Mayhem-mappen.",
+      "s5": "Kopieer het .ppfw.tar firmwarebestand naar de map FIRMWARE/ op de SD-kaart. Maak de map aan als deze niet bestaat.",
+      "s6": "Pak de COPY_TO_SDCARD-zip uit naar de root van de SD-kaart. Kies overschrijven/alles vervangen wanneer gevraagd. Je persoonlijke instellingen en opnames worden niet overschreven.",
+      "s7": "Verwijder de SD-kaart veilig uit je computer. Op Linux, voer eerst sync uit. Op Windows/macOS, gebruik Veilig verwijderen of Uitwerpen.",
+      "s8": "Steek de SD-kaart terug in de PortaPack tot deze klikt. Gouden contacten wijzen naar de PCB.",
+      "s9": "Schakel in en navigeer naar Utilities > Flash Utility. Gebruik het klikwiel of het touchscreen.",
+      "s10": "Selecteer het .ppfw.tar bestand uit de map FIRMWARE/. Alleen .ppfw.tar bestanden werken met de ingebouwde Flash Utility. Je ziet mogelijk ook een .bin bestand op de SD-kaart vanuit de zip. Dat bestand is alleen voor PC-side flashing via hackrf_spiflash over USB. De Flash Utility accepteert het niet. Negeer het. Het apparaat flasht 15 tot 30 seconden. Schakel niet uit en verwijder de SD-kaart niet tijdens het flashen.",
+      "s11": "Het apparaat herstart automatisch. Controleer de nieuwe versie in de statusbalk of onder Settings > About.",
+      "s12": "Bekijk nieuwe apps en functies in de menu's Receive en Transmit.",
+      "s13": "Controleer Settings op nieuwe beveiligings- of configuratieopties die in de update zijn toegevoegd.",
+      "s14": "Kalibreer het touchscreen opnieuw indien nodig: Utilities > Touch Calibrate."
+    },
+    "troubleshootingItems": {
+      "noFile": { "problem": "Flash Utility ziet het bestand niet", "fix": "Zorg ervoor dat het bestand in FIRMWARE/ staat (niet genest in een submap) en dat de bestandsnaam eindigt op .ppfw.tar" },
+      "noBoot": { "problem": "Apparaat start niet op na flash", "fix": "Houd de DFU-knop ingedrukt + druk op RESET om de DFU-herstelmodus te openen. De bootloader zit in ROM en kan niet gebrickt worden. Reflash via dfu-util + hackrf_spiflash vanaf een computer." },
+      "missingApps": { "problem": "Apps ontbreken na update", "fix": "SD-kaartinhoud is niet bijgewerkt. Pak de COPY_TO_SDCARD-zip opnieuw uit naar de root van de SD-kaart met overschrijven ingeschakeld." },
+      "noSd": { "problem": "SD-kaart niet gedetecteerd", "fix": "Herformatteer als FAT32 (niet exFAT). Kaarten groter dan 32 GB hebben mogelijk een hulpprogramma van derden nodig voor FAT32-formattering." },
+      "binFile": { "problem": "Ik zie een .bin bestand op de SD-kaart, moet ik dat gebruiken?", "fix": "Nee. Het .bin bestand is alleen voor PC-side flashing via hackrf_spiflash over USB. De ingebouwde Flash Utility accepteert alleen .ppfw.tar bestanden. Het .bin bestand kan rood of niet-selecteerbaar verschijnen in de bestandsbrowser. Het kan het apparaat niet beschadigen. Negeer het." }
+    }
+  },
   "whereToBuy": {
     "title": "Waar te koop",
     "subtitle": "Door de community aanbevolen bronnen voor HackRF One, PortaPack en accessoires. Geen aanbeveling — doe altijd je eigen onderzoek.",

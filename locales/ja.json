@@ -279,6 +279,47 @@
       "s26": "電源スイッチを下にスライドして電源オフ — アンテナを外す前に必ず電源を切ってください"
     }
   },
+  "firmwareUpdate": {
+    "title": "ファームウェア更新ガイド",
+    "subtitle": "デバイス内蔵の Flash Utility を使用した Mayhem ファームウェア更新のステップバイステップガイド。v2.0 以降の Mayhem から Mayhem へのすべての更新に対応。",
+    "beforeYouStart": "始める前に",
+    "prereq1": "Mayhem v2.0 以降が動作している HackRF One + PortaPack が必要です",
+    "prereq2": "MicroSD カード（FAT32、8～32 GB 推奨）",
+    "prereq3": "ファイルのダウンロードとコピー用に MicroSD カードリーダー付きのパソコン",
+    "prereq4": "更新中も個人設定とキャプチャデータは保持されます",
+    "downloadButton": "最新ファームウェアをダウンロード",
+    "troubleshooting": "トラブルシューティング",
+    "dfuNote": "デバイス内蔵の Flash Utility 方式は、v2.0 以降の Mayhem から Mayhem へのすべての更新に対応しています。出荷時ファームウェアからの初回インストールやフラッシュ失敗からの復旧には、パソコンで dfu-util と hackrf_spiflash を使用した USB 経由の DFU 方式を使用してください。",
+    "sections": {
+      "downloadPrepare": "ダウンロードと準備",
+      "flashFirmware": "ファームウェアのフラッシュ",
+      "installOnDevice": "デバイスへのインストール",
+      "afterUpdating": "更新後"
+    },
+    "steps": {
+      "s1": "PortaPack の電源を切ります。ハードウェア電源スイッチを下にスライドし、画面が消えるまで待ちます。RESET を押すだけではいけません。",
+      "s2": "MicroSD カードを取り外します。バネ式スロットから軽く押し込んで解除し、引き出します。端を持って扱ってください。",
+      "s3": "お使いのデバイスモデルの GitHub releases ページからファームウェア（.ppfw.tar）と SD カードコンテンツ（.zip）をダウンロードします。",
+      "s4": "SD カードをパソコンにマウントします。既存の Mayhem フォルダーを含む FAT32 ボリュームとして表示されるはずです。",
+      "s5": ".ppfw.tar ファームウェアファイルを SD カードの FIRMWARE/ フォルダーにコピーします。フォルダーが存在しない場合は作成してください。",
+      "s6": "COPY_TO_SDCARD の zip を SD カードのルートに展開します。求められたら上書き／すべて置換を選択してください。個人設定とキャプチャデータは上書きされません。",
+      "s7": "パソコンから SD カードを安全に取り外します。Linux では先に sync を実行してください。Windows/macOS では「安全に取り外す」または「取り出し」を使用してください。",
+      "s8": "SD カードをカチッと音がするまで PortaPack に再挿入します。金色の接点が PCB 側を向くようにします。",
+      "s9": "電源を入れ、Utilities > Flash Utility に移動します。クリックホイールまたはタッチスクリーンを使用します。",
+      "s10": "FIRMWARE/ フォルダーから .ppfw.tar ファイルを選択します。デバイス内蔵の Flash Utility では .ppfw.tar ファイルのみ使用できます。zip から SD カード上に .bin ファイルも見えることがあります。そのファイルは USB 経由で hackrf_spiflash を使った PC 側フラッシュ専用です。Flash Utility では受け付けません。無視してください。デバイスのフラッシュは 15～30 秒かかります。フラッシュ中は電源を切ったり SD カードを抜いたりしないでください。",
+      "s11": "デバイスは自動的に再起動します。ステータスバーまたは Settings > About で新しいバージョンを確認してください。",
+      "s12": "Receive メニューと Transmit メニューで新しいアプリと機能を確認してください。",
+      "s13": "Settings で更新により追加された新しい安全設定や構成オプションを確認してください。",
+      "s14": "必要に応じてタッチスクリーンを再キャリブレーションしてください：Utilities > Touch Calibrate。"
+    },
+    "troubleshootingItems": {
+      "noFile": { "problem": "Flash Utility がファイルを認識しない", "fix": "ファイルが FIRMWARE/ 内にあり（サブフォルダー内ではなく）、ファイル名が .ppfw.tar で終わっていることを確認してください" },
+      "noBoot": { "problem": "フラッシュ後にデバイスが起動しない", "fix": "DFU ボタンを押しながら RESET を押して DFU リカバリーモードに入ります。ブートローダーは ROM 内にあり、ブリックすることはできません。パソコンから dfu-util + hackrf_spiflash で再フラッシュしてください。" },
+      "missingApps": { "problem": "更新後にアプリが見つからない", "fix": "SD カードのコンテンツが更新されていません。上書きを有効にして COPY_TO_SDCARD の zip を SD カードのルートに再展開してください。" },
+      "noSd": { "problem": "SD カードが検出されない", "fix": "FAT32 でフォーマットし直してください（exFAT ではなく）。32 GB を超えるカードでは、サードパーティの FAT32 フォーマットツールが必要な場合があります。" },
+      "binFile": { "problem": "SD カード上に .bin ファイルがありますが、使うべきですか？", "fix": "いいえ。.bin ファイルは USB 経由で hackrf_spiflash を使った PC 側フラッシュ専用です。デバイス内蔵の Flash Utility は .ppfw.tar ファイルのみ受け付けます。.bin ファイルはファイルブラウザで赤色または選択不可として表示されることがあります。デバイスに害を及ぼすことはありません。無視してください。" }
+    }
+  },
   "whereToBuy": {
     "title": "購入先",
     "subtitle": "HackRF One、PortaPack、アクセサリーのコミュニティ推薦販売元。推奨ではありません — 必ずご自身で調査してください。",

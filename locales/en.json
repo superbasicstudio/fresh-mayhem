@@ -284,6 +284,47 @@
       "s26": "Slide the power switch DOWN to power off — always power off before disconnecting antenna"
     }
   },
+  "firmwareUpdate": {
+    "title": "Firmware Update Guide",
+    "subtitle": "Step by step guide for updating Mayhem firmware using the on-device Flash Utility. Works for any Mayhem-to-Mayhem update from v2.0 onward.",
+    "beforeYouStart": "Before you start",
+    "prereq1": "You need a HackRF One + PortaPack already running Mayhem v2.0 or later",
+    "prereq2": "A MicroSD card (FAT32, 8 to 32 GB recommended)",
+    "prereq3": "A computer with a MicroSD card reader to download and copy files",
+    "prereq4": "Your personal settings and captures are preserved during the update",
+    "downloadButton": "Download Latest Firmware",
+    "troubleshooting": "Troubleshooting",
+    "dfuNote": "The on-device Flash Utility method works for any Mayhem-to-Mayhem update from v2.0 onward. For first-time installs from stock firmware or recovery from a failed flash, use the DFU method via USB with dfu-util and hackrf_spiflash on a computer.",
+    "sections": {
+      "downloadPrepare": "Download & Prepare",
+      "flashFirmware": "Flash the Firmware",
+      "installOnDevice": "Install on Device",
+      "afterUpdating": "After Updating"
+    },
+    "steps": {
+      "s1": "Power off the PortaPack. Slide the hardware power switch DOWN and wait for the screen to go dark. Do not just press RESET.",
+      "s2": "Remove the MicroSD card. Gently push in to release from the spring-loaded slot, then pull out. Handle by the edges.",
+      "s3": "Download the firmware (.ppfw.tar) and SD card content (.zip) from the GitHub releases page for your device model.",
+      "s4": "Mount the SD card on your computer. It should appear as a FAT32 volume with existing Mayhem folders.",
+      "s5": "Copy the .ppfw.tar firmware file into the FIRMWARE/ folder on the SD card. Create the folder if it does not exist.",
+      "s6": "Extract the COPY_TO_SDCARD zip to the root of the SD card. Choose overwrite/replace all when prompted. Your personal settings and captures will not be overwritten.",
+      "s7": "Safely eject the SD card from your computer. On Linux run sync first. On Windows/macOS use Safely Remove or Eject.",
+      "s8": "Reinsert the SD card into the PortaPack until it clicks. Gold contacts face toward the PCB.",
+      "s9": "Power on and navigate to Utilities > Flash Utility. Use the click wheel or touchscreen.",
+      "s10": "Select the .ppfw.tar file from the FIRMWARE/ folder. Only .ppfw.tar files work with the on-device Flash Utility. You may also see a .bin file on the SD card from the zip. That file is only for PC-side flashing via hackrf_spiflash over USB. The Flash Utility will not accept it. Ignore it. The device will flash for 15 to 30 seconds. Do not power off or remove the SD card during flashing.",
+      "s11": "Device reboots automatically. Verify the new version in the status bar or under Settings > About.",
+      "s12": "Review new apps and features in the Receive and Transmit menus.",
+      "s13": "Check Settings for any new safety or configuration options added in the update.",
+      "s14": "Recalibrate the touchscreen if needed: Utilities > Touch Calibrate."
+    },
+    "troubleshootingItems": {
+      "noFile": { "problem": "Flash Utility does not see the file", "fix": "Make sure the file is in FIRMWARE/ (not nested in a subfolder) and the filename ends in .ppfw.tar" },
+      "noBoot": { "problem": "Device will not boot after flash", "fix": "Hold the DFU button + press RESET to enter DFU recovery mode. The bootloader is in ROM and cannot be bricked. Reflash via dfu-util + hackrf_spiflash from a computer." },
+      "missingApps": { "problem": "Apps missing after update", "fix": "SD card content was not updated. Re-extract the COPY_TO_SDCARD zip to the SD root with overwrite enabled." },
+      "noSd": { "problem": "SD card not detected", "fix": "Reformat as FAT32 (not exFAT). Cards over 32 GB may need a third-party FAT32 formatting tool." },
+      "binFile": { "problem": "I see a .bin file on the SD card, should I use it?", "fix": "No. The .bin file is for PC-side flashing via hackrf_spiflash over USB only. The on-device Flash Utility only accepts .ppfw.tar files. The .bin may appear red or unselectable in the file browser. It cannot harm the device. Ignore it." }
+    }
+  },
   "whereToBuy": {
     "title": "Where to Buy",
     "subtitle": "Community-referenced sources for HackRF One, PortaPack, and accessories. Not an endorsement — always do your own research.",

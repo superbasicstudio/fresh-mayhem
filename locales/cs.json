@@ -279,6 +279,47 @@
       "s26": "Posuňte vypínač DOLŮ pro vypnutí — vždy vypněte před odpojením antény"
     }
   },
+  "firmwareUpdate": {
+    "title": "Průvodce aktualizací firmwaru",
+    "subtitle": "Podrobný návod k aktualizaci firmwaru Mayhem pomocí vestavěného nástroje Flash Utility. Funguje pro jakoukoli aktualizaci Mayhem na Mayhem od verze v2.0.",
+    "beforeYouStart": "Než začnete",
+    "prereq1": "Potřebujete HackRF One + PortaPack s již běžícím Mayhem v2.0 nebo novějším",
+    "prereq2": "MicroSD kartu (FAT32, doporučeno 8 až 32 GB)",
+    "prereq3": "Počítač se čtečkou MicroSD karet pro stažení a kopírování souborů",
+    "prereq4": "Vaše osobní nastavení a záznamy zůstanou zachovány během aktualizace",
+    "downloadButton": "Stáhnout nejnovější firmware",
+    "troubleshooting": "Řešení problémů",
+    "dfuNote": "Metoda Flash Utility na zařízení funguje pro jakoukoli aktualizaci Mayhem na Mayhem od verze v2.0. Pro první instalaci ze skladového firmwaru nebo obnovu po neúspěšném flashování použijte metodu DFU přes USB s dfu-util a hackrf_spiflash na počítači.",
+    "sections": {
+      "downloadPrepare": "Stažení a příprava",
+      "flashFirmware": "Flashování firmwaru",
+      "installOnDevice": "Instalace na zařízení",
+      "afterUpdating": "Po aktualizaci"
+    },
+    "steps": {
+      "s1": "Vypněte PortaPack. Posuňte hardwarový vypínač DOLŮ a počkejte, až zhasne displej. Nestačí jen stisknout RESET.",
+      "s2": "Vyjměte MicroSD kartu. Jemně zatlačte pro uvolnění z pružinového slotu a vytáhněte. Držte za hrany.",
+      "s3": "Stáhněte firmware (.ppfw.tar) a obsah SD karty (.zip) ze stránky GitHub releases pro váš model zařízení.",
+      "s4": "Připojte SD kartu k počítači. Měla by se zobrazit jako FAT32 svazek s existujícími složkami Mayhem.",
+      "s5": "Zkopírujte soubor .ppfw.tar firmwaru do složky FIRMWARE/ na SD kartě. Pokud složka neexistuje, vytvořte ji.",
+      "s6": "Rozbalte zip COPY_TO_SDCARD do kořenového adresáře SD karty. Při výzvě zvolte přepsat/nahradit vše. Vaše osobní nastavení a záznamy nebudou přepsány.",
+      "s7": "Bezpečně odpojte SD kartu z počítače. Na Linuxu nejprve spusťte sync. Na Windows/macOS použijte Bezpečně odebrat nebo Vysunout.",
+      "s8": "Vložte SD kartu zpět do PortaPacku, dokud nezaklapne. Zlaté kontakty směřují k PCB.",
+      "s9": "Zapněte a přejděte na Utilities > Flash Utility. Použijte otočný ovladač nebo dotykový displej.",
+      "s10": "Vyberte soubor .ppfw.tar ze složky FIRMWARE/. S nástrojem Flash Utility na zařízení fungují pouze soubory .ppfw.tar. Na SD kartě ze zipu můžete také vidět soubor .bin. Ten je určen pouze pro flashování z počítače přes hackrf_spiflash přes USB. Flash Utility jej nepřijme. Ignorujte jej. Zařízení bude flashovat 15 až 30 sekund. Nevypínejte ani nevyjímejte SD kartu během flashování.",
+      "s11": "Zařízení se automaticky restartuje. Ověřte novou verzi ve stavovém řádku nebo v Settings > About.",
+      "s12": "Prohlédněte si nové aplikace a funkce v nabídkách Receive a Transmit.",
+      "s13": "Zkontrolujte Settings, zda nebyly přidány nové bezpečnostní nebo konfigurační možnosti.",
+      "s14": "V případě potřeby překalibrujte dotykový displej: Utilities > Touch Calibrate."
+    },
+    "troubleshootingItems": {
+      "noFile": { "problem": "Flash Utility nevidí soubor", "fix": "Ujistěte se, že soubor je ve složce FIRMWARE/ (ne vnořený v podsložce) a název souboru končí na .ppfw.tar" },
+      "noBoot": { "problem": "Zařízení se po flashování nespustí", "fix": "Podržte tlačítko DFU + stiskněte RESET pro vstup do režimu obnovy DFU. Bootloader je v ROM a nelze jej poškodit. Přeflashujte pomocí dfu-util + hackrf_spiflash z počítače." },
+      "missingApps": { "problem": "Po aktualizaci chybí aplikace", "fix": "Obsah SD karty nebyl aktualizován. Znovu rozbalte zip COPY_TO_SDCARD do kořenového adresáře SD karty s povoleným přepisem." },
+      "noSd": { "problem": "SD karta není detekována", "fix": "Přeformátujte jako FAT32 (ne exFAT). Karty nad 32 GB mohou vyžadovat nástroj třetí strany pro formátování FAT32." },
+      "binFile": { "problem": "Na SD kartě vidím soubor .bin, mám ho použít?", "fix": "Ne. Soubor .bin je určen pouze pro flashování z počítače přes hackrf_spiflash přes USB. Nástroj Flash Utility na zařízení přijímá pouze soubory .ppfw.tar. Soubor .bin se může v prohlížeči souborů zobrazit červeně nebo jako nevybratelný. Zařízení nemůže poškodit. Ignorujte jej." }
+    }
+  },
   "whereToBuy": {
     "title": "Kde koupit",
     "subtitle": "Komunitou zmiňované zdroje pro HackRF One, PortaPack a příslušenství. Nejedná se o doporučení — vždy si proveďte vlastní průzkum.",

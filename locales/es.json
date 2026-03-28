@@ -279,6 +279,47 @@
       "s26": "Desliza el interruptor de encendido ABAJO para apagar — apaga siempre antes de desconectar la antena"
     }
   },
+  "firmwareUpdate": {
+    "title": "Guía de actualización de firmware",
+    "subtitle": "Guía paso a paso para actualizar el firmware Mayhem usando la utilidad Flash Utility integrada. Funciona para cualquier actualización de Mayhem a Mayhem desde la v2.0 en adelante.",
+    "beforeYouStart": "Antes de empezar",
+    "prereq1": "Necesitas un HackRF One + PortaPack que ya ejecute Mayhem v2.0 o posterior",
+    "prereq2": "Una tarjeta MicroSD (FAT32, de 8 a 32 GB recomendado)",
+    "prereq3": "Un ordenador con lector de tarjetas MicroSD para descargar y copiar archivos",
+    "prereq4": "Tus ajustes personales y capturas se conservan durante la actualización",
+    "downloadButton": "Descargar el firmware más reciente",
+    "troubleshooting": "Solución de problemas",
+    "dfuNote": "El método Flash Utility en el dispositivo funciona para cualquier actualización de Mayhem a Mayhem desde la v2.0 en adelante. Para instalaciones iniciales desde firmware de fábrica o recuperación tras un flasheo fallido, usa el método DFU por USB con dfu-util y hackrf_spiflash en un ordenador.",
+    "sections": {
+      "downloadPrepare": "Descargar y preparar",
+      "flashFirmware": "Flashear el firmware",
+      "installOnDevice": "Instalar en el dispositivo",
+      "afterUpdating": "Después de actualizar"
+    },
+    "steps": {
+      "s1": "Apaga el PortaPack. Desliza el interruptor de encendido ABAJO y espera a que la pantalla se apague. No te limites a pulsar RESET.",
+      "s2": "Retira la tarjeta MicroSD. Empuja suavemente para liberarla de la ranura con resorte y extráela. Manéjala por los bordes.",
+      "s3": "Descarga el firmware (.ppfw.tar) y el contenido de la tarjeta SD (.zip) desde la página de GitHub releases para tu modelo de dispositivo.",
+      "s4": "Monta la tarjeta SD en tu ordenador. Debería aparecer como un volumen FAT32 con las carpetas existentes de Mayhem.",
+      "s5": "Copia el archivo de firmware .ppfw.tar en la carpeta FIRMWARE/ de la tarjeta SD. Crea la carpeta si no existe.",
+      "s6": "Extrae el zip COPY_TO_SDCARD en la raíz de la tarjeta SD. Elige sobrescribir/reemplazar todo cuando se solicite. Tus ajustes personales y capturas no se sobrescribirán.",
+      "s7": "Expulsa la tarjeta SD de forma segura desde tu ordenador. En Linux, ejecuta sync primero. En Windows/macOS, usa Quitar de forma segura o Expulsar.",
+      "s8": "Reinserta la tarjeta SD en el PortaPack hasta que haga clic. Los contactos dorados miran hacia la PCB.",
+      "s9": "Enciende y navega a Utilities > Flash Utility. Usa la rueda de clic o la pantalla táctil.",
+      "s10": "Selecciona el archivo .ppfw.tar de la carpeta FIRMWARE/. Solo los archivos .ppfw.tar funcionan con la Flash Utility del dispositivo. También puedes ver un archivo .bin en la tarjeta SD del zip. Ese archivo es solo para flasheo desde PC vía hackrf_spiflash por USB. La Flash Utility no lo aceptará. Ignóralo. El dispositivo flasheará durante 15 a 30 segundos. No apagues ni retires la tarjeta SD durante el flasheo.",
+      "s11": "El dispositivo se reinicia automáticamente. Verifica la nueva versión en la barra de estado o en Settings > About.",
+      "s12": "Revisa las nuevas aplicaciones y funciones en los menús Receive y Transmit.",
+      "s13": "Comprueba Settings para ver si se han añadido nuevas opciones de seguridad o configuración en la actualización.",
+      "s14": "Recalibra la pantalla táctil si es necesario: Utilities > Touch Calibrate."
+    },
+    "troubleshootingItems": {
+      "noFile": { "problem": "Flash Utility no ve el archivo", "fix": "Asegúrate de que el archivo está en FIRMWARE/ (no anidado en una subcarpeta) y que el nombre del archivo termina en .ppfw.tar" },
+      "noBoot": { "problem": "El dispositivo no arranca después del flasheo", "fix": "Mantén pulsado el botón DFU + pulsa RESET para entrar en el modo de recuperación DFU. El bootloader está en ROM y no se puede brickear. Reflashea vía dfu-util + hackrf_spiflash desde un ordenador." },
+      "missingApps": { "problem": "Faltan aplicaciones después de la actualización", "fix": "El contenido de la tarjeta SD no se actualizó. Vuelve a extraer el zip COPY_TO_SDCARD en la raíz de la tarjeta SD con sobrescritura habilitada." },
+      "noSd": { "problem": "Tarjeta SD no detectada", "fix": "Reformatea como FAT32 (no exFAT). Las tarjetas de más de 32 GB pueden necesitar una herramienta de terceros para formatear en FAT32." },
+      "binFile": { "problem": "Veo un archivo .bin en la tarjeta SD, ¿debería usarlo?", "fix": "No. El archivo .bin es solo para flasheo desde PC vía hackrf_spiflash por USB. La Flash Utility del dispositivo solo acepta archivos .ppfw.tar. El .bin puede aparecer en rojo o no seleccionable en el explorador de archivos. No puede dañar el dispositivo. Ignóralo." }
+    }
+  },
   "whereToBuy": {
     "title": "Dónde comprar",
     "subtitle": "Fuentes referenciadas por la comunidad para HackRF One, PortaPack y accesorios. No es una recomendación — investiga siempre por tu cuenta.",
