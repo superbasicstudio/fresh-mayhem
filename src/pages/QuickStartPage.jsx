@@ -92,10 +92,11 @@ export default function QuickStartPage() {
         <div className="flex items-center justify-between mb-3">
           <button
             onClick={handleClear}
-            className="btn btn-xs font-mono text-[10px] text-error bg-error/10 border-0 hover:bg-error/20 shrink-0 ml-4"
-            aria-label="Clear all checklist progress"
+            disabled={completed === 0}
+            className={`btn btn-xs font-mono text-[10px] border-0 shrink-0 ml-4 ${completed > 0 ? 'text-error bg-error/10 hover:bg-error/20' : 'text-base-content/20 bg-base-300/30 cursor-not-allowed'}`}
+            aria-label="Clear checklist below"
           >
-            {t('quickstart.clear')}
+            {t('quickstart.clear')} ({completed})
           </button>
         </div>
         <div className="flex items-center gap-2 mb-3">
@@ -140,10 +141,11 @@ export default function QuickStartPage() {
         <div className="flex items-center justify-between mb-3">
           <button
             onClick={handleUpdateClear}
-            className="btn btn-xs font-mono text-[10px] text-error bg-error/10 border-0 hover:bg-error/20 shrink-0 ml-4"
-            aria-label="Clear firmware update progress"
+            disabled={updateCompleted === 0}
+            className={`btn btn-xs font-mono text-[10px] border-0 shrink-0 ml-4 ${updateCompleted > 0 ? 'text-error bg-error/10 hover:bg-error/20' : 'text-base-content/20 bg-base-300/30 cursor-not-allowed'}`}
+            aria-label="Clear checklist below"
           >
-            {t('quickstart.clear')}
+            {t('quickstart.clear')} ({updateCompleted})
           </button>
         </div>
         <div className="flex items-center gap-2 mb-3">
