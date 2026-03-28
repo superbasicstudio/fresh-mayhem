@@ -193,6 +193,7 @@
       "amp": "Versterkerinzicht"
     },
     "symptoms": "SYMPTOMEN",
+    "outcome": "Resultaat",
     "prevention": "PREVENTIE",
     "technicalDetail": "TECHNISCH DETAIL",
     "source": "Bron:",
@@ -874,31 +875,45 @@
       },
       "damageStories": {
         "The 50W HF Transmitter": {
-          "description": "Gebruiker activeerde een 50W HF-radio op 18 MHz gedurende één seconde met antennes op minder dan een voet afstand. RX-versterker permanent vernietigd. Symptoom: inschakelen van amp veroorzaakte signaalvermindering.",
+          "description": "Een gebruiker bediende een 50W HF-amateurzender op 18 MHz terwijl de HackRF in de buurt lag, met de antennes op minder dan 30 cm afstand. Ze drukten ongeveer een seconde op de zendtoets. De ontvangstversterker van de HackRF (RFFC5072-mixer en MGA-81563 LNA) werd permanent vernietigd door de RF-energie die in de SMA-poort koppelde. Na het incident zorgde het inschakelen van de versterker ervoor dat het ontvangen signaal daadwerkelijk afnam in plaats van toenam, wat bevestigde dat de LNA was doorgebrand. De HackRF werkte nog steeds in ontvangstmodus met AMP uit, maar met aanzienlijk verminderde gevoeligheid.",
+          "outcome": "Permanente LNA-schade. HackRF bruikbaar maar met verslechterde ontvangstprestaties.",
+          "prevention": "Bedien de HackRF nooit in de buurt van actieve zenders. Houd minimaal 3 meter afstand van elke zender. Gebruik een inline-verzwakker bij gebruik nabij een RF-bron boven 1W.",
           "source": "hackrf-dev mailinglijst"
         },
         "The 17kW Airport Radar": {
-          "description": "Gebruiker plaatste HackRF binnen 2 km van luchthavenradar op 17 kW. Zelfs in alleen-ontvangen modus werd de MMIC-ingangsversterker vernietigd.",
+          "description": "Een gebruiker zette zijn HackRF op voor puur ontvangstmonitoring binnen ongeveer 2 km van een luchthaven met een 17 kW S-band bewakingsradar. Ondanks dat er alleen werd ontvangen (geen transmissie), was het radarsignaal op die afstand sterk genoeg om energie te leveren die ver boven het maximale veilige ingangsniveau van de HackRF van +10 dBm lag. De MMIC (Monolithic Microwave Integrated Circuit) ingangsversterker werd doorgebrand door de geaccumuleerde RF-energie. De gebruiker zond helemaal niet. Dit toont aan dat de frontend van de HackRF geen ingangsbescherming heeft en puur door sterke inkomende signalen kan worden vernietigd.",
+          "outcome": "Ingangsversterker vernietigd. Print vereiste reparatie of vervanging op componentniveau.",
+          "prevention": "Wees je bewust van nabijgelegen hoogvermogen-zenders voor inzet. Luchthavenradar, zendmasten en mobiele basisstations kunnen duizenden watts uitzenden. Gebruik externe bandpassfilters en verzwakkers bij gebruik nabij bekende hoogvermogen RF-bronnen.",
           "source": "GitHub Issue #541"
         },
-        "The Satellite LNB": {
-          "description": "Gebruiker sloot een satelliet-LNB met ~60 dB versterking direct aan. Signaal dat de ingang bereikte was +23 tot +26 dBm. LNA onmiddellijk vernietigd.",
+        "The Satellite LNB Direct Connection": {
+          "description": "Een gebruiker sloot een satellietschotel-LNB (Low Noise Block downconverter) rechtstreeks aan op de SMA-ingang van de HackRF zonder enige verzwakking. Satelliet-LNBs hebben ongeveer 50-65 dB ingebouwde versterking om de zwakke satellietsignalen te versterken. De uitgang van de LNB werd gemeten op +23 tot +26 dBm, wat meer dan 10 dB boven de absolute maximale veilige ingang van de HackRF van +10 dBm is. De MGA-81563 LNA-chip werd onmiddellijk en permanent vernietigd. Dit is een van de meest gemelde HackRF-schadescenario's omdat gebruikers zich niet realiseren hoeveel versterking een LNB biedt.",
+          "outcome": "LNA-chip onmiddellijk vernietigd bij aansluiting. Ontvangstversterker permanent niet-functioneel.",
+          "prevention": "Controleer altijd het uitgangsvermogen van elk actief apparaat voordat u het aansluit op de HackRF. Gebruik een 20-30 dB inline-verzwakker tussen de LNB en de HackRF. De max. veilige ingang van de HackRF is +10 dBm (10 mW). Alles met ingebouwde versterking (LNBs, versterkte antennes, actieve probes) moet eerst worden verzwakt.",
           "source": "GitHub Issue #974"
         },
         "The Full-Power DAB Transmission": {
-          "description": "Gebruiker zond uit op Europese DAB op vol vermogen (TXgain=63) met de ANT500-antenne. Slechte impedantie-aanpassing veroorzaakte gereflecteerd vermogen. TX PA defect.",
+          "description": "Een gebruiker in Europa zond uit op DAB-frequenties (Digital Audio Broadcasting) met de HackRF met TX-versterking op maximum (txgain=63) via de meegeleverde ANT500 telescoopantenne. De ANT500 is niet ontworpen voor de DAB-band en presenteerde een zeer slechte impedantie-aanpassing, wat betekent dat het meeste RF-energie werd teruggekaatst in de zenduitgangstrap van de HackRF in plaats van uitgestraald. Dit gereflecteerde vermogen overschreed de veilige bedrijfslimieten van de PA (Power Amplifier) transistor. De TX-uitgangstrap begaf het en de HackRF kon niet meer zenden, hoewel ontvangst nog werkte.",
+          "outcome": "TX-vermogensversterker doorgebrand. HackRF kon nog ontvangen maar kon niet meer zenden.",
+          "prevention": "Zend nooit op volle versterking (txgain=63). Begin op laag vermogen en verhoog geleidelijk. Gebruik altijd een op frequentie afgestemde antenne of een 50-ohm dummy load bij zenden. De ANT500 is een ontvangstantenne en mag niet worden gebruikt voor TX boven zeer lage vermogens. Een hoge SWR (Standing Wave Ratio) door antenne-mismatch kan de uitgangstrap vernietigen.",
           "source": "GitHub Issue #1051"
         },
         "The Invisible Continuing TX": {
-          "description": "Gebruiker stopte een TX-app maar HackRF bleef zenden. Externe PA aangesloten/losgekoppeld tijdens fantoom-TX, PA vernietigd.",
+          "description": "Een gebruiker testte TX-functionaliteit met een externe vermogensversterker (PA) aangesloten op de HackRF-uitgang. Ze stopten de TX-app in de Mayhem-firmware, maar door een firmware-timingprobleem stopte de RF-uitgang van de HackRF niet volledig. De draaggolf ging op laag niveau door, ook al toonde de UI TX als gestopt. Terwijl de HackRF in deze fantoomzendtoestand was, koppelde de gebruiker de externe PA los en weer aan. De PA ontving een plotselinge RF-invoer bij het opstarten, wat een impedantietransient veroorzaakte die de uitgangstransistoren van de PA vernietigde. De HackRF zelf overleefde, maar de externe versterker was vernietigd.",
+          "outcome": "Externe vermogensversterker vernietigd. HackRF overleefde maar vertoonde fantoom-TX-gedrag.",
+          "prevention": "Start na het stoppen van een TX-app de HackRF volledig opnieuw op (schakelaar uit, 3 seconden wachten, inschakelen) voordat u extern materiaal aansluit of loskoppelt. Wissel nooit versterkers of antennes terwijl de HackRF mogelijk zendt. Gebruik de nood-TX-stopsequentie: Stop-knop, Terug-pijl, RESET, Uitschakelen.",
           "source": "GitHub Issue #1051 reactie"
         },
-        "The Amp That Attenuated": {
-          "description": "Geleidelijk verslechterende gevoeligheid over weken. AMP UIT = helder FM, AMP AAN = signaal verdween. Door ESD beschadigd component dat als verzwakker werkte.",
-          "source": "oneSDR reparatiegids"
+        "The Slow ESD Death": {
+          "description": "Over een periode van meerdere weken merkte een gebruiker geleidelijk verslechterende ontvangstgevoeligheid op bij zijn HackRF. FM-radiostations die eerder sterk waren, werden zwak, en zwakkere signalen verdwenen volledig. Het ongebruikelijke symptoom: met AMP uit was FM-ontvangst nog acceptabel. Met AMP aan werd het signaal daadwerkelijk slechter in plaats van beter. Diagnose onthulde dat de MGA-81563 LNA was beschadigd door elektrostatische ontlading (ESD), waarschijnlijk door het aanraken van de SMA-centerpin zonder eerst te aarden. Het beschadigde component was niet volledig dood maar werkte als verzwakker in plaats van versterker, en introduceerde verlies in plaats van versterking wanneer ingeschakeld.",
+          "outcome": "LNA gedeeltelijk beschadigd door ESD. Versterker functioneerde als verzwakker in plaats van versterker. Vereiste componentvervanging voor reparatie.",
+          "prevention": "Aard uzelf altijd voordat u de SMA-connector of centerpin aanraakt. ESD-schade kan cumulatief zijn en is mogelijk niet onmiddellijk zichtbaar. Gebruik de antenne als handvat in plaats van de SMA direct aan te raken. Bewaar de HackRF in een antistatische zak wanneer niet in gebruik.",
+          "source": "oneSDR repair documentation"
         },
         "The 5W Handheld at One Inch": {
-          "description": "5W portofoon op 2,5 cm van HackRF gehouden. ~+7 tot +10 dBm bij de antennepoort. Front-end vernietigd.",
+          "description": "Een gebruiker hield een 5W VHF/UHF draagbare radio (walkie-talkie) op ongeveer 2,5 cm van zijn HackRF terwijl de HackRF ontving. Toen ze op de draagbare radio zonden, werd het signaal bij de antennepoort van de HackRF geschat op +7 tot +10 dBm op basis van afstand en vermogensniveau. Dit zit precies op de absolute maximale veilige ingang en overschreed deze waarschijnlijk tijdens de zendpieken. De frontend-versterker van de HackRF werd vernietigd. Bij 5W en 2,5 cm scheiding is er in feite nul padverles tussen de twee antennes, dus vrijwel het volledige zendvermogen koppelt rechtstreeks in de ontvangeringang.",
+          "outcome": "Frontend LNA vernietigd. HackRF-ontvangstgevoeligheid permanent verslechterd.",
+          "prevention": "Houd minstens 3 meter afstand tussen de HackRF en elke actieve zender, zelfs draagbare radio's met laag vermogen. Een 5W draagbare radio op armlengte kan nog steeds schadelijke vermogens leveren. Als u nabij een zender moet werken, koppel de HackRF-antenne los of gebruik een doorvoerverzwakker geschikt voor het verwachte vermogen.",
           "source": "GitHub Issue #974"
         }
       },

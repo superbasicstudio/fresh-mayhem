@@ -193,6 +193,7 @@
       "amp": "Vahvistintiedot"
     },
     "symptoms": "OIREET",
+    "outcome": "Lopputulos",
     "prevention": "EHKÄISY",
     "technicalDetail": "TEKNINEN YKSITYISKOHTA",
     "source": "Lähde:",
@@ -874,31 +875,45 @@
       },
       "damageStories": {
         "The 50W HF Transmitter": {
-          "description": "Käyttäjä painoi lähetyspainiketta 50W:n HF-radiolla taajuudella 18 MHz sekunnin ajan, antennit alle 30 cm:n päässä. RX-vahvistin pysyvästi tuhoutunut. Oire: vahvistimen kytkeminen heikensi signaalia.",
+          "description": "Käyttäjä käytti 50W:n HF-radioamatöörilähetintä taajuudella 18 MHz, HackRF lähellä antennien ollessa alle 30 cm:n etäisyydellä toisistaan. Hän painoi lähetyspainiketta noin sekunnin ajan. HackRF:n vastaanotinvahvistin (RFFC5072-sekoitin ja MGA-81563 LNA) tuhoutui pysyvästi SMA-porttiin kytkeytyneen RF-energian vuoksi. Tapahtuman jälkeen vahvistimen kytkeminen päälle sai vastaanotetun signaalin itse asiassa heikkenemään vahvistumisen sijaan, mikä vahvisti LNA:n palamisen. HackRF toimi edelleen vastaanottotilassa AMP pois päältä, mutta merkittävästi heikentyneellä herkkyydellä.",
+          "outcome": "Pysyvä LNA-vaurio. HackRF käyttökelpoinen mutta heikentyneellä vastaanottosuorituskyvyllä.",
+          "prevention": "Älä koskaan käytä HackRF:ää aktiivisten lähettimien lähellä. Pidä vähintään 3 metrin etäisyys mihin tahansa lähettimeen. Käytä inline-vaimenninta käytettäessä lähellä mitä tahansa yli 1W:n RF-lähdettä.",
           "source": "hackrf-dev mailing list"
         },
         "The 17kW Airport Radar": {
-          "description": "Käyttäjä asensi HackRF:n alle 2 km:n päähän lentokentän tutkasta, teholla 17 kW. Pelkässä vastaanottotilassakin MMIC-tulovahvistin paloi.",
+          "description": "Käyttäjä asensi HackRF:nsä pelkään vastaanottoseurantaan noin 2 km:n päähän lentokentästä, jossa oli 17 kW:n S-kaistan valvontatutka. Vaikka vain vastaanotettiin (ei lähetystä), tutkan signaali oli siinä etäisyydessä tarpeeksi voimakas toimittamaan energiaa selvästi yli HackRF:n maksimiturvallisen tulotason +10 dBm. MMIC (Monolithic Microwave Integrated Circuit) -tulovahvistin paloi kertyneestä RF-energiasta. Käyttäjä ei lähettänyt lainkaan. Tämä osoittaa, että HackRF:n etupäässä ei ole tulosuojausta ja se voidaan tuhota pelkästään vahvoilla saapuvilla signaaleilla.",
+          "outcome": "Tulovahvistin tuhoutunut. Piirilevy vaati komponenttitason korjauksen tai vaihdon.",
+          "prevention": "Ole tietoinen lähialueen suuritehoisista lähettimistä ennen käyttöönottoa. Lentokenttätutkat, lähetystornit ja matkapuhelintukiasemat voivat lähettää tuhansia watteja. Käytä ulkoisia kaistanpäästösuodattimia ja vaimentimia käytettäessä tunnettujen suuritehoisten RF-lähteiden lähellä.",
           "source": "GitHub Issue #541"
         },
-        "The Satellite LNB": {
-          "description": "Käyttäjä kytki satelliitti-LNB:n ~60 dB:n vahvistuksella suoraan. Tuloon saapuva signaali oli +23 - +26 dBm. LNA tuhoutui välittömästi.",
+        "The Satellite LNB Direct Connection": {
+          "description": "Käyttäjä kytki satelliittilautasen LNB:n (Low Noise Block downconverter) suoraan HackRF:n SMA-tuloon ilman mitään vaimennusta. Satelliitti-LNB:issä on noin 50-65 dB:n sisäänrakennettu vahvistus heikkojen satelliittisignaalien vahvistamiseen. LNB:n lähtö mitattiin +23 - +26 dBm, mikä on yli 10 dB yli HackRF:n absoluuttisen maksimiturvallisen tulon +10 dBm. MGA-81563 LNA-siru tuhoutui välittömästi ja pysyvästi. Tämä on yksi yleisimmin raportoiduista HackRF-vahinkoskenaarioista, koska käyttäjät eivät ymmärrä kuinka paljon vahvistusta LNB tarjoaa.",
+          "outcome": "LNA-siru tuhoutui välittömästi kytkettäessä. Vastaanotinvahvistin pysyvästi toimimaton.",
+          "prevention": "Tarkista aina minkä tahansa aktiivisen laitteen lähtöteho ennen HackRF:ään kytkemistä. Käytä 20-30 dB:n inline-vaimenninta LNB:n ja HackRF:n välissä. HackRF:n maksimiturvallinen tulo on +10 dBm (10 mW). Mikä tahansa sisäänrakennetulla vahvistuksella varustettu laite (LNB:t, vahvistetut antennit, aktiiviset koettimet) tulisi vaimentaa ensin.",
           "source": "GitHub Issue #974"
         },
         "The Full-Power DAB Transmission": {
-          "description": "Käyttäjä lähetti eurooppalaisella DAB-taajuudella täydellä teholla (TXgain=63) ANT500-antennilla. Huono impedanssisovitus aiheutti heijastuneen tehon. TX PA vioittui.",
+          "description": "Eurooppalainen käyttäjä lähetti DAB-taajuuksilla (Digital Audio Broadcasting) HackRF:llä TX-vahvistus maksimissa (txgain=63) mukana tulleen ANT500-teleskooppiantennin kautta. ANT500 ei ole suunniteltu DAB-kaistalle ja siinä oli erittäin huono impedanssisovitus, mikä tarkoittaa, että suurin osa RF-energiasta heijastui takaisin HackRF:n lähetyksen lähtöasteeseen säteilyn sijaan. Tämä heijastunut teho ylitti PA (Power Amplifier) -transistorin turvalliset käyttörajat. TX-lähtöaste vioittui eikä HackRF voinut enää lähettää, vaikka vastaanotto toimi edelleen.",
+          "outcome": "TX-tehovahvistin palanut. HackRF pystyi edelleen vastaanottamaan mutta ei enää lähettämään.",
+          "prevention": "Älä koskaan lähetä täydellä vahvistuksella (txgain=63). Aloita matalalla teholla ja lisää asteittain. Käytä aina taajuuteen sovitettua antennia tai 50 ohmin keinokuormaa lähetettäessä. ANT500 on vastaanottoantenni eikä sitä tulisi käyttää TX:ään erittäin matalia tehotasoja korkeammilla. Korkea SWR (Standing Wave Ratio) antennin huonosta sovituksesta voi tuhota lähtöasteen.",
           "source": "GitHub Issue #1051"
         },
         "The Invisible Continuing TX": {
-          "description": "Käyttäjä pysäytti TX-sovelluksen mutta HackRF jatkoi lähettämistä. Kytki/irrotti ulkoisen PA:n haamulähetyksen aikana, tuhosi PA:n.",
+          "description": "Käyttäjä testasi TX-toimintoa ulkoisella tehovahvistimella (PA) kytkettynä HackRF:n lähtöön. Hän pysäytti TX-sovelluksen Mayhem-laiteohjelmistossa, mutta laiteohjelmiston ajoitusongelman vuoksi HackRF:n RF-lähtö ei pysähtynyt täysin. Kantoaalto jatkui matalalla tasolla vaikka käyttöliittymä näytti TX:n pysähtyneenä. Kun HackRF oli tässä haamulähety tilassa, käyttäjä irrotti ja kytki uudelleen ulkoisen PA:n. PA sai äkillisen RF-tulon käynnistyessään, mikä aiheutti impedanssitransientin, joka tuhosi PA:n lähtötransistorit. Itse HackRF selvisi, mutta ulkoinen vahvistin tuhoutui.",
+          "outcome": "Ulkoinen tehovahvistin tuhoutunut. HackRF selvisi mutta osoitti haamu-TX-käyttäytymistä.",
+          "prevention": "TX-sovelluksen pysäyttämisen jälkeen käynnistä HackRF kokonaan uudelleen (virtakytkin pois päältä, odota 3 sekuntia, käynnistä) ennen ulkoisten laitteiden kytkemistä tai irrottamista. Älä koskaan vaihda vahvistimia tai antenneja lennossa kun HackRF saattaa lähettää. Käytä hätä-TX-pysäytyssekvenssiä: Stop-painike, Takaisin-nuoli, RESET, Virta pois.",
           "source": "GitHub Issue #1051 comment"
         },
-        "The Amp That Attenuated": {
-          "description": "Asteittain heikkenevä herkkyys viikkojen aikana. AMP POIS = selkeä FM, AMP PÄÄLLÄ = signaali katosi. ESD-vioittunut komponentti toimi vaimentimena.",
-          "source": "oneSDR repair guide"
+        "The Slow ESD Death": {
+          "description": "Usean viikon aikana käyttäjä huomasi asteittain heikkenevän vastaanottoherkkyyden HackRF:ssään. FM-radioasemat, jotka olivat aiemmin vahvoja, heikkenivät, ja heikommat signaalit katosivat kokonaan. Epätavallinen oire: AMP pois päältä FM-vastaanotto oli vielä hyväksyttävä. AMP päällä signaali itse asiassa heikkeni parantumisen sijaan. Diagnoosi paljasti, että MGA-81563 LNA oli vaurioitunut staattisesta purkauksesta (ESD), todennäköisesti SMA-keskipinnin koskettamisesta ilman maadoitusta. Vaurioitunut komponentti ei ollut täysin kuollut vaan toimi vaimentimena vahvistimen sijaan, aiheuttaen häviötä vahvistuksen sijaan kytkettäessä.",
+          "outcome": "LNA osittain vaurioitunut ESD:stä. Vahvistin toimi vaimentimena vahvistimen sijaan. Vaati komponentin vaihdon korjaamiseen.",
+          "prevention": "Maadoita itsesi aina ennen SMA-liittimen tai keskipinnin koskettamista. ESD-vauriot voivat olla kumulatiivisia eivätkä välttämättä ole heti ilmeisiä. Käytä antennia kahvana sen sijaan että koskettaisit SMA:ta suoraan. Säilytä HackRF antistaattisessa pussissa kun ei ole käytössä.",
+          "source": "oneSDR repair documentation"
         },
         "The 5W Handheld at One Inch": {
-          "description": "5W:n käsiradio pidettiin 2,5 cm:n päässä HackRF:stä. ~+7 - +10 dBm antenniportissa. Etupää tuhoutunut.",
+          "description": "Käyttäjä piti 5W:n VHF/UHF-käsiradioita (walkie-talkie) noin 2,5 cm:n päässä HackRF:stään sen vastaanottaessa. Kun hän lähetti käsiradiolla, signaalin HackRF:n antenniportissa arvioitiin olevan +7 - +10 dBm etäisyyden ja tehotason perusteella. Tämä on suoraan absoluuttisessa maksimiturvallisessa tulossa ja ylitti sen todennäköisesti lähetyspiikkien aikana. HackRF:n etupään vahvistin tuhoutui. 5W:lla ja 2,5 cm:n erotuksella antennien välillä on käytännössä nolla reittivaimenemista, joten lähes koko lähettimen teho kytkeytyy suoraan vastaanottimen tuloon.",
+          "outcome": "Etupään LNA tuhoutunut. HackRF:n vastaanottoherkkyys pysyvästi heikentynyt.",
+          "prevention": "Pidä vähintään 3 metrin etäisyys HackRF:n ja minkä tahansa aktiivisen lähettimen välillä, myös matalan tehon käsiradioiden. 5W:n käsiradio käsivarren mitan päässä voi silti toimittaa vahingollisia tehotasoja. Jos sinun täytyy toimia lähettimen lähellä, irrota HackRF:n antenni tai käytä läpivientivaimenninta, joka on mitoitettu odotetulle teholle.",
           "source": "GitHub Issue #974"
         }
       },

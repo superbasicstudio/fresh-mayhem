@@ -193,6 +193,7 @@
       "amp": "Förstärkarinsikt"
     },
     "symptoms": "SYMPTOM",
+    "outcome": "Resultat",
     "prevention": "FÖREBYGGANDE",
     "technicalDetail": "TEKNISK DETALJ",
     "source": "Källa:",
@@ -874,31 +875,45 @@
       },
       "damageStories": {
         "The 50W HF Transmitter": {
-          "description": "Användare sände med en 50W HF-radio på 18 MHz i en sekund med antenner inom 30 cm. RX-förstärkare permanent förstörd. Symptom: aktivering av förstärkare fick signalen att minska.",
+          "description": "En anvandare anvande en 50W HF-amatorradiosandare pa 18 MHz med HackRF:en i narheten, antennerna mindre an 30 cm fran varandra. De tryckte pa sandknappen i ungefar en sekund. HackRF:ens mottagarforstarkare (RFFC5072-mixer och MGA-81563 LNA) forstordes permanent av RF-energin som kopplade in i SMA-porten. Efter handelsen fick aktivering av forstarkaren det mottagna signalen att faktiskt minska istallet for att oka, vilket bekraftade att LNA:n var utbrand. HackRF:en fungerade fortfarande i mottagarlage med AMP avstangd, men med markant reducerad kanslighet.",
+          "outcome": "Permanent LNA-skada. HackRF anvandbar men med forsammad mottagningsprestanda.",
+          "prevention": "Anvand aldrig HackRF:en nara aktiva sandare. Hall minst 3 meters avstand fran vilken sandare som helst. Anvand en inline-dampare vid anvandning nara nagon RF-kalla over 1W.",
           "source": "hackrf-dev mailing list"
         },
         "The 17kW Airport Radar": {
-          "description": "Användare satte upp HackRF inom 2 km från flygplatsradar på 17 kW. Även i enbart mottagningsläge brände MMIC-ingångsförstärkaren.",
+          "description": "En anvandare installerade sin HackRF for enbart mottagningsovervakning inom ungefar 2 km fran en flygplats med en 17 kW S-bands overvakningsradar. Trots att bara mottagning skedde (ingen sandning) var radarsignalen tillrackligt kraftig pa det avstandet for att leverera energi langt over HackRF:ens maximala sakra ingangsnivia pa +10 dBm. MMIC (Monolithic Microwave Integrated Circuit) ingangsforstarkaren forstordes av den ackumulerade RF-energin. Anvandaren sande inte alls. Detta demonstrerar att HackRF:ens frontend inte har nagot ingangsskydd och kan forstoras enbart av starka inkommande signaler.",
+          "outcome": "Ingangsforstarkare forstorad. Kretskort kravde komponentnivareparation eller byte.",
+          "prevention": "Var medveten om narbelagda hogeffektsandare fore installering. Flygplatsradar, sandningstorn och mobilbassationer kan sanda tusentals watt. Anvand externa bandpassfilter och dampare vid anvandning nara kanda hogeffekt RF-kallor.",
           "source": "GitHub Issue #541"
         },
-        "The Satellite LNB": {
-          "description": "Användare anslöt en satellit-LNB med ~60 dB förstärkning direkt. Signal som nådde ingången var +23 till +26 dBm. LNA omedelbart förstörd.",
+        "The Satellite LNB Direct Connection": {
+          "description": "En anvandare anslot en satellitparabols LNB (Low Noise Block downconverter) direkt till HackRF:ens SMA-ingang utan nagon dampning. Satellit-LNB:er har ungefar 50-65 dB inbyggd forstarkning for att forstrarka de svaga satellitsignalerna. Utgangen fran LNB:n mattes till +23 till +26 dBm, vilket ar mer an 10 dB over HackRF:ens absoluta maximala sakra ingang pa +10 dBm. MGA-81563 LNA-chippet forstordes omedelbart och permanent. Detta ar ett av de mest rapporterade HackRF-skadescenarierna eftersom anvandare inte inser hur mycket forstarkning en LNB ger.",
+          "outcome": "LNA-chip forstorat omedelbart vid anslutning. Mottagarforstarkare permanent ur funktion.",
+          "prevention": "Kontrollera alltid utgangseffekten fran vilken aktiv enhet som helst innan anslutning till HackRF:en. Anvand en 20-30 dB inline-dampare mellan LNB:n och HackRF:en. HackRF:ens max sakra ingang ar +10 dBm (10 mW). Allt med inbyggd forstarkning (LNB:er, forstarkta antenner, aktiva prober) bor dampas forst.",
           "source": "GitHub Issue #974"
         },
         "The Full-Power DAB Transmission": {
-          "description": "Användare sände på europeisk DAB vid full effekt (TXgain=63) med ANT500-antennen. Dålig impedansmatchning orsakade reflekterad effekt. TX PA gick sönder.",
+          "description": "En anvandare i Europa sande pa DAB-frekvenser (Digital Audio Broadcasting) med HackRF:en med TX-forstarkning pa maximum (txgain=63) genom den medfoliande ANT500-teleskopantennen. ANT500 ar inte designad for DAB-bandet och presenterade en mycket dalig impedansanpassning, vilket innebar att det mesta av RF-energin reflekterades tillbaka in i HackRF:ens sandningsutgangssteg istallet for att stralas ut. Denna reflekterade effekt overskred PA (Power Amplifier)-transistorns sakra driftsgranser. TX-utgangsteget gick sonder och HackRF:en kunde inte langre sanda, aven om mottagning fortfarande fungerade.",
+          "outcome": "TX-effektforstarkare utbrand. HackRF kunde fortfarande ta emot men kunde inte langre sanda.",
+          "prevention": "Sand aldrig vid full forstarkning (txgain=63). Borja pa lag effekt och oka gradvis. Anvand alltid en frekvensanpassad antenn eller en 50-ohms konstgjord belastning vid sandning. ANT500 ar en mottagarantenn och bor inte anvandas for TX over mycket laga effektnivaaer. En hog SWR (Standing Wave Ratio) fran antennavvikelse kan forstoera utgangsteget.",
           "source": "GitHub Issue #1051"
         },
         "The Invisible Continuing TX": {
-          "description": "Användare stoppade en TX-app men HackRF fortsatte sända. Anslöt/kopplade bort extern PA under fantomsändning, dödade PA:n.",
+          "description": "En anvandare testade TX-funktionalitet med en extern effektforstarkare (PA) ansluten till HackRF:ens utgang. De stoppade TX-appen i Mayhem-firmwaren, men pa grund av ett firmware-timingproblem stoppade HackRF:ens RF-utgang inte helt. Barvagen fortsatte pa lag niva aven om UI:t visade TX som stoppad. Medan HackRF:en var i detta fantomsandningstillstand, kopplade anvandaren bort och ateranslot den externa PA:n. PA:n tog emot en plotslig RF-ingang vid uppstart, vilket orsakade en impedanstransient som forstorde PA:ns utgangstransistorer. Sjalva HackRF:en overlevde, men den externa forstarkaren dodades.",
+          "outcome": "Extern effektforstarkare forstorad. HackRF overlevde men uppvisade fantom-TX-beteende.",
+          "prevention": "Starta om HackRF:en helt efter att ha stoppat nagon TX-app (strombrytare av, vanta 3 sekunder, sla pa) innan nagon extern utrustning ansluts eller kopplas bort. Byt aldrig forstarkare eller antenner medan HackRF:en kan sanda. Anvand nodstopp-TX-sekvensen: Stopp-knapp, Tillbaka-pil, RESET, Stang av.",
           "source": "GitHub Issue #1051 comment"
         },
-        "The Amp That Attenuated": {
-          "description": "Gradvis försämrad känslighet under veckor. AMP AV = klar FM, AMP PÅ = signal försvann. ESD-skadad komponent fungerade som dämpare.",
-          "source": "oneSDR repair guide"
+        "The Slow ESD Death": {
+          "description": "Under en period av flera veckor marktr en anvandare gradvis forssamrad mottagningskanslighet pa sin HackRF. FM-radiostationer som tidigare var starka blev svaga, och svagare signaler forsvann helt. Det ovanliga symptomet: med AMP avstangd var FM-mottagningen fortfarande acceptabel. Med AMP paslagen blev signalen faktiskt samre istallet for battre. Diagnos avslojade att MGA-81563 LNA hade skadats av elektrostatisk urladdning (ESD), troligen fran att rora SMA-mittenstiftet utan att forst jorda sig. Den skadade komponenten var inte helt dod utan fungerade som dampare istallet for forstarkare och introducerade forlust istallet for forstarkning nar den var aktiverad.",
+          "outcome": "LNA delvis skadad av ESD. Forstarkaren fungerade som dampare istallet for forstarkare. Kravde komponentbyte for reparation.",
+          "prevention": "Jorda alltid dig sjalv innan du ror vid SMA-kontakten eller mittenstiftet. ESD-skador kan vara kumulativa och kanske inte ar omedelbart uppenbara. Anvand antennen som handtag istallet for att rora SMA:n direkt. Forvara HackRF:en i en antistatisk pase nar den inte anvands.",
+          "source": "oneSDR repair documentation"
         },
         "The 5W Handheld at One Inch": {
-          "description": "5W handhållen hölls 2,5 cm från HackRF. ~+7 till +10 dBm vid antennporten. Front-end förstörd.",
+          "description": "En anvandare holl en 5W VHF/UHF handhallen radio (walkie-talkie) ungefar 2,5 cm fran sin HackRF medan den tog emot. Nar de sande pa den handhallna radion uppskattades signalen vid HackRF:ens antennport till +7 till +10 dBm baserat pa avstand och effektniva. Detta ar precis vid den absoluta maximala sakra ingangsnivan och overskred den troligen under sandningstopparna. HackRF:ens frontend-forstarkare forstordes. Vid 5W och 2,5 cm separation finns det i princip noll vagforlust mellan de tva antennerna, sa nastan hela sandareffekten kopplar direkt in i mottagaringangen.",
+          "outcome": "Frontend LNA forstorad. HackRF:ens mottagningskanslighet permanent forsamrad.",
+          "prevention": "Hall minst 3 meters avstand mellan HackRF:en och vilken aktiv sandare som helst, aven handhallna radioer med lag effekt. En 5W handhallan radio pa armlanigds avstand kan fortfarande leverera skadliga effektnivaaer. Om du maste operera nara en sandare, koppla bort HackRF:ens antenn eller anvand en genomgangsdampare dimensionerad for den forvantade effekten.",
           "source": "GitHub Issue #974"
         }
       },

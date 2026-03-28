@@ -193,6 +193,7 @@
       "amp": "Informace o zesilovači"
     },
     "symptoms": "PŘÍZNAKY",
+    "outcome": "Výsledek",
     "prevention": "PREVENCE",
     "technicalDetail": "TECHNICKÝ DETAIL",
     "source": "Zdroj:",
@@ -874,31 +875,45 @@
       },
       "damageStories": {
         "The 50W HF Transmitter": {
-          "description": "Uživatel stiskl vysílání na 50W HF rádiu na 18 MHz po dobu jedné sekundy s anténami ve vzdálenosti necelých 30 cm. RX zesilovač trvale zničen. Příznak: zapnutí AMP způsobilo zeslabení signálu.",
+          "description": "Uživatel provozoval 50W HF amatérský vysílač na 18 MHz, přičemž HackRF byl umístěn nedaleko, antény od sebe vzdálené méně než 30 cm. Stiskl vysílací tlačítko přibližně na jednu sekundu. Přijímací zesilovač HackRF (směšovač RFFC5072 a LNA MGA-81563) byl trvale zničen RF energií navázanou do SMA portu. Po incidentu zapnutí AMP způsobilo, že přijímaný signál ve skutečnosti zeslábl místo zesílení, což potvrdilo vypálení LNA. HackRF stále fungoval v režimu příjmu s vypnutým AMP, ale s výrazně sníženou citlivostí.",
+          "outcome": "Trvalé poškození LNA. HackRF použitelný, ale se zhoršeným příjmem.",
+          "prevention": "Nikdy neprovozujte HackRF v blízkosti aktivních vysílačů. Dodržujte minimálně 3 metry odstupu od jakéhokoli vysílače. Použijte inline atenuátor při provozu v blízkosti RF zdroje nad 1W.",
           "source": "hackrf-dev mailing list"
         },
         "The 17kW Airport Radar": {
-          "description": "Uživatel umístil HackRF do vzdálenosti 2 km od letištního radaru o výkonu 17 kW. I v režimu pouze příjmu byl vstupní MMIC zesilovač spálen.",
+          "description": "Uživatel umístil HackRF pro pasivní monitoring přibližně 2 km od letiště s 17 kW S-pásmovým přehledovým radarem. Přestože pouze přijímal (žádné vysílání), signál radaru byl v této vzdálenosti dostatečně silný, aby dodal energii výrazně nad maximální bezpečnou úroveň vstupu HackRF +10 dBm. Vstupní zesilovač MMIC (Monolithic Microwave Integrated Circuit) byl spálen naakumulovanou RF energií. Uživatel vůbec nevysílal. To dokazuje, že přední stupeň HackRF nemá žádnou ochranu vstupu a může být zničen čistě silnými příchozími signály.",
+          "outcome": "Vstupní zesilovač zničen. Deska vyžadovala opravu nebo výměnu na úrovni součástek.",
+          "prevention": "Před nasazením si ověřte blízké vysílače vysokého výkonu. Letištní radar, vysílací věže a základnové stanice mohou vysílat tisíce wattů. Při provozu v blízkosti známých vysokovýkonných RF zdrojů používejte externí pásmové filtry a atenuátory.",
           "source": "GitHub Issue #541"
         },
-        "The Satellite LNB": {
-          "description": "Uživatel přímo připojil satelitní LNB se ziskem ~60 dB. Signál na vstupu dosáhl +23 až +26 dBm. LNA okamžitě zničena.",
+        "The Satellite LNB Direct Connection": {
+          "description": "Uživatel připojil satelitní LNB (Low Noise Block downconverter) přímo na SMA vstup HackRF bez jakéhokoli útlumu. Satelitní LNB mají přibližně 50–65 dB vestavěného zisku pro zesílení slabých satelitních signálů. Výstup z LNB byl naměřen na +23 až +26 dBm, což je více než 10 dB nad absolutním maximálním bezpečným vstupem HackRF +10 dBm. Čip LNA MGA-81563 byl okamžitě a trvale zničen. Toto je jeden z nejčastěji hlášených scénářů poškození HackRF, protože uživatelé si neuvědomují, jaký zisk LNB poskytuje.",
+          "outcome": "Čip LNA okamžitě zničen při připojení. Přijímací zesilovač trvale nefunkční.",
+          "prevention": "Vždy zkontrolujte výstupní výkon jakéhokoli aktivního zařízení před připojením k HackRF. Použijte 20–30 dB inline atenuátor mezi LNB a HackRF. Maximální bezpečný vstup HackRF je +10 dBm (10 mW). Cokoli s vestavěným ziskem (LNB, zesílené antény, aktivní sondy) by mělo být nejprve utlumeno.",
           "source": "GitHub Issue #974"
         },
         "The Full-Power DAB Transmission": {
-          "description": "Uživatel vysílal na evropském DAB na plný výkon (TXgain=63) s anténou ANT500. Špatná impedanční shoda způsobila odražený výkon. TX PA selhal.",
+          "description": "Uživatel v Evropě vysílal na frekvencích DAB (Digital Audio Broadcasting) pomocí HackRF s TX ziskem nastaveným na maximum (txgain=63) přes přiloženou teleskopickou anténu ANT500. ANT500 není navržena pro pásmo DAB a vykazovala velmi špatnou impedanční shodu, což znamená, že většina RF energie se odrazila zpět do výstupního stupně vysílače HackRF místo vyzáření. Tento odražený výkon překročil bezpečné provozní limity PA (Power Amplifier) tranzistoru. Výstupní stupeň TX selhal a HackRF již nemohl vysílat, ačkoli příjem stále fungoval.",
+          "outcome": "Výkonový zesilovač TX vyhoření. HackRF stále mohl přijímat, ale již nemohl vysílat.",
+          "prevention": "Nikdy nevysílejte na plný zisk (txgain=63). Začněte na nízkém výkonu a postupně zvyšujte. Vždy používejte frekvenčně laděnou anténu nebo 50ohmovou umělou zátěž při vysílání. ANT500 je přijímací anténa a neměla by se používat pro TX nad velmi nízké úrovně výkonu. Vysoký SWR (Standing Wave Ratio) z nesouladu antény může zničit výstupní stupeň.",
           "source": "GitHub Issue #1051"
         },
         "The Invisible Continuing TX": {
-          "description": "Uživatel zastavil TX aplikaci, ale HackRF pokračoval ve vysílání. Připojoval/odpojoval externí PA během fantomového TX, zničil PA.",
+          "description": "Uživatel testoval TX funkce s externím výkonovým zesilovačem (PA) připojeným k výstupu HackRF. Zastavil TX aplikaci ve firmware Mayhem, ale kvůli problému s časováním firmware se RF výstup HackRF zcela nezastavil. Nosná pokračovala na nízké úrovni, přestože UI ukazovalo TX jako zastavené. Zatímco byl HackRF v tomto stavu fantomového vysílání, uživatel odpojil a znovu připojil externí PA. PA přijal náhlý RF vstup při zapínání, což způsobilo impedanční přechodový jev, který zničil výstupní tranzistory PA. Samotný HackRF přežil, ale externí zesilovač byl zničen.",
+          "outcome": "Externí výkonový zesilovač zničen. HackRF přežil, ale vykazoval chování fantomového TX.",
+          "prevention": "Po zastavení jakékoli TX aplikace kompletně restartujte HackRF (vypínač do polohy off, počkejte 3 sekundy, zapněte) před připojením nebo odpojením jakéhokoli externího vybavení. Nikdy nepřepojujte zesilovače nebo antény za provozu, pokud by HackRF mohl vysílat. Použijte sekvenci nouzového zastavení TX: tlačítko Stop, šipka Zpět, RESET, Vypnout.",
           "source": "GitHub Issue #1051 comment"
         },
-        "The Amp That Attenuated": {
-          "description": "Postupně se zhoršující citlivost po dobu týdnů. AMP VYP = čisté FM, AMP ZAP = signál zmizel. Součástka poškozená ESD fungovala jako atenuátor.",
-          "source": "oneSDR repair guide"
+        "The Slow ESD Death": {
+          "description": "V průběhu několika týdnů si uživatel všiml postupně se zhoršující citlivosti příjmu na svém HackRF. FM rozhlasové stanice, které byly dříve silné, zeslábly a slabší signály zcela zmizely. Neobvyklý příznak: s vypnutým AMP byl FM příjem stále přijatelný. Se zapnutým AMP se signál ve skutečnosti zhoršil místo zlepšení. Diagnostika odhalila, že LNA MGA-81563 byla poškozena elektrostatickým výbojem (ESD), pravděpodobně z doteku středového pinu SMA bez předchozího uzemnění. Poškozená součástka nebyla zcela mrtvá, ale fungovala jako atenuátor místo zesilovače, při zapnutí způsobovala útlum místo zisku.",
+          "outcome": "LNA částečně poškozena ESD. AMP fungoval jako atenuátor místo zesilovače. Vyžadovala výměnu součástky k opravě.",
+          "prevention": "Vždy se uzemněte před dotykem SMA konektoru nebo středového pinu. Poškození ESD může být kumulativní a nemusí být okamžitě zřejmé. Používejte anténu jako rukojeť místo přímého doteku SMA. Ukládejte HackRF do antistatického sáčku, když se nepoužívá.",
+          "source": "oneSDR repair documentation"
         },
         "The 5W Handheld at One Inch": {
-          "description": "Ruční rádio 5W držené 2,5 cm od HackRF. ~+7 až +10 dBm na anténním portu. Vstupní stupeň zničen.",
+          "description": "Uživatel držel 5W VHF/UHF ruční rádio (vysílačku) přibližně 2,5 cm od svého HackRF, zatímco HackRF přijímal. Když na ručním rádiu zahájil vysílání, signál na anténním portu HackRF byl odhadnut na +7 až +10 dBm na základě vzdálenosti a úrovně výkonu. To je přímo na absolutním maximálním bezpečném vstupu a pravděpodobně jej překročilo během špiček vysílání. Přední stupeň zesilovače HackRF byl zničen. Při 5W a 2,5 cm oddělení je v podstatě nulový útlum trasy mezi oběma anténami, takže téměř plný výkon vysílače se přímo naváže do vstupu přijímače.",
+          "outcome": "Přední stupeň LNA zničen. Citlivost příjmu HackRF trvale degradována.",
+          "prevention": "Udržujte minimálně 3 metry vzdálenost mezi HackRF a jakýmkoli aktivním vysílačem, i nízkovýkonovými ručními rádii. 5W ruční rádio na délku paže může stále dodávat poškozující úrovně výkonu. Pokud musíte operovat v blízkosti vysílače, odpojte anténu HackRF nebo použijte průchozí atenuátor dimenzovaný pro očekávaný výkon.",
           "source": "GitHub Issue #974"
         }
       },

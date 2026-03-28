@@ -193,6 +193,7 @@
       "amp": "Informações sobre Amplificador"
     },
     "symptoms": "SINTOMAS",
+    "outcome": "Resultado",
     "prevention": "PREVENÇÃO",
     "technicalDetail": "DETALHE TÉCNICO",
     "source": "Fonte:",
@@ -874,31 +875,45 @@
       },
       "damageStories": {
         "The 50W HF Transmitter": {
-          "description": "O utilizador ativou um rádio HF de 50W a 18 MHz durante um segundo com as antenas a menos de 30 cm. Amplificador RX permanentemente destruído. Sintoma: ativar o amp fazia o sinal diminuir.",
+          "description": "Um usuario estava operando um transmissor de radioamador HF de 50W em 18 MHz com o HackRF proximo, as antenas a menos de 30 cm de distancia. Pressionou o botao de transmissao por aproximadamente um segundo. O amplificador de recepcao do HackRF (mixer RFFC5072 e LNA MGA-81563) foi permanentemente destruido pela energia RF acoplada na porta SMA. Apos o incidente, ativar o amplificador fazia o sinal recebido diminuir em vez de aumentar, confirmando que o LNA estava queimado. O HackRF ainda funcionava em modo de recepcao com AMP desligado, mas com sensibilidade significativamente reduzida.",
+          "outcome": "Dano permanente no LNA. HackRF utilizavel mas com desempenho de recepcao degradado.",
+          "prevention": "Nunca opere o HackRF perto de transmissores ativos. Mantenha no minimo 3 metros de separacao de qualquer transmissor. Use um atenuador em linha se operar perto de qualquer fonte RF acima de 1W.",
           "source": "lista de correio hackrf-dev"
         },
         "The 17kW Airport Radar": {
-          "description": "O utilizador instalou o HackRF a menos de 2 km de um radar aeroportuário de 17 kW. Mesmo em modo apenas recepção, o amplificador de entrada MMIC foi destruído.",
+          "description": "Um usuario instalou seu HackRF para monitoramento em modo somente recepcao a aproximadamente 2 km de um aeroporto com um radar de vigilancia em banda S de 17 kW. Apesar de apenas receber (sem transmissao), o sinal do radar era poderoso o suficiente naquela distancia para entregar energia muito acima do nivel maximo seguro de entrada do HackRF de +10 dBm. O amplificador de entrada MMIC (Monolithic Microwave Integrated Circuit) foi destruido pela energia RF acumulada. O usuario nao estava transmitindo de forma alguma. Isso demonstra que o frontend do HackRF nao tem protecao de entrada e pode ser destruido puramente por sinais fortes recebidos.",
+          "outcome": "Amplificador de entrada destruido. A placa necessitou de reparo ou substituicao em nivel de componente.",
+          "prevention": "Esteja ciente de transmissores de alta potencia nas proximidades antes da implantacao. Radares de aeroporto, torres de transmissao e estacoes base celulares podem emitir milhares de watts. Use filtros passa-banda externos e atenuadores ao operar perto de fontes RF de alta potencia conhecidas.",
           "source": "GitHub Issue #541"
         },
-        "The Satellite LNB": {
-          "description": "O utilizador ligou um LNB de satélite com ~60 dB de ganho diretamente. O sinal que chegou à entrada era de +23 a +26 dBm. LNA destruído instantaneamente.",
+        "The Satellite LNB Direct Connection": {
+          "description": "Um usuario conectou um LNB de antena parabolica (Low Noise Block downconverter) diretamente na entrada SMA do HackRF sem qualquer atenuacao. LNBs de satelite possuem aproximadamente 50-65 dB de ganho embutido para amplificar os sinais fracos de satelite. A saida do LNB foi medida em +23 a +26 dBm, o que e mais de 10 dB acima da entrada maxima segura absoluta do HackRF de +10 dBm. O chip LNA MGA-81563 foi instantanea e permanentemente destruido. Este e um dos cenarios de dano do HackRF mais frequentemente relatados porque os usuarios nao percebem quanta amplificacao um LNB fornece.",
+          "outcome": "Chip LNA destruido instantaneamente na conexao. Amplificador de recepcao permanentemente nao funcional.",
+          "prevention": "Sempre verifique a potencia de saida de qualquer dispositivo ativo antes de conecta-lo ao HackRF. Use um atenuador em linha de 20-30 dB entre o LNB e o HackRF. A entrada maxima segura do HackRF e +10 dBm (10 mW). Qualquer coisa com ganho embutido (LNBs, antenas amplificadas, sondas ativas) deve ser atenuada primeiro.",
           "source": "GitHub Issue #974"
         },
         "The Full-Power DAB Transmission": {
-          "description": "O utilizador transmitiu em DAB europeu a potência máxima (TXgain=63) com a antena ANT500. Má adaptação de impedância causou potência refletida. PA TX avariou.",
+          "description": "Um usuario na Europa transmitiu em frequencias DAB (Digital Audio Broadcasting) usando o HackRF com o ganho TX no maximo (txgain=63) atraves da antena telescopica ANT500 incluida. A ANT500 nao foi projetada para a faixa DAB e apresentou uma adaptacao de impedancia muito ruim, significando que a maior parte da energia RF foi refletida de volta ao estagio de saida de transmissao do HackRF em vez de ser irradiada. Essa potencia refletida excedeu os limites de operacao seguros do transistor PA (Power Amplifier). O estagio de saida TX falhou e o HackRF nao conseguia mais transmitir, embora a recepcao ainda funcionasse.",
+          "outcome": "Amplificador de potencia TX queimado. O HackRF ainda podia receber mas nao conseguia mais transmitir.",
+          "prevention": "Nunca transmita com ganho maximo (txgain=63). Comece com potencia baixa e aumente gradualmente. Sempre use uma antena adequada a frequencia ou uma carga ficticia de 50 ohms ao transmitir. A ANT500 e uma antena de recepcao e nao deve ser usada para TX acima de niveis de potencia muito baixos. Um SWR (Standing Wave Ratio) alto por desadaptacao de antena pode destruir o estagio de saida.",
           "source": "GitHub Issue #1051"
         },
         "The Invisible Continuing TX": {
-          "description": "O utilizador parou uma aplicação TX mas o HackRF continuou a transmitir. Ligou/desligou PA externo durante TX fantasma, destruindo o PA.",
-          "source": "comentário no GitHub Issue #1051"
+          "description": "Um usuario estava testando a funcionalidade TX com um amplificador de potencia externo (PA) conectado a saida do HackRF. Parou o aplicativo TX no firmware Mayhem, mas devido a um problema de temporizacao do firmware, a saida RF do HackRF nao parou completamente. A portadora continuou em nivel baixo mesmo que a interface mostrasse TX como parado. Enquanto o HackRF estava neste estado de transmissao fantasma, o usuario desconectou e reconectou o PA externo. O PA recebeu uma entrada RF repentina ao inicializar, o que causou um transiente de impedancia que destruiu os transistores de saida do PA. O proprio HackRF sobreviveu, mas o amplificador externo foi destruido.",
+          "outcome": "Amplificador de potencia externo destruido. HackRF sobreviveu mas exibiu comportamento de TX fantasma.",
+          "prevention": "Apos parar qualquer aplicativo TX, reinicie o HackRF completamente (chave desligada, aguarde 3 segundos, ligue) antes de conectar ou desconectar qualquer equipamento externo. Nunca troque amplificadores ou antenas com o equipamento ligado enquanto o HackRF possa estar transmitindo. Use a sequencia de parada de emergencia TX: botao Stop, seta Voltar, RESET, Desligar.",
+          "source": "comentario no GitHub Issue #1051"
         },
-        "The Amp That Attenuated": {
-          "description": "Sensibilidade a piorar gradualmente ao longo de semanas. AMP DESLIGADO = FM limpo, AMP LIGADO = sinal desapareceu. Componente danificado por ESD a atuar como atenuador.",
-          "source": "guia de reparação oneSDR"
+        "The Slow ESD Death": {
+          "description": "Ao longo de varias semanas, um usuario notou uma sensibilidade de recepcao que se degradava gradualmente em seu HackRF. Estacoes de radio FM que antes eram fortes ficaram fracas, e sinais mais fracos desapareceram completamente. O sintoma incomum: com AMP desligado, a recepcao FM ainda era aceitavel. Com AMP ligado, o sinal piorava em vez de melhorar. O diagnostico revelou que o LNA MGA-81563 havia sido danificado por descarga eletrostatica (ESD), provavelmente por tocar no pino central SMA sem aterrar-se primeiro. O componente danificado nao estava completamente morto mas atuava como atenuador em vez de amplificador, introduzindo perda em vez de ganho quando ativado.",
+          "outcome": "LNA parcialmente danificado por ESD. O amplificador funcionava como atenuador em vez de amplificador. Necessitou de substituicao do componente para reparo.",
+          "prevention": "Sempre se atre antes de tocar no conector SMA ou no pino central. Danos por ESD podem ser cumulativos e podem nao ser imediatamente obvios. Use a antena como cabo em vez de tocar diretamente no SMA. Guarde o HackRF em um saco antiestatico quando nao estiver em uso.",
+          "source": "oneSDR repair documentation"
         },
         "The 5W Handheld at One Inch": {
-          "description": "Rádio portátil de 5W a 2,5 cm do HackRF. ~+7 a +10 dBm na porta da antena. Front-end destruído.",
+          "description": "Um usuario segurava um radio portatil VHF/UHF de 5W (walkie-talkie) a aproximadamente 2,5 cm de seu HackRF enquanto este recebia. Quando transmitiu no radio portatil, o sinal na porta da antena do HackRF foi estimado em +7 a +10 dBm com base na distancia e no nivel de potencia. Isso esta exatamente no nivel maximo seguro absoluto de entrada e provavelmente o excedeu durante os picos de transmissao. O amplificador frontend do HackRF foi destruido. A 5W e 2,5 cm de separacao, ha essencialmente zero perda de percurso entre as duas antenas, entao praticamente toda a potencia do transmissor se acopla diretamente na entrada do receptor.",
+          "outcome": "LNA frontend destruido. Sensibilidade de recepcao do HackRF permanentemente degradada.",
+          "prevention": "Mantenha pelo menos 3 metros de distancia entre o HackRF e qualquer transmissor ativo, mesmo radios portateis de baixa potencia. Um radio portatil de 5W a distancia do braco ainda pode fornecer niveis de potencia prejudiciais. Se precisar operar perto de um transmissor, desconecte a antena do HackRF ou use um atenuador de passagem dimensionado para a potencia esperada.",
           "source": "GitHub Issue #974"
         }
       },

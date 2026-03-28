@@ -72,14 +72,40 @@ export default function SafetyPage() {
       )}
 
       {safetyTab === 'stories' && (
-        <div className="space-y-2" role="tabpanel" aria-label="Damage Stories">
+        <div className="space-y-3" role="tabpanel" aria-label="Damage Stories">
           {translatedSafety.damageStories.map((s, i) => (
             <div key={i} className="collapse collapse-arrow bg-base-200">
               <input type="radio" name="story-accordion" aria-label={s.title} />
-              <div className="collapse-title text-sm font-medium py-2 min-h-0">{s.title}</div>
-              <div className="collapse-content">
-                <p className="text-sm text-base-content/70 leading-relaxed">{s.description}</p>
-                <span className="badge badge-ghost badge-sm font-mono text-[10px] mt-2">{t('safety.source')} {s.source}</span>
+              <div className="collapse-title text-sm font-medium py-2 min-h-0">
+                <span className="flex items-center gap-2">
+                  {s.title}
+                  {s.severity === 'destroyed' && <span className="badge badge-error badge-xs font-mono text-[9px]">DESTROYED</span>}
+                  {s.severity === 'damaged' && <span className="badge badge-warning badge-xs font-mono text-[9px]">DAMAGED</span>}
+                </span>
+              </div>
+              <div className="collapse-content space-y-3">
+                <p className="text-sm text-base-content/60 leading-relaxed">{s.description}</p>
+                {s.outcome && (
+                  <div className="card bg-error/5 border border-error/20 p-3">
+                    <p className="text-xs font-semibold text-error/80 mb-1">{t('safety.outcome', { defaultValue: 'Outcome' })}</p>
+                    <p className="text-xs text-base-content/60 leading-relaxed">{s.outcome}</p>
+                  </div>
+                )}
+                {s.prevention && (
+                  <div className="card bg-success/5 border border-success/20 p-3">
+                    <p className="text-xs font-semibold text-success/80 mb-1">{t('safety.prevention')}</p>
+                    <p className="text-xs text-base-content/60 leading-relaxed">{s.prevention}</p>
+                  </div>
+                )}
+                <div className="flex items-center gap-2">
+                  {s.sourceUrl ? (
+                    <a href={s.sourceUrl} target="_blank" rel="noopener noreferrer" className="badge badge-ghost badge-sm font-mono text-[10px] hover:text-primary">
+                      {t('safety.source')} {s.source}
+                    </a>
+                  ) : (
+                    <span className="badge badge-ghost badge-sm font-mono text-[10px]">{t('safety.source')} {s.source}</span>
+                  )}
+                </div>
               </div>
             </div>
           ))}
