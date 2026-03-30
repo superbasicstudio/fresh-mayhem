@@ -69,7 +69,7 @@ export function RxAppCard({ app }) {
           <>
             <button
               onClick={() => setExpanded(e => !e)}
-              className="flex items-center gap-1 text-[11px] font-mono text-primary/60 hover:text-primary mt-1.5 transition-colors"
+              className={`flex items-center gap-1 text-[11px] font-mono mt-1.5 transition-colors ${expanded ? 'text-base-content/60 hover:text-base-content' : 'text-primary/60 hover:text-primary'}`}
             >
               <ChevronDownIcon className={`w-3 h-3 transition-transform ${expanded ? 'rotate-180' : ''}`} />
               {expanded ? t('common.less') : t('common.learnMore')}
@@ -120,7 +120,7 @@ export function TxAppCard({ app }) {
           <>
             <button
               onClick={() => setExpanded(e => !e)}
-              className="flex items-center gap-1 text-[11px] font-mono text-primary/60 hover:text-primary mt-1.5 transition-colors"
+              className={`flex items-center gap-1 text-[11px] font-mono mt-1.5 transition-colors ${expanded ? 'text-base-content/60 hover:text-base-content' : 'text-primary/60 hover:text-primary'}`}
             >
               <ChevronDownIcon className={`w-3 h-3 transition-transform ${expanded ? 'rotate-180' : ''}`} />
               {expanded ? t('common.less') : t('common.learnMore')}
