@@ -29,15 +29,15 @@ export default function OverviewPage() {
   }, []);
 
   const pages = [
-    { path: '/controls', label: t('overview.cards.controls.label'), icon: TbDeviceGamepad, stat: t('overview.cards.controls.stat'), statColor: 'text-primary', desc: t('overview.cards.controls.desc'), img: '/screenshots/main-menu.png' },
-    { path: '/receive', label: t('overview.cards.receive.label'), icon: TbAntenna, stat: `${rxApps.length} ${t('common.apps')}`, statColor: 'text-primary', desc: t('overview.cards.receive.desc'), img: '/screenshots/adsb.png' },
-    { path: '/transmit', label: t('overview.cards.transmit.label'), icon: TbBroadcast, stat: `${txApps.length} ${t('common.apps')}`, statColor: 'text-error', desc: t('overview.cards.transmit.desc'), img: '/screenshots/ook-tx.png' },
-    { path: '/tools', label: t('overview.cards.tools.label'), icon: WrenchScrewdriverIcon, stat: `${tools.length} tools, ${games.length} games`, statColor: 'text-primary', desc: t('overview.cards.tools.desc'), img: '/screenshots/app-manager.png' },
-    { path: '/safety', label: t('overview.cards.safety.label'), icon: ShieldExclamationIcon, stat: t('overview.cards.safety.stat'), statColor: 'text-error', desc: t('overview.cards.safety.desc'), img: '/screenshots/amp-comparison.png' },
-    { path: '/frequencies', label: t('overview.cards.frequencies.label'), icon: TbWaveSine, stat: t('overview.cards.frequencies.stat'), statColor: 'text-primary', desc: t('overview.cards.frequencies.desc'), img: '/screenshots/full-spectrum.png' },
-    { path: '/learn', label: t('overview.cards.learn.label'), icon: TbBook, stat: t('overview.cards.learn.stat'), statColor: 'text-primary', desc: t('overview.cards.learn.desc'), img: '/screenshots/fm-broadcast.png' },
-    { path: '/quickstart', label: t('overview.cards.quickstart.label'), icon: RocketLaunchIcon, stat: null, statColor: 'text-primary', desc: t('overview.cards.quickstart.desc'), img: '/screenshots/looking-glass.png' },
-    { path: '/where-to-buy', label: t('overview.cards.whereToBuy.label'), icon: TbShoppingCart, stat: `${vendors.length} ${t('common.vendors')}`, statColor: 'text-primary', desc: t('overview.cards.whereToBuy.desc'), img: null },
+    { path: '/controls', label: t('overview.cards.controls.label'), icon: TbDeviceGamepad, stat: t('overview.cards.controls.stat'), statColor: 'text-white', desc: t('overview.cards.controls.desc'), img: '/screenshots/main-menu.png' },
+    { path: '/receive', label: t('overview.cards.receive.label'), icon: TbAntenna, stat: `${rxApps.length} ${t('common.apps')}`, statColor: 'text-white', desc: t('overview.cards.receive.desc'), img: '/screenshots/adsb.png' },
+    { path: '/transmit', label: t('overview.cards.transmit.label'), icon: TbBroadcast, stat: `${txApps.length} ${t('common.apps')}`, statColor: 'text-white', desc: t('overview.cards.transmit.desc'), img: '/screenshots/ook-tx.png' },
+    { path: '/tools', label: t('overview.cards.tools.label'), icon: WrenchScrewdriverIcon, stat: `${tools.length} tools, ${games.length} games`, statColor: 'text-white', desc: t('overview.cards.tools.desc'), img: '/screenshots/app-manager.png' },
+    { path: '/safety', label: t('overview.cards.safety.label'), icon: ShieldExclamationIcon, stat: t('overview.cards.safety.stat'), statColor: 'text-white', desc: t('overview.cards.safety.desc'), img: '/screenshots/amp-comparison.png' },
+    { path: '/frequencies', label: t('overview.cards.frequencies.label'), icon: TbWaveSine, stat: t('overview.cards.frequencies.stat'), statColor: 'text-white', desc: t('overview.cards.frequencies.desc'), img: '/screenshots/full-spectrum.png' },
+    { path: '/learn', label: t('overview.cards.learn.label'), icon: TbBook, stat: t('overview.cards.learn.stat'), statColor: 'text-white', desc: t('overview.cards.learn.desc'), img: '/screenshots/fm-broadcast.png' },
+    { path: '/quickstart', label: t('overview.cards.quickstart.label'), icon: RocketLaunchIcon, stat: null, statColor: 'text-white', desc: t('overview.cards.quickstart.desc'), img: '/screenshots/looking-glass.png' },
+    { path: '/where-to-buy', label: t('overview.cards.whereToBuy.label'), icon: TbShoppingCart, stat: `${vendors.length} ${t('common.vendors')}`, statColor: 'text-white', desc: t('overview.cards.whereToBuy.desc'), img: null },
   ];
 
   return (

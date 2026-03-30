@@ -155,10 +155,10 @@
     "gainChain": "Gain Chain Calculator",
     "waterfall": "Waterfall Display Simulation",
     "emergencyStop": "Emergency TX Stop",
-    "emergencyStep1": "Press Start/Stop in the TX app",
-    "emergencyStep2": "Tap back arrow to exit TX app",
-    "emergencyStep3": "Press RESET button (panic)",
-    "emergencyStep4": "Power switch OFF (nuclear)"
+    "emergencyStep1": "Press Start/Stop in the TX app to halt transmission",
+    "emergencyStep2": "Tap the back arrow (←) on screen or click wheel left to exit the TX app",
+    "emergencyStep3": "Press the RESET button — small blue button, top-right of device next to RST label. Instantly kills all RF and reboots.",
+    "emergencyStep4": "Nuclear option: slide the power switch DOWN (right side of device). Hold until screen goes dark. Cuts all power immediately."
   },
   "receive": {
     "title": "Receive Apps",
