@@ -13,10 +13,6 @@ export default function ToolsPage() {
     <>
       <PageSection id="tools" title={t('tools.title')} subtitle={t('tools.subtitle')}>
         <div className="grid md:grid-cols-2 gap-3 mb-4">
-          <ExpandableCard title="Utilities & Games on Device" modalMaxWidth="max-w-7xl">
-            {({ expanded }) => <PortaPackMockup expanded={expanded} initialMenu="tools" />}
-          </ExpandableCard>
-
           <div className="space-y-3">
             <div className="card bg-base-200 p-4">
               <h3 className="font-semibold text-sm mb-2 text-primary">{t('tools.gamesTitle')}</h3>
@@ -30,6 +26,10 @@ export default function ToolsPage() {
               </div>
             </div>
           </div>
+
+          <ExpandableCard title="Utilities & Games on Device" modalMaxWidth="max-w-7xl">
+            {({ expanded }) => <PortaPackMockup expanded={expanded} initialMenu="tools" />}
+          </ExpandableCard>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">

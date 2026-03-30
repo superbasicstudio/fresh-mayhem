@@ -27,9 +27,9 @@ function PortaPackIcon({ className = 'w-6 h-6' }) {
 const sectionDefs = [
   { path: '/', labelKey: 'nav.overview', icon: TbRadar },
   { path: '/controls', labelKey: 'nav.controls', icon: PortaPackIcon },
+  { path: '/tools', labelKey: 'nav.tools', icon: TbRulerMeasure },
   { path: '/receive', labelKey: 'nav.receive', icon: TbAntenna },
   { path: '/transmit', labelKey: 'nav.transmit', icon: TbBroadcast },
-  { path: '/tools', labelKey: 'nav.tools', icon: TbRulerMeasure },
   { path: '/safety', labelKey: 'nav.safety', icon: TbGavel },
   { path: '/frequencies', labelKey: 'nav.frequencies', icon: TbWaveSine },
   { path: '/learn', labelKey: 'nav.learn', icon: TbBrain },
