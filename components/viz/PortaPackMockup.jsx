@@ -514,11 +514,6 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
               <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">←</kbd>
               <span className="text-[10px] text-base-content/30">Back</span>
             </div>
-            <div className="flex flex-wrap gap-x-3 gap-y-1">
-              <span className="text-[10px] text-base-content/25"><span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mr-1" />Screen</span>
-              <span className="text-[10px] text-base-content/25"><span className="inline-block w-1.5 h-1.5 rounded-full bg-success mr-1" />RF</span>
-              <span className="text-[10px] text-base-content/25"><span className="inline-block w-1.5 h-1.5 rounded-full bg-error mr-1" />Emergency</span>
-            </div>
           </div>
         )}
       </div>
@@ -540,11 +535,6 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
                 <p className="text-sm text-base-content/50 leading-relaxed">
                   Click the d-pad arrows to navigate menus. Hover hardware components for details.
                 </p>
-              </div>
-              <div className="flex flex-wrap gap-x-4 gap-y-1">
-                <span className="text-xs text-base-content/40"><span className="inline-block w-2 h-2 rounded-full bg-primary mr-1" />Screen</span>
-                <span className="text-xs text-base-content/40"><span className="inline-block w-2 h-2 rounded-full bg-success mr-1" />RF / Power</span>
-                <span className="text-xs text-base-content/40"><span className="inline-block w-2 h-2 rounded-full bg-error mr-1" />Emergency</span>
               </div>
             </div>
           </div>
