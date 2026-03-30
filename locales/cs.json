@@ -66,20 +66,20 @@
     "title": "Přehled",
     "cards": {
       "controls": {
-        "label": "Ovládání a navigace",
+        "label": "Ovladani zarizeni",
         "stat": "Interaktivní simulátory",
         "desc": "PortaPack mockup, waterfall displej, kalkulačka gain chain"
       },
       "receive": {
-        "label": "Přijímací aplikace",
+        "label": "Prijimaci (RX) aplikace",
         "desc": "Pasivní průzkum  -  ADS-B, POCSAG, SubGhzD, BLE a další"
       },
       "transmit": {
-        "label": "Vysílací aplikace",
+        "label": "Vysilaci (TX) aplikace",
         "desc": "Aktivní testování  -  OOK, replay, FlipperTX, BLE TX (pouze s oprávněním)"
       },
       "tools": {
-        "label": "Nástroje a nastavení",
+        "label": "Nastroje zarizeni",
         "desc": "Správce frekvencí, generátor signálu, správce souborů, správce aplikací a další"
       },
       "safety": {
@@ -88,7 +88,7 @@
         "desc": "Chyby začátečníků, příběhy o poškození, hodnocení nebezpečí TX, informace o zesilovači"
       },
       "frequencies": {
-        "label": "Reference frekvencí",
+        "label": "Frekvence",
         "stat": "1 MHz - 6 GHz",
         "desc": "RF spektrum, zakázané frekvence, legální TX pásma, postihy"
       },
@@ -104,6 +104,11 @@
       "whereToBuy": {
         "label": "Kde koupit",
         "desc": "Komunitou ověřené zdroje pro originální hardware HackRF a PortaPack"
+      },
+      "troubleshooting": {
+        "label": "Diagnostika",
+        "stat": "14 beznych oprav",
+        "desc": "Problemy s SD kartou, spousteni, USB pripojeni, prijem a signal"
       }
     }
   },
@@ -127,7 +132,7 @@
     "statusValue": "V provozu"
   },
   "controls": {
-    "title": "Ovládání a navigace",
+    "title": "Ovladani zarizeni",
     "subtitle": "Interaktivní simulátor PortaPack H4M, kalkulačka gain chain a waterfall displej. Naučte se ovládání hardwaru před zapnutím.",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "Otočný ovladač",
@@ -161,7 +166,7 @@
     "emergencyStep4": "Vypínač do polohy OFF (poslední možnost)"
   },
   "receive": {
-    "title": "Přijímací aplikace",
+    "title": "Prijimaci (RX) aplikace",
     "subtitle": "Všech {{count}} přijímacích aplikací ve firmwaru Mayhem. Žádné vysílání  -  legálnost pasivního příjmu se liší podle regionu. Vždy ověřte místní zákony.",
     "filterPlaceholder": "Filtrovat přijímací aplikace...",
     "apps": "aplikací",
@@ -170,7 +175,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "Vysílací aplikace",
+    "title": "Vysilaci (TX) aplikace",
     "subtitle": "Všech {{count}} vysílacích aplikací ve firmwaru Mayhem. Každá s hodnocením úrovně nebezpečí  -  vždy používejte dummy load nebo vhodnou anténu.",
     "warning": "Všechny TX aplikace vyžadují anténu nebo dummy load. Nikdy nevysílejte bez připojené zátěže. Skryjte Jammer, GPS Sim a ADS-B TX přes App Manager.",
     "filterPlaceholder": "Filtrovat vysílací aplikace...",
@@ -179,7 +184,7 @@
     "less": "Méně"
   },
   "tools": {
-    "title": "Nástroje a utility",
+    "title": "Nastroje zarizeni",
     "gamesTitle": "Hry",
     "settingsTitle": "Přehled nastavení",
     "utility": "Utilita"
@@ -209,7 +214,7 @@
     "ampBullet4": "Inline atenuátor je kritický v blízkosti jakéhokoli silného zdroje signálu."
   },
   "frequencies": {
-    "title": "Naučte se o rádiových frekvencích (RF)",
+    "title": "Frekvence",
     "subtitle": "Pokrytí RF spektra od 1 MHz do 6 GHz  -  zakázané zóny, legální TX pásma a přehled postihů pro USA.",
     "spectrumTitle": "Pokrytí RF spektra",
     "bandMapTitle": "Mapa pásem  -  zakázaná vs legální TX (1 MHz - 6 GHz)",

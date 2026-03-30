@@ -66,20 +66,20 @@
     "title": "Översikt",
     "cards": {
       "controls": {
-        "label": "Kontroller och navigation",
+        "label": "Enhetskontroller",
         "stat": "Interaktiva simulatorer",
         "desc": "PortaPack-mockup, waterfall-display, gain chain-kalkylator"
       },
       "receive": {
-        "label": "Mottagningsappar",
+        "label": "Mottagnings (RX) appar",
         "desc": "Passiv spaning  -  ADS-B, POCSAG, SubGhzD, BLE och mer"
       },
       "transmit": {
-        "label": "Sändningsappar",
+        "label": "Sand (TX) appar",
         "desc": "Aktiv testning  -  OOK, replay, FlipperTX, BLE TX (endast auktoriserad användning)"
       },
       "tools": {
-        "label": "Verktyg och inställningar",
+        "label": "Enhetsverktyg",
         "desc": "Frekvenshanterare, signalgenerator, filhanterare, apphanterare och mer"
       },
       "safety": {
@@ -88,7 +88,7 @@
         "desc": "Nybörjarmisstag, skadehistorier, TX-farlighetsbedömningar, förstärkarinsikt"
       },
       "frequencies": {
-        "label": "Frekvensreferens",
+        "label": "Frekvenser",
         "stat": "1 MHz - 6 GHz",
         "desc": "RF-spektrumkarta, förbjudna frekvenser, lagliga TX-band, påföljder"
       },
@@ -104,6 +104,11 @@
       "whereToBuy": {
         "label": "Var köpa",
         "desc": "Community-refererade källor för autentisk HackRF- och PortaPack-hårdvara"
+      },
+      "troubleshooting": {
+        "label": "Felsokning",
+        "stat": "14 vanliga losningar",
+        "desc": "SD-kortsproblem, uppstartsproblem, USB-anslutningar, mottagning och signal"
       }
     }
   },
@@ -127,7 +132,7 @@
     "statusValue": "I drift"
   },
   "controls": {
-    "title": "Kontroller och navigation",
+    "title": "Enhetskontroller",
     "subtitle": "Interaktiv PortaPack H4M-simulator, gain chain-kalkylator och waterfall-display. Lär dig hårdvarukontrollerna innan du slår på enheten.",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "Klickhjul",
@@ -161,7 +166,7 @@
     "emergencyStep4": "Strömbrytare till OFF (sista utväg)"
   },
   "receive": {
-    "title": "Mottagningsappar",
+    "title": "Mottagnings (RX) appar",
     "subtitle": "Alla {{count}} enbart mottagande applikationer i Mayhem-firmware. Ingen sändning involverad  -  lagligheten för passiv mottagning varierar per region. Kontrollera alltid lokala lagar.",
     "filterPlaceholder": "Filtrera mottagningsappar...",
     "apps": "appar",
@@ -170,7 +175,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "Sändningsappar",
+    "title": "Sand (TX) appar",
     "subtitle": "Alla {{count}} sändningsapplikationer i Mayhem-firmware. Varje bedömd efter farlighetsnivå  -  använd alltid en dummy load eller matchad antenn.",
     "warning": "Alla TX-appar kräver en antenn eller dummy load. Sänd aldrig utan ansluten last. Dölj Jammer, GPS Sim och ADS-B TX via App Manager.",
     "filterPlaceholder": "Filtrera sändningsappar...",
@@ -179,7 +184,7 @@
     "less": "Mindre"
   },
   "tools": {
-    "title": "Verktyg och hjälpprogram",
+    "title": "Enhetsverktyg",
     "gamesTitle": "Spel",
     "settingsTitle": "Inställningsreferens",
     "utility": "Hjälpprogram"
@@ -209,7 +214,7 @@
     "ampBullet4": "En inline-dämpare är kritisk nära starka signalkällor."
   },
   "frequencies": {
-    "title": "Lär dig om radiofrekvenser (RF)",
+    "title": "Frekvenser",
     "subtitle": "RF-spektrumtäckning från 1 MHz till 6 GHz  -  förbjudna zoner, lagliga TX-band och påföljdsreferens för USA.",
     "spectrumTitle": "RF-spektrumtäckning",
     "bandMapTitle": "Bandkarta  -  förbjuden vs laglig TX (1 MHz - 6 GHz)",

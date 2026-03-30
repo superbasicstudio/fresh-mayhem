@@ -66,20 +66,20 @@
     "title": "概要",
     "cards": {
       "controls": {
-        "label": "操作とナビゲーション",
+        "label": "デバイスコントロール",
         "stat": "インタラクティブシミュレーター",
         "desc": "PortaPack モックアップ、ウォーターフォール表示、ゲインチェーン計算機"
       },
       "receive": {
-        "label": "受信アプリ",
+        "label": "受信 (RX) アプリ",
         "desc": "パッシブ偵察  -  ADS-B、POCSAG、SubGhzD、BLE など"
       },
       "transmit": {
-        "label": "送信アプリ",
+        "label": "送信 (TX) アプリ",
         "desc": "アクティブテスト  -  OOK、リプレイ、FlipperTX、BLE TX（許可された使用のみ）"
       },
       "tools": {
-        "label": "ツールと設定",
+        "label": "デバイスツール",
         "desc": "周波数マネージャー、信号発生器、ファイルマネージャー、アプリマネージャーなど"
       },
       "safety": {
@@ -88,7 +88,7 @@
         "desc": "初心者のミス、損傷事例、TX 危険度評価、アンプの注意点"
       },
       "frequencies": {
-        "label": "周波数リファレンス",
+        "label": "周波数",
         "stat": "1 MHz - 6 GHz",
         "desc": "RF スペクトラムチャート、禁止周波数、合法 TX 帯域、罰則"
       },
@@ -104,6 +104,11 @@
       "whereToBuy": {
         "label": "購入先",
         "desc": "正規 HackRF および PortaPack ハードウェアのコミュニティ推薦販売元"
+      },
+      "troubleshooting": {
+        "label": "トラブルシューティング",
+        "stat": "14の一般的な修正",
+        "desc": "SDカードの問題、起動の問題、USB接続、受信とシグナル"
       }
     }
   },
@@ -127,7 +132,7 @@
     "statusValue": "動作中"
   },
   "controls": {
-    "title": "操作とナビゲーション",
+    "title": "デバイスコントロール",
     "subtitle": "インタラクティブな PortaPack H4M シミュレーター、ゲインチェーン計算機、ウォーターフォール表示。電源を入れる前にハードウェアの操作方法を学びましょう。",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "クリックホイール",
@@ -161,7 +166,7 @@
     "emergencyStep4": "電源スイッチ OFF（最終手段）"
   },
   "receive": {
-    "title": "受信アプリ",
+    "title": "受信 (RX) アプリ",
     "subtitle": "Mayhem ファームウェアの全 {{count}} 個の受信専用アプリケーション。送信は行いません  -  パッシブ受信の合法性は地域により異なります。必ず現地の法律を確認してください。",
     "filterPlaceholder": "受信アプリをフィルター...",
     "apps": "アプリ",
@@ -170,7 +175,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "送信アプリ",
+    "title": "送信 (TX) アプリ",
     "subtitle": "Mayhem ファームウェアの全 {{count}} 個の送信アプリケーション。危険度別に評価されています  -  必ずダミーロードまたは適切なアンテナを使用してください。",
     "warning": "すべての TX アプリにはアンテナまたはダミーロードが必要です。ロードを接続せずに TX しないでください。App Manager で Jammer、GPS Sim、ADS-B TX を非表示にできます。",
     "filterPlaceholder": "送信アプリをフィルター...",
@@ -179,7 +184,7 @@
     "less": "閉じる"
   },
   "tools": {
-    "title": "ツールとユーティリティ",
+    "title": "デバイスツール",
     "gamesTitle": "ゲーム",
     "settingsTitle": "設定リファレンス",
     "utility": "ユーティリティ"
@@ -209,7 +214,7 @@
     "ampBullet4": "強い信号源の近くではインラインアッテネーターが不可欠です。"
   },
   "frequencies": {
-    "title": "無線周波数 (RF) について学ぶ",
+    "title": "周波数",
     "subtitle": "1 MHz から 6 GHz までの RF スペクトラム  -  禁止帯域、合法 TX 帯域、米国の罰則リファレンス。",
     "spectrumTitle": "RF スペクトラムカバレッジ",
     "bandMapTitle": "バンドマップ  -  禁止帯域 vs 合法 TX（1 MHz - 6 GHz）",

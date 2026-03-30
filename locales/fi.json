@@ -66,20 +66,20 @@
     "title": "Yleiskatsaus",
     "cards": {
       "controls": {
-        "label": "Ohjaimet ja navigointi",
+        "label": "Laiteohjaimet",
         "stat": "Interaktiiviset simulaattorit",
         "desc": "PortaPack-malli, waterfall-näyttö, gain chain -laskin"
       },
       "receive": {
-        "label": "Vastaanottosovellukset",
+        "label": "Vastaanotto (RX) sovellukset",
         "desc": "Passiivinen tiedustelu  -  ADS-B, POCSAG, SubGhzD, BLE ja muuta"
       },
       "transmit": {
-        "label": "Lähetyssovellukset",
+        "label": "Lahetys (TX) sovellukset",
         "desc": "Aktiivinen testaus  -  OOK, replay, FlipperTX, BLE TX (vain valtuutettu käyttö)"
       },
       "tools": {
-        "label": "Työkalut ja asetukset",
+        "label": "Laitetyokalut",
         "desc": "Taajuushallinta, signaaligeneraattori, tiedostohallinta, sovellushallinta ja muuta"
       },
       "safety": {
@@ -88,7 +88,7 @@
         "desc": "Aloittelijoiden virheet, vahinkotarinat, TX-vaarallisuusluokitukset, vahvistintiedot"
       },
       "frequencies": {
-        "label": "Taajuusviite",
+        "label": "Taajuudet",
         "stat": "1 MHz - 6 GHz",
         "desc": "RF-spektrikaavio, kielletyt taajuudet, lailliset TX-kaistat, rangaistukset"
       },
@@ -104,6 +104,11 @@
       "whereToBuy": {
         "label": "Mistä ostaa",
         "desc": "Yhteisön viittaamat lähteet aidolle HackRF- ja PortaPack-laitteistolle"
+      },
+      "troubleshooting": {
+        "label": "Vianetsinta",
+        "stat": "14 yleista korjausta",
+        "desc": "SD-korttiongelmat, kaynnistysongelmat, USB-yhteydet, vastaanotto ja signaali"
       }
     }
   },
@@ -127,7 +132,7 @@
     "statusValue": "Toiminnassa"
   },
   "controls": {
-    "title": "Ohjaimet ja navigointi",
+    "title": "Laiteohjaimet",
     "subtitle": "Interaktiivinen PortaPack H4M -simulaattori, gain chain -laskin ja waterfall-näyttö. Opi laitteiston ohjaimet ennen käynnistämistä.",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "Napsautuspyörä",
@@ -161,7 +166,7 @@
     "emergencyStep4": "Virtakytkin OFF-asentoon (viimeinen keino)"
   },
   "receive": {
-    "title": "Vastaanottosovellukset",
+    "title": "Vastaanotto (RX) sovellukset",
     "subtitle": "Kaikki {{count}} pelkästään vastaanottavaa sovellusta Mayhem-laiteohjelmistossa. Ei lähetystä  -  passiivisen vastaanoton laillisuus vaihtelee alueittain. Tarkista aina paikalliset lait.",
     "filterPlaceholder": "Suodata vastaanottosovelluksia...",
     "apps": "sovellusta",
@@ -170,7 +175,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "Lähetyssovellukset",
+    "title": "Lahetys (TX) sovellukset",
     "subtitle": "Kaikki {{count}} lähetyssovellusta Mayhem-laiteohjelmistossa. Jokainen luokiteltu vaarallisuustason mukaan  -  käytä aina dummy load -kuormaa tai sovitettua antennia.",
     "warning": "Kaikki TX-sovellukset vaativat antennin tai dummy load -kuorman. Älä koskaan lähetä ilman kytkettyä kuormaa. Piilota Jammer, GPS Sim ja ADS-B TX App Managerin kautta.",
     "filterPlaceholder": "Suodata lähetyssovelluksia...",
@@ -179,7 +184,7 @@
     "less": "Vähemmän"
   },
   "tools": {
-    "title": "Työkalut ja apuohjelmat",
+    "title": "Laitetyokalut",
     "gamesTitle": "Pelit",
     "settingsTitle": "Asetusviite",
     "utility": "Apuohjelma"
@@ -209,7 +214,7 @@
     "ampBullet4": "Inline-vaimennin on kriittinen lähellä mitä tahansa voimakasta signaalilähdettä."
   },
   "frequencies": {
-    "title": "Opi radiotaajuuksista (RF)",
+    "title": "Taajuudet",
     "subtitle": "RF-spektrin kattavuus 1 MHz:stä 6 GHz:iin  -  kielletyt alueet, lailliset TX-kaistat ja rangaistusviite Yhdysvalloille.",
     "spectrumTitle": "RF-spektrin kattavuus",
     "bandMapTitle": "Kaistakartta  -  kielletyt vs lailliset TX (1 MHz - 6 GHz)",

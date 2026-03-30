@@ -66,20 +66,20 @@
     "title": "Oversigt",
     "cards": {
       "controls": {
-        "label": "Betjening og navigation",
+        "label": "Enhedsstyring",
         "stat": "Interaktive simulatorer",
         "desc": "PortaPack-mockup, waterfall-display, gain chain-beregner"
       },
       "receive": {
-        "label": "Modtage-apps",
+        "label": "Modtage (RX) apps",
         "desc": "Passiv rekognoscering  -  ADS-B, POCSAG, SubGhzD, BLE og mere"
       },
       "transmit": {
-        "label": "Sende-apps",
+        "label": "Sende (TX) apps",
         "desc": "Aktiv testning  -  OOK, replay, FlipperTX, BLE TX (kun autoriseret brug)"
       },
       "tools": {
-        "label": "Værktøjer og indstillinger",
+        "label": "Enhedsvaerktojer",
         "desc": "Frekvenshåndtering, signalgenerator, filhåndtering, app-håndtering og mere"
       },
       "safety": {
@@ -88,7 +88,7 @@
         "desc": "Begynderfejl, skadehistorier, TX-faresvurderinger, forstærkerindsigt"
       },
       "frequencies": {
-        "label": "Frekvensreference",
+        "label": "Frekvenser",
         "stat": "1 MHz - 6 GHz",
         "desc": "RF-spektrumkort, forbudte frekvenser, lovlige TX-bånd, straffe"
       },
@@ -104,6 +104,11 @@
       "whereToBuy": {
         "label": "Hvor kan man købe",
         "desc": "Fællesskabsrefererede kilder til ægte HackRF og PortaPack hardware"
+      },
+      "troubleshooting": {
+        "label": "Fejlfinding",
+        "stat": "14 almindelige losninger",
+        "desc": "SD-kort problemer, opstartsproblemer, USB-forbindelser, modtagelse og signal"
       }
     }
   },
@@ -127,7 +132,7 @@
     "statusValue": "Operationel"
   },
   "controls": {
-    "title": "Betjening og navigation",
+    "title": "Enhedsstyring",
     "subtitle": "Interaktiv PortaPack H4M-simulator, gain chain-beregner og waterfall-display. Lær hardwarebetjeningen at kende, før du tænder.",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "Klikhjul",
@@ -161,7 +166,7 @@
     "emergencyStep4": "Strømafbryder til OFF (sidste udvej)"
   },
   "receive": {
-    "title": "Modtage-apps",
+    "title": "Modtage (RX) apps",
     "subtitle": "Alle {{count}} rene modtage-applikationer i Mayhem-firmwaren. Ingen transmission involveret  -  lovligheden af passiv modtagelse varierer efter region. Tjek altid lokale love.",
     "filterPlaceholder": "Filtrer modtage-apps...",
     "apps": "apps",
@@ -170,7 +175,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "Sende-apps",
+    "title": "Sende (TX) apps",
     "subtitle": "Alle {{count}} sende-applikationer i Mayhem-firmwaren. Hver vurderet efter fareniveau  -  brug altid en dummy load eller tilpasset antenne.",
     "warning": "Alle TX-apps kræver en antenne eller dummy load. Send aldrig uden tilsluttet belastning. Skjul Jammer, GPS Sim og ADS-B TX via App Manager.",
     "filterPlaceholder": "Filtrer sende-apps...",
@@ -179,7 +184,7 @@
     "less": "Mindre"
   },
   "tools": {
-    "title": "Værktøjer og hjælpeprogrammer",
+    "title": "Enhedsvaerktojer",
     "gamesTitle": "Spil",
     "settingsTitle": "Indstillingsreference",
     "utility": "Hjælpeprogram"
@@ -209,7 +214,7 @@
     "ampBullet4": "En inline-dæmper er kritisk nær enhver stærk signalkilde."
   },
   "frequencies": {
-    "title": "Lær om radiofrekvenser (RF)",
+    "title": "Frekvenser",
     "subtitle": "RF-spektrumdækning fra 1 MHz til 6 GHz  -  forbudte zoner, lovlige TX-bånd og straffereference for USA.",
     "spectrumTitle": "RF-spektrumdækning",
     "bandMapTitle": "Båndkort  -  forbudt vs lovligt TX (1 MHz - 6 GHz)",

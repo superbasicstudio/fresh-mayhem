@@ -66,20 +66,20 @@
     "title": "Overzicht",
     "cards": {
       "controls": {
-        "label": "Bediening & Navigatie",
+        "label": "Apparaatbediening",
         "stat": "Interactieve simulatoren",
         "desc": "PortaPack mockup, watervalweergave, gain chain calculator"
       },
       "receive": {
-        "label": "Ontvangst Apps",
+        "label": "Ontvangst (RX) apps",
         "desc": "Passieve verkenning  -  ADS-B, POCSAG, SubGhzD, BLE en meer"
       },
       "transmit": {
-        "label": "Zend Apps",
+        "label": "Zend (TX) apps",
         "desc": "Actief testen  -  OOK, replay, FlipperTX, BLE TX (alleen geautoriseerd gebruik)"
       },
       "tools": {
-        "label": "Hulpmiddelen & Instellingen",
+        "label": "Apparaattools",
         "desc": "Freq manager, signaalgenerator, bestandsbeheer, app manager en meer"
       },
       "safety": {
@@ -88,7 +88,7 @@
         "desc": "Beginnersfouten, schadeverhalen, TX gevarenclassificatie, versterkerinzicht"
       },
       "frequencies": {
-        "label": "Frequentiereferentie",
+        "label": "Frequenties",
         "stat": "1 MHz - 6 GHz",
         "desc": "RF spectrumkaart, verboden frequenties, legale TX banden, boetes"
       },
@@ -104,6 +104,11 @@
       "whereToBuy": {
         "label": "Waar te koop",
         "desc": "Door de community aanbevolen bronnen voor authentieke HackRF en PortaPack hardware"
+      },
+      "troubleshooting": {
+        "label": "Probleemoplossing",
+        "stat": "14 veelvoorkomende oplossingen",
+        "desc": "SD-kaartproblemen, opstartproblemen, USB-verbindingen, ontvangst en signaal"
       }
     }
   },
@@ -127,7 +132,7 @@
     "statusValue": "Operationeel"
   },
   "controls": {
-    "title": "Bediening & Navigatie",
+    "title": "Apparaatbediening",
     "subtitle": "Interactieve PortaPack H4M simulator, gain chain calculator en watervalweergave. Leer de hardwarebediening voordat je het apparaat inschakelt.",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "Klikwiel",
@@ -161,7 +166,7 @@
     "emergencyStep4": "Aan/uit schakelaar UIT (noodgeval)"
   },
   "receive": {
-    "title": "Ontvangst Apps",
+    "title": "Ontvangst (RX) apps",
     "subtitle": "Alle {{count}} ontvangstapplicaties in Mayhem firmware. Geen transmissie  -  de legaliteit van passief ontvangen verschilt per regio. Controleer altijd de lokale wetgeving.",
     "filterPlaceholder": "Filter ontvangst apps...",
     "apps": "apps",
@@ -170,7 +175,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "Zend Apps",
+    "title": "Zend (TX) apps",
     "subtitle": "Alle {{count}} zendapplicaties in Mayhem firmware. Elk beoordeeld op gevarenniveau  -  gebruik altijd een dummyload of geschikte antenne.",
     "warning": "Alle TX apps vereisen een antenne of dummyload. Zend nooit zonder aangesloten belasting. Verberg Jammer, GPS Sim en ADS-B TX via App Manager.",
     "filterPlaceholder": "Filter zend apps...",
@@ -179,7 +184,7 @@
     "less": "Minder"
   },
   "tools": {
-    "title": "Hulpmiddelen & Utilities",
+    "title": "Apparaattools",
     "gamesTitle": "Spellen",
     "settingsTitle": "Instellingenreferentie",
     "utility": "Hulpmiddel"
@@ -209,7 +214,7 @@
     "ampBullet4": "Een inline verzwakker is essentieel bij sterke signaalbronnen."
   },
   "frequencies": {
-    "title": "Leer over Radiofrequenties (RF)",
+    "title": "Frequenties",
     "subtitle": "RF spectrumdekking van 1 MHz tot 6 GHz  -  verboden zones, legale TX banden en boetereferentie voor de VS.",
     "spectrumTitle": "RF Spectrumdekking",
     "bandMapTitle": "Bandkaart  -  Verboden vs Legale TX (1 MHz - 6 GHz)",

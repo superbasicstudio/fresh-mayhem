@@ -66,20 +66,20 @@
     "title": "Übersicht",
     "cards": {
       "controls": {
-        "label": "Steuerung & Navigation",
+        "label": "Geratesteuerung",
         "stat": "Interaktive Simulatoren",
         "desc": "PortaPack-Mockup, Wasserfallanzeige, Gain-Ketten-Rechner"
       },
       "receive": {
-        "label": "Empfangs-Apps",
+        "label": "Empfangs (RX) Apps",
         "desc": "Passive Aufklärung  -  ADS-B, POCSAG, SubGhzD, BLE und mehr"
       },
       "transmit": {
-        "label": "Sende-Apps",
+        "label": "Sende (TX) Apps",
         "desc": "Aktives Testen  -  OOK, Replay, FlipperTX, BLE TX (nur autorisierte Nutzung)"
       },
       "tools": {
-        "label": "Werkzeuge & Einstellungen",
+        "label": "Geratewerkzeuge",
         "desc": "Frequenzmanager, Signalgenerator, Dateimanager, App-Manager und mehr"
       },
       "safety": {
@@ -88,7 +88,7 @@
         "desc": "Anfängerfehler, Schadensberichte, TX-Gefahrenstufen, Verstärker-Einblicke"
       },
       "frequencies": {
-        "label": "Frequenzreferenz",
+        "label": "Frequenzen",
         "stat": "1 MHz - 6 GHz",
         "desc": "HF-Spektrumdiagramm, Sperrfrequenzen, legale TX-Bänder, Strafen"
       },
@@ -104,6 +104,11 @@
       "whereToBuy": {
         "label": "Bezugsquellen",
         "desc": "Community-empfohlene Quellen für originale HackRF- und PortaPack-Hardware"
+      },
+      "troubleshooting": {
+        "label": "Fehlerbehebung",
+        "stat": "14 haeufige Loesungen",
+        "desc": "SD-Karten-Probleme, Boot-Probleme, USB-Verbindungen, Empfang und Signal"
       }
     }
   },
@@ -127,7 +132,7 @@
     "statusValue": "Betriebsbereit"
   },
   "controls": {
-    "title": "Steuerung & Navigation",
+    "title": "Geratesteuerung",
     "subtitle": "Interaktiver PortaPack H4M-Simulator, Gain-Ketten-Rechner und Wasserfallanzeige. Lerne die Hardware-Bedienelemente kennen, bevor du einschaltest.",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "Drehrad",
@@ -161,7 +166,7 @@
     "emergencyStep4": "Netzschalter AUS (letzte Rettung)"
   },
   "receive": {
-    "title": "Empfangs-Apps",
+    "title": "Empfangs (RX) Apps",
     "subtitle": "Alle {{count}} reinen Empfangsanwendungen der Mayhem-Firmware. Kein Senden  -  die Legalität passiven Empfangs variiert je nach Region. Informiere dich über die lokalen Gesetze.",
     "filterPlaceholder": "Empfangs-Apps filtern...",
     "apps": "Apps",
@@ -170,7 +175,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "Sende-Apps",
+    "title": "Sende (TX) Apps",
     "subtitle": "Alle {{count}} Sendeanwendungen der Mayhem-Firmware. Jede mit Gefahrenstufe bewertet  -  immer einen Dummy Load oder eine angepasste Antenne verwenden.",
     "warning": "Alle TX-Apps benötigen eine Antenne oder einen Dummy Load. Niemals ohne angeschlossene Last senden. Jammer, GPS Sim und ADS-B TX über den App-Manager ausblenden.",
     "filterPlaceholder": "Sende-Apps filtern...",
@@ -179,7 +184,7 @@
     "less": "Weniger"
   },
   "tools": {
-    "title": "Werkzeuge & Hilfsprogramme",
+    "title": "Geratewerkzeuge",
     "gamesTitle": "Spiele",
     "settingsTitle": "Einstellungsreferenz",
     "utility": "Hilfsprogramm"
@@ -209,7 +214,7 @@
     "ampBullet4": "Ein Inline-Dämpfungsglied ist in der Nähe starker Signalquellen unverzichtbar."
   },
   "frequencies": {
-    "title": "Über Funkfrequenzen (RF) lernen",
+    "title": "Frequenzen",
     "subtitle": "HF-Spektrumabdeckung von 1 MHz bis 6 GHz  -  Sperrzonen, legale TX-Bänder und Strafenreferenz für die USA.",
     "spectrumTitle": "HF-Spektrumabdeckung",
     "bandMapTitle": "Bandkarte  -  Sperrbereiche vs. Legale TX-Bänder (1 MHz - 6 GHz)",

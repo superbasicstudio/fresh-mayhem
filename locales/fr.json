@@ -66,20 +66,20 @@
     "title": "Vue d'ensemble",
     "cards": {
       "controls": {
-        "label": "Contrôles et navigation",
+        "label": "Commandes de l'appareil",
         "stat": "Simulateurs interactifs",
         "desc": "Maquette PortaPack, affichage cascade, calculateur de chaîne de gain"
       },
       "receive": {
-        "label": "Apps de réception",
+        "label": "Applications de reception (RX)",
         "desc": "Reconnaissance passive  -  ADS-B, POCSAG, SubGhzD, BLE et plus"
       },
       "transmit": {
-        "label": "Apps de transmission",
+        "label": "Applications de transmission (TX)",
         "desc": "Tests actifs  -  OOK, replay, FlipperTX, BLE TX (usage autorisé uniquement)"
       },
       "tools": {
-        "label": "Outils et paramètres",
+        "label": "Outils de l'appareil",
         "desc": "Gestionnaire de fréquences, générateur de signal, gestionnaire de fichiers, gestionnaire d'apps et plus"
       },
       "safety": {
@@ -88,7 +88,7 @@
         "desc": "Erreurs de débutant, récits de dommages, niveaux de danger TX, infos amplificateur"
       },
       "frequencies": {
-        "label": "Référence des fréquences",
+        "label": "Frequences",
         "stat": "1 MHz - 6 GHz",
         "desc": "Diagramme du spectre RF, fréquences interdites, bandes TX légales, sanctions"
       },
@@ -104,6 +104,11 @@
       "whereToBuy": {
         "label": "Où acheter",
         "desc": "Sources référencées par la communauté pour du matériel HackRF et PortaPack authentique"
+      },
+      "troubleshooting": {
+        "label": "Depannage",
+        "stat": "14 solutions courantes",
+        "desc": "Problemes de carte SD, demarrage, connexions USB, reception et signal"
       }
     }
   },
@@ -127,7 +132,7 @@
     "statusValue": "Opérationnel"
   },
   "controls": {
-    "title": "Contrôles et navigation",
+    "title": "Commandes de l'appareil",
     "subtitle": "Simulateur interactif du PortaPack H4M, calculateur de chaîne de gain et affichage cascade. Apprenez les contrôles matériels avant de mettre sous tension.",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "Molette cliquable",
@@ -161,7 +166,7 @@
     "emergencyStep4": "Interrupteur d'alimentation sur OFF (dernier recours)"
   },
   "receive": {
-    "title": "Apps de réception",
+    "title": "Applications de reception (RX)",
     "subtitle": "Les {{count}} applications de réception uniquement du firmware Mayhem. Aucune transmission  -  la légalité de la réception passive varie selon les régions. Vérifiez toujours les lois locales.",
     "filterPlaceholder": "Filtrer les apps de réception...",
     "apps": "apps",
@@ -170,7 +175,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "Apps de transmission",
+    "title": "Applications de transmission (TX)",
     "subtitle": "Les {{count}} applications de transmission du firmware Mayhem. Chacune évaluée par niveau de danger  -  utilisez toujours un dummy load ou une antenne adaptée.",
     "warning": "Toutes les apps TX nécessitent une antenne ou un dummy load. Ne jamais transmettre sans charge connectée. Masquez Jammer, GPS Sim et ADS-B TX via l'App Manager.",
     "filterPlaceholder": "Filtrer les apps de transmission...",
@@ -179,7 +184,7 @@
     "less": "Moins"
   },
   "tools": {
-    "title": "Outils et utilitaires",
+    "title": "Outils de l'appareil",
     "gamesTitle": "Jeux",
     "settingsTitle": "Référence des paramètres",
     "utility": "Utilitaire"
@@ -209,7 +214,7 @@
     "ampBullet4": "Un atténuateur en ligne est indispensable à proximité de toute source de signal puissante."
   },
   "frequencies": {
-    "title": "Découvrir les radiofréquences (RF)",
+    "title": "Frequences",
     "subtitle": "Couverture du spectre RF de 1 MHz à 6 GHz  -  zones interdites, bandes TX légales et référence des sanctions pour les États-Unis.",
     "spectrumTitle": "Couverture du spectre RF",
     "bandMapTitle": "Carte des bandes  -  Zones interdites vs TX légal (1 MHz - 6 GHz)",

@@ -67,20 +67,20 @@
     "title": "Overview",
     "cards": {
       "controls": {
-        "label": "Controls & Navigation",
+        "label": "Device Controls",
         "stat": "Interactive simulators",
         "desc": "PortaPack mockup, waterfall display, gain chain calculator"
       },
       "receive": {
-        "label": "Receive Apps",
+        "label": "Receive (RX) Apps",
         "desc": "Passive reconnaissance  -  ADS-B, POCSAG, SubGhzD, BLE, and more"
       },
       "transmit": {
-        "label": "Transmit Apps",
+        "label": "Transmit (TX) Apps",
         "desc": "Active testing  -  OOK, replay, FlipperTX, BLE TX (authorized use only)"
       },
       "tools": {
-        "label": "Tools & Settings",
+        "label": "Device Tools",
         "desc": "Freq manager, signal gen, file manager, app manager, and more"
       },
       "safety": {
@@ -89,7 +89,7 @@
         "desc": "Beginner mistakes, damage stories, TX danger ratings, amp insight"
       },
       "frequencies": {
-        "label": "Frequency Reference",
+        "label": "Frequencies",
         "stat": "1 MHz - 6 GHz",
         "desc": "RF spectrum chart, no-go frequencies, legal TX bands, penalties"
       },
@@ -101,6 +101,11 @@
       "quickstart": {
         "label": "Quick Start",
         "desc": "Step-by-step first receive session walkthrough"
+      },
+      "troubleshooting": {
+        "label": "Troubleshooting",
+        "stat": "14 common fixes",
+        "desc": "SD card issues, boot problems, USB connections, reception and signal help"
       },
       "whereToBuy": {
         "label": "Where to Buy",
@@ -128,7 +133,7 @@
     "statusValue": "Operational"
   },
   "controls": {
-    "title": "Controls & Navigation",
+    "title": "Device Controls",
     "subtitle": "Interactive PortaPack H4M simulator, gain chain calculator, and waterfall display. Learn the hardware controls before powering on.",
     "portapackTitle": "PortaPack H4M",
     "clickWheel": "Click Wheel",
@@ -162,7 +167,7 @@
     "emergencyStep4": "Nuclear option: slide the power switch DOWN (right side of device). Hold until screen goes dark. Cuts all power immediately."
   },
   "receive": {
-    "title": "Receive Apps",
+    "title": "Receive (RX) Apps",
     "subtitle": "All {{count}} receive-only applications in Mayhem firmware. No transmission involved  -  legality of passive reception varies by region. Always check local laws.",
     "filterPlaceholder": "Filter receive apps...",
     "apps": "apps",
@@ -171,7 +176,7 @@
     "wiki": "Wiki"
   },
   "transmit": {
-    "title": "Transmit Apps",
+    "title": "Transmit (TX) Apps",
     "subtitle": "All {{count}} transmit applications in Mayhem firmware. Each rated by danger level  -  always use a dummy load or matched antenna.",
     "warning": "All TX apps require an antenna or dummy load. Never TX without a load connected. Hide Jammer, GPS Sim, and ADS-B TX via App Manager.",
     "filterPlaceholder": "Filter transmit apps...",
@@ -180,7 +185,7 @@
     "less": "Less"
   },
   "tools": {
-    "title": "On-Device Tools & Utilities",
+    "title": "Device Tools",
     "subtitle": "Built-in tools, games, and settings available directly on the PortaPack. These run on the device itself  -  no computer required.",
     "gamesTitle": "On-Device Games",
     "settingsTitle": "Device Settings Reference",
@@ -211,7 +216,7 @@
     "ampBullet4": "An inline attenuator is critical near any strong signal source."
   },
   "frequencies": {
-    "title": "Learn About Radio Frequencies (RF)",
+    "title": "Frequencies",
     "subtitle": "RF spectrum coverage from 1 MHz to 6 GHz  -  no-go zones, legal TX bands, and penalty reference for the US.",
     "spectrumTitle": "RF Spectrum Coverage",
     "bandMapTitle": "Band Map  -  No-Go vs Legal TX (1 MHz - 6 GHz)",
