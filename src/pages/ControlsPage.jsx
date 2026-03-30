@@ -48,7 +48,7 @@ export default function ControlsPage() {
         </ExpandableCard>
       </div>
 
-      {/* Emergency TX Stop — full-width red CTA */}
+      {/* Emergency TX Stop  -  full-width red CTA */}
       <div className="mt-4 rounded-xl bg-error p-5">
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           <div className="flex-1">

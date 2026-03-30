@@ -66,7 +66,7 @@ export default function ExpandableCard({ title, children, className = '', modalM
               </button>
             </div>
 
-            {/* Content — scrollable */}
+            {/* Content  -  scrollable */}
             <div
               id={contentId}
               className="p-5 overflow-y-auto flex-1"

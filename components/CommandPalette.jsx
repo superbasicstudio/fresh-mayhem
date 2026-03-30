@@ -97,13 +97,13 @@ function buildIndex(t) {
 
   // No-Go Bands
   noGoBands.forEach(b => items.push({
-    id: `nogo-${b.name}`, type: 'frequency', title: `${b.name}`, description: `${b.service} — ${b.startMHz}–${b.endMHz} MHz`, path: '/frequencies',
+    id: `nogo-${b.name}`, type: 'frequency', title: `${b.name}`, description: `${b.service}  -  ${b.startMHz}-${b.endMHz} MHz`, path: '/frequencies',
     keywords: `${b.name} ${b.service} ${b.startMHz} ${b.endMHz} no-go restricted frequency`.toLowerCase(),
   }));
 
   // Legal Bands
   legalBands.forEach(b => items.push({
-    id: `legal-${b.name}`, type: 'frequency', title: `${b.name}`, description: `${b.requirements} — ${b.startMHz}–${b.endMHz} MHz`, path: '/frequencies',
+    id: `legal-${b.name}`, type: 'frequency', title: `${b.name}`, description: `${b.requirements}  -  ${b.startMHz}-${b.endMHz} MHz`, path: '/frequencies',
     keywords: `${b.name} ${b.requirements} ${b.startMHz} ${b.endMHz} ism frequency`.toLowerCase(),
   }));
 

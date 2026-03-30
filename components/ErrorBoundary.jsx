@@ -38,7 +38,7 @@ export default class ErrorBoundary extends Component {
             >
               Reload
             </button>
-            <p className="text-[10px] text-base-content/20 mt-8 font-mono">Fresh Mayhem — A <a href="https://superbasic.studio" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 underline underline-offset-2">Super Basic Studio</a> project</p>
+            <p className="text-[10px] text-base-content/20 mt-8 font-mono">Fresh Mayhem  -  A <a href="https://superbasic.studio" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 underline underline-offset-2">Super Basic Studio</a> project</p>
           </div>
         </div>
       );

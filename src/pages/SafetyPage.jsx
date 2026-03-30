@@ -119,7 +119,7 @@ export default function SafetyPage() {
         <div className="space-y-2" role="tabpanel" aria-label="TX Danger Ratings">
           <p className="text-xs text-base-content/40 mb-3 leading-relaxed">
             These are transmit (TX) apps included in the Mayhem firmware. Each one is a real app on the device.
-            Expand any entry to learn what it does and understand the risk level. Ratings are general guidance only —
+            Expand any entry to learn what it does and understand the risk level. Ratings are general guidance only  - 
             always check your local laws and regulations before transmitting on any frequency.
           </p>
           {translatedTx.map(a => (
@@ -157,7 +157,7 @@ export default function SafetyPage() {
                     {a.danger === 'extreme'
                       ? 'This app is widely considered extremely dangerous to use on-air. In most countries, on-air use would likely be a serious criminal offense. If you must test, use a dummy load inside an RF-shielded enclosure. Check your local laws before any use.'
                       : a.danger === 'illegal'
-                      ? 'This app targets systems you likely do not own or have authorization to control. In most regions, transmitting these signals would be considered unauthorized. Check your local regulations — there may be no general safe use case.'
+                      ? 'This app targets systems you likely do not own or have authorization to control. In most regions, transmitting these signals would be considered unauthorized. Check your local regulations  -  there may be no general safe use case.'
                       : a.danger === 'danger'
                       ? 'This app can potentially disrupt nearby devices or services. If you choose to experiment, use a dummy load in a controlled environment. On-air use in public spaces could violate local interference laws. Always check your local regulations.'
                       : 'This app may be usable with appropriate licensing or on devices you own, depending on your region. Always verify local regulations before transmitting on any frequency. When in doubt, use a dummy load. We cannot guarantee legality in your area.'}
@@ -178,7 +178,7 @@ export default function SafetyPage() {
             <p className="text-sm text-base-content/60 leading-relaxed">
               The HackRF One has a built-in RF amplifier (AMP) that boosts incoming signals by about +11 dB when receiving,
               or boosts your transmission power when sending. It's toggled on/off in most Mayhem apps via the on-screen controls.
-              By default, AMP is OFF — which is the recommended starting point.
+              By default, AMP is OFF  -  which is the recommended starting point.
             </p>
           </div>
 
@@ -191,7 +191,7 @@ export default function SafetyPage() {
               </p>
               <p className="text-sm text-base-content/60 leading-relaxed">
                 This means even if you're tuned to 433 MHz, a strong cell tower at 900 MHz nearby will still hit the amplifier
-                at full strength. The amp doesn't know what frequency you care about — it amplifies everything at once.
+                at full strength. The amp doesn't know what frequency you care about  -  it amplifies everything at once.
               </p>
             </div>
 
@@ -200,14 +200,14 @@ export default function SafetyPage() {
               <h3 className="font-semibold text-sm text-primary mb-2">Where to find it on the device</h3>
               <ul className="text-sm space-y-2 text-base-content/60 leading-relaxed">
                 <li className="flex items-start gap-2"><span className="text-primary/40 mt-0.5 shrink-0">›</span>Open any RX or TX app (Audio, ADS-B, OOK TX, etc.)</li>
-                <li className="flex items-start gap-2"><span className="text-primary/40 mt-0.5 shrink-0">›</span>Look for <strong className="text-base-content/80">AMP</strong> in the on-screen settings — it shows ON or OFF</li>
+                <li className="flex items-start gap-2"><span className="text-primary/40 mt-0.5 shrink-0">›</span>Look for <strong className="text-base-content/80">AMP</strong> in the on-screen settings  -  it shows ON or OFF</li>
                 <li className="flex items-start gap-2"><span className="text-primary/40 mt-0.5 shrink-0">›</span>Toggle with the click wheel or touchscreen</li>
-                <li className="flex items-start gap-2"><span className="text-primary/40 mt-0.5 shrink-0">›</span>Default is <strong className="text-base-content/80">OFF</strong> — start here and only enable if your signal is too weak</li>
+                <li className="flex items-start gap-2"><span className="text-primary/40 mt-0.5 shrink-0">›</span>Default is <strong className="text-base-content/80">OFF</strong>  -  start here and only enable if your signal is too weak</li>
               </ul>
             </div>
           </div>
 
-          {/* Warning — subtle, not a giant yellow box */}
+          {/* Warning  -  subtle, not a giant yellow box */}
           <div className="rounded-lg p-3 bg-warning/5 border border-warning/15">
             <p className="text-xs font-semibold text-warning/70 mb-1">Important</p>
             <p className="text-xs text-base-content/50 leading-relaxed">
@@ -233,15 +233,15 @@ export default function SafetyPage() {
               <ul className="text-sm space-y-2 text-base-content/60 leading-relaxed">
                 <li className="flex items-start gap-2"><span className="text-error/40 mt-0.5 shrink-0">›</span>Near cell towers, broadcast antennas, or airport radar</li>
                 <li className="flex items-start gap-2"><span className="text-error/40 mt-0.5 shrink-0">›</span>Using a wideband antenna with no filter</li>
-                <li className="flex items-start gap-2"><span className="text-error/40 mt-0.5 shrink-0">›</span>If the signal is already strong — you'll clip/distort instead of improve</li>
+                <li className="flex items-start gap-2"><span className="text-error/40 mt-0.5 shrink-0">›</span>If the signal is already strong  -  you'll clip/distort instead of improve</li>
                 <li className="flex items-start gap-2"><span className="text-error/40 mt-0.5 shrink-0">›</span>Connected to another transmitter's output (will destroy the LNA)</li>
               </ul>
             </div>
           </div>
 
-          {/* Comparison image — constrained width */}
+          {/* Comparison image  -  constrained width */}
           <div className="max-w-lg">
-            <ExpandableImage src="/screenshots/amp-comparison.webp" alt="AMP ON vs OFF signal comparison — real RF data" />
+            <ExpandableImage src="/screenshots/amp-comparison.webp" alt="AMP ON vs OFF signal comparison  -  real RF data" />
           </div>
         </div>
       )}

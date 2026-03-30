@@ -2,10 +2,10 @@ export const mistakes = [
   {
     title: "Leaving the internal amp ON near strong signal sources",
     severity: "extreme",
-    description: "The HackRF's front-end amplifier (MGA-81563) has no bandpass filter before it — it amplifies the entire 1 MHz to 6 GHz range simultaneously, regardless of what frequency you're tuned to.",
-    symptoms: ["Amp ON makes signals weaker instead of stronger", "Reduced sensitivity across all bands", "No visible damage — failure is silent"],
+    description: "The HackRF's front-end amplifier (MGA-81563) has no bandpass filter before it  -  it amplifies the entire 1 MHz to 6 GHz range simultaneously, regardless of what frequency you're tuned to.",
+    symptoms: ["Amp ON makes signals weaker instead of stronger", "Reduced sensitivity across all bands", "No visible damage  -  failure is silent"],
     prevention: ["Keep AMP OFF unless you specifically need it", "Use an external bandpass filter before the HackRF input", "Add a 10-20 dB inline attenuator near strong transmitters"],
-    technical: "Max safe input with AMP ON is -5 dBm. A cell tower at 900 MHz 100m away delivers approximately +5 to +10 dBm — enough to destroy the MGA-81563 even when tuned to 433 MHz."
+    technical: "Max safe input with AMP ON is -5 dBm. A cell tower at 900 MHz 100m away delivers approximately +5 to +10 dBm  -  enough to destroy the MGA-81563 even when tuned to 433 MHz."
   },
   {
     title: "Using a 5W handheld radio within inches",
@@ -21,7 +21,7 @@ export const mistakes = [
     description: "Satellite LNBs (Low-Noise Block downconverters) have 50-65 dB of built-in gain and are designed to feed into a satellite receiver, not an SDR. Connecting one directly instantly destroys the input stage.",
     symptoms: ["Immediate and total LNA failure", "Device may appear to work but receive nothing", "No recovery possible without component-level repair"],
     prevention: ["Always use a 20-30 dB attenuator between an LNB and the HackRF", "Check the LNB's gain specification before connecting", "Consider a bias-tee with proper power isolation"],
-    technical: "An LNB with 60 dB gain feeds +23 to +26 dBm into a device rated for -5 dBm max (AMP ON). That's 28-31 dB over the absolute maximum — roughly 1000x the safe power level."
+    technical: "An LNB with 60 dB gain feeds +23 to +26 dBm into a device rated for -5 dBm max (AMP ON). That's 28-31 dB over the absolute maximum  -  roughly 1000x the safe power level."
   },
   {
     title: "Airport radar exposure",
@@ -42,7 +42,7 @@ export const mistakes = [
   {
     title: "ESD while connecting antennas",
     severity: "danger",
-    description: "Static discharge from your body or a charged antenna goes directly into the RF front-end through the SMA center pin. The damage is often subtle and progressive — you may not notice for weeks.",
+    description: "Static discharge from your body or a charged antenna goes directly into the RF front-end through the SMA center pin. The damage is often subtle and progressive  -  you may not notice for weeks.",
     symptoms: ["Amp acts as attenuator instead of providing gain", "Gradual sensitivity loss over time", "Intermittent receive quality issues"],
     prevention: ["Touch a grounded metal surface before handling the SMA connector", "Ground yourself and the antenna before connecting", "Use an anti-static wrist strap in dry environments"],
     technical: "Human body ESD is typically 2-15 kV with peak currents of 10-30A for nanoseconds. The MGA-81563 LNA has an ESD rating of only ~200V (HBM). Even a small static discharge that you can't feel (<3 kV) can degrade the amplifier."
@@ -52,15 +52,15 @@ export const mistakes = [
     severity: "danger",
     description: "Using full TX gain with an antenna that isn't matched to your frequency causes significant power reflection. While the HackRF only outputs ~15 dBm, repeated stress from reflected power degrades the PA over time.",
     symptoms: ["Gradually decreasing TX output power", "Antenna SWR meter shows high reflected power", "TX works on some frequencies but not others"],
-    prevention: ["Use an antenna designed for your target frequency", "Check SWR before transmitting — aim for < 2:1", "Start at low TX gain and increase gradually while monitoring"],
+    prevention: ["Use an antenna designed for your target frequency", "Check SWR before transmitting  -  aim for < 2:1", "Start at low TX gain and increase gradually while monitoring"],
     technical: "At 15 dBm with a 10:1 VSWR mismatch, approximately 70% of power reflects back. The HackRF lacks a circulator or isolator, so reflected power goes directly back into the PA stage."
   },
   {
     title: "Not using a data-capable USB cable",
     severity: "caution",
-    description: "Many USB cables are charge-only — they have power wires but no data lines. This is the single most common 'my HackRF doesn't work' issue and wastes hours of debugging time.",
+    description: "Many USB cables are charge-only  -  they have power wires but no data lines. This is the single most common 'my HackRF doesn't work' issue and wastes hours of debugging time.",
     symptoms: ["'Device not found' or 'No HackRF boards found' errors", "Device powers on (LEDs light) but isn't recognized by software", "Intermittent connection drops"],
-    prevention: ["Label your known-good data cables", "Test with 3-5 different cables before suspecting hardware", "Use short cables (< 1m) — USB 2.0 signal quality degrades with length", "USB 3.0 ports and cables tend to be more reliable"],
+    prevention: ["Label your known-good data cables", "Test with 3-5 different cables before suspecting hardware", "Use short cables (< 1m)  -  USB 2.0 signal quality degrades with length", "USB 3.0 ports and cables tend to be more reliable"],
     technical: "HackRF requires USB 2.0 High Speed (480 Mbps). Charge-only cables lack the D+ and D- data lines entirely. Some cheap data cables have inadequate shielding causing intermittent connections at high speed."
   },
   {

@@ -23,7 +23,7 @@ export const appDetails = {
       'Use dump1090 on your PC for interactive map overlay',
       'ICAO hex codes uniquely identify every aircraft worldwide',
     ],
-    didYouKnow: 'ADS-B was mandated worldwide by ICAO in 2020. Every commercial aircraft now broadcasts its position twice per second at 1090 MHz. The signals are completely unencrypted — anyone with a receiver can track them.',
+    didYouKnow: 'ADS-B was mandated worldwide by ICAO in 2020. Every commercial aircraft now broadcasts its position twice per second at 1090 MHz. The signals are completely unencrypted  -  anyone with a receiver can track them.',
     wikiUrl: 'https://github.com/portapack-mayhem/mayhem-firmware/wiki/Automatic-dependent-surveillance%E2%80%93broadcast-(ADS-B)',
   },
 
@@ -37,14 +37,14 @@ export const appDetails = {
     protocol: 'ACARS',
     gain: { lna: 24, vga: 24, amp: false },
     antenna: 'Telescopic (tuned to ~130 MHz)',
-    description: 'Aircraft Communication Addressing and Reporting System. Decodes short data link messages between aircraft and ground stations — flight plans, weather updates, maintenance alerts, gate assignments.',
+    description: 'Aircraft Communication Addressing and Reporting System. Decodes short data link messages between aircraft and ground stations  -  flight plans, weather updates, maintenance alerts, gate assignments.',
     tips: [
       'Primary worldwide frequency: 131.550 MHz',
-      'Messages are short text bursts — watch for them to flash by',
+      'Messages are short text bursts  -  watch for them to flash by',
       'Airport proximity dramatically improves reception',
       'Content includes flight numbers, routing, OOOI events',
     ],
-    didYouKnow: 'ACARS was introduced in 1978, making it one of the oldest digital data links in aviation. Despite being nearly 50 years old, it\'s still in daily use. Messages are unencrypted plain text — a relic of an era before cybersecurity.',
+    didYouKnow: 'ACARS was introduced in 1978, making it one of the oldest digital data links in aviation. Despite being nearly 50 years old, it\'s still in daily use. Messages are unencrypted plain text  -  a relic of an era before cybersecurity.',
     wikiUrl: 'https://github.com/portapack-mayhem/mayhem-firmware/wiki/ACARS',
   },
 
@@ -66,7 +66,7 @@ export const appDetails = {
       'SSB (USB/LSB) for amateur radio HF bands',
       'Start with a local FM station to verify your setup works',
     ],
-    didYouKnow: 'FM broadcast was invented in 1933 by Edwin Armstrong, who fought a decades-long patent battle with RCA. Today, FM radio remains one of the most reliable ways to receive emergency information during disasters — no internet required.',
+    didYouKnow: 'FM broadcast was invented in 1933 by Edwin Armstrong, who fought a decades-long patent battle with RCA. Today, FM radio remains one of the most reliable ways to receive emergency information during disasters  -  no internet required.',
     wikiUrl: 'https://github.com/portapack-mayhem/mayhem-firmware/wiki/Audio-Receivers',
   },
 
@@ -82,12 +82,12 @@ export const appDetails = {
     antenna: '2.4 GHz blade antenna',
     description: 'Bluetooth Low Energy advertisement sniffer. Captures BLE beacon packets on advertising channels 37, 38, and 39. Shows MAC address with vendor OUI lookup, RSSI, and advertisement data.',
     tips: [
-      'BLE ads are everywhere — phones, fitness bands, AirTags, smart home',
+      'BLE ads are everywhere  -  phones, fitness bands, AirTags, smart home',
       'Three fixed advertising channels help catch all nearby devices',
       'MAC vendor lookup identifies device manufacturer',
       'Some devices use MAC randomization for privacy',
     ],
-    didYouKnow: 'Bluetooth was named after Harald "Bluetooth" Gormsson, a 10th-century Danish king who unified warring factions — just as the protocol unified competing wireless standards. The Bluetooth logo combines the Norse runes for H and B.',
+    didYouKnow: 'Bluetooth was named after Harald "Bluetooth" Gormsson, a 10th-century Danish king who unified warring factions  -  just as the protocol unified competing wireless standards. The Bluetooth logo combines the Norse runes for H and B.',
     wikiUrl: 'https://github.com/portapack-mayhem/mayhem-firmware/wiki/BLE-RX',
   },
 
@@ -104,7 +104,7 @@ export const appDetails = {
     description: 'Wideband spectrum waterfall display. Three modes: SPECTR (spectrum analyzer), LIVE-V (live vertical waterfall), PEAK-V (peak hold). The best app for discovering unknown signals in a frequency range.',
     tips: [
       'Start wide (e.g., 400-500 MHz) to find signals, then narrow in',
-      'PEAK-V shows persistent peaks — great for intermittent transmissions',
+      'PEAK-V shows persistent peaks  -  great for intermittent transmissions',
       'The DC spike at center frequency is normal (direct-conversion artifact)',
       'Combine with Scanner for automated signal detection',
     ],
@@ -125,7 +125,7 @@ export const appDetails = {
     description: 'Nordic Semiconductor nRF24L01+ protocol decoder. Captures wireless keyboard, mouse, and IoT device communications at 2.4 GHz. Many wireless peripherals use this protocol without encryption.',
     tips: [
       'Many cheap wireless keyboards transmit keystrokes in the clear',
-      'nRF24 devices hop across channels — patience required',
+      'nRF24 devices hop across channels  -  patience required',
       'Range is typically 10-30 meters for consumer devices',
       'MouseJack vulnerabilities affect many unpatched devices',
     ],
@@ -148,7 +148,7 @@ export const appDetails = {
       'Common US frequencies: 152.480, 157.900, 462.775 MHz',
       'Try all three baud rates (512/1200/2400) if messages look garbled',
       'Hospital and emergency pages often appear in the clear',
-      'Pagers are one-way — receiving is completely passive',
+      'Pagers are one-way  -  receiving is completely passive',
     ],
     didYouKnow: 'Despite being "1990s technology," over 80% of US hospitals still use pagers. Pager signals penetrate buildings better than cellular, work during network overloads, and have near-100% delivery rates. In 2016, researchers found millions of unencrypted hospital pages.',
     wikiUrl: 'https://github.com/portapack-mayhem/mayhem-firmware/wiki/POCSAG-Receiver',
@@ -172,7 +172,7 @@ export const appDetails = {
       'Weather stations commonly transmit at 433 or 915 MHz',
       'Combined with OOK TX for capture-and-replay testing',
     ],
-    didYouKnow: '433.92 MHz is the most crowded ISM frequency in Europe. Car remotes, baby monitors, and soil sensors all share this band. The simplest devices use OOK with a fixed code — no encryption, no rolling codes, easily replayed.',
+    didYouKnow: '433.92 MHz is the most crowded ISM frequency in Europe. Car remotes, baby monitors, and soil sensors all share this band. The simplest devices use OOK with a fixed code  -  no encryption, no rolling codes, easily replayed.',
     wikiUrl: 'https://github.com/portapack-mayhem/mayhem-firmware/wiki/SubGhzD',
   },
 
@@ -186,14 +186,14 @@ export const appDetails = {
     protocol: 'TPMS (multiple vendors)',
     gain: { lna: 24, vga: 24, amp: false },
     antenna: '433 MHz antenna',
-    description: 'Tire Pressure Monitoring System decoder. Reads sensor transmissions from vehicle tires — sensor ID, tire pressure, and temperature. Each sensor has a unique ID that can be used to track specific vehicles.',
+    description: 'Tire Pressure Monitoring System decoder. Reads sensor transmissions from vehicle tires  -  sensor ID, tire pressure, and temperature. Each sensor has a unique ID that can be used to track specific vehicles.',
     tips: [
       'Sensors transmit every 30-60 seconds while driving',
       'Each sensor has a unique 32-bit ID',
       'US vehicles use 315 MHz, European vehicles use 433.92 MHz',
       'TPMS became mandatory: US (2007), EU (2014)',
     ],
-    didYouKnow: 'TPMS was mandated after the Firestone tire recall of 2000 that caused 271 fatalities. Each sensor broadcasts a unique ID, meaning TPMS signals can track specific vehicles — a privacy concern researchers have demonstrated since 2010.',
+    didYouKnow: 'TPMS was mandated after the Firestone tire recall of 2000 that caused 271 fatalities. Each sensor broadcasts a unique ID, meaning TPMS signals can track specific vehicles  -  a privacy concern researchers have demonstrated since 2010.',
     wikiUrl: 'https://github.com/portapack-mayhem/mayhem-firmware/wiki/TPMS',
   },
 
@@ -214,7 +214,7 @@ export const appDetails = {
       'You can passively monitor nearby weather stations',
       'Great for learning ISM protocol decoding basics',
     ],
-    didYouKnow: 'Wireless weather stations are among the simplest IoT devices — OOK or FSK with no encryption. The protocols were mostly reverse-engineered by the rtl_433 open-source community, which now supports over 200 device types.',
+    didYouKnow: 'Wireless weather stations are among the simplest IoT devices  -  OOK or FSK with no encryption. The protocols were mostly reverse-engineered by the rtl_433 open-source community, which now supports over 200 device types.',
   },
 
   // ═══════════════════════════════════════════════
@@ -233,7 +233,7 @@ export const appDetails = {
     legal: 'Legal for testing your own devices. Spoofing others\' MACs may violate laws.',
     tips: [
       'Use a dummy load for initial testing',
-      'BLE TX power is very low — range under 10 meters',
+      'BLE TX power is very low  -  range under 10 meters',
       'Test against your own devices only',
     ],
   },
@@ -246,7 +246,7 @@ export const appDetails = {
     band: 'UHF',
     signalType: 'From captured file',
     protocol: 'Flipper Zero .sub format',
-    description: 'Replays Flipper Zero .sub capture files directly from the SD card. No Flipper required — HackRF transmits the same signals with more power (~10x). Authorized testing only.',
+    description: 'Replays Flipper Zero .sub capture files directly from the SD card. No Flipper required  -  HackRF transmits the same signals with more power (~10x). Authorized testing only.',
     legal: 'Legal for your own devices only. Replaying others\' signals is unauthorized access.',
     tips: [
       'Copy .sub files to SUBGHZ folder on SD card',
@@ -267,11 +267,11 @@ export const appDetails = {
     description: 'Transmits Morse code via FM tone or continuous wave (CW). Type a message, it converts to dots and dashes. Legal on amateur bands with a valid license.',
     legal: 'Requires amateur radio license. Must identify with callsign on designated frequencies only.',
     tips: [
-      'CW is the most efficient mode — works below voice signal levels',
+      'CW is the most efficient mode  -  works below voice signal levels',
       'Amateur HF bands have dedicated CW segments',
       'Must transmit callsign at start and end of contact',
     ],
-    didYouKnow: 'Morse code (1844) is the oldest electrical communication protocol still in active use. The famous SOS distress signal (··· ——— ···) was standardized in 1906 after the Titanic disaster demonstrated the need for a universal distress call.',
+    didYouKnow: 'Morse code (1844) is the oldest electrical communication protocol still in active use. The famous SOS distress signal (···  -  -  -  ···) was standardized in 1906 after the Titanic disaster demonstrated the need for a universal distress call.',
   },
 
   'OOK TX': {
@@ -290,7 +290,7 @@ export const appDetails = {
       'Rolling-code devices (modern cars, Chamberlain) are NOT vulnerable',
       'Start TX power at 0 dB and increase only if needed',
     ],
-    didYouKnow: 'PT2262 chips have been used in billions of garage door remotes since the 1990s. The fixed code is only 12-24 bits — a brute-force attack trying all codes takes under an hour. Modern remotes use rolling codes to prevent replay.',
+    didYouKnow: 'PT2262 chips have been used in billions of garage door remotes since the 1990s. The fixed code is only 12-24 bits  -  a brute-force attack trying all codes takes under an hour. Modern remotes use rolling codes to prevent replay.',
   },
 
   'POCSAG TX': {
@@ -304,7 +304,7 @@ export const appDetails = {
     description: 'Transmits spoofed POCSAG pager messages to specific RIC addresses. Can send numeric or alphanumeric messages to any pager within range.',
     legal: 'Unauthorized transmission on licensed frequencies. False emergency pages are a federal crime.',
     whyDangerous: [
-      'Pager frequencies are licensed — unauthorized TX is always illegal',
+      'Pager frequencies are licensed  -  unauthorized TX is always illegal',
       'False emergency pages can trigger real emergency responses',
       'Hospitals rely on pagers for critical care notifications',
     ],
@@ -393,7 +393,7 @@ export const appDetails = {
     category: 'Transmission', categoryColor: '#facc15',
     frequencyMHz: null,
     frequencyDisplay: 'From capture file',
-    description: 'Replays a previously captured .C16 or .C8 IQ file. This IS a transmission — antenna or dummy load required.',
+    description: 'Replays a previously captured .C16 or .C8 IQ file. This IS a transmission  -  antenna or dummy load required.',
     tips: [
       'Sample rate must match the original capture exactly',
       'Always connect antenna or dummy load before replay',
@@ -431,7 +431,7 @@ export const appDetails = {
     category: 'System', categoryColor: '#4ade80',
     description: 'Switches to PC-tethered USB SDR mode. PortaPack screen goes blank, HackRF appears as USB device 1d50:6089. Use with GNU Radio, SDR++, gqrx, or any HackRF software.',
     tips: [
-      'Screen goes blank — this is normal, not a crash',
+      'Screen goes blank  -  this is normal, not a crash',
       'Device appears as VID:PID 1d50:6089 over USB',
       'Use hackrf_info to verify connection from PC',
       'Press RESET to return to Mayhem',
@@ -462,7 +462,7 @@ export const appDetails = {
   'Signal Gen': {
     type: 'tool', safety: 'caution',
     category: 'Utility', categoryColor: '#fb923c',
-    description: 'Generate test RF signals: CW carrier, AM, FM, BPSK, QPSK. Useful for testing receivers and antenna setups. This IS a transmission — antenna/load required.',
+    description: 'Generate test RF signals: CW carrier, AM, FM, BPSK, QPSK. Useful for testing receivers and antenna setups. This IS a transmission  -  antenna/load required.',
     tips: [
       'Use a dummy load for signal generation tests',
       'CW mode generates a clean carrier for antenna testing',
@@ -492,7 +492,7 @@ export const appDetails = {
   'Wipe SD': {
     type: 'tool', safety: 'danger',
     category: 'Destructive', categoryColor: '#f43f5e',
-    description: 'Securely erases all SD card contents. Destructive and irreversible — all captures, settings, frequency lists, apps, and data permanently deleted.',
+    description: 'Securely erases all SD card contents. Destructive and irreversible  -  all captures, settings, frequency lists, apps, and data permanently deleted.',
     tips: [
       'Back up SD card contents first',
       'All app settings (.ini files) will be lost',
@@ -524,10 +524,10 @@ export const appDetails = {
   'settings:Radio': {
     type: 'setting', safety: 'safe',
     category: 'Configuration', categoryColor: '#888',
-    description: 'Frequency correction offset, TCXO calibration, clock output, antenna bias voltage (DC on SMA — careful), external TCXO.',
+    description: 'Frequency correction offset, TCXO calibration, clock output, antenna bias voltage (DC on SMA  -  careful), external TCXO.',
     tips: [
-      'R10C has 0.5 ppm TCXO — correction usually unnecessary',
-      'Bias-T sends DC through SMA port — only for powered antennas/LNAs',
+      'R10C has 0.5 ppm TCXO  -  correction usually unnecessary',
+      'Bias-T sends DC through SMA port  -  only for powered antennas/LNAs',
     ],
   },
 
@@ -540,13 +540,13 @@ export const appDetails = {
   'settings:Date/Time': {
     type: 'setting', safety: 'safe',
     category: 'Configuration', categoryColor: '#888',
-    description: 'Set the real-time clock for timestamps on captures and logs. DST support. Battery-backed RTC — set once and it persists.',
+    description: 'Set the real-time clock for timestamps on captures and logs. DST support. Battery-backed RTC  -  set once and it persists.',
   },
 
   'settings:Theme': {
     type: 'setting', safety: 'safe',
     category: 'Configuration', categoryColor: '#888',
-    description: 'Change the UI color theme. Multiple options including dark mode. Cosmetic only — does not affect functionality.',
+    description: 'Change the UI color theme. Multiple options including dark mode. Cosmetic only  -  does not affect functionality.',
   },
 
   'settings:Touch Cal': {
@@ -561,7 +561,7 @@ export const menuOverviews = {
   main: {
     title: 'PortaPack Mayhem v2.3.2',
     subtitle: 'Portable RF Multi-Tool',
-    description: 'Receive, analyze, and transmit across 1 MHz to 6 GHz — entirely standalone, no computer required.',
+    description: 'Receive, analyze, and transmit across 1 MHz to 6 GHz  -  entirely standalone, no computer required.',
     stats: [
       { label: 'RX Apps', value: '29', color: '#7fff00', desc: 'Passive receive' },
       { label: 'TX Apps', value: '22', color: '#f43f5e', desc: 'Active transmit' },
@@ -579,7 +579,7 @@ export const menuOverviews = {
   receive: {
     title: 'Receive Apps',
     subtitle: 'Passive RF Reception',
-    description: 'All receive operations are passive — completely safe. Cannot damage hardware, cannot violate laws. Freely explore every frequency.',
+    description: 'All receive operations are passive  -  completely safe. Cannot damage hardware, cannot violate laws. Freely explore every frequency.',
     safety: 'safe',
     note: 'The only RX damage vector is an external high-power transmitter overwhelming the input. Your desk equipment poses zero risk.',
     categories: [
@@ -594,7 +594,7 @@ export const menuOverviews = {
   transmit: {
     title: 'Transmit Apps',
     subtitle: 'Active RF Transmission',
-    description: 'REQUIRES antenna or dummy load connected. Many apps transmit on licensed frequencies — unauthorized use is a federal crime.',
+    description: 'REQUIRES antenna or dummy load connected. Many apps transmit on licensed frequencies  -  unauthorized use is a federal crime.',
     safety: 'danger',
     warning: 'Never transmit without a load. Never TX on frequencies you aren\'t authorized to use.',
     breakdown: [
@@ -625,13 +625,13 @@ export const hardwareDetails = {
     color: '#4ade80',
     description: 'SMA female connector, 50-ohm impedance. Rated for approximately 500 mating cycles.',
     details: [
-      'Finger-tight only — never use pliers or wrenches',
+      'Finger-tight only  -  never use pliers or wrenches',
       'Always connect antenna or load before TX',
       'Use a connector saver ($3-5) to protect this port',
-      'SMA only — NOT RP-SMA (different center pin)',
+      'SMA only  -  NOT RP-SMA (different center pin)',
       'Inspect center pin for bends before connecting',
     ],
-    warning: 'Transmitting without a load reflects power back into the PA — permanent damage.',
+    warning: 'Transmitting without a load reflects power back into the PA  -  permanent damage.',
   },
   power: {
     title: 'Power Switch',
@@ -654,7 +654,7 @@ export const hardwareDetails = {
       'Connects to PC for HackRF Mode (tethered SDR)',
       'Charges battery when power switch is ON',
       'Charge-only cables cause "device not found" errors',
-      'USB 2.0 speed (480 Mbps) — sufficient for 20 Msps',
+      'USB 2.0 speed (480 Mbps)  -  sufficient for 20 Msps',
       '5V/2A charger recommended for fastest charging',
     ],
   },
@@ -677,7 +677,7 @@ export const hardwareDetails = {
     description: 'FAT32 formatted, 16-32 GB recommended.',
     details: [
       'Stores apps, captures, frequency lists, settings',
-      'Must be FAT32 — exFAT will NOT work',
+      'Must be FAT32  -  exFAT will NOT work',
       'Green icon in title bar confirms detection',
       'Always sync before removing (or power off first)',
       'Current card: 32 GB with Mayhem v2.3.2 SD pack',
@@ -687,7 +687,7 @@ export const hardwareDetails = {
     title: 'DFU Button',
     icon: 'recovery',
     color: '#f43f5e',
-    description: 'Device Firmware Update — hold + RESET to enter bootloader.',
+    description: 'Device Firmware Update  -  hold + RESET to enter bootloader.',
     details: [
       'DFU bootloader is stored in read-only ROM',
       'The device can NEVER be permanently bricked',
@@ -700,10 +700,10 @@ export const hardwareDetails = {
     title: 'RESET Button',
     icon: 'emergency',
     color: '#f43f5e',
-    description: 'Hard reset — instantly kills all processing and RF transmission.',
+    description: 'Hard reset  -  instantly kills all processing and RF transmission.',
     details: [
       'Your PANIC button for accidental transmissions',
-      'No confirmation dialog — acts immediately',
+      'No confirmation dialog  -  acts immediately',
       'Device reboots to Mayhem main menu',
       'Know where this button is by feel',
       'Unsaved settings and captures are lost',

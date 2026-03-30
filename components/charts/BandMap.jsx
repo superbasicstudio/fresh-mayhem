@@ -118,7 +118,7 @@ export default function BandMap() {
         .on('mouseenter', function (e) {
           d3.select(this).attr('opacity', 1);
           tooltip.style('opacity', 1)
-            .html(`<strong style="color:#f43f5e">${b.name}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} – ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.service}</span><br/><span style="color:#f43f5e;font-size:10px">${t('bandMap.doNotTransmit')}</span><br/><span style="opacity:0.5;font-size:9px">${t('bandMap.listeningPermitted')}</span><br/><span style="opacity:0.4;font-size:9px">${t('bandMap.clickToZoom')}</span>`)
+            .html(`<strong style="color:#f43f5e">${b.name}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} - ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.service}</span><br/><span style="color:#f43f5e;font-size:10px">${t('bandMap.doNotTransmit')}</span><br/><span style="opacity:0.5;font-size:9px">${t('bandMap.listeningPermitted')}</span><br/><span style="opacity:0.4;font-size:9px">${t('bandMap.clickToZoom')}</span>`)
             .style('left', `${Math.min(e.offsetX + 12, width - 220)}px`)
             .style('top', `${e.offsetY - 80}px`);
         })
@@ -156,7 +156,7 @@ export default function BandMap() {
         .on('mouseenter', function (e) {
           d3.select(this).attr('opacity', 1);
           tooltip.style('opacity', 1)
-            .html(`<strong style="color:#4ade80">${b.name}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} – ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.requirements}</span><br/><span style="color:#4ade80;font-size:10px">${t('bandMap.ismConditions')}</span><br/><span style="opacity:0.4;font-size:9px">${t('bandMap.clickToZoom')}</span>`)
+            .html(`<strong style="color:#4ade80">${b.name}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} - ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.requirements}</span><br/><span style="color:#4ade80;font-size:10px">${t('bandMap.ismConditions')}</span><br/><span style="opacity:0.4;font-size:9px">${t('bandMap.clickToZoom')}</span>`)
             .style('left', `${Math.min(e.offsetX + 12, width - 220)}px`)
             .style('top', `${e.offsetY - 80}px`);
         })
@@ -230,7 +230,7 @@ export default function BandMap() {
         )}
         {isZoomed && (
           <span className="text-[10px] font-mono text-primary/60">
-            {formatFreq(domain[0])} – {formatFreq(domain[1])}
+            {formatFreq(domain[0])} - {formatFreq(domain[1])}
           </span>
         )}
       </div>

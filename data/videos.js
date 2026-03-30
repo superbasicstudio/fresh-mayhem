@@ -1,5 +1,5 @@
 export const videos = [
-  // Setup — Getting started with HackRF/PortaPack hardware
+  // Setup  -  Getting started with HackRF/PortaPack hardware
   { category: "setup", title: "Tech Minds -- Beginner's Guide to HackRF & Mayhem", url: "https://www.youtube.com/embed/H-bqdWfbhpg", creator: "Tech Minds" },
   { category: "setup", title: "RocketGod -- H4M Getting Started Guide", url: "https://www.youtube.com/embed/wzP0zWi85SI", creator: "RocketGod" },
   { category: "setup", title: "sn0ren -- The New HackRF Portapack H4M", url: "https://www.youtube.com/embed/onQRdCITmuk", creator: "sn0ren" },
@@ -8,12 +8,12 @@ export const videos = [
   { category: "setup", title: "Frugal Radio -- Antenna Basics for SDR Beginners (General)", url: "https://www.youtube.com/embed/ZPt9ct4lEYE", creator: "Frugal Radio" },
   { category: "setup", title: "Jeremiah of All Trades -- PortaPack H2 Speaker Install + Menu Overview", url: "https://www.youtube.com/embed/u5gcUasPZY4", creator: "Jeremiah of All Trades" },
 
-  // Firmware — Installing and updating Mayhem
+  // Firmware  -  Installing and updating Mayhem
   { category: "firmware", title: "Tech Minds -- Mayhem Firmware Install & Overview", url: "https://www.youtube.com/embed/kjFB58Y1TAo", creator: "Tech Minds" },
   { category: "firmware", title: "Tech Minds -- Mayhem Version 2 Features", url: "https://www.youtube.com/embed/WZqCENz-YAg", creator: "Tech Minds" },
   { category: "firmware", title: "Michael Ossmann -- First Look at HackRF Pro (Next-Gen Device)", url: "https://www.youtube.com/embed/C0W-pYcgHeA", creator: "Great Scott Gadgets" },
 
-  // App Demos — Specific app walkthroughs and signal experiments
+  // App Demos  -  Specific app walkthroughs and signal experiments
   { category: "demos", title: "Hak5 -- Hacking Ford Key Fobs (Part 1)", url: "https://www.youtube.com/embed/k8rNQ3mBZQ4", creator: "Hak5" },
   { category: "demos", title: "Hak5 -- Hacking Ford Key Fobs (Part 2)", url: "https://www.youtube.com/embed/UAVYZvd0ACQ", creator: "Hak5" },
   { category: "demos", title: "Hak5 -- Hacking Ford Key Fobs (Part 3)", url: "https://www.youtube.com/embed/6Wz1eZmTqQI", creator: "Hak5" },
@@ -23,11 +23,11 @@ export const videos = [
   { category: "demos", title: "SignalsEverywhere -- Transmitting Analog TV Signals with HackRF (HackTV GUI)", url: "https://www.youtube.com/embed/g2a7bKlhGd4", creator: "SignalsEverywhere" },
   { category: "demos", title: "The Thought Emporium -- Decoding NOAA & Meteor Weather Satellite Images", url: "https://www.youtube.com/embed/L3ftfGag7D8", creator: "The Thought Emporium" },
 
-  // Safety — Legal awareness and responsible use
+  // Safety  -  Legal awareness and responsible use
   { category: "safety", title: "LTT -- Too Easy to Accidentally Do Illegal Stuff", url: "https://www.youtube.com/embed/OPckpjBSAOw", creator: "Linus Tech Tips" },
   { category: "safety", title: "David Bombal -- How Cars Are Hacked", url: "https://www.youtube.com/embed/5LvqU3-iINk", creator: "David Bombal" },
 
-  // SDR Course — Michael Ossmann's free SDR fundamentals (Great Scott Gadgets)
+  // SDR Course  -  Michael Ossmann's free SDR fundamentals (Great Scott Gadgets)
   { category: "course", title: "Michael Ossmann -- SDR Lesson 1: Welcome", url: "https://www.youtube.com/embed/BeeSN14JUYU", creator: "Great Scott Gadgets" },
   { category: "course", title: "Michael Ossmann -- SDR Lesson 11: Replay", url: "https://www.youtube.com/embed/CyYteFiIozM", creator: "Great Scott Gadgets" },
 ];

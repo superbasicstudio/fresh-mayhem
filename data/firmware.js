@@ -1,4 +1,4 @@
-// Central firmware version — auto-fetched from GitHub, cached in sessionStorage
+// Central firmware version  -  auto-fetched from GitHub, cached in sessionStorage
 const FALLBACK_VERSION = '2.3.2';
 const CACHE_KEY = 'fm-mayhem-latest';
 const CACHE_TTL = 1000 * 60 * 60; // 1 hour

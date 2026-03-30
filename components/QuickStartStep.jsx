@@ -18,15 +18,15 @@ const SECTION_ICONS = {
 
 export const quickStartSteps = [
   // Phase 1: Pre-Power Setup
-  { text: "Verify your USB cable is data-capable (not charge-only) — this is the #1 setup issue", section: "Before You Power On" },
-  { text: "Insert a MicroSD card (FAT32, 8-32 GB recommended) — stores captures, settings, and apps" },
+  { text: "Verify your USB cable is data-capable (not charge-only)  -  this is the #1 setup issue", section: "Before You Power On" },
+  { text: "Insert a MicroSD card (FAT32, 8-32 GB recommended)  -  stores captures, settings, and apps" },
   { text: "Download latest Mayhem firmware from GitHub releases and copy .ppfw.tar to SD root" },
-  { text: "Attach the telescopic antenna (40 MHz–6 GHz) to the SMA port — finger-tight only, never wrench" },
-  { text: "Ground yourself before handling — ESD on the SMA center pin can damage the LNA" },
+  { text: "Attach the telescopic antenna (40 MHz-6 GHz) to the SMA port  -  finger-tight only, never wrench" },
+  { text: "Ground yourself before handling  -  ESD on the SMA center pin can damage the LNA" },
   { text: "Have a 50-ohm dummy load ready if you plan to test any TX apps" },
 
   // Phase 2: First Power-On
-  { text: "Slide the power switch UP — wait for the Mayhem main menu to appear", section: "First Power-On" },
+  { text: "Slide the power switch UP  -  wait for the Mayhem main menu to appear", section: "First Power-On" },
   { text: "Check firmware version on the status bar (current: v2.3.2)" },
   { text: "Go to Settings → SD Card → Test to verify your SD card is detected and working" },
   { text: "Go to Settings → UI → set encoder sensitivity to your preference (low/normal/high)" },
@@ -36,22 +36,22 @@ export const quickStartSteps = [
   { text: "Navigate to Receive → Audio", section: "Your First FM Receive" },
   { text: "Set mode to 'WFM' (Wideband FM)" },
   { text: "Set frequency to a local FM station (e.g. 101.1 MHz)" },
-  { text: "Set gains: LNA=16, VGA=20, AMP=0 (OFF) — always start with AMP off" },
-  { text: "Turn volume up to 40–60 — you should hear the station" },
-  { text: "Check the RSSI bar and waterfall — a strong signal shows a bright vertical band" },
+  { text: "Set gains: LNA=16, VGA=20, AMP=0 (OFF)  -  always start with AMP off" },
+  { text: "Turn volume up to 40-60  -  you should hear the station" },
+  { text: "Check the RSSI bar and waterfall  -  a strong signal shows a bright vertical band" },
   { text: "If weak: increase VGA first, then LNA. If clipping/distortion: decrease gains" },
 
   // Phase 4: Calibration
   { text: "Tune to a known FM station and note if the frequency is slightly off", section: "Frequency Calibration" },
   { text: "Go to Settings → Radio → Frequency Correction and adjust until the station centers correctly" },
-  { text: "This corrects your TCXO offset — improves accuracy across all apps" },
+  { text: "This corrects your TCXO offset  -  improves accuracy across all apps" },
 
   // Phase 5: Safety & Shutdown
-  { text: "Before any TX: connect a 50-ohm dummy load or frequency-matched antenna — never TX into open air", section: "Safety & Shutdown" },
+  { text: "Before any TX: connect a 50-ohm dummy load or frequency-matched antenna  -  never TX into open air", section: "Safety & Shutdown" },
   { text: "Learn the Emergency TX Stop: Stop button → Back arrow → RESET → Power OFF" },
   { text: "Never operate within 10 feet of active transmitters (handhelds, routers) while receiving" },
   { text: "Tap the back arrow to return to menus" },
-  { text: "Slide the power switch DOWN to power off — always power off before disconnecting antenna" },
+  { text: "Slide the power switch DOWN to power off  -  always power off before disconnecting antenna" },
 ];
 
 export default function QuickStartStep({ num, text, storageKey, section, onToggle }) {

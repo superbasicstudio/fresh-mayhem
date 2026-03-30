@@ -84,7 +84,7 @@ export function RxAppCard({ app }) {
         {app.screenshot && (
           <ExpandableImage
             src={`/screenshots/${app.screenshot}`}
-            alt={`${app.name} — live RF capture`}
+            alt={`${app.name}  -  live RF capture`}
             className="mt-2"
           />
         )}
@@ -135,7 +135,7 @@ export function TxAppCard({ app }) {
         {app.screenshot && (
           <ExpandableImage
             src={`/screenshots/${app.screenshot}`}
-            alt={`${app.name} — interface mockup`}
+            alt={`${app.name}  -  interface mockup`}
             className="mt-2"
           />
         )}

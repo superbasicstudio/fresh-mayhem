@@ -8,7 +8,7 @@ import {
   PauseIcon,
 } from '@heroicons/react/24/outline';
 
-// Visual config per signal (static — not in React state)
+// Visual config per signal (static  -  not in React state)
 const SIGNAL_CONFIG = [
   { icon: MusicalNoteIcon, color: '#facc15', bg: 'bg-yellow-500/15', border: 'border-yellow-500/50', text: 'text-yellow-400', dot: 'bg-yellow-400', hover: 'hover:bg-yellow-500/25 hover:border-yellow-400/70 hover:shadow-yellow-500/10 hover:shadow-md' },
   { icon: CpuChipIcon, color: '#4ade80', bg: 'bg-emerald-500/15', border: 'border-emerald-500/50', text: 'text-emerald-400', dot: 'bg-emerald-400', hover: 'hover:bg-emerald-500/25 hover:border-emerald-400/70 hover:shadow-emerald-500/10 hover:shadow-md' },
@@ -24,21 +24,21 @@ const DEFAULT_SIGNALS = [
 const SPEED_MAP = [5, 15, 30];
 const SPEED_LABELS = ['Slow', '1x', 'Fast'];
 
-// Educational messages — toggle events
+// Educational messages  -  toggle events
 const TOGGLE_MESSAGES = {
   off: [
-    'FM Station disabled — the bright band disappears. On a real device, you\'d see this when tuning away from an active broadcast frequency.',
-    'ISM Device disabled — the signal vanishes. ISM devices like key fobs and weather sensors transmit in short bursts, so they naturally appear and disappear.',
-    'Weak Signal disabled — the faint signal is gone. These hard-to-see signals are exactly why gain adjustment matters on a real HackRF.',
+    'FM Station disabled  -  the bright band disappears. On a real device, you\'d see this when tuning away from an active broadcast frequency.',
+    'ISM Device disabled  -  the signal vanishes. ISM devices like key fobs and weather sensors transmit in short bursts, so they naturally appear and disappear.',
+    'Weak Signal disabled  -  the faint signal is gone. These hard-to-see signals are exactly why gain adjustment matters on a real HackRF.',
   ],
   on: [
-    'FM Station active — a strong signal appears. FM broadcasts are usually the brightest, most consistent signals on the waterfall.',
-    'ISM Device active — a medium-strength IoT signal. On a real waterfall, ISM devices show as intermittent colored bursts.',
-    'Weak Signal active — barely visible above the noise floor. Try increasing gain to make it more visible (but watch the noise floor rise too).',
+    'FM Station active  -  a strong signal appears. FM broadcasts are usually the brightest, most consistent signals on the waterfall.',
+    'ISM Device active  -  a medium-strength IoT signal. On a real waterfall, ISM devices show as intermittent colored bursts.',
+    'Weak Signal active  -  barely visible above the noise floor. Try increasing gain to make it more visible (but watch the noise floor rise too).',
   ],
 };
 
-const CLIP_MESSAGE = 'Signal clipping — the 8-bit ADC is saturating. On a real HackRF, this means flat-topped waveforms and lost signal detail. Reduce gain to restore clarity.';
+const CLIP_MESSAGE = 'Signal clipping  -  the 8-bit ADC is saturating. On a real HackRF, this means flat-topped waveforms and lost signal detail. Reduce gain to restore clarity.';
 
 export default function WaterfallSim({ expanded = false }) {
   const containerRef = useRef(null);
@@ -67,7 +67,7 @@ export default function WaterfallSim({ expanded = false }) {
     setPaused(true);
   }, []);
 
-  // Mouse leaves canvas area — resume unless manually paused
+  // Mouse leaves canvas area  -  resume unless manually paused
   const handleMouseLeave = useCallback(() => {
     if (!manualPauseRef.current) {
       pausedRef.current = false;
@@ -201,7 +201,7 @@ export default function WaterfallSim({ expanded = false }) {
             }
           }
 
-          // Clipping event with cooldown — subtle, not distracting
+          // Clipping event with cooldown  -  subtle, not distracting
           clipCooldownRef.current = Math.max(0, clipCooldownRef.current - 1);
           if (clipping && clipCooldownRef.current === 0) {
             clipCooldownRef.current = 200;
@@ -289,7 +289,7 @@ export default function WaterfallSim({ expanded = false }) {
           const mw = isPaused ? MARKER_W + 2 : MARKER_W;
           const ms = isPaused ? 5 : 3;
 
-          // Horizontal line — very faint unless paused
+          // Horizontal line  -  very faint unless paused
           if (isPaused) {
             p.stroke(cr, cg, cb, lineAlpha);
             p.strokeWeight(1);
@@ -301,7 +301,7 @@ export default function WaterfallSim({ expanded = false }) {
           p.fill(cr, cg, cb, markerAlpha);
           p.triangle(0, drawY - ms, 0, drawY + ms, mw, drawY);
 
-          // Dot at signal's x position — only when paused
+          // Dot at signal's x position  -  only when paused
           if (evt.x !== null && isPaused) {
             const dotX = evt.x * W;
             p.fill(cr, cg, cb, 40);
@@ -310,7 +310,7 @@ export default function WaterfallSim({ expanded = false }) {
             p.ellipse(dotX, drawY, 6, 6);
           }
 
-          // Check hover proximity (only when paused — that's the whole point)
+          // Check hover proximity (only when paused  -  that's the whole point)
           if (isPaused && mouseInWf && Math.abs(p.mouseY - drawY) < 12) {
             hoveredEvt = { ...evt, drawY };
           }
@@ -384,7 +384,7 @@ export default function WaterfallSim({ expanded = false }) {
         <span className="text-base-content/40"> Hover the waterfall to pause and inspect event markers.</span>
       </p>
 
-      {/* Canvas + tooltip wrapper — hover-to-pause zone */}
+      {/* Canvas + tooltip wrapper  -  hover-to-pause zone */}
       <div
         className={`relative mb-3 rounded ${paused ? 'ring-1 ring-primary/30' : ''}`}
         style={{ width: '100%', height: expanded ? 400 : 200 }}
@@ -467,7 +467,7 @@ export default function WaterfallSim({ expanded = false }) {
         </div>
       </div>
 
-      {/* Signal toggles — each with unique color identity */}
+      {/* Signal toggles  -  each with unique color identity */}
       <div className="flex flex-wrap gap-2 mt-4" role="group" aria-label="Signal toggles">
         {signals.map((s, i) => {
           const cfg = SIGNAL_CONFIG[i];

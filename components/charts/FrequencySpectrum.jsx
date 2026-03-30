@@ -110,7 +110,7 @@ export default function FrequencySpectrum() {
           .on('mouseenter', function (e) {
             d3.select(this).attr('opacity', 1);
             tooltip.style('opacity', 1)
-              .html(`<strong style="color:#f43f5e">${b.name}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} – ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.service}</span><br/><span style="opacity:0.4;font-size:9px">Click to zoom</span>`)
+              .html(`<strong style="color:#f43f5e">${b.name}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} - ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.service}</span><br/><span style="opacity:0.4;font-size:9px">Click to zoom</span>`)
               .style('left', `${Math.min(e.offsetX + 10, width - 200)}px`).style('top', `${e.offsetY - 60}px`);
           })
           .on('mouseleave', function () { d3.select(this).attr('opacity', 0.7); tooltip.style('opacity', 0); })
@@ -140,7 +140,7 @@ export default function FrequencySpectrum() {
           .on('mouseenter', function (e) {
             d3.select(this).attr('opacity', 1);
             tooltip.style('opacity', 1)
-              .html(`<strong style="color:#4ade80">${b.name}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} – ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.requirements}</span><br/><span style="opacity:0.4;font-size:9px">Click to zoom</span>`)
+              .html(`<strong style="color:#4ade80">${b.name}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} - ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.requirements}</span><br/><span style="opacity:0.4;font-size:9px">Click to zoom</span>`)
               .style('left', `${Math.min(e.offsetX + 10, width - 200)}px`).style('top', `${e.offsetY - 60}px`);
           })
           .on('mouseleave', function () { d3.select(this).attr('opacity', 0.7); tooltip.style('opacity', 0); })
@@ -172,7 +172,7 @@ export default function FrequencySpectrum() {
           .on('mouseenter', function (e) {
             d3.select(this).attr('opacity', 1).attr('height', 8).attr('y', yOff + i * 8 - 1);
             tooltip.style('opacity', 1)
-              .html(`<strong style="color:${color}">${b.app}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} – ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.category}</span><br/><span style="opacity:0.4;font-size:9px">Click to zoom</span>`)
+              .html(`<strong style="color:${color}">${b.app}</strong><br/><span style="font-family:monospace">${formatFreq(b.startMHz)} - ${formatFreq(b.endMHz)}</span><br/><span style="opacity:0.6">${b.category}</span><br/><span style="opacity:0.4;font-size:9px">Click to zoom</span>`)
               .style('left', `${Math.min(e.offsetX + 10, width - 200)}px`).style('top', `${e.offsetY - 60}px`);
           })
           .on('mouseleave', function () { d3.select(this).attr('opacity', 0.85).attr('height', 6).attr('y', yOff + i * 8); tooltip.style('opacity', 0); })
@@ -214,7 +214,7 @@ export default function FrequencySpectrum() {
         {isZoomed && (
           <>
             <button onClick={resetZoom} className="badge badge-ghost badge-sm font-mono text-[10px] cursor-pointer hover:bg-base-300">{t('spectrum.resetZoom')}</button>
-            <span className="text-[10px] font-mono text-primary/60">{formatFreq(domain[0])} – {formatFreq(domain[1])}</span>
+            <span className="text-[10px] font-mono text-primary/60">{formatFreq(domain[0])} - {formatFreq(domain[1])}</span>
           </>
         )}
       </div>

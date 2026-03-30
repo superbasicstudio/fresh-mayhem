@@ -195,7 +195,7 @@ function ItemPanel({ details, item }) {
           <ul className="space-y-1.5">
             {d.whyDangerous.map((reason, i) => (
               <li key={i} className="flex items-start gap-2 text-xs text-error/60 leading-relaxed">
-                <span className="text-error/40 mt-0.5 shrink-0">—</span>
+                <span className="text-error/40 mt-0.5 shrink-0"> - </span>
                 {reason}
               </li>
             ))}
@@ -361,7 +361,7 @@ function OverviewPanel({ menuId }) {
           <SectionLabel>Spectrum Coverage</SectionLabel>
           <div className="bg-base-300/30 rounded-lg p-3">
             <div className="flex items-baseline justify-between mb-2">
-              <span className="font-mono text-sm font-bold text-primary">1 MHz — 6 GHz</span>
+              <span className="font-mono text-sm font-bold text-primary">1 MHz  -  6 GHz</span>
               <span className="text-[10px] font-mono text-base-content/25">TX + RX, Half-Duplex</span>
             </div>
             <FreqBar frequencies={[433.92, 915, 1090, 2400, 5800]} />

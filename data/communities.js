@@ -1,6 +1,6 @@
 /**
  * Popular subreddits and communities for HackRF, SDR, and RF topics.
- * Not endorsed — just where the conversations happen.
+ * Not endorsed  -  just where the conversations happen.
  */
 
 export const communities = [

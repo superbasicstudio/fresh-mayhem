@@ -2,7 +2,7 @@ import { useState } from 'react';
 import * as d3 from 'd3';
 
 /* ═══════════════════════════════════════════════════════════════
-   Gain Chain Calculator — Interactive D3 Visualization
+   Gain Chain Calculator  -  Interactive D3 Visualization
    Shows signal flow, danger level gauge, and power budget
    for the HackRF One R10C receive chain.
    ═══════════════════════════════════════════════════════════════ */
@@ -20,9 +20,9 @@ const dangerColor = d3.scaleLinear()
 // Educational insight based on current settings
 function getInsight(total, amp, lna, vga) {
   if (total > CAUTION_LIMIT) return { text: 'High gain increases sensitivity but raises the noise floor significantly. Strong nearby signals will clip the 8-bit ADC.', color: '#f43f5e' };
-  if (amp && total > SAFE_LIMIT) return { text: 'AMP active with elevated gain — max safe input is now just -5 dBm. Keep distance from strong emitters.', color: '#facc15' };
+  if (amp && total > SAFE_LIMIT) return { text: 'AMP active with elevated gain  -  max safe input is now just -5 dBm. Keep distance from strong emitters.', color: '#facc15' };
   if (amp) return { text: 'AMP provides +14 dB at the RF front-end before any filtering. Only use for weak, distant signals.', color: '#facc15' };
-  if (lna === 0 && vga === 0) return { text: 'Zero gain — the ADC sees only the raw antenna signal with no amplification. Good for very strong local sources.', color: '#666' };
+  if (lna === 0 && vga === 0) return { text: 'Zero gain  -  the ADC sees only the raw antenna signal with no amplification. Good for very strong local sources.', color: '#666' };
   if (total <= 36) return { text: 'Conservative settings. Good starting point for strong local signals. Increase VGA first if signal is too quiet.', color: '#4ade80' };
   return { text: 'Standard operating gains. Suitable for most RX tasks at typical distances.', color: '#4ade80' };
 }
@@ -102,7 +102,7 @@ function SignalChain({ lna, vga, amp, totalGain, expanded }) {
                       <animateMotion dur={`${speed}s`} repeatCount="indefinite"
                         path={`M${x + boxW + 2},${H / 2} L${x + boxW + gap - 2},${H / 2}`} />
                     </circle>
-                    {/* Trail particle — only in expanded mode */}
+                    {/* Trail particle  -  only in expanded mode */}
                     {expanded && (
                       <circle r={1.5} fill={color} opacity={0.25 + intensity * 0.2}>
                         <animateMotion dur={`${speed}s`} begin={`${speed * 0.45}s`} repeatCount="indefinite"
@@ -203,7 +203,7 @@ function DangerGauge({ totalGain, expanded }) {
         <path d={cautionPath} fill="#facc1508" />
         <path d={dangerPath} fill="#f43f5e08" />
 
-        {/* Active value arc — glows */}
+        {/* Active value arc  -  glows */}
         <path d={valuePath} fill={color} opacity={0.15} style={{ transition: 'all 0.3s ease-out' }} />
         <path d={valuePath} fill={color} opacity={expanded ? 0.3 : 0.15} filter="url(#gc-gauge-glow)"
           style={{ transition: 'all 0.3s ease-out' }}>
@@ -293,7 +293,7 @@ function PowerBudget({ amp }) {
     <div>
       <div className="flex items-center justify-between mb-2">
         <h4 className="text-[10px] font-mono font-bold text-base-content/40 tracking-widest uppercase">
-          Power Budget — What the front-end sees
+          Power Budget  -  What the front-end sees
         </h4>
         <div className="flex items-center gap-1.5">
           <span className="text-[10px] font-mono text-base-content/20">Max safe:</span>
@@ -402,7 +402,7 @@ export default function GainChain({ expanded = false }) {
         </p>
         <p className="text-xs text-base-content/40 leading-relaxed">
           <strong className="text-base-content/60">Tip:</strong> Start with AMP OFF, LNA 16, VGA 20. Increase VGA first if the signal is weak.
-          Too much gain causes clipping — the gauge turns yellow/red when you're overdriving the front-end.
+          Too much gain causes clipping  -  the gauge turns yellow/red when you're overdriving the front-end.
         </p>
       </div>
 

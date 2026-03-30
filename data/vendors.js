@@ -19,7 +19,7 @@ export const vendors = [
     category: 'official',
     products: ['HackRF One'],
     description: 'Original creator and designer of HackRF One. Michael Ossmann\'s company. The definitive source for authentic HackRF boards.',
-    note: 'Does not sell PortaPack add-ons — only the HackRF One itself.',
+    note: 'Does not sell PortaPack add-ons  -  only the HackRF One itself.',
   },
   {
     name: 'OpenSourceSDRLab',
@@ -100,7 +100,7 @@ export const vendors = [
     region: 'us',
     category: 'marketplace',
     products: ['HackRF One', 'PortaPack bundles', 'Accessories'],
-    description: 'Available from various sellers. Quality varies significantly — read reviews carefully and check seller ratings.',
+    description: 'Available from various sellers. Quality varies significantly  -  read reviews carefully and check seller ratings.',
     note: 'High risk of clones and counterfeit boards. Look for sellers with established history and positive reviews specifically mentioning authentic hardware.',
   },
   {
@@ -118,7 +118,7 @@ export const vendorCategories = [
   { id: 'official', label: 'Original Manufacturers', color: 'badge-ghost', description: 'Companies that design and manufacture the hardware' },
   { id: 'retailer', label: 'Established Retailers', color: 'badge-ghost', description: 'Dedicated hardware stores with established reputations' },
   { id: 'distributor', label: 'Major Distributors', color: 'badge-ghost', description: 'Large-scale electronics distributors' },
-  { id: 'marketplace', label: 'Marketplaces', color: 'badge-ghost', description: 'Online marketplaces — extra caution advised' },
+  { id: 'marketplace', label: 'Marketplaces', color: 'badge-ghost', description: 'Online marketplaces  -  extra caution advised' },
 ];
 
 export const vendorRegions = [
@@ -134,13 +134,13 @@ export const buyingTips = [
     severity: 'tip',
   },
   {
-    title: 'Clones exist — and they\'re common',
+    title: 'Clones exist  -  and they\'re common',
     description: 'HackRF is open-source hardware, so anyone can manufacture it. Clones range from "works fine" to "dead on arrival." The risk is yours.',
     severity: 'warning',
   },
   {
     title: 'If the price seems too good to be true...',
-    description: 'Depending on the seller, region, and availability, a genuine HackRF One can cost upwards of $200–$350 USD from established sources. Pricing varies, but boards listed well below the typical range are more likely to be clones. Some clones work fine, many don\'t — your mileage may vary.',
+    description: 'Depending on the seller, region, and availability, a genuine HackRF One can cost upwards of $200-$350 USD from established sources. Pricing varies, but boards listed well below the typical range are more likely to be clones. Some clones work fine, many don\'t  -  your mileage may vary.',
     severity: 'warning',
   },
   {
@@ -154,7 +154,7 @@ export const buyingTips = [
     severity: 'info',
   },
   {
-    title: 'Marketplace bundles — inspect carefully',
+    title: 'Marketplace bundles  -  inspect carefully',
     description: 'Amazon and AliExpress bundles often include antennas, cases, and accessories. Quality of included accessories varies wildly regardless of the board itself.',
     severity: 'warning',
   },
