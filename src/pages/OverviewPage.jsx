@@ -46,7 +46,7 @@ export default function OverviewPage() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-3">
         {pages.map(p => (
-          <Link key={p.path} to={p.path} className="card bg-base-200 border border-base-content/10 hover:border-base-content/20 hover:bg-base-300 transition-colors group overflow-hidden flex-row sm:flex-col">
+          <Link key={p.path} to={p.path} className="card bg-base-200 border border-base-content/10 hover:border-primary/40 hover:bg-base-300 transition-colors group overflow-hidden flex-row sm:flex-col">
             {p.img && (
               <div className="w-24 sm:w-full h-auto sm:h-28 overflow-hidden shrink-0">
                 <img src={p.img} alt="" className="w-full h-full object-cover object-center opacity-50 grayscale group-hover:opacity-80 group-hover:grayscale-0 transition-all duration-300" loading="lazy" />
@@ -66,7 +66,7 @@ export default function OverviewPage() {
                   <span className="text-[10px] font-mono text-accent">{qsProgress}/{quickStartSteps.length}</span>
                 </div>
               ) : (
-                <span className={`text-xs font-mono ${p.statColor}`}>{p.stat}</span>
+                <span className={`text-xs font-mono ${p.statColor} group-hover:text-primary transition-colors`}>{p.stat}</span>
               )}
             </div>
           </Link>
