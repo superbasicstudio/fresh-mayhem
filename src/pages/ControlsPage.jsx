@@ -53,7 +53,7 @@ export default function ControlsPage() {
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           <div className="flex-1">
             <h3 className="font-bold text-lg text-black mb-1">{t('controls.emergencyStop')}</h3>
-            <p className="text-sm text-black/60 mb-3">Currently transmitting and need to stop immediately? Follow these steps in order.</p>
+            <p className="text-sm text-black/70 font-bold mb-3">Currently transmitting and need to stop immediately? Follow these steps in order.</p>
             <ol className="text-sm space-y-2 text-black/80 leading-relaxed list-none">
               <li className="flex gap-3 items-center"><span className="w-6 h-6 rounded-full bg-black text-error text-xs font-bold flex items-center justify-center shrink-0">1</span> {t('controls.emergencyStep1')}</li>
               <li className="flex gap-3 items-center"><span className="w-6 h-6 rounded-full bg-black text-error text-xs font-bold flex items-center justify-center shrink-0">2</span> {t('controls.emergencyStep2')}</li>
