@@ -71,11 +71,11 @@
       },
       "receive": {
         "label": "Přijímací aplikace",
-        "desc": "Pasivní průzkum — ADS-B, POCSAG, SubGhzD, BLE a další"
+        "desc": "Pasivní průzkum  -  ADS-B, POCSAG, SubGhzD, BLE a další"
       },
       "transmit": {
         "label": "Vysílací aplikace",
-        "desc": "Aktivní testování — OOK, replay, FlipperTX, BLE TX (pouze s oprávněním)"
+        "desc": "Aktivní testování  -  OOK, replay, FlipperTX, BLE TX (pouze s oprávněním)"
       },
       "tools": {
         "label": "Nástroje a nastavení",
@@ -88,7 +88,7 @@
       },
       "frequencies": {
         "label": "Reference frekvencí",
-        "stat": "1 MHz – 6 GHz",
+        "stat": "1 MHz - 6 GHz",
         "desc": "RF spektrum, zakázané frekvence, legální TX pásma, postihy"
       },
       "learn": {
@@ -113,7 +113,7 @@
     "portapack": "PortaPack",
     "portapackValue": "H4M",
     "frequency": "Frekvence",
-    "frequencyValue": "1 MHz – 6 GHz",
+    "frequencyValue": "1 MHz - 6 GHz",
     "txPower": "TX výkon",
     "txPowerValue": "~15 dBm (32 mW)",
     "rxApps": "RX aplikace",
@@ -161,7 +161,7 @@
   },
   "receive": {
     "title": "Přijímací aplikace",
-    "subtitle": "Všech {{count}} přijímacích aplikací ve firmwaru Mayhem. Žádné vysílání — legálnost pasivního příjmu se liší podle regionu. Vždy ověřte místní zákony.",
+    "subtitle": "Všech {{count}} přijímacích aplikací ve firmwaru Mayhem. Žádné vysílání  -  legálnost pasivního příjmu se liší podle regionu. Vždy ověřte místní zákony.",
     "filterPlaceholder": "Filtrovat přijímací aplikace...",
     "apps": "aplikací",
     "learnMore": "Více informací",
@@ -170,7 +170,7 @@
   },
   "transmit": {
     "title": "Vysílací aplikace",
-    "subtitle": "Všech {{count}} vysílacích aplikací ve firmwaru Mayhem. Každá s hodnocením úrovně nebezpečí — vždy používejte dummy load nebo vhodnou anténu.",
+    "subtitle": "Všech {{count}} vysílacích aplikací ve firmwaru Mayhem. Každá s hodnocením úrovně nebezpečí  -  vždy používejte dummy load nebo vhodnou anténu.",
     "warning": "Všechny TX aplikace vyžadují anténu nebo dummy load. Nikdy nevysílejte bez připojené zátěže. Skryjte Jammer, GPS Sim a ADS-B TX přes App Manager.",
     "filterPlaceholder": "Filtrovat vysílací aplikace...",
     "apps": "aplikací",
@@ -185,7 +185,7 @@
   },
   "safety": {
     "title": "Centrum bezpečnosti",
-    "subtitle": "Časté chyby, skutečné příběhy o poškození, hodnocení nebezpečí TX a chování zesilovače pro HackRF One + PortaPack. Informace jsou pouze vzdělávací — nejedná se o právní poradenství. Vždy ověřte místní předpisy.",
+    "subtitle": "Časté chyby, skutečné příběhy o poškození, hodnocení nebezpečí TX a chování zesilovače pro HackRF One + PortaPack. Informace jsou pouze vzdělávací  -  nejedná se o právní poradenství. Vždy ověřte místní předpisy.",
     "tabs": {
       "mistakes": "Chyby začátečníků",
       "stories": "Příběhy o poškození",
@@ -209,11 +209,11 @@
   },
   "frequencies": {
     "title": "Naučte se o rádiových frekvencích (RF)",
-    "subtitle": "Pokrytí RF spektra od 1 MHz do 6 GHz — zakázané zóny, legální TX pásma a přehled postihů pro USA.",
+    "subtitle": "Pokrytí RF spektra od 1 MHz do 6 GHz  -  zakázané zóny, legální TX pásma a přehled postihů pro USA.",
     "spectrumTitle": "Pokrytí RF spektra",
-    "bandMapTitle": "Mapa pásem — zakázaná vs legální TX (1 MHz – 6 GHz)",
+    "bandMapTitle": "Mapa pásem  -  zakázaná vs legální TX (1 MHz - 6 GHz)",
     "bandMapDesc": "Interaktivní mapa zobrazující omezená (červená) a povolená (zelená) frekvenční pásma v logaritmickém měřítku. Najeďte na pásmo pro detaily. Žlutý překryv označuje místa, kde se legální ISM pásma překrývají s omezenými službami.",
-    "noGoTitle": "Zakázané frekvence — federální omezení USA",
+    "noGoTitle": "Zakázané frekvence  -  federální omezení USA",
     "legalTitle": "Legální TX pásma (s podmínkami)",
     "penaltiesTitle": "Právní důsledky (federální zákon USA)",
     "band": "Pásmo",
@@ -223,7 +223,7 @@
     "violation": "Porušení",
     "law": "Zákon",
     "penalty": "Postih",
-    "disclaimer": "Zobrazená frekvenční omezení a postihy vycházejí z federálních předpisů USA (FCC/FAA). Zákony se výrazně liší podle země a regionu. Toto není právní poradenství — před vysíláním si vždy ověřte předpisy ve vaší jurisdikci."
+    "disclaimer": "Zobrazená frekvenční omezení a postihy vycházejí z federálních předpisů USA (FCC/FAA). Zákony se výrazně liší podle země a regionu. Toto není právní poradenství  -  před vysíláním si vždy ověřte předpisy ve vaší jurisdikci."
   },
   "learn": {
     "title": "Učení",
@@ -240,8 +240,8 @@
     "all": "Vše"
   },
   "quickstart": {
-    "title": "HackRF + PortaPack — Rychlý start",
-    "subtitle": "Kompletní průvodce nastavením od rozbalení po váš první FM příjem. Pokrývá přípravu SD karty, firmware, kalibraci, bezpečnost a vypnutí. Odškrtávejte kroky — postup se ukládá lokálně.",
+    "title": "HackRF + PortaPack  -  Rychlý start",
+    "subtitle": "Kompletní průvodce nastavením od rozbalení po váš první FM příjem. Pokrývá přípravu SD karty, firmware, kalibraci, bezpečnost a vypnutí. Odškrtávejte kroky  -  postup se ukládá lokálně.",
     "clear": "VYMAZAT",
     "sections": {
       "beforePowerOn": "Před zapnutím",
@@ -251,13 +251,13 @@
       "safetyShutdown": "Bezpečnost a vypnutí"
     },
     "steps": {
-      "s1": "Ověřte, že váš USB kabel podporuje data (ne pouze nabíjení) — to je problém č. 1 při nastavení",
-      "s2": "Vložte MicroSD kartu (FAT32, doporučeno 8–32 GB) — ukládá záznamy, nastavení a aplikace",
+      "s1": "Ověřte, že váš USB kabel podporuje data (ne pouze nabíjení)  -  to je problém č. 1 při nastavení",
+      "s2": "Vložte MicroSD kartu (FAT32, doporučeno 8-32 GB)  -  ukládá záznamy, nastavení a aplikace",
       "s3": "Stáhněte nejnovější firmware Mayhem z GitHub releases a zkopírujte .ppfw.tar na kořen SD karty",
-      "s4": "Připojte teleskopickou anténu (40 MHz–6 GHz) k SMA portu — utáhněte pouze prsty, nikdy klíčem",
-      "s5": "Před manipulací se uzemněte — ESD na středový pin SMA může poškodit LNA",
+      "s4": "Připojte teleskopickou anténu (40 MHz-6 GHz) k SMA portu  -  utáhněte pouze prsty, nikdy klíčem",
+      "s5": "Před manipulací se uzemněte  -  ESD na středový pin SMA může poškodit LNA",
       "s6": "Mějte připravený 50-ohmový dummy load, pokud plánujete testovat TX aplikace",
-      "s7": "Posuňte vypínač NAHORU — počkejte na zobrazení hlavního menu Mayhem",
+      "s7": "Posuňte vypínač NAHORU  -  počkejte na zobrazení hlavního menu Mayhem",
       "s8": "Zkontrolujte verzi firmwaru na stavovém řádku (aktuální: v2.3.2)",
       "s9": "Přejděte na Settings → SD Card → Test pro ověření, že je SD karta detekována a funkční",
       "s10": "Přejděte na Settings → UI → nastavte citlivost enkodéru podle preference (nízká/normální/vysoká)",
@@ -265,18 +265,18 @@
       "s12": "Přejděte na Receive → Audio",
       "s13": "Nastavte režim na 'WFM' (širokopásmové FM)",
       "s14": "Nastavte frekvenci na místní FM stanici (např. 101,1 MHz)",
-      "s15": "Nastavte zesílení: LNA=16, VGA=20, AMP=0 (VYP) — vždy začněte s AMP vypnutým",
-      "s16": "Zvyšte hlasitost na 40–60 — měli byste slyšet stanici",
-      "s17": "Sledujte RSSI ukazatel a waterfall — silný signál se zobrazí jako jasný vertikální pruh",
+      "s15": "Nastavte zesílení: LNA=16, VGA=20, AMP=0 (VYP)  -  vždy začněte s AMP vypnutým",
+      "s16": "Zvyšte hlasitost na 40-60  -  měli byste slyšet stanici",
+      "s17": "Sledujte RSSI ukazatel a waterfall  -  silný signál se zobrazí jako jasný vertikální pruh",
       "s18": "Pokud je slabý: nejprve zvyšte VGA, pak LNA. Pokud přebuzení/zkreslení: snižte zesílení",
       "s19": "Nalaďte známou FM stanici a zjistěte, zda je frekvence mírně posunutá",
       "s20": "Přejděte na Settings → Radio → Frequency Correction a upravte, dokud se stanice nezacentruje",
-      "s21": "Tímto se koriguje offset TCXO — zlepšuje přesnost ve všech aplikacích",
-      "s22": "Před jakýmkoli TX: připojte 50-ohmový dummy load nebo frekvenčně přizpůsobenou anténu — nikdy nevysílejte do volného prostoru",
+      "s21": "Tímto se koriguje offset TCXO  -  zlepšuje přesnost ve všech aplikacích",
+      "s22": "Před jakýmkoli TX: připojte 50-ohmový dummy load nebo frekvenčně přizpůsobenou anténu  -  nikdy nevysílejte do volného prostoru",
       "s23": "Naučte se nouzové zastavení TX: tlačítko Stop → Šipka zpět → RESET → Vypnout",
       "s24": "Nikdy neprovozujte ve vzdálenosti menší než 3 metry od aktivních vysílačů (ruční stanice, routery) při příjmu",
       "s25": "Klepněte na šipku zpět pro návrat do menu",
-      "s26": "Posuňte vypínač DOLŮ pro vypnutí — vždy vypněte před odpojením antény"
+      "s26": "Posuňte vypínač DOLŮ pro vypnutí  -  vždy vypněte před odpojením antény"
     }
   },
   "firmwareUpdate": {
@@ -322,9 +322,9 @@
   },
   "whereToBuy": {
     "title": "Kde koupit",
-    "subtitle": "Komunitou zmiňované zdroje pro HackRF One, PortaPack a příslušenství. Nejedná se o doporučení — vždy si proveďte vlastní průzkum.",
+    "subtitle": "Komunitou zmiňované zdroje pro HackRF One, PortaPack a příslušenství. Nejedná se o doporučení  -  vždy si proveďte vlastní průzkum.",
     "disclaimerTitle": "Žádná spolupráce · Žádné doporučení",
-    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem <strong>není spojen, sponzorován ani schválen</strong> žádným prodejcem uvedeným na této stránce. Zařazení je založeno na zmínkách komunity na r/hackrf, r/RTLSDR a dalších SDR fórech — nezaručuje kvalitu produktu, autenticitu ani servis. <strong>Vždy si proveďte vlastní průzkum před nákupem.</strong>",
+    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem <strong>není spojen, sponzorován ani schválen</strong> žádným prodejcem uvedeným na této stránce. Zařazení je založeno na zmínkách komunity na r/hackrf, r/RTLSDR a dalších SDR fórech  -  nezaručuje kvalitu produktu, autenticitu ani servis. <strong>Vždy si proveďte vlastní průzkum před nákupem.</strong>",
     "typeLabel": "TYP",
     "regionLabel": "REGION",
     "all": "Vše",
@@ -340,7 +340,7 @@
     "title": "Frekvence nenalezena",
     "message": "Na této adrese nebyl detekován žádný signál. Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
     "backButton": "Zpět na přehled",
-    "footer": "Fresh Mayhem — Projekt Super Basic Studio"
+    "footer": "Fresh Mayhem  -  Projekt Super Basic Studio"
   },
   "chart": {
     "extreme": "Extrémní",
@@ -351,14 +351,14 @@
     "txApps": "TX aplikace"
   },
   "bandMap": {
-    "title": "Mapa pásem — Vybraná omezená a ISM pásma (1 MHz – 6 GHz)",
-    "description": "Tento graf zobrazuje <strong>částečný</strong> přehled amerických omezení <strong>vysílání (TX)</strong> na frekvencích. Červeně = vybraná pásma, kde je vysílání federálně omezeno. Zeleně = ISM pásma, kde je vysílání obecně povoleno za podmínek FCC Part 15. <strong>Příjem (RX) / poslech je obecně povolen ve většině jurisdikcí — vždy si ověřte místní zákony.</strong> Toto není úplný seznam všech omezených frekvencí.",
-    "disclaimer": "<strong>Upozornění:</strong> Podle amerického federálního práva (47 U.S.C. § 301) je vysílání na <strong>jakékoli</strong> rádiové frekvenci bez řádného oprávnění zakázáno. Nelicencované vysílání je povoleno pouze na specifických ISM pásmech za přísných podmínek výkonových limitů FCC Part 15. Prázdné místo na tomto grafu <strong>neznamená</strong>, že je vysílání povoleno. Tento graf slouží pouze pro vzdělávací účely a nepředstavuje právní poradenství. Frekvenční regulace se liší podle země — vždy si ověřte zákony ve své jurisdikci před vysíláním. Super Basic Studio, LLC nenese odpovědnost za neoprávněná vysílání.",
-    "restrictedLabel": "OMEZENÉ TX — NEVYSÍLEJTE (VYBRANÁ AMERICKÁ FEDERÁLNÍ PÁSMA)",
-    "ismLabel": "ISM PÁSMA — OBECNĚ POVOLENÉ TX (FCC PART 15, PLATÍ PODMÍNKY)",
+    "title": "Mapa pásem  -  Vybraná omezená a ISM pásma (1 MHz - 6 GHz)",
+    "description": "Tento graf zobrazuje <strong>částečný</strong> přehled amerických omezení <strong>vysílání (TX)</strong> na frekvencích. Červeně = vybraná pásma, kde je vysílání federálně omezeno. Zeleně = ISM pásma, kde je vysílání obecně povoleno za podmínek FCC Part 15. <strong>Příjem (RX) / poslech je obecně povolen ve většině jurisdikcí  -  vždy si ověřte místní zákony.</strong> Toto není úplný seznam všech omezených frekvencí.",
+    "disclaimer": "<strong>Upozornění:</strong> Podle amerického federálního práva (47 U.S.C. § 301) je vysílání na <strong>jakékoli</strong> rádiové frekvenci bez řádného oprávnění zakázáno. Nelicencované vysílání je povoleno pouze na specifických ISM pásmech za přísných podmínek výkonových limitů FCC Part 15. Prázdné místo na tomto grafu <strong>neznamená</strong>, že je vysílání povoleno. Tento graf slouží pouze pro vzdělávací účely a nepředstavuje právní poradenství. Frekvenční regulace se liší podle země  -  vždy si ověřte zákony ve své jurisdikci před vysíláním. Super Basic Studio, LLC nenese odpovědnost za neoprávněná vysílání.",
+    "restrictedLabel": "OMEZENÉ TX  -  NEVYSÍLEJTE (VYBRANÁ AMERICKÁ FEDERÁLNÍ PÁSMA)",
+    "ismLabel": "ISM PÁSMA  -  OBECNĚ POVOLENÉ TX (FCC PART 15, PLATÍ PODMÍNKY)",
     "doNotTransmit": "NEVYSÍLEJTE (TX)",
-    "listeningPermitted": "Poslech (RX) je obecně povolen — ověřte místní zákony",
-    "ismConditions": "ISM — Obecně povoleno za podmínek FCC Part 15",
+    "listeningPermitted": "Poslech (RX) je obecně povolen  -  ověřte místní zákony",
+    "ismConditions": "ISM  -  Obecně povoleno za podmínek FCC Part 15",
     "clickToZoom": "Klikněte pro přiblížení",
     "scrollHint": "Scrollujte pro přiblížení · Táhněte pro posun · Klikněte na pásmo pro zaostření",
     "resetZoom": "Obnovit přiblížení"
@@ -375,7 +375,7 @@
   "penalties": {
     "maxPenalty": "Max. jednorázová pokuta (PIRATE Act)",
     "maxPrison": "Max. federální trest odnětí svobody",
-    "aviationCases": "Letecké případy — federální vyšetřování",
+    "aviationCases": "Letecké případy  -  federální vyšetřování",
     "scaleTitle": "STUPNICE PENĚŽNÍCH POKUT (AMERICKÉ FEDERÁLNÍ)",
     "severe": "ZÁVAŽNÉ",
     "high": "VYSOKÉ",
@@ -396,7 +396,7 @@
       "gpsJamming": {
         "violation": "Rušení GPS / mobilních sítí",
         "law": "PIRATE Act",
-        "penalty": "Až $119,555/den — max $2.39M",
+        "penalty": "Až $119,555/den  -  max $2.39M",
         "detail": "PIRATE Act (2020) dramaticky zvýšil pokuty. GPS rušičky ovlivňují letectví, lodní dopravu, tísňové linky a finanční systémy."
       },
       "intercepting": {
@@ -408,20 +408,20 @@
       "aviation": {
         "violation": "Rušení leteckého provozu",
         "law": "18 U.S.C. § 32",
-        "penalty": "Federální zločin — vyšetřování FBI + FAA",
+        "penalty": "Federální zločin  -  vyšetřování FBI + FAA",
         "detail": "Zákon o sabotáži letadel. Podvržení ADS-B nebo rušení GPS v blízkosti letišť spouští okamžité federální vyšetřování. Žádný minimální práh."
       }
     }
   },
   "badges": {
     "rx": "RX",
-    "rxTooltip": "Pouze příjem — žádné vysílání. Legálnost poslechu se liší podle regionu.",
+    "rxTooltip": "Pouze příjem  -  žádné vysílání. Legálnost poslechu se liší podle regionu.",
     "caution": "POZOR",
-    "cautionTooltip": "Používejte opatrně — ověřte místní předpisy",
+    "cautionTooltip": "Používejte opatrně  -  ověřte místní předpisy",
     "danger": "NEBEZPEČÍ",
-    "dangerTooltip": "Nebezpečné — může způsobit škodu nebo právní problémy. Ověřte místní předpisy.",
+    "dangerTooltip": "Nebezpečné  -  může způsobit škodu nebo právní problémy. Ověřte místní předpisy.",
     "extreme": "EXTRÉMNÍ",
-    "extremeTooltip": "Extrémní riziko — pravděpodobně nelegální ve většině jurisdikcí. Nejedná se o právní poradenství.",
+    "extremeTooltip": "Extrémní riziko  -  pravděpodobně nelegální ve většině jurisdikcí. Nejedná se o právní poradenství.",
     "illegal": "NELEGÁLNÍ",
     "illegalTooltip": "Nelegální ve většině známých jurisdikcí. Ověřte místní zákony."
   },
@@ -429,7 +429,7 @@
     "freshMayhem": "Fresh Mayhem",
     "mayhemFirmware": "Firmware Mayhem",
     "portapackHackrf": "PortaPack H4M + HackRF One",
-    "educationalOnly": "Pouze vzdělávací zdroj — nejedná se o právní poradenství. Vždy dodržujte místní RF předpisy.",
+    "educationalOnly": "Pouze vzdělávací zdroj  -  nejedná se o právní poradenství. Vždy dodržujte místní RF předpisy.",
     "trademarkNotice": "HackRF a PortaPack jsou ochranné známky jejich příslušných vlastníků. Firmware Mayhem je open-source projekt jeho přispěvatelů. Tento web je nezávislá, neoficiální reference a není spojen, schválen ani sponzorován společností",
     "greatScottGadgets": "Great Scott Gadgets",
     "trademarkSuffix": ", PortaPack, ani projektem Mayhem.",
@@ -449,8 +449,8 @@
     "txApps": {
       "ADS-B(S) TX": {
         "description": "Falešná data leteckého transpondéru.",
-        "legal": "Federální zločin — podvržení leteckého transpondéru ohrožuje bezpečnost letového provozu.",
-        "learn": "ADS-B znamená Automatic Dependent Surveillance–Broadcast. Tak letadla hlásí svou polohu, výšku a rychlost řízení letového provozu a ostatním letadlům. Písmeno (S) označuje variantu transpondéru 'S-mode' používanou v Mode S na 1090 MHz. Tato aplikace generuje falešné ADS-B pakety — fantomová letadla, která se objeví na radaru řízení letového provozu a na FlightAware/FlightRadar24. I testování na vzduchu je federální zločin podle 18 U.S.C. § 32 (sabotáž letadla). Používejte pouze s dummy load ve stíněném prostředí."
+        "legal": "Federální zločin  -  podvržení leteckého transpondéru ohrožuje bezpečnost letového provozu.",
+        "learn": "ADS-B znamená Automatic Dependent Surveillance-Broadcast. Tak letadla hlásí svou polohu, výšku a rychlost řízení letového provozu a ostatním letadlům. Písmeno (S) označuje variantu transpondéru 'S-mode' používanou v Mode S na 1090 MHz. Tato aplikace generuje falešné ADS-B pakety  -  fantomová letadla, která se objeví na radaru řízení letového provozu a na FlightAware/FlightRadar24. I testování na vzduchu je federální zločin podle 18 U.S.C. § 32 (sabotáž letadla). Používejte pouze s dummy load ve stíněném prostředí."
       },
       "APRS TX": {
         "description": "APRS poziční/datové pakety.",
@@ -465,7 +465,7 @@
       "BLE TX": {
         "description": "BLE advertisement pakety s konfigurovatelnou MAC adresou a payloadem.",
         "legal": "Legální pro testování vlastních zařízení. Podvržení cizích může porušovat zákony.",
-        "learn": "BLE (Bluetooth Low Energy) je bezdrátový protokol krátkého dosahu pracující na 2,4 GHz, používaný fitness trackery, chytrými zámky, beacony a IoT zařízeními. BLE advertisement pakety jsou vysílané zprávy, které mohou blízká zařízení detekovat bez párování. Tato aplikace umožňuje vytvářet vlastní advertisement pakety s konfigurovatelnou MAC adresou a daty — užitečné pro testování vlastních BLE periferií, experimenty s iBeacon/Eddystone nebo pochopení struktury BLE protokolu. Dosah je typicky 10–30 metrů."
+        "learn": "BLE (Bluetooth Low Energy) je bezdrátový protokol krátkého dosahu pracující na 2,4 GHz, používaný fitness trackery, chytrými zámky, beacony a IoT zařízeními. BLE advertisement pakety jsou vysílané zprávy, které mohou blízká zařízení detekovat bez párování. Tato aplikace umožňuje vytvářet vlastní advertisement pakety s konfigurovatelnou MAC adresou a daty  -  užitečné pro testování vlastních BLE periferií, experimenty s iBeacon/Eddystone nebo pochopení struktury BLE protokolu. Dosah je typicky 10-30 metrů."
       },
       "BLESpam": {
         "description": "Zahlcuje BLE advertisementy blízká zařízení.",
@@ -475,7 +475,7 @@
       "Burger Pager": {
         "description": "Signály restauračního pagerového systému s podtácky.",
         "legal": "Neoprávněná aktivace komerčního vybavení.",
-        "learn": "Restaurační pagerové systémy (například od Long Range Systems) používají jednoduchou OOK nebo FSK modulaci kolem 400–470 MHz k signalizaci vibrujícím/blikajícím podtáckům, které zákazníkům oznámí, že je objednávka připravena. Každý pager má unikátní ID kód. Tato aplikace může spustit konkrétní pagery nebo všechny pagery najednou přehráním nebo vytvořením aktivačního signálu. I když se to zdá neškodné, jde o neoprávněné použití komerčního rádiového vybavení a může narušit provoz restaurace."
+        "learn": "Restaurační pagerové systémy (například od Long Range Systems) používají jednoduchou OOK nebo FSK modulaci kolem 400-470 MHz k signalizaci vibrujícím/blikajícím podtáckům, které zákazníkům oznámí, že je objednávka připravena. Každý pager má unikátní ID kód. Tato aplikace může spustit konkrétní pagery nebo všechny pagery najednou přehráním nebo vytvořením aktivačního signálu. I když se to zdá neškodné, jde o neoprávněné použití komerčního rádiového vybavení a může narušit provoz restaurace."
       },
       "CVS Spam": {
         "description": "Rušení pagerového/notifikačního systému lékáren CVS.",
@@ -485,17 +485,17 @@
       "FlipperTX": {
         "description": "Přehrává soubory .sub z Flipper Zero přímo z PortaPack.",
         "legal": "Legální pouze pro vaše vlastní zařízení. Přehrávání signálů cizích je nelegální.",
-        "learn": "FlipperTX čte soubory .sub zachycené Flipper Zero z SD karty a přehrává je přes HackRF. Formát .sub od Flipper Zero ukládá surové záznamy signálů včetně frekvence, typu modulace a skutečných datových bitů. To znamená, že jakýkoli signál zachycený Flipper Zero lze přehrát přes HackRF s vyšším výkonem a lepšími anténními možnostmi. Běžné využití zahrnuje testování vlastních garážových vrat, bran a dálkově ovládaných zařízení. Širší frekvenční rozsah HackRF (1 MHz–6 GHz) výrazně přesahuje nativní sub-GHz rozsah Flipperu."
+        "learn": "FlipperTX čte soubory .sub zachycené Flipper Zero z SD karty a přehrává je přes HackRF. Formát .sub od Flipper Zero ukládá surové záznamy signálů včetně frekvence, typu modulace a skutečných datových bitů. To znamená, že jakýkoli signál zachycený Flipper Zero lze přehrát přes HackRF s vyšším výkonem a lepšími anténními možnostmi. Běžné využití zahrnuje testování vlastních garážových vrat, bran a dálkově ovládaných zařízení. Širší frekvenční rozsah HackRF (1 MHz-6 GHz) výrazně přesahuje nativní sub-GHz rozsah Flipperu."
       },
       "GPS Sim": {
         "description": "Generuje a vysílá falešné GPS satelitní signály ze souborů .C8.",
-        "legal": "Federální zločin — GPS spoofing ovlivňuje letectví, lodní dopravu, záchranné služby.",
-        "learn": "GPS satelity vysílají na L1 (1575,42 MHz) s přesnými časovými signály, které přijímače triangulují pro určení polohy. GPS Sim generuje falešné satelitní signály, které přepíší skutečné GPS a způsobí, že přijímače hlásí falešnou polohu a čas. Soubory .C8 obsahují předem vypočítané IQ vzorky pro konkrétní místa/časy. To ovlivní VŠECHNY GPS přijímače v dosahu — telefony, auta, letadla, lodě, záchranné služby, finanční obchodní systémy (které používají GPS pro časování). GPS spoofing je federální zločin podle 18 U.S.C. § 32 a nese přísné tresty. I krátké testování na vzduchu může ovlivnit blízkou infrastrukturu."
+        "legal": "Federální zločin  -  GPS spoofing ovlivňuje letectví, lodní dopravu, záchranné služby.",
+        "learn": "GPS satelity vysílají na L1 (1575,42 MHz) s přesnými časovými signály, které přijímače triangulují pro určení polohy. GPS Sim generuje falešné satelitní signály, které přepíší skutečné GPS a způsobí, že přijímače hlásí falešnou polohu a čas. Soubory .C8 obsahují předem vypočítané IQ vzorky pro konkrétní místa/časy. To ovlivní VŠECHNY GPS přijímače v dosahu  -  telefony, auta, letadla, lodě, záchranné služby, finanční obchodní systémy (které používají GPS pro časování). GPS spoofing je federální zločin podle 18 U.S.C. § 32 a nese přísné tresty. I krátké testování na vzduchu může ovlivnit blízkou infrastrukturu."
       },
       "Hopper": {
         "description": "Vysílač s přeskakováním frekvencí. Zahlcuje definované frekvenční rozsahy.",
         "legal": "Ekvivalent rušení. Vždy nelegální.",
-        "learn": "Hopper rychle přepíná vysílání přes uživatelem definovaný frekvenční rozsah a stráví krátký čas na každé frekvenci, než přeskočí na další. Na rozdíl od vyhrazené aplikace Jammer pokrývá Hopper potenciálně mnohem širší spektrum přeskakováním místo širokopásmového šumu. To je efektivní při narušování systémů FHSS (Frequency-Hopping Spread Spectrum) jako Wi-Fi, Bluetooth a některé vojenské komunikace. Efekt je stejný jako rušení — odmítnutí služby v cílovém pásmu. Nelegální ve všech jurisdikcích podle mezinárodních rádiových předpisů (ITU Radio Regulations, článek 15)."
+        "learn": "Hopper rychle přepíná vysílání přes uživatelem definovaný frekvenční rozsah a stráví krátký čas na každé frekvenci, než přeskočí na další. Na rozdíl od vyhrazené aplikace Jammer pokrývá Hopper potenciálně mnohem širší spektrum přeskakováním místo širokopásmového šumu. To je efektivní při narušování systémů FHSS (Frequency-Hopping Spread Spectrum) jako Wi-Fi, Bluetooth a některé vojenské komunikace. Efekt je stejný jako rušení  -  odmítnutí služby v cílovém pásmu. Nelegální ve všech jurisdikcích podle mezinárodních rádiových předpisů (ITU Radio Regulations, článek 15)."
       },
       "Jammer": {
         "description": "Širokopásmový RF rušič. Šum přes šířku pásma až 24 MHz.",
@@ -510,12 +510,12 @@
       "Morse TX": {
         "description": "Morseovka přes FM tón nebo CW.",
         "legal": "Legální s radioamatérskou licencí na příslušných frekvencích.",
-        "learn": "Morseovka (CW — Continuous Wave) je nejstarší digitální mód v rádiu, kódující text jako vzory krátkých (tečka) a dlouhých (čárka) signálů. Tato aplikace vysílá Morseovku buď jako CW (klíčování nosné zapnuto/vypnuto) nebo jako FM zvukový tón. CW stále hojně používají radioamatéři, protože je extrémně efektivní — čitelná na úrovních signálu hluboko pod hlasem. Amatérští operátoři mohou používat CW na všech amatérských pásmech. Aplikace přijímá textový vstup a převádí jej na správně časovanou Morseovku s konfigurovatelnou rychlostí slov za minutu."
+        "learn": "Morseovka (CW  -  Continuous Wave) je nejstarší digitální mód v rádiu, kódující text jako vzory krátkých (tečka) a dlouhých (čárka) signálů. Tato aplikace vysílá Morseovku buď jako CW (klíčování nosné zapnuto/vypnuto) nebo jako FM zvukový tón. CW stále hojně používají radioamatéři, protože je extrémně efektivní  -  čitelná na úrovních signálu hluboko pod hlasem. Amatérští operátoři mohou používat CW na všech amatérských pásmech. Aplikace přijímá textový vstup a převádí jej na správně časovanou Morseovku s konfigurovatelnou rychlostí slov za minutu."
       },
       "OOK TX": {
         "description": "On-Off Keying signály. PT2262 dálkové ovladače, zvonky, garážová vrata.",
         "legal": "Legální pouze pro vaše vlastní zařízení.",
-        "learn": "OOK (On-Off Keying) je nejjednodušší forma digitální modulace — nosná je buď zapnutá nebo vypnutá, reprezentující jedničky a nuly. Většina levných dálkových ovladačů na 315/433 MHz používá OOK s enkodérem PT2262 (nebo kompatibilní klony jako EV1527). To zahrnuje otvírače garážových vrat, bezdrátové zvonky, RF zásuvky, klíčenky od aut (starší) a jednoduché alarmové senzory. Aplikace může vysílat specifické kódy k ovládání těchto zařízení. Mnoho starších systémů používá pevné kódy bez šifrování, což je triviálně přehratelné. Novější systémy používají rolling kódy (jako KeeLoq), které toto jednoduché přehrání neprolomí."
+        "learn": "OOK (On-Off Keying) je nejjednodušší forma digitální modulace  -  nosná je buď zapnutá nebo vypnutá, reprezentující jedničky a nuly. Většina levných dálkových ovladačů na 315/433 MHz používá OOK s enkodérem PT2262 (nebo kompatibilní klony jako EV1527). To zahrnuje otvírače garážových vrat, bezdrátové zvonky, RF zásuvky, klíčenky od aut (starší) a jednoduché alarmové senzory. Aplikace může vysílat specifické kódy k ovládání těchto zařízení. Mnoho starších systémů používá pevné kódy bez šifrování, což je triviálně přehratelné. Novější systémy používají rolling kódy (jako KeeLoq), které toto jednoduché přehrání neprolomí."
       },
       "OOK Editor": {
         "description": "Konstrukce a vysílání vlastních OOK signálových vzorů.",
@@ -525,32 +525,32 @@
       "POCSAG TX": {
         "description": "Podvržené POCSAG pagerové zprávy na specifické RIC adresy.",
         "legal": "Neoprávněné vysílání na licencovaných frekvencích.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) je protokol používaný tradičními numerickými a alfanumerickými pagery, pracující kolem 150–170 MHz nebo 450–470 MHz podle regionu. Každý pager má RIC (Radio Identity Code) — unikátní adresu. Tato aplikace vytváří a vysílá POCSAG zprávy na specifické RIC adresy, což znamená, že můžete posílat text na jednotlivé pagery. Pagerové sítě stále aktivně používají nemocnice, záchranné služby a některé podniky. Vysílání na těchto licencovaných frekvencích bez oprávnění je nelegální."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) je protokol používaný tradičními numerickými a alfanumerickými pagery, pracující kolem 150-170 MHz nebo 450-470 MHz podle regionu. Každý pager má RIC (Radio Identity Code)  -  unikátní adresu. Tato aplikace vytváří a vysílá POCSAG zprávy na specifické RIC adresy, což znamená, že můžete posílat text na jednotlivé pagery. Pagerové sítě stále aktivně používají nemocnice, záchranné služby a některé podniky. Vysílání na těchto licencovaných frekvencích bez oprávnění je nelegální."
       },
       "RDS": {
         "description": "FM vysílání s metadaty Radio Data System.",
         "legal": "Vyžaduje vysílací licenci. Nízký výkon může být tolerován v některých regionech.",
-        "learn": "RDS (Radio Data System) je technologie za názvem stanice, názvem skladby a dopravními hlášeními, která se zobrazují na displeji autorádia při ladění FM (88–108 MHz). RDS je subnosná na 57 kHz připojená ke stereo FM signálu. Tato aplikace vysílá FM signál kompletně s RDS daty — můžete nastavit název stanice (PS), rádio text (RT), typ programu (PTY) a dopravní hlášení (TA/TP). Při nízkém výkonu a krátkém dosahu se to běžně používá pro osobní FM vysílače, ale jakékoli FM vysílání technicky vyžaduje licenci od národního regulátora."
+        "learn": "RDS (Radio Data System) je technologie za názvem stanice, názvem skladby a dopravními hlášeními, která se zobrazují na displeji autorádia při ladění FM (88-108 MHz). RDS je subnosná na 57 kHz připojená ke stereo FM signálu. Tato aplikace vysílá FM signál kompletně s RDS daty  -  můžete nastavit název stanice (PS), rádio text (RT), typ programu (PTY) a dopravní hlášení (TA/TP). Při nízkém výkonu a krátkém dosahu se to běžně používá pro osobní FM vysílače, ale jakékoli FM vysílání technicky vyžaduje licenci od národního regulátora."
       },
       "Soundboard": {
         "description": "WAV audio přes FM. CTCSS tóny, kompatibilita s bezdrátovými mikrofony.",
         "legal": "Na většině frekvencí vyžaduje licenci.",
-        "learn": "Soundboard přehrává WAV soubory z SD karty jako FM zvukové přenosy. Může také generovat CTCSS (Continuous Tone-Coded Squelch System) subslyšitelné tóny — nízkofrekvenční tóny (67–254,1 Hz), které obousměrné rádiové stanice používají k filtrování nežádoucího provozu na sdílených frekvencích. To je užitečné pro testování rádiových squelch systémů a CTCSS opakovačů. Kompatibilita s bezdrátovými mikrofony znamená, že může vysílat na frekvencích používaných systémy bezdrátových mikrofonů (typicky VHF/UHF), v podstatě funguje jako bezdrátový mikrofon."
+        "learn": "Soundboard přehrává WAV soubory z SD karty jako FM zvukové přenosy. Může také generovat CTCSS (Continuous Tone-Coded Squelch System) subslyšitelné tóny  -  nízkofrekvenční tóny (67-254,1 Hz), které obousměrné rádiové stanice používají k filtrování nežádoucího provozu na sdílených frekvencích. To je užitečné pro testování rádiových squelch systémů a CTCSS opakovačů. Kompatibilita s bezdrátovými mikrofony znamená, že může vysílat na frekvencích používaných systémy bezdrátových mikrofonů (typicky VHF/UHF), v podstatě funguje jako bezdrátový mikrofon."
       },
       "Spectrum Painter": {
         "description": "Obraz/text vykreslený v RF spektru viditelný na waterfall displejích.",
         "legal": "Kuriozita, ale stále neoprávněné vysílání na většině frekvencí.",
-        "learn": "Spectrum Painter převádí obraz nebo text na RF signál, který při zobrazení na waterfall displeji (jako SDR++ nebo GQRX) vypadá jako viditelný obrázek nebo zpráva ve spektru. Funguje tak, že mění vysílanou frekvenci v čase a 'maluje' každý řádek pixelů — jasnější pixely dostávají více výkonu, tmavší méně. Výsledek je čistě vizuální umění viditelné pouze na spektrálních analyzátorech. I když je kreativní a populární pro ukázky, stále jde o RF vysílání podléhající stejným předpisům jako jakýkoli jiný vysílač. Nejlépe použít s dummy load nebo na neobsazené frekvenci s minimálním výkonem."
+        "learn": "Spectrum Painter převádí obraz nebo text na RF signál, který při zobrazení na waterfall displeji (jako SDR++ nebo GQRX) vypadá jako viditelný obrázek nebo zpráva ve spektru. Funguje tak, že mění vysílanou frekvenci v čase a 'maluje' každý řádek pixelů  -  jasnější pixely dostávají více výkonu, tmavší méně. Výsledek je čistě vizuální umění viditelné pouze na spektrálních analyzátorech. I když je kreativní a populární pro ukázky, stále jde o RF vysílání podléhající stejným předpisům jako jakýkoli jiný vysílač. Nejlépe použít s dummy load nebo na neobsazené frekvenci s minimálním výkonem."
       },
       "SSTV TX": {
         "description": "Pomalá televizní přenos obrazů přes FM. Režimy Scottie/Martin/SC2.",
         "legal": "Legální s radioamatérskou licencí na vyhrazených frekvencích.",
-        "learn": "SSTV (Slow Scan Television) je metoda přenosu statických obrazů přes rádio, široce používaná radioamatéry od 60. let. Na rozdíl od televizního vysílání SSTV posílá jeden obraz po dobu 30–120 sekund kódováním jasu pixelů jako zvukové tóny (1200–2300 Hz). Scottie, Martin a SC2 jsou různé kódovací režimy s různým poměrem rozlišení a doby přenosu. SSTV se běžně používá na 14,230 MHz (20m), 21,340 MHz (15m) a 145,500 MHz (2m FM). ISS pravidelně vysílá SSTV obrazy, které může přijmout kdokoli. Tato aplikace vysílá obrazy z SD karty v těchto standardních formátech."
+        "learn": "SSTV (Slow Scan Television) je metoda přenosu statických obrazů přes rádio, široce používaná radioamatéry od 60. let. Na rozdíl od televizního vysílání SSTV posílá jeden obraz po dobu 30-120 sekund kódováním jasu pixelů jako zvukové tóny (1200-2300 Hz). Scottie, Martin a SC2 jsou různé kódovací režimy s různým poměrem rozlišení a doby přenosu. SSTV se běžně používá na 14,230 MHz (20m), 21,340 MHz (15m) a 145,500 MHz (2m FM). ISS pravidelně vysílá SSTV obrazy, které může přijmout kdokoli. Tato aplikace vysílá obrazy z SD karty v těchto standardních formátech."
       },
       "TEDI/LCR": {
         "description": "Řídicí rámce francouzské silniční infrastruktury. Bell 202 FSK.",
         "legal": "Neoprávněné ovládání silniční infrastruktury.",
-        "learn": "TEDI (Transmission Élémentaire d'Informations) a LCR (Liaisons à Concentration de Relais) jsou francouzské protokoly silniční infrastruktury používané k ovládání elektronických dálničních značek, ventilačních systémů tunelů a dopravního řízení. Používají Bell 202 FSK (Frequency Shift Keying) modulaci — modemový standard ze 70. let kódující data jako dvě zvukové frekvence (1200/2200 Hz). Tyto systémy ovládají kritickou bezpečnostní infrastrukturu na francouzských dálnicích. Neoprávněné vysílání TEDI/LCR rámců by mohlo změnit zprávy na dálničních značkách nebo narušit bezpečnostní systémy tunelů."
+        "learn": "TEDI (Transmission Élémentaire d'Informations) a LCR (Liaisons à Concentration de Relais) jsou francouzské protokoly silniční infrastruktury používané k ovládání elektronických dálničních značek, ventilačních systémů tunelů a dopravního řízení. Používají Bell 202 FSK (Frequency Shift Keying) modulaci  -  modemový standard ze 70. let kódující data jako dvě zvukové frekvence (1200/2200 Hz). Tyto systémy ovládají kritickou bezpečnostní infrastrukturu na francouzských dálnicích. Neoprávněné vysílání TEDI/LCR rámců by mohlo změnit zprávy na dálničních značkách nebo narušit bezpečnostní systémy tunelů."
       },
       "TouchTunes": {
         "description": "Příkazy dálkového ovládání jukeboxů TouchTunes.",
@@ -561,55 +561,55 @@
     "rxApps": {
       "ADS-B": {
         "description": "Sledování leteckých transpondérů. Zobrazuje ICAO ID, volací znak, výšku, polohu, rychlost.",
-        "learn": "ADS-B (Automatic Dependent Surveillance–Broadcast) je systém, který moderní letadla používají k vysílání své identity, polohy, výšky a rychlosti každou půl sekundu na 1090 MHz. Každé letadlo má unikátní 24bitovou ICAO adresu (jako registrační značku). PortaPack dekóduje tyto Mode S transpondérové signály v reálném čase a zobrazuje živý seznam letadel — stejná data, která pohánějí FlightRadar24 a FlightAware. ADS-B je pouze příjem a zcela legální ke sledování. S dobrou anténou a přímou viditelností můžete sledovat letadla vzdálená přes 160 km. Toto je jedna z nejpopulárnějších prvních aplikací pro nové majitele HackRF."
+        "learn": "ADS-B (Automatic Dependent Surveillance-Broadcast) je systém, který moderní letadla používají k vysílání své identity, polohy, výšky a rychlosti každou půl sekundu na 1090 MHz. Každé letadlo má unikátní 24bitovou ICAO adresu (jako registrační značku). PortaPack dekóduje tyto Mode S transpondérové signály v reálném čase a zobrazuje živý seznam letadel  -  stejná data, která pohánějí FlightRadar24 a FlightAware. ADS-B je pouze příjem a zcela legální ke sledování. S dobrou anténou a přímou viditelností můžete sledovat letadla vzdálená přes 160 km. Toto je jedna z nejpopulárnějších prvních aplikací pro nové majitele HackRF."
       },
       "ACARS": {
         "description": "Datové zprávy letadel mezi letadly a pozemními stanicemi.",
-        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) je systém digitálních textových zpráv používaný aerolinkami od 70. let. Pracuje na VHF frekvencích kolem 129–137 MHz a přenáší krátké datové zprávy mezi letadly a pozemními stanicemi — věci jako zprávy o výkonu motorů, žádosti o počasí, přiřazení gatů, data o palivu a komunikace posádky. Zprávy se posílají jako prostý text bez šifrování, takže je můžete číst přímo. Každá zpráva obsahuje registraci letadla a číslo letu. ACARS je letecký ekvivalent textových zpráv a jeho sledování vám dává pohled do zákulisí leteckých operací."
+        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) je systém digitálních textových zpráv používaný aerolinkami od 70. let. Pracuje na VHF frekvencích kolem 129-137 MHz a přenáší krátké datové zprávy mezi letadly a pozemními stanicemi  -  věci jako zprávy o výkonu motorů, žádosti o počasí, přiřazení gatů, data o palivu a komunikace posádky. Zprávy se posílají jako prostý text bez šifrování, takže je můžete číst přímo. Každá zpráva obsahuje registraci letadla a číslo letu. ACARS je letecký ekvivalent textových zpráv a jeho sledování vám dává pohled do zákulisí leteckých operací."
       },
       "AFSK": {
         "description": "Dekodér Audio Frequency Shift Keying. Bell 202 modemové signály, TEDI/LCR.",
-        "learn": "AFSK (Audio Frequency Shift Keying) kóduje digitální data jako dva zvukové tóny — typicky 1200 Hz pro mark (1) a 2200 Hz pro space (0), podle modemového standardu Bell 202 ze 70. let. Tato modulace se používá v mnoha protokolech: APRS radioamatérské rádio, identifikace volajícího, staré telefonní modemy a francouzské systémy silniční infrastruktury (TEDI/LCR). Dekodér naslouchá FM zvuku a extrahuje digitální data ze střídání tónů. Pokud jste někdy slyšeli skřípavý zvuk vytáčeného modemu, to bylo FSK. Toto je univerzální dekodér pro jakýkoli systém používající audio frequency shift keying."
+        "learn": "AFSK (Audio Frequency Shift Keying) kóduje digitální data jako dva zvukové tóny  -  typicky 1200 Hz pro mark (1) a 2200 Hz pro space (0), podle modemového standardu Bell 202 ze 70. let. Tato modulace se používá v mnoha protokolech: APRS radioamatérské rádio, identifikace volajícího, staré telefonní modemy a francouzské systémy silniční infrastruktury (TEDI/LCR). Dekodér naslouchá FM zvuku a extrahuje digitální data ze střídání tónů. Pokud jste někdy slyšeli skřípavý zvuk vytáčeného modemu, to bylo FSK. Toto je univerzální dekodér pro jakýkoli systém používající audio frequency shift keying."
       },
       "AIS Boats": {
         "description": "Sledování námořních plavidel. MMSI, poloha, kurz, rychlost. Dva kanály.",
-        "learn": "AIS (Automatic Identification System) je námořní ekvivalent ADS-B — všechna velká plavidla (a mnoho malých) musí vysílat svou identitu, polohu, rychlost, kurz a cíl na dvou VHF kanálech: AIS1 (161,975 MHz) a AIS2 (162,025 MHz). Každé plavidlo má unikátní 9místné číslo MMSI (Maritime Mobile Service Identity). PortaPack dekóduje oba kanály současně a zobrazuje živý seznam plavidel. AIS data pohánějí MarineTraffic.com a VesselFinder. Pokud jste poblíž pobřeží, řeky nebo přístavu, uvidíte remorkéry, nákladní lodě, tankery, trajekty a dokonce i některé rybářské čluny. Dosah závisí na výšce antény — 30–60 km je typické u vody."
+        "learn": "AIS (Automatic Identification System) je námořní ekvivalent ADS-B  -  všechna velká plavidla (a mnoho malých) musí vysílat svou identitu, polohu, rychlost, kurz a cíl na dvou VHF kanálech: AIS1 (161,975 MHz) a AIS2 (162,025 MHz). Každé plavidlo má unikátní 9místné číslo MMSI (Maritime Mobile Service Identity). PortaPack dekóduje oba kanály současně a zobrazuje živý seznam plavidel. AIS data pohánějí MarineTraffic.com a VesselFinder. Pokud jste poblíž pobřeží, řeky nebo přístavu, uvidíte remorkéry, nákladní lodě, tankery, trajekty a dokonce i některé rybářské čluny. Dosah závisí na výšce antény  -  30-60 km je typické u vody."
       },
       "Analog TV": {
         "description": "Příjem analogové PAL televize. Snížené rozlišení (52×128).",
-        "learn": "Tato aplikace přijímá analogové televizní signály ve standardu PAL (Phase Alternating Line), který se používal v Evropě, Asii a částech Jižní Ameriky před přechodem na digitální TV. Dekóduje kompozitní video signál do malého obrazu 52×128 pixelů na obrazovce PortaPack — stačí k vidění vysílaného obsahu, ale ne k pohodlnému sledování. Většina zemí analogovou TV vypnula, ale stále můžete najít aktivní signály ze starších bezpečnostních kamer, amatérské TV (ATV) operátorů nebo zemí, které plně nepřešly na digitální. Je to spíše zábavná historická ukázka než praktický nástroj ve většině oblastí."
+        "learn": "Tato aplikace přijímá analogové televizní signály ve standardu PAL (Phase Alternating Line), který se používal v Evropě, Asii a částech Jižní Ameriky před přechodem na digitální TV. Dekóduje kompozitní video signál do malého obrazu 52×128 pixelů na obrazovce PortaPack  -  stačí k vidění vysílaného obsahu, ale ne k pohodlnému sledování. Většina zemí analogovou TV vypnula, ale stále můžete najít aktivní signály ze starších bezpečnostních kamer, amatérské TV (ATV) operátorů nebo zemí, které plně nepřešly na digitální. Je to spíše zábavná historická ukázka než praktický nástroj ve většině oblastí."
       },
       "APRS RX": {
         "description": "Radioamatérské poziční/meteorologické/telemetrické pakety. AX.25 přes AFSK.",
-        "learn": "APRS (Automatic Packet Reporting System) je síť amatérského rádia pro sdílení polohy, počasí, zpráv a telemetrie v reálném čase. Používá AX.25 paketové rádio rychlostí 1200 baudů přes AFSK modulaci na jediné národní frekvenci — 144,390 MHz v Severní Americe, 144,800 MHz v Evropě. Stanice (ruční rádia, autotrakery, meteorologické stanice, balóny) vysílají pakety přenášené přes digipeatery na velké vzdálenosti. Veškerý APRS provoz je viditelný na aprs.fi. PortaPack dekóduje tyto pakety a zobrazuje volací znaky, polohy a obsah zpráv. K poslechu nepotřebujete licenci — pouze k vysílání. V blízkosti jakékoli obydlené oblasti uvidíte pravidelnou APRS aktivitu."
+        "learn": "APRS (Automatic Packet Reporting System) je síť amatérského rádia pro sdílení polohy, počasí, zpráv a telemetrie v reálném čase. Používá AX.25 paketové rádio rychlostí 1200 baudů přes AFSK modulaci na jediné národní frekvenci  -  144,390 MHz v Severní Americe, 144,800 MHz v Evropě. Stanice (ruční rádia, autotrakery, meteorologické stanice, balóny) vysílají pakety přenášené přes digipeatery na velké vzdálenosti. Veškerý APRS provoz je viditelný na aprs.fi. PortaPack dekóduje tyto pakety a zobrazuje volací znaky, polohy a obsah zpráv. K poslechu nepotřebujete licenci  -  pouze k vysílání. V blízkosti jakékoli obydlené oblasti uvidíte pravidelnou APRS aktivitu."
       },
       "Audio": {
         "description": "Univerzální analogový audio přijímač. AM, NFM, WFM, SSB (USB/LSB). Nahrávání do WAV.",
-        "learn": "Aplikace Audio je nejvšestrannější přijímač na PortaPack — je to univerzální rádio podporující všechny běžné typy analogové modulace. AM (amplitudová modulace) pro rozhlasové vysílání a letectví. NFM (úzkopásmová FM) pro vysílačky, amatérské opakovače a obousměrné rádio. WFM (širokopásmová FM) pro FM rozhlasové stanice jako vaše místní hudební stanice na 88–108 MHz. SSB (jednopasmová — USB/LSB) pro amatérské HF a námořní komunikace. Také nahrává zvuk přímo do WAV souborů na SD kartě. Toto je aplikace, se kterou většina lidí začíná — nalaďte místní FM stanici v režimu WFM a okamžitě uslyšíte hudbu."
+        "learn": "Aplikace Audio je nejvšestrannější přijímač na PortaPack  -  je to univerzální rádio podporující všechny běžné typy analogové modulace. AM (amplitudová modulace) pro rozhlasové vysílání a letectví. NFM (úzkopásmová FM) pro vysílačky, amatérské opakovače a obousměrné rádio. WFM (širokopásmová FM) pro FM rozhlasové stanice jako vaše místní hudební stanice na 88-108 MHz. SSB (jednopasmová  -  USB/LSB) pro amatérské HF a námořní komunikace. Také nahrává zvuk přímo do WAV souborů na SD kartě. Toto je aplikace, se kterou většina lidí začíná  -  nalaďte místní FM stanici v režimu WFM a okamžitě uslyšíte hudbu."
       },
       "BLE RX": {
         "description": "Sniffer BLE advertisementů. Kanály 37/38/39. Vyhledávání výrobce podle MAC.",
-        "learn": "BLE (Bluetooth Low Energy) je bezdrátový protokol krátkého dosahu na 2,4 GHz používaný miliardami zařízení — telefony, fitness trackery, chytré hodinky, AirTagy, beacony, senzory chytré domácnosti a bezdrátová sluchátka. BLE zařízení neustále vysílají advertisement pakety na třech vyhrazených kanálech (37, 38, 39) k oznámení své přítomnosti. Tato aplikace odposlouchává tyto advertisementy a zobrazuje MAC adresu, sílu signálu a název výrobce (vyhledaný z IEEE OUI databáze — první 3 bajty MAC identifikují výrobce). Projděte jakýmkoli veřejným prostorem a uvidíte desítky BLE zařízení. Jde pouze o pasivní monitorování — neprovádí se žádné párování ani připojení."
+        "learn": "BLE (Bluetooth Low Energy) je bezdrátový protokol krátkého dosahu na 2,4 GHz používaný miliardami zařízení  -  telefony, fitness trackery, chytré hodinky, AirTagy, beacony, senzory chytré domácnosti a bezdrátová sluchátka. BLE zařízení neustále vysílají advertisement pakety na třech vyhrazených kanálech (37, 38, 39) k oznámení své přítomnosti. Tato aplikace odposlouchává tyto advertisementy a zobrazuje MAC adresu, sílu signálu a název výrobce (vyhledaný z IEEE OUI databáze  -  první 3 bajty MAC identifikují výrobce). Projděte jakýmkoli veřejným prostorem a uvidíte desítky BLE zařízení. Jde pouze o pasivní monitorování  -  neprovádí se žádné párování ani připojení."
       },
       "Detector": {
         "description": "Širokopásmový detektor signálu se zobrazením historie RSSI.",
-        "learn": "Aplikace Detector monitoruje specifickou frekvenci a vykresluje RSSI (Received Signal Strength Indicator) v čase jako posuvný graf historie. Představte si to jako jednoduchý pohybový detektor pro RF — když se signál na cílové frekvenci objeví nebo změní sílu, vidíte špičku v grafu. To je užitečné pro potvrzení, že zařízení vysílá, měření frekvence hlášení senzoru, detekci přerušovaného rušení nebo základní RF průzkumy. Odstraňuje veškerou složitost demodulace a jednoduše odpovídá na otázku: 'Vysílá tu něco a jak silné to je?'"
+        "learn": "Aplikace Detector monitoruje specifickou frekvenci a vykresluje RSSI (Received Signal Strength Indicator) v čase jako posuvný graf historie. Představte si to jako jednoduchý pohybový detektor pro RF  -  když se signál na cílové frekvenci objeví nebo změní sílu, vidíte špičku v grafu. To je užitečné pro potvrzení, že zařízení vysílá, měření frekvence hlášení senzoru, detekci přerušovaného rušení nebo základní RF průzkumy. Odstraňuje veškerou složitost demodulace a jednoduše odpovídá na otázku: 'Vysílá tu něco a jak silné to je?'"
       },
       "ERT Meter": {
         "description": "Čtení chytrých měřidel energií (elektřina, plyn, voda).",
-        "learn": "ERT (Encoder Receiver Transmitter) je bezdrátový protokol používaný chytrými měřidly energií po celé Severní Americe k hlášení spotřeby elektřiny, plynu a vody. Místo odečítače, který by chodil ke každému domu, měřidla s ERT vysílají své odečty na ~900 MHz ISM pásmu pomocí OOK modulace. Vozidlo energetické společnosti s přijímačem projíždí čtvrtěmi a sbírá odečty. Každý přenos obsahuje ID měřidla a aktuální hodnotu spotřeby. PortaPack je dekóduje a zobrazuje ID měřidel a odečty ve vašem okolí. Vše je nešifrované — známý problém soukromí, o kterém se široce diskutuje v bezpečnostní výzkumné komunitě."
+        "learn": "ERT (Encoder Receiver Transmitter) je bezdrátový protokol používaný chytrými měřidly energií po celé Severní Americe k hlášení spotřeby elektřiny, plynu a vody. Místo odečítače, který by chodil ke každému domu, měřidla s ERT vysílají své odečty na ~900 MHz ISM pásmu pomocí OOK modulace. Vozidlo energetické společnosti s přijímačem projíždí čtvrtěmi a sbírá odečty. Každý přenos obsahuje ID měřidla a aktuální hodnotu spotřeby. PortaPack je dekóduje a zobrazuje ID měřidel a odečty ve vašem okolí. Vše je nešifrované  -  známý problém soukromí, o kterém se široce diskutuje v bezpečnostní výzkumné komunitě."
       },
       "Flex RX": {
         "description": "Dekodér pagerového protokolu FLEX. Cyklické barevné zobrazení.",
-        "learn": "FLEX je pagerový protokol vyvinutý společností Motorola v 90. letech jako rychlejší a efektivnější nástupce POCSAG. Podporuje datové rychlosti 1600, 3200 a 6400 bps — výrazně rychleji než 512–2400 bps u POCSAG. FLEX pagery stále používají nemocnice a záchranné služby, protože pagerové sítě mají lepší prostupnost budovami než mobilní sítě a fungují i při přetížení mobilní sítě. Aplikace dekóduje FLEX zprávy a zobrazuje je s cyklickým barevným zobrazením k rozlišení typů zpráv. Stejně jako POCSAG jsou tyto zprávy vysílány nešifrovaně — dlouhodobý bezpečnostní problém ve zdravotnictví, kde mohou být zahrnuty informace o pacientech."
+        "learn": "FLEX je pagerový protokol vyvinutý společností Motorola v 90. letech jako rychlejší a efektivnější nástupce POCSAG. Podporuje datové rychlosti 1600, 3200 a 6400 bps  -  výrazně rychleji než 512-2400 bps u POCSAG. FLEX pagery stále používají nemocnice a záchranné služby, protože pagerové sítě mají lepší prostupnost budovami než mobilní sítě a fungují i při přetížení mobilní sítě. Aplikace dekóduje FLEX zprávy a zobrazuje je s cyklickým barevným zobrazením k rozlišení typů zpráv. Stejně jako POCSAG jsou tyto zprávy vysílány nešifrovaně  -  dlouhodobý bezpečnostní problém ve zdravotnictví, kde mohou být zahrnuty informace o pacientech."
       },
       "Fox Hunt": {
         "description": "Asistent pro hledání vysílačů. Vizualizace síly signálu. Integrace GPS/mapy.",
-        "learn": "Hon na lišku (také hledání vysílačů, T-hunting nebo ARDF — Amateur Radio Direction Finding) je sport/cvičení, kde účastníci hledají skrytý rádiový vysílač pouze pomocí přijímače a směrové antény. Aplikace Fox Hunt promění váš PortaPack v lovecký nástroj — zobrazuje sílu signálu jako vizuální indikátor a integruje se s GPS pro zaznamenávání vaší trasy a odhad směru k vysílači. Jak se přibližujete k lišce, signál sílí. Toto je populární aktivita radioamatérských klubů a používá se i v reálných scénářích jako hledání zdrojů rušení nebo lokalizace nouzových majáků."
+        "learn": "Hon na lišku (také hledání vysílačů, T-hunting nebo ARDF  -  Amateur Radio Direction Finding) je sport/cvičení, kde účastníci hledají skrytý rádiový vysílač pouze pomocí přijímače a směrové antény. Aplikace Fox Hunt promění váš PortaPack v lovecký nástroj  -  zobrazuje sílu signálu jako vizuální indikátor a integruje se s GPS pro zaznamenávání vaší trasy a odhad směru k vysílači. Jak se přibližujete k lišce, signál sílí. Toto je populární aktivita radioamatérských klubů a používá se i v reálných scénářích jako hledání zdrojů rušení nebo lokalizace nouzových majáků."
       },
       "gfxEQ": {
         "description": "Grafická vizualizace audio ekvalizéru pro WFM rádio.",
-        "learn": "gfxEQ je vizuální audio spektrální analyzátor, který běží při příjmu FM rozhlasu (WFM). Zobrazuje grafický ekvalizér v reálném čase — stejné poskakující sloupce, které byste viděli na stereo systému — zobrazující frekvenční obsah přijímaného zvuku. Basové frekvence vlevo, výšky vpravo, sloupce poskakují do rytmu hudby. Je to zábavný vizualizační nástroj, který promění váš PortaPack v retro vypadající FM rádio se spektrálním zobrazením. Nalaďte hudební stanici v režimu WFM a sledujte reakci na zvuk. Čistě kosmetické, ale zábavné."
+        "learn": "gfxEQ je vizuální audio spektrální analyzátor, který běží při příjmu FM rozhlasu (WFM). Zobrazuje grafický ekvalizér v reálném čase  -  stejné poskakující sloupce, které byste viděli na stereo systému  -  zobrazující frekvenční obsah přijímaného zvuku. Basové frekvence vlevo, výšky vpravo, sloupce poskakují do rytmu hudby. Je to zábavný vizualizační nástroj, který promění váš PortaPack v retro vypadající FM rádio se spektrálním zobrazením. Nalaďte hudební stanici v režimu WFM a sledujte reakci na zvuk. Čistě kosmetické, ale zábavné."
       },
       "Level": {
         "description": "Měřič úrovně signálu na konkrétní frekvenci. Externí aplikace.",
@@ -617,69 +617,69 @@
       },
       "Looking Glass": {
         "description": "Širokopásmový spektrální waterfall. Tři režimy zobrazení: SPECTR, LIVE-V, PEAK-V.",
-        "learn": "Looking Glass je širokopásmový spektrální analyzátor, který skenuje přes konfigurovatelný frekvenční rozsah a zobrazuje výsledky jako waterfall. Na rozdíl od aplikace Audio (která ladí jednu frekvenci) Looking Glass skenuje široké pásmo a ukazuje vše, co je aktivní. Tři režimy zobrazení: SPECTR zobrazuje tradiční spektrální pohled (výkon vs. frekvence), LIVE-V zobrazuje živý vertikální waterfall (čas posouvaný dolů, frekvence zleva doprava, jas = síla signálu) a PEAK-V drží špičkové hodnoty. Toto je váš hlavní nástroj pro průzkum toho, co je ve vzduchu v jakémkoli pásmu — můžete skenovat celá ISM pásma, rozsah FM vysílání nebo jakékoli rozpětí, které HackRF pokrývá (1 MHz–6 GHz)."
+        "learn": "Looking Glass je širokopásmový spektrální analyzátor, který skenuje přes konfigurovatelný frekvenční rozsah a zobrazuje výsledky jako waterfall. Na rozdíl od aplikace Audio (která ladí jednu frekvenci) Looking Glass skenuje široké pásmo a ukazuje vše, co je aktivní. Tři režimy zobrazení: SPECTR zobrazuje tradiční spektrální pohled (výkon vs. frekvence), LIVE-V zobrazuje živý vertikální waterfall (čas posouvaný dolů, frekvence zleva doprava, jas = síla signálu) a PEAK-V drží špičkové hodnoty. Toto je váš hlavní nástroj pro průzkum toho, co je ve vzduchu v jakémkoli pásmu  -  můžete skenovat celá ISM pásma, rozsah FM vysílání nebo jakékoli rozpětí, které HackRF pokrývá (1 MHz-6 GHz)."
       },
       "Morse RX": {
         "description": "Dekóduje Morseovku (CW) na text.",
-        "learn": "Morseovka (CW — Continuous Wave) kóduje písmena a čísla jako sekvence krátkých signálů (tečky: ·) a dlouhých signálů (čárky: —). Vyvinuta v 30. letech 19. století, stále se dnes používá radioamatéry, protože CW signály lze dekódovat při extrémně nízkých úrovních signálu — hluboko pod tím, co je potřeba pro hlas. Aplikace Morse RX naslouchá CW signálům a automaticky je dekóduje na text na obrazovce. Funguje detekcí vzoru zapnuto/vypnuto nosné a časováním teček a čárek. Aktivní Morseovku najdete na amatérských HF pásmech (zejména kolem 7,000–7,040 MHz a 14,000–14,070 MHz). Automatické dekódování může mít problémy se slabými signály nebo neobvyklým rozestupem, ale funguje dobře se silnými, správně časovanými přenosy."
+        "learn": "Morseovka (CW  -  Continuous Wave) kóduje písmena a čísla jako sekvence krátkých signálů (tečky: ·) a dlouhých signálů (čárky:  - ). Vyvinuta v 30. letech 19. století, stále se dnes používá radioamatéry, protože CW signály lze dekódovat při extrémně nízkých úrovních signálu  -  hluboko pod tím, co je potřeba pro hlas. Aplikace Morse RX naslouchá CW signálům a automaticky je dekóduje na text na obrazovce. Funguje detekcí vzoru zapnuto/vypnuto nosné a časováním teček a čárek. Aktivní Morseovku najdete na amatérských HF pásmech (zejména kolem 7,000-7,040 MHz a 14,000-14,070 MHz). Automatické dekódování může mít problémy se slabými signály nebo neobvyklým rozestupem, ale funguje dobře se silnými, správně časovanými přenosy."
       },
       "NOAA": {
         "description": "Dekodér snímků z meteorologických satelitů NOAA APT.",
-        "learn": "NOAA provozuje flotilu polárně orbitujících meteorologických satelitů (NOAA-15, 18, 19), které nepřetržitě vysílají živé snímky počasí při obíhání Země přibližně každých 100 minut. APT (Automatic Picture Transmission) signál je analogový formát na VHF (pásmo 137 MHz) používaný od 60. let. Když satelit přelétá nad hlavou (viditelný asi 10–15 minut), vysílá snímek v odstínech šedi řádek po řádku — doslova sestavujete meteorologickou fotografii v reálném čase. PortaPack dekóduje tento APT signál přímo do obrazu na obrazovce. Potřebujete dobrou anténu (V-dipól nebo QFH anténa funguje dobře) a jasný přelet. Časy přeletů pro vaši polohu zjistíte na n2yo.com nebo Heavens-Above."
+        "learn": "NOAA provozuje flotilu polárně orbitujících meteorologických satelitů (NOAA-15, 18, 19), které nepřetržitě vysílají živé snímky počasí při obíhání Země přibližně každých 100 minut. APT (Automatic Picture Transmission) signál je analogový formát na VHF (pásmo 137 MHz) používaný od 60. let. Když satelit přelétá nad hlavou (viditelný asi 10-15 minut), vysílá snímek v odstínech šedi řádek po řádku  -  doslova sestavujete meteorologickou fotografii v reálném čase. PortaPack dekóduje tento APT signál přímo do obrazu na obrazovce. Potřebujete dobrou anténu (V-dipól nebo QFH anténa funguje dobře) a jasný přelet. Časy přeletů pro vaši polohu zjistíte na n2yo.com nebo Heavens-Above."
       },
       "NRF": {
         "description": "Dekodér protokolu Nordic nRF24L01. Bezdrátové klávesnice, myši, IoT.",
-        "learn": "nRF24L01 je široce používaný bezdrátový transceiver na 2,4 GHz od Nordic Semiconductor, nacházející se v milionech zařízení — bezdrátové klávesnice, myši, herní ovladače, RC hračky, IoT senzory a DIY Arduino/ESP projekty. Používá jednoduchý paketový protokol s adresami a kanály. Aplikace NRF dekóduje tyto přenosy a zobrazuje surová paketová data. To je obzvláště zajímavé pro bezpečnostní výzkum: některé starší bezdrátové klávesnice používající nRF24L01 vysílají stisky kláves se slabým nebo žádným šifrováním (třída zranitelností 'MouseJack'). Aplikace pomáhá pochopit, co vaše bezdrátové periferie vysílají a jak jsou tato data vystavena."
+        "learn": "nRF24L01 je široce používaný bezdrátový transceiver na 2,4 GHz od Nordic Semiconductor, nacházející se v milionech zařízení  -  bezdrátové klávesnice, myši, herní ovladače, RC hračky, IoT senzory a DIY Arduino/ESP projekty. Používá jednoduchý paketový protokol s adresami a kanály. Aplikace NRF dekóduje tyto přenosy a zobrazuje surová paketová data. To je obzvláště zajímavé pro bezpečnostní výzkum: některé starší bezdrátové klávesnice používající nRF24L01 vysílají stisky kláves se slabým nebo žádným šifrováním (třída zranitelností 'MouseJack'). Aplikace pomáhá pochopit, co vaše bezdrátové periferie vysílají a jak jsou tato data vystavena."
       },
       "POCSAG RX": {
         "description": "Dekodér POCSAG pagerových zpráv. Numerické a textové. Ruční nastavení rychlosti.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) je nejrozšířenější pagerový protokol, vyvinutý v roce 1982 a stále aktivně používaný — zejména nemocnicemi, hasiči a záchrannými službami. Pagery jsou preferovány pro kritickou komunikaci, protože pagerové sítě mají lepší prostupnost budovami než mobilní sítě a fungují i při výpadku mobilní sítě. POCSAG zprávy jsou vysílány nešifrovaně rychlostí 512, 1200 nebo 2400 baudů na frekvencích, které se liší podle země (běžné: 148–170 MHz, 450–470 MHz). PortaPack dekóduje jak numerické, tak alfanumerické zprávy. V mnoha oblastech uvidíte nemocniční stránky, restaurační upozornění a dispečerské zprávy záchranných služeb — vše v prostém textu, což zůstává významným problémem soukromí."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) je nejrozšířenější pagerový protokol, vyvinutý v roce 1982 a stále aktivně používaný  -  zejména nemocnicemi, hasiči a záchrannými službami. Pagery jsou preferovány pro kritickou komunikaci, protože pagerové sítě mají lepší prostupnost budovami než mobilní sítě a fungují i při výpadku mobilní sítě. POCSAG zprávy jsou vysílány nešifrovaně rychlostí 512, 1200 nebo 2400 baudů na frekvencích, které se liší podle země (běžné: 148-170 MHz, 450-470 MHz). PortaPack dekóduje jak numerické, tak alfanumerické zprávy. V mnoha oblastech uvidíte nemocniční stránky, restaurační upozornění a dispečerské zprávy záchranných služeb  -  vše v prostém textu, což zůstává významným problémem soukromí."
       },
       "ProtoView": {
         "description": "Generický sub-GHz protokolový analyzátor. Vizualizuje surová protokolová data.",
-        "learn": "ProtoView je protokolově agnostický signálový analyzátor pro sub-GHz frekvence (typicky 300–928 MHz ISM pásma). Místo dekódování konkrétního protokolu zachycuje surový digitální signál a zobrazuje časování na bitové úrovni — ukazuje vám skutečné jedničky a nuly, šířky pulzů a strukturu signálu. To je neocenitelné pro reverzní inženýrství neznámých protokolů: můžete vidět preambuli, synchronizační slovo, datový payload a jakékoli vzory. Je to jako logický analyzátor pro RF signály. Když narazíte na zařízení používající protokol, který není zabudovaný v Mayhem, ProtoView pomůže zjistit, co dělá. Funguje nejlépe s jednoduchými OOK a FSK modulacemi běžnými v dálkových ovladačích, senzorech a IoT zařízeních."
+        "learn": "ProtoView je protokolově agnostický signálový analyzátor pro sub-GHz frekvence (typicky 300-928 MHz ISM pásma). Místo dekódování konkrétního protokolu zachycuje surový digitální signál a zobrazuje časování na bitové úrovni  -  ukazuje vám skutečné jedničky a nuly, šířky pulzů a strukturu signálu. To je neocenitelné pro reverzní inženýrství neznámých protokolů: můžete vidět preambuli, synchronizační slovo, datový payload a jakékoli vzory. Je to jako logický analyzátor pro RF signály. Když narazíte na zařízení používající protokol, který není zabudovaný v Mayhem, ProtoView pomůže zjistit, co dělá. Funguje nejlépe s jednoduchými OOK a FSK modulacemi běžnými v dálkových ovladačích, senzorech a IoT zařízeních."
       },
       "Radiosonde": {
         "description": "Sledovač meteorologických balónů. M10, M20, M2K2, RS41-SG. GPS, výška, baterie.",
-        "learn": "Radiosondy jsou malé přístrojové balíčky vypouštěné na meteorologických balónech dvakrát denně z přibližně 900 stanic po celém světě (v 00:00 a 12:00 UTC). Jak balón stoupá do výšky přibližně 30 km během asi 90 minut, radiosonda vysílá teplotu, vlhkost, tlak, rychlost/směr větru a GPS polohu na 400–406 MHz. PortaPack dekóduje několik běžných typů: Vaisala RS41-SG (celosvětově nejrozšířenější), Meteomodem M10/M20 a M2K2. Můžete sledovat GPS polohu balónu, výšku a napětí baterie v reálném čase při stoupání a dokonce předpovídat, kde přistane. Lov radiosond — nalezení spadlého přístrojového balíčku — je populární koníček. Startovací místa ve vašem okolí zjistíte na radiosondy.info."
+        "learn": "Radiosondy jsou malé přístrojové balíčky vypouštěné na meteorologických balónech dvakrát denně z přibližně 900 stanic po celém světě (v 00:00 a 12:00 UTC). Jak balón stoupá do výšky přibližně 30 km během asi 90 minut, radiosonda vysílá teplotu, vlhkost, tlak, rychlost/směr větru a GPS polohu na 400-406 MHz. PortaPack dekóduje několik běžných typů: Vaisala RS41-SG (celosvětově nejrozšířenější), Meteomodem M10/M20 a M2K2. Můžete sledovat GPS polohu balónu, výšku a napětí baterie v reálném čase při stoupání a dokonce předpovídat, kde přistane. Lov radiosond  -  nalezení spadlého přístrojového balíčku  -  je populární koníček. Startovací místa ve vašem okolí zjistíte na radiosondy.info."
       },
       "Scanner": {
         "description": "Frekvenční skener. ~20 frekvencí/s. Barevně kódovaný (šedá/žlutá/zelená).",
-        "learn": "Aplikace Scanner rychle ladí seznam frekvencí (asi 20 za sekundu) a zastaví se, když detekuje aktivitu — přesně jako tradiční policejní skener. Frekvence jsou barevně kódovány: šedá znamená žádný signál, žlutá slabý detekovaný signál, zelená aktivní signál a skener se zastavil, abyste mohli poslouchat. Můžete načítat seznamy frekvencí z SD karty (freqman soubory) nebo ručně zadávat frekvence. Skener pokračuje v hledání po zmizení signálu. To je užitečné pro monitorování více kanálů — záchranné služby, amatérské opakovače, podnikové rádiové stanice nebo jakýkoli soubor známých aktivních frekvencí ve vašem okolí. Komunitní seznamy frekvencí pro většinu regionů jsou dostupné v repozitáři Mayhem freqman."
+        "learn": "Aplikace Scanner rychle ladí seznam frekvencí (asi 20 za sekundu) a zastaví se, když detekuje aktivitu  -  přesně jako tradiční policejní skener. Frekvence jsou barevně kódovány: šedá znamená žádný signál, žlutá slabý detekovaný signál, zelená aktivní signál a skener se zastavil, abyste mohli poslouchat. Můžete načítat seznamy frekvencí z SD karty (freqman soubory) nebo ručně zadávat frekvence. Skener pokračuje v hledání po zmizení signálu. To je užitečné pro monitorování více kanálů  -  záchranné služby, amatérské opakovače, podnikové rádiové stanice nebo jakýkoli soubor známých aktivních frekvencí ve vašem okolí. Komunitní seznamy frekvencí pro většinu regionů jsou dostupné v repozitáři Mayhem freqman."
       },
       "Search": {
         "description": "Hledání ve frekvenčním rozsahu s waterfallem. Režim 'hledej a zůstaň'.",
-        "learn": "Search je jako Scanner, ale pro objevování neznámých signálů. Místo kontroly seznamu známých frekvencí nepřetržitě skenuje frekvenční rozsah a zastaví se, když najde jakýkoli aktivní signál. Vestavěný waterfall displej zobrazuje aktivitu signálu v čase, což usnadňuje rozpoznání přerušovaných přenosů. Režim 'hledej a zůstaň' se zamkne na nalezený signál a zůstane tam, dokud nepřestane, a poté pokračuje v hledání. Toto je aplikace pro průzkum frekvenčního pásma a objevování aktivních signálů — nepotřebujete znát přesné frekvence předem. Kombinujte s Looking Glass: použijte Looking Glass k vizuální identifikaci aktivních pásem, pak použijte Search k poslechu."
+        "learn": "Search je jako Scanner, ale pro objevování neznámých signálů. Místo kontroly seznamu známých frekvencí nepřetržitě skenuje frekvenční rozsah a zastaví se, když najde jakýkoli aktivní signál. Vestavěný waterfall displej zobrazuje aktivitu signálu v čase, což usnadňuje rozpoznání přerušovaných přenosů. Režim 'hledej a zůstaň' se zamkne na nalezený signál a zůstane tam, dokud nepřestane, a poté pokračuje v hledání. Toto je aplikace pro průzkum frekvenčního pásma a objevování aktivních signálů  -  nepotřebujete znát přesné frekvence předem. Kombinujte s Looking Glass: použijte Looking Glass k vizuální identifikaci aktivních pásem, pak použijte Search k poslechu."
       },
       "SSTV RX": {
         "description": "Přijímač Slow Scan Television. Dekóduje obrazové přenosy.",
-        "learn": "SSTV (Slow Scan Television) přenáší statické obrazy přes rádio kódováním jasu pixelů jako zvukové tóny (1200–2300 Hz). Jeden obraz trvá 30–120 sekund, sestavuje se na obrazovce řádek po řádku. SSTV používají radioamatéři od 60. let a stále je aktivní — běžné volací frekvence zahrnují 14,230 MHz (pásmo 20m) a 145,500 MHz (2m FM). Mezinárodní vesmírná stanice (ISS) pravidelně vysílá SSTV obrazy na 145,800 MHz během speciálních událostí a kdokoli s přijímačem je může dekódovat. Aplikace SSTV RX na PortaPack automaticky detekuje kódovací režim (Scottie, Martin, Robot atd.) a sestavuje obraz na obrazovce při příjmu."
+        "learn": "SSTV (Slow Scan Television) přenáší statické obrazy přes rádio kódováním jasu pixelů jako zvukové tóny (1200-2300 Hz). Jeden obraz trvá 30-120 sekund, sestavuje se na obrazovce řádek po řádku. SSTV používají radioamatéři od 60. let a stále je aktivní  -  běžné volací frekvence zahrnují 14,230 MHz (pásmo 20m) a 145,500 MHz (2m FM). Mezinárodní vesmírná stanice (ISS) pravidelně vysílá SSTV obrazy na 145,800 MHz během speciálních událostí a kdokoli s přijímačem je může dekódovat. Aplikace SSTV RX na PortaPack automaticky detekuje kódovací režim (Scottie, Martin, Robot atd.) a sestavuje obraz na obrazovce při příjmu."
       },
       "SubCar": {
         "description": "Dekodér subnosných FM vysílání (SCA služby).",
-        "learn": "FM rozhlasové stanice mohou přenášet skryté zvukové kanály nazývané subnosné (SCA — Subsidiary Communications Authorization) vedle hlavního stereo zvuku. Tyto subnosné sedí nad stereo signálem na 67 kHz nebo 92 kHz a nesou oddělený zvukový obsah: služby hudebního pozadí (jako původní Muzak), čtecí služby pro zrakově postižené, cizojazyčné programy nebo datové služby. SubCar dekóduje tyto skryté kanály, ke kterým normální FM rádio nemá přístup. Většina lidí neví, že existují — jsou součástí FM vysílání od 50. let. Dostupnost se liší podle stanice a regionu; mnoho stanic subnosné již nepoužívá, ale některé stále nesou čtecí služby nebo specializovaný zvukový obsah."
+        "learn": "FM rozhlasové stanice mohou přenášet skryté zvukové kanály nazývané subnosné (SCA  -  Subsidiary Communications Authorization) vedle hlavního stereo zvuku. Tyto subnosné sedí nad stereo signálem na 67 kHz nebo 92 kHz a nesou oddělený zvukový obsah: služby hudebního pozadí (jako původní Muzak), čtecí služby pro zrakově postižené, cizojazyčné programy nebo datové služby. SubCar dekóduje tyto skryté kanály, ke kterým normální FM rádio nemá přístup. Většina lidí neví, že existují  -  jsou součástí FM vysílání od 50. let. Dostupnost se liší podle stanice a regionu; mnoho stanic subnosné již nepoužívá, ale některé stále nesou čtecí služby nebo specializovaný zvukový obsah."
       },
       "SubGhzD": {
         "description": "Dekodér sub-GHz protokolů. Klíčenky, garážové ovladače, meteorologické stanice, ISM zařízení. Doporučeno: AMP 0, LNA 32, VGA 20.",
-        "learn": "SubGhzD (Sub-GHz Decoder) je jedna z nejpopulárnějších aplikací Mayhem — dekóduje protokoly používané stovkami běžných bezdrátových zařízení pracujících v ISM (Industrial, Scientific, Medical) pásmech na 315, 433, 868 a 915 MHz. To zahrnuje klíčenky od aut (pevné i některé rolling kódy), otvírače garážových vrat, bezdrátové zvonky, meteorologické stanice, senzory tlaku v pneumatikách, bezdrátové teploměry, senzory vlhkosti půdy a mnoho IoT zařízení. Aplikace identifikuje protokol, zobrazuje surová data a může ukládat záznamy na SD kartu. Začněte s AMP vypnutý, LNA 32, VGA 20 — to jsou doporučená nastavení zesílení. Stiskněte dálkový ovladač nebo počkejte na přenos meteorologické stanice a uvidíte dekódovaná data."
+        "learn": "SubGhzD (Sub-GHz Decoder) je jedna z nejpopulárnějších aplikací Mayhem  -  dekóduje protokoly používané stovkami běžných bezdrátových zařízení pracujících v ISM (Industrial, Scientific, Medical) pásmech na 315, 433, 868 a 915 MHz. To zahrnuje klíčenky od aut (pevné i některé rolling kódy), otvírače garážových vrat, bezdrátové zvonky, meteorologické stanice, senzory tlaku v pneumatikách, bezdrátové teploměry, senzory vlhkosti půdy a mnoho IoT zařízení. Aplikace identifikuje protokol, zobrazuje surová data a může ukládat záznamy na SD kartu. Začněte s AMP vypnutý, LNA 32, VGA 20  -  to jsou doporučená nastavení zesílení. Stiskněte dálkový ovladač nebo počkejte na přenos meteorologické stanice a uvidíte dekódovaná data."
       },
       "TPMS RX": {
         "description": "Dekodér monitorování tlaku v pneumatikách. ID senzorů, tlak, teplota.",
-        "learn": "Senzory TPMS (Tire Pressure Monitoring System) jsou povinné ve všech nových vozidlech v USA (od 2007) a EU (od 2014). Každá pneumatika obsahuje malý bezdrátový senzor, který vysílá tlak a teplotu přibližně každých 60 sekund na 315 MHz (Severní Amerika) nebo 433 MHz (Evropa). Každý senzor má unikátní 32bitové ID přiřazené ke konkrétní pneumatice. PortaPack dekóduje tyto přenosy a zobrazuje ID senzoru, tlak (PSI nebo kPa) a teplotu pro blízká vozidla. Na parkovišti můžete vidět desítky hlásících senzorů. To je známý problém soukromí — TPMS ID lze použít ke sledování konkrétních vozidel, což bylo prokázáno v akademickém bezpečnostním výzkumu."
+        "learn": "Senzory TPMS (Tire Pressure Monitoring System) jsou povinné ve všech nových vozidlech v USA (od 2007) a EU (od 2014). Každá pneumatika obsahuje malý bezdrátový senzor, který vysílá tlak a teplotu přibližně každých 60 sekund na 315 MHz (Severní Amerika) nebo 433 MHz (Evropa). Každý senzor má unikátní 32bitové ID přiřazené ke konkrétní pneumatice. PortaPack dekóduje tyto přenosy a zobrazuje ID senzoru, tlak (PSI nebo kPa) a teplotu pro blízká vozidla. Na parkovišti můžete vidět desítky hlásících senzorů. To je známý problém soukromí  -  TPMS ID lze použít ke sledování konkrétních vozidel, což bylo prokázáno v akademickém bezpečnostním výzkumu."
       },
       "Weather": {
         "description": "Dekodér bezdrátových meteorologických stanic. Teplota, vlhkost, ID senzoru.",
-        "learn": "Spotřebitelské bezdrátové meteorologické stanice (Acurite, LaCrosse, Oregon Scientific, Ambient Weather atd.) používají jednoduché nešifrované protokoly na ISM pásmech — typicky 433,92 MHz (celosvětově), 868 MHz (Evropa) nebo 915 MHz (Severní Amerika). Venkovní senzory vysílají teplotu, vlhkost, rychlost větru, srážky a UV index každých 30–60 sekund. Aplikace Weather dekóduje tyto přenosy a zobrazuje hodnoty s unikátním ID senzoru. Můžete bezdrátově monitorovat vlastní meteorologickou stanici, nebo v jakékoli čtvrti pravděpodobně zachytíte hodnoty ze stanic sousedů v okruhu několika desítek metrů. Protokoly jsou dobře zdokumentovány a používají jednoduchou OOK nebo FSK modulaci."
+        "learn": "Spotřebitelské bezdrátové meteorologické stanice (Acurite, LaCrosse, Oregon Scientific, Ambient Weather atd.) používají jednoduché nešifrované protokoly na ISM pásmech  -  typicky 433,92 MHz (celosvětově), 868 MHz (Evropa) nebo 915 MHz (Severní Amerika). Venkovní senzory vysílají teplotu, vlhkost, rychlost větru, srážky a UV index každých 30-60 sekund. Aplikace Weather dekóduje tyto přenosy a zobrazuje hodnoty s unikátním ID senzoru. Můžete bezdrátově monitorovat vlastní meteorologickou stanici, nebo v jakékoli čtvrti pravděpodobně zachytíte hodnoty ze stanic sousedů v okruhu několika desítek metrů. Protokoly jsou dobře zdokumentovány a používají jednoduchou OOK nebo FSK modulaci."
       },
       "WeFax": {
         "description": "Přijímač/dekodér HF meteorologického faxu. Námořní a letecké vysílání.",
-        "learn": "Radiofax (WeFax nebo Weather Fax) je metoda přenosu meteorologických map, map teploty povrchu moře a zpráv o ledových podmínkách přes HF rádio. Používá se od 40. let a stále se aktivně vysílá pro námořní uživatele, kteří potřebují meteorologické mapy na moři bez internetu. Signál kóduje obrazová data jako měnící se zvukové tóny (FM modulace), sestavuje obraz řádek po řádku — podobně jako fax, ale přes rádio. Klíčové stanice zahrnují NOAA (Boston, New Orleans, Kodiak), JMH Tokyo a DWD Hamburg. Běžné frekvence: 3–25 MHz HF pásma. PortaPack dekóduje zvuk do meteorologické mapy na obrazovce. Nejlepší výsledky s HF anténou a během plánovaných vysílacích časů stanice (publikovaných v oficiálních vysílacích programech)."
+        "learn": "Radiofax (WeFax nebo Weather Fax) je metoda přenosu meteorologických map, map teploty povrchu moře a zpráv o ledových podmínkách přes HF rádio. Používá se od 40. let a stále se aktivně vysílá pro námořní uživatele, kteří potřebují meteorologické mapy na moři bez internetu. Signál kóduje obrazová data jako měnící se zvukové tóny (FM modulace), sestavuje obraz řádek po řádku  -  podobně jako fax, ale přes rádio. Klíčové stanice zahrnují NOAA (Boston, New Orleans, Kodiak), JMH Tokyo a DWD Hamburg. Běžné frekvence: 3-25 MHz HF pásma. PortaPack dekóduje zvuk do meteorologické mapy na obrazovce. Nejlepší výsledky s HF anténou a během plánovaných vysílacích časů stanice (publikovaných v oficiálních vysílacích programech)."
       }
     },
     "vendors": {
       "Great Scott Gadgets": {
         "description": "Původní tvůrce a návrhář HackRF One. Společnost Michaela Ossmanna. Definitivní zdroj autentických desek HackRF.",
-        "note": "Neprodává doplňky PortaPack — pouze samotný HackRF One."
+        "note": "Neprodává doplňky PortaPack  -  pouze samotný HackRF One."
       },
       "OpenSourceSDRLab": {
         "description": "Návrhář a výrobce PortaPack H4M (nejpopulárnější varianta PortaPack). Prodává přímo i přes prodejce.",
@@ -707,7 +707,7 @@
         "description": "Jeden z největších globálních distributorů elektroniky. Autorizovaný zdroj HackRF One."
       },
       "Amazon": {
-        "description": "Dostupný od různých prodejců. Kvalita se výrazně liší — pečlivě čtěte recenze a kontrolujte hodnocení prodejců.",
+        "description": "Dostupný od různých prodejců. Kvalita se výrazně liší  -  pečlivě čtěte recenze a kontrolujte hodnocení prodejců.",
         "note": "Vysoké riziko klonů a padělaných desek. Hledejte prodejce se zavedenou historií a pozitivními recenzemi konkrétně zmiňujícími autentický hardware."
       },
       "AliExpress": {
@@ -721,12 +721,12 @@
         "description": "Great Scott Gadgets navrhl a prodává HackRF One. OpenSourceSDRLab navrhl a vyrábí PortaPack H4M. Nákup přímo od výrobce je obecně nejspolehlivější způsob, jak zajistit autentický hardware."
       },
       "1": {
-        "title": "Klony existují — a jsou běžné",
+        "title": "Klony existují  -  a jsou běžné",
         "description": "HackRF je open-source hardware, takže ho může vyrábět kdokoli. Klony se pohybují od 'funguje v pořádku' po 'mrtvý při dodání'. Riziko je na vás."
       },
       "2": {
         "title": "Pokud se cena zdá příliš dobrá na to, aby byla pravdivá...",
-        "description": "V závislosti na prodejci, regionu a dostupnosti může originální HackRF One stát 200–350 USD i více z ověřených zdrojů. Ceny se liší, ale desky výrazně pod obvyklým rozsahem jsou pravděpodobněji klony. Některé klony fungují v pořádku, mnoho ne — výsledky se mohou lišit."
+        "description": "V závislosti na prodejci, regionu a dostupnosti může originální HackRF One stát 200-350 USD i více z ověřených zdrojů. Ceny se liší, ale desky výrazně pod obvyklým rozsahem jsou pravděpodobněji klony. Některé klony fungují v pořádku, mnoho ne  -  výsledky se mohou lišit."
       },
       "3": {
         "title": "Nejprve zkontrolujte komunitu",
@@ -737,7 +737,7 @@
         "description": "H4M je aktuálně doporučovaný PortaPack s nejlepší podporou firmwaru Mayhem. Starší verze H1/H2 mají méně funkcí a odlišný hardware."
       },
       "5": {
-        "title": "Balíčky z marketplace — pečlivě zkontrolujte",
+        "title": "Balíčky z marketplace  -  pečlivě zkontrolujte",
         "description": "Balíčky z Amazonu a AliExpressu často obsahují antény, pouzdra a příslušenství. Kvalita přiloženého příslušenství se divoce liší bez ohledu na samotnou desku."
       }
     },
@@ -773,18 +773,18 @@
     "safety": {
       "mistakes": {
         "Leaving the internal amp ON near strong signal sources": {
-          "description": "Vstupní zesilovač HackRF (MGA-81563) nemá před sebou žádný pásmový filtr — zesiluje celý rozsah 1 MHz až 6 GHz současně, bez ohledu na naladěnou frekvenci.",
+          "description": "Vstupní zesilovač HackRF (MGA-81563) nemá před sebou žádný pásmový filtr  -  zesiluje celý rozsah 1 MHz až 6 GHz současně, bez ohledu na naladěnou frekvenci.",
           "symptoms": [
             "Zapnutý AMP zeslabuje signály místo zesílení",
             "Snížená citlivost ve všech pásmech",
-            "Žádné viditelné poškození — selhání je tiché"
+            "Žádné viditelné poškození  -  selhání je tiché"
           ],
           "prevention": [
             "Nechte AMP VYPNUTÝ, pokud ho specificky nepotřebujete",
             "Použijte externí pásmový filtr před vstupem HackRF",
-            "Přidejte 10–20 dB inline atenuátor v blízkosti silných vysílačů"
+            "Přidejte 10-20 dB inline atenuátor v blízkosti silných vysílačů"
           ],
-          "technical": "Maximální bezpečný vstup se zapnutým AMP je -5 dBm. Mobilní vysílač na 900 MHz 100 m daleko dodává přibližně +5 až +10 dBm — dostatek k zničení MGA-81563 i při naladění na 433 MHz."
+          "technical": "Maximální bezpečný vstup se zapnutým AMP je -5 dBm. Mobilní vysílač na 900 MHz 100 m daleko dodává přibližně +5 až +10 dBm  -  dostatek k zničení MGA-81563 i při naladění na 433 MHz."
         },
         "Using a 5W handheld radio within inches": {
           "description": "Nejčastěji hlášený scénář poškození v komunitě HackRF. Ruční rádiové stanice mají výkon 5W (37 dBm) a na krátkou vzdálenost se signál přímo naváže do anténního portu HackRF.",
@@ -801,18 +801,18 @@
           "technical": "Ruční rádio 5W na vzdálenost 2,5 cm produkuje ~+7 až +10 dBm na anténním portu kvůli vazbě v blízkém poli. Absolutní maximum vstupu je +10 dBm (AMP VYP) nebo -5 dBm (AMP ZAP). Jediné stisknutí vysílání může být fatální."
         },
         "Connecting a satellite LNB directly": {
-          "description": "Satelitní LNB (Low-Noise Block konvertory) mají 50–65 dB vestavěného zisku a jsou navrženy pro satelitní přijímač, ne pro SDR. Přímé připojení okamžitě zničí vstupní stupeň.",
+          "description": "Satelitní LNB (Low-Noise Block konvertory) mají 50-65 dB vestavěného zisku a jsou navrženy pro satelitní přijímač, ne pro SDR. Přímé připojení okamžitě zničí vstupní stupeň.",
           "symptoms": [
             "Okamžité a úplné selhání LNA",
             "Zařízení se může tvářit funkčně, ale nic nepřijímá",
             "Bez možnosti opravy bez výměny součástek"
           ],
           "prevention": [
-            "Vždy použijte 20–30 dB atenuátor mezi LNB a HackRF",
+            "Vždy použijte 20-30 dB atenuátor mezi LNB a HackRF",
             "Zkontrolujte specifikaci zisku LNB před připojením",
             "Zvažte bias-tee se správnou izolací napájení"
           ],
-          "technical": "LNB se ziskem 60 dB dodává +23 až +26 dBm do zařízení s maximem -5 dBm (AMP ZAP). To je 28–31 dB nad absolutním maximem — přibližně 1000× bezpečná úroveň výkonu."
+          "technical": "LNB se ziskem 60 dB dodává +23 až +26 dBm do zařízení s maximem -5 dBm (AMP ZAP). To je 28-31 dB nad absolutním maximem  -  přibližně 1000× bezpečná úroveň výkonu."
         },
         "Airport radar exposure": {
           "description": "Letištní přehledové radary pracují s extrémně vysokými výkony. I v režimu pouze příjmu se zapnutým AMP může intenzita elektromagnetického pole v blízkosti letiště překročit vstupní limity HackRF.",
@@ -843,7 +843,7 @@
           "technical": "Otevřený SMA má VSWR nekonečno (útlum odrazu 0 dB). Při 15 dBm (~32 mW) se veškerý výkon odrazí zpět. PA RFFC5072 v HackRF je dimenzován na omezený odražený výkon a nemá vestavěný izolátor."
         },
         "ESD while connecting antennas": {
-          "description": "Elektrostatický výboj z vašeho těla nebo nabité antény jde přímo do RF vstupního stupně přes středový pin SMA. Poškození je často jemné a postupné — nemusíte si ho všimnout týdny.",
+          "description": "Elektrostatický výboj z vašeho těla nebo nabité antény jde přímo do RF vstupního stupně přes středový pin SMA. Poškození je často jemné a postupné  -  nemusíte si ho všimnout týdny.",
           "symptoms": [
             "AMP funguje jako atenuátor místo zesílení",
             "Postupná ztráta citlivosti v čase",
@@ -854,7 +854,7 @@
             "Uzemněte sebe i anténu před připojením",
             "V suchém prostředí používejte antistatický náramek"
           ],
-          "technical": "ESD lidského těla je typicky 2–15 kV se špičkovými proudy 10–30 A po nanosekundy. LNA MGA-81563 má odolnost proti ESD pouze ~200 V (HBM). I malý statický výboj, který necítíte (<3 kV), může degradovat zesilovač."
+          "technical": "ESD lidského těla je typicky 2-15 kV se špičkovými proudy 10-30 A po nanosekundy. LNA MGA-81563 má odolnost proti ESD pouze ~200 V (HBM). I malý statický výboj, který necítíte (<3 kV), může degradovat zesilovač."
         },
         "TX at max gain with mismatched antenna": {
           "description": "Použití plného TX zesílení s anténou, která není přizpůsobena vaší frekvenci, způsobuje významný odraz výkonu. I když HackRF vysílá jen ~15 dBm, opakovaný stres z odraženého výkonu degraduje PA v čase.",
@@ -865,13 +865,13 @@
           ],
           "prevention": [
             "Použijte anténu navrženou pro vaši cílovou frekvenci",
-            "Zkontrolujte SWR před vysíláním — cílte na < 2:1",
+            "Zkontrolujte SWR před vysíláním  -  cílte na < 2:1",
             "Začněte na nízkém TX zesílení a postupně zvyšujte při monitorování"
           ],
           "technical": "Při 15 dBm s VSWR nepřizpůsobením 10:1 se přibližně 70 % výkonu odrazí zpět. HackRF nemá cirkulátor ani izolátor, takže odražený výkon jde přímo zpět do PA stupně."
         },
         "Not using a data-capable USB cable": {
-          "description": "Mnoho USB kabelů je pouze nabíjecích — mají napájecí vodiče, ale žádné datové linky. Toto je nejčastější příčina 'můj HackRF nefunguje' a stojí hodiny zbytečného ladění.",
+          "description": "Mnoho USB kabelů je pouze nabíjecích  -  mají napájecí vodiče, ale žádné datové linky. Toto je nejčastější příčina 'můj HackRF nefunguje' a stojí hodiny zbytečného ladění.",
           "symptoms": [
             "Chyby 'Device not found' nebo 'No HackRF boards found'",
             "Zařízení se zapne (LED svítí), ale software ho nerozpozná",
@@ -879,8 +879,8 @@
           ],
           "prevention": [
             "Označte si ověřené datové kabely",
-            "Vyzkoušejte 3–5 různých kabelů, než podezříváte hardware",
-            "Používejte krátké kabely (< 1 m) — kvalita USB 2.0 signálu se s délkou zhoršuje",
+            "Vyzkoušejte 3-5 různých kabelů, než podezříváte hardware",
+            "Používejte krátké kabely (< 1 m)  -  kvalita USB 2.0 signálu se s délkou zhoršuje",
             "USB 3.0 porty a kabely bývají spolehlivější"
           ],
           "technical": "HackRF vyžaduje USB 2.0 High Speed (480 Mbps). Kabely pouze na nabíjení nemají vůbec datové linky D+ a D-. Některé levné datové kabely mají nedostatečné stínění způsobující přerušované spojení při vysoké rychlosti."
@@ -928,9 +928,9 @@
           "source": "GitHub Issue #541"
         },
         "The Satellite LNB Direct Connection": {
-          "description": "Uživatel připojil satelitní LNB (Low Noise Block downconverter) přímo na SMA vstup HackRF bez jakéhokoli útlumu. Satelitní LNB mají přibližně 50–65 dB vestavěného zisku pro zesílení slabých satelitních signálů. Výstup z LNB byl naměřen na +23 až +26 dBm, což je více než 10 dB nad absolutním maximálním bezpečným vstupem HackRF +10 dBm. Čip LNA MGA-81563 byl okamžitě a trvale zničen. Toto je jeden z nejčastěji hlášených scénářů poškození HackRF, protože uživatelé si neuvědomují, jaký zisk LNB poskytuje.",
+          "description": "Uživatel připojil satelitní LNB (Low Noise Block downconverter) přímo na SMA vstup HackRF bez jakéhokoli útlumu. Satelitní LNB mají přibližně 50-65 dB vestavěného zisku pro zesílení slabých satelitních signálů. Výstup z LNB byl naměřen na +23 až +26 dBm, což je více než 10 dB nad absolutním maximálním bezpečným vstupem HackRF +10 dBm. Čip LNA MGA-81563 byl okamžitě a trvale zničen. Toto je jeden z nejčastěji hlášených scénářů poškození HackRF, protože uživatelé si neuvědomují, jaký zisk LNB poskytuje.",
           "outcome": "Čip LNA okamžitě zničen při připojení. Přijímací zesilovač trvale nefunkční.",
-          "prevention": "Vždy zkontrolujte výstupní výkon jakéhokoli aktivního zařízení před připojením k HackRF. Použijte 20–30 dB inline atenuátor mezi LNB a HackRF. Maximální bezpečný vstup HackRF je +10 dBm (10 mW). Cokoli s vestavěným ziskem (LNB, zesílené antény, aktivní sondy) by mělo být nejprve utlumeno.",
+          "prevention": "Vždy zkontrolujte výstupní výkon jakéhokoli aktivního zařízení před připojením k HackRF. Použijte 20-30 dB inline atenuátor mezi LNB a HackRF. Maximální bezpečný vstup HackRF je +10 dBm (10 mW). Cokoli s vestavěným ziskem (LNB, zesílené antény, aktivní sondy) by mělo být nejprve utlumeno.",
           "source": "GitHub Issue #974"
         },
         "The Full-Power DAB Transmission": {
@@ -1072,13 +1072,13 @@
       }
     },
     "quickStartSteps": {
-      "s1": "Ověřte, že váš USB kabel podporuje data (ne pouze nabíjení) — to je problém č. 1 při nastavení",
-      "s2": "Vložte MicroSD kartu (FAT32, doporučeno 8–32 GB) — ukládá záznamy, nastavení a aplikace",
+      "s1": "Ověřte, že váš USB kabel podporuje data (ne pouze nabíjení)  -  to je problém č. 1 při nastavení",
+      "s2": "Vložte MicroSD kartu (FAT32, doporučeno 8-32 GB)  -  ukládá záznamy, nastavení a aplikace",
       "s3": "Stáhněte nejnovější firmware Mayhem z GitHub releases a zkopírujte .ppfw.tar na kořen SD karty",
-      "s4": "Připojte teleskopickou anténu (40 MHz–6 GHz) k SMA portu — utáhněte pouze prsty, nikdy klíčem",
-      "s5": "Před manipulací se uzemněte — ESD na středový pin SMA může poškodit LNA",
+      "s4": "Připojte teleskopickou anténu (40 MHz-6 GHz) k SMA portu  -  utáhněte pouze prsty, nikdy klíčem",
+      "s5": "Před manipulací se uzemněte  -  ESD na středový pin SMA může poškodit LNA",
       "s6": "Mějte připravený 50-ohmový dummy load, pokud plánujete testovat TX aplikace",
-      "s7": "Posuňte vypínač NAHORU — počkejte na zobrazení hlavního menu Mayhem",
+      "s7": "Posuňte vypínač NAHORU  -  počkejte na zobrazení hlavního menu Mayhem",
       "s8": "Zkontrolujte verzi firmwaru na stavovém řádku (aktuální: v2.3.2)",
       "s9": "Přejděte na Settings → SD Card → Test pro ověření, že je SD karta detekována a funkční",
       "s10": "Přejděte na Settings → UI → nastavte citlivost enkodéru podle preference (nízká/normální/vysoká)",
@@ -1086,18 +1086,18 @@
       "s12": "Přejděte na Receive → Audio",
       "s13": "Nastavte režim na 'WFM' (širokopásmové FM)",
       "s14": "Nastavte frekvenci na místní FM stanici (např. 101,1 MHz)",
-      "s15": "Nastavte zesílení: LNA=16, VGA=20, AMP=0 (VYP) — vždy začněte s AMP vypnutým",
-      "s16": "Zvyšte hlasitost na 40–60 — měli byste slyšet stanici",
-      "s17": "Sledujte RSSI ukazatel a waterfall — silný signál se zobrazí jako jasný vertikální pruh",
+      "s15": "Nastavte zesílení: LNA=16, VGA=20, AMP=0 (VYP)  -  vždy začněte s AMP vypnutým",
+      "s16": "Zvyšte hlasitost na 40-60  -  měli byste slyšet stanici",
+      "s17": "Sledujte RSSI ukazatel a waterfall  -  silný signál se zobrazí jako jasný vertikální pruh",
       "s18": "Pokud je slabý: nejprve zvyšte VGA, pak LNA. Pokud přebuzení/zkreslení: snižte zesílení",
       "s19": "Nalaďte známou FM stanici a zjistěte, zda je frekvence mírně posunutá",
       "s20": "Přejděte na Settings → Radio → Frequency Correction a upravte, dokud se stanice nezacentruje",
-      "s21": "Tímto se koriguje offset TCXO — zlepšuje přesnost ve všech aplikacích",
-      "s22": "Před jakýmkoli TX: připojte 50-ohmový dummy load nebo frekvenčně přizpůsobenou anténu — nikdy nevysílejte do volného prostoru",
+      "s21": "Tímto se koriguje offset TCXO  -  zlepšuje přesnost ve všech aplikacích",
+      "s22": "Před jakýmkoli TX: připojte 50-ohmový dummy load nebo frekvenčně přizpůsobenou anténu  -  nikdy nevysílejte do volného prostoru",
       "s23": "Naučte se nouzové zastavení TX: tlačítko Stop → Šipka zpět → RESET → Vypnout",
       "s24": "Nikdy neprovozujte ve vzdálenosti menší než 3 metry od aktivních vysílačů (ruční stanice, routery) při příjmu",
       "s25": "Klepněte na šipku zpět pro návrat do menu",
-      "s26": "Posuňte vypínač DOLŮ pro vypnutí — vždy vypněte před odpojením antény"
+      "s26": "Posuňte vypínač DOLŮ pro vypnutí  -  vždy vypněte před odpojením antény"
     },
     "quickStartSections": {
       "beforePowerOn": "Před zapnutím",

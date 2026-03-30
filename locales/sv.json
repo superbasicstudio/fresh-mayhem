@@ -71,11 +71,11 @@
       },
       "receive": {
         "label": "Mottagningsappar",
-        "desc": "Passiv spaning — ADS-B, POCSAG, SubGhzD, BLE och mer"
+        "desc": "Passiv spaning  -  ADS-B, POCSAG, SubGhzD, BLE och mer"
       },
       "transmit": {
         "label": "Sändningsappar",
-        "desc": "Aktiv testning — OOK, replay, FlipperTX, BLE TX (endast auktoriserad användning)"
+        "desc": "Aktiv testning  -  OOK, replay, FlipperTX, BLE TX (endast auktoriserad användning)"
       },
       "tools": {
         "label": "Verktyg och inställningar",
@@ -88,7 +88,7 @@
       },
       "frequencies": {
         "label": "Frekvensreferens",
-        "stat": "1 MHz – 6 GHz",
+        "stat": "1 MHz - 6 GHz",
         "desc": "RF-spektrumkarta, förbjudna frekvenser, lagliga TX-band, påföljder"
       },
       "learn": {
@@ -113,7 +113,7 @@
     "portapack": "PortaPack",
     "portapackValue": "H4M",
     "frequency": "Frekvens",
-    "frequencyValue": "1 MHz – 6 GHz",
+    "frequencyValue": "1 MHz - 6 GHz",
     "txPower": "TX-effekt",
     "txPowerValue": "~15 dBm (32 mW)",
     "rxApps": "RX-appar",
@@ -161,7 +161,7 @@
   },
   "receive": {
     "title": "Mottagningsappar",
-    "subtitle": "Alla {{count}} enbart mottagande applikationer i Mayhem-firmware. Ingen sändning involverad — lagligheten för passiv mottagning varierar per region. Kontrollera alltid lokala lagar.",
+    "subtitle": "Alla {{count}} enbart mottagande applikationer i Mayhem-firmware. Ingen sändning involverad  -  lagligheten för passiv mottagning varierar per region. Kontrollera alltid lokala lagar.",
     "filterPlaceholder": "Filtrera mottagningsappar...",
     "apps": "appar",
     "learnMore": "Läs mer",
@@ -170,7 +170,7 @@
   },
   "transmit": {
     "title": "Sändningsappar",
-    "subtitle": "Alla {{count}} sändningsapplikationer i Mayhem-firmware. Varje bedömd efter farlighetsnivå — använd alltid en dummy load eller matchad antenn.",
+    "subtitle": "Alla {{count}} sändningsapplikationer i Mayhem-firmware. Varje bedömd efter farlighetsnivå  -  använd alltid en dummy load eller matchad antenn.",
     "warning": "Alla TX-appar kräver en antenn eller dummy load. Sänd aldrig utan ansluten last. Dölj Jammer, GPS Sim och ADS-B TX via App Manager.",
     "filterPlaceholder": "Filtrera sändningsappar...",
     "apps": "appar",
@@ -185,7 +185,7 @@
   },
   "safety": {
     "title": "Säkerhetscenter",
-    "subtitle": "Vanliga misstag, verkliga skadehistorier, TX-farlighetsbedömningar och förstärkarbeteende för HackRF One + PortaPack. Informationen är endast i utbildningssyfte — inte juridisk rådgivning. Kontrollera alltid dina lokala regler.",
+    "subtitle": "Vanliga misstag, verkliga skadehistorier, TX-farlighetsbedömningar och förstärkarbeteende för HackRF One + PortaPack. Informationen är endast i utbildningssyfte  -  inte juridisk rådgivning. Kontrollera alltid dina lokala regler.",
     "tabs": {
       "mistakes": "Nybörjarmisstag",
       "stories": "Skadehistorier",
@@ -209,11 +209,11 @@
   },
   "frequencies": {
     "title": "Lär dig om radiofrekvenser (RF)",
-    "subtitle": "RF-spektrumtäckning från 1 MHz till 6 GHz — förbjudna zoner, lagliga TX-band och påföljdsreferens för USA.",
+    "subtitle": "RF-spektrumtäckning från 1 MHz till 6 GHz  -  förbjudna zoner, lagliga TX-band och påföljdsreferens för USA.",
     "spectrumTitle": "RF-spektrumtäckning",
-    "bandMapTitle": "Bandkarta — förbjuden vs laglig TX (1 MHz – 6 GHz)",
+    "bandMapTitle": "Bandkarta  -  förbjuden vs laglig TX (1 MHz - 6 GHz)",
     "bandMapDesc": "Interaktiv karta som visar begränsade (röda) och tillåtna (gröna) frekvensband på logaritmisk skala. Hovra över ett band för detaljer. Gul överlappning indikerar var lagliga ISM-band delar spektrum med begränsade tjänster.",
-    "noGoTitle": "Förbjudna frekvenser — amerikanska federala restriktioner",
+    "noGoTitle": "Förbjudna frekvenser  -  amerikanska federala restriktioner",
     "legalTitle": "Lagliga TX-band (med villkor)",
     "penaltiesTitle": "Rättsliga konsekvenser (amerikansk federal lag)",
     "band": "Band",
@@ -223,7 +223,7 @@
     "violation": "Överträdelse",
     "law": "Lag",
     "penalty": "Påföljd",
-    "disclaimer": "Visade frekvensrestriktioner och påföljder baseras på amerikanska federala regler (FCC/FAA). Lagar varierar avsevärt mellan länder och regioner. Detta är inte juridisk rådgivning — verifiera alltid reglerna i din jurisdiktion innan du sänder."
+    "disclaimer": "Visade frekvensrestriktioner och påföljder baseras på amerikanska federala regler (FCC/FAA). Lagar varierar avsevärt mellan länder och regioner. Detta är inte juridisk rådgivning  -  verifiera alltid reglerna i din jurisdiktion innan du sänder."
   },
   "learn": {
     "title": "Lärande",
@@ -240,8 +240,8 @@
     "all": "Alla"
   },
   "quickstart": {
-    "title": "HackRF + PortaPack — Snabbstart",
-    "subtitle": "Komplett installationsguide från uppackning till din första FM-mottagning. Täcker SD-kortsförberedelse, firmware, kalibrering, säkerhet och avstängning. Bocka av varje steg — framsteg sparas lokalt.",
+    "title": "HackRF + PortaPack  -  Snabbstart",
+    "subtitle": "Komplett installationsguide från uppackning till din första FM-mottagning. Täcker SD-kortsförberedelse, firmware, kalibrering, säkerhet och avstängning. Bocka av varje steg  -  framsteg sparas lokalt.",
     "clear": "RENSA",
     "sections": {
       "beforePowerOn": "Innan du slår på",
@@ -251,13 +251,13 @@
       "safetyShutdown": "Säkerhet och avstängning"
     },
     "steps": {
-      "s1": "Verifiera att din USB-kabel stödjer data (inte bara laddning) — detta är det vanligaste installationsproblemet",
-      "s2": "Sätt i ett MicroSD-kort (FAT32, 8–32 GB rekommenderas) — lagrar inspelningar, inställningar och appar",
+      "s1": "Verifiera att din USB-kabel stödjer data (inte bara laddning)  -  detta är det vanligaste installationsproblemet",
+      "s2": "Sätt i ett MicroSD-kort (FAT32, 8-32 GB rekommenderas)  -  lagrar inspelningar, inställningar och appar",
       "s3": "Ladda ner senaste Mayhem-firmware från GitHub releases och kopiera .ppfw.tar till SD-kortets rot",
-      "s4": "Anslut den teleskopiska antennen (40 MHz–6 GHz) till SMA-porten — dra åt bara för hand, aldrig med verktyg",
-      "s5": "Jorda dig själv innan du hanterar enheten — ESD på SMA-centerstiftet kan skada LNA",
+      "s4": "Anslut den teleskopiska antennen (40 MHz-6 GHz) till SMA-porten  -  dra åt bara för hand, aldrig med verktyg",
+      "s5": "Jorda dig själv innan du hanterar enheten  -  ESD på SMA-centerstiftet kan skada LNA",
       "s6": "Ha en 50-ohm dummy load redo om du planerar att testa TX-appar",
-      "s7": "Skjut strömbrytaren UPPÅT — vänta tills Mayhem-huvudmenyn visas",
+      "s7": "Skjut strömbrytaren UPPÅT  -  vänta tills Mayhem-huvudmenyn visas",
       "s8": "Kontrollera firmware-versionen i statusfältet (aktuell: v2.3.2)",
       "s9": "Gå till Settings → SD Card → Test för att verifiera att SD-kortet upptäcks och fungerar",
       "s10": "Gå till Settings → UI → ställ in encoder-känslighet efter preferens (låg/normal/hög)",
@@ -265,18 +265,18 @@
       "s12": "Navigera till Receive → Audio",
       "s13": "Ställ in läge till 'WFM' (Wideband FM)",
       "s14": "Ställ in frekvens till en lokal FM-station (t.ex. 101,1 MHz)",
-      "s15": "Ställ in gain: LNA=16, VGA=20, AMP=0 (AV) — börja alltid med AMP avstängd",
-      "s16": "Höj volymen till 40–60 — du bör höra stationen",
-      "s17": "Kontrollera RSSI-fältet och waterfall — en stark signal visar sig som ett ljust vertikalt band",
+      "s15": "Ställ in gain: LNA=16, VGA=20, AMP=0 (AV)  -  börja alltid med AMP avstängd",
+      "s16": "Höj volymen till 40-60  -  du bör höra stationen",
+      "s17": "Kontrollera RSSI-fältet och waterfall  -  en stark signal visar sig som ett ljust vertikalt band",
       "s18": "Om svagt: öka VGA först, sedan LNA. Om klippning/distortion: minska gain",
       "s19": "Stäm in på en känd FM-station och notera om frekvensen är något förskjuten",
       "s20": "Gå till Settings → Radio → Frequency Correction och justera tills stationen centreras korrekt",
-      "s21": "Detta korrigerar ditt TCXO-offset — förbättrar noggrannheten i alla appar",
-      "s22": "Före all TX: anslut en 50-ohm dummy load eller frekvensmatchad antenn — sänd aldrig ut i fria luften",
+      "s21": "Detta korrigerar ditt TCXO-offset  -  förbättrar noggrannheten i alla appar",
+      "s22": "Före all TX: anslut en 50-ohm dummy load eller frekvensmatchad antenn  -  sänd aldrig ut i fria luften",
       "s23": "Lär dig nödstopp av TX: Stoppknapp → Bakåtpil → RESET → Stäng av",
       "s24": "Använd aldrig enheten inom 3 meter från aktiva sändare (handhållna, routrar) under mottagning",
       "s25": "Tryck på bakåtpilen för att återgå till menyerna",
-      "s26": "Skjut strömbrytaren NEDÅT för att stänga av — stäng alltid av innan du kopplar bort antennen"
+      "s26": "Skjut strömbrytaren NEDÅT för att stänga av  -  stäng alltid av innan du kopplar bort antennen"
     }
   },
   "firmwareUpdate": {
@@ -322,9 +322,9 @@
   },
   "whereToBuy": {
     "title": "Var köpa",
-    "subtitle": "Community-refererade källor för HackRF One, PortaPack och tillbehör. Ingen rekommendation — gör alltid din egen research.",
+    "subtitle": "Community-refererade källor för HackRF One, PortaPack och tillbehör. Ingen rekommendation  -  gör alltid din egen research.",
     "disclaimerTitle": "Ingen anknytning · Ingen rekommendation",
-    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem är <strong>inte ansluten till, sponsrad av eller rekommenderad av</strong> någon återförsäljare som listas på denna sida. Inkludering här baseras på community-omnämnanden i r/hackrf, r/RTLSDR och andra SDR-forum — det garanterar inte produktkvalitet, äkthet eller service. <strong>Gör alltid din egen research innan du köper.</strong>",
+    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem är <strong>inte ansluten till, sponsrad av eller rekommenderad av</strong> någon återförsäljare som listas på denna sida. Inkludering här baseras på community-omnämnanden i r/hackrf, r/RTLSDR och andra SDR-forum  -  det garanterar inte produktkvalitet, äkthet eller service. <strong>Gör alltid din egen research innan du köper.</strong>",
     "typeLabel": "TYP",
     "regionLabel": "REGION",
     "all": "Alla",
@@ -340,7 +340,7 @@
     "title": "Frekvens hittades inte",
     "message": "Ingen signal upptäckt på denna adress. Sidan du letar efter finns inte eller har flyttats.",
     "backButton": "Tillbaka till översikt",
-    "footer": "Fresh Mayhem — Ett Super Basic Studio-projekt"
+    "footer": "Fresh Mayhem  -  Ett Super Basic Studio-projekt"
   },
   "chart": {
     "extreme": "Extrem",
@@ -351,14 +351,14 @@
     "txApps": "TX-appar"
   },
   "bandMap": {
-    "title": "Bandkarta — Utvalda begränsade och ISM-band (1 MHz – 6 GHz)",
-    "description": "Detta diagram visar en <strong>delvis</strong> översikt av amerikanska frekvens<strong>sändnings (TX)</strong>-begränsningar. Rött = utvalda band där sändning är federalt begränsad. Grönt = ISM-band där sändning generellt är tillåten under FCC Part 15-villkor. <strong>Mottagning (RX) / lyssning är generellt tillåten i de flesta jurisdiktioner — kontrollera alltid dina lokala lagar.</strong> Detta är inte en komplett lista över alla begränsade frekvenser.",
-    "disclaimer": "<strong>Ansvarsfriskrivning:</strong> Enligt amerikansk federal lag (47 U.S.C. § 301) är sändning på <strong>vilken</strong> radiofrekvens som helst utan korrekt auktorisering förbjuden. Olicensierad sändning är bara tillåten på specifika ISM-band under strikta FCC Part 15-effektgränser och villkor. Tomt utrymme i detta diagram är <strong>inte</strong> en indikation på att sändning är tillåten. Detta diagram är enbart för utbildningsreferens och utgör inte juridisk rådgivning. Frekvensregler varierar mellan länder — kontrollera alltid lagarna i din jurisdiktion innan du sänder. Super Basic Studio, LLC tar inget ansvar för otillåtna sändningar.",
-    "restrictedLabel": "BEGRÄNSAD TX — SÄND INTE (UTVALDA AMERIKANSKA FEDERALA BAND)",
-    "ismLabel": "ISM-BAND — GENERELLT TILLÅTEN TX (FCC PART 15, VILLKOR GÄLLER)",
+    "title": "Bandkarta  -  Utvalda begränsade och ISM-band (1 MHz - 6 GHz)",
+    "description": "Detta diagram visar en <strong>delvis</strong> översikt av amerikanska frekvens<strong>sändnings (TX)</strong>-begränsningar. Rött = utvalda band där sändning är federalt begränsad. Grönt = ISM-band där sändning generellt är tillåten under FCC Part 15-villkor. <strong>Mottagning (RX) / lyssning är generellt tillåten i de flesta jurisdiktioner  -  kontrollera alltid dina lokala lagar.</strong> Detta är inte en komplett lista över alla begränsade frekvenser.",
+    "disclaimer": "<strong>Ansvarsfriskrivning:</strong> Enligt amerikansk federal lag (47 U.S.C. § 301) är sändning på <strong>vilken</strong> radiofrekvens som helst utan korrekt auktorisering förbjuden. Olicensierad sändning är bara tillåten på specifika ISM-band under strikta FCC Part 15-effektgränser och villkor. Tomt utrymme i detta diagram är <strong>inte</strong> en indikation på att sändning är tillåten. Detta diagram är enbart för utbildningsreferens och utgör inte juridisk rådgivning. Frekvensregler varierar mellan länder  -  kontrollera alltid lagarna i din jurisdiktion innan du sänder. Super Basic Studio, LLC tar inget ansvar för otillåtna sändningar.",
+    "restrictedLabel": "BEGRÄNSAD TX  -  SÄND INTE (UTVALDA AMERIKANSKA FEDERALA BAND)",
+    "ismLabel": "ISM-BAND  -  GENERELLT TILLÅTEN TX (FCC PART 15, VILLKOR GÄLLER)",
     "doNotTransmit": "SÄND INTE (TX)",
-    "listeningPermitted": "Lyssning (RX) är generellt tillåten — kontrollera lokala lagar",
-    "ismConditions": "ISM — Generellt tillåten under FCC Part 15 med villkor",
+    "listeningPermitted": "Lyssning (RX) är generellt tillåten  -  kontrollera lokala lagar",
+    "ismConditions": "ISM  -  Generellt tillåten under FCC Part 15 med villkor",
     "clickToZoom": "Klicka för att zooma",
     "scrollHint": "Scrolla för att zooma · Dra för att panorera · Klicka på ett band för att fokusera",
     "resetZoom": "Återställ zoom"
@@ -375,7 +375,7 @@
   "penalties": {
     "maxPenalty": "Max. enskild böter (PIRATE Act)",
     "maxPrison": "Max. federalt fängelsestraff",
-    "aviationCases": "Luftfartsfall — federal utredning",
+    "aviationCases": "Luftfartsfall  -  federal utredning",
     "scaleTitle": "SKALA FÖR PENNINGBÖTER (AMERIKANSKT FEDERALT)",
     "severe": "ALLVARLIG",
     "high": "HÖG",
@@ -396,7 +396,7 @@
       "gpsJamming": {
         "violation": "GPS- / mobilstörning",
         "law": "PIRATE Act",
-        "penalty": "Upp till $119,555/dag — max. $2.39M",
+        "penalty": "Upp till $119,555/dag  -  max. $2.39M",
         "detail": "PIRATE Act (2020) ökade böterna dramatiskt. GPS-störare påverkar luftfart, sjöfart, larmtjänster och finansiella system."
       },
       "intercepting": {
@@ -408,20 +408,20 @@
       "aviation": {
         "violation": "Luftfartsstörning",
         "law": "18 U.S.C. § 32",
-        "penalty": "Federalt brott — FBI + FAA-utredning",
+        "penalty": "Federalt brott  -  FBI + FAA-utredning",
         "detail": "Lag om flygsabotage. ADS-B-spoofing eller GPS-störning nära flygplatser utlöser omedelbar federal utredning. Ingen minimumtröskel."
       }
     }
   },
   "badges": {
     "rx": "RX",
-    "rxTooltip": "Endast mottagning — ingen sändning. Lagligheten för avlyssning varierar per region.",
+    "rxTooltip": "Endast mottagning  -  ingen sändning. Lagligheten för avlyssning varierar per region.",
     "caution": "VARNING",
-    "cautionTooltip": "Använd med försiktighet — kontrollera lokala regler",
+    "cautionTooltip": "Använd med försiktighet  -  kontrollera lokala regler",
     "danger": "FARA",
-    "dangerTooltip": "Farligt — kan orsaka skada eller juridiska problem. Kontrollera lokala regler.",
+    "dangerTooltip": "Farligt  -  kan orsaka skada eller juridiska problem. Kontrollera lokala regler.",
     "extreme": "EXTREM",
-    "extremeTooltip": "Extrem risk — troligen olagligt i de flesta jurisdiktioner. Inte juridisk rådgivning.",
+    "extremeTooltip": "Extrem risk  -  troligen olagligt i de flesta jurisdiktioner. Inte juridisk rådgivning.",
     "illegal": "OLAGLIGT",
     "illegalTooltip": "Olagligt i de flesta kända jurisdiktioner. Verifiera dina lokala lagar."
   },
@@ -429,7 +429,7 @@
     "freshMayhem": "Fresh Mayhem",
     "mayhemFirmware": "Mayhem-firmware",
     "portapackHackrf": "PortaPack H4M + HackRF One",
-    "educationalOnly": "Endast utbildningsresurs — inte juridisk rådgivning. Följ alltid lokala RF-regler.",
+    "educationalOnly": "Endast utbildningsresurs  -  inte juridisk rådgivning. Följ alltid lokala RF-regler.",
     "trademarkNotice": "HackRF och PortaPack är varumärken tillhörande sina respektive ägare. Mayhem-firmware är ett open source-projekt av dess bidragsgivare. Denna webbplats är en oberoende, inofficiell referens och är inte ansluten till, rekommenderad av eller sponsrad av",
     "greatScottGadgets": "Great Scott Gadgets",
     "trademarkSuffix": ", PortaPack eller Mayhem-projektet.",
@@ -449,8 +449,8 @@
     "txApps": {
       "ADS-B(S) TX": {
         "description": "Falska flygplans-transponderdata.",
-        "legal": "Federalt brott — förfalskning av flygtransponder hotar flygsäkerheten.",
-        "learn": "ADS-B står för Automatic Dependent Surveillance–Broadcast. Det är så flygplan rapporterar sin position, höjd och hastighet till flygledning och andra plan. (S) refererar till 'S-mode'-transpondervarianten som används i Mode S på 1090 MHz. Denna app genererar falska ADS-B-paket — fantomflygplan som dyker upp på ATC-radar och FlightAware/FlightRadar24. Även test över luften är ett federalt brott under 18 U.S.C. § 32 (flygsabotage). Använd endast med dummy load i en skärmad miljö."
+        "legal": "Federalt brott  -  förfalskning av flygtransponder hotar flygsäkerheten.",
+        "learn": "ADS-B står för Automatic Dependent Surveillance-Broadcast. Det är så flygplan rapporterar sin position, höjd och hastighet till flygledning och andra plan. (S) refererar till 'S-mode'-transpondervarianten som används i Mode S på 1090 MHz. Denna app genererar falska ADS-B-paket  -  fantomflygplan som dyker upp på ATC-radar och FlightAware/FlightRadar24. Även test över luften är ett federalt brott under 18 U.S.C. § 32 (flygsabotage). Använd endast med dummy load i en skärmad miljö."
       },
       "APRS TX": {
         "description": "APRS positions-/datapaket.",
@@ -465,7 +465,7 @@
       "BLE TX": {
         "description": "BLE advertisement-paket med konfigurerbar MAC och payload.",
         "legal": "Lagligt för test av egna enheter. Förfalskning av andras kan bryta mot lagar.",
-        "learn": "BLE (Bluetooth Low Energy) är ett kortdistans trådlöst protokoll på 2,4 GHz, som används av aktivitetsarmband, smarta lås, beacons och IoT-enheter. BLE advertisement-paket är utsända meddelanden som närliggande enheter kan detektera utan parning. Denna app låter dig skapa anpassade advertisement-paket med konfigurerbar MAC-adress och payload-data — användbart för test av egna BLE-kringutrustning, iBeacon/Eddystone-experiment eller förståelse av BLE-protokollstruktur. Räckvidden är typiskt 10-30 meter."
+        "learn": "BLE (Bluetooth Low Energy) är ett kortdistans trådlöst protokoll på 2,4 GHz, som används av aktivitetsarmband, smarta lås, beacons och IoT-enheter. BLE advertisement-paket är utsända meddelanden som närliggande enheter kan detektera utan parning. Denna app låter dig skapa anpassade advertisement-paket med konfigurerbar MAC-adress och payload-data  -  användbart för test av egna BLE-kringutrustning, iBeacon/Eddystone-experiment eller förståelse av BLE-protokollstruktur. Räckvidden är typiskt 10-30 meter."
       },
       "BLESpam": {
         "description": "Översvämmar närliggande enheter med BLE advertisements.",
@@ -485,17 +485,17 @@
       "FlipperTX": {
         "description": "Spelar upp Flipper Zero .sub-filer direkt från PortaPack.",
         "legal": "Lagligt endast för dina egna enheter. Uppspelning av andras signaler är olagligt.",
-        "learn": "FlipperTX läser Flipper Zero .sub-inspelningsfiler från SD-kortet och spelar upp dem via HackRF. Flipper Zeros .sub-format lagrar råa signalinspelningar inklusive frekvens, modulationstyp och de faktiska databitarna. Det betyder att vilken signal som helst inspelad av en Flipper Zero kan spelas upp genom HackRF med högre effekt och bättre antennalternativ. Vanlig användning inkluderar test av egna garageportar, grindar och fjärrstyrda enheter. HackRF:s bredare frekvensområde (1 MHz–6 GHz) sträcker sig långt bortom Flipperens nativa sub-GHz-område."
+        "learn": "FlipperTX läser Flipper Zero .sub-inspelningsfiler från SD-kortet och spelar upp dem via HackRF. Flipper Zeros .sub-format lagrar råa signalinspelningar inklusive frekvens, modulationstyp och de faktiska databitarna. Det betyder att vilken signal som helst inspelad av en Flipper Zero kan spelas upp genom HackRF med högre effekt och bättre antennalternativ. Vanlig användning inkluderar test av egna garageportar, grindar och fjärrstyrda enheter. HackRF:s bredare frekvensområde (1 MHz-6 GHz) sträcker sig långt bortom Flipperens nativa sub-GHz-område."
       },
       "GPS Sim": {
         "description": "Genererar och sänder falska GPS-satellitsignaler från .C8-filer.",
-        "legal": "Federalt brott — GPS-spoofing påverkar flyg, sjöfart, räddningstjänst.",
-        "learn": "GPS-satelliter sänder på L1 (1575,42 MHz) med exakta tidssignaler som mottagare triangulerar för position. GPS Sim genererar falska satellitsignaler som åsidosätter riktig GPS och får mottagare att rapportera falsk position och tid. .C8-filerna innehåller förberäknade IQ-sampel för specifika platser/tider. Detta påverkar ALLA GPS-mottagare inom räckhåll — telefoner, bilar, flygplan, fartyg, räddningstjänst, finansiella handelssystem (som använder GPS för timing). GPS-spoofing är ett federalt brott under 18 U.S.C. § 32 och medför allvarliga straff. Även kort test över luften kan påverka närliggande infrastruktur."
+        "legal": "Federalt brott  -  GPS-spoofing påverkar flyg, sjöfart, räddningstjänst.",
+        "learn": "GPS-satelliter sänder på L1 (1575,42 MHz) med exakta tidssignaler som mottagare triangulerar för position. GPS Sim genererar falska satellitsignaler som åsidosätter riktig GPS och får mottagare att rapportera falsk position och tid. .C8-filerna innehåller förberäknade IQ-sampel för specifika platser/tider. Detta påverkar ALLA GPS-mottagare inom räckhåll  -  telefoner, bilar, flygplan, fartyg, räddningstjänst, finansiella handelssystem (som använder GPS för timing). GPS-spoofing är ett federalt brott under 18 U.S.C. § 32 och medför allvarliga straff. Även kort test över luften kan påverka närliggande infrastruktur."
       },
       "Hopper": {
         "description": "FrekvenShoppande sändare. Översvämmar definierade frekvensområden.",
         "legal": "Motsvarar störning. Alltid olagligt.",
-        "learn": "Hopper växlar snabbt sändning över ett användardefinierat frekvensområde och spenderar kort tid på varje frekvens innan den hoppar till nästa. Till skillnad från den dedikerade Jammer-appen täcker Hopper ett potentiellt mycket bredare spektrum genom att hoppa snarare än bredbandsbrus. Detta gör den effektiv för att störa FHSS-system (Frequency-Hopping Spread Spectrum) som Wi-Fi, Bluetooth och vissa militära kommunikationer. Effekten är densamma som störning — denial of service över målbandet. Olagligt i alla jurisdiktioner under internationella radioregler (ITU Radio Regulations, artikel 15)."
+        "learn": "Hopper växlar snabbt sändning över ett användardefinierat frekvensområde och spenderar kort tid på varje frekvens innan den hoppar till nästa. Till skillnad från den dedikerade Jammer-appen täcker Hopper ett potentiellt mycket bredare spektrum genom att hoppa snarare än bredbandsbrus. Detta gör den effektiv för att störa FHSS-system (Frequency-Hopping Spread Spectrum) som Wi-Fi, Bluetooth och vissa militära kommunikationer. Effekten är densamma som störning  -  denial of service över målbandet. Olagligt i alla jurisdiktioner under internationella radioregler (ITU Radio Regulations, artikel 15)."
       },
       "Jammer": {
         "description": "Bredbands-RF-störsändare. Brus över upp till 24 MHz bandbredd.",
@@ -510,12 +510,12 @@
       "Morse TX": {
         "description": "Morsekod via FM-ton eller CW.",
         "legal": "Lagligt med amatörradiolicens på lämpliga frekvenser.",
-        "learn": "Morsekod (CW — Continuous Wave) är det äldsta digitala läget inom radio, som kodar text som mönster av korta (dit) och långa (dah) signaler. Denna app sänder Morse antingen som CW (on/off-nyckling av bärvågen) eller som en FM-ljudton. CW används fortfarande brett av radioamatörer eftersom det är extremt effektivt — läsbart vid signalnivåer långt under tal. Amatöroperatörer kan använda CW på alla amatörband. Appen accepterar textinmatning och konverterar den till korrekt tidsanpassad Morse med konfigurerbar ord-per-minut-hastighet."
+        "learn": "Morsekod (CW  -  Continuous Wave) är det äldsta digitala läget inom radio, som kodar text som mönster av korta (dit) och långa (dah) signaler. Denna app sänder Morse antingen som CW (on/off-nyckling av bärvågen) eller som en FM-ljudton. CW används fortfarande brett av radioamatörer eftersom det är extremt effektivt  -  läsbart vid signalnivåer långt under tal. Amatöroperatörer kan använda CW på alla amatörband. Appen accepterar textinmatning och konverterar den till korrekt tidsanpassad Morse med konfigurerbar ord-per-minut-hastighet."
       },
       "OOK TX": {
         "description": "On-Off Keying-signaler. PT2262-fjärrkontroller, dörrklockor, garageportar.",
         "legal": "Lagligt endast för dina egna enheter.",
-        "learn": "OOK (On-Off Keying) är den enklaste formen av digital modulation — bärvågen är antingen på eller av, representerande ettor och nollor. De flesta billiga 315/433 MHz fjärrkontroller använder OOK med PT2262-kodarchippen (eller kompatibla kloner som EV1527). Detta inkluderar garageportsöppnare, trådlösa dörrklockor, RF-uttag, bilnycklar (äldre) och enkla larmsensorer. Appen kan sända specifika koder för att aktivera dessa enheter. Många äldre system använder fasta koder utan kryptering, vilket gör dem trivialt uppspelbara. Nyare system använder rullande koder (som KeeLoq) som denna enkla uppspelning inte kan övervinna."
+        "learn": "OOK (On-Off Keying) är den enklaste formen av digital modulation  -  bärvågen är antingen på eller av, representerande ettor och nollor. De flesta billiga 315/433 MHz fjärrkontroller använder OOK med PT2262-kodarchippen (eller kompatibla kloner som EV1527). Detta inkluderar garageportsöppnare, trådlösa dörrklockor, RF-uttag, bilnycklar (äldre) och enkla larmsensorer. Appen kan sända specifika koder för att aktivera dessa enheter. Många äldre system använder fasta koder utan kryptering, vilket gör dem trivialt uppspelbara. Nyare system använder rullande koder (som KeeLoq) som denna enkla uppspelning inte kan övervinna."
       },
       "OOK Editor": {
         "description": "Konstruktion och sändning av anpassade OOK-signalmönster.",
@@ -525,22 +525,22 @@
       "POCSAG TX": {
         "description": "Förfalskade POCSAG-pagermeddelanden till specifika RIC-adresser.",
         "legal": "Obehörig sändning på licensierade frekvenser.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) är protokollet som används av traditionella numeriska och alfanumeriska pagrar, som opererar kring 150-170 MHz eller 450-470 MHz beroende på region. Varje pager har en RIC (Radio Identity Code) — en unik adress. Denna app skapar och sänder POCSAG-meddelanden till specifika RIC-adresser, vilket innebär att du kan skicka text till individuella pagrar. Pagernätverk används fortfarande aktivt av sjukhus, räddningstjänst och vissa företag. Sändning på dessa licensierade frekvenser utan behörighet är olagligt."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) är protokollet som används av traditionella numeriska och alfanumeriska pagrar, som opererar kring 150-170 MHz eller 450-470 MHz beroende på region. Varje pager har en RIC (Radio Identity Code)  -  en unik adress. Denna app skapar och sänder POCSAG-meddelanden till specifika RIC-adresser, vilket innebär att du kan skicka text till individuella pagrar. Pagernätverk används fortfarande aktivt av sjukhus, räddningstjänst och vissa företag. Sändning på dessa licensierade frekvenser utan behörighet är olagligt."
       },
       "RDS": {
         "description": "FM-sändning med Radio Data System-metadata.",
         "legal": "Kräver sändningslicens. Låg effekt kan tolereras i vissa regioner.",
-        "learn": "RDS (Radio Data System) är tekniken bakom stationsnamnet, låttiteln och trafikmeddelanden som visas på bilradions display vid FM-lyssning (88-108 MHz). RDS är en 57 kHz underbärvåg lagrad ovanpå FM-stereosignalen. Denna app sänder en FM-signal komplett med RDS-data — du kan ställa in stationsnamn (PS), radiotext (RT), programtyp (PTY) och trafikmeddelanden (TA/TP). Vid låg effekt och kort räckvidd används detta vanligen för personliga FM-sändare, men all FM-sändning kräver tekniskt sett en licens från din nationella tillsynsmyndighet."
+        "learn": "RDS (Radio Data System) är tekniken bakom stationsnamnet, låttiteln och trafikmeddelanden som visas på bilradions display vid FM-lyssning (88-108 MHz). RDS är en 57 kHz underbärvåg lagrad ovanpå FM-stereosignalen. Denna app sänder en FM-signal komplett med RDS-data  -  du kan ställa in stationsnamn (PS), radiotext (RT), programtyp (PTY) och trafikmeddelanden (TA/TP). Vid låg effekt och kort räckvidd används detta vanligen för personliga FM-sändare, men all FM-sändning kräver tekniskt sett en licens från din nationella tillsynsmyndighet."
       },
       "Soundboard": {
         "description": "WAV-ljud över FM. CTCSS-toner, trådlös mikrofon-kompatibilitet.",
         "legal": "Kräver licens på de flesta frekvenser.",
-        "learn": "Soundboard spelar WAV-filer från SD-kortet som FM-ljudsändningar. Den kan också generera CTCSS (Continuous Tone-Coded Squelch System) subhörbara toner — de lågfrekventa toner (67-254,1 Hz) som tvåvägsradior använder för att filtrera bort oönskad trafik på delade frekvenser. Detta gör den användbar för test av radio-squelch-system och CTCSS-utrustade repeatrar. Trådlös mikrofon-kompatibiliteten innebär att den kan sända på frekvenser som används av trådlösa mikrofonsystem (typiskt VHF/UHF), i praktiken fungerar som en trådlös mikrofon."
+        "learn": "Soundboard spelar WAV-filer från SD-kortet som FM-ljudsändningar. Den kan också generera CTCSS (Continuous Tone-Coded Squelch System) subhörbara toner  -  de lågfrekventa toner (67-254,1 Hz) som tvåvägsradior använder för att filtrera bort oönskad trafik på delade frekvenser. Detta gör den användbar för test av radio-squelch-system och CTCSS-utrustade repeatrar. Trådlös mikrofon-kompatibiliteten innebär att den kan sända på frekvenser som används av trådlösa mikrofonsystem (typiskt VHF/UHF), i praktiken fungerar som en trådlös mikrofon."
       },
       "Spectrum Painter": {
         "description": "Bild/text ritad i RF-spektrum synlig på waterfall-displayer.",
         "legal": "Kuriositet men fortfarande obehörig sändning på de flesta frekvenser.",
-        "learn": "Spectrum Painter konverterar en bild eller text till en RF-signal som, när den visas på en waterfall-display (som SDR++ eller GQRX), syns som en synlig bild eller meddelande i spektrumet. Det fungerar genom att variera den sända frekvensen över tid för att 'måla' varje pixelrad — ljusare pixlar får mer effekt, mörkare pixlar mindre. Resultatet är ren visuell konst som bara syns på spektrumanalysatorer. Även om det är kreativt och populärt för demoer är det fortfarande en RF-sändning som lyder under samma regler som vilken annan sändare som helst. Bäst använd med dummy load eller på en oanvänd frekvens med minimal effekt."
+        "learn": "Spectrum Painter konverterar en bild eller text till en RF-signal som, när den visas på en waterfall-display (som SDR++ eller GQRX), syns som en synlig bild eller meddelande i spektrumet. Det fungerar genom att variera den sända frekvensen över tid för att 'måla' varje pixelrad  -  ljusare pixlar får mer effekt, mörkare pixlar mindre. Resultatet är ren visuell konst som bara syns på spektrumanalysatorer. Även om det är kreativt och populärt för demoer är det fortfarande en RF-sändning som lyder under samma regler som vilken annan sändare som helst. Bäst använd med dummy load eller på en oanvänd frekvens med minimal effekt."
       },
       "SSTV TX": {
         "description": "Slow Scan Television-bilder via FM. Scottie/Martin/SC2-lägen.",
@@ -550,7 +550,7 @@
       "TEDI/LCR": {
         "description": "Franska väginfrastruktur-styrningsramar. Bell 202 FSK.",
         "legal": "Obehörig kontroll av väginfrastruktur.",
-        "learn": "TEDI (Transmission Élémentaire d'Informations) och LCR (Liaisons à Concentration de Relais) är franska väginfrastrukturprotokoll som används för att styra elektroniska motorvägsskyltar, tunnelventilationssystem och trafikhanteringsutrustning. De använder Bell 202 FSK (Frequency Shift Keying) modulation — en modemstandard från 1970-talet som kodar data som två ljudfrekvenser (1200/2200 Hz). Dessa system styr kritisk säkerhetsinfrastruktur på franska motorvägar. Obehörig sändning av TEDI/LCR-ramar kan ändra motorvägsskyltmeddelanden eller störa tunnelsäkerhetssystem."
+        "learn": "TEDI (Transmission Élémentaire d'Informations) och LCR (Liaisons à Concentration de Relais) är franska väginfrastrukturprotokoll som används för att styra elektroniska motorvägsskyltar, tunnelventilationssystem och trafikhanteringsutrustning. De använder Bell 202 FSK (Frequency Shift Keying) modulation  -  en modemstandard från 1970-talet som kodar data som två ljudfrekvenser (1200/2200 Hz). Dessa system styr kritisk säkerhetsinfrastruktur på franska motorvägar. Obehörig sändning av TEDI/LCR-ramar kan ändra motorvägsskyltmeddelanden eller störa tunnelsäkerhetssystem."
       },
       "TouchTunes": {
         "description": "TouchTunes jukebox-fjärrkontrollkommandon.",
@@ -561,55 +561,55 @@
     "rxApps": {
       "ADS-B": {
         "description": "Flygtransponder-spårning. Visar ICAO ID, anropssignal, höjd, position, hastighet.",
-        "learn": "ADS-B (Automatic Dependent Surveillance–Broadcast) är systemet som moderna flygplan använder för att sända sin identitet, position, höjd och hastighet varje halv sekund på 1090 MHz. Varje flygplan har en unik 24-bitars ICAO-adress (som en registreringsskylt). PortaPack avkodar dessa Mode S-transpondersignaler i realtid och visar en live-flyglista — samma data som driver FlightRadar24 och FlightAware. ADS-B är enbart mottagning och helt lagligt att övervaka. Med en bra antenn och fri sikt kan du spåra flygplan över 160 km bort. Detta är en av de mest populära första apparna för nya HackRF-ägare."
+        "learn": "ADS-B (Automatic Dependent Surveillance-Broadcast) är systemet som moderna flygplan använder för att sända sin identitet, position, höjd och hastighet varje halv sekund på 1090 MHz. Varje flygplan har en unik 24-bitars ICAO-adress (som en registreringsskylt). PortaPack avkodar dessa Mode S-transpondersignaler i realtid och visar en live-flyglista  -  samma data som driver FlightRadar24 och FlightAware. ADS-B är enbart mottagning och helt lagligt att övervaka. Med en bra antenn och fri sikt kan du spåra flygplan över 160 km bort. Detta är en av de mest populära första apparna för nya HackRF-ägare."
       },
       "ACARS": {
         "description": "Flygdatalänkmeddelanden mellan flygplan och markstationer.",
-        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) är ett digitalt textmeddelandesystem som använts av flygbolag sedan 1970-talet. Det opererar på VHF-frekvenser kring 129-137 MHz och bär korta datameddelanden mellan flygplan och markstationer — saker som motorprestationsrapporter, väderförfrågningar, gate-tilldelningar, bränsledata och besättningskommunikation. Meddelanden skickas i klartext utan kryptering, så du kan läsa dem direkt. Varje meddelande inkluderar flygplanets registrering och flygnummer. ACARS är flygbranschens svar på SMS, och övervakning av det ger dig en bakom-kulisserna-blick på flygbolagsdrift."
+        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) är ett digitalt textmeddelandesystem som använts av flygbolag sedan 1970-talet. Det opererar på VHF-frekvenser kring 129-137 MHz och bär korta datameddelanden mellan flygplan och markstationer  -  saker som motorprestationsrapporter, väderförfrågningar, gate-tilldelningar, bränsledata och besättningskommunikation. Meddelanden skickas i klartext utan kryptering, så du kan läsa dem direkt. Varje meddelande inkluderar flygplanets registrering och flygnummer. ACARS är flygbranschens svar på SMS, och övervakning av det ger dig en bakom-kulisserna-blick på flygbolagsdrift."
       },
       "AFSK": {
         "description": "Audio Frequency Shift Keying-avkodare. Bell 202-modemsignaler, TEDI/LCR.",
-        "learn": "AFSK (Audio Frequency Shift Keying) kodar digital data som två ljudtoner — typiskt 1200 Hz för mark (1) och 2200 Hz för space (0), enligt Bell 202-modemstandarden från 1970-talet. Denna modulation används i många protokoll: APRS amatörradio, nummerpresentation, gammaldags telefonmodem och franska väginfrastruktursystem (TEDI/LCR). Avkodaren lyssnar på FM-ljud och extraherar digital data från tonväxlingarna. Om du någonsin hört det skrikande ljudet av ett uppringningsmodem var det FSK. Detta är en universell avkodare för alla system som använder audio frequency shift keying."
+        "learn": "AFSK (Audio Frequency Shift Keying) kodar digital data som två ljudtoner  -  typiskt 1200 Hz för mark (1) och 2200 Hz för space (0), enligt Bell 202-modemstandarden från 1970-talet. Denna modulation används i många protokoll: APRS amatörradio, nummerpresentation, gammaldags telefonmodem och franska väginfrastruktursystem (TEDI/LCR). Avkodaren lyssnar på FM-ljud och extraherar digital data från tonväxlingarna. Om du någonsin hört det skrikande ljudet av ett uppringningsmodem var det FSK. Detta är en universell avkodare för alla system som använder audio frequency shift keying."
       },
       "AIS Boats": {
         "description": "Spårning av marina fartyg. MMSI, position, kurs, fart. Två kanaler.",
-        "learn": "AIS (Automatic Identification System) är den maritima motsvarigheten till ADS-B — alla stora fartyg (och många små) är skyldiga att sända sin identitet, position, fart, kurs och destination på två VHF-kanaler: AIS1 (161,975 MHz) och AIS2 (162,025 MHz). Varje fartyg har ett unikt 9-siffrigt MMSI-nummer (Maritime Mobile Service Identity). PortaPack avkodar båda kanalerna samtidigt och visar en live-fartygslista. AIS-data är det som driver MarineTraffic.com och VesselFinder. Om du är nära en kust, flod eller hamn ser du bogserbåtar, lastfartyg, tankrar, färjor och till och med vissa fiskebåtar. Räckvidden beror på antennhöjd — 30-60 km är typiskt nära vatten."
+        "learn": "AIS (Automatic Identification System) är den maritima motsvarigheten till ADS-B  -  alla stora fartyg (och många små) är skyldiga att sända sin identitet, position, fart, kurs och destination på två VHF-kanaler: AIS1 (161,975 MHz) och AIS2 (162,025 MHz). Varje fartyg har ett unikt 9-siffrigt MMSI-nummer (Maritime Mobile Service Identity). PortaPack avkodar båda kanalerna samtidigt och visar en live-fartygslista. AIS-data är det som driver MarineTraffic.com och VesselFinder. Om du är nära en kust, flod eller hamn ser du bogserbåtar, lastfartyg, tankrar, färjor och till och med vissa fiskebåtar. Räckvidden beror på antennhöjd  -  30-60 km är typiskt nära vatten."
       },
       "Analog TV": {
         "description": "Analog PAL-TV-mottagning. Reducerad upplösning (52×128).",
-        "learn": "Denna app tar emot analoga TV-signaler med PAL-standarden (Phase Alternating Line) som användes i Europa, Asien och delar av Sydamerika före övergången till digital-TV. Den avkodar den sammansatta videosignalen till en liten 52×128 pixelbild på PortaPack-skärmen — nog för att se vad som sänds men inte för bekväm tittning. De flesta länder har stängt av analog TV, men du kan fortfarande hitta aktiva signaler från äldre säkerhetskameror, amatör-TV (ATV) operatörer eller länder som inte helt gått över till digitalt. Det är mer en rolig historisk demo än ett praktiskt verktyg i de flesta områden."
+        "learn": "Denna app tar emot analoga TV-signaler med PAL-standarden (Phase Alternating Line) som användes i Europa, Asien och delar av Sydamerika före övergången till digital-TV. Den avkodar den sammansatta videosignalen till en liten 52×128 pixelbild på PortaPack-skärmen  -  nog för att se vad som sänds men inte för bekväm tittning. De flesta länder har stängt av analog TV, men du kan fortfarande hitta aktiva signaler från äldre säkerhetskameror, amatör-TV (ATV) operatörer eller länder som inte helt gått över till digitalt. Det är mer en rolig historisk demo än ett praktiskt verktyg i de flesta områden."
       },
       "APRS RX": {
         "description": "Amatörradio positions-/väder-/telemetripaket. AX.25 via AFSK.",
-        "learn": "APRS (Automatic Packet Reporting System) är ett amatörradio-realtidsnätverk för delning av position, väder, meddelanden och telemetri. Det använder AX.25 paketradio vid 1200 baud över AFSK-modulation på en enda nationell frekvens — 144,390 MHz i Nordamerika, 144,800 MHz i Europa. Stationer (handburna radior, bilspårare, väderstationer, ballonger) sänder paket som vidarebefordras av digipeatrar över stora områden. All APRS-trafik kan ses på aprs.fi. PortaPack avkodar dessa paket och visar anropssignaler, positioner och meddelandeinnehåll. Du behöver ingen licens för att lyssna — bara för att sända. Nära vilken befolkad ort som helst ser du regelbunden APRS-aktivitet."
+        "learn": "APRS (Automatic Packet Reporting System) är ett amatörradio-realtidsnätverk för delning av position, väder, meddelanden och telemetri. Det använder AX.25 paketradio vid 1200 baud över AFSK-modulation på en enda nationell frekvens  -  144,390 MHz i Nordamerika, 144,800 MHz i Europa. Stationer (handburna radior, bilspårare, väderstationer, ballonger) sänder paket som vidarebefordras av digipeatrar över stora områden. All APRS-trafik kan ses på aprs.fi. PortaPack avkodar dessa paket och visar anropssignaler, positioner och meddelandeinnehåll. Du behöver ingen licens för att lyssna  -  bara för att sända. Nära vilken befolkad ort som helst ser du regelbunden APRS-aktivitet."
       },
       "Audio": {
         "description": "Allmän analog ljudmottagare. AM, NFM, WFM, SSB (USB/LSB). Inspelning till WAV.",
-        "learn": "Audio-appen är den mest mångsidiga mottagaren på PortaPack — det är en universalradio som stödjer alla vanliga analoga modulationstyper. AM (Amplitude Modulation) för radio och flyg. NFM (Narrowband FM) för walkie-talkies, amatörrepeatrar och tvåvägsradio. WFM (Wideband FM) för FM-radiostationer som dina lokala musikstationer på 88-108 MHz. SSB (Single Sideband — USB/LSB) för amatör-HF och marin kommunikation. Den spelar också in ljud direkt till WAV-filer på SD-kortet. Detta är appen de flesta börjar med — ställ in en lokal FM-station i WFM-läge och du hör musik direkt."
+        "learn": "Audio-appen är den mest mångsidiga mottagaren på PortaPack  -  det är en universalradio som stödjer alla vanliga analoga modulationstyper. AM (Amplitude Modulation) för radio och flyg. NFM (Narrowband FM) för walkie-talkies, amatörrepeatrar och tvåvägsradio. WFM (Wideband FM) för FM-radiostationer som dina lokala musikstationer på 88-108 MHz. SSB (Single Sideband  -  USB/LSB) för amatör-HF och marin kommunikation. Den spelar också in ljud direkt till WAV-filer på SD-kortet. Detta är appen de flesta börjar med  -  ställ in en lokal FM-station i WFM-läge och du hör musik direkt."
       },
       "BLE RX": {
         "description": "BLE advertisement-sniffer. Kanaler 37/38/39. MAC-leverantörsuppslag.",
-        "learn": "BLE (Bluetooth Low Energy) är ett kortdistans trådlöst protokoll på 2,4 GHz som används av miljarder enheter — telefoner, aktivitetsarmband, smartklockor, AirTags, beacons, smart home-sensorer och trådlösa hörlurar. BLE-enheter sänder konstant advertisement-paket på tre dedikerade kanaler (37, 38, 39) för att annonsera sin närvaro. Denna app avlyssnar dessa advertisements och visar MAC-adress, signalstyrka och leverantörsnamn (uppsökt från IEEE OUI-databasen — de första 3 byten av MAC identifierar tillverkaren). Gå genom vilket offentligt utrymme som helst och du ser dussintals BLE-enheter. Detta är enbart passiv övervakning — ingen parning eller anslutning görs."
+        "learn": "BLE (Bluetooth Low Energy) är ett kortdistans trådlöst protokoll på 2,4 GHz som används av miljarder enheter  -  telefoner, aktivitetsarmband, smartklockor, AirTags, beacons, smart home-sensorer och trådlösa hörlurar. BLE-enheter sänder konstant advertisement-paket på tre dedikerade kanaler (37, 38, 39) för att annonsera sin närvaro. Denna app avlyssnar dessa advertisements och visar MAC-adress, signalstyrka och leverantörsnamn (uppsökt från IEEE OUI-databasen  -  de första 3 byten av MAC identifierar tillverkaren). Gå genom vilket offentligt utrymme som helst och du ser dussintals BLE-enheter. Detta är enbart passiv övervakning  -  ingen parning eller anslutning görs."
       },
       "Detector": {
         "description": "Bredbandssignaldetektor med RSSI-historikvisning.",
-        "learn": "Detector-appen övervakar en specifik frekvens och ritar RSSI (Received Signal Strength Indicator) över tid som en rullande historikdisplay. Tänk på det som en enkel rörelsedetektor för RF — när en signal dyker upp eller ändrar styrka på målfrekvensen ser du en topp i grafen. Detta är användbart för att bekräfta att en enhet sänder, mäta hur ofta en sensor rapporterar, detektera intermittent interferens eller göra grundläggande RF-undersökningar. Det tar bort all komplexitet med demodulation och svarar helt enkelt på frågan: 'Sänder något här, och hur starkt är det?'"
+        "learn": "Detector-appen övervakar en specifik frekvens och ritar RSSI (Received Signal Strength Indicator) över tid som en rullande historikdisplay. Tänk på det som en enkel rörelsedetektor för RF  -  när en signal dyker upp eller ändrar styrka på målfrekvensen ser du en topp i grafen. Detta är användbart för att bekräfta att en enhet sänder, mäta hur ofta en sensor rapporterar, detektera intermittent interferens eller göra grundläggande RF-undersökningar. Det tar bort all komplexitet med demodulation och svarar helt enkelt på frågan: 'Sänder något här, och hur starkt är det?'"
       },
       "ERT Meter": {
         "description": "Avläsning av smarta mätare (el, gas, vatten).",
-        "learn": "ERT (Encoder Receiver Transmitter) är det trådlösa protokollet som smarta mätare använder över hela Nordamerika för att rapportera el-, gas- och vattenförbrukning. Istället för en mätaravläsare som går till varje hus sänder ERT-utrustade mätare sina avläsningar på ~900 MHz ISM-bandet med OOK-modulation. En servicefordon med mottagare kör genom kvarter och samlar in avläsningar. Varje sändning inkluderar mätar-ID och aktuellt förbrukningsvärde. PortaPack avkodar dessa och visar mätar-ID:n och avläsningar i ditt område. Allt är okrypterat — ett välkänt integritetsproblem som diskuterats brett i säkerhetsforskarkretsar."
+        "learn": "ERT (Encoder Receiver Transmitter) är det trådlösa protokollet som smarta mätare använder över hela Nordamerika för att rapportera el-, gas- och vattenförbrukning. Istället för en mätaravläsare som går till varje hus sänder ERT-utrustade mätare sina avläsningar på ~900 MHz ISM-bandet med OOK-modulation. En servicefordon med mottagare kör genom kvarter och samlar in avläsningar. Varje sändning inkluderar mätar-ID och aktuellt förbrukningsvärde. PortaPack avkodar dessa och visar mätar-ID:n och avläsningar i ditt område. Allt är okrypterat  -  ett välkänt integritetsproblem som diskuterats brett i säkerhetsforskarkretsar."
       },
       "Flex RX": {
         "description": "FLEX pagerprotokoll-avkodare. Cyklisk färgdisplay.",
-        "learn": "FLEX är ett pagerprotokoll utvecklat av Motorola på 1990-talet som en snabbare, mer effektiv efterföljare till POCSAG. Det stödjer datahastigheter på 1600, 3200 och 6400 bps — markant snabbare än POCSAGs 512-2400 bps. FLEX-pagrar används fortfarande av sjukhus och räddningstjänst eftersom pagernätverk har bättre byggnadsgenomträngning än mobilnät och fungerar vid mobilnätsöverbelastning. Appen avkodar FLEX-meddelanden och visar dem med cyklisk färgdisplay för att särskilja meddelandetyper. Liksom POCSAG sänds dessa meddelanden okrypterat — en långvarig säkerhetsfråga inom sjukvården där patientinformation kan ingå."
+        "learn": "FLEX är ett pagerprotokoll utvecklat av Motorola på 1990-talet som en snabbare, mer effektiv efterföljare till POCSAG. Det stödjer datahastigheter på 1600, 3200 och 6400 bps  -  markant snabbare än POCSAGs 512-2400 bps. FLEX-pagrar används fortfarande av sjukhus och räddningstjänst eftersom pagernätverk har bättre byggnadsgenomträngning än mobilnät och fungerar vid mobilnätsöverbelastning. Appen avkodar FLEX-meddelanden och visar dem med cyklisk färgdisplay för att särskilja meddelandetyper. Liksom POCSAG sänds dessa meddelanden okrypterat  -  en långvarig säkerhetsfråga inom sjukvården där patientinformation kan ingå."
       },
       "Fox Hunt": {
         "description": "Sändarjaktassistent. Signalstyrkevisualisering. GPS/kart-integration.",
-        "learn": "Rävjakt (även kallad sändarjakt, T-hunting eller ARDF — Amateur Radio Direction Finding) är en sport/övning där deltagare spårar en gömd radiosändare med enbart en mottagare och riktantenn. Fox Hunt-appen gör din PortaPack till ett jaktverktyg — den visar signalstyrka som en visuell indikator och integrerar med GPS för att logga din väg och uppskatta sändarens riktning. När du går mot räven blir signalen starkare. Detta är en populär amatörradioklubbesaktivitet och används också i verkliga scenarion som att spåra interferenskällor eller lokalisera nödfyrar."
+        "learn": "Rävjakt (även kallad sändarjakt, T-hunting eller ARDF  -  Amateur Radio Direction Finding) är en sport/övning där deltagare spårar en gömd radiosändare med enbart en mottagare och riktantenn. Fox Hunt-appen gör din PortaPack till ett jaktverktyg  -  den visar signalstyrka som en visuell indikator och integrerar med GPS för att logga din väg och uppskatta sändarens riktning. När du går mot räven blir signalen starkare. Detta är en populär amatörradioklubbesaktivitet och används också i verkliga scenarion som att spåra interferenskällor eller lokalisera nödfyrar."
       },
       "gfxEQ": {
         "description": "Grafisk ljud-equalizer-visualisering för WFM-radio.",
-        "learn": "gfxEQ är en visuell ljudspektrumanalysator som körs under FM-radiomottagning (WFM). Den visar en realtids grafisk equalizer — samma studsande staplar du skulle se på en stereoanläggning — som visar frekvensinnehållet i det mottagna ljudet. Basfrekvenser till vänster, diskant till höger, med staplarna som studsar till musiken. Det är ett roligt visualiseringsverktyg som gör din PortaPack till en retroutseende FM-radio med spektrumdisplay. Ställ in en musikstation i WFM-läge och se den reagera på ljudet. Rent kosmetiskt men underhållande."
+        "learn": "gfxEQ är en visuell ljudspektrumanalysator som körs under FM-radiomottagning (WFM). Den visar en realtids grafisk equalizer  -  samma studsande staplar du skulle se på en stereoanläggning  -  som visar frekvensinnehållet i det mottagna ljudet. Basfrekvenser till vänster, diskant till höger, med staplarna som studsar till musiken. Det är ett roligt visualiseringsverktyg som gör din PortaPack till en retroutseende FM-radio med spektrumdisplay. Ställ in en musikstation i WFM-läge och se den reagera på ljudet. Rent kosmetiskt men underhållande."
       },
       "Level": {
         "description": "Signalnivåmätare på en specifik frekvens. Extern app.",
@@ -617,69 +617,69 @@
       },
       "Looking Glass": {
         "description": "Bredbandsspektrum-waterfall. Tre visningslägen: SPECTR, LIVE-V, PEAK-V.",
-        "learn": "Looking Glass är en bredbandsspektrumanalysator som sveper över ett konfigurerbart frekvensområde och visar resultaten som waterfall. Till skillnad från Audio-appen (som ställer in på en frekvens) skannar Looking Glass ett brett band för att visa dig allt som är aktivt. Tre visningslägen: SPECTR visar den traditionella spektrumvyn (effekt vs. frekvens), LIVE-V visar en live vertikal waterfall (tid rullande nedåt, frekvens vänster-till-höger, ljusstyrka = signalstyrka), och PEAK-V håller toppvärden. Detta är ditt go-to-verktyg för att utforska vad som finns i luften i vilket band som helst — du kan skanna hela ISM-band, FM-sändningsområdet eller vilket spann HackRF täcker (1 MHz–6 GHz)."
+        "learn": "Looking Glass är en bredbandsspektrumanalysator som sveper över ett konfigurerbart frekvensområde och visar resultaten som waterfall. Till skillnad från Audio-appen (som ställer in på en frekvens) skannar Looking Glass ett brett band för att visa dig allt som är aktivt. Tre visningslägen: SPECTR visar den traditionella spektrumvyn (effekt vs. frekvens), LIVE-V visar en live vertikal waterfall (tid rullande nedåt, frekvens vänster-till-höger, ljusstyrka = signalstyrka), och PEAK-V håller toppvärden. Detta är ditt go-to-verktyg för att utforska vad som finns i luften i vilket band som helst  -  du kan skanna hela ISM-band, FM-sändningsområdet eller vilket spann HackRF täcker (1 MHz-6 GHz)."
       },
       "Morse RX": {
         "description": "Avkodar morsekod (CW) till text.",
-        "learn": "Morsekod (CW — Continuous Wave) kodar bokstäver och siffror som sekvenser av korta signaler (dit: ·) och långa signaler (dah: —). Utvecklad på 1830-talet, används den fortfarande idag av radioamatörer eftersom CW-signaler kan avkodas vid extremt låga signalnivåer — långt under vad som krävs för tal. Morse RX-appen lyssnar efter CW-signaler och avkodar dem automatiskt till text på skärmen. Den fungerar genom att detektera on/off-mönstret av bärvågen och mäta tid för ditar och dahar. Du kan hitta aktiv Morse på amatör-HF-band (särskilt kring 7,000-7,040 MHz och 14,000-14,070 MHz). Automatisk avkodning kan ha problem med svaga signaler eller ovanlig spacing, men fungerar bra med starka, väl tajmade sändningar."
+        "learn": "Morsekod (CW  -  Continuous Wave) kodar bokstäver och siffror som sekvenser av korta signaler (dit: ·) och långa signaler (dah:  - ). Utvecklad på 1830-talet, används den fortfarande idag av radioamatörer eftersom CW-signaler kan avkodas vid extremt låga signalnivåer  -  långt under vad som krävs för tal. Morse RX-appen lyssnar efter CW-signaler och avkodar dem automatiskt till text på skärmen. Den fungerar genom att detektera on/off-mönstret av bärvågen och mäta tid för ditar och dahar. Du kan hitta aktiv Morse på amatör-HF-band (särskilt kring 7,000-7,040 MHz och 14,000-14,070 MHz). Automatisk avkodning kan ha problem med svaga signaler eller ovanlig spacing, men fungerar bra med starka, väl tajmade sändningar."
       },
       "NOAA": {
         "description": "NOAA APT vädersatellitbildavkodare.",
-        "learn": "NOAA driver en flotta av polärbanande vädersatelliter (NOAA-15, 18, 19) som kontinuerligt sänder live-väderbilder när de kretsar runt Jorden var ~100:e minut. APT-signalen (Automatic Picture Transmission) är ett analogt format på VHF (137 MHz-bandet) som varit i bruk sedan 1960-talet. När satelliten passerar overhead (synlig i ca 10-15 minuter) sänder den en gråskalebild rad för rad — du bygger bokstavligen ett väderfoto i realtid. PortaPack avkodar denna APT-signal direkt till en bild på skärmen. Du behöver en bra antenn (en V-dipol eller QFH-antenn fungerar bra) och en klar passage. Kontrollera n2yo.com eller Heavens-Above för passagetider för din plats."
+        "learn": "NOAA driver en flotta av polärbanande vädersatelliter (NOAA-15, 18, 19) som kontinuerligt sänder live-väderbilder när de kretsar runt Jorden var ~100:e minut. APT-signalen (Automatic Picture Transmission) är ett analogt format på VHF (137 MHz-bandet) som varit i bruk sedan 1960-talet. När satelliten passerar overhead (synlig i ca 10-15 minuter) sänder den en gråskalebild rad för rad  -  du bygger bokstavligen ett väderfoto i realtid. PortaPack avkodar denna APT-signal direkt till en bild på skärmen. Du behöver en bra antenn (en V-dipol eller QFH-antenn fungerar bra) och en klar passage. Kontrollera n2yo.com eller Heavens-Above för passagetider för din plats."
       },
       "NRF": {
         "description": "Nordic nRF24L01 protokollavkodare. Trådlösa tangentbord, möss, IoT.",
-        "learn": "nRF24L01 är ett brett använt 2,4 GHz trådlöst transceiver-chip från Nordic Semiconductor, som finns i miljontals enheter — trådlösa tangentbord, möss, spelkontroller, RC-leksaker, IoT-sensorer och DIY Arduino/ESP-projekt. Det använder ett enkelt paketbaserat protokoll med adresser och kanaler. NRF-appen avkodar dessa sändningar och visar råa paketdata. Detta är särskilt intressant för säkerhetsforskning: vissa äldre trådlösa tangentbord som använder nRF24L01 sänder tangenttryckningar med svag eller ingen kryptering ('MouseJack'-sårbarhetsklassen). Appen hjälper dig förstå vad dina trådlösa kringutrustningar sänder och hur exponerad den datan kan vara."
+        "learn": "nRF24L01 är ett brett använt 2,4 GHz trådlöst transceiver-chip från Nordic Semiconductor, som finns i miljontals enheter  -  trådlösa tangentbord, möss, spelkontroller, RC-leksaker, IoT-sensorer och DIY Arduino/ESP-projekt. Det använder ett enkelt paketbaserat protokoll med adresser och kanaler. NRF-appen avkodar dessa sändningar och visar råa paketdata. Detta är särskilt intressant för säkerhetsforskning: vissa äldre trådlösa tangentbord som använder nRF24L01 sänder tangenttryckningar med svag eller ingen kryptering ('MouseJack'-sårbarhetsklassen). Appen hjälper dig förstå vad dina trådlösa kringutrustningar sänder och hur exponerad den datan kan vara."
       },
       "POCSAG RX": {
         "description": "POCSAG pagermeddelandeavkodare. Numerisk och text. Manuell baudrate.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) är det mest använda pagerprotokollet, utvecklat 1982 och fortfarande aktivt använt idag — särskilt av sjukhus, brandkårer och räddningstjänst. Pagrar föredras för kritisk kommunikation eftersom pagernätverk har bättre byggnadsgenomträngning än mobilnät och fortsätter fungera vid mobilnätsavbrott. POCSAG-meddelanden sänds okrypterat vid 512, 1200 eller 2400 baud på frekvenser som varierar per land (vanliga: 148-170 MHz, 450-470 MHz). PortaPack avkodar både numeriska och alfanumeriska meddelanden. I många områden ser du sjukhuspagningar, restaurangmeddelanden och räddningstjänst-dispatchmeddelanden — allt i klartext, vilket förblir en betydande integritetsfråga."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) är det mest använda pagerprotokollet, utvecklat 1982 och fortfarande aktivt använt idag  -  särskilt av sjukhus, brandkårer och räddningstjänst. Pagrar föredras för kritisk kommunikation eftersom pagernätverk har bättre byggnadsgenomträngning än mobilnät och fortsätter fungera vid mobilnätsavbrott. POCSAG-meddelanden sänds okrypterat vid 512, 1200 eller 2400 baud på frekvenser som varierar per land (vanliga: 148-170 MHz, 450-470 MHz). PortaPack avkodar både numeriska och alfanumeriska meddelanden. I många områden ser du sjukhuspagningar, restaurangmeddelanden och räddningstjänst-dispatchmeddelanden  -  allt i klartext, vilket förblir en betydande integritetsfråga."
       },
       "ProtoView": {
         "description": "Generisk sub-GHz protokollanalysator. Visualiserar råa protokolldata.",
-        "learn": "ProtoView är en protokoll-agnostisk signalanalysator för sub-GHz frekvenser (typiskt 300-928 MHz ISM-band). Istället för att avkoda ett specifikt protokoll fångar den den råa digitala signalen och visar bitnivå-timing — visar dig de faktiska ettorna och nollorna, pulsbredder och signalstruktur. Detta är ovärderligt för reverse-engineering av okända protokoll: du kan se preambel, synkroniseringsord, datapayload och eventuella mönster. Det är som en logikanalysator för RF-signaler. När du stöter på en enhet som använder ett protokoll som inte är inbyggt i Mayhem, hjälper ProtoView dig att lista ut vad den gör. Fungerar bäst med enkla OOK- och FSK-modulationer vanliga i fjärrkontroller, sensorer och IoT-enheter."
+        "learn": "ProtoView är en protokoll-agnostisk signalanalysator för sub-GHz frekvenser (typiskt 300-928 MHz ISM-band). Istället för att avkoda ett specifikt protokoll fångar den den råa digitala signalen och visar bitnivå-timing  -  visar dig de faktiska ettorna och nollorna, pulsbredder och signalstruktur. Detta är ovärderligt för reverse-engineering av okända protokoll: du kan se preambel, synkroniseringsord, datapayload och eventuella mönster. Det är som en logikanalysator för RF-signaler. När du stöter på en enhet som använder ett protokoll som inte är inbyggt i Mayhem, hjälper ProtoView dig att lista ut vad den gör. Fungerar bäst med enkla OOK- och FSK-modulationer vanliga i fjärrkontroller, sensorer och IoT-enheter."
       },
       "Radiosonde": {
         "description": "Väderballongsspårning. M10, M20, M2K2, RS41-SG. GPS, höjd, batteri.",
-        "learn": "Radiosonder är små instrumentpaket som skickas upp på väderballonger två gånger dagligen från ca 900 stationer världen över (kl. 00:00 och 12:00 UTC). Medan ballongen stiger till ca 30 km höjd under ca 90 minuter sänder radiosonden temperatur, fuktighet, tryck, vindhastighet/-riktning och GPS-position på 400-406 MHz. PortaPack avkodar flera vanliga typer: Vaisala RS41-SG (vanligast globalt), Meteomodem M10/M20 och M2K2. Du kan spåra ballongens GPS-position, höjd och batterispänning i realtid under uppstigningen och till och med förutsäga var den landar. Radiosondjakt — att hitta det nedfallna instrumentpaketet — är en populär hobby. Kontrollera radiosondy.info för uppsändningsplatser nära dig."
+        "learn": "Radiosonder är små instrumentpaket som skickas upp på väderballonger två gånger dagligen från ca 900 stationer världen över (kl. 00:00 och 12:00 UTC). Medan ballongen stiger till ca 30 km höjd under ca 90 minuter sänder radiosonden temperatur, fuktighet, tryck, vindhastighet/-riktning och GPS-position på 400-406 MHz. PortaPack avkodar flera vanliga typer: Vaisala RS41-SG (vanligast globalt), Meteomodem M10/M20 och M2K2. Du kan spåra ballongens GPS-position, höjd och batterispänning i realtid under uppstigningen och till och med förutsäga var den landar. Radiosondjakt  -  att hitta det nedfallna instrumentpaketet  -  är en populär hobby. Kontrollera radiosondy.info för uppsändningsplatser nära dig."
       },
       "Scanner": {
         "description": "Frekvensskanner. ~20 frekvenser/sek. Färgkodade (grå/gul/grön).",
-        "learn": "Scanner-appen ställer snabbt in genom en lista av frekvenser (ca 20 per sekund) och stannar när den detekterar aktivitet — precis som en traditionell polisskanner. Frekvenser är färgkodade: grå betyder ingen signal, gul betyder svag signal detekterad, grön betyder aktiv signal och skannern har stannat så du kan lyssna. Du kan ladda frekvenslistor från SD-kortet (freqman-filer) eller manuellt mata in frekvenser. Skannern återupptar sökningen efter signalen försvinner. Detta är användbart för att övervaka flera kanaler — räddningstjänst, amatörrepeatrar, företagsradior eller vilken uppsättning kända aktiva frekvenser som helst i ditt område. Community-frekvenslistor för de flesta regioner finns tillgängliga i Mayhem freqman-repositoriet."
+        "learn": "Scanner-appen ställer snabbt in genom en lista av frekvenser (ca 20 per sekund) och stannar när den detekterar aktivitet  -  precis som en traditionell polisskanner. Frekvenser är färgkodade: grå betyder ingen signal, gul betyder svag signal detekterad, grön betyder aktiv signal och skannern har stannat så du kan lyssna. Du kan ladda frekvenslistor från SD-kortet (freqman-filer) eller manuellt mata in frekvenser. Skannern återupptar sökningen efter signalen försvinner. Detta är användbart för att övervaka flera kanaler  -  räddningstjänst, amatörrepeatrar, företagsradior eller vilken uppsättning kända aktiva frekvenser som helst i ditt område. Community-frekvenslistor för de flesta regioner finns tillgängliga i Mayhem freqman-repositoriet."
       },
       "Search": {
         "description": "Frekvensområdessökning med waterfall. 'Sök och stanna'-läge.",
-        "learn": "Search är som Scanner men för att upptäcka okända signaler. Istället för att kontrollera en lista med kända frekvenser sveper den kontinuerligt över ett frekvensområde och stannar när den hittar en aktiv signal. Den inbyggda waterfall-displayen visar signalaktivitet över tid, vilket gör det enkelt att se intermittenta sändningar. 'Sök och stanna'-läget låser sig på en hittad signal och stannar tills den slutar, sedan återupptar den sökningen. Detta är appen för att utforska ett frekvensband och upptäcka vad som är aktivt — du behöver inte veta de exakta frekvenserna i förväg. Kombinera med Looking Glass: använd Looking Glass för att visuellt identifiera aktiva band, använd sedan Search för att lyssna."
+        "learn": "Search är som Scanner men för att upptäcka okända signaler. Istället för att kontrollera en lista med kända frekvenser sveper den kontinuerligt över ett frekvensområde och stannar när den hittar en aktiv signal. Den inbyggda waterfall-displayen visar signalaktivitet över tid, vilket gör det enkelt att se intermittenta sändningar. 'Sök och stanna'-läget låser sig på en hittad signal och stannar tills den slutar, sedan återupptar den sökningen. Detta är appen för att utforska ett frekvensband och upptäcka vad som är aktivt  -  du behöver inte veta de exakta frekvenserna i förväg. Kombinera med Looking Glass: använd Looking Glass för att visuellt identifiera aktiva band, använd sedan Search för att lyssna."
       },
       "SSTV RX": {
         "description": "Slow Scan Television-mottagare. Avkodar bildsändningar.",
-        "learn": "SSTV (Slow Scan Television) sänder stillbilder över radio genom att koda pixelljusstyrka som ljudtoner (1200-2300 Hz). En enda bild tar 30-120 sekunder och byggs upp rad för rad på skärmen. SSTV har använts av radioamatörer sedan 1960-talet och är fortfarande aktivt — vanliga anropsfrekvenser inkluderar 14,230 MHz (20m-bandet) och 145,500 MHz (2m FM). Internationella rymdstationen (ISS) sänder periodvis SSTV-bilder på 145,800 MHz under speciella evenemang, och vem som helst med en mottagare kan avkoda dem. PortaPack SSTV RX-appen detekterar automatiskt kodningsläget (Scottie, Martin, Robot osv.) och bygger bilden på skärmen allt eftersom den tas emot."
+        "learn": "SSTV (Slow Scan Television) sänder stillbilder över radio genom att koda pixelljusstyrka som ljudtoner (1200-2300 Hz). En enda bild tar 30-120 sekunder och byggs upp rad för rad på skärmen. SSTV har använts av radioamatörer sedan 1960-talet och är fortfarande aktivt  -  vanliga anropsfrekvenser inkluderar 14,230 MHz (20m-bandet) och 145,500 MHz (2m FM). Internationella rymdstationen (ISS) sänder periodvis SSTV-bilder på 145,800 MHz under speciella evenemang, och vem som helst med en mottagare kan avkoda dem. PortaPack SSTV RX-appen detekterar automatiskt kodningsläget (Scottie, Martin, Robot osv.) och bygger bilden på skärmen allt eftersom den tas emot."
       },
       "SubCar": {
         "description": "FM-underbärvågsavkodare (SCA-tjänster).",
-        "learn": "FM-radiostationer kan bära dolda ljudkanaler kallade underbärvågor (SCA — Subsidiary Communications Authorization) vid sidan av sitt huvudsakliga stereoljud. Dessa underbärvågor sitter ovanför stereosignalen vid 67 kHz eller 92 kHz och bär separat ljudinnehåll: bakgrundsmusiktjänster (som den ursprungliga Muzak), uppläsningstjänster för synskadade, främmandespråkig programmering eller datatjänster. SubCar avkodar dessa dolda kanaler som en vanlig FM-radio inte kan nå. De flesta vet inte att dessa existerar — de har varit en del av FM-sändning sedan 1950-talet. Tillgänglighet varierar per station och region; många stationer använder inte längre underbärvågor, men vissa bär fortfarande uppläsningstjänster eller nisch-ljudinnehåll."
+        "learn": "FM-radiostationer kan bära dolda ljudkanaler kallade underbärvågor (SCA  -  Subsidiary Communications Authorization) vid sidan av sitt huvudsakliga stereoljud. Dessa underbärvågor sitter ovanför stereosignalen vid 67 kHz eller 92 kHz och bär separat ljudinnehåll: bakgrundsmusiktjänster (som den ursprungliga Muzak), uppläsningstjänster för synskadade, främmandespråkig programmering eller datatjänster. SubCar avkodar dessa dolda kanaler som en vanlig FM-radio inte kan nå. De flesta vet inte att dessa existerar  -  de har varit en del av FM-sändning sedan 1950-talet. Tillgänglighet varierar per station och region; många stationer använder inte längre underbärvågor, men vissa bär fortfarande uppläsningstjänster eller nisch-ljudinnehåll."
       },
       "SubGhzD": {
         "description": "Sub-GHz protokollavkodare. Bilnycklar, garagefjärrkontroller, väderstationer, ISM-enheter. Rekommenderat: AMP 0, LNA 32, VGA 20.",
-        "learn": "SubGhzD (Sub-GHz Decoder) är en av de mest populära Mayhem-apparna — den avkodar protokollen som hundratals vanliga trådlösa enheter använder på ISM-banden (Industrial, Scientific, Medical) vid 315, 433, 868 och 915 MHz. Detta inkluderar bilnycklar (fasta och vissa rullande koder), garageportsöppnare, trådlösa dörrklockor, väderstationer, däcktrycksensorer, trådlösa termometrar, markfuktighetssensorer och många IoT-enheter. Appen identifierar protokollet, visar rådata och kan spara inspelningar på SD-kortet. Börja med AMP av, LNA 32, VGA 20 — dessa är de rekommenderade gain-inställningarna. Tryck på en fjärrkontroll eller vänta på en väderstationssändning så ser du den avkodade datan."
+        "learn": "SubGhzD (Sub-GHz Decoder) är en av de mest populära Mayhem-apparna  -  den avkodar protokollen som hundratals vanliga trådlösa enheter använder på ISM-banden (Industrial, Scientific, Medical) vid 315, 433, 868 och 915 MHz. Detta inkluderar bilnycklar (fasta och vissa rullande koder), garageportsöppnare, trådlösa dörrklockor, väderstationer, däcktrycksensorer, trådlösa termometrar, markfuktighetssensorer och många IoT-enheter. Appen identifierar protokollet, visar rådata och kan spara inspelningar på SD-kortet. Börja med AMP av, LNA 32, VGA 20  -  dessa är de rekommenderade gain-inställningarna. Tryck på en fjärrkontroll eller vänta på en väderstationssändning så ser du den avkodade datan."
       },
       "TPMS RX": {
         "description": "Däcktrycksövervakning-avkodare. Sensor-ID:n, tryck, temperatur.",
-        "learn": "TPMS-sensorer (Tire Pressure Monitoring System) är obligatoriska i alla nya fordon i USA (sedan 2007) och EU (sedan 2014). Varje däck innehåller en liten trådlös sensor som sänder däcktryck och temperatur ungefär var 60:e sekund på 315 MHz (Nordamerika) eller 433 MHz (Europa). Varje sensor har ett unikt 32-bitars ID kopplat till ett specifikt däck. PortaPack avkodar dessa sändningar och visar sensor-ID, tryck (PSI eller kPa) och temperatur för närliggande fordon. På en parkeringsplats kan du se dussintals sensorer som rapporterar. Detta är en välkänd integritetsfråga — TPMS-ID:n kan användas för att spåra specifika fordon, vilket har demonstrerats i akademisk säkerhetsforskning."
+        "learn": "TPMS-sensorer (Tire Pressure Monitoring System) är obligatoriska i alla nya fordon i USA (sedan 2007) och EU (sedan 2014). Varje däck innehåller en liten trådlös sensor som sänder däcktryck och temperatur ungefär var 60:e sekund på 315 MHz (Nordamerika) eller 433 MHz (Europa). Varje sensor har ett unikt 32-bitars ID kopplat till ett specifikt däck. PortaPack avkodar dessa sändningar och visar sensor-ID, tryck (PSI eller kPa) och temperatur för närliggande fordon. På en parkeringsplats kan du se dussintals sensorer som rapporterar. Detta är en välkänd integritetsfråga  -  TPMS-ID:n kan användas för att spåra specifika fordon, vilket har demonstrerats i akademisk säkerhetsforskning."
       },
       "Weather": {
         "description": "Trådlös väderstationsavkodare. Temperatur, fuktighet, sensor-ID.",
-        "learn": "Konsumentväderstationer (Acurite, LaCrosse, Oregon Scientific, Ambient Weather osv.) använder enkla okrypterade protokoll på ISM-band — typiskt 433,92 MHz (globalt), 868 MHz (Europa) eller 915 MHz (Nordamerika). Utomhussensorer sänder temperatur, fuktighet, vindhastighet, nederbörd och UV-index var 30-60 sekund. Weather-appen avkodar dessa sändningar och visar avläsningarna med sensorns unika ID. Du kan trådlöst övervaka din egen väderstation, eller i vilket kvarter som helst kommer du troligen att fånga upp avläsningar från grannars stationer inom ett par hundra meters räckvidd. Protokollen är väldokumenterade och använder enkel OOK- eller FSK-modulation."
+        "learn": "Konsumentväderstationer (Acurite, LaCrosse, Oregon Scientific, Ambient Weather osv.) använder enkla okrypterade protokoll på ISM-band  -  typiskt 433,92 MHz (globalt), 868 MHz (Europa) eller 915 MHz (Nordamerika). Utomhussensorer sänder temperatur, fuktighet, vindhastighet, nederbörd och UV-index var 30-60 sekund. Weather-appen avkodar dessa sändningar och visar avläsningarna med sensorns unika ID. Du kan trådlöst övervaka din egen väderstation, eller i vilket kvarter som helst kommer du troligen att fånga upp avläsningar från grannars stationer inom ett par hundra meters räckvidd. Protokollen är väldokumenterade och använder enkel OOK- eller FSK-modulation."
       },
       "WeFax": {
         "description": "HF väderfax-mottagare/avkodare. Marina och flygsändningar.",
-        "learn": "Radiofax (WeFax eller Weather Fax) är en metod att sända väderkartor, havsyttemperaturkartor och israpporter över HF-radio. Använd sedan 1940-talet sänds det fortfarande aktivt av kuststationer världen över för marina användare som behöver väderkartor till sjöss utan internet. Signalen kodar bilddata som varierande ljudtoner (FM-modulation) och bygger en bild rad för rad — liknande en faxmaskin men över radio. Nyckelstationer inkluderar NOAA (Boston, New Orleans, Kodiak), JMH Tokyo och DWD Hamburg. Vanliga frekvenser: 3-25 MHz HF-band. PortaPack avkodar ljudet till en väderkarta på skärmen. Bästa resultat med en HF-antenn och under stationens schemalagda sändningstider (publicerade i officiella sändningsscheman)."
+        "learn": "Radiofax (WeFax eller Weather Fax) är en metod att sända väderkartor, havsyttemperaturkartor och israpporter över HF-radio. Använd sedan 1940-talet sänds det fortfarande aktivt av kuststationer världen över för marina användare som behöver väderkartor till sjöss utan internet. Signalen kodar bilddata som varierande ljudtoner (FM-modulation) och bygger en bild rad för rad  -  liknande en faxmaskin men över radio. Nyckelstationer inkluderar NOAA (Boston, New Orleans, Kodiak), JMH Tokyo och DWD Hamburg. Vanliga frekvenser: 3-25 MHz HF-band. PortaPack avkodar ljudet till en väderkarta på skärmen. Bästa resultat med en HF-antenn och under stationens schemalagda sändningstider (publicerade i officiella sändningsscheman)."
       }
     },
     "vendors": {
       "Great Scott Gadgets": {
         "description": "Ursprunglig skapare och designer av HackRF One. Michael Ossmanns företag. Den definitiva källan för autentiska HackRF-kort.",
-        "note": "Säljer inte PortaPack-tillägg — endast själva HackRF One."
+        "note": "Säljer inte PortaPack-tillägg  -  endast själva HackRF One."
       },
       "OpenSourceSDRLab": {
         "description": "Designer och tillverkare av PortaPack H4M (den mest populära PortaPack-varianten). Säljer direkt och via återförsäljare.",
@@ -707,7 +707,7 @@
         "description": "En av de största globala elektronikdistributörerna. Auktoriserad HackRF One-källa."
       },
       "Amazon": {
-        "description": "Tillgänglig från olika säljare. Kvaliteten varierar markant — läs recensioner noggrant och kontrollera säljarens omdömen.",
+        "description": "Tillgänglig från olika säljare. Kvaliteten varierar markant  -  läs recensioner noggrant och kontrollera säljarens omdömen.",
         "note": "Hög risk för kloner och förfalskade kort. Leta efter säljare med etablerad historik och positiva recensioner som specifikt nämner autentisk hårdvara."
       },
       "AliExpress": {
@@ -721,12 +721,12 @@
         "description": "Great Scott Gadgets har designat och säljer HackRF One. OpenSourceSDRLab har designat och tillverkar PortaPack H4M. Köp direkt från originaltillverkaren är generellt det mest pålitliga sättet att säkerställa att du får autentisk hårdvara."
       },
       "1": {
-        "title": "Kloner finns — och de är vanliga",
+        "title": "Kloner finns  -  och de är vanliga",
         "description": "HackRF är öppen hårdvara, så vem som helst kan tillverka det. Kloner varierar från 'fungerar bra' till 'död vid ankomst'. Risken är din."
       },
       "2": {
         "title": "Om priset verkar för bra för att vara sant...",
-        "description": "Beroende på säljare, region och tillgänglighet kan en äkta HackRF One kosta uppåt 200-350 USD från etablerade källor. Priserna varierar, men kort som listas långt under det typiska intervallet är mer sannolikt kloner. Vissa kloner fungerar bra, många gör det inte — din erfarenhet kan variera."
+        "description": "Beroende på säljare, region och tillgänglighet kan en äkta HackRF One kosta uppåt 200-350 USD från etablerade källor. Priserna varierar, men kort som listas långt under det typiska intervallet är mer sannolikt kloner. Vissa kloner fungerar bra, många gör det inte  -  din erfarenhet kan variera."
       },
       "3": {
         "title": "Kolla med communityn först",
@@ -737,7 +737,7 @@
         "description": "H4M är den aktuellt rekommenderade PortaPack med bäst Mayhem firmware-stöd. Äldre H1/H2-versioner har färre funktioner och annan hårdvara."
       },
       "5": {
-        "title": "Marketplace-paket — inspektera noggrant",
+        "title": "Marketplace-paket  -  inspektera noggrant",
         "description": "Amazon- och AliExpress-paket inkluderar ofta antenner, fodral och tillbehör. Kvaliteten på inkluderade tillbehör varierar kraftigt oavsett själva kortet."
       }
     },
@@ -773,18 +773,18 @@
     "safety": {
       "mistakes": {
         "Leaving the internal amp ON near strong signal sources": {
-          "description": "HackRF:s front-end-förstärkare (MGA-81563) har inget bandpassfilter före — den förstärker hela 1 MHz till 6 GHz-området samtidigt, oavsett vilken frekvens du är inställd på.",
+          "description": "HackRF:s front-end-förstärkare (MGA-81563) har inget bandpassfilter före  -  den förstärker hela 1 MHz till 6 GHz-området samtidigt, oavsett vilken frekvens du är inställd på.",
           "symptoms": [
             "Förstärkare PÅ gör signaler svagare istället för starkare",
             "Minskad känslighet över alla band",
-            "Ingen synlig skada — felet är tyst"
+            "Ingen synlig skada  -  felet är tyst"
           ],
           "prevention": [
             "Håll AMP AV om du inte specifikt behöver den",
             "Använd ett externt bandpassfilter före HackRF-ingången",
             "Lägg till en 10-20 dB inline-dämpare nära starka sändare"
           ],
-          "technical": "Max säker ingång med AMP PÅ är -5 dBm. En mobilmast på 900 MHz 100 m bort levererar ungefär +5 till +10 dBm — tillräckligt för att förstöra MGA-81563 även när du är inställd på 433 MHz."
+          "technical": "Max säker ingång med AMP PÅ är -5 dBm. En mobilmast på 900 MHz 100 m bort levererar ungefär +5 till +10 dBm  -  tillräckligt för att förstöra MGA-81563 även när du är inställd på 433 MHz."
         },
         "Using a 5W handheld radio within inches": {
           "description": "Det vanligast rapporterade skadescenariot i HackRF-communityn. Handhållna radior har 5W (37 dBm) uteffekt och på nära håll kopplas signalen direkt in i HackRF:s antennport.",
@@ -812,7 +812,7 @@
             "Kontrollera LNB:ns förstärkningsspecifikation före anslutning",
             "Överväg en bias-tee med korrekt effektisolering"
           ],
-          "technical": "En LNB med 60 dB förstärkning matar +23 till +26 dBm in i en enhet med max -5 dBm (AMP PÅ). Det är 28-31 dB över det absoluta max — ungefär 1000x den säkra effektnivån."
+          "technical": "En LNB med 60 dB förstärkning matar +23 till +26 dBm in i en enhet med max -5 dBm (AMP PÅ). Det är 28-31 dB över det absoluta max  -  ungefär 1000x den säkra effektnivån."
         },
         "Airport radar exposure": {
           "description": "Flygplatsövervakningsradar opererar vid extremt höga effektnivåer. Även i enbart mottagningsläge med AMP AV kan den elektromagnetiska fältstyrkan nära en flygplats överstiga HackRF:s ingångsgränser.",
@@ -843,7 +843,7 @@
           "technical": "En öppen SMA har VSWR oändlighet (reflektionsförlust 0 dB). Vid 15 dBm (~32 mW) reflekteras all effekt tillbaka. RFFC5072 PA i HackRF är dimensionerad för begränsad reflekterad effekt och har ingen inbyggd isolator."
         },
         "ESD while connecting antennas": {
-          "description": "Statisk urladdning från din kropp eller en laddad antenn går direkt in i RF-front-enden genom SMA-centerstiftet. Skadan är ofta subtil och progressiv — du kanske inte märker den på flera veckor.",
+          "description": "Statisk urladdning från din kropp eller en laddad antenn går direkt in i RF-front-enden genom SMA-centerstiftet. Skadan är ofta subtil och progressiv  -  du kanske inte märker den på flera veckor.",
           "symptoms": [
             "Förstärkare fungerar som dämpare istället för att ge förstärkning",
             "Gradvis känslighetsförlust över tid",
@@ -865,13 +865,13 @@
           ],
           "prevention": [
             "Använd en antenn designad för din målfrekvens",
-            "Kontrollera SWR före sändning — sikta på < 2:1",
+            "Kontrollera SWR före sändning  -  sikta på < 2:1",
             "Börja vid låg TX-förstärkning och öka gradvis under övervakning"
           ],
           "technical": "Vid 15 dBm med 10:1 VSWR-felmatchning reflekteras ungefär 70% av effekten tillbaka. HackRF saknar en cirkulator eller isolator, så reflekterad effekt går direkt tillbaka in i PA-steget."
         },
         "Not using a data-capable USB cable": {
-          "description": "Många USB-kablar är bara för laddning — de har effektledare men inga datalinjer. Detta är det absolut vanligaste 'min HackRF fungerar inte'-problemet och slösar timmar av felsökning.",
+          "description": "Många USB-kablar är bara för laddning  -  de har effektledare men inga datalinjer. Detta är det absolut vanligaste 'min HackRF fungerar inte'-problemet och slösar timmar av felsökning.",
           "symptoms": [
             "'Device not found' eller 'No HackRF boards found' fel",
             "Enhet startar (LED:ar lyser) men känns inte igen av mjukvara",
@@ -880,7 +880,7 @@
           "prevention": [
             "Märk dina kända fungerande datakablar",
             "Testa med 3-5 olika kablar innan du misstänker hårdvara",
-            "Använd korta kablar (< 1m) — USB 2.0-signalkvalitet försämras med längden",
+            "Använd korta kablar (< 1m)  -  USB 2.0-signalkvalitet försämras med längden",
             "USB 3.0-portar och -kablar tenderar att vara mer pålitliga"
           ],
           "technical": "HackRF kräver USB 2.0 High Speed (480 Mbps). Laddningskablar saknar D+ och D- datalinjerna helt. Vissa billiga datakablar har otillräcklig skärmning som orsakar intermittenta anslutningar vid hög hastighet."
@@ -1072,13 +1072,13 @@
       }
     },
     "quickStartSteps": {
-      "s1": "Verifiera att din USB-kabel stödjer data (inte bara laddning) — detta är det vanligaste installationsproblemet",
-      "s2": "Sätt i ett MicroSD-kort (FAT32, 8-32 GB rekommenderas) — lagrar inspelningar, inställningar och appar",
+      "s1": "Verifiera att din USB-kabel stödjer data (inte bara laddning)  -  detta är det vanligaste installationsproblemet",
+      "s2": "Sätt i ett MicroSD-kort (FAT32, 8-32 GB rekommenderas)  -  lagrar inspelningar, inställningar och appar",
       "s3": "Ladda ner senaste Mayhem-firmware från GitHub releases och kopiera .ppfw.tar till SD-kortets rot",
-      "s4": "Anslut den teleskopiska antennen (40 MHz–6 GHz) till SMA-porten — dra åt bara för hand, aldrig med verktyg",
-      "s5": "Jorda dig själv innan du hanterar enheten — ESD på SMA-centerstiftet kan skada LNA",
+      "s4": "Anslut den teleskopiska antennen (40 MHz-6 GHz) till SMA-porten  -  dra åt bara för hand, aldrig med verktyg",
+      "s5": "Jorda dig själv innan du hanterar enheten  -  ESD på SMA-centerstiftet kan skada LNA",
       "s6": "Ha en 50-ohm dummy load redo om du planerar att testa TX-appar",
-      "s7": "Skjut strömbrytaren UPPÅT — vänta tills Mayhem-huvudmenyn visas",
+      "s7": "Skjut strömbrytaren UPPÅT  -  vänta tills Mayhem-huvudmenyn visas",
       "s8": "Kontrollera firmware-versionen i statusfältet (aktuell: v2.3.2)",
       "s9": "Gå till Settings → SD Card → Test för att verifiera att SD-kortet upptäcks och fungerar",
       "s10": "Gå till Settings → UI → ställ in encoder-känslighet efter preferens (låg/normal/hög)",
@@ -1086,18 +1086,18 @@
       "s12": "Navigera till Receive → Audio",
       "s13": "Ställ in läge till 'WFM' (Wideband FM)",
       "s14": "Ställ in frekvens till en lokal FM-station (t.ex. 101,1 MHz)",
-      "s15": "Ställ in gain: LNA=16, VGA=20, AMP=0 (AV) — börja alltid med AMP avstängd",
-      "s16": "Höj volymen till 40-60 — du bör höra stationen",
-      "s17": "Kontrollera RSSI-fältet och waterfall — en stark signal visar sig som ett ljust vertikalt band",
+      "s15": "Ställ in gain: LNA=16, VGA=20, AMP=0 (AV)  -  börja alltid med AMP avstängd",
+      "s16": "Höj volymen till 40-60  -  du bör höra stationen",
+      "s17": "Kontrollera RSSI-fältet och waterfall  -  en stark signal visar sig som ett ljust vertikalt band",
       "s18": "Om svagt: öka VGA först, sedan LNA. Om klippning/distortion: minska gain",
       "s19": "Stäm in på en känd FM-station och notera om frekvensen är något förskjuten",
       "s20": "Gå till Settings → Radio → Frequency Correction och justera tills stationen centreras korrekt",
-      "s21": "Detta korrigerar ditt TCXO-offset — förbättrar noggrannheten i alla appar",
-      "s22": "Före all TX: anslut en 50-ohm dummy load eller frekvensmatchad antenn — sänd aldrig ut i fria luften",
+      "s21": "Detta korrigerar ditt TCXO-offset  -  förbättrar noggrannheten i alla appar",
+      "s22": "Före all TX: anslut en 50-ohm dummy load eller frekvensmatchad antenn  -  sänd aldrig ut i fria luften",
       "s23": "Lär dig nödstopp av TX: Stoppknapp → Bakåtpil → RESET → Stäng av",
       "s24": "Använd aldrig enheten inom 3 meter från aktiva sändare (handhållna, routrar) under mottagning",
       "s25": "Tryck på bakåtpilen för att återgå till menyerna",
-      "s26": "Skjut strömbrytaren NEDÅT för att stänga av — stäng alltid av innan du kopplar bort antennen"
+      "s26": "Skjut strömbrytaren NEDÅT för att stänga av  -  stäng alltid av innan du kopplar bort antennen"
     },
     "quickStartSections": {
       "beforePowerOn": "Innan du slår på",

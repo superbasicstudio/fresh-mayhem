@@ -4,9 +4,9 @@ import '../helpers/i18nSetup.js';
 import SafetyBadge from '../../components/SafetyBadge.jsx';
 
 describe('SafetyBadge component', () => {
-  test('renders RX badge for safe level', () => {
+  test('renders RX ONLY badge for safe level', () => {
     render(<SafetyBadge level="safe" />);
-    expect(screen.getByText('RX')).toBeInTheDocument();
+    expect(screen.getByText('RX ONLY')).toBeInTheDocument();
   });
 
   test('renders CAUTION badge for caution level', () => {
@@ -14,29 +14,29 @@ describe('SafetyBadge component', () => {
     expect(screen.getByText('CAUTION')).toBeInTheDocument();
   });
 
-  test('renders DANGER badge for danger level', () => {
+  test('renders HIGH RISK badge for danger level', () => {
     render(<SafetyBadge level="danger" />);
-    expect(screen.getByText('DANGER')).toBeInTheDocument();
+    expect(screen.getByText('HIGH RISK')).toBeInTheDocument();
   });
 
-  test('renders EXTREME badge for extreme level', () => {
+  test('renders EXTREME RISK badge for extreme level', () => {
     render(<SafetyBadge level="extreme" />);
-    expect(screen.getByText('EXTREME')).toBeInTheDocument();
+    expect(screen.getByText('EXTREME RISK')).toBeInTheDocument();
   });
 
-  test('renders ILLEGAL badge for illegal level', () => {
+  test('renders RESTRICTED badge for illegal level', () => {
     render(<SafetyBadge level="illegal" />);
-    expect(screen.getByText('ILLEGAL')).toBeInTheDocument();
+    expect(screen.getByText('RESTRICTED')).toBeInTheDocument();
   });
 
-  test('defaults to RX for unknown level', () => {
+  test('defaults to RX ONLY for unknown level', () => {
     render(<SafetyBadge level="unknown" />);
-    expect(screen.getByText('RX')).toBeInTheDocument();
+    expect(screen.getByText('RX ONLY')).toBeInTheDocument();
   });
 
-  test('defaults to RX when level is undefined', () => {
+  test('defaults to RX ONLY when level is undefined', () => {
     render(<SafetyBadge />);
-    expect(screen.getByText('RX')).toBeInTheDocument();
+    expect(screen.getByText('RX ONLY')).toBeInTheDocument();
   });
 
   test('all five levels render different text', () => {
@@ -47,5 +47,10 @@ describe('SafetyBadge component', () => {
       labels.add(container.textContent);
     }
     expect(labels.size).toBe(5);
+  });
+
+  test('badges have cursor-help class for tooltips', () => {
+    const { container } = render(<SafetyBadge level="safe" />);
+    expect(container.querySelector('.cursor-help')).not.toBeNull();
   });
 });

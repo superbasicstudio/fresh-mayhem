@@ -71,11 +71,11 @@
       },
       "receive": {
         "label": "App di ricezione",
-        "desc": "Ricognizione passiva — ADS-B, POCSAG, SubGhzD, BLE e altro"
+        "desc": "Ricognizione passiva  -  ADS-B, POCSAG, SubGhzD, BLE e altro"
       },
       "transmit": {
         "label": "App di trasmissione",
-        "desc": "Test attivi — OOK, replay, FlipperTX, BLE TX (solo uso autorizzato)"
+        "desc": "Test attivi  -  OOK, replay, FlipperTX, BLE TX (solo uso autorizzato)"
       },
       "tools": {
         "label": "Strumenti e impostazioni",
@@ -88,7 +88,7 @@
       },
       "frequencies": {
         "label": "Riferimento frequenze",
-        "stat": "1 MHz – 6 GHz",
+        "stat": "1 MHz - 6 GHz",
         "desc": "Diagramma dello spettro RF, frequenze vietate, bande TX legali, sanzioni"
       },
       "learn": {
@@ -113,7 +113,7 @@
     "portapack": "PortaPack",
     "portapackValue": "H4M",
     "frequency": "Frequenza",
-    "frequencyValue": "1 MHz – 6 GHz",
+    "frequencyValue": "1 MHz - 6 GHz",
     "txPower": "Potenza TX",
     "txPowerValue": "~15 dBm (32 mW)",
     "rxApps": "App RX",
@@ -161,7 +161,7 @@
   },
   "receive": {
     "title": "App di ricezione",
-    "subtitle": "Tutte le {{count}} applicazioni di sola ricezione nel firmware Mayhem. Nessuna trasmissione — la legalità della ricezione passiva varia per regione. Verifica sempre le leggi locali.",
+    "subtitle": "Tutte le {{count}} applicazioni di sola ricezione nel firmware Mayhem. Nessuna trasmissione  -  la legalità della ricezione passiva varia per regione. Verifica sempre le leggi locali.",
     "filterPlaceholder": "Filtra app di ricezione...",
     "apps": "app",
     "learnMore": "Scopri di più",
@@ -170,7 +170,7 @@
   },
   "transmit": {
     "title": "App di trasmissione",
-    "subtitle": "Tutte le {{count}} applicazioni di trasmissione nel firmware Mayhem. Ciascuna classificata per livello di pericolo — usa sempre un dummy load o un'antenna adattata.",
+    "subtitle": "Tutte le {{count}} applicazioni di trasmissione nel firmware Mayhem. Ciascuna classificata per livello di pericolo  -  usa sempre un dummy load o un'antenna adattata.",
     "warning": "Tutte le app TX richiedono un'antenna o un dummy load. Non trasmettere mai senza un carico collegato. Nascondi Jammer, GPS Sim e ADS-B TX tramite l'App Manager.",
     "filterPlaceholder": "Filtra app di trasmissione...",
     "apps": "app",
@@ -185,7 +185,7 @@
   },
   "safety": {
     "title": "Centro sicurezza",
-    "subtitle": "Errori comuni, storie reali di danni, livelli di pericolo TX e comportamento dell'amplificatore per il HackRF One + PortaPack. Le informazioni sono solo a scopo educativo — non costituiscono consulenza legale. Verifica sempre le normative locali.",
+    "subtitle": "Errori comuni, storie reali di danni, livelli di pericolo TX e comportamento dell'amplificatore per il HackRF One + PortaPack. Le informazioni sono solo a scopo educativo  -  non costituiscono consulenza legale. Verifica sempre le normative locali.",
     "tabs": {
       "mistakes": "Errori da principiante",
       "stories": "Storie di danni",
@@ -209,11 +209,11 @@
   },
   "frequencies": {
     "title": "Scopri le radiofrequenze (RF)",
-    "subtitle": "Copertura dello spettro RF da 1 MHz a 6 GHz — zone vietate, bande TX legali e riferimento sanzioni per gli USA.",
+    "subtitle": "Copertura dello spettro RF da 1 MHz a 6 GHz  -  zone vietate, bande TX legali e riferimento sanzioni per gli USA.",
     "spectrumTitle": "Copertura dello spettro RF",
-    "bandMapTitle": "Mappa delle bande — Zone vietate vs TX legale (1 MHz – 6 GHz)",
+    "bandMapTitle": "Mappa delle bande  -  Zone vietate vs TX legale (1 MHz - 6 GHz)",
     "bandMapDesc": "Mappa interattiva che mostra le bande di frequenza ristrette (rosso) e consentite (verde) su scala logaritmica. Passa il cursore su qualsiasi banda per i dettagli. Le sovrapposizioni gialle indicano dove le bande ISM legali condividono lo spettro con servizi ristretti.",
-    "noGoTitle": "Frequenze vietate — Restrizioni federali USA",
+    "noGoTitle": "Frequenze vietate  -  Restrizioni federali USA",
     "legalTitle": "Bande TX legali (con condizioni)",
     "penaltiesTitle": "Conseguenze legali (Legge federale USA)",
     "band": "Banda",
@@ -223,7 +223,7 @@
     "violation": "Violazione",
     "law": "Legge",
     "penalty": "Sanzione",
-    "disclaimer": "Le restrizioni di frequenza e le sanzioni mostrate si basano sulle normative federali USA (FCC/FAA). Le leggi variano significativamente per paese e regione. Questo non costituisce consulenza legale — verifica sempre le normative della tua giurisdizione prima di trasmettere."
+    "disclaimer": "Le restrizioni di frequenza e le sanzioni mostrate si basano sulle normative federali USA (FCC/FAA). Le leggi variano significativamente per paese e regione. Questo non costituisce consulenza legale  -  verifica sempre le normative della tua giurisdizione prima di trasmettere."
   },
   "learn": {
     "title": "Impara",
@@ -240,8 +240,8 @@
     "all": "Tutti"
   },
   "quickstart": {
-    "title": "HackRF + PortaPack — Avvio rapido",
-    "subtitle": "Guida completa alla configurazione dall'unboxing alla prima sessione di ricezione FM. Copre preparazione della scheda SD, firmware, calibrazione, sicurezza e spegnimento. Spunta ogni passaggio — il progresso viene salvato localmente.",
+    "title": "HackRF + PortaPack  -  Avvio rapido",
+    "subtitle": "Guida completa alla configurazione dall'unboxing alla prima sessione di ricezione FM. Copre preparazione della scheda SD, firmware, calibrazione, sicurezza e spegnimento. Spunta ogni passaggio  -  il progresso viene salvato localmente.",
     "clear": "CANCELLA",
     "sections": {
       "beforePowerOn": "Prima di accendere",
@@ -251,13 +251,13 @@
       "safetyShutdown": "Sicurezza e spegnimento"
     },
     "steps": {
-      "s1": "Verifica che il cavo USB sia in grado di trasmettere dati (non solo ricarica) — questo è il problema di configurazione numero 1",
-      "s2": "Inserisci una scheda MicroSD (FAT32, 8-32 GB consigliato) — memorizza catture, impostazioni e app",
+      "s1": "Verifica che il cavo USB sia in grado di trasmettere dati (non solo ricarica)  -  questo è il problema di configurazione numero 1",
+      "s2": "Inserisci una scheda MicroSD (FAT32, 8-32 GB consigliato)  -  memorizza catture, impostazioni e app",
       "s3": "Scarica l'ultimo firmware Mayhem da GitHub Releases e copia il .ppfw.tar nella radice della SD",
-      "s4": "Collega l'antenna telescopica (40 MHz–6 GHz) alla porta SMA — stringi solo a mano, mai con attrezzi",
-      "s5": "Scarica l'elettricità statica prima di maneggiare — l'ESD sul pin centrale del SMA può danneggiare il LNA",
+      "s4": "Collega l'antenna telescopica (40 MHz-6 GHz) alla porta SMA  -  stringi solo a mano, mai con attrezzi",
+      "s5": "Scarica l'elettricità statica prima di maneggiare  -  l'ESD sul pin centrale del SMA può danneggiare il LNA",
       "s6": "Tieni pronto un dummy load da 50 ohm se prevedi di testare app TX",
-      "s7": "Scorri l'interruttore di alimentazione verso l'ALTO — attendi la comparsa del menu principale di Mayhem",
+      "s7": "Scorri l'interruttore di alimentazione verso l'ALTO  -  attendi la comparsa del menu principale di Mayhem",
       "s8": "Controlla la versione del firmware nella barra di stato (attuale: v2.3.2)",
       "s9": "Vai su Impostazioni → Scheda SD → Test per verificare che la scheda SD sia rilevata e funzionante",
       "s10": "Vai su Impostazioni → UI → imposta la sensibilità dell'encoder secondo le tue preferenze (bassa/normale/alta)",
@@ -265,18 +265,18 @@
       "s12": "Naviga su Ricezione → Audio",
       "s13": "Imposta la modalità su 'WFM' (FM a banda larga)",
       "s14": "Imposta la frequenza su una stazione FM locale (es. 101.1 MHz)",
-      "s15": "Imposta i guadagni: LNA=16, VGA=20, AMP=0 (OFF) — inizia sempre con AMP spento",
-      "s16": "Alza il volume a 40–60 — dovresti sentire la stazione",
-      "s17": "Controlla la barra RSSI e la cascata — un segnale forte mostra una banda verticale luminosa",
+      "s15": "Imposta i guadagni: LNA=16, VGA=20, AMP=0 (OFF)  -  inizia sempre con AMP spento",
+      "s16": "Alza il volume a 40-60  -  dovresti sentire la stazione",
+      "s17": "Controlla la barra RSSI e la cascata  -  un segnale forte mostra una banda verticale luminosa",
       "s18": "Se debole: aumenta prima il VGA, poi il LNA. Se c'è clipping/distorsione: riduci i guadagni",
       "s19": "Sintonizzati su una stazione FM nota e verifica se la frequenza è leggermente fuori centro",
       "s20": "Vai su Impostazioni → Radio → Correzione frequenza e regola fino a centrare correttamente la stazione",
-      "s21": "Questo corregge l'offset del TCXO — migliora la precisione in tutte le app",
-      "s22": "Prima di qualsiasi TX: collega un dummy load da 50 ohm o un'antenna adattata — non trasmettere mai senza carico",
+      "s21": "Questo corregge l'offset del TCXO  -  migliora la precisione in tutte le app",
+      "s22": "Prima di qualsiasi TX: collega un dummy load da 50 ohm o un'antenna adattata  -  non trasmettere mai senza carico",
       "s23": "Impara l'arresto di emergenza TX: Pulsante Stop → Freccia indietro → RESET → Spegnimento",
       "s24": "Non operare mai a meno di 3 metri da trasmettitori attivi (ricetrasmittenti, router) durante la ricezione",
       "s25": "Tocca la freccia indietro per tornare ai menu",
-      "s26": "Scorri l'interruttore di alimentazione verso il BASSO per spegnere — spegni sempre prima di scollegare l'antenna"
+      "s26": "Scorri l'interruttore di alimentazione verso il BASSO per spegnere  -  spegni sempre prima di scollegare l'antenna"
     }
   },
   "firmwareUpdate": {
@@ -322,9 +322,9 @@
   },
   "whereToBuy": {
     "title": "Dove acquistare",
-    "subtitle": "Fonti segnalate dalla comunità per HackRF One, PortaPack e accessori. Non è una raccomandazione — fai sempre le tue ricerche.",
+    "subtitle": "Fonti segnalate dalla comunità per HackRF One, PortaPack e accessori. Non è una raccomandazione  -  fai sempre le tue ricerche.",
     "disclaimerTitle": "Nessuna affiliazione · Nessuna raccomandazione",
-    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem <strong>non è affiliato a, sponsorizzato da o approvato da</strong> nessun rivenditore elencato in questa pagina. L'inclusione si basa su segnalazioni della comunità in r/hackrf, r/RTLSDR e altri forum SDR — non garantisce qualità del prodotto, autenticità o servizio. <strong>Fai sempre le tue ricerche prima di acquistare.</strong>",
+    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem <strong>non è affiliato a, sponsorizzato da o approvato da</strong> nessun rivenditore elencato in questa pagina. L'inclusione si basa su segnalazioni della comunità in r/hackrf, r/RTLSDR e altri forum SDR  -  non garantisce qualità del prodotto, autenticità o servizio. <strong>Fai sempre le tue ricerche prima di acquistare.</strong>",
     "typeLabel": "TIPO",
     "regionLabel": "REGIONE",
     "all": "Tutti",
@@ -340,7 +340,7 @@
     "title": "Frequenza non trovata",
     "message": "Nessun segnale rilevato a questo indirizzo. La pagina che stai cercando non esiste o è stata spostata.",
     "backButton": "Torna alla panoramica",
-    "footer": "Fresh Mayhem — Un progetto di Super Basic Studio"
+    "footer": "Fresh Mayhem  -  Un progetto di Super Basic Studio"
   },
   "chart": {
     "extreme": "Estremo",
@@ -351,14 +351,14 @@
     "txApps": "App TX"
   },
   "bandMap": {
-    "title": "Mappa delle bande — Bande ristrette e ISM selezionate (1 MHz – 6 GHz)",
-    "description": "Questo grafico mostra una vista <strong>parziale</strong> delle restrizioni di <strong>trasmissione (TX)</strong> sulle frequenze negli Stati Uniti. Rosso = bande selezionate in cui la trasmissione è limitata a livello federale. Verde = bande ISM in cui la trasmissione è generalmente consentita alle condizioni FCC Part 15. <strong>La ricezione (RX) / l'ascolto è generalmente consentita nella maggior parte delle giurisdizioni — verificare sempre le leggi locali.</strong> Questa non è una lista completa di tutte le frequenze ristrette.",
-    "disclaimer": "<strong>Disclaimer:</strong> Secondo la legge federale statunitense (47 U.S.C. § 301), trasmettere su <strong>qualsiasi</strong> frequenza radio senza la dovuta autorizzazione è vietato. La trasmissione senza licenza è consentita solo su bande ISM specifiche entro i rigidi limiti di potenza e le condizioni FCC Part 15. Lo spazio vuoto in questo grafico <strong>non</strong> indica che la trasmissione sia consentita. Questo grafico è solo a scopo educativo e non costituisce consulenza legale. Le normative sulle frequenze variano da paese a paese — verificare sempre le leggi della propria giurisdizione prima di trasmettere. Super Basic Studio, LLC declina ogni responsabilità per trasmissioni non autorizzate.",
-    "restrictedLabel": "TX RISTRETTO — NON TRASMETTERE (BANDE FEDERALI USA SELEZIONATE)",
-    "ismLabel": "BANDE ISM — TX GENERALMENTE CONSENTITO (FCC PART 15, CONDIZIONI APPLICABILI)",
+    "title": "Mappa delle bande  -  Bande ristrette e ISM selezionate (1 MHz - 6 GHz)",
+    "description": "Questo grafico mostra una vista <strong>parziale</strong> delle restrizioni di <strong>trasmissione (TX)</strong> sulle frequenze negli Stati Uniti. Rosso = bande selezionate in cui la trasmissione è limitata a livello federale. Verde = bande ISM in cui la trasmissione è generalmente consentita alle condizioni FCC Part 15. <strong>La ricezione (RX) / l'ascolto è generalmente consentita nella maggior parte delle giurisdizioni  -  verificare sempre le leggi locali.</strong> Questa non è una lista completa di tutte le frequenze ristrette.",
+    "disclaimer": "<strong>Disclaimer:</strong> Secondo la legge federale statunitense (47 U.S.C. § 301), trasmettere su <strong>qualsiasi</strong> frequenza radio senza la dovuta autorizzazione è vietato. La trasmissione senza licenza è consentita solo su bande ISM specifiche entro i rigidi limiti di potenza e le condizioni FCC Part 15. Lo spazio vuoto in questo grafico <strong>non</strong> indica che la trasmissione sia consentita. Questo grafico è solo a scopo educativo e non costituisce consulenza legale. Le normative sulle frequenze variano da paese a paese  -  verificare sempre le leggi della propria giurisdizione prima di trasmettere. Super Basic Studio, LLC declina ogni responsabilità per trasmissioni non autorizzate.",
+    "restrictedLabel": "TX RISTRETTO  -  NON TRASMETTERE (BANDE FEDERALI USA SELEZIONATE)",
+    "ismLabel": "BANDE ISM  -  TX GENERALMENTE CONSENTITO (FCC PART 15, CONDIZIONI APPLICABILI)",
     "doNotTransmit": "NON TRASMETTERE (TX)",
-    "listeningPermitted": "L'ascolto (RX) è generalmente consentito — verificare le leggi locali",
-    "ismConditions": "ISM — Generalmente consentito con le condizioni FCC Part 15",
+    "listeningPermitted": "L'ascolto (RX) è generalmente consentito  -  verificare le leggi locali",
+    "ismConditions": "ISM  -  Generalmente consentito con le condizioni FCC Part 15",
     "clickToZoom": "Clicca per ingrandire",
     "scrollHint": "Scorri per ingrandire · Trascina per spostare · Clicca su una banda per focalizzare",
     "resetZoom": "Reimposta zoom"
@@ -375,7 +375,7 @@
   "penalties": {
     "maxPenalty": "Sanzione massima singola (PIRATE Act)",
     "maxPrison": "Pena detentiva federale massima",
-    "aviationCases": "Casi aeronautici — indagine federale",
+    "aviationCases": "Casi aeronautici  -  indagine federale",
     "scaleTitle": "SCALA DELLE SANZIONI PECUNIARIE (FEDERALE USA)",
     "severe": "GRAVE",
     "high": "ALTO",
@@ -396,7 +396,7 @@
       "gpsJamming": {
         "violation": "Disturbo GPS / cellulare",
         "law": "PIRATE Act",
-        "penalty": "Fino a $119,555/giorno — max. $2.39M",
+        "penalty": "Fino a $119,555/giorno  -  max. $2.39M",
         "detail": "Il PIRATE Act (2020) ha aumentato drasticamente le multe. I disturbatori GPS compromettono aviazione, navigazione marittima, il 911 e i sistemi finanziari."
       },
       "intercepting": {
@@ -408,20 +408,20 @@
       "aviation": {
         "violation": "Interferenza aeronautica",
         "law": "18 U.S.C. § 32",
-        "penalty": "Reato federale — indagine FBI + FAA",
+        "penalty": "Reato federale  -  indagine FBI + FAA",
         "detail": "Legge sul sabotaggio aeronautico. Lo spoofing ADS-B o il disturbo GPS vicino agli aeroporti attiva un'indagine federale immediata. Nessuna soglia minima."
       }
     }
   },
   "badges": {
     "rx": "RX",
-    "rxTooltip": "Solo ricezione — nessuna trasmissione. La legalità dell'ascolto varia per regione.",
+    "rxTooltip": "Solo ricezione  -  nessuna trasmissione. La legalità dell'ascolto varia per regione.",
     "caution": "CAUTELA",
-    "cautionTooltip": "Usare con cautela — verifica le normative locali",
+    "cautionTooltip": "Usare con cautela  -  verifica le normative locali",
     "danger": "PERICOLO",
-    "dangerTooltip": "Pericoloso — può causare danni o problemi legali. Verifica le normative locali.",
+    "dangerTooltip": "Pericoloso  -  può causare danni o problemi legali. Verifica le normative locali.",
     "extreme": "ESTREMO",
-    "extremeTooltip": "Rischio estremo — probabilmente illegale nella maggior parte delle giurisdizioni. Non è consulenza legale.",
+    "extremeTooltip": "Rischio estremo  -  probabilmente illegale nella maggior parte delle giurisdizioni. Non è consulenza legale.",
     "illegal": "ILLEGALE",
     "illegalTooltip": "Illegale nella maggior parte delle giurisdizioni conosciute. Verifica le tue leggi locali."
   },
@@ -429,7 +429,7 @@
     "freshMayhem": "Fresh Mayhem",
     "mayhemFirmware": "Mayhem Firmware",
     "portapackHackrf": "PortaPack H4M + HackRF One",
-    "educationalOnly": "Risorsa esclusivamente educativa — non è consulenza legale. Rispetta sempre le normative RF locali.",
+    "educationalOnly": "Risorsa esclusivamente educativa  -  non è consulenza legale. Rispetta sempre le normative RF locali.",
     "trademarkNotice": "HackRF e PortaPack sono marchi dei rispettivi proprietari. Il firmware Mayhem è un progetto open source dei suoi contributori. Questo sito è un riferimento indipendente e non ufficiale e non è affiliato a, approvato da o sponsorizzato da",
     "greatScottGadgets": "Great Scott Gadgets",
     "trademarkSuffix": ", PortaPack o il progetto Mayhem.",
@@ -449,8 +449,8 @@
     "txApps": {
       "ADS-B(S) TX": {
         "description": "Dati falsi di transponder aeronautico.",
-        "legal": "Reato federale — lo spoofing dei transponder mette in pericolo la sicurezza aerea.",
-        "learn": "ADS-B sta per Automatic Dependent Surveillance–Broadcast. È il sistema usato dagli aeromobili per comunicare la propria posizione, quota e velocità al controllo del traffico aereo e ad altri aerei. La (S) si riferisce alla variante del transponder 'S-mode' usata in Mode S a 1090 MHz. Questa app genera pacchetti ADS-B falsi — aeromobili fantasma che appaiono sui radar ATC e su FlightAware/FlightRadar24. Anche solo testarla in trasmissione è un reato federale ai sensi del 18 U.S.C. § 32 (sabotaggio di aeromobili). Usare solo con dummy load in un ambiente schermato."
+        "legal": "Reato federale  -  lo spoofing dei transponder mette in pericolo la sicurezza aerea.",
+        "learn": "ADS-B sta per Automatic Dependent Surveillance-Broadcast. È il sistema usato dagli aeromobili per comunicare la propria posizione, quota e velocità al controllo del traffico aereo e ad altri aerei. La (S) si riferisce alla variante del transponder 'S-mode' usata in Mode S a 1090 MHz. Questa app genera pacchetti ADS-B falsi  -  aeromobili fantasma che appaiono sui radar ATC e su FlightAware/FlightRadar24. Anche solo testarla in trasmissione è un reato federale ai sensi del 18 U.S.C. § 32 (sabotaggio di aeromobili). Usare solo con dummy load in un ambiente schermato."
       },
       "APRS TX": {
         "description": "Pacchetti di posizione/dati APRS.",
@@ -465,7 +465,7 @@
       "BLE TX": {
         "description": "Pacchetti di advertisement BLE con MAC e payload configurabili.",
         "legal": "Legale per testare i propri dispositivi. Lo spoofing di altri può violare la legge.",
-        "learn": "BLE (Bluetooth Low Energy) è un protocollo wireless a corto raggio che opera a 2,4 GHz, usato da fitness tracker, serrature smart, beacon e dispositivi IoT. I pacchetti di advertisement BLE sono messaggi broadcast che i dispositivi vicini possono rilevare senza accoppiamento. Questa app consente di creare pacchetti di advertisement personalizzati con indirizzi MAC e dati di payload configurabili — utile per testare i propri periferici BLE, esperimenti iBeacon/Eddystone o per comprendere la struttura del protocollo BLE. La portata tipica è di 10–30 metri."
+        "learn": "BLE (Bluetooth Low Energy) è un protocollo wireless a corto raggio che opera a 2,4 GHz, usato da fitness tracker, serrature smart, beacon e dispositivi IoT. I pacchetti di advertisement BLE sono messaggi broadcast che i dispositivi vicini possono rilevare senza accoppiamento. Questa app consente di creare pacchetti di advertisement personalizzati con indirizzi MAC e dati di payload configurabili  -  utile per testare i propri periferici BLE, esperimenti iBeacon/Eddystone o per comprendere la struttura del protocollo BLE. La portata tipica è di 10-30 metri."
       },
       "BLESpam": {
         "description": "Inonda i dispositivi vicini con advertisement BLE.",
@@ -475,7 +475,7 @@
       "Burger Pager": {
         "description": "Segnali di chiamata tipo sottobicchiere per ristoranti.",
         "legal": "Attivazione non autorizzata di apparecchiature commerciali.",
-        "learn": "I sistemi di chiamata dei ristoranti (come quelli di Long Range Systems) usano modulazione OOK o FSK semplice intorno a 400–470 MHz per attivare i sottobicchieri vibranti/lampeggianti che avvisano i clienti che il loro ordine è pronto. Ogni cercapersone ha un codice ID unico. Questa app può attivare cercapersone specifici o tutti simultaneamente riproducendo o creando il segnale di attivazione. Sebbene possa sembrare innocuo, è un uso non autorizzato di apparecchiature radio commerciali e può disturbare le operazioni del ristorante."
+        "learn": "I sistemi di chiamata dei ristoranti (come quelli di Long Range Systems) usano modulazione OOK o FSK semplice intorno a 400-470 MHz per attivare i sottobicchieri vibranti/lampeggianti che avvisano i clienti che il loro ordine è pronto. Ogni cercapersone ha un codice ID unico. Questa app può attivare cercapersone specifici o tutti simultaneamente riproducendo o creando il segnale di attivazione. Sebbene possa sembrare innocuo, è un uso non autorizzato di apparecchiature radio commerciali e può disturbare le operazioni del ristorante."
       },
       "CVS Spam": {
         "description": "Interferenza con il sistema di paging/notifica delle farmacie CVS.",
@@ -485,17 +485,17 @@
       "FlipperTX": {
         "description": "Riproduce file .sub di Flipper Zero direttamente dal PortaPack.",
         "legal": "Legale solo per i propri dispositivi. Riprodurre segnali altrui è illegale.",
-        "learn": "FlipperTX legge i file di cattura .sub di Flipper Zero dalla scheda SD e li riproduce tramite l'HackRF. Il formato .sub del Flipper Zero memorizza le catture grezze dei segnali includendo frequenza, tipo di modulazione e i bit di dati effettivi. Ciò significa che qualsiasi segnale catturato da un Flipper Zero può essere riprodotto attraverso l'HackRF con potenza maggiore e migliori opzioni di antenna. Gli usi comuni includono testare i propri cancelli da garage, cancelli e dispositivi telecomandati. La gamma di frequenza più ampia dell'HackRF (1 MHz–6 GHz) si estende ben oltre la gamma sub-GHz nativa del Flipper."
+        "learn": "FlipperTX legge i file di cattura .sub di Flipper Zero dalla scheda SD e li riproduce tramite l'HackRF. Il formato .sub del Flipper Zero memorizza le catture grezze dei segnali includendo frequenza, tipo di modulazione e i bit di dati effettivi. Ciò significa che qualsiasi segnale catturato da un Flipper Zero può essere riprodotto attraverso l'HackRF con potenza maggiore e migliori opzioni di antenna. Gli usi comuni includono testare i propri cancelli da garage, cancelli e dispositivi telecomandati. La gamma di frequenza più ampia dell'HackRF (1 MHz-6 GHz) si estende ben oltre la gamma sub-GHz nativa del Flipper."
       },
       "GPS Sim": {
         "description": "Genera e trasmette segnali GPS satellitari falsi da file .C8.",
-        "legal": "Reato federale — lo spoofing GPS colpisce aviazione, navigazione e servizi di emergenza.",
-        "learn": "I satelliti GPS trasmettono su L1 (1575,42 MHz) con segnali di temporizzazione precisi che i ricevitori triangolano per determinare la posizione. GPS Sim genera segnali satellitari falsi che sovrascrivono il GPS reale, facendo sì che i ricevitori riportino una posizione e un orario falsi. I file .C8 contengono campioni IQ precalcolati per posizioni/orari specifici. Ciò colpisce TUTTI i ricevitori GPS nel raggio — telefoni, auto, aerei, navi, servizi di emergenza, sistemi di trading finanziario (che usano il GPS per la sincronizzazione). Lo spoofing GPS è un reato federale ai sensi del 18 U.S.C. § 32 con pene severe. Anche un breve test in trasmissione può colpire l'infrastruttura nelle vicinanze."
+        "legal": "Reato federale  -  lo spoofing GPS colpisce aviazione, navigazione e servizi di emergenza.",
+        "learn": "I satelliti GPS trasmettono su L1 (1575,42 MHz) con segnali di temporizzazione precisi che i ricevitori triangolano per determinare la posizione. GPS Sim genera segnali satellitari falsi che sovrascrivono il GPS reale, facendo sì che i ricevitori riportino una posizione e un orario falsi. I file .C8 contengono campioni IQ precalcolati per posizioni/orari specifici. Ciò colpisce TUTTI i ricevitori GPS nel raggio  -  telefoni, auto, aerei, navi, servizi di emergenza, sistemi di trading finanziario (che usano il GPS per la sincronizzazione). Lo spoofing GPS è un reato federale ai sensi del 18 U.S.C. § 32 con pene severe. Anche un breve test in trasmissione può colpire l'infrastruttura nelle vicinanze."
       },
       "Hopper": {
         "description": "Trasmettitore a salto di frequenza. Inonda gamme di frequenze definite.",
         "legal": "Equivalente al jamming. Sempre illegale.",
-        "learn": "Hopper commuta rapidamente la trasmissione attraverso una gamma di frequenze definita dall'utente, restando brevemente su ogni frequenza prima di saltare alla successiva. A differenza dell'app Jammer dedicata, Hopper copre uno spettro potenzialmente molto più ampio tramite salti anziché rumore a banda larga. Ciò lo rende efficace contro i sistemi a spettro espanso a salto di frequenza (FHSS) come Wi-Fi, Bluetooth e alcune comunicazioni militari. L'effetto è lo stesso del jamming — negazione del servizio sulla banda bersaglio. Illegale in tutte le giurisdizioni secondo il Regolamento delle Radiocomunicazioni ITU, Articolo 15."
+        "learn": "Hopper commuta rapidamente la trasmissione attraverso una gamma di frequenze definita dall'utente, restando brevemente su ogni frequenza prima di saltare alla successiva. A differenza dell'app Jammer dedicata, Hopper copre uno spettro potenzialmente molto più ampio tramite salti anziché rumore a banda larga. Ciò lo rende efficace contro i sistemi a spettro espanso a salto di frequenza (FHSS) come Wi-Fi, Bluetooth e alcune comunicazioni militari. L'effetto è lo stesso del jamming  -  negazione del servizio sulla banda bersaglio. Illegale in tutte le giurisdizioni secondo il Regolamento delle Radiocomunicazioni ITU, Articolo 15."
       },
       "Jammer": {
         "description": "Disturbatore RF a banda larga. Rumore su una larghezza di banda fino a 24 MHz.",
@@ -510,12 +510,12 @@
       "Morse TX": {
         "description": "Codice Morse via tono FM o CW.",
         "legal": "Legale con licenza radioamatoriale su frequenze appropriate.",
-        "learn": "Il codice Morse (CW — Continuous Wave) è la modalità digitale più antica nella radio, che codifica il testo come pattern di segnali corti (dit) e lunghi (dah). Questa app trasmette Morse sia come CW (manipolazione on/off di una portante) sia come tono audio FM. Il CW è ancora ampiamente usato dai radioamatori perché è estremamente efficiente — decodificabile a livelli di segnale ben inferiori alla voce. I radioamatori possono usare il CW su tutte le bande amatoriali. L'app accetta testo e lo converte in codice Morse correttamente temporizzato a velocità in parole al minuto configurabile."
+        "learn": "Il codice Morse (CW  -  Continuous Wave) è la modalità digitale più antica nella radio, che codifica il testo come pattern di segnali corti (dit) e lunghi (dah). Questa app trasmette Morse sia come CW (manipolazione on/off di una portante) sia come tono audio FM. Il CW è ancora ampiamente usato dai radioamatori perché è estremamente efficiente  -  decodificabile a livelli di segnale ben inferiori alla voce. I radioamatori possono usare il CW su tutte le bande amatoriali. L'app accetta testo e lo converte in codice Morse correttamente temporizzato a velocità in parole al minuto configurabile."
       },
       "OOK TX": {
         "description": "Segnali On-Off Keying. Telecomandi PT2262, campanelli, cancelli da garage.",
         "legal": "Legale solo per i propri dispositivi.",
-        "learn": "OOK (On-Off Keying) è la forma più semplice di modulazione digitale — la portante è accesa o spenta, rappresentando 1 e 0. La maggior parte dei telecomandi economici a 315/433 MHz usa OOK con il chip codificatore PT2262 (o cloni compatibili come EV1527). Ciò include apricancello da garage, campanelli wireless, prese RF, telecomandi auto (vecchi) e semplici sensori di allarme. L'app può trasmettere codici specifici per attivare questi dispositivi. Molti sistemi vecchi usano codici fissi senza crittografia, rendendoli banalmente riproducibili. I sistemi più recenti usano codici rolling (come KeeLoq) che questa semplice riproduzione non può sconfiggere."
+        "learn": "OOK (On-Off Keying) è la forma più semplice di modulazione digitale  -  la portante è accesa o spenta, rappresentando 1 e 0. La maggior parte dei telecomandi economici a 315/433 MHz usa OOK con il chip codificatore PT2262 (o cloni compatibili come EV1527). Ciò include apricancello da garage, campanelli wireless, prese RF, telecomandi auto (vecchi) e semplici sensori di allarme. L'app può trasmettere codici specifici per attivare questi dispositivi. Molti sistemi vecchi usano codici fissi senza crittografia, rendendoli banalmente riproducibili. I sistemi più recenti usano codici rolling (come KeeLoq) che questa semplice riproduzione non può sconfiggere."
       },
       "OOK Editor": {
         "description": "Costruzione e trasmissione di pattern di segnale OOK personalizzati.",
@@ -525,32 +525,32 @@
       "POCSAG TX": {
         "description": "Messaggi di cercapersone POCSAG falsificati a indirizzi RIC specifici.",
         "legal": "Trasmissione non autorizzata su frequenze licenziate.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) è il protocollo usato dai cercapersone numerici e alfanumerici tradizionali, operante intorno a 150–170 MHz o 450–470 MHz a seconda della regione. Ogni cercapersone ha un RIC (Radio Identity Code) — un indirizzo unico. Questa app crea e trasmette messaggi POCSAG a indirizzi RIC specifici, il che significa che si può inviare testo a singoli cercapersone. Le reti di cercapersone sono ancora attivamente usate da ospedali, servizi di emergenza e alcune aziende. Trasmettere su queste frequenze licenziate senza autorizzazione è illegale."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) è il protocollo usato dai cercapersone numerici e alfanumerici tradizionali, operante intorno a 150-170 MHz o 450-470 MHz a seconda della regione. Ogni cercapersone ha un RIC (Radio Identity Code)  -  un indirizzo unico. Questa app crea e trasmette messaggi POCSAG a indirizzi RIC specifici, il che significa che si può inviare testo a singoli cercapersone. Le reti di cercapersone sono ancora attivamente usate da ospedali, servizi di emergenza e alcune aziende. Trasmettere su queste frequenze licenziate senza autorizzazione è illegale."
       },
       "RDS": {
         "description": "Trasmissione FM con metadati Radio Data System.",
         "legal": "Richiede licenza di radiodiffusione. La bassa potenza può essere tollerata in alcune regioni.",
-        "learn": "RDS (Radio Data System) è la tecnologia dietro il nome della stazione, il titolo del brano e gli annunci sul traffico che appaiono sul display dell'autoradio in FM (88–108 MHz). RDS è una sottoportante a 57 kHz sovrapposta al segnale FM stereo. Questa app trasmette un segnale FM completo con dati RDS — si possono configurare il nome della stazione (PS), il radiotesto (RT), il tipo di programma (PTY) e gli annunci sul traffico (TA/TP). A bassa potenza e corto raggio, viene comunemente usata per trasmettitori FM personali, ma qualsiasi trasmissione FM richiede tecnicamente una licenza dal regolatore nazionale."
+        "learn": "RDS (Radio Data System) è la tecnologia dietro il nome della stazione, il titolo del brano e gli annunci sul traffico che appaiono sul display dell'autoradio in FM (88-108 MHz). RDS è una sottoportante a 57 kHz sovrapposta al segnale FM stereo. Questa app trasmette un segnale FM completo con dati RDS  -  si possono configurare il nome della stazione (PS), il radiotesto (RT), il tipo di programma (PTY) e gli annunci sul traffico (TA/TP). A bassa potenza e corto raggio, viene comunemente usata per trasmettitori FM personali, ma qualsiasi trasmissione FM richiede tecnicamente una licenza dal regolatore nazionale."
       },
       "Soundboard": {
         "description": "Audio WAV via FM. Toni CTCSS, compatibilità con microfono wireless.",
         "legal": "Richiede licenza sulla maggior parte delle frequenze.",
-        "learn": "Soundboard riproduce file WAV dalla scheda SD come trasmissioni audio FM. Può anche generare toni CTCSS (Continuous Tone-Coded Squelch System) — i toni sub-udibili a bassa frequenza (67–254,1 Hz) che le radio bidirezionali usano per filtrare il traffico indesiderato sulle frequenze condivise. Ciò lo rende utile per testare i sistemi di squelch radio e i ripetitori equipaggiati con CTCSS. La compatibilità con microfono wireless significa che può trasmettere sulle frequenze usate dai sistemi di microfoni wireless (tipicamente VHF/UHF), agendo essenzialmente come un microfono wireless."
+        "learn": "Soundboard riproduce file WAV dalla scheda SD come trasmissioni audio FM. Può anche generare toni CTCSS (Continuous Tone-Coded Squelch System)  -  i toni sub-udibili a bassa frequenza (67-254,1 Hz) che le radio bidirezionali usano per filtrare il traffico indesiderato sulle frequenze condivise. Ciò lo rende utile per testare i sistemi di squelch radio e i ripetitori equipaggiati con CTCSS. La compatibilità con microfono wireless significa che può trasmettere sulle frequenze usate dai sistemi di microfoni wireless (tipicamente VHF/UHF), agendo essenzialmente come un microfono wireless."
       },
       "Spectrum Painter": {
         "description": "Immagine/testo disegnato nello spettro RF visibile sui display a cascata.",
         "legal": "Curiosità ma resta una trasmissione non autorizzata sulla maggior parte delle frequenze.",
-        "learn": "Spectrum Painter converte un'immagine o testo in un segnale RF che, visto su un display a cascata (come SDR++ o GQRX), appare come un'immagine o messaggio visibile nello spettro. Funziona variando la frequenza di trasmissione nel tempo per « dipingere » ogni riga di pixel — i pixel più luminosi ricevono più potenza, quelli più scuri meno. Il risultato è arte puramente visiva visibile solo sugli analizzatori di spettro. Sebbene creativo e popolare per le dimostrazioni, è comunque una trasmissione RF soggetta alle stesse normative di qualsiasi altro trasmettitore. Meglio usare con un dummy load o su una frequenza non occupata con potenza minima."
+        "learn": "Spectrum Painter converte un'immagine o testo in un segnale RF che, visto su un display a cascata (come SDR++ o GQRX), appare come un'immagine o messaggio visibile nello spettro. Funziona variando la frequenza di trasmissione nel tempo per « dipingere » ogni riga di pixel  -  i pixel più luminosi ricevono più potenza, quelli più scuri meno. Il risultato è arte puramente visiva visibile solo sugli analizzatori di spettro. Sebbene creativo e popolare per le dimostrazioni, è comunque una trasmissione RF soggetta alle stesse normative di qualsiasi altro trasmettitore. Meglio usare con un dummy load o su una frequenza non occupata con potenza minima."
       },
       "SSTV TX": {
         "description": "Immagini Slow Scan Television via FM. Modalità Scottie/Martin/SC2.",
         "legal": "Legale con licenza radioamatoriale su frequenze designate.",
-        "learn": "SSTV (Slow Scan Television) è un metodo di trasmissione di immagini fisse via radio, ampiamente usato dai radioamatori dagli anni '60. A differenza della TV broadcast, SSTV invia un'immagine in 30–120 secondi codificando la luminosità dei pixel come toni audio (1200–2300 Hz). Scottie, Martin e SC2 sono diverse modalità di codifica che bilanciano risoluzione e tempo di trasmissione. SSTV è comunemente usato su 14.230 MHz (banda 20m), 21.340 MHz (15m) e 145.500 MHz (2m FM). La ISS trasmette regolarmente immagini SSTV che chiunque può ricevere. Questa app trasmette immagini dalla scheda SD in questi formati standard."
+        "learn": "SSTV (Slow Scan Television) è un metodo di trasmissione di immagini fisse via radio, ampiamente usato dai radioamatori dagli anni '60. A differenza della TV broadcast, SSTV invia un'immagine in 30-120 secondi codificando la luminosità dei pixel come toni audio (1200-2300 Hz). Scottie, Martin e SC2 sono diverse modalità di codifica che bilanciano risoluzione e tempo di trasmissione. SSTV è comunemente usato su 14.230 MHz (banda 20m), 21.340 MHz (15m) e 145.500 MHz (2m FM). La ISS trasmette regolarmente immagini SSTV che chiunque può ricevere. Questa app trasmette immagini dalla scheda SD in questi formati standard."
       },
       "TEDI/LCR": {
         "description": "Trame di controllo dell'infrastruttura stradale francese. Bell 202 FSK.",
         "legal": "Controllo non autorizzato di infrastruttura stradale.",
-        "learn": "TEDI (Transmission Élémentaire d'Informations) e LCR (Liaisons à Concentration de Relais) sono protocolli di infrastruttura stradale francese usati per controllare i pannelli autostradali elettronici, i sistemi di ventilazione dei tunnel e le apparecchiature di gestione del traffico. Usano la modulazione Bell 202 FSK (Frequency Shift Keying) — uno standard modem degli anni '70 che codifica i dati come due frequenze audio (1200/2200 Hz). Questi sistemi controllano infrastrutture di sicurezza critiche sulle autostrade francesi. La trasmissione non autorizzata di trame TEDI/LCR potrebbe alterare i messaggi dei pannelli autostradali o disturbare i sistemi di sicurezza dei tunnel."
+        "learn": "TEDI (Transmission Élémentaire d'Informations) e LCR (Liaisons à Concentration de Relais) sono protocolli di infrastruttura stradale francese usati per controllare i pannelli autostradali elettronici, i sistemi di ventilazione dei tunnel e le apparecchiature di gestione del traffico. Usano la modulazione Bell 202 FSK (Frequency Shift Keying)  -  uno standard modem degli anni '70 che codifica i dati come due frequenze audio (1200/2200 Hz). Questi sistemi controllano infrastrutture di sicurezza critiche sulle autostrade francesi. La trasmissione non autorizzata di trame TEDI/LCR potrebbe alterare i messaggi dei pannelli autostradali o disturbare i sistemi di sicurezza dei tunnel."
       },
       "TouchTunes": {
         "description": "Comandi di telecomando per jukebox TouchTunes.",
@@ -561,55 +561,55 @@
     "rxApps": {
       "ADS-B": {
         "description": "Tracciamento transponder aeronautici. Mostra ID ICAO, nominativo, quota, posizione, velocità.",
-        "learn": "ADS-B (Automatic Dependent Surveillance–Broadcast) è il sistema usato dagli aeromobili moderni per trasmettere la propria identità, posizione, quota e velocità ogni mezzo secondo su 1090 MHz. Ogni aeromobile ha un indirizzo ICAO unico a 24 bit (come una targa). Il PortaPack decodifica questi segnali di transponder Mode S in tempo reale e mostra una lista di aeromobili dal vivo — gli stessi dati che alimentano FlightRadar24 e FlightAware. ADS-B è solo in ricezione e completamente legale da monitorare. Con una buona antenna e linea di vista, puoi tracciare aeromobili a oltre 160 km. Questa è una delle prime app più popolari per i nuovi possessori di HackRF."
+        "learn": "ADS-B (Automatic Dependent Surveillance-Broadcast) è il sistema usato dagli aeromobili moderni per trasmettere la propria identità, posizione, quota e velocità ogni mezzo secondo su 1090 MHz. Ogni aeromobile ha un indirizzo ICAO unico a 24 bit (come una targa). Il PortaPack decodifica questi segnali di transponder Mode S in tempo reale e mostra una lista di aeromobili dal vivo  -  gli stessi dati che alimentano FlightRadar24 e FlightAware. ADS-B è solo in ricezione e completamente legale da monitorare. Con una buona antenna e linea di vista, puoi tracciare aeromobili a oltre 160 km. Questa è una delle prime app più popolari per i nuovi possessori di HackRF."
       },
       "ACARS": {
         "description": "Messaggi data link tra aeromobili e stazioni a terra.",
-        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) è un sistema di messaggistica testuale digitale usato dalle compagnie aeree dagli anni '70. Opera su frequenze VHF intorno a 129–137 MHz e trasporta brevi messaggi di dati tra aeromobili e stazioni a terra — rapporti sulle prestazioni del motore, richieste meteo, assegnazioni gate, dati carburante e comunicazioni dell'equipaggio. I messaggi vengono inviati in chiaro senza crittografia, quindi puoi leggerli direttamente. Ogni messaggio include la registrazione e il numero di volo dell'aeromobile. ACARS è l'equivalente degli SMS nell'aviazione, e monitorarlo offre uno sguardo dietro le quinte delle operazioni aeree."
+        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) è un sistema di messaggistica testuale digitale usato dalle compagnie aeree dagli anni '70. Opera su frequenze VHF intorno a 129-137 MHz e trasporta brevi messaggi di dati tra aeromobili e stazioni a terra  -  rapporti sulle prestazioni del motore, richieste meteo, assegnazioni gate, dati carburante e comunicazioni dell'equipaggio. I messaggi vengono inviati in chiaro senza crittografia, quindi puoi leggerli direttamente. Ogni messaggio include la registrazione e il numero di volo dell'aeromobile. ACARS è l'equivalente degli SMS nell'aviazione, e monitorarlo offre uno sguardo dietro le quinte delle operazioni aeree."
       },
       "AFSK": {
         "description": "Decodificatore Audio Frequency Shift Keying. Segnali modem Bell 202, TEDI/LCR.",
-        "learn": "AFSK (Audio Frequency Shift Keying) codifica dati digitali come due toni audio — tipicamente 1200 Hz per mark (1) e 2200 Hz per space (0), seguendo lo standard modem Bell 202 degli anni '70. Questa modulazione è usata in molti protocolli: APRS radioamatoriale, identificazione del chiamante, modem telefonici della vecchia scuola e sistemi di infrastruttura stradale francese (TEDI/LCR). Il decodificatore ascolta l'audio FM ed estrae i dati digitali dai cambi di tono. Se hai mai sentito lo stridore di un modem dial-up, quello era FSK. Questo è un decodificatore generico per qualsiasi sistema che utilizza Audio Frequency Shift Keying."
+        "learn": "AFSK (Audio Frequency Shift Keying) codifica dati digitali come due toni audio  -  tipicamente 1200 Hz per mark (1) e 2200 Hz per space (0), seguendo lo standard modem Bell 202 degli anni '70. Questa modulazione è usata in molti protocolli: APRS radioamatoriale, identificazione del chiamante, modem telefonici della vecchia scuola e sistemi di infrastruttura stradale francese (TEDI/LCR). Il decodificatore ascolta l'audio FM ed estrae i dati digitali dai cambi di tono. Se hai mai sentito lo stridore di un modem dial-up, quello era FSK. Questo è un decodificatore generico per qualsiasi sistema che utilizza Audio Frequency Shift Keying."
       },
       "AIS Boats": {
         "description": "Tracciamento navi. MMSI, posizione, rotta, velocità. Due canali.",
-        "learn": "AIS (Automatic Identification System) è l'equivalente marittimo dell'ADS-B — tutte le grandi navi (e molte piccole) sono obbligate a trasmettere la propria identità, posizione, velocità, rotta e destinazione su due canali VHF: AIS1 (161,975 MHz) e AIS2 (162,025 MHz). Ogni nave ha un numero MMSI (Maritime Mobile Service Identity) unico a 9 cifre. Il PortaPack decodifica entrambi i canali simultaneamente e mostra una lista di navi dal vivo. I dati AIS alimentano MarineTraffic.com e VesselFinder. Se sei vicino a una costa, un fiume o un porto, vedrai rimorchiatori, navi cargo, petroliere, traghetti e anche alcuni pescherecci. La portata dipende dall'altezza dell'antenna — 30–65 km è tipico vicino all'acqua."
+        "learn": "AIS (Automatic Identification System) è l'equivalente marittimo dell'ADS-B  -  tutte le grandi navi (e molte piccole) sono obbligate a trasmettere la propria identità, posizione, velocità, rotta e destinazione su due canali VHF: AIS1 (161,975 MHz) e AIS2 (162,025 MHz). Ogni nave ha un numero MMSI (Maritime Mobile Service Identity) unico a 9 cifre. Il PortaPack decodifica entrambi i canali simultaneamente e mostra una lista di navi dal vivo. I dati AIS alimentano MarineTraffic.com e VesselFinder. Se sei vicino a una costa, un fiume o un porto, vedrai rimorchiatori, navi cargo, petroliere, traghetti e anche alcuni pescherecci. La portata dipende dall'altezza dell'antenna  -  30-65 km è tipico vicino all'acqua."
       },
       "Analog TV": {
         "description": "Ricezione televisione analogica PAL. Risoluzione ridotta (52x128).",
-        "learn": "Questa app riceve segnali televisivi analogici nello standard PAL (Phase Alternating Line) usato in Europa, Asia e parti del Sud America prima del passaggio alla TV digitale. Decodifica il segnale video composito in una piccola immagine 52x128 pixel sullo schermo del PortaPack — sufficiente per vedere cosa viene trasmesso ma non per guardarlo comodamente. La maggior parte dei paesi ha spento la TV analogica, ma potresti ancora trovare segnali attivi da vecchie telecamere di sicurezza, operatori di televisione amatoriale (ATV) o paesi che non hanno ancora completato la transizione al digitale. È più una dimostrazione storica divertente che uno strumento pratico nella maggior parte delle zone."
+        "learn": "Questa app riceve segnali televisivi analogici nello standard PAL (Phase Alternating Line) usato in Europa, Asia e parti del Sud America prima del passaggio alla TV digitale. Decodifica il segnale video composito in una piccola immagine 52x128 pixel sullo schermo del PortaPack  -  sufficiente per vedere cosa viene trasmesso ma non per guardarlo comodamente. La maggior parte dei paesi ha spento la TV analogica, ma potresti ancora trovare segnali attivi da vecchie telecamere di sicurezza, operatori di televisione amatoriale (ATV) o paesi che non hanno ancora completato la transizione al digitale. È più una dimostrazione storica divertente che uno strumento pratico nella maggior parte delle zone."
       },
       "APRS RX": {
         "description": "Pacchetti di posizione/meteo/telemetria radioamatoriali. AX.25 via AFSK.",
-        "learn": "APRS (Automatic Packet Reporting System) è una rete radioamatoriale in tempo reale per condividere posizione, meteo, messaggi e telemetria. Usa AX.25 a 1200 baud su modulazione AFSK su un'unica frequenza nazionale — 144.390 MHz in Nord America, 144.800 MHz in Europa. Le stazioni (radio portatili, tracker veicolari, stazioni meteo, palloni) trasmettono pacchetti che vengono ritrasmessi da digipeater su vaste aree. Tutto il traffico APRS è visibile su aprs.fi. Il PortaPack decodifica questi pacchetti e mostra nominativi, posizioni e contenuto dei messaggi. Non serve la licenza per ascoltare — solo per trasmettere. Vicino a qualsiasi zona abitata, vedrai attività APRS regolare."
+        "learn": "APRS (Automatic Packet Reporting System) è una rete radioamatoriale in tempo reale per condividere posizione, meteo, messaggi e telemetria. Usa AX.25 a 1200 baud su modulazione AFSK su un'unica frequenza nazionale  -  144.390 MHz in Nord America, 144.800 MHz in Europa. Le stazioni (radio portatili, tracker veicolari, stazioni meteo, palloni) trasmettono pacchetti che vengono ritrasmessi da digipeater su vaste aree. Tutto il traffico APRS è visibile su aprs.fi. Il PortaPack decodifica questi pacchetti e mostra nominativi, posizioni e contenuto dei messaggi. Non serve la licenza per ascoltare  -  solo per trasmettere. Vicino a qualsiasi zona abitata, vedrai attività APRS regolare."
       },
       "Audio": {
         "description": "Ricevitore audio analogico generale. AM, NFM, WFM, SSB (USB/LSB). Registrazione in WAV.",
-        "learn": "L'app Audio è il ricevitore più versatile del PortaPack — una radio universale che supporta tutti i comuni tipi di modulazione analogica. AM (Modulazione di Ampiezza) per la radio broadcast e l'aviazione. NFM (FM a Banda Stretta) per walkie-talkie, ripetitori radioamatoriali e radio bidirezionale. WFM (FM a Banda Larga) per le stazioni radio FM come le tue stazioni musicali locali a 88–108 MHz. SSB (Banda Laterale Unica — USB/LSB) per le comunicazioni radioamatoriali HF e marittime. Registra anche l'audio direttamente in file WAV sulla scheda SD. Questa è l'app con cui la maggior parte inizia — sintonizzati su una stazione FM locale in modalità WFM e sentirai musica immediatamente."
+        "learn": "L'app Audio è il ricevitore più versatile del PortaPack  -  una radio universale che supporta tutti i comuni tipi di modulazione analogica. AM (Modulazione di Ampiezza) per la radio broadcast e l'aviazione. NFM (FM a Banda Stretta) per walkie-talkie, ripetitori radioamatoriali e radio bidirezionale. WFM (FM a Banda Larga) per le stazioni radio FM come le tue stazioni musicali locali a 88-108 MHz. SSB (Banda Laterale Unica  -  USB/LSB) per le comunicazioni radioamatoriali HF e marittime. Registra anche l'audio direttamente in file WAV sulla scheda SD. Questa è l'app con cui la maggior parte inizia  -  sintonizzati su una stazione FM locale in modalità WFM e sentirai musica immediatamente."
       },
       "BLE RX": {
         "description": "Sniffer di advertisement BLE. Canali 37/38/39. Ricerca produttore per MAC.",
-        "learn": "BLE (Bluetooth Low Energy) è un protocollo wireless a corto raggio a 2,4 GHz usato da miliardi di dispositivi — telefoni, fitness tracker, smartwatch, AirTag, beacon, sensori smart home e cuffie wireless. I dispositivi BLE trasmettono costantemente pacchetti di advertisement su tre canali dedicati (37, 38, 39) per annunciare la propria presenza. Questa app cattura quegli advertisement e mostra l'indirizzo MAC, l'intensità del segnale e il nome del produttore (ricavato dal database IEEE OUI — i primi 3 byte del MAC identificano il produttore). Attraversa qualsiasi spazio pubblico e vedrai decine di dispositivi BLE. Questo è monitoraggio passivo — nessun accoppiamento né connessione."
+        "learn": "BLE (Bluetooth Low Energy) è un protocollo wireless a corto raggio a 2,4 GHz usato da miliardi di dispositivi  -  telefoni, fitness tracker, smartwatch, AirTag, beacon, sensori smart home e cuffie wireless. I dispositivi BLE trasmettono costantemente pacchetti di advertisement su tre canali dedicati (37, 38, 39) per annunciare la propria presenza. Questa app cattura quegli advertisement e mostra l'indirizzo MAC, l'intensità del segnale e il nome del produttore (ricavato dal database IEEE OUI  -  i primi 3 byte del MAC identificano il produttore). Attraversa qualsiasi spazio pubblico e vedrai decine di dispositivi BLE. Questo è monitoraggio passivo  -  nessun accoppiamento né connessione."
       },
       "Detector": {
         "description": "Rilevatore di segnale a banda larga con cronologia RSSI.",
-        "learn": "L'app Detector monitora una frequenza specifica e traccia l'RSSI (Indicatore di Intensità del Segnale Ricevuto) nel tempo come cronologia a scorrimento. Pensala come un semplice rilevatore di movimento per RF — quando un segnale appare o cambia intensità sulla frequenza target, vedi un picco nel grafico. È utile per confermare che un dispositivo sta trasmettendo, misurare quanto spesso un sensore trasmette, rilevare interferenze intermittenti o fare rilievi RF di base. Elimina tutta la complessità della demodulazione e risponde semplicemente alla domanda: 'Qualcosa sta trasmettendo qui, e quanto è forte?'"
+        "learn": "L'app Detector monitora una frequenza specifica e traccia l'RSSI (Indicatore di Intensità del Segnale Ricevuto) nel tempo come cronologia a scorrimento. Pensala come un semplice rilevatore di movimento per RF  -  quando un segnale appare o cambia intensità sulla frequenza target, vedi un picco nel grafico. È utile per confermare che un dispositivo sta trasmettendo, misurare quanto spesso un sensore trasmette, rilevare interferenze intermittenti o fare rilievi RF di base. Elimina tutta la complessità della demodulazione e risponde semplicemente alla domanda: 'Qualcosa sta trasmettendo qui, e quanto è forte?'"
       },
       "ERT Meter": {
         "description": "Lettura di contatori intelligenti (elettricità, gas, acqua).",
-        "learn": "ERT (Encoder Receiver Transmitter) è il protocollo wireless usato dai contatori intelligenti in tutto il Nord America per riportare il consumo di elettricità, gas e acqua. Invece di un addetto che cammina fino a ogni casa, i contatori equipaggiati con ERT trasmettono le loro letture sulla banda ISM ~900 MHz usando modulazione OOK. Un veicolo dell'utility con un ricevitore percorre i quartieri raccogliendo le letture. Ogni trasmissione include l'ID del contatore e il valore di consumo attuale. Il PortaPack li decodifica e mostra gli ID dei contatori e le letture nella tua zona. Tutto questo non è crittografato — un noto problema di privacy ampiamente discusso nella comunità di ricerca sulla sicurezza."
+        "learn": "ERT (Encoder Receiver Transmitter) è il protocollo wireless usato dai contatori intelligenti in tutto il Nord America per riportare il consumo di elettricità, gas e acqua. Invece di un addetto che cammina fino a ogni casa, i contatori equipaggiati con ERT trasmettono le loro letture sulla banda ISM ~900 MHz usando modulazione OOK. Un veicolo dell'utility con un ricevitore percorre i quartieri raccogliendo le letture. Ogni trasmissione include l'ID del contatore e il valore di consumo attuale. Il PortaPack li decodifica e mostra gli ID dei contatori e le letture nella tua zona. Tutto questo non è crittografato  -  un noto problema di privacy ampiamente discusso nella comunità di ricerca sulla sicurezza."
       },
       "Flex RX": {
         "description": "Decodificatore protocollo cercapersone FLEX. Display a ciclo di colori.",
-        "learn": "FLEX è un protocollo di radiomessaggeria sviluppato da Motorola negli anni '90 come successore più veloce ed efficiente di POCSAG. Supporta velocità dati di 1600, 3200 e 6400 bps — significativamente più veloce dei 512–2400 bps di POCSAG. I cercapersone FLEX sono ancora usati da ospedali e servizi di emergenza perché le reti di cercapersone hanno una migliore penetrazione negli edifici rispetto al cellulare e continuano a funzionare durante i sovraccarichi della rete cellulare. L'app decodifica i messaggi FLEX e li visualizza con un display a ciclo di colori per differenziare i tipi di messaggio. Come POCSAG, questi messaggi vengono trasmessi senza crittografia — un problema di sicurezza di lunga data nel settore sanitario dove possono essere incluse informazioni sui pazienti."
+        "learn": "FLEX è un protocollo di radiomessaggeria sviluppato da Motorola negli anni '90 come successore più veloce ed efficiente di POCSAG. Supporta velocità dati di 1600, 3200 e 6400 bps  -  significativamente più veloce dei 512-2400 bps di POCSAG. I cercapersone FLEX sono ancora usati da ospedali e servizi di emergenza perché le reti di cercapersone hanno una migliore penetrazione negli edifici rispetto al cellulare e continuano a funzionare durante i sovraccarichi della rete cellulare. L'app decodifica i messaggi FLEX e li visualizza con un display a ciclo di colori per differenziare i tipi di messaggio. Come POCSAG, questi messaggi vengono trasmessi senza crittografia  -  un problema di sicurezza di lunga data nel settore sanitario dove possono essere incluse informazioni sui pazienti."
       },
       "Fox Hunt": {
         "description": "Assistente per la caccia al trasmettitore. Visualizzazione dell'intensità del segnale. Integrazione GPS/mappa.",
-        "learn": "La caccia alla volpe (detta anche caccia al trasmettitore, T-hunting o ARDF — Amateur Radio Direction Finding) è uno sport/esercizio in cui i partecipanti rintracciano un trasmettitore radio nascosto usando solo un ricevitore e un'antenna direzionale. L'app Fox Hunt trasforma il tuo PortaPack in uno strumento di ricerca — mostra l'intensità del segnale come indicatore visivo e integra il GPS per registrare il tuo percorso e stimare la direzione del trasmettitore. Avvicinandoti alla volpe, il segnale diventa più forte. È un'attività popolare dei club radioamatoriali e viene usata anche in scenari reali come il tracciamento di fonti di interferenza o la localizzazione di radiofari di emergenza."
+        "learn": "La caccia alla volpe (detta anche caccia al trasmettitore, T-hunting o ARDF  -  Amateur Radio Direction Finding) è uno sport/esercizio in cui i partecipanti rintracciano un trasmettitore radio nascosto usando solo un ricevitore e un'antenna direzionale. L'app Fox Hunt trasforma il tuo PortaPack in uno strumento di ricerca  -  mostra l'intensità del segnale come indicatore visivo e integra il GPS per registrare il tuo percorso e stimare la direzione del trasmettitore. Avvicinandoti alla volpe, il segnale diventa più forte. È un'attività popolare dei club radioamatoriali e viene usata anche in scenari reali come il tracciamento di fonti di interferenza o la localizzazione di radiofari di emergenza."
       },
       "gfxEQ": {
         "description": "Visualizzazione equalizzatore grafico audio per radio WFM.",
-        "learn": "gfxEQ è un analizzatore visivo di spettro audio che funziona durante la ricezione di radio FM (WFM). Mostra un equalizzatore grafico in tempo reale — la stessa visualizzazione a barre rimbalzanti che vedresti su un impianto stereo — mostrando il contenuto in frequenza dell'audio ricevuto. Bassi a sinistra, acuti a destra, con le barre che si muovono a ritmo di musica. È uno strumento di visualizzazione divertente che trasforma il tuo PortaPack in una radio FM dall'aspetto retrò con display dello spettro. Sintonizzati su una stazione musicale in modalità WFM e guardalo reagire all'audio. Puramente estetico ma divertente."
+        "learn": "gfxEQ è un analizzatore visivo di spettro audio che funziona durante la ricezione di radio FM (WFM). Mostra un equalizzatore grafico in tempo reale  -  la stessa visualizzazione a barre rimbalzanti che vedresti su un impianto stereo  -  mostrando il contenuto in frequenza dell'audio ricevuto. Bassi a sinistra, acuti a destra, con le barre che si muovono a ritmo di musica. È uno strumento di visualizzazione divertente che trasforma il tuo PortaPack in una radio FM dall'aspetto retrò con display dello spettro. Sintonizzati su una stazione musicale in modalità WFM e guardalo reagire all'audio. Puramente estetico ma divertente."
       },
       "Level": {
         "description": "Misuratore di livello di segnale a una frequenza specifica. App esterna.",
@@ -617,69 +617,69 @@
       },
       "Looking Glass": {
         "description": "Cascata spettrale a banda larga. Tre modalità di visualizzazione: SPECTR, LIVE-V, PEAK-V.",
-        "learn": "Looking Glass è un analizzatore di spettro a banda larga che scansiona una gamma di frequenze configurabile e mostra i risultati come cascata. A differenza dell'app Audio (che sintonizza una frequenza), Looking Glass scansiona una banda ampia per mostrare tutto ciò che è attivo. Tre modalità di visualizzazione: SPECTR mostra la vista spettrale tradizionale (potenza vs frequenza), LIVE-V mostra una cascata verticale dal vivo (tempo che scorre verso il basso, frequenza da sinistra a destra, luminosità = intensità del segnale) e PEAK-V mantiene i valori di picco. Questo è lo strumento di riferimento per esplorare cosa c'è nell'aria in qualsiasi banda — puoi scansionare intere bande ISM, la gamma broadcast FM o qualsiasi estensione coperta dall'HackRF (1 MHz–6 GHz)."
+        "learn": "Looking Glass è un analizzatore di spettro a banda larga che scansiona una gamma di frequenze configurabile e mostra i risultati come cascata. A differenza dell'app Audio (che sintonizza una frequenza), Looking Glass scansiona una banda ampia per mostrare tutto ciò che è attivo. Tre modalità di visualizzazione: SPECTR mostra la vista spettrale tradizionale (potenza vs frequenza), LIVE-V mostra una cascata verticale dal vivo (tempo che scorre verso il basso, frequenza da sinistra a destra, luminosità = intensità del segnale) e PEAK-V mantiene i valori di picco. Questo è lo strumento di riferimento per esplorare cosa c'è nell'aria in qualsiasi banda  -  puoi scansionare intere bande ISM, la gamma broadcast FM o qualsiasi estensione coperta dall'HackRF (1 MHz-6 GHz)."
       },
       "Morse RX": {
         "description": "Decodifica il codice Morse (CW) in testo.",
-        "learn": "Il codice Morse (CW — Continuous Wave) codifica lettere e numeri come sequenze di segnali corti (dit: ·) e lunghi (dah: —). Sviluppato negli anni 1830, è ancora usato oggi dai radioamatori perché i segnali CW possono essere decodificati a livelli di segnale estremamente bassi — ben al di sotto di quanto necessario per la voce. L'app Morse RX ascolta i segnali CW e li decodifica automaticamente in testo sullo schermo. Funziona rilevando il pattern on/off della portante e cronometrando dit e dah. Puoi trovare Morse attivo sulle bande HF radioamatoriali (specialmente intorno a 7.000–7.040 MHz e 14.000–14.070 MHz). La decodifica automatica può avere difficoltà con segnali deboli o spaziatura insolita, ma funziona bene con trasmissioni forti e ben temporizzate."
+        "learn": "Il codice Morse (CW  -  Continuous Wave) codifica lettere e numeri come sequenze di segnali corti (dit: ·) e lunghi (dah:  - ). Sviluppato negli anni 1830, è ancora usato oggi dai radioamatori perché i segnali CW possono essere decodificati a livelli di segnale estremamente bassi  -  ben al di sotto di quanto necessario per la voce. L'app Morse RX ascolta i segnali CW e li decodifica automaticamente in testo sullo schermo. Funziona rilevando il pattern on/off della portante e cronometrando dit e dah. Puoi trovare Morse attivo sulle bande HF radioamatoriali (specialmente intorno a 7.000-7.040 MHz e 14.000-14.070 MHz). La decodifica automatica può avere difficoltà con segnali deboli o spaziatura insolita, ma funziona bene con trasmissioni forti e ben temporizzate."
       },
       "NOAA": {
         "description": "Decodificatore immagini satelliti meteo NOAA APT.",
-        "learn": "NOAA gestisce una flotta di satelliti meteorologici a orbita polare (NOAA-15, 18, 19) che trasmettono continuamente immagini meteo dal vivo mentre orbitano la Terra ogni ~100 minuti. Il segnale APT (Automatic Picture Transmission) è un formato analogico su VHF (banda 137 MHz) in uso dagli anni '60. Quando il satellite passa sopra (visibile per circa 10–15 minuti), trasmette un'immagine in scala di grigi riga per riga — costruisci letteralmente una foto meteo in tempo reale. Il PortaPack decodifica questo segnale APT direttamente in un'immagine sullo schermo. Serve una buona antenna (un dipolo a V o un'antenna QFH funziona bene) e un passaggio libero. Controlla n2yo.com o Heavens-Above per gli orari di passaggio nella tua posizione."
+        "learn": "NOAA gestisce una flotta di satelliti meteorologici a orbita polare (NOAA-15, 18, 19) che trasmettono continuamente immagini meteo dal vivo mentre orbitano la Terra ogni ~100 minuti. Il segnale APT (Automatic Picture Transmission) è un formato analogico su VHF (banda 137 MHz) in uso dagli anni '60. Quando il satellite passa sopra (visibile per circa 10-15 minuti), trasmette un'immagine in scala di grigi riga per riga  -  costruisci letteralmente una foto meteo in tempo reale. Il PortaPack decodifica questo segnale APT direttamente in un'immagine sullo schermo. Serve una buona antenna (un dipolo a V o un'antenna QFH funziona bene) e un passaggio libero. Controlla n2yo.com o Heavens-Above per gli orari di passaggio nella tua posizione."
       },
       "NRF": {
         "description": "Decodificatore protocollo Nordic nRF24L01. Tastiere wireless, mouse, IoT.",
-        "learn": "L'nRF24L01 è un chip ricetrasmettitore wireless a 2,4 GHz ampiamente usato, prodotto da Nordic Semiconductor, presente in milioni di dispositivi — tastiere wireless, mouse, controller di gioco, giocattoli RC, sensori IoT e progetti DIY Arduino/ESP. Usa un semplice protocollo basato su pacchetti con indirizzi e canali. L'app NRF decodifica queste trasmissioni e mostra i dati grezzi dei pacchetti. È particolarmente interessante per la ricerca sulla sicurezza: alcune vecchie tastiere wireless che usano nRF24L01 trasmettono le pressioni dei tasti con crittografia debole o assente (la classe di vulnerabilità 'MouseJack'). L'app aiuta a capire cosa trasmettono le tue periferiche wireless e quanto sono esposti quei dati."
+        "learn": "L'nRF24L01 è un chip ricetrasmettitore wireless a 2,4 GHz ampiamente usato, prodotto da Nordic Semiconductor, presente in milioni di dispositivi  -  tastiere wireless, mouse, controller di gioco, giocattoli RC, sensori IoT e progetti DIY Arduino/ESP. Usa un semplice protocollo basato su pacchetti con indirizzi e canali. L'app NRF decodifica queste trasmissioni e mostra i dati grezzi dei pacchetti. È particolarmente interessante per la ricerca sulla sicurezza: alcune vecchie tastiere wireless che usano nRF24L01 trasmettono le pressioni dei tasti con crittografia debole o assente (la classe di vulnerabilità 'MouseJack'). L'app aiuta a capire cosa trasmettono le tue periferiche wireless e quanto sono esposti quei dati."
       },
       "POCSAG RX": {
         "description": "Decodificatore messaggi cercapersone POCSAG. Numerico e testuale. Baud rate manuale.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) è il protocollo di radiomessaggeria più diffuso, sviluppato nel 1982 e ancora attivamente in uso oggi — specialmente da ospedali, vigili del fuoco e servizi di emergenza. I cercapersone sono preferiti per le comunicazioni critiche perché le reti di cercapersone hanno una migliore penetrazione negli edifici rispetto al cellulare e continuano a funzionare durante i disservizi della rete cellulare. I messaggi POCSAG vengono trasmessi in chiaro a 512, 1200 o 2400 baud su frequenze che variano per paese (comuni: 148–170 MHz, 450–470 MHz). Il PortaPack decodifica messaggi sia numerici che alfanumerici. In molte aree, vedrai chiamate ospedaliere, avvisi di ristoranti e messaggi di dispatch di emergenza — tutto in chiaro, il che resta un significativo problema di privacy."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) è il protocollo di radiomessaggeria più diffuso, sviluppato nel 1982 e ancora attivamente in uso oggi  -  specialmente da ospedali, vigili del fuoco e servizi di emergenza. I cercapersone sono preferiti per le comunicazioni critiche perché le reti di cercapersone hanno una migliore penetrazione negli edifici rispetto al cellulare e continuano a funzionare durante i disservizi della rete cellulare. I messaggi POCSAG vengono trasmessi in chiaro a 512, 1200 o 2400 baud su frequenze che variano per paese (comuni: 148-170 MHz, 450-470 MHz). Il PortaPack decodifica messaggi sia numerici che alfanumerici. In molte aree, vedrai chiamate ospedaliere, avvisi di ristoranti e messaggi di dispatch di emergenza  -  tutto in chiaro, il che resta un significativo problema di privacy."
       },
       "ProtoView": {
         "description": "Analizzatore di protocolli sub-GHz generico. Visualizza dati di protocollo grezzi.",
-        "learn": "ProtoView è un analizzatore di segnale agnostico rispetto al protocollo per frequenze sub-GHz (tipicamente bande ISM 300–928 MHz). Invece di decodificare un protocollo specifico, cattura il segnale digitale grezzo e mostra il timing a livello di bit — mostrandoti gli effettivi 1 e 0, le larghezze degli impulsi e la struttura del segnale. È inestimabile per il reverse engineering di protocolli sconosciuti: puoi vedere il preambolo, la parola di sincronizzazione, il payload dei dati e qualsiasi pattern. È come un analizzatore logico per i segnali RF. Quando incontri un dispositivo che usa un protocollo non integrato in Mayhem, ProtoView ti aiuta a capire cosa fa. Funziona meglio con modulazioni OOK e FSK semplici comuni in telecomandi, sensori e dispositivi IoT."
+        "learn": "ProtoView è un analizzatore di segnale agnostico rispetto al protocollo per frequenze sub-GHz (tipicamente bande ISM 300-928 MHz). Invece di decodificare un protocollo specifico, cattura il segnale digitale grezzo e mostra il timing a livello di bit  -  mostrandoti gli effettivi 1 e 0, le larghezze degli impulsi e la struttura del segnale. È inestimabile per il reverse engineering di protocolli sconosciuti: puoi vedere il preambolo, la parola di sincronizzazione, il payload dei dati e qualsiasi pattern. È come un analizzatore logico per i segnali RF. Quando incontri un dispositivo che usa un protocollo non integrato in Mayhem, ProtoView ti aiuta a capire cosa fa. Funziona meglio con modulazioni OOK e FSK semplici comuni in telecomandi, sensori e dispositivi IoT."
       },
       "Radiosonde": {
         "description": "Tracker di palloni sonda. M10, M20, M2K2, RS41-SG. GPS, quota, batteria.",
-        "learn": "Le radiosonde sono piccoli pacchetti di strumenti lanciati su palloni sonda due volte al giorno da ~900 stazioni in tutto il mondo (alle 00:00 e 12:00 UTC). Mentre il pallone sale a ~30 km di quota in circa 90 minuti, la radiosonda trasmette temperatura, umidità, pressione, velocità/direzione del vento e posizione GPS su 400–406 MHz. Il PortaPack decodifica diversi tipi comuni: Vaisala RS41-SG (il più comune a livello mondiale), Meteomodem M10/M20 e M2K2. Puoi tracciare in tempo reale la posizione GPS, la quota e la tensione della batteria del pallone, e persino prevedere dove atterrerà. La caccia alle radiosonde — recuperare il pacchetto strumenti caduto — è un hobby popolare. Controlla radiosondy.info per i siti di lancio vicino a te."
+        "learn": "Le radiosonde sono piccoli pacchetti di strumenti lanciati su palloni sonda due volte al giorno da ~900 stazioni in tutto il mondo (alle 00:00 e 12:00 UTC). Mentre il pallone sale a ~30 km di quota in circa 90 minuti, la radiosonda trasmette temperatura, umidità, pressione, velocità/direzione del vento e posizione GPS su 400-406 MHz. Il PortaPack decodifica diversi tipi comuni: Vaisala RS41-SG (il più comune a livello mondiale), Meteomodem M10/M20 e M2K2. Puoi tracciare in tempo reale la posizione GPS, la quota e la tensione della batteria del pallone, e persino prevedere dove atterrerà. La caccia alle radiosonde  -  recuperare il pacchetto strumenti caduto  -  è un hobby popolare. Controlla radiosondy.info per i siti di lancio vicino a te."
       },
       "Scanner": {
         "description": "Scanner di frequenze. ~20 freq/sec. Codificato per colore (grigio/giallo/verde).",
-        "learn": "L'app Scanner sintonizza rapidamente una lista di frequenze (circa 20 al secondo) e si ferma quando rileva attività — proprio come un tradizionale scanner della polizia. Le frequenze sono codificate per colore: grigio significa nessun segnale, giallo significa segnale debole rilevato, verde significa segnale attivo e lo scanner si è fermato per farti ascoltare. Puoi caricare liste di frequenze dalla scheda SD (file freqman) o inserire le frequenze manualmente. Lo scanner riprende la ricerca quando il segnale scompare. È utile per monitorare più canali — servizi di emergenza, ripetitori radioamatoriali, radio aziendali o qualsiasi insieme di frequenze attive note nella tua zona. Le liste di frequenze della community per la maggior parte delle regioni sono disponibili nel repository freqman di Mayhem."
+        "learn": "L'app Scanner sintonizza rapidamente una lista di frequenze (circa 20 al secondo) e si ferma quando rileva attività  -  proprio come un tradizionale scanner della polizia. Le frequenze sono codificate per colore: grigio significa nessun segnale, giallo significa segnale debole rilevato, verde significa segnale attivo e lo scanner si è fermato per farti ascoltare. Puoi caricare liste di frequenze dalla scheda SD (file freqman) o inserire le frequenze manualmente. Lo scanner riprende la ricerca quando il segnale scompare. È utile per monitorare più canali  -  servizi di emergenza, ripetitori radioamatoriali, radio aziendali o qualsiasi insieme di frequenze attive note nella tua zona. Le liste di frequenze della community per la maggior parte delle regioni sono disponibili nel repository freqman di Mayhem."
       },
       "Search": {
         "description": "Ricerca per gamma di frequenze con cascata. Modalità 'cerca e resta'.",
-        "learn": "Search è come Scanner ma per scoprire segnali sconosciuti. Invece di controllare una lista di frequenze note, scansiona continuamente una gamma di frequenze e si ferma quando trova un segnale attivo. La cascata integrata mostra l'attività del segnale nel tempo, facilitando l'individuazione di trasmissioni intermittenti. La modalità 'cerca e resta' si aggancia a un segnale trovato e resta lì finché non si ferma, poi riprende la ricerca. Questa è l'app da usare quando vuoi esplorare una banda di frequenze e scoprire cosa è attivo — non devi conoscere le frequenze esatte in anticipo. Combinala con Looking Glass: usa Looking Glass per identificare visivamente le bande attive, poi usa Search per ascoltare cosa c'è."
+        "learn": "Search è come Scanner ma per scoprire segnali sconosciuti. Invece di controllare una lista di frequenze note, scansiona continuamente una gamma di frequenze e si ferma quando trova un segnale attivo. La cascata integrata mostra l'attività del segnale nel tempo, facilitando l'individuazione di trasmissioni intermittenti. La modalità 'cerca e resta' si aggancia a un segnale trovato e resta lì finché non si ferma, poi riprende la ricerca. Questa è l'app da usare quando vuoi esplorare una banda di frequenze e scoprire cosa è attivo  -  non devi conoscere le frequenze esatte in anticipo. Combinala con Looking Glass: usa Looking Glass per identificare visivamente le bande attive, poi usa Search per ascoltare cosa c'è."
       },
       "SSTV RX": {
         "description": "Ricevitore Slow Scan Television. Decodifica trasmissioni di immagini.",
-        "learn": "SSTV (Slow Scan Television) trasmette immagini fisse via radio codificando la luminosità dei pixel come toni audio (1200–2300 Hz). Una singola immagine richiede 30–120 secondi per la trasmissione, costruendosi riga per riga sullo schermo. SSTV è usato dai radioamatori dagli anni '60 ed è ancora attivo oggi — le frequenze di chiamata comuni includono 14.230 MHz (banda 20m) e 145.500 MHz (2m FM). La Stazione Spaziale Internazionale (ISS) trasmette periodicamente immagini SSTV su 145.800 MHz durante eventi speciali, e chiunque con un ricevitore può decodificarle. L'app SSTV RX del PortaPack rileva automaticamente la modalità di codifica (Scottie, Martin, Robot, ecc.) e costruisce l'immagine sullo schermo man mano che viene ricevuta."
+        "learn": "SSTV (Slow Scan Television) trasmette immagini fisse via radio codificando la luminosità dei pixel come toni audio (1200-2300 Hz). Una singola immagine richiede 30-120 secondi per la trasmissione, costruendosi riga per riga sullo schermo. SSTV è usato dai radioamatori dagli anni '60 ed è ancora attivo oggi  -  le frequenze di chiamata comuni includono 14.230 MHz (banda 20m) e 145.500 MHz (2m FM). La Stazione Spaziale Internazionale (ISS) trasmette periodicamente immagini SSTV su 145.800 MHz durante eventi speciali, e chiunque con un ricevitore può decodificarle. L'app SSTV RX del PortaPack rileva automaticamente la modalità di codifica (Scottie, Martin, Robot, ecc.) e costruisce l'immagine sullo schermo man mano che viene ricevuta."
       },
       "SubCar": {
         "description": "Decodificatore sottoportanti FM broadcast (servizi SCA).",
-        "learn": "Le stazioni radio FM possono trasportare canali audio nascosti chiamati sottoportanti (SCA — Subsidiary Communications Authorization) insieme al loro audio stereo principale. Queste sottoportanti si trovano sopra il segnale stereo a 67 kHz o 92 kHz e trasportano contenuto audio separato: servizi di musica di sottofondo (come il Muzak originale), servizi di lettura per ipovedenti, programmazione in lingue straniere o servizi dati. SubCar decodifica questi canali nascosti a cui una normale radio FM non può accedere. La maggior parte delle persone non sa che esistono — sono una caratteristica della trasmissione FM dagli anni '50. La disponibilità varia per stazione e regione; molte stazioni non usano più sottoportanti, ma alcune trasmettono ancora servizi di lettura o contenuto audio di nicchia."
+        "learn": "Le stazioni radio FM possono trasportare canali audio nascosti chiamati sottoportanti (SCA  -  Subsidiary Communications Authorization) insieme al loro audio stereo principale. Queste sottoportanti si trovano sopra il segnale stereo a 67 kHz o 92 kHz e trasportano contenuto audio separato: servizi di musica di sottofondo (come il Muzak originale), servizi di lettura per ipovedenti, programmazione in lingue straniere o servizi dati. SubCar decodifica questi canali nascosti a cui una normale radio FM non può accedere. La maggior parte delle persone non sa che esistono  -  sono una caratteristica della trasmissione FM dagli anni '50. La disponibilità varia per stazione e regione; molte stazioni non usano più sottoportanti, ma alcune trasmettono ancora servizi di lettura o contenuto audio di nicchia."
       },
       "SubGhzD": {
         "description": "Decodificatore protocolli sub-GHz. Telecomandi auto, telecomandi garage, stazioni meteo, dispositivi ISM. Consigliato: AMP 0, LNA 32, VGA 20.",
-        "learn": "SubGhzD (Sub-GHz Decoder) è una delle app più popolari di Mayhem — decodifica i protocolli usati da centinaia di comuni dispositivi wireless che operano nelle bande ISM a 315, 433, 868 e 915 MHz. Include telecomandi auto (codici fissi e alcuni rolling), apricancello da garage, campanelli wireless, stazioni meteo, sensori di pressione pneumatici, termometri remoti, sensori di umidità del suolo e molti dispositivi IoT. L'app identifica il protocollo, mostra i dati grezzi e può salvare le catture sulla scheda SD. Inizia con AMP spento, LNA 32, VGA 20 — queste sono le impostazioni di guadagno consigliate. Premi un telecomando o aspetta che una stazione meteo trasmetta e vedrai apparire i dati decodificati."
+        "learn": "SubGhzD (Sub-GHz Decoder) è una delle app più popolari di Mayhem  -  decodifica i protocolli usati da centinaia di comuni dispositivi wireless che operano nelle bande ISM a 315, 433, 868 e 915 MHz. Include telecomandi auto (codici fissi e alcuni rolling), apricancello da garage, campanelli wireless, stazioni meteo, sensori di pressione pneumatici, termometri remoti, sensori di umidità del suolo e molti dispositivi IoT. L'app identifica il protocollo, mostra i dati grezzi e può salvare le catture sulla scheda SD. Inizia con AMP spento, LNA 32, VGA 20  -  queste sono le impostazioni di guadagno consigliate. Premi un telecomando o aspetta che una stazione meteo trasmetta e vedrai apparire i dati decodificati."
       },
       "TPMS RX": {
         "description": "Decodificatore monitoraggio pressione pneumatici. ID sensore, pressione, temperatura.",
-        "learn": "I sensori TPMS (Tire Pressure Monitoring System) sono obbligatori in tutti i veicoli nuovi negli USA (dal 2007) e nell'UE (dal 2014). Ogni pneumatico contiene un piccolo sensore wireless che trasmette pressione e temperatura dello pneumatico circa ogni 60 secondi su 315 MHz (Nord America) o 433 MHz (Europa). Ogni sensore ha un ID unico a 32 bit legato a uno specifico pneumatico. Il PortaPack decodifica queste trasmissioni e mostra ID sensore, pressione (PSI o kPa) e temperatura dei veicoli nelle vicinanze. In un parcheggio puoi vedere decine di sensori che trasmettono. È un noto problema di privacy — gli ID TPMS possono essere usati per tracciare veicoli specifici, come dimostrato nella ricerca accademica sulla sicurezza."
+        "learn": "I sensori TPMS (Tire Pressure Monitoring System) sono obbligatori in tutti i veicoli nuovi negli USA (dal 2007) e nell'UE (dal 2014). Ogni pneumatico contiene un piccolo sensore wireless che trasmette pressione e temperatura dello pneumatico circa ogni 60 secondi su 315 MHz (Nord America) o 433 MHz (Europa). Ogni sensore ha un ID unico a 32 bit legato a uno specifico pneumatico. Il PortaPack decodifica queste trasmissioni e mostra ID sensore, pressione (PSI o kPa) e temperatura dei veicoli nelle vicinanze. In un parcheggio puoi vedere decine di sensori che trasmettono. È un noto problema di privacy  -  gli ID TPMS possono essere usati per tracciare veicoli specifici, come dimostrato nella ricerca accademica sulla sicurezza."
       },
       "Weather": {
         "description": "Decodificatore stazioni meteo wireless. Temperatura, umidità, ID sensore.",
-        "learn": "Le stazioni meteo wireless consumer (Acurite, LaCrosse, Oregon Scientific, Ambient Weather, ecc.) usano protocolli semplici non crittografati sulle bande ISM — tipicamente 433,92 MHz (mondiale), 868 MHz (Europa) o 915 MHz (Nord America). I sensori esterni trasmettono temperatura, umidità, velocità del vento, precipitazioni e indice UV ogni 30–60 secondi. L'app Weather decodifica queste trasmissioni e mostra le letture con l'ID unico del sensore. Puoi monitorare la tua stazione meteo wireless, o in qualsiasi quartiere capirai le letture delle stazioni dei vicini a qualche centinaio di metri di distanza. I protocolli sono ben documentati e usano modulazione OOK o FSK semplice."
+        "learn": "Le stazioni meteo wireless consumer (Acurite, LaCrosse, Oregon Scientific, Ambient Weather, ecc.) usano protocolli semplici non crittografati sulle bande ISM  -  tipicamente 433,92 MHz (mondiale), 868 MHz (Europa) o 915 MHz (Nord America). I sensori esterni trasmettono temperatura, umidità, velocità del vento, precipitazioni e indice UV ogni 30-60 secondi. L'app Weather decodifica queste trasmissioni e mostra le letture con l'ID unico del sensore. Puoi monitorare la tua stazione meteo wireless, o in qualsiasi quartiere capirai le letture delle stazioni dei vicini a qualche centinaio di metri di distanza. I protocolli sono ben documentati e usano modulazione OOK o FSK semplice."
       },
       "WeFax": {
         "description": "Ricevitore/decodificatore fax meteo HF. Trasmissioni marine e aeronautiche.",
-        "learn": "Il radiofax (WeFax, o Weather Fax) è un metodo di trasmissione di carte meteorologiche, mappe della temperatura superficiale del mare e rapporti sulle condizioni dei ghiacci via radio HF. In uso dagli anni '40, è ancora attivamente trasmesso oggi dalle stazioni costiere di tutto il mondo per i navigatori che necessitano di carte meteo in mare senza internet. Il segnale codifica i dati di immagine come toni audio variabili (modulazione FM), costruendo un'immagine riga per riga — simile a un fax ma via radio. Le stazioni principali includono NOAA (Boston, New Orleans, Kodiak), JMH Tokyo e DWD Amburgo. Frequenze comuni: bande HF da 3 a 25 MHz. Il PortaPack decodifica l'audio in una carta meteo sullo schermo. Migliori risultati con un'antenna compatibile HF e durante gli orari di trasmissione programmati della stazione (pubblicati nei programmi ufficiali di trasmissione)."
+        "learn": "Il radiofax (WeFax, o Weather Fax) è un metodo di trasmissione di carte meteorologiche, mappe della temperatura superficiale del mare e rapporti sulle condizioni dei ghiacci via radio HF. In uso dagli anni '40, è ancora attivamente trasmesso oggi dalle stazioni costiere di tutto il mondo per i navigatori che necessitano di carte meteo in mare senza internet. Il segnale codifica i dati di immagine come toni audio variabili (modulazione FM), costruendo un'immagine riga per riga  -  simile a un fax ma via radio. Le stazioni principali includono NOAA (Boston, New Orleans, Kodiak), JMH Tokyo e DWD Amburgo. Frequenze comuni: bande HF da 3 a 25 MHz. Il PortaPack decodifica l'audio in una carta meteo sullo schermo. Migliori risultati con un'antenna compatibile HF e durante gli orari di trasmissione programmati della stazione (pubblicati nei programmi ufficiali di trasmissione)."
       }
     },
     "vendors": {
       "Great Scott Gadgets": {
         "description": "Creatore e progettista originale dell'HackRF One. L'azienda di Michael Ossmann. La fonte definitiva per schede HackRF autentiche.",
-        "note": "Non vende accessori PortaPack — solo l'HackRF One."
+        "note": "Non vende accessori PortaPack  -  solo l'HackRF One."
       },
       "OpenSourceSDRLab": {
         "description": "Progettista e produttore del PortaPack H4M (la variante PortaPack più popolare). Vende direttamente e attraverso rivenditori.",
@@ -707,7 +707,7 @@
         "description": "Uno dei più grandi distributori globali di elettronica. Fonte autorizzata di HackRF One."
       },
       "Amazon": {
-        "description": "Disponibile da vari venditori. La qualità varia significativamente — leggi le recensioni con attenzione e controlla le valutazioni del venditore.",
+        "description": "Disponibile da vari venditori. La qualità varia significativamente  -  leggi le recensioni con attenzione e controlla le valutazioni del venditore.",
         "note": "Alto rischio di cloni e schede contraffatte. Cerca venditori con storico consolidato e recensioni positive che menzionino specificamente hardware autentico."
       },
       "AliExpress": {
@@ -721,12 +721,12 @@
         "description": "Great Scott Gadgets ha progettato e vende l'HackRF One. OpenSourceSDRLab ha progettato e produce il PortaPack H4M. Acquistare direttamente dal produttore originale è generalmente il modo più affidabile per ricevere hardware autentico."
       },
       "1": {
-        "title": "I cloni esistono — e sono comuni",
+        "title": "I cloni esistono  -  e sono comuni",
         "description": "HackRF è hardware open source, chiunque può produrlo. I cloni vanno da 'funziona bene' a 'morto all'arrivo'. Il rischio è tuo."
       },
       "2": {
         "title": "Se il prezzo sembra troppo bello per essere vero...",
-        "description": "A seconda del venditore, della regione e della disponibilità, un vero HackRF One può costare a partire da 200–350 USD da fonti consolidate. I prezzi variano, ma le schede elencate ben al di sotto della fascia abituale sono più probabilmente cloni. Alcuni cloni funzionano bene, molti no — la tua esperienza può variare."
+        "description": "A seconda del venditore, della regione e della disponibilità, un vero HackRF One può costare a partire da 200-350 USD da fonti consolidate. I prezzi variano, ma le schede elencate ben al di sotto della fascia abituale sono più probabilmente cloni. Alcuni cloni funzionano bene, molti no  -  la tua esperienza può variare."
       },
       "3": {
         "title": "Consulta prima la community",
@@ -737,7 +737,7 @@
         "description": "L'H4M è il PortaPack attualmente raccomandato con il miglior supporto del firmware Mayhem. Le versioni precedenti H1/H2 hanno meno funzionalità e hardware diverso."
       },
       "5": {
-        "title": "Bundle dei marketplace — ispeziona con attenzione",
+        "title": "Bundle dei marketplace  -  ispeziona con attenzione",
         "description": "I bundle di Amazon e AliExpress includono spesso antenne, custodie e accessori. La qualità degli accessori inclusi varia enormemente indipendentemente dalla scheda stessa."
       }
     },
@@ -773,18 +773,18 @@
     "safety": {
       "mistakes": {
         "Leaving the internal amp ON near strong signal sources": {
-          "description": "L'amplificatore front-end dell'HackRF (MGA-81563) non ha filtro passa-banda prima — amplifica l'intero range da 1 MHz a 6 GHz simultaneamente, indipendentemente dalla frequenza sintonizzata.",
+          "description": "L'amplificatore front-end dell'HackRF (MGA-81563) non ha filtro passa-banda prima  -  amplifica l'intero range da 1 MHz a 6 GHz simultaneamente, indipendentemente dalla frequenza sintonizzata.",
           "symptoms": [
             "L'Amp acceso rende i segnali più deboli invece che più forti",
             "Sensibilità ridotta su tutte le bande",
-            "Nessun danno visibile — il guasto è silenzioso"
+            "Nessun danno visibile  -  il guasto è silenzioso"
           ],
           "prevention": [
             "Mantenere AMP spento a meno che non serva specificamente",
             "Usare un filtro passa-banda esterno prima dell'ingresso dell'HackRF",
-            "Aggiungere un attenuatore in linea da 10–20 dB vicino a trasmettitori potenti"
+            "Aggiungere un attenuatore in linea da 10-20 dB vicino a trasmettitori potenti"
           ],
-          "technical": "L'ingresso massimo sicuro con AMP acceso è -5 dBm. Una torre cellulare a 900 MHz a 100 m fornisce circa +5 a +10 dBm — sufficiente per distruggere l'MGA-81563 anche se sintonizzati su 433 MHz."
+          "technical": "L'ingresso massimo sicuro con AMP acceso è -5 dBm. Una torre cellulare a 900 MHz a 100 m fornisce circa +5 a +10 dBm  -  sufficiente per distruggere l'MGA-81563 anche se sintonizzati su 433 MHz."
         },
         "Using a 5W handheld radio within inches": {
           "description": "Lo scenario di danno più comunemente riportato nella community HackRF. Le radio portatili emettono 5 W (37 dBm) e a breve distanza il segnale si accoppia direttamente nella porta d'antenna dell'HackRF.",
@@ -801,18 +801,18 @@
           "technical": "Una radio portatile da 5 W a 2,5 cm produce ~+7 a +10 dBm alla porta d'antenna per accoppiamento in campo vicino. L'ingresso massimo assoluto è +10 dBm (AMP spento) o -5 dBm (AMP acceso). Anche una sola trasmissione può essere fatale."
         },
         "Connecting a satellite LNB directly": {
-          "description": "I LNB satellitari (convertitori a basso rumore) hanno 50–65 dB di guadagno integrato e sono progettati per alimentare un ricevitore satellitare, non un SDR. Collegarne uno direttamente distrugge istantaneamente lo stadio di ingresso.",
+          "description": "I LNB satellitari (convertitori a basso rumore) hanno 50-65 dB di guadagno integrato e sono progettati per alimentare un ricevitore satellitare, non un SDR. Collegarne uno direttamente distrugge istantaneamente lo stadio di ingresso.",
           "symptoms": [
             "Guasto immediato e totale del LNA",
             "Il dispositivo può sembrare funzionare ma non riceve nulla",
             "Nessun recupero possibile senza riparazione a livello di componente"
           ],
           "prevention": [
-            "Usare sempre un attenuatore da 20–30 dB tra LNB e HackRF",
+            "Usare sempre un attenuatore da 20-30 dB tra LNB e HackRF",
             "Verificare le specifiche di guadagno del LNB prima di collegarlo",
             "Considerare un bias-tee con adeguato isolamento di potenza"
           ],
-          "technical": "Un LNB con 60 dB di guadagno inietta +23 a +26 dBm in un dispositivo progettato per -5 dBm max (AMP acceso). Sono 28–31 dB oltre il massimo assoluto — circa 1000 volte il livello di potenza sicuro."
+          "technical": "Un LNB con 60 dB di guadagno inietta +23 a +26 dBm in un dispositivo progettato per -5 dBm max (AMP acceso). Sono 28-31 dB oltre il massimo assoluto  -  circa 1000 volte il livello di potenza sicuro."
         },
         "Airport radar exposure": {
           "description": "I radar di sorveglianza degli aeroporti operano a livelli di potenza estremamente elevati. Anche in modalità solo ricezione con AMP spento, l'intensità del campo elettromagnetico vicino a un aeroporto può superare i limiti di ingresso dell'HackRF.",
@@ -843,7 +843,7 @@
           "technical": "Un SMA aperto ha un VSWR infinito (perdita di ritorno 0 dB). A 15 dBm (~32 mW), tutta la potenza viene riflessa. Il PA RFFC5072 nell'HackRF è progettato per potenza riflessa limitata e non ha un isolatore integrato."
         },
         "ESD while connecting antennas": {
-          "description": "La scarica statica dal tuo corpo o da un'antenna carica va direttamente nel front-end RF attraverso il pin centrale dell'SMA. Il danno è spesso sottile e progressivo — potresti non notarlo per settimane.",
+          "description": "La scarica statica dal tuo corpo o da un'antenna carica va direttamente nel front-end RF attraverso il pin centrale dell'SMA. Il danno è spesso sottile e progressivo  -  potresti non notarlo per settimane.",
           "symptoms": [
             "L'amp agisce come attenuatore invece di fornire guadagno",
             "Perdita graduale di sensibilità nel tempo",
@@ -854,7 +854,7 @@
             "Mettere a terra se stessi e l'antenna prima di collegare",
             "Usare un braccialetto antistatico in ambienti asciutti"
           ],
-          "technical": "L'ESD dal corpo umano è tipicamente di 2–15 kV con correnti di picco di 10–30 A per nanosecondi. L'LNA MGA-81563 ha una classificazione ESD di soli ~200 V (HBM). Anche una piccola scarica statica che non senti (<3 kV) può degradare l'amplificatore."
+          "technical": "L'ESD dal corpo umano è tipicamente di 2-15 kV con correnti di picco di 10-30 A per nanosecondi. L'LNA MGA-81563 ha una classificazione ESD di soli ~200 V (HBM). Anche una piccola scarica statica che non senti (<3 kV) può degradare l'amplificatore."
         },
         "TX at max gain with mismatched antenna": {
           "description": "Usare il guadagno TX massimo con un'antenna non adattata alla tua frequenza causa una significativa riflessione di potenza. Anche se l'HackRF emette solo ~15 dBm, lo stress ripetuto dalla potenza riflessa degrada il PA nel tempo.",
@@ -865,13 +865,13 @@
           ],
           "prevention": [
             "Usare un'antenna progettata per la frequenza target",
-            "Verificare l'SWR prima di trasmettere — puntare a < 2:1",
+            "Verificare l'SWR prima di trasmettere  -  puntare a < 2:1",
             "Iniziare con basso guadagno TX e aumentare gradualmente monitorando"
           ],
           "technical": "A 15 dBm con un disadattamento VSWR di 10:1, circa il 70% della potenza viene riflesso. L'HackRF non ha un circolatore o isolatore, quindi la potenza riflessa torna direttamente nello stadio PA."
         },
         "Not using a data-capable USB cable": {
-          "description": "Molti cavi USB sono solo per la ricarica — hanno fili di alimentazione ma non linee dati. Questo è il problema più comune di 'il mio HackRF non funziona' e spreca ore di debug.",
+          "description": "Molti cavi USB sono solo per la ricarica  -  hanno fili di alimentazione ma non linee dati. Questo è il problema più comune di 'il mio HackRF non funziona' e spreca ore di debug.",
           "symptoms": [
             "Errori 'Device not found' o 'No HackRF boards found'",
             "Il dispositivo si accende (LED accesi) ma non viene riconosciuto dal software",
@@ -879,8 +879,8 @@
           ],
           "prevention": [
             "Etichetta i tuoi cavi dati che sai funzionare",
-            "Testa con 3–5 cavi diversi prima di sospettare l'hardware",
-            "Usa cavi corti (< 1 m) — la qualità del segnale USB 2.0 degrada con la lunghezza",
+            "Testa con 3-5 cavi diversi prima di sospettare l'hardware",
+            "Usa cavi corti (< 1 m)  -  la qualità del segnale USB 2.0 degrada con la lunghezza",
             "Le porte e i cavi USB 3.0 tendono a essere più affidabili"
           ],
           "technical": "HackRF richiede USB 2.0 High Speed (480 Mbps). I cavi solo di ricarica non hanno le linee dati D+ e D-. Alcuni cavi dati economici hanno una schermatura inadeguata che causa connessioni intermittenti ad alta velocità."
@@ -1072,13 +1072,13 @@
       }
     },
     "quickStartSteps": {
-      "s1": "Verifica che il cavo USB sia in grado di trasmettere dati (non solo ricarica) — questo è il problema di configurazione numero 1",
-      "s2": "Inserisci una scheda MicroSD (FAT32, 8–32 GB consigliato) — memorizza catture, impostazioni e app",
+      "s1": "Verifica che il cavo USB sia in grado di trasmettere dati (non solo ricarica)  -  questo è il problema di configurazione numero 1",
+      "s2": "Inserisci una scheda MicroSD (FAT32, 8-32 GB consigliato)  -  memorizza catture, impostazioni e app",
       "s3": "Scarica l'ultimo firmware Mayhem da GitHub Releases e copia il .ppfw.tar nella radice della SD",
-      "s4": "Collega l'antenna telescopica (40 MHz–6 GHz) alla porta SMA — stringi solo a mano, mai con attrezzi",
-      "s5": "Scarica l'elettricità statica prima di maneggiare — l'ESD sul pin centrale del SMA può danneggiare il LNA",
+      "s4": "Collega l'antenna telescopica (40 MHz-6 GHz) alla porta SMA  -  stringi solo a mano, mai con attrezzi",
+      "s5": "Scarica l'elettricità statica prima di maneggiare  -  l'ESD sul pin centrale del SMA può danneggiare il LNA",
       "s6": "Tieni pronto un dummy load da 50 ohm se prevedi di testare app TX",
-      "s7": "Scorri l'interruttore di alimentazione verso l'ALTO — attendi la comparsa del menu principale di Mayhem",
+      "s7": "Scorri l'interruttore di alimentazione verso l'ALTO  -  attendi la comparsa del menu principale di Mayhem",
       "s8": "Controlla la versione del firmware nella barra di stato (attuale: v2.3.2)",
       "s9": "Vai su Impostazioni → Scheda SD → Test per verificare che la scheda SD sia rilevata e funzionante",
       "s10": "Vai su Impostazioni → UI → imposta la sensibilità dell'encoder secondo le tue preferenze (bassa/normale/alta)",
@@ -1086,18 +1086,18 @@
       "s12": "Naviga su Ricezione → Audio",
       "s13": "Imposta la modalità su 'WFM' (FM a banda larga)",
       "s14": "Imposta la frequenza su una stazione FM locale (es. 101,1 MHz)",
-      "s15": "Imposta i guadagni: LNA=16, VGA=20, AMP=0 (OFF) — inizia sempre con AMP spento",
-      "s16": "Alza il volume a 40–60 — dovresti sentire la stazione",
-      "s17": "Controlla la barra RSSI e la cascata — un segnale forte mostra una banda verticale luminosa",
+      "s15": "Imposta i guadagni: LNA=16, VGA=20, AMP=0 (OFF)  -  inizia sempre con AMP spento",
+      "s16": "Alza il volume a 40-60  -  dovresti sentire la stazione",
+      "s17": "Controlla la barra RSSI e la cascata  -  un segnale forte mostra una banda verticale luminosa",
       "s18": "Se debole: aumenta prima il VGA, poi il LNA. Se c'è clipping/distorsione: riduci i guadagni",
       "s19": "Sintonizzati su una stazione FM nota e verifica se la frequenza è leggermente fuori centro",
       "s20": "Vai su Impostazioni → Radio → Correzione frequenza e regola fino a centrare correttamente la stazione",
-      "s21": "Questo corregge l'offset del TCXO — migliora la precisione in tutte le app",
-      "s22": "Prima di qualsiasi TX: collega un dummy load da 50 ohm o un'antenna adattata — non trasmettere mai senza carico",
+      "s21": "Questo corregge l'offset del TCXO  -  migliora la precisione in tutte le app",
+      "s22": "Prima di qualsiasi TX: collega un dummy load da 50 ohm o un'antenna adattata  -  non trasmettere mai senza carico",
       "s23": "Impara l'arresto di emergenza TX: Pulsante Stop → Freccia indietro → RESET → Spegnimento",
       "s24": "Non operare mai a meno di 3 metri da trasmettitori attivi (ricetrasmittenti, router) durante la ricezione",
       "s25": "Tocca la freccia indietro per tornare ai menu",
-      "s26": "Scorri l'interruttore di alimentazione verso il BASSO per spegnere — spegni sempre prima di scollegare l'antenna"
+      "s26": "Scorri l'interruttore di alimentazione verso il BASSO per spegnere  -  spegni sempre prima di scollegare l'antenna"
     },
     "quickStartSections": {
       "beforePowerOn": "Prima di accendere",

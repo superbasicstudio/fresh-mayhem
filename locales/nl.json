@@ -71,11 +71,11 @@
       },
       "receive": {
         "label": "Ontvangst Apps",
-        "desc": "Passieve verkenning — ADS-B, POCSAG, SubGhzD, BLE en meer"
+        "desc": "Passieve verkenning  -  ADS-B, POCSAG, SubGhzD, BLE en meer"
       },
       "transmit": {
         "label": "Zend Apps",
-        "desc": "Actief testen — OOK, replay, FlipperTX, BLE TX (alleen geautoriseerd gebruik)"
+        "desc": "Actief testen  -  OOK, replay, FlipperTX, BLE TX (alleen geautoriseerd gebruik)"
       },
       "tools": {
         "label": "Hulpmiddelen & Instellingen",
@@ -88,7 +88,7 @@
       },
       "frequencies": {
         "label": "Frequentiereferentie",
-        "stat": "1 MHz – 6 GHz",
+        "stat": "1 MHz - 6 GHz",
         "desc": "RF spectrumkaart, verboden frequenties, legale TX banden, boetes"
       },
       "learn": {
@@ -113,7 +113,7 @@
     "portapack": "PortaPack",
     "portapackValue": "H4M",
     "frequency": "Frequentie",
-    "frequencyValue": "1 MHz – 6 GHz",
+    "frequencyValue": "1 MHz - 6 GHz",
     "txPower": "TX Vermogen",
     "txPowerValue": "~15 dBm (32 mW)",
     "rxApps": "RX Apps",
@@ -161,7 +161,7 @@
   },
   "receive": {
     "title": "Ontvangst Apps",
-    "subtitle": "Alle {{count}} ontvangstapplicaties in Mayhem firmware. Geen transmissie — de legaliteit van passief ontvangen verschilt per regio. Controleer altijd de lokale wetgeving.",
+    "subtitle": "Alle {{count}} ontvangstapplicaties in Mayhem firmware. Geen transmissie  -  de legaliteit van passief ontvangen verschilt per regio. Controleer altijd de lokale wetgeving.",
     "filterPlaceholder": "Filter ontvangst apps...",
     "apps": "apps",
     "learnMore": "Meer info",
@@ -170,7 +170,7 @@
   },
   "transmit": {
     "title": "Zend Apps",
-    "subtitle": "Alle {{count}} zendapplicaties in Mayhem firmware. Elk beoordeeld op gevarenniveau — gebruik altijd een dummyload of geschikte antenne.",
+    "subtitle": "Alle {{count}} zendapplicaties in Mayhem firmware. Elk beoordeeld op gevarenniveau  -  gebruik altijd een dummyload of geschikte antenne.",
     "warning": "Alle TX apps vereisen een antenne of dummyload. Zend nooit zonder aangesloten belasting. Verberg Jammer, GPS Sim en ADS-B TX via App Manager.",
     "filterPlaceholder": "Filter zend apps...",
     "apps": "apps",
@@ -185,7 +185,7 @@
   },
   "safety": {
     "title": "Veiligheidscentrum",
-    "subtitle": "Veelgemaakte fouten, echte schadeverhalen, TX gevarenclassificaties en versterkergedrag voor de HackRF One + PortaPack. Informatie is alleen voor educatieve doeleinden — geen juridisch advies. Controleer altijd je lokale regelgeving.",
+    "subtitle": "Veelgemaakte fouten, echte schadeverhalen, TX gevarenclassificaties en versterkergedrag voor de HackRF One + PortaPack. Informatie is alleen voor educatieve doeleinden  -  geen juridisch advies. Controleer altijd je lokale regelgeving.",
     "tabs": {
       "mistakes": "Beginnersfouten",
       "stories": "Schadeverhalen",
@@ -209,11 +209,11 @@
   },
   "frequencies": {
     "title": "Leer over Radiofrequenties (RF)",
-    "subtitle": "RF spectrumdekking van 1 MHz tot 6 GHz — verboden zones, legale TX banden en boetereferentie voor de VS.",
+    "subtitle": "RF spectrumdekking van 1 MHz tot 6 GHz  -  verboden zones, legale TX banden en boetereferentie voor de VS.",
     "spectrumTitle": "RF Spectrumdekking",
-    "bandMapTitle": "Bandkaart — Verboden vs Legale TX (1 MHz – 6 GHz)",
+    "bandMapTitle": "Bandkaart  -  Verboden vs Legale TX (1 MHz - 6 GHz)",
     "bandMapDesc": "Interactieve kaart met beperkte (rood) en toegestane (groen) frequentiebanden op een logaritmische schaal. Beweeg over een band voor details. Gele overlap geeft aan waar legale ISM banden spectrum delen met beperkte diensten.",
-    "noGoTitle": "Verboden Frequenties — Amerikaanse Federale Beperkingen",
+    "noGoTitle": "Verboden Frequenties  -  Amerikaanse Federale Beperkingen",
     "legalTitle": "Legale TX Banden (Met Voorwaarden)",
     "penaltiesTitle": "Juridische Gevolgen (Amerikaanse Federale Wetgeving)",
     "band": "Band",
@@ -223,7 +223,7 @@
     "violation": "Overtreding",
     "law": "Wet",
     "penalty": "Straf",
-    "disclaimer": "Getoonde frequentiebeperkingen en boetes zijn gebaseerd op Amerikaanse federale regelgeving (FCC/FAA). Wetten verschillen aanzienlijk per land en regio. Dit is geen juridisch advies — controleer altijd de regelgeving in jouw rechtsgebied voordat je gaat zenden."
+    "disclaimer": "Getoonde frequentiebeperkingen en boetes zijn gebaseerd op Amerikaanse federale regelgeving (FCC/FAA). Wetten verschillen aanzienlijk per land en regio. Dit is geen juridisch advies  -  controleer altijd de regelgeving in jouw rechtsgebied voordat je gaat zenden."
   },
   "learn": {
     "title": "Leren",
@@ -240,8 +240,8 @@
     "all": "Alles"
   },
   "quickstart": {
-    "title": "HackRF + PortaPack — Snelstart",
-    "subtitle": "Complete installatiegids van uitpakken tot je eerste FM ontvanstsessie. Behandelt SD-kaartvoorbereiding, firmware, kalibratie, veiligheid en uitschakelen. Vink elke stap af — voortgang wordt lokaal opgeslagen.",
+    "title": "HackRF + PortaPack  -  Snelstart",
+    "subtitle": "Complete installatiegids van uitpakken tot je eerste FM ontvanstsessie. Behandelt SD-kaartvoorbereiding, firmware, kalibratie, veiligheid en uitschakelen. Vink elke stap af  -  voortgang wordt lokaal opgeslagen.",
     "clear": "WISSEN",
     "sections": {
       "beforePowerOn": "Voordat je Inschakelt",
@@ -251,13 +251,13 @@
       "safetyShutdown": "Veiligheid & Uitschakelen"
     },
     "steps": {
-      "s1": "Controleer of je USB-kabel datageschikt is (niet alleen opladen) — dit is het #1 installatieprobleem",
-      "s2": "Plaats een MicroSD-kaart (FAT32, 8-32 GB aanbevolen) — slaat opnames, instellingen en apps op",
+      "s1": "Controleer of je USB-kabel datageschikt is (niet alleen opladen)  -  dit is het #1 installatieprobleem",
+      "s2": "Plaats een MicroSD-kaart (FAT32, 8-32 GB aanbevolen)  -  slaat opnames, instellingen en apps op",
       "s3": "Download de nieuwste Mayhem firmware van GitHub releases en kopieer .ppfw.tar naar de SD-root",
-      "s4": "Bevestig de telescoopantenne (40 MHz–6 GHz) op de SMA-poort — alleen met de hand aandraaien, nooit met gereedschap",
-      "s5": "Ontlaad jezelf voordat je het apparaat aanraakt — ESD op de SMA-centerpin kan de LNA beschadigen",
+      "s4": "Bevestig de telescoopantenne (40 MHz-6 GHz) op de SMA-poort  -  alleen met de hand aandraaien, nooit met gereedschap",
+      "s5": "Ontlaad jezelf voordat je het apparaat aanraakt  -  ESD op de SMA-centerpin kan de LNA beschadigen",
       "s6": "Houd een 50-ohm dummyload klaar als je TX apps wilt testen",
-      "s7": "Schuif de aan/uit schakelaar OMHOOG — wacht tot het Mayhem hoofdmenu verschijnt",
+      "s7": "Schuif de aan/uit schakelaar OMHOOG  -  wacht tot het Mayhem hoofdmenu verschijnt",
       "s8": "Controleer de firmwareversie op de statusbalk (huidig: v2.3.2)",
       "s9": "Ga naar Settings → SD Card → Test om te controleren of je SD-kaart wordt gedetecteerd en werkt",
       "s10": "Ga naar Settings → UI → stel de encodergevoeligheid in naar voorkeur (laag/normaal/hoog)",
@@ -265,18 +265,18 @@
       "s12": "Navigeer naar Receive → Audio",
       "s13": "Stel de modus in op 'WFM' (Breedband FM)",
       "s14": "Stel de frequentie in op een lokaal FM-station (bijv. 101.1 MHz)",
-      "s15": "Stel gains in: LNA=16, VGA=20, AMP=0 (UIT) — begin altijd met AMP uit",
-      "s16": "Zet het volume op 40–60 — je zou het station moeten horen",
-      "s17": "Controleer de RSSI-balk en waterval — een sterk signaal toont een heldere verticale band",
+      "s15": "Stel gains in: LNA=16, VGA=20, AMP=0 (UIT)  -  begin altijd met AMP uit",
+      "s16": "Zet het volume op 40-60  -  je zou het station moeten horen",
+      "s17": "Controleer de RSSI-balk en waterval  -  een sterk signaal toont een heldere verticale band",
       "s18": "Bij zwak signaal: verhoog eerst VGA, dan LNA. Bij clipping/vervorming: verlaag de gains",
       "s19": "Stem af op een bekend FM-station en controleer of de frequentie iets afwijkt",
       "s20": "Ga naar Settings → Radio → Frequency Correction en pas aan tot het station correct gecentreerd is",
-      "s21": "Dit corrigeert je TCXO-offset — verbetert de nauwkeurigheid in alle apps",
-      "s22": "Voor TX: sluit een 50-ohm dummyload of frequentie-geschikte antenne aan — zend nooit in de open lucht",
+      "s21": "Dit corrigeert je TCXO-offset  -  verbetert de nauwkeurigheid in alle apps",
+      "s22": "Voor TX: sluit een 50-ohm dummyload of frequentie-geschikte antenne aan  -  zend nooit in de open lucht",
       "s23": "Leer de Noodstop TX: Stop knop → Terugpijl → RESET → Stroom UIT",
       "s24": "Werk nooit binnen 3 meter van actieve zenders (portofoons, routers) tijdens ontvangst",
       "s25": "Tik op de terugpijl om terug te keren naar menu's",
-      "s26": "Schuif de aan/uit schakelaar OMLAAG om uit te schakelen — schakel altijd uit voordat je de antenne loskoppelt"
+      "s26": "Schuif de aan/uit schakelaar OMLAAG om uit te schakelen  -  schakel altijd uit voordat je de antenne loskoppelt"
     }
   },
   "firmwareUpdate": {
@@ -322,9 +322,9 @@
   },
   "whereToBuy": {
     "title": "Waar te koop",
-    "subtitle": "Door de community aanbevolen bronnen voor HackRF One, PortaPack en accessoires. Geen aanbeveling — doe altijd je eigen onderzoek.",
+    "subtitle": "Door de community aanbevolen bronnen voor HackRF One, PortaPack en accessoires. Geen aanbeveling  -  doe altijd je eigen onderzoek.",
     "disclaimerTitle": "Geen Affiliatie · Geen Aanbeveling",
-    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem is <strong>niet geaffilieerd met, gesponsord door of goedgekeurd door</strong> enige leverancier op deze pagina. Vermelding is gebaseerd op communityvermeldingen in r/hackrf, r/RTLSDR en andere SDR-forums — het garandeert geen productkwaliteit, authenticiteit of service. <strong>Doe altijd je eigen onderzoek voordat je koopt.</strong>",
+    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem is <strong>niet geaffilieerd met, gesponsord door of goedgekeurd door</strong> enige leverancier op deze pagina. Vermelding is gebaseerd op communityvermeldingen in r/hackrf, r/RTLSDR en andere SDR-forums  -  het garandeert geen productkwaliteit, authenticiteit of service. <strong>Doe altijd je eigen onderzoek voordat je koopt.</strong>",
     "typeLabel": "TYPE",
     "regionLabel": "REGIO",
     "all": "Alles",
@@ -340,7 +340,7 @@
     "title": "Frequentie Niet Gevonden",
     "message": "Geen signaal gedetecteerd op dit adres. De pagina die je zoekt bestaat niet of is verplaatst.",
     "backButton": "Terug naar Overzicht",
-    "footer": "Fresh Mayhem — Een Super Basic Studio project"
+    "footer": "Fresh Mayhem  -  Een Super Basic Studio project"
   },
   "chart": {
     "extreme": "Extreem",
@@ -351,14 +351,14 @@
     "txApps": "TX-apps"
   },
   "bandMap": {
-    "title": "Bandkaart — Geselecteerde beperkte en ISM-banden (1 MHz – 6 GHz)",
-    "description": "Dit diagram toont een <strong>gedeeltelijk</strong> overzicht van Amerikaanse frequentie<strong>zend (TX)</strong>-beperkingen. Rood = geselecteerde banden waar zenden federaal beperkt is. Groen = ISM-banden waar zenden over het algemeen is toegestaan onder FCC Part 15-voorwaarden. <strong>Ontvangst (RX) / luisteren is over het algemeen toegestaan in de meeste rechtsgebieden — controleer altijd uw lokale wetten.</strong> Dit is geen volledige lijst van alle beperkte frequenties.",
-    "disclaimer": "<strong>Disclaimer:</strong> Volgens de Amerikaanse federale wet (47 U.S.C. § 301) is het verboden om op <strong>welke</strong> radiofrequentie dan ook te zenden zonder de juiste autorisatie. Ongelicentieerd zenden is alleen toegestaan op specifieke ISM-banden onder strikte FCC Part 15-vermogenslimieten en -voorwaarden. Lege ruimte op dit diagram is <strong>geen</strong> indicatie dat zenden is toegestaan. Dit diagram is alleen bedoeld als educatieve referentie en vormt geen juridisch advies. Frequentieregels variëren per land — controleer altijd de wetten in uw rechtsgebied voor het zenden. Super Basic Studio, LLC aanvaardt geen aansprakelijkheid voor ongeautoriseerde uitzendingen.",
-    "restrictedLabel": "BEPERKT TX — NIET ZENDEN (GESELECTEERDE AMERIKAANSE FEDERALE BANDEN)",
-    "ismLabel": "ISM-BANDEN — OVER HET ALGEMEEN TOEGESTAAN TX (FCC PART 15, VOORWAARDEN VAN TOEPASSING)",
+    "title": "Bandkaart  -  Geselecteerde beperkte en ISM-banden (1 MHz - 6 GHz)",
+    "description": "Dit diagram toont een <strong>gedeeltelijk</strong> overzicht van Amerikaanse frequentie<strong>zend (TX)</strong>-beperkingen. Rood = geselecteerde banden waar zenden federaal beperkt is. Groen = ISM-banden waar zenden over het algemeen is toegestaan onder FCC Part 15-voorwaarden. <strong>Ontvangst (RX) / luisteren is over het algemeen toegestaan in de meeste rechtsgebieden  -  controleer altijd uw lokale wetten.</strong> Dit is geen volledige lijst van alle beperkte frequenties.",
+    "disclaimer": "<strong>Disclaimer:</strong> Volgens de Amerikaanse federale wet (47 U.S.C. § 301) is het verboden om op <strong>welke</strong> radiofrequentie dan ook te zenden zonder de juiste autorisatie. Ongelicentieerd zenden is alleen toegestaan op specifieke ISM-banden onder strikte FCC Part 15-vermogenslimieten en -voorwaarden. Lege ruimte op dit diagram is <strong>geen</strong> indicatie dat zenden is toegestaan. Dit diagram is alleen bedoeld als educatieve referentie en vormt geen juridisch advies. Frequentieregels variëren per land  -  controleer altijd de wetten in uw rechtsgebied voor het zenden. Super Basic Studio, LLC aanvaardt geen aansprakelijkheid voor ongeautoriseerde uitzendingen.",
+    "restrictedLabel": "BEPERKT TX  -  NIET ZENDEN (GESELECTEERDE AMERIKAANSE FEDERALE BANDEN)",
+    "ismLabel": "ISM-BANDEN  -  OVER HET ALGEMEEN TOEGESTAAN TX (FCC PART 15, VOORWAARDEN VAN TOEPASSING)",
     "doNotTransmit": "NIET ZENDEN (TX)",
-    "listeningPermitted": "Luisteren (RX) is over het algemeen toegestaan — controleer lokale wetten",
-    "ismConditions": "ISM — Over het algemeen toegestaan onder FCC Part 15 met voorwaarden",
+    "listeningPermitted": "Luisteren (RX) is over het algemeen toegestaan  -  controleer lokale wetten",
+    "ismConditions": "ISM  -  Over het algemeen toegestaan onder FCC Part 15 met voorwaarden",
     "clickToZoom": "Klik om te zoomen",
     "scrollHint": "Scroll om te zoomen · Sleep om te verplaatsen · Klik op een band om te focussen",
     "resetZoom": "Zoom resetten"
@@ -375,7 +375,7 @@
   "penalties": {
     "maxPenalty": "Max. enkele boete (PIRATE Act)",
     "maxPrison": "Max. federale gevangenisstraf",
-    "aviationCases": "Luchtvaartgevallen — federaal onderzoek",
+    "aviationCases": "Luchtvaartgevallen  -  federaal onderzoek",
     "scaleTitle": "SCHAAL VAN GELDBOETES (AMERIKAANS FEDERAAL)",
     "severe": "ERNSTIG",
     "high": "HOOG",
@@ -396,7 +396,7 @@
       "gpsJamming": {
         "violation": "GPS- / mobiel jammen",
         "law": "PIRATE Act",
-        "penalty": "Tot $119,555/dag — max. $2.39M",
+        "penalty": "Tot $119,555/dag  -  max. $2.39M",
         "detail": "De PIRATE Act (2020) heeft de boetes drastisch verhoogd. GPS-jammers beïnvloeden luchtvaart, scheepvaart, 112 en financiële systemen."
       },
       "intercepting": {
@@ -408,20 +408,20 @@
       "aviation": {
         "violation": "Luchtvaartverstoring",
         "law": "18 U.S.C. § 32",
-        "penalty": "Federaal misdrijf — FBI + FAA-onderzoek",
+        "penalty": "Federaal misdrijf  -  FBI + FAA-onderzoek",
         "detail": "Wet op vliegtuigsabotage. ADS-B-spoofing of GPS-jamming nabij luchthavens leidt tot onmiddellijk federaal onderzoek. Geen minimumdrempel."
       }
     }
   },
   "badges": {
     "rx": "RX",
-    "rxTooltip": "Alleen ontvangst — geen transmissie. Legaliteit van luisteren verschilt per regio.",
+    "rxTooltip": "Alleen ontvangst  -  geen transmissie. Legaliteit van luisteren verschilt per regio.",
     "caution": "VOORZICHTIG",
-    "cautionTooltip": "Gebruik met voorzichtigheid — controleer lokale regelgeving",
+    "cautionTooltip": "Gebruik met voorzichtigheid  -  controleer lokale regelgeving",
     "danger": "GEVAAR",
-    "dangerTooltip": "Gevaarlijk — kan schade of juridische problemen veroorzaken. Controleer lokale regelgeving.",
+    "dangerTooltip": "Gevaarlijk  -  kan schade of juridische problemen veroorzaken. Controleer lokale regelgeving.",
     "extreme": "EXTREEM",
-    "extremeTooltip": "Extreem risico — waarschijnlijk illegaal in de meeste rechtsgebieden. Geen juridisch advies.",
+    "extremeTooltip": "Extreem risico  -  waarschijnlijk illegaal in de meeste rechtsgebieden. Geen juridisch advies.",
     "illegal": "ILLEGAAL",
     "illegalTooltip": "Illegaal in de meeste bekende rechtsgebieden. Controleer je lokale wetgeving."
   },
@@ -429,7 +429,7 @@
     "freshMayhem": "Fresh Mayhem",
     "mayhemFirmware": "Mayhem Firmware",
     "portapackHackrf": "PortaPack H4M + HackRF One",
-    "educationalOnly": "Alleen educatieve bron — geen juridisch advies. Houd je altijd aan lokale RF-regelgeving.",
+    "educationalOnly": "Alleen educatieve bron  -  geen juridisch advies. Houd je altijd aan lokale RF-regelgeving.",
     "trademarkNotice": "HackRF en PortaPack zijn handelsmerken van hun respectieve eigenaren. Mayhem firmware is een open-source project van de bijdragers. Deze site is een onafhankelijke, onofficiële referentie en is niet geaffilieerd met, goedgekeurd door of gesponsord door",
     "greatScottGadgets": "Great Scott Gadgets",
     "trademarkSuffix": ", PortaPack of het Mayhem project.",
@@ -449,8 +449,8 @@
     "txApps": {
       "ADS-B(S) TX": {
         "description": "Valse vliegtuigtransponderdata.",
-        "legal": "Federaal misdrijf — vliegtuigtransponder-spoofing brengt de luchtvaartveiligheid in gevaar.",
-        "learn": "ADS-B staat voor Automatic Dependent Surveillance–Broadcast. Het is de manier waarop vliegtuigen hun positie, hoogte en snelheid rapporteren aan de luchtverkeersleiding en andere vliegtuigen. De (S) verwijst naar de 'S-mode' transpondervariant die wordt gebruikt in Mode S op 1090 MHz. Deze app genereert valse ADS-B-pakketten — fantoomvliegtuigen die verschijnen op ATC-radar en FlightAware/FlightRadar24. Zelfs testen op de ether is een federaal misdrijf onder 18 U.S.C. § 32 (vliegtuigsabotage). Gebruik alleen met een dummyload in een afgeschermde omgeving."
+        "legal": "Federaal misdrijf  -  vliegtuigtransponder-spoofing brengt de luchtvaartveiligheid in gevaar.",
+        "learn": "ADS-B staat voor Automatic Dependent Surveillance-Broadcast. Het is de manier waarop vliegtuigen hun positie, hoogte en snelheid rapporteren aan de luchtverkeersleiding en andere vliegtuigen. De (S) verwijst naar de 'S-mode' transpondervariant die wordt gebruikt in Mode S op 1090 MHz. Deze app genereert valse ADS-B-pakketten  -  fantoomvliegtuigen die verschijnen op ATC-radar en FlightAware/FlightRadar24. Zelfs testen op de ether is een federaal misdrijf onder 18 U.S.C. § 32 (vliegtuigsabotage). Gebruik alleen met een dummyload in een afgeschermde omgeving."
       },
       "APRS TX": {
         "description": "APRS positie-/datapakketten.",
@@ -465,7 +465,7 @@
       "BLE TX": {
         "description": "BLE-advertentiepakketten met configureerbaar MAC-adres en payload.",
         "legal": "Legaal voor het testen van je eigen apparaten. Spoofing van anderen kan wetten overtreden.",
-        "learn": "BLE (Bluetooth Low Energy) is een draadloos protocol met kort bereik op 2,4 GHz, gebruikt door fitnesstrackers, slimme sloten, beacons en IoT-apparaten. BLE-advertentiepakketten zijn broadcastberichten die apparaten in de buurt kunnen detecteren zonder koppeling. Met deze app kun je aangepaste advertentiepakketten maken met configureerbare MAC-adressen en payloadgegevens — handig voor het testen van je eigen BLE-randapparatuur, iBeacon/Eddystone-experimenten of het begrijpen van de BLE-protocolstructuur. Het bereik is doorgaans 10-30 meter."
+        "learn": "BLE (Bluetooth Low Energy) is een draadloos protocol met kort bereik op 2,4 GHz, gebruikt door fitnesstrackers, slimme sloten, beacons en IoT-apparaten. BLE-advertentiepakketten zijn broadcastberichten die apparaten in de buurt kunnen detecteren zonder koppeling. Met deze app kun je aangepaste advertentiepakketten maken met configureerbare MAC-adressen en payloadgegevens  -  handig voor het testen van je eigen BLE-randapparatuur, iBeacon/Eddystone-experimenten of het begrijpen van de BLE-protocolstructuur. Het bereik is doorgaans 10-30 meter."
       },
       "BLESpam": {
         "description": "Overspoelt nabije apparaten met BLE-advertenties.",
@@ -485,17 +485,17 @@
       "FlipperTX": {
         "description": "Speelt Flipper Zero .sub-bestanden direct af vanaf de PortaPack.",
         "legal": "Alleen legaal voor je eigen apparaten. Het afspelen van signalen van anderen is illegaal.",
-        "learn": "FlipperTX leest Flipper Zero .sub-opnamebestanden van de SD-kaart en speelt ze af via de HackRF. Het .sub-formaat van de Flipper Zero slaat ruwe signaalopnames op, inclusief frequentie, modulatietype en de daadwerkelijke databits. Dit betekent dat elk signaal dat door een Flipper Zero is vastgelegd, kan worden afgespeeld via de HackRF met hoger vermogen en betere antenne-opties. Veelvoorkomend gebruik is het testen van je eigen garagedeuren, hekken en afstandsbediende apparaten. Het bredere frequentiebereik van de HackRF (1 MHz–6 GHz) gaat ver voorbij het native sub-GHz-bereik van de Flipper."
+        "learn": "FlipperTX leest Flipper Zero .sub-opnamebestanden van de SD-kaart en speelt ze af via de HackRF. Het .sub-formaat van de Flipper Zero slaat ruwe signaalopnames op, inclusief frequentie, modulatietype en de daadwerkelijke databits. Dit betekent dat elk signaal dat door een Flipper Zero is vastgelegd, kan worden afgespeeld via de HackRF met hoger vermogen en betere antenne-opties. Veelvoorkomend gebruik is het testen van je eigen garagedeuren, hekken en afstandsbediende apparaten. Het bredere frequentiebereik van de HackRF (1 MHz-6 GHz) gaat ver voorbij het native sub-GHz-bereik van de Flipper."
       },
       "GPS Sim": {
         "description": "Genereert en zendt valse GPS-satellietsignalen uit vanuit .C8-bestanden.",
-        "legal": "Federaal misdrijf — GPS-spoofing beïnvloedt luchtvaart, scheepvaart, hulpdiensten.",
-        "learn": "GPS-satellieten zenden uit op L1 (1575.42 MHz) met nauwkeurige timingsignalen die ontvangers trianguleren voor positiebepaling. GPS Sim genereert valse satellietsignalen die echte GPS overschrijven, waardoor ontvangers een valse locatie en tijd rapporteren. De .C8-bestanden bevatten vooraf berekende IQ-samples voor specifieke locaties/tijden. Dit beïnvloedt ALLE GPS-ontvangers in bereik — telefoons, auto's, vliegtuigen, schepen, hulpdiensten, financiële handelssystemen (die GPS gebruiken voor timing). GPS-spoofing is een federaal misdrijf onder 18 U.S.C. § 32 met zware straffen. Zelfs kort testen op de ether kan nabije infrastructuur beïnvloeden."
+        "legal": "Federaal misdrijf  -  GPS-spoofing beïnvloedt luchtvaart, scheepvaart, hulpdiensten.",
+        "learn": "GPS-satellieten zenden uit op L1 (1575.42 MHz) met nauwkeurige timingsignalen die ontvangers trianguleren voor positiebepaling. GPS Sim genereert valse satellietsignalen die echte GPS overschrijven, waardoor ontvangers een valse locatie en tijd rapporteren. De .C8-bestanden bevatten vooraf berekende IQ-samples voor specifieke locaties/tijden. Dit beïnvloedt ALLE GPS-ontvangers in bereik  -  telefoons, auto's, vliegtuigen, schepen, hulpdiensten, financiële handelssystemen (die GPS gebruiken voor timing). GPS-spoofing is een federaal misdrijf onder 18 U.S.C. § 32 met zware straffen. Zelfs kort testen op de ether kan nabije infrastructuur beïnvloeden."
       },
       "Hopper": {
         "description": "Frequentiespringende zender. Overspoelt gedefinieerde frequentiebereiken.",
         "legal": "Gelijkwaardig aan jamming. Altijd illegaal.",
-        "learn": "Hopper schakelt snel de uitzending over een door de gebruiker gedefinieerd frequentiebereik, waarbij het korte tijd op elke frequentie blijft voor het naar de volgende springt. In tegenstelling tot de speciale Jammer-app dekt Hopper een potentieel veel breder spectrum door te springen in plaats van breedbandruis. Dit maakt het effectief tegen frequency-hopping spread spectrum (FHSS) systemen zoals Wi-Fi, Bluetooth en sommige militaire communicatie. Het effect is hetzelfde als jamming — dienstverlening over de doelband. Illegaal in alle rechtsgebieden onder internationale radioreglementen (ITU Radio Regulations, Artikel 15)."
+        "learn": "Hopper schakelt snel de uitzending over een door de gebruiker gedefinieerd frequentiebereik, waarbij het korte tijd op elke frequentie blijft voor het naar de volgende springt. In tegenstelling tot de speciale Jammer-app dekt Hopper een potentieel veel breder spectrum door te springen in plaats van breedbandruis. Dit maakt het effectief tegen frequency-hopping spread spectrum (FHSS) systemen zoals Wi-Fi, Bluetooth en sommige militaire communicatie. Het effect is hetzelfde als jamming  -  dienstverlening over de doelband. Illegaal in alle rechtsgebieden onder internationale radioreglementen (ITU Radio Regulations, Artikel 15)."
       },
       "Jammer": {
         "description": "Breedband RF-jammer. Ruis over een bandbreedte tot 24 MHz.",
@@ -510,12 +510,12 @@
       "Morse TX": {
         "description": "Morsecode via FM-toon of CW.",
         "legal": "Legaal met amateurradiolicentie op geschikte frequenties.",
-        "learn": "Morsecode (CW — Continuous Wave) is de oudste digitale modus in radio, waarbij tekst wordt gecodeerd als patronen van korte (dit) en lange (dah) signalen. Deze app zendt morse uit als CW (aan/uit-modulatie van een draaggolf) of als FM-audiotoon. CW wordt nog steeds veel gebruikt door amateurradio-operators omdat het extreem efficiënt is — leesbaar bij signaalniveaus ver onder spraak. Amateuroperators mogen CW gebruiken op alle amateurbanden. De app accepteert tekstinvoer en converteert deze naar correct getimede morse met instelbare woorden per minuut."
+        "learn": "Morsecode (CW  -  Continuous Wave) is de oudste digitale modus in radio, waarbij tekst wordt gecodeerd als patronen van korte (dit) en lange (dah) signalen. Deze app zendt morse uit als CW (aan/uit-modulatie van een draaggolf) of als FM-audiotoon. CW wordt nog steeds veel gebruikt door amateurradio-operators omdat het extreem efficiënt is  -  leesbaar bij signaalniveaus ver onder spraak. Amateuroperators mogen CW gebruiken op alle amateurbanden. De app accepteert tekstinvoer en converteert deze naar correct getimede morse met instelbare woorden per minuut."
       },
       "OOK TX": {
         "description": "On-Off Keying-signalen. PT2262-afstandsbedieningen, deurbellen, garagedeuren.",
         "legal": "Alleen legaal voor je eigen apparaten.",
-        "learn": "OOK (On-Off Keying) is de eenvoudigste vorm van digitale modulatie — de draaggolf is aan of uit, wat 1'en en 0'en voorstelt. De meeste goedkope 315/433 MHz afstandsbedieningen gebruiken OOK met de PT2262-encoderchip (of compatibele klonen zoals EV1527). Dit omvat garagedeuropeners, draadloze deurbellen, RF-stopcontacten, autosleutelhangers (oudere) en eenvoudige alarmsensoren. De app kan specifieke codes uitzenden om deze apparaten te activeren. Veel oudere systemen gebruiken vaste codes zonder encryptie, waardoor ze eenvoudig te herhalen zijn. Nieuwere systemen gebruiken rolcodes (zoals KeeLoq) die met deze eenvoudige herhaling niet te doorbreken zijn."
+        "learn": "OOK (On-Off Keying) is de eenvoudigste vorm van digitale modulatie  -  de draaggolf is aan of uit, wat 1'en en 0'en voorstelt. De meeste goedkope 315/433 MHz afstandsbedieningen gebruiken OOK met de PT2262-encoderchip (of compatibele klonen zoals EV1527). Dit omvat garagedeuropeners, draadloze deurbellen, RF-stopcontacten, autosleutelhangers (oudere) en eenvoudige alarmsensoren. De app kan specifieke codes uitzenden om deze apparaten te activeren. Veel oudere systemen gebruiken vaste codes zonder encryptie, waardoor ze eenvoudig te herhalen zijn. Nieuwere systemen gebruiken rolcodes (zoals KeeLoq) die met deze eenvoudige herhaling niet te doorbreken zijn."
       },
       "OOK Editor": {
         "description": "Aangepaste OOK-signaalpatroonconstructie en -uitzending.",
@@ -525,22 +525,22 @@
       "POCSAG TX": {
         "description": "Vervalste POCSAG-pagerberichten naar specifieke RIC-adressen.",
         "legal": "Ongeautoriseerde uitzending op gelicentieerde frequenties.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) is het protocol dat wordt gebruikt door traditionele numerieke en alfanumerieke pagers, werkend rond 150-170 MHz of 450-470 MHz afhankelijk van de regio. Elke pager heeft een RIC (Radio Identity Code) — een uniek adres. Deze app maakt en zendt POCSAG-berichten naar specifieke RIC-adressen, wat betekent dat je tekst kunt sturen naar individuele pagers. Pagernetwerken worden nog steeds actief gebruikt door ziekenhuizen, hulpdiensten en sommige bedrijven. Uitzenden op deze gelicentieerde frequenties zonder autorisatie is illegaal."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) is het protocol dat wordt gebruikt door traditionele numerieke en alfanumerieke pagers, werkend rond 150-170 MHz of 450-470 MHz afhankelijk van de regio. Elke pager heeft een RIC (Radio Identity Code)  -  een uniek adres. Deze app maakt en zendt POCSAG-berichten naar specifieke RIC-adressen, wat betekent dat je tekst kunt sturen naar individuele pagers. Pagernetwerken worden nog steeds actief gebruikt door ziekenhuizen, hulpdiensten en sommige bedrijven. Uitzenden op deze gelicentieerde frequenties zonder autorisatie is illegaal."
       },
       "RDS": {
         "description": "FM-uitzending met Radio Data System-metadata.",
         "legal": "Vereist omroeplicentie. Laag vermogen wordt in sommige regio's getolereerd.",
-        "learn": "RDS (Radio Data System) is de technologie achter de stationsnaam, songtitel en verkeersinformatie die op het display van je autoradio verschijnt wanneer je FM (88-108 MHz) ontvangt. RDS is een 57 kHz-subdraaggolf die meelift op het FM-stereosignaal. Deze app zendt een FM-signaal uit compleet met RDS-data — je kunt de stationsnaam (PS), radiotekst (RT), programmatype (PTY) en verkeersmeldingen (TA/TP) instellen. Bij laag vermogen en kort bereik wordt dit vaak gebruikt voor persoonlijke FM-zenders, maar elke FM-uitzending vereist technisch gezien een licentie van je nationale toezichthouder."
+        "learn": "RDS (Radio Data System) is de technologie achter de stationsnaam, songtitel en verkeersinformatie die op het display van je autoradio verschijnt wanneer je FM (88-108 MHz) ontvangt. RDS is een 57 kHz-subdraaggolf die meelift op het FM-stereosignaal. Deze app zendt een FM-signaal uit compleet met RDS-data  -  je kunt de stationsnaam (PS), radiotekst (RT), programmatype (PTY) en verkeersmeldingen (TA/TP) instellen. Bij laag vermogen en kort bereik wordt dit vaak gebruikt voor persoonlijke FM-zenders, maar elke FM-uitzending vereist technisch gezien een licentie van je nationale toezichthouder."
       },
       "Soundboard": {
         "description": "WAV-audio via FM. CTCSS-tonen, draadloze microfooncompatibiliteit.",
         "legal": "Vereist licentie op de meeste frequenties.",
-        "learn": "Soundboard speelt WAV-bestanden van de SD-kaart af als FM-audio-uitzendingen. Het kan ook CTCSS (Continuous Tone-Coded Squelch System) subaudiotonen genereren — de lage-frequentietonen (67-254,1 Hz) die tweerichtingsradio's gebruiken om ongewenst verkeer op gedeelde frequenties te filteren. Dit maakt het nuttig voor het testen van radio-squelchsystemen en CTCSS-uitgeruste repeaters. De draadloze microfooncompatibiliteit betekent dat het kan uitzenden op frequenties die worden gebruikt door draadloze microfoonsystemen (doorgaans VHF/UHF), en effectief functioneert als een draadloze microfoon."
+        "learn": "Soundboard speelt WAV-bestanden van de SD-kaart af als FM-audio-uitzendingen. Het kan ook CTCSS (Continuous Tone-Coded Squelch System) subaudiotonen genereren  -  de lage-frequentietonen (67-254,1 Hz) die tweerichtingsradio's gebruiken om ongewenst verkeer op gedeelde frequenties te filteren. Dit maakt het nuttig voor het testen van radio-squelchsystemen en CTCSS-uitgeruste repeaters. De draadloze microfooncompatibiliteit betekent dat het kan uitzenden op frequenties die worden gebruikt door draadloze microfoonsystemen (doorgaans VHF/UHF), en effectief functioneert als een draadloze microfoon."
       },
       "Spectrum Painter": {
         "description": "Afbeelding/tekst getekend in het RF-spectrum, zichtbaar op watervaldisplays.",
         "legal": "Novelty maar nog steeds ongeautoriseerde uitzending op de meeste frequenties.",
-        "learn": "Spectrum Painter zet een afbeelding of tekst om in een RF-signaal dat, wanneer bekeken op een watervaldisplay (zoals SDR++ of GQRX), verschijnt als een zichtbare afbeelding of bericht in het spectrum. Het varieert de uitgezonden frequentie over de tijd om elke rij pixels te 'schilderen' — heldere pixels krijgen meer vermogen, donkere pixels minder. Het resultaat is puur visuele kunst die alleen zichtbaar is op spectrumanalyzers. Creatief en populair voor demo's, maar het is nog steeds een RF-uitzending en onderworpen aan dezelfde regelgeving als elke andere zender. Beste gebruik met een dummyload of op een onbezette frequentie met minimaal vermogen."
+        "learn": "Spectrum Painter zet een afbeelding of tekst om in een RF-signaal dat, wanneer bekeken op een watervaldisplay (zoals SDR++ of GQRX), verschijnt als een zichtbare afbeelding of bericht in het spectrum. Het varieert de uitgezonden frequentie over de tijd om elke rij pixels te 'schilderen'  -  heldere pixels krijgen meer vermogen, donkere pixels minder. Het resultaat is puur visuele kunst die alleen zichtbaar is op spectrumanalyzers. Creatief en populair voor demo's, maar het is nog steeds een RF-uitzending en onderworpen aan dezelfde regelgeving als elke andere zender. Beste gebruik met een dummyload of op een onbezette frequentie met minimaal vermogen."
       },
       "SSTV TX": {
         "description": "Slow Scan Television-beelden via FM. Scottie/Martin/SC2-modi.",
@@ -550,7 +550,7 @@
       "TEDI/LCR": {
         "description": "Franse weginfrastructuur-besturingsframes. Bell 202 FSK.",
         "legal": "Ongeautoriseerde besturing van weginfrastructuur.",
-        "learn": "TEDI (Transmission Élémentaire d'Informations) en LCR (Liaisons à Concentration de Relais) zijn Franse weginfrastructuurprotocollen die worden gebruikt om elektronische snelwegborden, tunnelventilatiesystemen en verkeersbeheerapparatuur te besturen. Ze gebruiken Bell 202 FSK (Frequency Shift Keying) modulatie — een modemstandaard uit de jaren '70 die data codeert als twee audiofrequenties (1200/2200 Hz). Deze systemen besturen kritieke veiligheidsinfrastructuur op Franse autosnelwegen. Ongeautoriseerde verzending van TEDI/LCR-frames kan snelwegbordenberichten wijzigen of tunnelveiligheidssystemen verstoren."
+        "learn": "TEDI (Transmission Élémentaire d'Informations) en LCR (Liaisons à Concentration de Relais) zijn Franse weginfrastructuurprotocollen die worden gebruikt om elektronische snelwegborden, tunnelventilatiesystemen en verkeersbeheerapparatuur te besturen. Ze gebruiken Bell 202 FSK (Frequency Shift Keying) modulatie  -  een modemstandaard uit de jaren '70 die data codeert als twee audiofrequenties (1200/2200 Hz). Deze systemen besturen kritieke veiligheidsinfrastructuur op Franse autosnelwegen. Ongeautoriseerde verzending van TEDI/LCR-frames kan snelwegbordenberichten wijzigen of tunnelveiligheidssystemen verstoren."
       },
       "TouchTunes": {
         "description": "TouchTunes jukebox afstandsbedieningscommando's.",
@@ -561,55 +561,55 @@
     "rxApps": {
       "ADS-B": {
         "description": "Vliegtuigtransponder-tracking. Toont ICAO ID, callsign, hoogte, positie, snelheid.",
-        "learn": "ADS-B (Automatic Dependent Surveillance–Broadcast) is het systeem waarmee moderne vliegtuigen elke halve seconde hun identiteit, positie, hoogte en snelheid uitzenden op 1090 MHz. Elk vliegtuig heeft een uniek 24-bits ICAO-adres (als een kenteken). De PortaPack decodeert deze Mode S-transpondersignalen in real time en toont een live vliegtuigenlijst — dezelfde data die FlightRadar24 en FlightAware aandrijft. ADS-B is alleen ontvangst en volledig legaal om te monitoren. Met een goede antenne en vrij zicht kun je vliegtuigen op 100+ mijl afstand volgen. Dit is een van de populairste eerste apps voor nieuwe HackRF-eigenaren."
+        "learn": "ADS-B (Automatic Dependent Surveillance-Broadcast) is het systeem waarmee moderne vliegtuigen elke halve seconde hun identiteit, positie, hoogte en snelheid uitzenden op 1090 MHz. Elk vliegtuig heeft een uniek 24-bits ICAO-adres (als een kenteken). De PortaPack decodeert deze Mode S-transpondersignalen in real time en toont een live vliegtuigenlijst  -  dezelfde data die FlightRadar24 en FlightAware aandrijft. ADS-B is alleen ontvangst en volledig legaal om te monitoren. Met een goede antenne en vrij zicht kun je vliegtuigen op 100+ mijl afstand volgen. Dit is een van de populairste eerste apps voor nieuwe HackRF-eigenaren."
       },
       "ACARS": {
         "description": "Vliegtuigdatalinkberichten tussen vliegtuigen en grondstations.",
-        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) is een digitaal tekstberichtensysteem dat sinds de jaren '70 door luchtvaartmaatschappijen wordt gebruikt. Het werkt op VHF-frequenties rond 129-137 MHz en draagt korte databerichten tussen vliegtuigen en grondstations — zoals motorprestatierapportages, weerverzoeken, gatetoewijzingen, brandstofdata en bemanningscommunicatie. Berichten worden verzonden in platte tekst zonder encryptie, dus je kunt ze direct lezen. Elk bericht bevat de registratie en het vluchtnummer van het vliegtuig. ACARS is het luchtvaart-equivalent van sms, en het monitoren ervan geeft je een blik achter de schermen van luchtvaartoperaties."
+        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) is een digitaal tekstberichtensysteem dat sinds de jaren '70 door luchtvaartmaatschappijen wordt gebruikt. Het werkt op VHF-frequenties rond 129-137 MHz en draagt korte databerichten tussen vliegtuigen en grondstations  -  zoals motorprestatierapportages, weerverzoeken, gatetoewijzingen, brandstofdata en bemanningscommunicatie. Berichten worden verzonden in platte tekst zonder encryptie, dus je kunt ze direct lezen. Elk bericht bevat de registratie en het vluchtnummer van het vliegtuig. ACARS is het luchtvaart-equivalent van sms, en het monitoren ervan geeft je een blik achter de schermen van luchtvaartoperaties."
       },
       "AFSK": {
         "description": "Audio Frequency Shift Keying-decoder. Bell 202-modemsignalen, TEDI/LCR.",
-        "learn": "AFSK (Audio Frequency Shift Keying) codeert digitale data als twee audiotonen — doorgaans 1200 Hz voor mark (1) en 2200 Hz voor space (0), volgens de Bell 202-modemstandaard uit de jaren '70. Deze modulatie wordt in veel protocollen gebruikt: APRS amateurradio, nummerherkenning, oude telefoonmodems en Franse weginfrastructuursystemen (TEDI/LCR). De decoder luistert naar FM-audio en extraheert de digitale data uit de toonverschuivingen. Als je ooit het piepende geluid van een inbelmodem hebt gehoord, was dat FSK. Dit is een universele decoder voor elk systeem dat audiofrequentie-shift keying gebruikt."
+        "learn": "AFSK (Audio Frequency Shift Keying) codeert digitale data als twee audiotonen  -  doorgaans 1200 Hz voor mark (1) en 2200 Hz voor space (0), volgens de Bell 202-modemstandaard uit de jaren '70. Deze modulatie wordt in veel protocollen gebruikt: APRS amateurradio, nummerherkenning, oude telefoonmodems en Franse weginfrastructuursystemen (TEDI/LCR). De decoder luistert naar FM-audio en extraheert de digitale data uit de toonverschuivingen. Als je ooit het piepende geluid van een inbelmodem hebt gehoord, was dat FSK. Dit is een universele decoder voor elk systeem dat audiofrequentie-shift keying gebruikt."
       },
       "AIS Boats": {
         "description": "Scheepvaarttracking. MMSI, positie, koers, snelheid. Twee kanalen.",
-        "learn": "AIS (Automatic Identification System) is het maritieme equivalent van ADS-B — alle grote schepen (en veel kleine) zijn verplicht hun identiteit, positie, snelheid, koers en bestemming uit te zenden op twee VHF-kanalen: AIS1 (161.975 MHz) en AIS2 (162.025 MHz). Elk schip heeft een uniek 9-cijferig MMSI (Maritime Mobile Service Identity) nummer. De PortaPack decodeert beide kanalen gelijktijdig en toont een live schepenlijst. AIS-data is wat MarineTraffic.com en VesselFinder aandrijft. Als je in de buurt van een kust, rivier of haven bent, zie je sleepboten, vrachtschepen, tankers, veerboten en zelfs sommige vissersboten. Bereik hangt af van antennehoogte — 20-40 mijl is typisch in de buurt van water."
+        "learn": "AIS (Automatic Identification System) is het maritieme equivalent van ADS-B  -  alle grote schepen (en veel kleine) zijn verplicht hun identiteit, positie, snelheid, koers en bestemming uit te zenden op twee VHF-kanalen: AIS1 (161.975 MHz) en AIS2 (162.025 MHz). Elk schip heeft een uniek 9-cijferig MMSI (Maritime Mobile Service Identity) nummer. De PortaPack decodeert beide kanalen gelijktijdig en toont een live schepenlijst. AIS-data is wat MarineTraffic.com en VesselFinder aandrijft. Als je in de buurt van een kust, rivier of haven bent, zie je sleepboten, vrachtschepen, tankers, veerboten en zelfs sommige vissersboten. Bereik hangt af van antennehoogte  -  20-40 mijl is typisch in de buurt van water."
       },
       "Analog TV": {
         "description": "Analoge PAL-televisieontvangst. Verlaagde resolutie (52x128).",
-        "learn": "Deze app ontvangt analoge televisiesignalen met de PAL (Phase Alternating Line) standaard die werd gebruikt in Europa, Azië en delen van Zuid-Amerika vóór de overstap naar digitale tv. Het decodeert het composiet videosignaal tot een klein 52x128 pixel beeld op het PortaPack-scherm — genoeg om te zien wat er wordt uitgezonden maar niet comfortabel om te bekijken. De meeste landen hebben analoge tv stopgezet, maar je kunt nog actieve signalen vinden van oude beveiligingscamera's, amateur-tv (ATV) operators, of landen die nog niet volledig zijn overgestapt op digitaal. Het is meer een leuke historische demo dan een praktisch hulpmiddel in de meeste gebieden."
+        "learn": "Deze app ontvangt analoge televisiesignalen met de PAL (Phase Alternating Line) standaard die werd gebruikt in Europa, Azië en delen van Zuid-Amerika vóór de overstap naar digitale tv. Het decodeert het composiet videosignaal tot een klein 52x128 pixel beeld op het PortaPack-scherm  -  genoeg om te zien wat er wordt uitgezonden maar niet comfortabel om te bekijken. De meeste landen hebben analoge tv stopgezet, maar je kunt nog actieve signalen vinden van oude beveiligingscamera's, amateur-tv (ATV) operators, of landen die nog niet volledig zijn overgestapt op digitaal. Het is meer een leuke historische demo dan een praktisch hulpmiddel in de meeste gebieden."
       },
       "APRS RX": {
         "description": "Amateurradio positie-/weer-/telemetriepakketten. AX.25 via AFSK.",
-        "learn": "APRS (Automatic Packet Reporting System) is een real-time amateurradionetwerk voor het delen van positie, weer, berichten en telemetrie. Het gebruikt AX.25 pakketradio op 1200 baud via AFSK-modulatie op één nationale frequentie — 144.390 MHz in Noord-Amerika, 144.800 MHz in Europa. Stations (handradio's, autotrackers, weerstations, ballonnen) zenden pakketten uit die door digipeaters over grote gebieden worden doorgestuurd. Al het APRS-verkeer is te bekijken op aprs.fi. De PortaPack decodeert deze pakketten en toont callsigns, posities en berichtinhoud. Je hebt geen licentie nodig om te luisteren — alleen om te zenden. In de buurt van bewoonde gebieden zie je regelmatige APRS-activiteit."
+        "learn": "APRS (Automatic Packet Reporting System) is een real-time amateurradionetwerk voor het delen van positie, weer, berichten en telemetrie. Het gebruikt AX.25 pakketradio op 1200 baud via AFSK-modulatie op één nationale frequentie  -  144.390 MHz in Noord-Amerika, 144.800 MHz in Europa. Stations (handradio's, autotrackers, weerstations, ballonnen) zenden pakketten uit die door digipeaters over grote gebieden worden doorgestuurd. Al het APRS-verkeer is te bekijken op aprs.fi. De PortaPack decodeert deze pakketten en toont callsigns, posities en berichtinhoud. Je hebt geen licentie nodig om te luisteren  -  alleen om te zenden. In de buurt van bewoonde gebieden zie je regelmatige APRS-activiteit."
       },
       "Audio": {
         "description": "Universele analoge audio-ontvanger. AM, NFM, WFM, SSB (USB/LSB). Opname naar WAV.",
-        "learn": "De Audio-app is de meest veelzijdige ontvanger op de PortaPack — het is een universele radio die alle gangbare analoge modulatietypes ondersteunt. AM (Amplitudemodulatie) voor omroepradio en luchtvaart. NFM (Smalband FM) voor portofoons, amateurrepeaters en tweerichtingsradio. WFM (Breedband FM) voor FM-omroepstations zoals je lokale muziekzenders op 88-108 MHz. SSB (Single Sideband — USB/LSB) voor amateur-HF en maritieme communicatie. Het neemt ook audio direct op als WAV-bestanden op de SD-kaart. Dit is de app waarmee de meeste mensen beginnen — stem af op een lokaal FM-station in WFM-modus en je hoort onmiddellijk muziek."
+        "learn": "De Audio-app is de meest veelzijdige ontvanger op de PortaPack  -  het is een universele radio die alle gangbare analoge modulatietypes ondersteunt. AM (Amplitudemodulatie) voor omroepradio en luchtvaart. NFM (Smalband FM) voor portofoons, amateurrepeaters en tweerichtingsradio. WFM (Breedband FM) voor FM-omroepstations zoals je lokale muziekzenders op 88-108 MHz. SSB (Single Sideband  -  USB/LSB) voor amateur-HF en maritieme communicatie. Het neemt ook audio direct op als WAV-bestanden op de SD-kaart. Dit is de app waarmee de meeste mensen beginnen  -  stem af op een lokaal FM-station in WFM-modus en je hoort onmiddellijk muziek."
       },
       "BLE RX": {
         "description": "BLE-advertentie-sniffer. Kanalen 37/38/39. MAC-vendoropzoeken.",
-        "learn": "BLE (Bluetooth Low Energy) is een draadloos protocol met kort bereik op 2,4 GHz, gebruikt door miljarden apparaten — telefoons, fitnesstrackers, smartwatches, AirTags, beacons, smart home-sensoren en draadloze oordopjes. BLE-apparaten zenden voortdurend advertentiepakketten uit op drie speciale kanalen (37, 38, 39) om hun aanwezigheid aan te kondigen. Deze app onderschept die advertenties en toont het MAC-adres, signaalsterkte en vendornaam (opgezocht uit de IEEE OUI-database — de eerste 3 bytes van het MAC identificeren de fabrikant). Loop door een openbare ruimte en je ziet tientallen BLE-apparaten. Dit is alleen passieve monitoring — er wordt geen koppeling of verbinding gemaakt."
+        "learn": "BLE (Bluetooth Low Energy) is een draadloos protocol met kort bereik op 2,4 GHz, gebruikt door miljarden apparaten  -  telefoons, fitnesstrackers, smartwatches, AirTags, beacons, smart home-sensoren en draadloze oordopjes. BLE-apparaten zenden voortdurend advertentiepakketten uit op drie speciale kanalen (37, 38, 39) om hun aanwezigheid aan te kondigen. Deze app onderschept die advertenties en toont het MAC-adres, signaalsterkte en vendornaam (opgezocht uit de IEEE OUI-database  -  de eerste 3 bytes van het MAC identificeren de fabrikant). Loop door een openbare ruimte en je ziet tientallen BLE-apparaten. Dit is alleen passieve monitoring  -  er wordt geen koppeling of verbinding gemaakt."
       },
       "Detector": {
         "description": "Breedband signaaldetector met RSSI-geschiedenisweergave.",
-        "learn": "De Detector-app monitort een specifieke frequentie en grafiekt de RSSI (Received Signal Strength Indicator) over de tijd als een scrollende geschiedenisweergave. Beschouw het als een eenvoudige bewegingsdetector voor RF — wanneer een signaal verschijnt of van sterkte verandert op de doelfrequentie, zie je een piek in de grafiek. Dit is nuttig om te bevestigen dat een apparaat zendt, te meten hoe vaak een sensor rapporteert, intermitterende interferentie te detecteren of basis-RF-surveys te doen. Het haalt alle complexiteit van demodulatie weg en beantwoordt gewoon de vraag: 'Zendt hier iets, en hoe sterk is het?'"
+        "learn": "De Detector-app monitort een specifieke frequentie en grafiekt de RSSI (Received Signal Strength Indicator) over de tijd als een scrollende geschiedenisweergave. Beschouw het als een eenvoudige bewegingsdetector voor RF  -  wanneer een signaal verschijnt of van sterkte verandert op de doelfrequentie, zie je een piek in de grafiek. Dit is nuttig om te bevestigen dat een apparaat zendt, te meten hoe vaak een sensor rapporteert, intermitterende interferentie te detecteren of basis-RF-surveys te doen. Het haalt alle complexiteit van demodulatie weg en beantwoordt gewoon de vraag: 'Zendt hier iets, en hoe sterk is het?'"
       },
       "ERT Meter": {
         "description": "Smart nutsmeter-uitlezing (elektriciteit, gas, water).",
-        "learn": "ERT (Encoder Receiver Transmitter) is het draadloze protocol dat smart nutsmeters in heel Noord-Amerika gebruiken om elektriciteits-, gas- en waterverbruik te rapporteren. In plaats van een meteropnemer die langs elk huis loopt, zenden ERT-uitgeruste meters hun meterstanden uit op de ~900 MHz ISM-band met OOK-modulatie. Een nutstruck met een ontvanger rijdt door wijken om meterstanden te verzamelen. Elke uitzending bevat het meter-ID en de huidige verbruikswaarde. De PortaPack decodeert deze en toont meter-ID's en meterstanden in je omgeving. Dit alles is onversleuteld — een bekend privacyprobleem dat breed is besproken in de beveiligingsonderzoeksgemeenschap."
+        "learn": "ERT (Encoder Receiver Transmitter) is het draadloze protocol dat smart nutsmeters in heel Noord-Amerika gebruiken om elektriciteits-, gas- en waterverbruik te rapporteren. In plaats van een meteropnemer die langs elk huis loopt, zenden ERT-uitgeruste meters hun meterstanden uit op de ~900 MHz ISM-band met OOK-modulatie. Een nutstruck met een ontvanger rijdt door wijken om meterstanden te verzamelen. Elke uitzending bevat het meter-ID en de huidige verbruikswaarde. De PortaPack decodeert deze en toont meter-ID's en meterstanden in je omgeving. Dit alles is onversleuteld  -  een bekend privacyprobleem dat breed is besproken in de beveiligingsonderzoeksgemeenschap."
       },
       "Flex RX": {
         "description": "FLEX-pagerprotocoldecoder. Kleurwisselende weergave.",
-        "learn": "FLEX is een pagingprotocol ontwikkeld door Motorola in de jaren '90 als snellere, efficiëntere opvolger van POCSAG. Het ondersteunt datasnelheden van 1600, 3200 en 6400 bps — aanzienlijk sneller dan POCSAG's 512-2400 bps. FLEX-pagers worden nog steeds gebruikt door ziekenhuizen en hulpdiensten omdat pagernetwerken betere gebouwdoordringing hebben dan mobiel en blijven werken bij overbelasting van het mobiele netwerk. De app decodeert FLEX-berichten en toont ze met een kleurwisselende weergave om berichttypes te onderscheiden. Net als POCSAG worden deze berichten onversleuteld verzonden — een langdurig beveiligingsprobleem in de gezondheidszorg waar patiëntinformatie kan worden meegezonden."
+        "learn": "FLEX is een pagingprotocol ontwikkeld door Motorola in de jaren '90 als snellere, efficiëntere opvolger van POCSAG. Het ondersteunt datasnelheden van 1600, 3200 en 6400 bps  -  aanzienlijk sneller dan POCSAG's 512-2400 bps. FLEX-pagers worden nog steeds gebruikt door ziekenhuizen en hulpdiensten omdat pagernetwerken betere gebouwdoordringing hebben dan mobiel en blijven werken bij overbelasting van het mobiele netwerk. De app decodeert FLEX-berichten en toont ze met een kleurwisselende weergave om berichttypes te onderscheiden. Net als POCSAG worden deze berichten onversleuteld verzonden  -  een langdurig beveiligingsprobleem in de gezondheidszorg waar patiëntinformatie kan worden meegezonden."
       },
       "Fox Hunt": {
         "description": "Zenderzoekassistent. Signaalsterkte-visualisatie. GPS-/kaartintegratie.",
-        "learn": "Foxhunting (ook wel zenderjacht, T-hunting of ARDF — Amateur Radio Direction Finding genoemd) is een sport/oefening waarbij deelnemers een verborgen radiozender opsporen met alleen een ontvanger en richtantenne. De Fox Hunt-app maakt van je PortaPack een zoekinstrument — het toont signaalsterkte als visuele indicator en integreert met GPS om je pad te loggen en de richting van de zender te schatten. Naarmate je dichter bij de vos komt, wordt het signaal sterker. Dit is een populaire amateurradioclubactiviteit en wordt ook gebruikt in praktijkscenario's zoals het opsporen van interferentiebronnen of het lokaliseren van noodbakens."
+        "learn": "Foxhunting (ook wel zenderjacht, T-hunting of ARDF  -  Amateur Radio Direction Finding genoemd) is een sport/oefening waarbij deelnemers een verborgen radiozender opsporen met alleen een ontvanger en richtantenne. De Fox Hunt-app maakt van je PortaPack een zoekinstrument  -  het toont signaalsterkte als visuele indicator en integreert met GPS om je pad te loggen en de richting van de zender te schatten. Naarmate je dichter bij de vos komt, wordt het signaal sterker. Dit is een populaire amateurradioclubactiviteit en wordt ook gebruikt in praktijkscenario's zoals het opsporen van interferentiebronnen of het lokaliseren van noodbakens."
       },
       "gfxEQ": {
         "description": "Grafische audio-equalizervisualisatie voor WFM-radio.",
-        "learn": "gfxEQ is een visuele audiospectrumanalyser die draait tijdens het ontvangen van FM-omroepradio (WFM). Het toont een real-time grafische equalizer — dezelfde stuiterende balkweergave die je op een stereosysteem zou zien — met de frequentie-inhoud van de ontvangen audio. Basfequenties links, hoge tonen rechts, met de balken die meebewegen op de muziek. Het is een leuke visualisatietool die je PortaPack verandert in een retro-uitziende FM-radio met spectrumweergave. Stem af op een muziekstation in WFM-modus en kijk hoe het reageert op de audio. Puur cosmetisch maar vermakelijk."
+        "learn": "gfxEQ is een visuele audiospectrumanalyser die draait tijdens het ontvangen van FM-omroepradio (WFM). Het toont een real-time grafische equalizer  -  dezelfde stuiterende balkweergave die je op een stereosysteem zou zien  -  met de frequentie-inhoud van de ontvangen audio. Basfequenties links, hoge tonen rechts, met de balken die meebewegen op de muziek. Het is een leuke visualisatietool die je PortaPack verandert in een retro-uitziende FM-radio met spectrumweergave. Stem af op een muziekstation in WFM-modus en kijk hoe het reageert op de audio. Puur cosmetisch maar vermakelijk."
       },
       "Level": {
         "description": "Signaalniveaumeter op een specifieke frequentie. Externe app.",
@@ -617,69 +617,69 @@
       },
       "Looking Glass": {
         "description": "Breedbandspectrumwaterval. Drie weergavemodi: SPECTR, LIVE-V, PEAK-V.",
-        "learn": "Looking Glass is een breedbandspectrumanalyser die over een configureerbaar frequentiebereik sweept en de resultaten als waterval weergeeft. In tegenstelling tot de Audio-app (die op één frequentie afstemt), scant Looking Glass een brede band om je alles te laten zien wat actief is. Drie weergavemodi: SPECTR toont de traditionele spectrumweergave (vermogen vs. frequentie), LIVE-V toont een live verticale waterval (tijd scrollt naar beneden, frequentie links-rechts, helderheid = signaalsterkte), en PEAK-V houdt de piekwaarden vast. Dit is je go-to tool voor het verkennen van wat er op de ether is in elke band — je kunt hele ISM-banden, het FM-omroepbereik of elk bereik dat de HackRF dekt (1 MHz–6 GHz) scannen."
+        "learn": "Looking Glass is een breedbandspectrumanalyser die over een configureerbaar frequentiebereik sweept en de resultaten als waterval weergeeft. In tegenstelling tot de Audio-app (die op één frequentie afstemt), scant Looking Glass een brede band om je alles te laten zien wat actief is. Drie weergavemodi: SPECTR toont de traditionele spectrumweergave (vermogen vs. frequentie), LIVE-V toont een live verticale waterval (tijd scrollt naar beneden, frequentie links-rechts, helderheid = signaalsterkte), en PEAK-V houdt de piekwaarden vast. Dit is je go-to tool voor het verkennen van wat er op de ether is in elke band  -  je kunt hele ISM-banden, het FM-omroepbereik of elk bereik dat de HackRF dekt (1 MHz-6 GHz) scannen."
       },
       "Morse RX": {
         "description": "Decodeert morsecode (CW) naar tekst.",
-        "learn": "Morsecode (CW — Continuous Wave) codeert letters en cijfers als reeksen van korte signalen (dits: ·) en lange signalen (dahs: —). Ontwikkeld in de jaren 1830, het wordt nog steeds gebruikt door amateurradio-operators omdat CW-signalen kunnen worden gedecodeerd bij extreem lage signaalniveaus — ver onder wat nodig is voor spraak. De Morse RX-app luistert naar CW-signalen en decodeert ze automatisch naar tekst op het scherm. Het werkt door het aan/uit-patroon van de draaggolf te detecteren en de dits en dahs te timen. Je kunt actieve morse vinden op amateur-HF-banden (vooral rond 7.000-7.040 MHz en 14.000-14.070 MHz). Automatische decodering kan moeite hebben met slechte signalen of ongebruikelijke spacing, maar werkt goed met sterke, goed getimede uitzendingen."
+        "learn": "Morsecode (CW  -  Continuous Wave) codeert letters en cijfers als reeksen van korte signalen (dits: ·) en lange signalen (dahs:  - ). Ontwikkeld in de jaren 1830, het wordt nog steeds gebruikt door amateurradio-operators omdat CW-signalen kunnen worden gedecodeerd bij extreem lage signaalniveaus  -  ver onder wat nodig is voor spraak. De Morse RX-app luistert naar CW-signalen en decodeert ze automatisch naar tekst op het scherm. Het werkt door het aan/uit-patroon van de draaggolf te detecteren en de dits en dahs te timen. Je kunt actieve morse vinden op amateur-HF-banden (vooral rond 7.000-7.040 MHz en 14.000-14.070 MHz). Automatische decodering kan moeite hebben met slechte signalen of ongebruikelijke spacing, maar werkt goed met sterke, goed getimede uitzendingen."
       },
       "NOAA": {
         "description": "NOAA APT-weersatellietbeelddecoder.",
-        "learn": "NOAA beheert een vloot polair-omlopende weersatellieten (NOAA-15, 18, 19) die continu live weerbeelden uitzenden terwijl ze elke ~100 minuten om de aarde draaien. Het APT (Automatic Picture Transmission) signaal is een analoog formaat op VHF (137 MHz-band) dat sinds de jaren '60 in gebruik is. Terwijl de satelliet overvliegt (ongeveer 10-15 minuten zichtbaar), zendt het lijn voor lijn een grijswaardenbeeld uit — je bouwt letterlijk in real time een weerfoto op. De PortaPack decodeert dit APT-signaal direct tot een beeld op het scherm. Je hebt een goede antenne nodig (een V-dipool of QFH-antenne werkt goed) en een vrije overkomst. Controleer n2yo.com of Heavens-Above voor overkomsttijden op jouw locatie."
+        "learn": "NOAA beheert een vloot polair-omlopende weersatellieten (NOAA-15, 18, 19) die continu live weerbeelden uitzenden terwijl ze elke ~100 minuten om de aarde draaien. Het APT (Automatic Picture Transmission) signaal is een analoog formaat op VHF (137 MHz-band) dat sinds de jaren '60 in gebruik is. Terwijl de satelliet overvliegt (ongeveer 10-15 minuten zichtbaar), zendt het lijn voor lijn een grijswaardenbeeld uit  -  je bouwt letterlijk in real time een weerfoto op. De PortaPack decodeert dit APT-signaal direct tot een beeld op het scherm. Je hebt een goede antenne nodig (een V-dipool of QFH-antenne werkt goed) en een vrije overkomst. Controleer n2yo.com of Heavens-Above voor overkomsttijden op jouw locatie."
       },
       "NRF": {
         "description": "Nordic nRF24L01-protocoldecoder. Draadloze toetsenborden, muizen, IoT.",
-        "learn": "De nRF24L01 is een veelgebruikte 2,4 GHz draadloze transceiverchip van Nordic Semiconductor, te vinden in miljoenen apparaten — draadloze toetsenborden, muizen, gamecontrollers, RC-speelgoed, IoT-sensoren en DIY Arduino/ESP-projecten. Het gebruikt een eenvoudig pakketgebaseerd protocol met adressen en kanalen. De NRF-app decodeert deze uitzendingen en toont de ruwe pakketdata. Dit is bijzonder interessant voor beveiligingsonderzoek: sommige oudere draadloze toetsenborden die nRF24L01 gebruiken, verzenden toetsaanslagen met zwakke of geen encryptie (de 'MouseJack'-kwetsbaarheidsklasse). De app helpt je begrijpen wat je draadloze randapparatuur uitzendt en hoe blootgesteld die data is."
+        "learn": "De nRF24L01 is een veelgebruikte 2,4 GHz draadloze transceiverchip van Nordic Semiconductor, te vinden in miljoenen apparaten  -  draadloze toetsenborden, muizen, gamecontrollers, RC-speelgoed, IoT-sensoren en DIY Arduino/ESP-projecten. Het gebruikt een eenvoudig pakketgebaseerd protocol met adressen en kanalen. De NRF-app decodeert deze uitzendingen en toont de ruwe pakketdata. Dit is bijzonder interessant voor beveiligingsonderzoek: sommige oudere draadloze toetsenborden die nRF24L01 gebruiken, verzenden toetsaanslagen met zwakke of geen encryptie (de 'MouseJack'-kwetsbaarheidsklasse). De app helpt je begrijpen wat je draadloze randapparatuur uitzendt en hoe blootgesteld die data is."
       },
       "POCSAG RX": {
         "description": "POCSAG-pagerberichtdecoder. Numeriek en tekst. Handmatige baudrate.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) is het meest gebruikte pagerprotocol, ontwikkeld in 1982 en nog steeds actief in gebruik — vooral door ziekenhuizen, brandweer en hulpdiensten. Pagers hebben de voorkeur voor kritieke communicatie omdat pagernetwerken betere gebouwdoordringing hebben dan mobiel en blijven werken tijdens uitval van het mobiele netwerk. POCSAG-berichten worden onversleuteld uitgezonden op 512, 1200 of 2400 baud op frequenties die per land variëren (gebruikelijk: 148-170 MHz, 450-470 MHz). De PortaPack decodeert zowel numerieke als alfanumerieke berichten. In veel gebieden zie je ziekenhuisoproepen, restaurantwaarschuwingen en nooddispatchberichten — allemaal in platte tekst, wat een aanzienlijk privacyprobleem blijft."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) is het meest gebruikte pagerprotocol, ontwikkeld in 1982 en nog steeds actief in gebruik  -  vooral door ziekenhuizen, brandweer en hulpdiensten. Pagers hebben de voorkeur voor kritieke communicatie omdat pagernetwerken betere gebouwdoordringing hebben dan mobiel en blijven werken tijdens uitval van het mobiele netwerk. POCSAG-berichten worden onversleuteld uitgezonden op 512, 1200 of 2400 baud op frequenties die per land variëren (gebruikelijk: 148-170 MHz, 450-470 MHz). De PortaPack decodeert zowel numerieke als alfanumerieke berichten. In veel gebieden zie je ziekenhuisoproepen, restaurantwaarschuwingen en nooddispatchberichten  -  allemaal in platte tekst, wat een aanzienlijk privacyprobleem blijft."
       },
       "ProtoView": {
         "description": "Generieke sub-GHz protocolanalyser. Visualiseert ruwe protocoldata.",
-        "learn": "ProtoView is een protocol-agnostische signaalanalyser voor sub-GHz frequenties (doorgaans 300-928 MHz ISM-banden). In plaats van een specifiek protocol te decoderen, vangt het het ruwe digitale signaal op en toont de timing op bitniveau — met de werkelijke 1'en en 0'en, pulsbreedte en signaalstructuur. Dit is onmisbaar voor het reverse-engineeren van onbekende protocollen: je kunt de preambule, synchronisatiewoord, datapayload en patronen zien. Het is als een logische analyser voor RF-signalen. Wanneer je een apparaat tegenkomt dat een protocol gebruikt dat niet is ingebouwd in Mayhem, helpt ProtoView je uit te zoeken wat het doet. Werkt het best met eenvoudige OOK- en FSK-modulaties die gebruikelijk zijn bij afstandsbedieningen, sensoren en IoT-apparaten."
+        "learn": "ProtoView is een protocol-agnostische signaalanalyser voor sub-GHz frequenties (doorgaans 300-928 MHz ISM-banden). In plaats van een specifiek protocol te decoderen, vangt het het ruwe digitale signaal op en toont de timing op bitniveau  -  met de werkelijke 1'en en 0'en, pulsbreedte en signaalstructuur. Dit is onmisbaar voor het reverse-engineeren van onbekende protocollen: je kunt de preambule, synchronisatiewoord, datapayload en patronen zien. Het is als een logische analyser voor RF-signalen. Wanneer je een apparaat tegenkomt dat een protocol gebruikt dat niet is ingebouwd in Mayhem, helpt ProtoView je uit te zoeken wat het doet. Werkt het best met eenvoudige OOK- en FSK-modulaties die gebruikelijk zijn bij afstandsbedieningen, sensoren en IoT-apparaten."
       },
       "Radiosonde": {
         "description": "Weerballontracker. M10, M20, M2K2, RS41-SG. GPS, hoogte, batterij.",
-        "learn": "Radiosondes zijn kleine instrumentpakketten die tweemaal daags op weerballonnen worden gelanceerd vanaf ~900 stations wereldwijd (om 00:00 en 12:00 UTC). Terwijl de ballon in ongeveer 90 minuten naar ~30 km hoogte stijgt, zendt de radiosonde temperatuur, vochtigheid, luchtdruk, windsnelheid/-richting en GPS-positie uit op 400-406 MHz. De PortaPack decodeert verschillende veelvoorkomende types: Vaisala RS41-SG (meest voorkomend wereldwijd), Meteomodem M10/M20 en M2K2. Je kunt de real-time GPS-positie, hoogte en batterijspanning van de ballon volgen terwijl deze stijgt, en zelfs voorspellen waar het zal landen. Radiosondejacht — het terugvinden van het gevallen instrumentpakket — is een populaire hobby. Controleer radiosondy.info voor lanceerlokaties bij jou in de buurt."
+        "learn": "Radiosondes zijn kleine instrumentpakketten die tweemaal daags op weerballonnen worden gelanceerd vanaf ~900 stations wereldwijd (om 00:00 en 12:00 UTC). Terwijl de ballon in ongeveer 90 minuten naar ~30 km hoogte stijgt, zendt de radiosonde temperatuur, vochtigheid, luchtdruk, windsnelheid/-richting en GPS-positie uit op 400-406 MHz. De PortaPack decodeert verschillende veelvoorkomende types: Vaisala RS41-SG (meest voorkomend wereldwijd), Meteomodem M10/M20 en M2K2. Je kunt de real-time GPS-positie, hoogte en batterijspanning van de ballon volgen terwijl deze stijgt, en zelfs voorspellen waar het zal landen. Radiosondejacht  -  het terugvinden van het gevallen instrumentpakket  -  is een populaire hobby. Controleer radiosondy.info voor lanceerlokaties bij jou in de buurt."
       },
       "Scanner": {
         "description": "Frequentiescanner. ~20 freq/sec. Kleurgecodeerd (grijs/geel/groen).",
-        "learn": "De Scanner-app stemt snel af op een lijst frequenties (ongeveer 20 per seconde) en stopt wanneer het activiteit detecteert — net als een traditionele politiescanner. Frequenties zijn kleurgecodeerd: grijs betekent geen signaal, geel betekent een zwak signaal gedetecteerd, groen betekent actief signaal en de scanner is gestopt om je te laten luisteren. Je kunt frequentielijsten laden van de SD-kaart (freqman-bestanden) of handmatig frequenties invoeren. De scanner hervat het zoeken nadat het signaal wegvalt. Dit is nuttig voor het monitoren van meerdere kanalen — hulpdiensten, amateurrepeaters, bedrijfsradio's of elke set bekende actieve frequenties in jouw omgeving. Communityfrequentielijsten voor de meeste regio's zijn beschikbaar in de Mayhem freqman-repository."
+        "learn": "De Scanner-app stemt snel af op een lijst frequenties (ongeveer 20 per seconde) en stopt wanneer het activiteit detecteert  -  net als een traditionele politiescanner. Frequenties zijn kleurgecodeerd: grijs betekent geen signaal, geel betekent een zwak signaal gedetecteerd, groen betekent actief signaal en de scanner is gestopt om je te laten luisteren. Je kunt frequentielijsten laden van de SD-kaart (freqman-bestanden) of handmatig frequenties invoeren. De scanner hervat het zoeken nadat het signaal wegvalt. Dit is nuttig voor het monitoren van meerdere kanalen  -  hulpdiensten, amateurrepeaters, bedrijfsradio's of elke set bekende actieve frequenties in jouw omgeving. Communityfrequentielijsten voor de meeste regio's zijn beschikbaar in de Mayhem freqman-repository."
       },
       "Search": {
         "description": "Frequentiebereik zoeken met waterval. 'Zoek en blijf'-modus.",
-        "learn": "Search is vergelijkbaar met Scanner maar voor het ontdekken van onbekende signalen. In plaats van een lijst bekende frequenties te controleren, sweept het continu over een frequentiebereik en stopt wanneer het een actief signaal vindt. De ingebouwde watervalweergave toont signaalactiviteit over de tijd, waardoor het gemakkelijk is om intermitterende uitzendingen te spotten. De 'zoek en blijf'-modus lockt op een gevonden signaal en blijft daar tot het stopt, waarna het zoeken wordt hervat. Dit is de app om te gebruiken wanneer je een frequentieband wilt verkennen en wilt ontdekken wat er actief is — je hoeft de exacte frequenties niet vooraf te weten. Combineer met Looking Glass: gebruik Looking Glass om visueel drukke banden te identificeren, gebruik dan Search om te luisteren wat daar is."
+        "learn": "Search is vergelijkbaar met Scanner maar voor het ontdekken van onbekende signalen. In plaats van een lijst bekende frequenties te controleren, sweept het continu over een frequentiebereik en stopt wanneer het een actief signaal vindt. De ingebouwde watervalweergave toont signaalactiviteit over de tijd, waardoor het gemakkelijk is om intermitterende uitzendingen te spotten. De 'zoek en blijf'-modus lockt op een gevonden signaal en blijft daar tot het stopt, waarna het zoeken wordt hervat. Dit is de app om te gebruiken wanneer je een frequentieband wilt verkennen en wilt ontdekken wat er actief is  -  je hoeft de exacte frequenties niet vooraf te weten. Combineer met Looking Glass: gebruik Looking Glass om visueel drukke banden te identificeren, gebruik dan Search om te luisteren wat daar is."
       },
       "SSTV RX": {
         "description": "Slow Scan Television-ontvanger. Decodeert beelduitzendingen.",
-        "learn": "SSTV (Slow Scan Television) zendt stilstaande beelden uit via radio door pixelhelderheid te coderen als audiotonen (1200-2300 Hz). Een enkel beeld duurt 30-120 seconden om te verzenden en bouwt lijn voor lijn op het scherm op. SSTV wordt sinds de jaren '60 door amateurradio-operators gebruikt en is vandaag nog actief — veelgebruikte aanroepfrequenties zijn 14.230 MHz (20m-band) en 145.500 MHz (2m FM). Het Internationaal Ruimtestation (ISS) zendt periodiek SSTV-beelden uit op 145.800 MHz tijdens speciale evenementen, en iedereen met een ontvanger kan ze decoderen. De PortaPack SSTV RX-app detecteert automatisch de coderingsmodus (Scottie, Martin, Robot, etc.) en bouwt het beeld op het scherm op terwijl het wordt ontvangen."
+        "learn": "SSTV (Slow Scan Television) zendt stilstaande beelden uit via radio door pixelhelderheid te coderen als audiotonen (1200-2300 Hz). Een enkel beeld duurt 30-120 seconden om te verzenden en bouwt lijn voor lijn op het scherm op. SSTV wordt sinds de jaren '60 door amateurradio-operators gebruikt en is vandaag nog actief  -  veelgebruikte aanroepfrequenties zijn 14.230 MHz (20m-band) en 145.500 MHz (2m FM). Het Internationaal Ruimtestation (ISS) zendt periodiek SSTV-beelden uit op 145.800 MHz tijdens speciale evenementen, en iedereen met een ontvanger kan ze decoderen. De PortaPack SSTV RX-app detecteert automatisch de coderingsmodus (Scottie, Martin, Robot, etc.) en bouwt het beeld op het scherm op terwijl het wordt ontvangen."
       },
       "SubCar": {
         "description": "FM-omroepsubdraaggolfdecoder (SCA-diensten).",
-        "learn": "FM-omroepstations kunnen verborgen audiokanalen genaamd subdraaggolven (SCA — Subsidiary Communications Authorization) meezenden naast hun stereo-hoofdaudio. Deze subdraaggolven zitten boven het stereosignaal op 67 kHz of 92 kHz en dragen afzonderlijke audio-inhoud: achtergrondmuziekdiensten (zoals het originele Muzak), voorleesdiensten voor slechtzienden, anderstalige programmering of datadiensten. SubCar decodeert deze verborgen kanalen die een normale FM-radio niet kan opvangen. De meeste mensen weten niet dat deze bestaan — ze zijn een kenmerk van FM-omroep sinds de jaren '50. Beschikbaarheid varieert per station en regio; veel stations gebruiken geen subdraaggolven meer, maar sommige dragen nog voorleesdiensten of niche audio-inhoud."
+        "learn": "FM-omroepstations kunnen verborgen audiokanalen genaamd subdraaggolven (SCA  -  Subsidiary Communications Authorization) meezenden naast hun stereo-hoofdaudio. Deze subdraaggolven zitten boven het stereosignaal op 67 kHz of 92 kHz en dragen afzonderlijke audio-inhoud: achtergrondmuziekdiensten (zoals het originele Muzak), voorleesdiensten voor slechtzienden, anderstalige programmering of datadiensten. SubCar decodeert deze verborgen kanalen die een normale FM-radio niet kan opvangen. De meeste mensen weten niet dat deze bestaan  -  ze zijn een kenmerk van FM-omroep sinds de jaren '50. Beschikbaarheid varieert per station en regio; veel stations gebruiken geen subdraaggolven meer, maar sommige dragen nog voorleesdiensten of niche audio-inhoud."
       },
       "SubGhzD": {
         "description": "Sub-GHz protocoldecoder. Sleutelhangers, garagedeuropeners, weerstations, ISM-apparaten. Aanbevolen: AMP 0, LNA 32, VGA 20.",
-        "learn": "SubGhzD (Sub-GHz Decoder) is een van de populairste Mayhem-apps — het decodeert de protocollen die worden gebruikt door honderden veelvoorkomende draadloze apparaten op de ISM-banden (Industrial, Scientific, Medical) bij 315, 433, 868 en 915 MHz. Dit omvat autosleutelhangers (vaste en sommige rolcodes), garagedeuropeners, draadloze deurbellen, weerstations, bandenspanningssensoren, draadloze thermometers, bodemvochtsensoren en veel IoT-apparaten. De app identificeert het protocol, toont de ruwe data en kan opnames opslaan op de SD-kaart. Begin met AMP uit, LNA 32, VGA 20 — dit zijn de aanbevolen gain-instellingen. Druk op een afstandsbediening of wacht tot een weerstation zendt en je ziet de gedecodeerde data verschijnen."
+        "learn": "SubGhzD (Sub-GHz Decoder) is een van de populairste Mayhem-apps  -  het decodeert de protocollen die worden gebruikt door honderden veelvoorkomende draadloze apparaten op de ISM-banden (Industrial, Scientific, Medical) bij 315, 433, 868 en 915 MHz. Dit omvat autosleutelhangers (vaste en sommige rolcodes), garagedeuropeners, draadloze deurbellen, weerstations, bandenspanningssensoren, draadloze thermometers, bodemvochtsensoren en veel IoT-apparaten. De app identificeert het protocol, toont de ruwe data en kan opnames opslaan op de SD-kaart. Begin met AMP uit, LNA 32, VGA 20  -  dit zijn de aanbevolen gain-instellingen. Druk op een afstandsbediening of wacht tot een weerstation zendt en je ziet de gedecodeerde data verschijnen."
       },
       "TPMS RX": {
         "description": "Bandenspanningsmonitoringdecoder. Sensor-ID's, druk, temperatuur.",
-        "learn": "TPMS (Tire Pressure Monitoring System) sensoren zijn verplicht in alle nieuwe voertuigen in de VS (sinds 2007) en EU (sinds 2014). Elke band bevat een kleine draadloze sensor die ongeveer elke 60 seconden bandendruk en temperatuur uitzendt op 315 MHz (Noord-Amerika) of 433 MHz (Europa). Elke sensor heeft een unieke 32-bits ID gekoppeld aan een specifieke band. De PortaPack decodeert deze uitzendingen en toont sensor-ID, druk (PSI of kPa) en temperatuur voor nabije voertuigen. Op een parkeerplaats kun je tientallen sensoren zien rapporteren. Dit is een bekend privacyprobleem — TPMS-ID's kunnen worden gebruikt om specifieke voertuigen te volgen, wat is aangetoond in academisch beveiligingsonderzoek."
+        "learn": "TPMS (Tire Pressure Monitoring System) sensoren zijn verplicht in alle nieuwe voertuigen in de VS (sinds 2007) en EU (sinds 2014). Elke band bevat een kleine draadloze sensor die ongeveer elke 60 seconden bandendruk en temperatuur uitzendt op 315 MHz (Noord-Amerika) of 433 MHz (Europa). Elke sensor heeft een unieke 32-bits ID gekoppeld aan een specifieke band. De PortaPack decodeert deze uitzendingen en toont sensor-ID, druk (PSI of kPa) en temperatuur voor nabije voertuigen. Op een parkeerplaats kun je tientallen sensoren zien rapporteren. Dit is een bekend privacyprobleem  -  TPMS-ID's kunnen worden gebruikt om specifieke voertuigen te volgen, wat is aangetoond in academisch beveiligingsonderzoek."
       },
       "Weather": {
         "description": "Draadloze weerstationdecoder. Temperatuur, vochtigheid, sensor-ID.",
-        "learn": "Draadloze weermeters van consumenten (Acurite, LaCrosse, Oregon Scientific, Ambient Weather, etc.) gebruiken eenvoudige onversleutelde protocollen op ISM-banden — doorgaans 433,92 MHz (wereldwijd), 868 MHz (Europa) of 915 MHz (Noord-Amerika). Buitensensoren zenden elke 30-60 seconden temperatuur, vochtigheid, windsnelheid, neerslag en UV-index uit. De Weather-app decodeert deze uitzendingen en toont de metingen met het unieke sensor-ID. Je kunt je eigen weerstation draadloos monitoren, of in elke buurt pik je waarschijnlijk metingen op van weerstations van buren binnen een paar honderd meter. De protocollen zijn goed gedocumenteerd en gebruiken eenvoudige OOK- of FSK-modulatie."
+        "learn": "Draadloze weermeters van consumenten (Acurite, LaCrosse, Oregon Scientific, Ambient Weather, etc.) gebruiken eenvoudige onversleutelde protocollen op ISM-banden  -  doorgaans 433,92 MHz (wereldwijd), 868 MHz (Europa) of 915 MHz (Noord-Amerika). Buitensensoren zenden elke 30-60 seconden temperatuur, vochtigheid, windsnelheid, neerslag en UV-index uit. De Weather-app decodeert deze uitzendingen en toont de metingen met het unieke sensor-ID. Je kunt je eigen weerstation draadloos monitoren, of in elke buurt pik je waarschijnlijk metingen op van weerstations van buren binnen een paar honderd meter. De protocollen zijn goed gedocumenteerd en gebruiken eenvoudige OOK- of FSK-modulatie."
       },
       "WeFax": {
         "description": "HF-weerfax-ontvanger/-decoder. Maritieme en luchtvaartuitzendingen.",
-        "learn": "Radiofax (WeFax of Weather Fax) is een methode om weerkaarten, zeewatertemperatuurkaarten en ijscondities te verzenden via HF-radio. Gebruikt sinds de jaren '40, het wordt vandaag nog actief uitgezonden door kuststations wereldwijd voor maritieme gebruikers die weerkaarten op zee nodig hebben zonder internet. Het signaal codeert beelddata als variërende audiotonen (FM-modulatie), en bouwt lijn voor lijn een beeld op — vergelijkbaar met een fax maar via radio. Belangrijke stations zijn NOAA (Boston, New Orleans, Kodiak), JMH Tokyo en DWD Hamburg. Veelgebruikte frequenties: 3-25 MHz HF-banden. De PortaPack decodeert de audio tot een weerkaart op het scherm. Beste resultaten met een HF-geschikte antenne en tijdens de geplande uitzendtijden van het station (gepubliceerd in officiële uitzendschema's)."
+        "learn": "Radiofax (WeFax of Weather Fax) is een methode om weerkaarten, zeewatertemperatuurkaarten en ijscondities te verzenden via HF-radio. Gebruikt sinds de jaren '40, het wordt vandaag nog actief uitgezonden door kuststations wereldwijd voor maritieme gebruikers die weerkaarten op zee nodig hebben zonder internet. Het signaal codeert beelddata als variërende audiotonen (FM-modulatie), en bouwt lijn voor lijn een beeld op  -  vergelijkbaar met een fax maar via radio. Belangrijke stations zijn NOAA (Boston, New Orleans, Kodiak), JMH Tokyo en DWD Hamburg. Veelgebruikte frequenties: 3-25 MHz HF-banden. De PortaPack decodeert de audio tot een weerkaart op het scherm. Beste resultaten met een HF-geschikte antenne en tijdens de geplande uitzendtijden van het station (gepubliceerd in officiële uitzendschema's)."
       }
     },
     "vendors": {
       "Great Scott Gadgets": {
         "description": "Originele ontwerper en maker van de HackRF One. Het bedrijf van Michael Ossmann. De meest betrouwbare bron voor authentieke HackRF-boards.",
-        "note": "Verkoopt geen PortaPack-accessoires — alleen de HackRF One zelf."
+        "note": "Verkoopt geen PortaPack-accessoires  -  alleen de HackRF One zelf."
       },
       "OpenSourceSDRLab": {
         "description": "Ontwerper en fabrikant van de PortaPack H4M (de populairste PortaPack-variant). Verkoopt direct en via wederverkopers.",
@@ -707,7 +707,7 @@
         "description": "Een van de grootste mondiale elektronicadistributeurs. Geautoriseerde HackRF One-bron."
       },
       "Amazon": {
-        "description": "Verkrijgbaar bij diverse verkopers. Kwaliteit varieert sterk — lees reviews zorgvuldig en controleer verkopersbeoordelingen.",
+        "description": "Verkrijgbaar bij diverse verkopers. Kwaliteit varieert sterk  -  lees reviews zorgvuldig en controleer verkopersbeoordelingen.",
         "note": "Hoog risico op klonen en namaakboards. Zoek verkopers met een gevestigde historie en positieve reviews die specifiek authentieke hardware vermelden."
       },
       "AliExpress": {
@@ -721,12 +721,12 @@
         "description": "Great Scott Gadgets heeft de HackRF One ontworpen en verkoopt deze. OpenSourceSDRLab heeft de PortaPack H4M ontworpen en fabriceert deze. Rechtstreeks kopen bij de originele fabrikant is over het algemeen de betrouwbaarste manier om authentieke hardware te krijgen."
       },
       "1": {
-        "title": "Klonen bestaan — en ze zijn gebruikelijk",
+        "title": "Klonen bestaan  -  en ze zijn gebruikelijk",
         "description": "HackRF is open-source hardware, dus iedereen kan het produceren. Klonen variëren van 'werkt prima' tot 'dood bij aankomst'. Het risico is voor jou."
       },
       "2": {
         "title": "Als de prijs te mooi lijkt om waar te zijn...",
-        "description": "Afhankelijk van de verkoper, regio en beschikbaarheid kan een echte HackRF One meer dan $200-$350 USD kosten bij gevestigde bronnen. Prijzen variëren, maar boards die ver onder het gebruikelijke bereik worden aangeboden zijn waarschijnlijker klonen. Sommige klonen werken prima, veel niet — je resultaat kan variëren."
+        "description": "Afhankelijk van de verkoper, regio en beschikbaarheid kan een echte HackRF One meer dan $200-$350 USD kosten bij gevestigde bronnen. Prijzen variëren, maar boards die ver onder het gebruikelijke bereik worden aangeboden zijn waarschijnlijker klonen. Sommige klonen werken prima, veel niet  -  je resultaat kan variëren."
       },
       "3": {
         "title": "Controleer eerst de community",
@@ -737,7 +737,7 @@
         "description": "De H4M is de huidige aanbevolen PortaPack met de beste Mayhem firmware-ondersteuning. Oudere H1/H2-versies hebben minder functies en andere hardware."
       },
       "5": {
-        "title": "Marktplaatsbundels — inspecteer zorgvuldig",
+        "title": "Marktplaatsbundels  -  inspecteer zorgvuldig",
         "description": "Amazon- en AliExpress-bundels bevatten vaak antennes, hoesjes en accessoires. De kwaliteit van bijgeleverde accessoires varieert sterk, ongeacht het board zelf."
       }
     },
@@ -773,18 +773,18 @@
     "safety": {
       "mistakes": {
         "Leaving the internal amp ON near strong signal sources": {
-          "description": "De front-end versterker van de HackRF (MGA-81563) heeft geen bandpassfilter ervoor — hij versterkt het volledige bereik van 1 MHz tot 6 GHz gelijktijdig, ongeacht de frequentie waarop je bent afgestemd.",
+          "description": "De front-end versterker van de HackRF (MGA-81563) heeft geen bandpassfilter ervoor  -  hij versterkt het volledige bereik van 1 MHz tot 6 GHz gelijktijdig, ongeacht de frequentie waarop je bent afgestemd.",
           "symptoms": [
             "AMP AAN maakt signalen zwakker in plaats van sterker",
             "Verminderde gevoeligheid over alle banden",
-            "Geen zichtbare schade — falen is stil"
+            "Geen zichtbare schade  -  falen is stil"
           ],
           "prevention": [
             "Houd AMP UIT tenzij je het specifiek nodig hebt",
             "Gebruik een extern bandpassfilter vóór de HackRF-ingang",
             "Voeg een inline verzwakker van 10-20 dB toe bij sterke zenders"
           ],
-          "technical": "Maximaal veilige invoer met AMP AAN is -5 dBm. Een zendmast op 900 MHz op 100m afstand levert ongeveer +5 tot +10 dBm — genoeg om de MGA-81563 te vernietigen, zelfs wanneer afgestemd op 433 MHz."
+          "technical": "Maximaal veilige invoer met AMP AAN is -5 dBm. Een zendmast op 900 MHz op 100m afstand levert ongeveer +5 tot +10 dBm  -  genoeg om de MGA-81563 te vernietigen, zelfs wanneer afgestemd op 433 MHz."
         },
         "Using a 5W handheld radio within inches": {
           "description": "Het meest gerapporteerde schadescenario in de HackRF-community. Handportofoons leveren 5W (37 dBm) en op korte afstand koppelt het signaal direct in de antennepoort van de HackRF.",
@@ -812,7 +812,7 @@
             "Controleer de versterkingsspecificatie van de LNB voor aansluiting",
             "Overweeg een bias-tee met goede vermogensisolatie"
           ],
-          "technical": "Een LNB met 60 dB versterking voert +23 tot +26 dBm naar een apparaat dat geschikt is voor -5 dBm max (AMP AAN). Dat is 28-31 dB boven het absolute maximum — ruwweg 1000x het veilige vermogensniveau."
+          "technical": "Een LNB met 60 dB versterking voert +23 tot +26 dBm naar een apparaat dat geschikt is voor -5 dBm max (AMP AAN). Dat is 28-31 dB boven het absolute maximum  -  ruwweg 1000x het veilige vermogensniveau."
         },
         "Airport radar exposure": {
           "description": "Luchthavenradars werken op extreem hoge vermogensniveaus. Zelfs in alleen-ontvangen modus met AMP UIT kan de elektromagnetische veldsterkte bij een luchthaven de invoerlimieten van de HackRF overschrijden.",
@@ -843,7 +843,7 @@
           "technical": "Een open SMA heeft een VSWR van oneindig (terugkeerverliezen 0 dB). Bij 15 dBm (~32 mW) reflecteert al het vermogen terug. De RFFC5072 PA in de HackRF is berekend op beperkt gereflecteerd vermogen en heeft geen ingebouwde isolator."
         },
         "ESD while connecting antennas": {
-          "description": "Statische ontlading van je lichaam of een geladen antenne gaat direct in het RF-front-end via de SMA-centerpin. De schade is vaak subtiel en progressief — je merkt het misschien weken niet.",
+          "description": "Statische ontlading van je lichaam of een geladen antenne gaat direct in het RF-front-end via de SMA-centerpin. De schade is vaak subtiel en progressief  -  je merkt het misschien weken niet.",
           "symptoms": [
             "Versterker werkt als verzwakker in plaats van versterking te bieden",
             "Geleidelijk gevoeligheidsverlies over de tijd",
@@ -865,13 +865,13 @@
           ],
           "prevention": [
             "Gebruik een antenne die ontworpen is voor je doelfrequentie",
-            "Controleer SWR voor het zenden — streef naar < 2:1",
+            "Controleer SWR voor het zenden  -  streef naar < 2:1",
             "Begin met lage TX-versterking en verhoog geleidelijk terwijl je monitort"
           ],
           "technical": "Bij 15 dBm met een 10:1 VSWR-mismatch wordt ongeveer 70% van het vermogen gereflecteerd. De HackRF heeft geen circulator of isolator, dus gereflecteerd vermogen gaat direct terug naar het PA-stadium."
         },
         "Not using a data-capable USB cable": {
-          "description": "Veel USB-kabels zijn alleen voor opladen — ze hebben stroomdraden maar geen datalijnen. Dit is het meest voorkomende 'mijn HackRF werkt niet'-probleem en verspilt uren debugtijd.",
+          "description": "Veel USB-kabels zijn alleen voor opladen  -  ze hebben stroomdraden maar geen datalijnen. Dit is het meest voorkomende 'mijn HackRF werkt niet'-probleem en verspilt uren debugtijd.",
           "symptoms": [
             "'Device not found' of 'No HackRF boards found' fouten",
             "Apparaat gaat aan (LED's branden) maar wordt niet herkend door software",
@@ -880,7 +880,7 @@
           "prevention": [
             "Label je bekende goede datakabels",
             "Test met 3-5 verschillende kabels voordat je hardwareproblemen vermoedt",
-            "Gebruik korte kabels (< 1m) — USB 2.0-signaalkwaliteit verslechtert met lengte",
+            "Gebruik korte kabels (< 1m)  -  USB 2.0-signaalkwaliteit verslechtert met lengte",
             "USB 3.0-poorten en -kabels zijn doorgaans betrouwbaarder"
           ],
           "technical": "HackRF vereist USB 2.0 High Speed (480 Mbps). Oplaadkabels missen de D+- en D--datalijnen volledig. Sommige goedkope datakabels hebben onvoldoende afscherming, wat intermitterende verbindingen op hoge snelheid veroorzaakt."
@@ -1072,13 +1072,13 @@
       }
     },
     "quickStartSteps": {
-      "s1": "Controleer of je USB-kabel datageschikt is (niet alleen opladen) — dit is het #1 installatieprobleem",
-      "s2": "Plaats een MicroSD-kaart (FAT32, 8-32 GB aanbevolen) — slaat opnames, instellingen en apps op",
+      "s1": "Controleer of je USB-kabel datageschikt is (niet alleen opladen)  -  dit is het #1 installatieprobleem",
+      "s2": "Plaats een MicroSD-kaart (FAT32, 8-32 GB aanbevolen)  -  slaat opnames, instellingen en apps op",
       "s3": "Download de nieuwste Mayhem firmware van GitHub releases en kopieer .ppfw.tar naar de SD-root",
-      "s4": "Bevestig de telescoopantenne (40 MHz–6 GHz) op de SMA-poort — alleen met de hand aandraaien, nooit met gereedschap",
-      "s5": "Ontlaad jezelf voordat je het apparaat aanraakt — ESD op de SMA-centerpin kan de LNA beschadigen",
+      "s4": "Bevestig de telescoopantenne (40 MHz-6 GHz) op de SMA-poort  -  alleen met de hand aandraaien, nooit met gereedschap",
+      "s5": "Ontlaad jezelf voordat je het apparaat aanraakt  -  ESD op de SMA-centerpin kan de LNA beschadigen",
       "s6": "Houd een 50-ohm dummyload klaar als je TX-apps wilt testen",
-      "s7": "Schuif de aan/uit schakelaar OMHOOG — wacht tot het Mayhem hoofdmenu verschijnt",
+      "s7": "Schuif de aan/uit schakelaar OMHOOG  -  wacht tot het Mayhem hoofdmenu verschijnt",
       "s8": "Controleer de firmwareversie op de statusbalk (huidig: v2.3.2)",
       "s9": "Ga naar Settings → SD Card → Test om te controleren of je SD-kaart wordt gedetecteerd en werkt",
       "s10": "Ga naar Settings → UI → stel de encodergevoeligheid in naar voorkeur (laag/normaal/hoog)",
@@ -1086,18 +1086,18 @@
       "s12": "Navigeer naar Receive → Audio",
       "s13": "Stel de modus in op 'WFM' (Breedband FM)",
       "s14": "Stel de frequentie in op een lokaal FM-station (bijv. 101.1 MHz)",
-      "s15": "Stel gains in: LNA=16, VGA=20, AMP=0 (UIT) — begin altijd met AMP uit",
-      "s16": "Zet het volume op 40–60 — je zou het station moeten horen",
-      "s17": "Controleer de RSSI-balk en waterval — een sterk signaal toont een heldere verticale band",
+      "s15": "Stel gains in: LNA=16, VGA=20, AMP=0 (UIT)  -  begin altijd met AMP uit",
+      "s16": "Zet het volume op 40-60  -  je zou het station moeten horen",
+      "s17": "Controleer de RSSI-balk en waterval  -  een sterk signaal toont een heldere verticale band",
       "s18": "Bij zwak signaal: verhoog eerst VGA, dan LNA. Bij clipping/vervorming: verlaag de gains",
       "s19": "Stem af op een bekend FM-station en controleer of de frequentie iets afwijkt",
       "s20": "Ga naar Settings → Radio → Frequency Correction en pas aan tot het station correct gecentreerd is",
-      "s21": "Dit corrigeert je TCXO-offset — verbetert de nauwkeurigheid in alle apps",
-      "s22": "Voor TX: sluit een 50-ohm dummyload of frequentie-geschikte antenne aan — zend nooit in de open lucht",
+      "s21": "Dit corrigeert je TCXO-offset  -  verbetert de nauwkeurigheid in alle apps",
+      "s22": "Voor TX: sluit een 50-ohm dummyload of frequentie-geschikte antenne aan  -  zend nooit in de open lucht",
       "s23": "Leer de Noodstop TX: Stop knop → Terugpijl → RESET → Stroom UIT",
       "s24": "Werk nooit binnen 3 meter van actieve zenders (portofoons, routers) tijdens ontvangst",
       "s25": "Tik op de terugpijl om terug te keren naar menu's",
-      "s26": "Schuif de aan/uit schakelaar OMLAAG om uit te schakelen — schakel altijd uit voordat je de antenne loskoppelt"
+      "s26": "Schuif de aan/uit schakelaar OMLAAG om uit te schakelen  -  schakel altijd uit voordat je de antenne loskoppelt"
     },
     "quickStartSections": {
       "beforePowerOn": "Voordat je Inschakelt",

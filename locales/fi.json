@@ -71,11 +71,11 @@
       },
       "receive": {
         "label": "Vastaanottosovellukset",
-        "desc": "Passiivinen tiedustelu — ADS-B, POCSAG, SubGhzD, BLE ja muuta"
+        "desc": "Passiivinen tiedustelu  -  ADS-B, POCSAG, SubGhzD, BLE ja muuta"
       },
       "transmit": {
         "label": "Lähetyssovellukset",
-        "desc": "Aktiivinen testaus — OOK, replay, FlipperTX, BLE TX (vain valtuutettu käyttö)"
+        "desc": "Aktiivinen testaus  -  OOK, replay, FlipperTX, BLE TX (vain valtuutettu käyttö)"
       },
       "tools": {
         "label": "Työkalut ja asetukset",
@@ -88,7 +88,7 @@
       },
       "frequencies": {
         "label": "Taajuusviite",
-        "stat": "1 MHz – 6 GHz",
+        "stat": "1 MHz - 6 GHz",
         "desc": "RF-spektrikaavio, kielletyt taajuudet, lailliset TX-kaistat, rangaistukset"
       },
       "learn": {
@@ -113,7 +113,7 @@
     "portapack": "PortaPack",
     "portapackValue": "H4M",
     "frequency": "Taajuus",
-    "frequencyValue": "1 MHz – 6 GHz",
+    "frequencyValue": "1 MHz - 6 GHz",
     "txPower": "TX-teho",
     "txPowerValue": "~15 dBm (32 mW)",
     "rxApps": "RX-sovellukset",
@@ -161,7 +161,7 @@
   },
   "receive": {
     "title": "Vastaanottosovellukset",
-    "subtitle": "Kaikki {{count}} pelkästään vastaanottavaa sovellusta Mayhem-laiteohjelmistossa. Ei lähetystä — passiivisen vastaanoton laillisuus vaihtelee alueittain. Tarkista aina paikalliset lait.",
+    "subtitle": "Kaikki {{count}} pelkästään vastaanottavaa sovellusta Mayhem-laiteohjelmistossa. Ei lähetystä  -  passiivisen vastaanoton laillisuus vaihtelee alueittain. Tarkista aina paikalliset lait.",
     "filterPlaceholder": "Suodata vastaanottosovelluksia...",
     "apps": "sovellusta",
     "learnMore": "Lue lisää",
@@ -170,7 +170,7 @@
   },
   "transmit": {
     "title": "Lähetyssovellukset",
-    "subtitle": "Kaikki {{count}} lähetyssovellusta Mayhem-laiteohjelmistossa. Jokainen luokiteltu vaarallisuustason mukaan — käytä aina dummy load -kuormaa tai sovitettua antennia.",
+    "subtitle": "Kaikki {{count}} lähetyssovellusta Mayhem-laiteohjelmistossa. Jokainen luokiteltu vaarallisuustason mukaan  -  käytä aina dummy load -kuormaa tai sovitettua antennia.",
     "warning": "Kaikki TX-sovellukset vaativat antennin tai dummy load -kuorman. Älä koskaan lähetä ilman kytkettyä kuormaa. Piilota Jammer, GPS Sim ja ADS-B TX App Managerin kautta.",
     "filterPlaceholder": "Suodata lähetyssovelluksia...",
     "apps": "sovellusta",
@@ -185,7 +185,7 @@
   },
   "safety": {
     "title": "Turvallisuuskeskus",
-    "subtitle": "Yleiset virheet, todelliset vahinkotarinat, TX-vaarallisuusluokitukset ja vahvistimen käyttäytyminen HackRF One + PortaPack -laitteistolle. Tiedot ovat vain opetustarkoitukseen — eivät oikeudellista neuvontaa. Tarkista aina paikalliset säädökset.",
+    "subtitle": "Yleiset virheet, todelliset vahinkotarinat, TX-vaarallisuusluokitukset ja vahvistimen käyttäytyminen HackRF One + PortaPack -laitteistolle. Tiedot ovat vain opetustarkoitukseen  -  eivät oikeudellista neuvontaa. Tarkista aina paikalliset säädökset.",
     "tabs": {
       "mistakes": "Aloittelijoiden virheet",
       "stories": "Vahinkotarinat",
@@ -209,11 +209,11 @@
   },
   "frequencies": {
     "title": "Opi radiotaajuuksista (RF)",
-    "subtitle": "RF-spektrin kattavuus 1 MHz:stä 6 GHz:iin — kielletyt alueet, lailliset TX-kaistat ja rangaistusviite Yhdysvalloille.",
+    "subtitle": "RF-spektrin kattavuus 1 MHz:stä 6 GHz:iin  -  kielletyt alueet, lailliset TX-kaistat ja rangaistusviite Yhdysvalloille.",
     "spectrumTitle": "RF-spektrin kattavuus",
-    "bandMapTitle": "Kaistakartta — kielletyt vs lailliset TX (1 MHz – 6 GHz)",
+    "bandMapTitle": "Kaistakartta  -  kielletyt vs lailliset TX (1 MHz - 6 GHz)",
     "bandMapDesc": "Interaktiivinen kartta, joka näyttää rajoitetut (punaiset) ja sallitut (vihreät) taajuuskaistat logaritmisella asteikolla. Vie hiiri kaistan päälle saadaksesi tietoja. Keltainen päällekkäisyys osoittaa, missä lailliset ISM-kaistat jakavat spektrin rajoitettujen palveluiden kanssa.",
-    "noGoTitle": "Kielletyt taajuudet — Yhdysvaltain liittovaltion rajoitukset",
+    "noGoTitle": "Kielletyt taajuudet  -  Yhdysvaltain liittovaltion rajoitukset",
     "legalTitle": "Lailliset TX-kaistat (ehdolliset)",
     "penaltiesTitle": "Oikeudelliset seuraukset (Yhdysvaltain liittovaltiolaki)",
     "band": "Kaista",
@@ -223,7 +223,7 @@
     "violation": "Rikkomus",
     "law": "Laki",
     "penalty": "Rangaistus",
-    "disclaimer": "Näytetyt taajuusrajoitukset ja rangaistukset perustuvat Yhdysvaltain liittovaltion säädöksiin (FCC/FAA). Lait vaihtelevat merkittävästi maittain ja alueittain. Tämä ei ole oikeudellista neuvontaa — tarkista aina oman lainkäyttöalueesi säädökset ennen lähettämistä."
+    "disclaimer": "Näytetyt taajuusrajoitukset ja rangaistukset perustuvat Yhdysvaltain liittovaltion säädöksiin (FCC/FAA). Lait vaihtelevat merkittävästi maittain ja alueittain. Tämä ei ole oikeudellista neuvontaa  -  tarkista aina oman lainkäyttöalueesi säädökset ennen lähettämistä."
   },
   "learn": {
     "title": "Oppiminen",
@@ -240,8 +240,8 @@
     "all": "Kaikki"
   },
   "quickstart": {
-    "title": "HackRF + PortaPack — Pikaopas",
-    "subtitle": "Täydellinen asennusopas pakkauksesta ensimmäiseen FM-vastaanottoon. Kattaa SD-kortin valmistelun, laiteohjelmiston, kalibroinnin, turvallisuuden ja sammutuksen. Merkitse jokainen vaihe — edistyminen tallennetaan paikallisesti.",
+    "title": "HackRF + PortaPack  -  Pikaopas",
+    "subtitle": "Täydellinen asennusopas pakkauksesta ensimmäiseen FM-vastaanottoon. Kattaa SD-kortin valmistelun, laiteohjelmiston, kalibroinnin, turvallisuuden ja sammutuksen. Merkitse jokainen vaihe  -  edistyminen tallennetaan paikallisesti.",
     "clear": "TYHJENNÄ",
     "sections": {
       "beforePowerOn": "Ennen käynnistämistä",
@@ -251,13 +251,13 @@
       "safetyShutdown": "Turvallisuus ja sammutus"
     },
     "steps": {
-      "s1": "Varmista, että USB-kaapelisi tukee dataa (ei pelkkä lataus) — tämä on yleisin asennusongelma",
-      "s2": "Aseta MicroSD-kortti (FAT32, suositus 8–32 Gt) — tallentaa kaappaukset, asetukset ja sovellukset",
+      "s1": "Varmista, että USB-kaapelisi tukee dataa (ei pelkkä lataus)  -  tämä on yleisin asennusongelma",
+      "s2": "Aseta MicroSD-kortti (FAT32, suositus 8-32 Gt)  -  tallentaa kaappaukset, asetukset ja sovellukset",
       "s3": "Lataa uusin Mayhem-laiteohjelmisto GitHub-julkaisuista ja kopioi .ppfw.tar SD-kortin juureen",
-      "s4": "Kiinnitä teleskooppiantenni (40 MHz–6 GHz) SMA-porttiin — kiristä vain sormin, älä koskaan avaimella",
-      "s5": "Maadoita itsesi ennen käsittelyä — ESD SMA-keskitapissa voi vahingoittaa LNA:ta",
+      "s4": "Kiinnitä teleskooppiantenni (40 MHz-6 GHz) SMA-porttiin  -  kiristä vain sormin, älä koskaan avaimella",
+      "s5": "Maadoita itsesi ennen käsittelyä  -  ESD SMA-keskitapissa voi vahingoittaa LNA:ta",
       "s6": "Pidä 50 ohmin dummy load valmiina, jos aiot testata TX-sovelluksia",
-      "s7": "Liu'uta virtakytkin YLÖS — odota Mayhem-päävalikon ilmestymistä",
+      "s7": "Liu'uta virtakytkin YLÖS  -  odota Mayhem-päävalikon ilmestymistä",
       "s8": "Tarkista laiteohjelmiston versio tilariviltä (nykyinen: v2.3.2)",
       "s9": "Siirry kohtaan Settings → SD Card → Test varmistaaksesi, että SD-kortti tunnistetaan ja toimii",
       "s10": "Siirry kohtaan Settings → UI → aseta enkooderin herkkyys mieltymyksesi mukaan (matala/normaali/korkea)",
@@ -265,18 +265,18 @@
       "s12": "Siirry kohtaan Receive → Audio",
       "s13": "Aseta tilaksi 'WFM' (Wideband FM)",
       "s14": "Aseta taajuus paikalliselle FM-asemalle (esim. 101,1 MHz)",
-      "s15": "Aseta vahvistukset: LNA=16, VGA=20, AMP=0 (POIS) — aloita aina AMP pois päältä",
-      "s16": "Nosta äänenvoimakkuus tasolle 40–60 — sinun pitäisi kuulla asema",
-      "s17": "Tarkista RSSI-palkki ja waterfall — vahva signaali näkyy kirkkaan pystyraitana",
+      "s15": "Aseta vahvistukset: LNA=16, VGA=20, AMP=0 (POIS)  -  aloita aina AMP pois päältä",
+      "s16": "Nosta äänenvoimakkuus tasolle 40-60  -  sinun pitäisi kuulla asema",
+      "s17": "Tarkista RSSI-palkki ja waterfall  -  vahva signaali näkyy kirkkaan pystyraitana",
       "s18": "Jos heikko: nosta ensin VGA, sitten LNA. Jos leikkautumista/säröä: laske vahvistuksia",
       "s19": "Viritä tunnetulle FM-asemalle ja huomaa, onko taajuus hieman pielessä",
       "s20": "Siirry kohtaan Settings → Radio → Frequency Correction ja säädä, kunnes asema keskittyy oikein",
-      "s21": "Tämä korjaa TCXO-poikkeaman — parantaa tarkkuutta kaikissa sovelluksissa",
-      "s22": "Ennen mitään TX:ää: kytke 50 ohmin dummy load tai taajuussovitettu antenni — älä koskaan lähetä vapaaseen ilmaan",
+      "s21": "Tämä korjaa TCXO-poikkeaman  -  parantaa tarkkuutta kaikissa sovelluksissa",
+      "s22": "Ennen mitään TX:ää: kytke 50 ohmin dummy load tai taajuussovitettu antenni  -  älä koskaan lähetä vapaaseen ilmaan",
       "s23": "Opi TX:n hätäpysäytys: Stop-painike → Takaisin-nuoli → RESET → Virta POIS",
       "s24": "Älä koskaan käytä laitetta alle 3 metrin päässä aktiivisista lähettimistä (käsiradiot, reitittimet) vastaanoton aikana",
       "s25": "Napauta takaisin-nuolta palataksesi valikoihin",
-      "s26": "Liu'uta virtakytkin ALAS sammuttaaksesi — sammuta aina ennen antennin irrottamista"
+      "s26": "Liu'uta virtakytkin ALAS sammuttaaksesi  -  sammuta aina ennen antennin irrottamista"
     }
   },
   "firmwareUpdate": {
@@ -284,7 +284,7 @@
     "subtitle": "Vaiheittainen opas Mayhem-firmwaren päivittämiseen laitteen sisäisellä Flash Utility -työkalulla. Toimii kaikkiin Mayhem-Mayhem-päivityksiin versiosta v2.0 alkaen.",
     "beforeYouStart": "Ennen kuin aloitat",
     "prereq1": "Tarvitset HackRF One + PortaPack, jossa on jo Mayhem v2.0 tai uudempi",
-    "prereq2": "MicroSD-kortin (FAT32, 8–32 GB suositeltava)",
+    "prereq2": "MicroSD-kortin (FAT32, 8-32 GB suositeltava)",
     "prereq3": "Tietokoneen, jossa on MicroSD-kortinlukija tiedostojen lataamiseen ja kopiointiin",
     "prereq4": "Henkilökohtaiset asetuksesi ja tallenteet säilyvät päivityksen aikana",
     "downloadButton": "Lataa uusin firmware",
@@ -306,7 +306,7 @@
       "s7": "Poista SD-kortti turvallisesti tietokoneesta. Linuxissa aja ensin sync. Windows/macOS-järjestelmissä käytä Poista turvallisesti tai Työnnä ulos.",
       "s8": "Aseta SD-kortti takaisin PortaPack-laitteeseen, kunnes se napsahtaa paikalleen. Kultaiset kontaktit osoittavat PCB:tä kohti.",
       "s9": "Käynnistä ja siirry kohtaan Utilities > Flash Utility. Käytä napsautuspyörää tai kosketusnäyttöä.",
-      "s10": "Valitse .ppfw.tar-tiedosto FIRMWARE/-kansiosta. Vain .ppfw.tar-tiedostot toimivat laitteen Flash Utility -työkalussa. SD-kortilla saattaa näkyä myös .bin-tiedosto zipistä. Se on tarkoitettu vain PC-puolen flashaukseen hackrf_spiflash-työkalulla USB:n kautta. Flash Utility ei hyväksy sitä. Jätä se huomiotta. Laite flashaa 15–30 sekuntia. Älä sammuta tai poista SD-korttia flashauksen aikana.",
+      "s10": "Valitse .ppfw.tar-tiedosto FIRMWARE/-kansiosta. Vain .ppfw.tar-tiedostot toimivat laitteen Flash Utility -työkalussa. SD-kortilla saattaa näkyä myös .bin-tiedosto zipistä. Se on tarkoitettu vain PC-puolen flashaukseen hackrf_spiflash-työkalulla USB:n kautta. Flash Utility ei hyväksy sitä. Jätä se huomiotta. Laite flashaa 15-30 sekuntia. Älä sammuta tai poista SD-korttia flashauksen aikana.",
       "s11": "Laite käynnistyy automaattisesti uudelleen. Tarkista uusi versio tilariviltä tai kohdasta Settings > About.",
       "s12": "Tutustu uusiin sovelluksiin ja ominaisuuksiin Receive- ja Transmit-valikoissa.",
       "s13": "Tarkista Settings mahdollisten uusien turvallisuus- tai asetusvaihtoehtojen varalta.",
@@ -322,9 +322,9 @@
   },
   "whereToBuy": {
     "title": "Mistä ostaa",
-    "subtitle": "Yhteisön viittaamat lähteet HackRF One:lle, PortaPack:lle ja lisävarusteille. Ei suositus — tee aina oma tutkimuksesi.",
+    "subtitle": "Yhteisön viittaamat lähteet HackRF One:lle, PortaPack:lle ja lisävarusteille. Ei suositus  -  tee aina oma tutkimuksesi.",
     "disclaimerTitle": "Ei yhteistyötä · Ei suositusta",
-    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem <strong>ei ole sidoksissa mihinkään, sponsoroitu tai hyväksytty</strong> minkään tällä sivulla mainitun jälleenmyyjän toimesta. Sisällyttäminen perustuu yhteisömainintoihin r/hackrf-, r/RTLSDR- ja muilla SDR-foorumeilla — se ei takaa tuotteen laatua, aitoutta tai palvelua. <strong>Tee aina oma tutkimuksesi ennen ostamista.</strong>",
+    "disclaimerText": "Super Basic Studio, LLC / Fresh Mayhem <strong>ei ole sidoksissa mihinkään, sponsoroitu tai hyväksytty</strong> minkään tällä sivulla mainitun jälleenmyyjän toimesta. Sisällyttäminen perustuu yhteisömainintoihin r/hackrf-, r/RTLSDR- ja muilla SDR-foorumeilla  -  se ei takaa tuotteen laatua, aitoutta tai palvelua. <strong>Tee aina oma tutkimuksesi ennen ostamista.</strong>",
     "typeLabel": "TYYPPI",
     "regionLabel": "ALUE",
     "all": "Kaikki",
@@ -340,7 +340,7 @@
     "title": "Taajuutta ei löydy",
     "message": "Signaalia ei havaittu tässä osoitteessa. Etsimääsi sivua ei ole olemassa tai se on siirretty.",
     "backButton": "Palaa yleiskatsaukseen",
-    "footer": "Fresh Mayhem — Super Basic Studio -projekti"
+    "footer": "Fresh Mayhem  -  Super Basic Studio -projekti"
   },
   "chart": {
     "extreme": "Äärimmäinen",
@@ -351,14 +351,14 @@
     "txApps": "TX-sovellukset"
   },
   "bandMap": {
-    "title": "Taajuuskartta — Valitut rajoitetut ja ISM-kaistat (1 MHz – 6 GHz)",
-    "description": "Tämä kaavio näyttää <strong>osittaisen</strong> näkymän Yhdysvaltain <strong>lähetys (TX)</strong> -rajoituksista. Punainen = valitut kaistat, joilla lähettäminen on liittovaltion tasolla rajoitettu. Vihreä = ISM-kaistat, joilla lähettäminen on yleensä sallittua FCC Part 15 -ehtojen mukaisesti. <strong>Vastaanotto (RX) / kuuntelu on yleensä sallittua useimmilla lainkäyttöalueilla — tarkista aina paikalliset lait.</strong> Tämä ei ole täydellinen luettelo kaikista rajoitetuista taajuuksista.",
-    "disclaimer": "<strong>Vastuuvapauslauseke:</strong> Yhdysvaltain liittovaltion lain (47 U.S.C. § 301) mukaan lähettäminen <strong>millä tahansa</strong> radiotaajuudella ilman asianmukaista valtuutusta on kiellettyä. Luvaton lähettäminen on sallittua vain tietyillä ISM-kaistoilla tiukkojen FCC Part 15 -tehorajojen ja -ehtojen alaisena. Tyhjä tila tässä kaaviossa <strong>ei</strong> tarkoita, että lähettäminen olisi sallittua. Tämä kaavio on vain opetuskäyttöön eikä ole oikeudellista neuvontaa. Taajuussäännökset vaihtelevat maittain — tarkista aina oman lainkäyttöalueesi lait ennen lähettämistä. Super Basic Studio, LLC ei ota vastuuta luvattomista lähetyksistä.",
-    "restrictedLabel": "RAJOITETTU TX — ÄLÄ LÄHETÄ (VALITUT YHDYSVALTAIN LIITTOVALTION KAISTAT)",
-    "ismLabel": "ISM-KAISTAT — YLEENSÄ SALLITTU TX (FCC PART 15, EHDOT VOIMASSA)",
+    "title": "Taajuuskartta  -  Valitut rajoitetut ja ISM-kaistat (1 MHz - 6 GHz)",
+    "description": "Tämä kaavio näyttää <strong>osittaisen</strong> näkymän Yhdysvaltain <strong>lähetys (TX)</strong> -rajoituksista. Punainen = valitut kaistat, joilla lähettäminen on liittovaltion tasolla rajoitettu. Vihreä = ISM-kaistat, joilla lähettäminen on yleensä sallittua FCC Part 15 -ehtojen mukaisesti. <strong>Vastaanotto (RX) / kuuntelu on yleensä sallittua useimmilla lainkäyttöalueilla  -  tarkista aina paikalliset lait.</strong> Tämä ei ole täydellinen luettelo kaikista rajoitetuista taajuuksista.",
+    "disclaimer": "<strong>Vastuuvapauslauseke:</strong> Yhdysvaltain liittovaltion lain (47 U.S.C. § 301) mukaan lähettäminen <strong>millä tahansa</strong> radiotaajuudella ilman asianmukaista valtuutusta on kiellettyä. Luvaton lähettäminen on sallittua vain tietyillä ISM-kaistoilla tiukkojen FCC Part 15 -tehorajojen ja -ehtojen alaisena. Tyhjä tila tässä kaaviossa <strong>ei</strong> tarkoita, että lähettäminen olisi sallittua. Tämä kaavio on vain opetuskäyttöön eikä ole oikeudellista neuvontaa. Taajuussäännökset vaihtelevat maittain  -  tarkista aina oman lainkäyttöalueesi lait ennen lähettämistä. Super Basic Studio, LLC ei ota vastuuta luvattomista lähetyksistä.",
+    "restrictedLabel": "RAJOITETTU TX  -  ÄLÄ LÄHETÄ (VALITUT YHDYSVALTAIN LIITTOVALTION KAISTAT)",
+    "ismLabel": "ISM-KAISTAT  -  YLEENSÄ SALLITTU TX (FCC PART 15, EHDOT VOIMASSA)",
     "doNotTransmit": "ÄLÄ LÄHETÄ (TX)",
-    "listeningPermitted": "Kuuntelu (RX) on yleensä sallittua — tarkista paikalliset lait",
-    "ismConditions": "ISM — Yleensä sallittu FCC Part 15 -ehtojen mukaisesti",
+    "listeningPermitted": "Kuuntelu (RX) on yleensä sallittua  -  tarkista paikalliset lait",
+    "ismConditions": "ISM  -  Yleensä sallittu FCC Part 15 -ehtojen mukaisesti",
     "clickToZoom": "Napsauta lähentääksesi",
     "scrollHint": "Vieritä lähentääksesi · Vedä panoroidaksesi · Napsauta kaistaa tarkentaaksesi",
     "resetZoom": "Palauta lähennys"
@@ -375,7 +375,7 @@
   "penalties": {
     "maxPenalty": "Suurin yksittäinen rangaistus (PIRATE Act)",
     "maxPrison": "Suurin liittovaltion vankeusrangaistus",
-    "aviationCases": "Ilmailutapaukset — liittovaltion tutkinta",
+    "aviationCases": "Ilmailutapaukset  -  liittovaltion tutkinta",
     "scaleTitle": "RAHASAKKOASTEIKKO (YHDYSVALTAIN LIITTOVALTIO)",
     "severe": "VAKAVA",
     "high": "KORKEA",
@@ -396,7 +396,7 @@
       "gpsJamming": {
         "violation": "GPS / matkapuhelinverkon häirintä",
         "law": "PIRATE Act",
-        "penalty": "Jopa $119,555/päivä — enint. $2.39M",
+        "penalty": "Jopa $119,555/päivä  -  enint. $2.39M",
         "detail": "PIRATE Act (2020) nosti sakkoja dramaattisesti. GPS-häirintälaitteet vaikuttavat ilmailuun, merenkulkuun, hätänumeroihin ja rahoitusjärjestelmiin."
       },
       "intercepting": {
@@ -408,20 +408,20 @@
       "aviation": {
         "violation": "Ilmailuhäirintä",
         "law": "18 U.S.C. § 32",
-        "penalty": "Liittovaltion rikos — FBI + FAA -tutkinta",
+        "penalty": "Liittovaltion rikos  -  FBI + FAA -tutkinta",
         "detail": "Lentokonesabotaasilaki. ADS-B-huijaus tai GPS-häirintä lentokenttien lähellä käynnistää välittömän liittovaltion tutkinnan. Ei minimikynnystä."
       }
     }
   },
   "badges": {
     "rx": "RX",
-    "rxTooltip": "Vain vastaanotto — ei lähetystä. Kuuntelun laillisuus vaihtelee alueittain.",
+    "rxTooltip": "Vain vastaanotto  -  ei lähetystä. Kuuntelun laillisuus vaihtelee alueittain.",
     "caution": "VAROITUS",
-    "cautionTooltip": "Käytä varoen — tarkista paikalliset säädökset",
+    "cautionTooltip": "Käytä varoen  -  tarkista paikalliset säädökset",
     "danger": "VAARA",
-    "dangerTooltip": "Vaarallinen — voi aiheuttaa vahinkoa tai oikeudellisia ongelmia. Tarkista paikalliset säädökset.",
+    "dangerTooltip": "Vaarallinen  -  voi aiheuttaa vahinkoa tai oikeudellisia ongelmia. Tarkista paikalliset säädökset.",
     "extreme": "ÄÄRIMMÄINEN",
-    "extremeTooltip": "Äärimmäinen riski — todennäköisesti laiton useimmilla lainkäyttöalueilla. Ei oikeudellista neuvontaa.",
+    "extremeTooltip": "Äärimmäinen riski  -  todennäköisesti laiton useimmilla lainkäyttöalueilla. Ei oikeudellista neuvontaa.",
     "illegal": "LAITON",
     "illegalTooltip": "Laiton useimmilla tunnetuilla lainkäyttöalueilla. Tarkista paikalliset lakisi."
   },
@@ -429,7 +429,7 @@
     "freshMayhem": "Fresh Mayhem",
     "mayhemFirmware": "Mayhem-laiteohjelmisto",
     "portapackHackrf": "PortaPack H4M + HackRF One",
-    "educationalOnly": "Vain opetusresurssi — ei oikeudellista neuvontaa. Noudata aina paikallisia RF-säädöksiä.",
+    "educationalOnly": "Vain opetusresurssi  -  ei oikeudellista neuvontaa. Noudata aina paikallisia RF-säädöksiä.",
     "trademarkNotice": "HackRF ja PortaPack ovat vastaavien omistajiensa tavaramerkkejä. Mayhem-laiteohjelmisto on sen tekijöiden avoimen lähdekoodin projekti. Tämä sivusto on itsenäinen, epävirallinen viite eikä ole sidoksissa, hyväksytty tai sponsoroitu",
     "greatScottGadgets": "Great Scott Gadgets",
     "trademarkSuffix": ", PortaPack tai Mayhem-projektin toimesta.",
@@ -449,8 +449,8 @@
     "txApps": {
       "ADS-B(S) TX": {
         "description": "Väärennetyt lentokoneen transponderidata.",
-        "legal": "Liittovaltion rikos — lentokoneen transponderien väärentäminen vaarantaa lentoturvallisuuden.",
-        "learn": "ADS-B tarkoittaa Automatic Dependent Surveillance–Broadcast. Näin lentokoneet ilmoittavat sijaintinsa, korkeuden ja nopeuden lennonjohdolle ja muille koneille. (S) viittaa Mode S:ssä käytettyyn 'S-mode'-transponderiin taajuudella 1090 MHz. Tämä sovellus luo väärennettyjä ADS-B-paketteja — haamulentokoneita, jotka ilmestyvät lennonjohdon tutkaan ja FlightAware/FlightRadar24-palveluihin. Pelkkä testaaminen ilmateitse on liittovaltion rikos 18 U.S.C. § 32 (lentokonesabotaasi) mukaan. Käytä vain dummy load -kuorman kanssa suojatussa ympäristössä."
+        "legal": "Liittovaltion rikos  -  lentokoneen transponderien väärentäminen vaarantaa lentoturvallisuuden.",
+        "learn": "ADS-B tarkoittaa Automatic Dependent Surveillance-Broadcast. Näin lentokoneet ilmoittavat sijaintinsa, korkeuden ja nopeuden lennonjohdolle ja muille koneille. (S) viittaa Mode S:ssä käytettyyn 'S-mode'-transponderiin taajuudella 1090 MHz. Tämä sovellus luo väärennettyjä ADS-B-paketteja  -  haamulentokoneita, jotka ilmestyvät lennonjohdon tutkaan ja FlightAware/FlightRadar24-palveluihin. Pelkkä testaaminen ilmateitse on liittovaltion rikos 18 U.S.C. § 32 (lentokonesabotaasi) mukaan. Käytä vain dummy load -kuorman kanssa suojatussa ympäristössä."
       },
       "APRS TX": {
         "description": "APRS-sijainti-/datapaketteja.",
@@ -465,7 +465,7 @@
       "BLE TX": {
         "description": "BLE-mainospaketteja konfiguroitavalla MAC-osoitteella ja datasisällöllä.",
         "legal": "Laillinen omien laitteiden testaamiseen. Muiden väärentäminen voi rikkoa lakeja.",
-        "learn": "BLE (Bluetooth Low Energy) on lyhyen kantaman langaton protokolla taajuudella 2,4 GHz, jota käyttävät aktiivisuusrannekkeet, älylukot, majakat ja IoT-laitteet. BLE-mainospaketit ovat lähetysviestejä, jotka lähellä olevat laitteet voivat havaita ilman pariliitosta. Tämä sovellus mahdollistaa omien mainospakettien luomisen konfiguroitavalla MAC-osoitteella ja datasisällöllä — hyödyllinen omien BLE-oheislaitteiden testaamiseen, iBeacon/Eddystone-kokeiluihin tai BLE-protokollan rakenteen ymmärtämiseen. Kantama on tyypillisesti 10–30 metriä."
+        "learn": "BLE (Bluetooth Low Energy) on lyhyen kantaman langaton protokolla taajuudella 2,4 GHz, jota käyttävät aktiivisuusrannekkeet, älylukot, majakat ja IoT-laitteet. BLE-mainospaketit ovat lähetysviestejä, jotka lähellä olevat laitteet voivat havaita ilman pariliitosta. Tämä sovellus mahdollistaa omien mainospakettien luomisen konfiguroitavalla MAC-osoitteella ja datasisällöllä  -  hyödyllinen omien BLE-oheislaitteiden testaamiseen, iBeacon/Eddystone-kokeiluihin tai BLE-protokollan rakenteen ymmärtämiseen. Kantama on tyypillisesti 10-30 metriä."
       },
       "BLESpam": {
         "description": "Tulvittaa BLE-mainoksia lähellä oleviin laitteisiin.",
@@ -475,7 +475,7 @@
       "Burger Pager": {
         "description": "Ravintolan alustin-tyyliset kutsutusjärjestelmän signaalit.",
         "legal": "Kaupallisten laitteiden luvaton aktivointi.",
-        "learn": "Ravintoloiden kutsujärjestelmät (kuten Long Range Systemsin valmistamat) käyttävät yksinkertaista OOK- tai FSK-modulaatiota taajuusalueella 400–470 MHz signaloidakseen väriseviin/vilkkuviin alustoihin, jotka kertovat asiakkaille tilauksen olevan valmis. Jokaisella hälyttimellä on yksilöllinen tunnuskoodi. Tämä sovellus voi laukaista tietyt tai kaikki hälyttimet samanaikaisesti toistamalla tai luomalla aktivointisignaalin. Vaikka se vaikuttaa harmittomalta, kyseessä on kaupallisten radiolaitteiden luvaton käyttö ja se voi häiritä ravintolan toimintaa."
+        "learn": "Ravintoloiden kutsujärjestelmät (kuten Long Range Systemsin valmistamat) käyttävät yksinkertaista OOK- tai FSK-modulaatiota taajuusalueella 400-470 MHz signaloidakseen väriseviin/vilkkuviin alustoihin, jotka kertovat asiakkaille tilauksen olevan valmis. Jokaisella hälyttimellä on yksilöllinen tunnuskoodi. Tämä sovellus voi laukaista tietyt tai kaikki hälyttimet samanaikaisesti toistamalla tai luomalla aktivointisignaalin. Vaikka se vaikuttaa harmittomalta, kyseessä on kaupallisten radiolaitteiden luvaton käyttö ja se voi häiritä ravintolan toimintaa."
       },
       "CVS Spam": {
         "description": "CVS-apteekin kutsujärjestelmän häirintä.",
@@ -485,17 +485,17 @@
       "FlipperTX": {
         "description": "Toistaa Flipper Zero .sub-tiedostoja suoraan PortaPack-laitteesta.",
         "legal": "Laillinen vain omille laitteille. Muiden signaalien toistaminen on laitonta.",
-        "learn": "FlipperTX lukee Flipper Zero .sub-tallennustiedostoja SD-kortilta ja toistaa ne HackRF:n kautta. Flipper Zeron .sub-formaatti tallentaa raakasignaalitallenteet sisältäen taajuuden, modulaatiotyypin ja todelliset databitit. Tämä tarkoittaa, että mikä tahansa Flipper Zerolla tallennettu signaali voidaan toistaa HackRF:n kautta suuremmalla teholla ja paremmilla antennivaihtoehdoilla. Yleisiä käyttötapoja ovat omien autotallinoven, porttien ja kauko-ohjattavien laitteiden testaaminen. HackRF:n laajempi taajuusalue (1 MHz–6 GHz) ylittää huomattavasti Flipperin natiivi sub-GHz-alueen."
+        "learn": "FlipperTX lukee Flipper Zero .sub-tallennustiedostoja SD-kortilta ja toistaa ne HackRF:n kautta. Flipper Zeron .sub-formaatti tallentaa raakasignaalitallenteet sisältäen taajuuden, modulaatiotyypin ja todelliset databitit. Tämä tarkoittaa, että mikä tahansa Flipper Zerolla tallennettu signaali voidaan toistaa HackRF:n kautta suuremmalla teholla ja paremmilla antennivaihtoehdoilla. Yleisiä käyttötapoja ovat omien autotallinoven, porttien ja kauko-ohjattavien laitteiden testaaminen. HackRF:n laajempi taajuusalue (1 MHz-6 GHz) ylittää huomattavasti Flipperin natiivi sub-GHz-alueen."
       },
       "GPS Sim": {
         "description": "Luo ja lähettää väärennettyjä GPS-satelliittisignaaleja .C8-tiedostoista.",
-        "legal": "Liittovaltion rikos — GPS-huijaus vaikuttaa ilmailuun, merenkulkuun, pelastuspalveluihin.",
-        "learn": "GPS-satelliitit lähettävät taajuudella L1 (1575,42 MHz) tarkkoja aikasignaaleja, joita vastaanottimet kolmiomittaavat sijainnin määrittämiseksi. GPS Sim luo väärennettyjä satelliittisignaaleja, jotka ohittavat oikean GPS:n ja saavat vastaanottimet raportoimaan väärän sijainnin ja ajan. .C8-tiedostot sisältävät ennalta laskettuja IQ-näytteitä tietyille sijainneille/ajoille. Tämä vaikuttaa KAIKKIIN GPS-vastaanottimiin kantaman sisällä — puhelimet, autot, lentokoneet, laivat, pelastuspalvelut, rahoituskauppajärjestelmät (jotka käyttävät GPS:ää ajoitukseen). GPS-huijaus on liittovaltion rikos 18 U.S.C. § 32 mukaan ja siitä seuraa ankarat rangaistukset. Lyhytkin testaus ilmateitse voi vaikuttaa lähellä olevaan infrastruktuuriin."
+        "legal": "Liittovaltion rikos  -  GPS-huijaus vaikuttaa ilmailuun, merenkulkuun, pelastuspalveluihin.",
+        "learn": "GPS-satelliitit lähettävät taajuudella L1 (1575,42 MHz) tarkkoja aikasignaaleja, joita vastaanottimet kolmiomittaavat sijainnin määrittämiseksi. GPS Sim luo väärennettyjä satelliittisignaaleja, jotka ohittavat oikean GPS:n ja saavat vastaanottimet raportoimaan väärän sijainnin ja ajan. .C8-tiedostot sisältävät ennalta laskettuja IQ-näytteitä tietyille sijainneille/ajoille. Tämä vaikuttaa KAIKKIIN GPS-vastaanottimiin kantaman sisällä  -  puhelimet, autot, lentokoneet, laivat, pelastuspalvelut, rahoituskauppajärjestelmät (jotka käyttävät GPS:ää ajoitukseen). GPS-huijaus on liittovaltion rikos 18 U.S.C. § 32 mukaan ja siitä seuraa ankarat rangaistukset. Lyhytkin testaus ilmateitse voi vaikuttaa lähellä olevaan infrastruktuuriin."
       },
       "Hopper": {
         "description": "Taajuushyppivä lähetin. Tulvittaa määritettyjä taajuusalueita.",
         "legal": "Vastaa häirintää. Aina laitonta.",
-        "learn": "Hopper vaihtaa nopeasti lähetystä käyttäjän määrittämällä taajuusalueella ja viettää lyhyen ajan kullakin taajuudella ennen hyppäämistä seuraavaan. Toisin kuin erillinen Jammer-sovellus, Hopper kattaa mahdollisesti paljon laajemman spektrin hyppimällä laajakaistaisen kohinan sijaan. Tämä tekee siitä tehokkaan FHSS-järjestelmien (Frequency-Hopping Spread Spectrum) kuten Wi-Fi:n, Bluetoothin ja joidenkin sotilasviestintöjen häiritsemiseen. Vaikutus on sama kuin häirinnällä — palvelunesto kohdekaistailla. Laitonta kaikilla lainkäyttöalueilla kansainvälisten radiosäännösten (ITU Radio Regulations, artikla 15) mukaan."
+        "learn": "Hopper vaihtaa nopeasti lähetystä käyttäjän määrittämällä taajuusalueella ja viettää lyhyen ajan kullakin taajuudella ennen hyppäämistä seuraavaan. Toisin kuin erillinen Jammer-sovellus, Hopper kattaa mahdollisesti paljon laajemman spektrin hyppimällä laajakaistaisen kohinan sijaan. Tämä tekee siitä tehokkaan FHSS-järjestelmien (Frequency-Hopping Spread Spectrum) kuten Wi-Fi:n, Bluetoothin ja joidenkin sotilasviestintöjen häiritsemiseen. Vaikutus on sama kuin häirinnällä  -  palvelunesto kohdekaistailla. Laitonta kaikilla lainkäyttöalueilla kansainvälisten radiosäännösten (ITU Radio Regulations, artikla 15) mukaan."
       },
       "Jammer": {
         "description": "Laajakaistainen RF-häiritsin. Kohinaa jopa 24 MHz:n kaistanleveydellä.",
@@ -510,12 +510,12 @@
       "Morse TX": {
         "description": "Morsekoodi FM-äänellä tai CW:llä.",
         "legal": "Laillinen radioamatööriluvalla sopivilla taajuuksilla.",
-        "learn": "Morsekoodi (CW — Continuous Wave) on vanhin digitaalinen moodi radiossa, joka koodaa tekstiä lyhyiden (piste) ja pitkien (viiva) signaalien kuvioina. Tämä sovellus lähettää morsea joko CW:nä (kantoaallon päälle/pois-avainnus) tai FM-äänenä. CW:tä käyttävät yhä laajalti radioamatöörit, koska se on erittäin tehokas — luettavissa signaalitasoilla selvästi puheen alapuolella. Amatöörit voivat käyttää CW:tä kaikilla amatöörikaistoilla. Sovellus ottaa vastaan tekstisyötteen ja muuntaa sen oikein ajoitetuksi morsekoodiksi konfiguroitavalla sanojen-per-minuutti-nopeudella."
+        "learn": "Morsekoodi (CW  -  Continuous Wave) on vanhin digitaalinen moodi radiossa, joka koodaa tekstiä lyhyiden (piste) ja pitkien (viiva) signaalien kuvioina. Tämä sovellus lähettää morsea joko CW:nä (kantoaallon päälle/pois-avainnus) tai FM-äänenä. CW:tä käyttävät yhä laajalti radioamatöörit, koska se on erittäin tehokas  -  luettavissa signaalitasoilla selvästi puheen alapuolella. Amatöörit voivat käyttää CW:tä kaikilla amatöörikaistoilla. Sovellus ottaa vastaan tekstisyötteen ja muuntaa sen oikein ajoitetuksi morsekoodiksi konfiguroitavalla sanojen-per-minuutti-nopeudella."
       },
       "OOK TX": {
         "description": "On-Off Keying -signaaleja. PT2262-kaukosäätimet, ovikellon, autotallinovet.",
         "legal": "Laillinen vain omille laitteille.",
-        "learn": "OOK (On-Off Keying) on yksinkertaisin digitaalisen modulaation muoto — kantoaalto on joko päällä tai pois, edustaen ykkösiä ja nollia. Useimmat halvat 315/433 MHz kaukosäätimet käyttävät OOK:ta PT2262-kooderisirun kanssa (tai yhteensopivia klooneja kuten EV1527). Tähän kuuluvat autotallinoven avaamet, langattomat ovikellot, RF-pistorasiat, auton avaimenperät (vanhemmat) ja yksinkertaiset hälytynsensorit. Sovellus voi lähettää tiettyjä koodeja näiden laitteiden ohjaamiseen. Monet vanhemmat järjestelmät käyttävät kiinteitä koodeja ilman salausta, mikä tekee niistä triviaalisesti toistettavia. Uudemmat järjestelmät käyttävät vaihtuvia koodeja (kuten KeeLoq), joita tämä yksinkertainen toisto ei murra."
+        "learn": "OOK (On-Off Keying) on yksinkertaisin digitaalisen modulaation muoto  -  kantoaalto on joko päällä tai pois, edustaen ykkösiä ja nollia. Useimmat halvat 315/433 MHz kaukosäätimet käyttävät OOK:ta PT2262-kooderisirun kanssa (tai yhteensopivia klooneja kuten EV1527). Tähän kuuluvat autotallinoven avaamet, langattomat ovikellot, RF-pistorasiat, auton avaimenperät (vanhemmat) ja yksinkertaiset hälytynsensorit. Sovellus voi lähettää tiettyjä koodeja näiden laitteiden ohjaamiseen. Monet vanhemmat järjestelmät käyttävät kiinteitä koodeja ilman salausta, mikä tekee niistä triviaalisesti toistettavia. Uudemmat järjestelmät käyttävät vaihtuvia koodeja (kuten KeeLoq), joita tämä yksinkertainen toisto ei murra."
       },
       "OOK Editor": {
         "description": "Mukautettujen OOK-signaalikuvioiden rakentaminen ja lähettäminen.",
@@ -525,32 +525,32 @@
       "POCSAG TX": {
         "description": "Väärennettyjä POCSAG-hakulaiteviestejä tiettyihin RIC-osoitteisiin.",
         "legal": "Luvatonta lähetystä lisensoiduilla taajuuksilla.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) on perinteisten numeeristen ja alfanumeeristen hakulaitteiden käyttämä protokolla, joka toimii noin 150–170 MHz tai 450–470 MHz taajuuksilla alueesta riippuen. Jokaisella hakulaitteella on RIC (Radio Identity Code) — yksilöllinen osoite. Tämä sovellus luo ja lähettää POCSAG-viestejä tiettyihin RIC-osoitteisiin, mikä tarkoittaa, että voit lähettää tekstiä yksittäisille hakulaitteille. Hakulaiteverkot ovat yhä aktiivisessa käytössä sairaaloissa, pelastuspalveluissa ja joissakin yrityksissä. Lähettäminen näillä lisensoiduilla taajuuksilla ilman valtuutusta on laitonta."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) on perinteisten numeeristen ja alfanumeeristen hakulaitteiden käyttämä protokolla, joka toimii noin 150-170 MHz tai 450-470 MHz taajuuksilla alueesta riippuen. Jokaisella hakulaitteella on RIC (Radio Identity Code)  -  yksilöllinen osoite. Tämä sovellus luo ja lähettää POCSAG-viestejä tiettyihin RIC-osoitteisiin, mikä tarkoittaa, että voit lähettää tekstiä yksittäisille hakulaitteille. Hakulaiteverkot ovat yhä aktiivisessa käytössä sairaaloissa, pelastuspalveluissa ja joissakin yrityksissä. Lähettäminen näillä lisensoiduilla taajuuksilla ilman valtuutusta on laitonta."
       },
       "RDS": {
         "description": "FM-lähetys Radio Data System -metatiedoilla.",
         "legal": "Vaatii lähetysluvan. Pieni teho voi olla sallittua joillakin alueilla.",
-        "learn": "RDS (Radio Data System) on teknologia aseman nimen, kappaleen nimen ja liikennetiedotteiden takana, jotka näkyvät autoradion näytöllä FM-kuuntelun (88–108 MHz) aikana. RDS on 57 kHz:n alikantoaalto FM-stereosignaalin päällä. Tämä sovellus lähettää FM-signaalin RDS-datan kanssa — voit asettaa aseman nimen (PS), radiotekstin (RT), ohjelmatyypin (PTY) ja liikennetiedotteet (TA/TP). Pienellä teholla ja lyhyellä kantamalla tätä käytetään yleisesti henkilökohtaisissa FM-lähettimissä, mutta mikä tahansa FM-lähetys vaatii teknisesti luvan kansalliselta viranomaiselta."
+        "learn": "RDS (Radio Data System) on teknologia aseman nimen, kappaleen nimen ja liikennetiedotteiden takana, jotka näkyvät autoradion näytöllä FM-kuuntelun (88-108 MHz) aikana. RDS on 57 kHz:n alikantoaalto FM-stereosignaalin päällä. Tämä sovellus lähettää FM-signaalin RDS-datan kanssa  -  voit asettaa aseman nimen (PS), radiotekstin (RT), ohjelmatyypin (PTY) ja liikennetiedotteet (TA/TP). Pienellä teholla ja lyhyellä kantamalla tätä käytetään yleisesti henkilökohtaisissa FM-lähettimissä, mutta mikä tahansa FM-lähetys vaatii teknisesti luvan kansalliselta viranomaiselta."
       },
       "Soundboard": {
         "description": "WAV-ääni FM:llä. CTCSS-äänet, langattomien mikrofonien yhteensopivuus.",
         "legal": "Vaatii luvan useimmilla taajuuksilla.",
-        "learn": "Soundboard toistaa WAV-tiedostoja SD-kortilta FM-äänilähetyksinä. Se voi myös tuottaa CTCSS (Continuous Tone-Coded Squelch System) alitaajuisia ääniä — matalan taajuuden äänet (67–254,1 Hz), joita kaksisuuntaiset radiot käyttävät ei-toivotun liikenteen suodattamiseen jaetuilla taajuuksilla. Tämä tekee siitä hyödyllisen radio-squelch-järjestelmien ja CTCSS-toistinten testaamiseen. Langattomien mikrofonien yhteensopivuus tarkoittaa, että se voi lähettää langattomien mikrofonijärjestelmien taajuuksilla (tyypillisesti VHF/UHF) toimien käytännössä langattomana mikrofonina."
+        "learn": "Soundboard toistaa WAV-tiedostoja SD-kortilta FM-äänilähetyksinä. Se voi myös tuottaa CTCSS (Continuous Tone-Coded Squelch System) alitaajuisia ääniä  -  matalan taajuuden äänet (67-254,1 Hz), joita kaksisuuntaiset radiot käyttävät ei-toivotun liikenteen suodattamiseen jaetuilla taajuuksilla. Tämä tekee siitä hyödyllisen radio-squelch-järjestelmien ja CTCSS-toistinten testaamiseen. Langattomien mikrofonien yhteensopivuus tarkoittaa, että se voi lähettää langattomien mikrofonijärjestelmien taajuuksilla (tyypillisesti VHF/UHF) toimien käytännössä langattomana mikrofonina."
       },
       "Spectrum Painter": {
         "description": "Kuva/teksti piirretty RF-spektriin näkyvänä waterfall-näytöillä.",
         "legal": "Kuriositeetti, mutta silti luvatonta lähetystä useimmilla taajuuksilla.",
-        "learn": "Spectrum Painter muuntaa kuvan tai tekstin RF-signaaliksi, joka waterfall-näytöllä (kuten SDR++ tai GQRX) näkyy näkyvänä kuvana tai viestinä spektrissä. Se toimii vaihtelemalla lähetystaajuutta ajan myötä 'maalatakseen' kunkin pikselirivin — kirkkaammat pikselit saavat enemmän tehoa, tummemmat vähemmän. Tulos on puhtaasti visuaalista taidetta, joka näkyy vain spektrianalysaattoreilla. Vaikka se on luova ja suosittu demoissa, se on silti RF-lähetys ja saman sääntelyn alainen kuin mikä tahansa muu lähetin. Parhaiten käytettävissä dummy load -kuorman kanssa tai käyttämättömällä taajuudella minimaalisella teholla."
+        "learn": "Spectrum Painter muuntaa kuvan tai tekstin RF-signaaliksi, joka waterfall-näytöllä (kuten SDR++ tai GQRX) näkyy näkyvänä kuvana tai viestinä spektrissä. Se toimii vaihtelemalla lähetystaajuutta ajan myötä 'maalatakseen' kunkin pikselirivin  -  kirkkaammat pikselit saavat enemmän tehoa, tummemmat vähemmän. Tulos on puhtaasti visuaalista taidetta, joka näkyy vain spektrianalysaattoreilla. Vaikka se on luova ja suosittu demoissa, se on silti RF-lähetys ja saman sääntelyn alainen kuin mikä tahansa muu lähetin. Parhaiten käytettävissä dummy load -kuorman kanssa tai käyttämättömällä taajuudella minimaalisella teholla."
       },
       "SSTV TX": {
         "description": "Hitaan pyyhkäisyn TV-kuvat FM:llä. Scottie/Martin/SC2-tilat.",
         "legal": "Laillinen radioamatööriluvalla määrätyillä taajuuksilla.",
-        "learn": "SSTV (Slow Scan Television) on menetelmä still-kuvien lähettämiseen radion kautta, jota radioamatöörit ovat käyttäneet laajasti 1960-luvulta lähtien. Toisin kuin TV-lähetys, SSTV lähettää yhden kuvan 30–120 sekunnin aikana koodaamalla pikselien kirkkauden äänitaajuuksiksi (1200–2300 Hz). Scottie, Martin ja SC2 ovat eri koodaustiloja, jotka tasapainottavat resoluution ja lähetysajan välillä. SSTV:tä käytetään yleisesti taajuuksilla 14,230 MHz (20 m), 21,340 MHz (15 m) ja 145,500 MHz (2 m FM). ISS lähettää säännöllisesti SSTV-kuvia, jotka kuka tahansa voi vastaanottaa. Tämä sovellus lähettää kuvia SD-kortilta näissä vakioformaateissa."
+        "learn": "SSTV (Slow Scan Television) on menetelmä still-kuvien lähettämiseen radion kautta, jota radioamatöörit ovat käyttäneet laajasti 1960-luvulta lähtien. Toisin kuin TV-lähetys, SSTV lähettää yhden kuvan 30-120 sekunnin aikana koodaamalla pikselien kirkkauden äänitaajuuksiksi (1200-2300 Hz). Scottie, Martin ja SC2 ovat eri koodaustiloja, jotka tasapainottavat resoluution ja lähetysajan välillä. SSTV:tä käytetään yleisesti taajuuksilla 14,230 MHz (20 m), 21,340 MHz (15 m) ja 145,500 MHz (2 m FM). ISS lähettää säännöllisesti SSTV-kuvia, jotka kuka tahansa voi vastaanottaa. Tämä sovellus lähettää kuvia SD-kortilta näissä vakioformaateissa."
       },
       "TEDI/LCR": {
         "description": "Ranskan tieinfrastruktuurin ohjauskehyksiä. Bell 202 FSK.",
         "legal": "Tieinfrastruktuurin luvatonta hallintaa.",
-        "learn": "TEDI (Transmission Élémentaire d'Informations) ja LCR (Liaisons à Concentration de Relais) ovat ranskalaisia tieinfrastruktuuriprotokollia, joita käytetään elektronisten moottoritiekylttien, tunnelien ilmanvaihtojärjestelmien ja liikenteenhallintalaitteistojen ohjaukseen. Ne käyttävät Bell 202 FSK (Frequency Shift Keying) -modulaatiota — 1970-luvun modemistandardi, joka koodaa dataa kahtena äänitaajuutena (1200/2200 Hz). Nämä järjestelmät ohjaavat kriittistä turvallisuusinfrastruktuuria Ranskan moottoriteillä. TEDI/LCR-kehysten luvaton lähettäminen voisi muuttaa moottoritiekylttien viestejä tai häiritä tunnelien turvajärjestelmiä."
+        "learn": "TEDI (Transmission Élémentaire d'Informations) ja LCR (Liaisons à Concentration de Relais) ovat ranskalaisia tieinfrastruktuuriprotokollia, joita käytetään elektronisten moottoritiekylttien, tunnelien ilmanvaihtojärjestelmien ja liikenteenhallintalaitteistojen ohjaukseen. Ne käyttävät Bell 202 FSK (Frequency Shift Keying) -modulaatiota  -  1970-luvun modemistandardi, joka koodaa dataa kahtena äänitaajuutena (1200/2200 Hz). Nämä järjestelmät ohjaavat kriittistä turvallisuusinfrastruktuuria Ranskan moottoriteillä. TEDI/LCR-kehysten luvaton lähettäminen voisi muuttaa moottoritiekylttien viestejä tai häiritä tunnelien turvajärjestelmiä."
       },
       "TouchTunes": {
         "description": "TouchTunes-jukeboxin kaukosäädinkomennot.",
@@ -561,55 +561,55 @@
     "rxApps": {
       "ADS-B": {
         "description": "Lentokoneiden transponderiseuranta. Näyttää ICAO ID:n, kutsutunnuksen, korkeuden, sijainnin, nopeuden.",
-        "learn": "ADS-B (Automatic Dependent Surveillance–Broadcast) on järjestelmä, jolla modernit lentokoneet lähettävät identiteettinsä, sijaintinsa, korkeutensa ja nopeutensa puolen sekunnin välein taajuudella 1090 MHz. Jokaisella lentokoneella on yksilöllinen 24-bittinen ICAO-osoite (kuten rekisteritunnus). PortaPack purkaa nämä Mode S -transponderisignaalit reaaliajassa ja näyttää live-lentoluettelon — samat tiedot, joita FlightRadar24 ja FlightAware käyttävät. ADS-B on pelkkää vastaanottoa ja täysin laillista seurata. Hyvällä antennilla ja näköyhteydellä voit seurata lentokoneita yli 160 km päässä. Tämä on yksi suosituimmista ensimmäisistä sovelluksista uusille HackRF-omistajille."
+        "learn": "ADS-B (Automatic Dependent Surveillance-Broadcast) on järjestelmä, jolla modernit lentokoneet lähettävät identiteettinsä, sijaintinsa, korkeutensa ja nopeutensa puolen sekunnin välein taajuudella 1090 MHz. Jokaisella lentokoneella on yksilöllinen 24-bittinen ICAO-osoite (kuten rekisteritunnus). PortaPack purkaa nämä Mode S -transponderisignaalit reaaliajassa ja näyttää live-lentoluettelon  -  samat tiedot, joita FlightRadar24 ja FlightAware käyttävät. ADS-B on pelkkää vastaanottoa ja täysin laillista seurata. Hyvällä antennilla ja näköyhteydellä voit seurata lentokoneita yli 160 km päässä. Tämä on yksi suosituimmista ensimmäisistä sovelluksista uusille HackRF-omistajille."
       },
       "ACARS": {
         "description": "Lentokoneiden datalinkkiviestit lentokoneiden ja maa-asemien välillä.",
-        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) on 1970-luvulta käytetty digitaalinen tekstiviestijärjestelmä lentoyhtiöille. Se toimii VHF-taajuuksilla noin 129–137 MHz ja kuljettaa lyhyitä dataviestejä lentokoneiden ja maa-asemien välillä — esim. moottoreiden suorituskykyraportit, säätiedot, porttiosoitukset, polttoainetiedot ja miehistön viestintä. Viestit lähetetään selkotekstinä ilman salausta, joten voit lukea ne suoraan. Jokainen viesti sisältää koneen rekisteritunnuksen ja lennon numeron. ACARS on ilmailun tekstiviesti, ja sen seuraaminen antaa kulissien takaisen näkymän lentoyhtiöiden toimintaan."
+        "learn": "ACARS (Aircraft Communications Addressing and Reporting System) on 1970-luvulta käytetty digitaalinen tekstiviestijärjestelmä lentoyhtiöille. Se toimii VHF-taajuuksilla noin 129-137 MHz ja kuljettaa lyhyitä dataviestejä lentokoneiden ja maa-asemien välillä  -  esim. moottoreiden suorituskykyraportit, säätiedot, porttiosoitukset, polttoainetiedot ja miehistön viestintä. Viestit lähetetään selkotekstinä ilman salausta, joten voit lukea ne suoraan. Jokainen viesti sisältää koneen rekisteritunnuksen ja lennon numeron. ACARS on ilmailun tekstiviesti, ja sen seuraaminen antaa kulissien takaisen näkymän lentoyhtiöiden toimintaan."
       },
       "AFSK": {
         "description": "Audio Frequency Shift Keying -purkaja. Bell 202 -modeemisignaalit, TEDI/LCR.",
-        "learn": "AFSK (Audio Frequency Shift Keying) koodaa digitaalista dataa kahtena äänenä — tyypillisesti 1200 Hz merkille (1) ja 2200 Hz välilyönnille (0), Bell 202 -modeeministandardin mukaan 1970-luvulta. Tätä modulaatiota käytetään monissa protokollissa: APRS-radioamatööritoiminta, soittajan tunnistus, vanhat puhelinmodeemit ja ranskalaiset tieinfrastruktuurijärjestelmät (TEDI/LCR). Purkaja kuuntelee FM-ääntä ja poimii digitaalisen datan äänenvaihteluista. Jos olet joskus kuullut dial-up-modeemin kiljuvan äänen, se oli FSK. Tämä on yleiskäyttöinen purkaja mille tahansa järjestelmälle, joka käyttää audio frequency shift keyingiä."
+        "learn": "AFSK (Audio Frequency Shift Keying) koodaa digitaalista dataa kahtena äänenä  -  tyypillisesti 1200 Hz merkille (1) ja 2200 Hz välilyönnille (0), Bell 202 -modeeministandardin mukaan 1970-luvulta. Tätä modulaatiota käytetään monissa protokollissa: APRS-radioamatööritoiminta, soittajan tunnistus, vanhat puhelinmodeemit ja ranskalaiset tieinfrastruktuurijärjestelmät (TEDI/LCR). Purkaja kuuntelee FM-ääntä ja poimii digitaalisen datan äänenvaihteluista. Jos olet joskus kuullut dial-up-modeemin kiljuvan äänen, se oli FSK. Tämä on yleiskäyttöinen purkaja mille tahansa järjestelmälle, joka käyttää audio frequency shift keyingiä."
       },
       "AIS Boats": {
         "description": "Meriliikenteen alusten seuranta. MMSI, sijainti, kurssi, nopeus. Kaksi kanavaa.",
-        "learn": "AIS (Automatic Identification System) on meriliikenteen vastine ADS-B:lle — kaikkien suurten alusten (ja monien pienten) on lähetettävä identiteettinsä, sijaintinsa, nopeutensa, kurssinsa ja määränpäänsä kahdella VHF-kanavalla: AIS1 (161,975 MHz) ja AIS2 (162,025 MHz). Jokaisella aluksella on yksilöllinen 9-numeroinen MMSI-numero (Maritime Mobile Service Identity). PortaPack purkaa molemmat kanavat samanaikaisesti ja näyttää live-alusluettelon. AIS-data on se, mitä MarineTraffic.com ja VesselFinder käyttävät. Jos olet rannikon, joen tai sataman läheisyydessä, näet hinaajia, rahtialuksia, tankkereita, lauttoja ja jopa joitain kalastusveneitä. Kantama riippuu antennin korkeudesta — 30–60 km on tyypillinen veden lähellä."
+        "learn": "AIS (Automatic Identification System) on meriliikenteen vastine ADS-B:lle  -  kaikkien suurten alusten (ja monien pienten) on lähetettävä identiteettinsä, sijaintinsa, nopeutensa, kurssinsa ja määränpäänsä kahdella VHF-kanavalla: AIS1 (161,975 MHz) ja AIS2 (162,025 MHz). Jokaisella aluksella on yksilöllinen 9-numeroinen MMSI-numero (Maritime Mobile Service Identity). PortaPack purkaa molemmat kanavat samanaikaisesti ja näyttää live-alusluettelon. AIS-data on se, mitä MarineTraffic.com ja VesselFinder käyttävät. Jos olet rannikon, joen tai sataman läheisyydessä, näet hinaajia, rahtialuksia, tankkereita, lauttoja ja jopa joitain kalastusveneitä. Kantama riippuu antennin korkeudesta  -  30-60 km on tyypillinen veden lähellä."
       },
       "Analog TV": {
         "description": "Analoginen PAL-televisiovastaanotto. Pienennettä resoluutio (52×128).",
-        "learn": "Tämä sovellus vastaanottaa analogisia televisiosignaaleja PAL-standardilla (Phase Alternating Line), jota käytettiin Euroopassa, Aasiassa ja osissa Etelä-Amerikkaa ennen digitaalisen TV:n siirtymää. Se purkaa komposiittivideosignaalin pieneksi 52×128 pikselin kuvaksi PortaPackin näytölle — tarpeeksi nähdäkseen mitä lähetetään, mutta ei mukavaan katseluun. Useimmat maat ovat sammuttaneet analogisen TV:n, mutta saatat yhä löytää aktiivisia signaaleja vanhoista turvakameroista, amatööri-TV (ATV) -operaattoreilta tai maista, jotka eivät ole siirtyneet kokonaan digitaaliseen. Se on enemmän hauska historiallinen demo kuin käytännöllinen työkalu useimmilla alueilla."
+        "learn": "Tämä sovellus vastaanottaa analogisia televisiosignaaleja PAL-standardilla (Phase Alternating Line), jota käytettiin Euroopassa, Aasiassa ja osissa Etelä-Amerikkaa ennen digitaalisen TV:n siirtymää. Se purkaa komposiittivideosignaalin pieneksi 52×128 pikselin kuvaksi PortaPackin näytölle  -  tarpeeksi nähdäkseen mitä lähetetään, mutta ei mukavaan katseluun. Useimmat maat ovat sammuttaneet analogisen TV:n, mutta saatat yhä löytää aktiivisia signaaleja vanhoista turvakameroista, amatööri-TV (ATV) -operaattoreilta tai maista, jotka eivät ole siirtyneet kokonaan digitaaliseen. Se on enemmän hauska historiallinen demo kuin käytännöllinen työkalu useimmilla alueilla."
       },
       "APRS RX": {
         "description": "Radioamatöörien sijainti-/sää-/telemetriapaketteja. AX.25 AFSK:n kautta.",
-        "learn": "APRS (Automatic Packet Reporting System) on reaaliaikainen radioamatööriverkko sijainnin, sään, viestien ja telemetrian jakamiseen. Se käyttää AX.25-pakettiradiota nopeudella 1200 baudia AFSK-modulaatiolla yhdellä kansallisella taajuudella — 144,390 MHz Pohjois-Amerikassa, 144,800 MHz Euroopassa. Asemat (käsiradiot, autoseurannat, sääasemat, pallot) lähettävät paketteja, jotka digipeaterit välittävät laajalle alueelle. Kaikki APRS-liikenne näkyy aprs.fi:ssä. PortaPack purkaa nämä paketit ja näyttää kutsutunnukset, sijainnit ja viestien sisällön. Et tarvitse lisenssiä kuunteluun — vain lähettämiseen. Minkä tahansa asutun alueen lähellä näet säännöllistä APRS-toimintaa."
+        "learn": "APRS (Automatic Packet Reporting System) on reaaliaikainen radioamatööriverkko sijainnin, sään, viestien ja telemetrian jakamiseen. Se käyttää AX.25-pakettiradiota nopeudella 1200 baudia AFSK-modulaatiolla yhdellä kansallisella taajuudella  -  144,390 MHz Pohjois-Amerikassa, 144,800 MHz Euroopassa. Asemat (käsiradiot, autoseurannat, sääasemat, pallot) lähettävät paketteja, jotka digipeaterit välittävät laajalle alueelle. Kaikki APRS-liikenne näkyy aprs.fi:ssä. PortaPack purkaa nämä paketit ja näyttää kutsutunnukset, sijainnit ja viestien sisällön. Et tarvitse lisenssiä kuunteluun  -  vain lähettämiseen. Minkä tahansa asutun alueen lähellä näet säännöllistä APRS-toimintaa."
       },
       "Audio": {
         "description": "Yleiskäyttöinen analoginen äänivastaanotin. AM, NFM, WFM, SSB (USB/LSB). Tallennus WAV-muotoon.",
-        "learn": "Audio-sovellus on monikäyttöisin vastaanotin PortaPack-laitteessa — se on yleiskäyttöinen radio, joka tukee kaikkia yleisiä analogisia modulaatiotyyppejä. AM (Amplitude Modulation) radio- ja ilmailulähetyksiin. NFM (Narrowband FM) radiopuhelimiin, amatööritoistimiin ja kaksisuuntaiseen radioon. WFM (Wideband FM) FM-radioasemille kuten paikalliset musiikkiasemat 88–108 MHz. SSB (Single Sideband — USB/LSB) amatööri-HF- ja meriliikenneviestintään. Se myös tallentaa ääntä suoraan WAV-tiedostoihin SD-kortille. Tämä on sovellus, jolla useimmat aloittavat — viritä paikalliselle FM-asemalle WFM-tilassa ja kuulet musiikkia heti."
+        "learn": "Audio-sovellus on monikäyttöisin vastaanotin PortaPack-laitteessa  -  se on yleiskäyttöinen radio, joka tukee kaikkia yleisiä analogisia modulaatiotyyppejä. AM (Amplitude Modulation) radio- ja ilmailulähetyksiin. NFM (Narrowband FM) radiopuhelimiin, amatööritoistimiin ja kaksisuuntaiseen radioon. WFM (Wideband FM) FM-radioasemille kuten paikalliset musiikkiasemat 88-108 MHz. SSB (Single Sideband  -  USB/LSB) amatööri-HF- ja meriliikenneviestintään. Se myös tallentaa ääntä suoraan WAV-tiedostoihin SD-kortille. Tämä on sovellus, jolla useimmat aloittavat  -  viritä paikalliselle FM-asemalle WFM-tilassa ja kuulet musiikkia heti."
       },
       "BLE RX": {
         "description": "BLE-mainosten haistaja. Kanavat 37/38/39. MAC-valmistajahaku.",
-        "learn": "BLE (Bluetooth Low Energy) on lyhyen kantaman langaton protokolla 2,4 GHz:llä, jota käyttävät miljardit laitteet — puhelimet, aktiivisuusrannekkeet, älykellot, AirTagit, majakat, älykodin sensorit ja langattomat kuulokkeet. BLE-laitteet lähettävät jatkuvasti mainospaketteja kolmella varatulla kanavalla (37, 38, 39) ilmoittaakseen läsnäolostaan. Tämä sovellus haistelee näitä mainoksia ja näyttää MAC-osoitteen, signaalin voimakkuuden ja valmistajan nimen (haettu IEEE OUI -tietokannasta — MAC:n 3 ensimmäistä tavua tunnistavat valmistajan). Kävele minkä tahansa julkisen tilan läpi ja näet kymmeniä BLE-laitteita. Tämä on vain passiivista seurantaa — pariliitosta tai yhteyttä ei muodosteta."
+        "learn": "BLE (Bluetooth Low Energy) on lyhyen kantaman langaton protokolla 2,4 GHz:llä, jota käyttävät miljardit laitteet  -  puhelimet, aktiivisuusrannekkeet, älykellot, AirTagit, majakat, älykodin sensorit ja langattomat kuulokkeet. BLE-laitteet lähettävät jatkuvasti mainospaketteja kolmella varatulla kanavalla (37, 38, 39) ilmoittaakseen läsnäolostaan. Tämä sovellus haistelee näitä mainoksia ja näyttää MAC-osoitteen, signaalin voimakkuuden ja valmistajan nimen (haettu IEEE OUI -tietokannasta  -  MAC:n 3 ensimmäistä tavua tunnistavat valmistajan). Kävele minkä tahansa julkisen tilan läpi ja näet kymmeniä BLE-laitteita. Tämä on vain passiivista seurantaa  -  pariliitosta tai yhteyttä ei muodosteta."
       },
       "Detector": {
         "description": "Laajakaistainen signaalin ilmaisin RSSI-historianäytöllä.",
-        "learn": "Detector-sovellus seuraa tiettyä taajuutta ja piirtää RSSI:n (Received Signal Strength Indicator) ajan funktiona vierivänä historiagraafina. Ajattele sitä yksinkertaisena liikeilmaisimena RF:lle — kun signaali ilmestyy tai muuttaa voimakkuuttaan kohdetaajuudella, näet piikin graafissa. Tämä on hyödyllistä varmistettaessa, että laite lähettää, mitattaessa sensorin raportointitiheyttä, havaittaessa ajoittaista häiriötä tai tehtäessä perus-RF-tutkimuksia. Se poistaa kaiken demodulointikompleksisuuden ja vastaa yksinkertaisesti kysymykseen: 'Lähettääkö jotain täällä, ja kuinka voimakasta se on?'"
+        "learn": "Detector-sovellus seuraa tiettyä taajuutta ja piirtää RSSI:n (Received Signal Strength Indicator) ajan funktiona vierivänä historiagraafina. Ajattele sitä yksinkertaisena liikeilmaisimena RF:lle  -  kun signaali ilmestyy tai muuttaa voimakkuuttaan kohdetaajuudella, näet piikin graafissa. Tämä on hyödyllistä varmistettaessa, että laite lähettää, mitattaessa sensorin raportointitiheyttä, havaittaessa ajoittaista häiriötä tai tehtäessä perus-RF-tutkimuksia. Se poistaa kaiken demodulointikompleksisuuden ja vastaa yksinkertaisesti kysymykseen: 'Lähettääkö jotain täällä, ja kuinka voimakasta se on?'"
       },
       "ERT Meter": {
         "description": "Älykkäiden mittareiden lukeminen (sähkö, kaasu, vesi).",
-        "learn": "ERT (Encoder Receiver Transmitter) on langaton protokolla, jota älykkäät mittarit käyttävät kautta Pohjois-Amerikan sähkön-, kaasun- ja vedenkulutuksen raportointiin. Jokaiseen taloon kävelyn sijaan ERT-varustetut mittarit lähettävät lukemansa ~900 MHz:n ISM-kaistalla OOK-modulaatiolla. Sähköyhtiön auto vastaanottimella ajaa naapurustojen läpi keräten lukemat. Jokainen lähetys sisältää mittarin tunnuksen ja nykyisen kulutusarvon. PortaPack purkaa nämä ja näyttää mittaritunnukset ja lukemat alueellasi. Kaikki on salaamatonta — tunnettu yksityisyysongelma, josta on keskusteltu laajasti tietoturvatutkijayhteisössä."
+        "learn": "ERT (Encoder Receiver Transmitter) on langaton protokolla, jota älykkäät mittarit käyttävät kautta Pohjois-Amerikan sähkön-, kaasun- ja vedenkulutuksen raportointiin. Jokaiseen taloon kävelyn sijaan ERT-varustetut mittarit lähettävät lukemansa ~900 MHz:n ISM-kaistalla OOK-modulaatiolla. Sähköyhtiön auto vastaanottimella ajaa naapurustojen läpi keräten lukemat. Jokainen lähetys sisältää mittarin tunnuksen ja nykyisen kulutusarvon. PortaPack purkaa nämä ja näyttää mittaritunnukset ja lukemat alueellasi. Kaikki on salaamatonta  -  tunnettu yksityisyysongelma, josta on keskusteltu laajasti tietoturvatutkijayhteisössä."
       },
       "Flex RX": {
         "description": "FLEX-hakulaiteprotokollan purkaja. Pyörivä värinäyttö.",
-        "learn": "FLEX on Motorolan 1990-luvulla kehittämä hakulaiteprotokolla, joka on nopeampi ja tehokkaampi POCSAG:n seuraaja. Se tukee tiedonsiirtonopeuksia 1600, 3200 ja 6400 bps — huomattavasti nopeammin kuin POCSAG:n 512–2400 bps. FLEX-hakulaitteita käyttävät yhä sairaalat ja pelastuspalvelut, koska hakulaiteverkot läpäisevät rakennukset paremmin kuin matkapuhelinverkot ja toimivat matkapuhelinverkon ylikuormituksessa. Sovellus purkaa FLEX-viestit ja näyttää ne pyörivällä värinäytöllä viesttityyppien erottamiseksi. Kuten POCSAG, nämä viestit lähetetään salaamattomina — pitkäaikainen tietoturvaongelma terveydenhuollossa, jossa potilastietoja saattaa sisältyä."
+        "learn": "FLEX on Motorolan 1990-luvulla kehittämä hakulaiteprotokolla, joka on nopeampi ja tehokkaampi POCSAG:n seuraaja. Se tukee tiedonsiirtonopeuksia 1600, 3200 ja 6400 bps  -  huomattavasti nopeammin kuin POCSAG:n 512-2400 bps. FLEX-hakulaitteita käyttävät yhä sairaalat ja pelastuspalvelut, koska hakulaiteverkot läpäisevät rakennukset paremmin kuin matkapuhelinverkot ja toimivat matkapuhelinverkon ylikuormituksessa. Sovellus purkaa FLEX-viestit ja näyttää ne pyörivällä värinäytöllä viesttityyppien erottamiseksi. Kuten POCSAG, nämä viestit lähetetään salaamattomina  -  pitkäaikainen tietoturvaongelma terveydenhuollossa, jossa potilastietoja saattaa sisältyä."
       },
       "Fox Hunt": {
         "description": "Lähettimen etsintäassistentti. Signaalin voimakkuuden visualisointi. GPS/karttaintegraatio.",
-        "learn": "Ketunmetsästys (myös lähettimenmetsästys, T-hunting tai ARDF — Amateur Radio Direction Finding) on urheilu/harjoitus, jossa osallistujat jäljittävät piilotetun radiolähettimen käyttäen vain vastaanotinta ja suunta-antennia. Fox Hunt -sovellus muuttaa PortaPack-laitteesi metsästystyökaluksi — se näyttää signaalin voimakkuuden visuaalisena indikaattorina ja integroituu GPS:iin reitin kirjaamiseksi ja lähettimen suunnan arvioimiseksi. Kun lähestyt kettua, signaali vahvistuu. Tämä on suosittu radioamatöörikerhotoiminta ja sitä käytetään myös todellisissa tilanteissa kuten häiriölähteiden jäljittämisessä tai hätämajakoiden paikantamisessa."
+        "learn": "Ketunmetsästys (myös lähettimenmetsästys, T-hunting tai ARDF  -  Amateur Radio Direction Finding) on urheilu/harjoitus, jossa osallistujat jäljittävät piilotetun radiolähettimen käyttäen vain vastaanotinta ja suunta-antennia. Fox Hunt -sovellus muuttaa PortaPack-laitteesi metsästystyökaluksi  -  se näyttää signaalin voimakkuuden visuaalisena indikaattorina ja integroituu GPS:iin reitin kirjaamiseksi ja lähettimen suunnan arvioimiseksi. Kun lähestyt kettua, signaali vahvistuu. Tämä on suosittu radioamatöörikerhotoiminta ja sitä käytetään myös todellisissa tilanteissa kuten häiriölähteiden jäljittämisessä tai hätämajakoiden paikantamisessa."
       },
       "gfxEQ": {
         "description": "Graafinen äänentaajuuskorjaimen visualisointi WFM-radiolle.",
-        "learn": "gfxEQ on visuaalinen äänispektrianalysaattori, joka toimii FM-radiovastaanoton (WFM) aikana. Se näyttää reaaliaikaisen graafisen taajuuskorjaimen — samat pompivat palkit kuin stereoissa — näyttäen vastaanotetun äänen taajuussisällön. Bassotaajuudet vasemmalla, diskantit oikealla, palkit pomppivat musiikin tahtiin. Se on hauska visualisointityökalu, joka muuttaa PortaPack-laitteesi retron näköiseksi FM-radioksi spektrinäytöllä. Viritä musiikkiasemalle WFM-tilassa ja katso sen reagoivan ääneen. Puhtaasti kosmeettinen mutta viihdyttävä."
+        "learn": "gfxEQ on visuaalinen äänispektrianalysaattori, joka toimii FM-radiovastaanoton (WFM) aikana. Se näyttää reaaliaikaisen graafisen taajuuskorjaimen  -  samat pompivat palkit kuin stereoissa  -  näyttäen vastaanotetun äänen taajuussisällön. Bassotaajuudet vasemmalla, diskantit oikealla, palkit pomppivat musiikin tahtiin. Se on hauska visualisointityökalu, joka muuttaa PortaPack-laitteesi retron näköiseksi FM-radioksi spektrinäytöllä. Viritä musiikkiasemalle WFM-tilassa ja katso sen reagoivan ääneen. Puhtaasti kosmeettinen mutta viihdyttävä."
       },
       "Level": {
         "description": "Signaalitasomittari tietyllä taajuudella. Ulkoinen sovellus.",
@@ -617,69 +617,69 @@
       },
       "Looking Glass": {
         "description": "Laajakaistainen spektri-waterfall. Kolme näyttötilaa: SPECTR, LIVE-V, PEAK-V.",
-        "learn": "Looking Glass on laajakaistainen spektrianalysaattori, joka pyyhkäisee konfiguroitavan taajuusalueen yli ja näyttää tulokset waterfallina. Toisin kuin Audio-sovellus (joka virittää yhdelle taajuudelle), Looking Glass skannaa laajan kaistan näyttääkseen kaiken aktiivisen. Kolme näyttötilaa: SPECTR näyttää perinteisen spektrinäkymän (teho vs. taajuus), LIVE-V näyttää live-vertikaalisen waterfallin (aika vierittyen alas, taajuus vasemmalta oikealle, kirkkaus = signaalin voimakkuus) ja PEAK-V pitää huippuarvot. Tämä on ensisijainen työkalusi tutkiaksesi mitä on ilmassa millä tahansa kaistalla — voit skannata kokonaisia ISM-kaistoja, FM-lähetysalueen tai minkä tahansa HackRF:n kattaman alueen (1 MHz–6 GHz)."
+        "learn": "Looking Glass on laajakaistainen spektrianalysaattori, joka pyyhkäisee konfiguroitavan taajuusalueen yli ja näyttää tulokset waterfallina. Toisin kuin Audio-sovellus (joka virittää yhdelle taajuudelle), Looking Glass skannaa laajan kaistan näyttääkseen kaiken aktiivisen. Kolme näyttötilaa: SPECTR näyttää perinteisen spektrinäkymän (teho vs. taajuus), LIVE-V näyttää live-vertikaalisen waterfallin (aika vierittyen alas, taajuus vasemmalta oikealle, kirkkaus = signaalin voimakkuus) ja PEAK-V pitää huippuarvot. Tämä on ensisijainen työkalusi tutkiaksesi mitä on ilmassa millä tahansa kaistalla  -  voit skannata kokonaisia ISM-kaistoja, FM-lähetysalueen tai minkä tahansa HackRF:n kattaman alueen (1 MHz-6 GHz)."
       },
       "Morse RX": {
         "description": "Purkaa morsekoodin (CW) tekstiksi.",
-        "learn": "Morsekoodi (CW — Continuous Wave) koodaa kirjaimia ja numeroita lyhyiden signaalien (piste: ·) ja pitkien signaalien (viiva: —) sekvenssinä. 1830-luvulla kehitettyä sitä käyttävät yhä radioamatöörit, koska CW-signaalit voidaan purkaa erittäin alhaisilla signaalitasoilla — selvästi puheen vaatiman alapuolella. Morse RX -sovellus kuuntelee CW-signaaleja ja purkaa ne automaattisesti tekstiksi näytölle. Se toimii havaitsemalla kantoaallon päälle/pois-kuvion ja ajoittamalla pisteet ja viivat. Aktiivista morsea löytyy amatööri-HF-kaistoilta (erityisesti 7,000–7,040 MHz ja 14,000–14,070 MHz). Automaattinen purku voi olla vaikeaa heikkojen signaalien tai epätavallisen välistyksen kanssa, mutta toimii hyvin vahvojen, hyvin ajoitettujen lähetysten kanssa."
+        "learn": "Morsekoodi (CW  -  Continuous Wave) koodaa kirjaimia ja numeroita lyhyiden signaalien (piste: ·) ja pitkien signaalien (viiva:  - ) sekvenssinä. 1830-luvulla kehitettyä sitä käyttävät yhä radioamatöörit, koska CW-signaalit voidaan purkaa erittäin alhaisilla signaalitasoilla  -  selvästi puheen vaatiman alapuolella. Morse RX -sovellus kuuntelee CW-signaaleja ja purkaa ne automaattisesti tekstiksi näytölle. Se toimii havaitsemalla kantoaallon päälle/pois-kuvion ja ajoittamalla pisteet ja viivat. Aktiivista morsea löytyy amatööri-HF-kaistoilta (erityisesti 7,000-7,040 MHz ja 14,000-14,070 MHz). Automaattinen purku voi olla vaikeaa heikkojen signaalien tai epätavallisen välistyksen kanssa, mutta toimii hyvin vahvojen, hyvin ajoitettujen lähetysten kanssa."
       },
       "NOAA": {
         "description": "NOAA APT -sääsatelliittikuvien purkaja.",
-        "learn": "NOAA operoi napakierrolla olevia sääsatelliitteja (NOAA-15, 18, 19), jotka lähettävät jatkuvasti live-sääkuvia kiertäessään Maata noin 100 minuutin välein. APT-signaali (Automatic Picture Transmission) on analoginen formaatti VHF:llä (137 MHz:n kaista), joka on ollut käytössä 1960-luvulta. Kun satelliitti kulkee yläpuolelta (näkyvissä noin 10–15 minuuttia), se lähettää harmaasävykuvan rivi kerrallaan — rakennat kirjaimellisesti säävalokuvan reaaliajassa. PortaPack purkaa tämän APT-signaalin suoraan kuvaksi näytölle. Tarvitset hyvän antennin (V-dipoli tai QFH-antenni toimii hyvin) ja kirkkaan ylilennon. Tarkista n2yo.com tai Heavens-Above ylilennon ajat sijainnillesi."
+        "learn": "NOAA operoi napakierrolla olevia sääsatelliitteja (NOAA-15, 18, 19), jotka lähettävät jatkuvasti live-sääkuvia kiertäessään Maata noin 100 minuutin välein. APT-signaali (Automatic Picture Transmission) on analoginen formaatti VHF:llä (137 MHz:n kaista), joka on ollut käytössä 1960-luvulta. Kun satelliitti kulkee yläpuolelta (näkyvissä noin 10-15 minuuttia), se lähettää harmaasävykuvan rivi kerrallaan  -  rakennat kirjaimellisesti säävalokuvan reaaliajassa. PortaPack purkaa tämän APT-signaalin suoraan kuvaksi näytölle. Tarvitset hyvän antennin (V-dipoli tai QFH-antenni toimii hyvin) ja kirkkaan ylilennon. Tarkista n2yo.com tai Heavens-Above ylilennon ajat sijainnillesi."
       },
       "NRF": {
         "description": "Nordic nRF24L01 -protokollan purkaja. Langattomat näppäimistöt, hiiret, IoT.",
-        "learn": "nRF24L01 on Nordic Semiconductorin laajasti käytetty 2,4 GHz:n langaton lähetinvastaotinsiru, joka löytyy miljoonista laitteista — langattomat näppäimistöt, hiiret, peliohjaimet, RC-lelut, IoT-sensorit ja DIY Arduino/ESP-projektit. Se käyttää yksinkertaista pakettipohjaista protokollaa osoitteilla ja kanavilla. NRF-sovellus purkaa nämä lähetykset ja näyttää raa'an pakkadatan. Tämä on erityisen kiinnostavaa tietoturvatutkimukselle: jotkut vanhemmat nRF24L01:tä käyttävät langattomat näppäimistöt lähettävät näppäinpainalluksia heikolla tai ilman salausta ('MouseJack'-haavoittuvuusluokka). Sovellus auttaa ymmärtämään, mitä langattomat oheislaitteet lähettävät ja kuinka alttiita ne tiedot ovat."
+        "learn": "nRF24L01 on Nordic Semiconductorin laajasti käytetty 2,4 GHz:n langaton lähetinvastaotinsiru, joka löytyy miljoonista laitteista  -  langattomat näppäimistöt, hiiret, peliohjaimet, RC-lelut, IoT-sensorit ja DIY Arduino/ESP-projektit. Se käyttää yksinkertaista pakettipohjaista protokollaa osoitteilla ja kanavilla. NRF-sovellus purkaa nämä lähetykset ja näyttää raa'an pakkadatan. Tämä on erityisen kiinnostavaa tietoturvatutkimukselle: jotkut vanhemmat nRF24L01:tä käyttävät langattomat näppäimistöt lähettävät näppäinpainalluksia heikolla tai ilman salausta ('MouseJack'-haavoittuvuusluokka). Sovellus auttaa ymmärtämään, mitä langattomat oheislaitteet lähettävät ja kuinka alttiita ne tiedot ovat."
       },
       "POCSAG RX": {
         "description": "POCSAG-hakulaiteviestien purkaja. Numeerinen ja teksti. Manuaalinen baudinopeus.",
-        "learn": "POCSAG (Post Office Code Standardization Advisory Group) on käytetyin hakulaiteprotokolla, kehitetty 1982 ja yhä aktiivisessa käytössä — erityisesti sairaaloissa, pelastuslaitoksissa ja hätäpalveluissa. Hakulaitteita suositaan kriittiseen viestintään, koska hakulaiteverkot läpäisevät rakennukset paremmin kuin matkapuhelinverkot ja toimivat matkapuhelinverkon katkosten aikana. POCSAG-viestit lähetetään salaamattomina nopeudella 512, 1200 tai 2400 baudia taajuuksilla, jotka vaihtelevat maittain (yleisiä: 148–170 MHz, 450–470 MHz). PortaPack purkaa sekä numeeriset että alfanumeeriset viestit. Monilla alueilla näet sairaaloiden kutsuja, ravintoloiden hälytyksiä ja hätäpalvelujen lähettämisviestejä — kaikki selkotekstinä, mikä on edelleen merkittävä yksityisyysongelma."
+        "learn": "POCSAG (Post Office Code Standardization Advisory Group) on käytetyin hakulaiteprotokolla, kehitetty 1982 ja yhä aktiivisessa käytössä  -  erityisesti sairaaloissa, pelastuslaitoksissa ja hätäpalveluissa. Hakulaitteita suositaan kriittiseen viestintään, koska hakulaiteverkot läpäisevät rakennukset paremmin kuin matkapuhelinverkot ja toimivat matkapuhelinverkon katkosten aikana. POCSAG-viestit lähetetään salaamattomina nopeudella 512, 1200 tai 2400 baudia taajuuksilla, jotka vaihtelevat maittain (yleisiä: 148-170 MHz, 450-470 MHz). PortaPack purkaa sekä numeeriset että alfanumeeriset viestit. Monilla alueilla näet sairaaloiden kutsuja, ravintoloiden hälytyksiä ja hätäpalvelujen lähettämisviestejä  -  kaikki selkotekstinä, mikä on edelleen merkittävä yksityisyysongelma."
       },
       "ProtoView": {
         "description": "Yleinen sub-GHz-protokolla-analysaattori. Visualisoi raakaa protokolladataa.",
-        "learn": "ProtoView on protokolla-agnostinen signaalin analysaattori sub-GHz-taajuuksille (tyypillisesti 300–928 MHz ISM-kaistat). Sen sijaan että purkaisi tietyn protokollan, se kaappaa raakasignaalin ja näyttää bittitason ajoituksen — näyttäen todelliset ykköset ja nollat, pulssien leveydet ja signaalin rakenteen. Tämä on korvaamatonta tuntemattomien protokollien käänteissuunnittelussa: näet preamblen, synkronointisanan, datasisällön ja mahdolliset kuviot. Se on kuin logiikka-analysaattori RF-signaaleille. Kun kohtaat laitteen, joka käyttää Mayhemiin sisäänrakentamatonta protokollaa, ProtoView auttaa selvittämään mitä se tekee. Toimii parhaiten yksinkertaisilla OOK- ja FSK-modulaatioilla, jotka ovat yleisiä kaukosäätimissä, sensoreissa ja IoT-laitteissa."
+        "learn": "ProtoView on protokolla-agnostinen signaalin analysaattori sub-GHz-taajuuksille (tyypillisesti 300-928 MHz ISM-kaistat). Sen sijaan että purkaisi tietyn protokollan, se kaappaa raakasignaalin ja näyttää bittitason ajoituksen  -  näyttäen todelliset ykköset ja nollat, pulssien leveydet ja signaalin rakenteen. Tämä on korvaamatonta tuntemattomien protokollien käänteissuunnittelussa: näet preamblen, synkronointisanan, datasisällön ja mahdolliset kuviot. Se on kuin logiikka-analysaattori RF-signaaleille. Kun kohtaat laitteen, joka käyttää Mayhemiin sisäänrakentamatonta protokollaa, ProtoView auttaa selvittämään mitä se tekee. Toimii parhaiten yksinkertaisilla OOK- ja FSK-modulaatioilla, jotka ovat yleisiä kaukosäätimissä, sensoreissa ja IoT-laitteissa."
       },
       "Radiosonde": {
         "description": "Sääpalloseuranta. M10, M20, M2K2, RS41-SG. GPS, korkeus, akku.",
-        "learn": "Radiosondit ovat pieniä mittauslaitteita, jotka laukaistaan säähavaintopalloilla kahdesti päivässä noin 900 asemalta ympäri maailman (klo 00:00 ja 12:00 UTC). Kun pallo nousee noin 30 km:n korkeuteen noin 90 minuutissa, radiosondi lähettää lämpötilan, kosteuden, paineen, tuulen nopeuden/suunnan ja GPS-sijainnin taajuudella 400–406 MHz. PortaPack purkaa useita yleisiä tyyppejä: Vaisala RS41-SG (yleisin maailmanlaajuisesti), Meteomodem M10/M20 ja M2K2. Voit seurata pallon GPS-sijaintia, korkeutta ja akkujännitettä reaaliajassa nousun aikana ja jopa ennustaa laskeutumispaikan. Radiosondien metsästys — pudonneen mittauslaitteen löytäminen — on suosittu harrastus. Tarkista radiosondy.info laukaisupaikat lähelläsi."
+        "learn": "Radiosondit ovat pieniä mittauslaitteita, jotka laukaistaan säähavaintopalloilla kahdesti päivässä noin 900 asemalta ympäri maailman (klo 00:00 ja 12:00 UTC). Kun pallo nousee noin 30 km:n korkeuteen noin 90 minuutissa, radiosondi lähettää lämpötilan, kosteuden, paineen, tuulen nopeuden/suunnan ja GPS-sijainnin taajuudella 400-406 MHz. PortaPack purkaa useita yleisiä tyyppejä: Vaisala RS41-SG (yleisin maailmanlaajuisesti), Meteomodem M10/M20 ja M2K2. Voit seurata pallon GPS-sijaintia, korkeutta ja akkujännitettä reaaliajassa nousun aikana ja jopa ennustaa laskeutumispaikan. Radiosondien metsästys  -  pudonneen mittauslaitteen löytäminen  -  on suosittu harrastus. Tarkista radiosondy.info laukaisupaikat lähelläsi."
       },
       "Scanner": {
         "description": "Taajuusskanneri. ~20 taajuutta/s. Värikoodattu (harmaa/keltainen/vihreä).",
-        "learn": "Scanner-sovellus virittää nopeasti taajuuslistan läpi (noin 20 sekunnissa) ja pysähtyy havaitessaan toimintaa — aivan kuten perinteinen poliisiskanneri. Taajuudet ovat värikoodattuja: harmaa tarkoittaa ei signaalia, keltainen heikkoa signaalia, vihreä aktiivista signaalia ja skanneri on pysähtynyt kuuntelua varten. Voit ladata taajuuslistoja SD-kortilta (freqman-tiedostoja) tai syöttää taajuudet manuaalisesti. Skanneri jatkaa etsintää signaalin kadottua. Tämä on hyödyllistä useiden kanavien seuraamiseen — pelastuspalvelut, amatööritoistit, yritysradiot tai mikä tahansa joukko tunnettuja aktiivisia taajuuksia alueellasi. Yhteisön taajuuslistat useimmille alueille ovat saatavilla Mayhem freqman -arkistossa."
+        "learn": "Scanner-sovellus virittää nopeasti taajuuslistan läpi (noin 20 sekunnissa) ja pysähtyy havaitessaan toimintaa  -  aivan kuten perinteinen poliisiskanneri. Taajuudet ovat värikoodattuja: harmaa tarkoittaa ei signaalia, keltainen heikkoa signaalia, vihreä aktiivista signaalia ja skanneri on pysähtynyt kuuntelua varten. Voit ladata taajuuslistoja SD-kortilta (freqman-tiedostoja) tai syöttää taajuudet manuaalisesti. Skanneri jatkaa etsintää signaalin kadottua. Tämä on hyödyllistä useiden kanavien seuraamiseen  -  pelastuspalvelut, amatööritoistit, yritysradiot tai mikä tahansa joukko tunnettuja aktiivisia taajuuksia alueellasi. Yhteisön taajuuslistat useimmille alueille ovat saatavilla Mayhem freqman -arkistossa."
       },
       "Search": {
         "description": "Taajuusalueen haku waterfall-näytöllä. 'Etsi ja pysy' -tila.",
-        "learn": "Search on kuin Scanner, mutta tuntemattomien signaalien löytämiseen. Sen sijaan että tarkistaisi tunnettujen taajuuksien listan, se pyyhkäisee jatkuvasti taajuusaluetta ja pysähtyy löytäessään aktiivisen signaalin. Sisäänrakennettu waterfall-näyttö näyttää signaalitoiminnan ajan suhteen, mikä tekee ajoittaisten lähetysten havaitsemisesta helppoa. 'Etsi ja pysy' -tila lukittuu löydettyyn signaaliin ja pysyy siinä kunnes se loppuu, ja jatkaa sitten etsintää. Tämä on sovellus taajuuskaistan tutkimiseen ja aktiivisten signaalien löytämiseen — sinun ei tarvitse tietää tarkkoja taajuuksia etukäteen. Yhdistä Looking Glass -sovellukseen: käytä Looking Glassia tunnistamaan visuaalisesti aktiiviset kaistat, käytä sitten Searchia kuunnellaksesi."
+        "learn": "Search on kuin Scanner, mutta tuntemattomien signaalien löytämiseen. Sen sijaan että tarkistaisi tunnettujen taajuuksien listan, se pyyhkäisee jatkuvasti taajuusaluetta ja pysähtyy löytäessään aktiivisen signaalin. Sisäänrakennettu waterfall-näyttö näyttää signaalitoiminnan ajan suhteen, mikä tekee ajoittaisten lähetysten havaitsemisesta helppoa. 'Etsi ja pysy' -tila lukittuu löydettyyn signaaliin ja pysyy siinä kunnes se loppuu, ja jatkaa sitten etsintää. Tämä on sovellus taajuuskaistan tutkimiseen ja aktiivisten signaalien löytämiseen  -  sinun ei tarvitse tietää tarkkoja taajuuksia etukäteen. Yhdistä Looking Glass -sovellukseen: käytä Looking Glassia tunnistamaan visuaalisesti aktiiviset kaistat, käytä sitten Searchia kuunnellaksesi."
       },
       "SSTV RX": {
         "description": "Slow Scan Television -vastaanotin. Purkaa kuvalähetyksiä.",
-        "learn": "SSTV (Slow Scan Television) lähettää still-kuvia radion kautta koodaamalla pikselien kirkkauden äänitaajuuksiksi (1200–2300 Hz). Yksi kuva kestää 30–120 sekuntia ja rakentuu näytölle rivi kerrallaan. SSTV:tä ovat käyttäneet radioamatöörit 1960-luvulta ja se on yhä aktiivinen — yleisiä kutsutaajuuksia ovat 14,230 MHz (20 m:n kaista) ja 145,500 MHz (2 m FM). Kansainvälinen avaruusasema (ISS) lähettää ajoittain SSTV-kuvia taajuudella 145,800 MHz erikoistapahtumien aikana, ja kuka tahansa vastaanottimella voi purkaa ne. PortaPackin SSTV RX -sovellus tunnistaa automaattisesti koodaustilan (Scottie, Martin, Robot jne.) ja rakentaa kuvan näytölle vastaanotettaessa."
+        "learn": "SSTV (Slow Scan Television) lähettää still-kuvia radion kautta koodaamalla pikselien kirkkauden äänitaajuuksiksi (1200-2300 Hz). Yksi kuva kestää 30-120 sekuntia ja rakentuu näytölle rivi kerrallaan. SSTV:tä ovat käyttäneet radioamatöörit 1960-luvulta ja se on yhä aktiivinen  -  yleisiä kutsutaajuuksia ovat 14,230 MHz (20 m:n kaista) ja 145,500 MHz (2 m FM). Kansainvälinen avaruusasema (ISS) lähettää ajoittain SSTV-kuvia taajuudella 145,800 MHz erikoistapahtumien aikana, ja kuka tahansa vastaanottimella voi purkaa ne. PortaPackin SSTV RX -sovellus tunnistaa automaattisesti koodaustilan (Scottie, Martin, Robot jne.) ja rakentaa kuvan näytölle vastaanotettaessa."
       },
       "SubCar": {
         "description": "FM-lähetyksen alikantoaallon purkaja (SCA-palvelut).",
-        "learn": "FM-radioasemat voivat kuljettaa piilotettuja äänikanavia nimeltä alikantoaaltoja (SCA — Subsidiary Communications Authorization) päästereoäänen ohella. Nämä alikantoaallot sijaitsevat stereosignaalin yläpuolella taajuudella 67 kHz tai 92 kHz ja kuljettavat erillistä äänisisältöä: taustamusikkipalveluja (kuten alkuperäinen Muzak), lukupalveluja näkövammaisille, vieraskielisiä ohjelmia tai datapalveluja. SubCar purkaa nämä piilotetut kanavat, joihin normaali FM-radio ei pääse. Useimmat ihmiset eivät tiedä näiden olemassaolosta — ne ovat olleet osa FM-lähetystoimintaa 1950-luvulta. Saatavuus vaihtelee aseman ja alueen mukaan; monet asemat eivät enää käytä alikantoaaltoja, mutta jotkut tarjoavat yhä lukupalveluja tai erikoisäänisisältöä."
+        "learn": "FM-radioasemat voivat kuljettaa piilotettuja äänikanavia nimeltä alikantoaaltoja (SCA  -  Subsidiary Communications Authorization) päästereoäänen ohella. Nämä alikantoaallot sijaitsevat stereosignaalin yläpuolella taajuudella 67 kHz tai 92 kHz ja kuljettavat erillistä äänisisältöä: taustamusikkipalveluja (kuten alkuperäinen Muzak), lukupalveluja näkövammaisille, vieraskielisiä ohjelmia tai datapalveluja. SubCar purkaa nämä piilotetut kanavat, joihin normaali FM-radio ei pääse. Useimmat ihmiset eivät tiedä näiden olemassaolosta  -  ne ovat olleet osa FM-lähetystoimintaa 1950-luvulta. Saatavuus vaihtelee aseman ja alueen mukaan; monet asemat eivät enää käytä alikantoaaltoja, mutta jotkut tarjoavat yhä lukupalveluja tai erikoisäänisisältöä."
       },
       "SubGhzD": {
         "description": "Sub-GHz-protokollan purkaja. Avaimenperät, autotallinovet, sääasemat, ISM-laitteet. Suositus: AMP 0, LNA 32, VGA 20.",
-        "learn": "SubGhzD (Sub-GHz Decoder) on yksi suosituimmista Mayhem-sovelluksista — se purkaa satojen yleisten langattomien laitteiden käyttämät protokollat ISM-kaistoilla (Industrial, Scientific, Medical) taajuuksilla 315, 433, 868 ja 915 MHz. Näihin kuuluvat auton avaimenperät (kiinteät ja jotkut vaihtuvat koodit), autotallinoven avaamet, langattomat ovikellot, sääasemat, rengaspaineanturit, langattomat lämpömittarit, maakosteusanturit ja monet IoT-laitteet. Sovellus tunnistaa protokollan, näyttää raakadatan ja voi tallentaa kaappaukset SD-kortille. Aloita AMP pois päältä, LNA 32, VGA 20 — nämä ovat suositellut vahvistusasetukset. Paina kaukosäädintä tai odota sääaseman lähetystä ja näet puretun datan."
+        "learn": "SubGhzD (Sub-GHz Decoder) on yksi suosituimmista Mayhem-sovelluksista  -  se purkaa satojen yleisten langattomien laitteiden käyttämät protokollat ISM-kaistoilla (Industrial, Scientific, Medical) taajuuksilla 315, 433, 868 ja 915 MHz. Näihin kuuluvat auton avaimenperät (kiinteät ja jotkut vaihtuvat koodit), autotallinoven avaamet, langattomat ovikellot, sääasemat, rengaspaineanturit, langattomat lämpömittarit, maakosteusanturit ja monet IoT-laitteet. Sovellus tunnistaa protokollan, näyttää raakadatan ja voi tallentaa kaappaukset SD-kortille. Aloita AMP pois päältä, LNA 32, VGA 20  -  nämä ovat suositellut vahvistusasetukset. Paina kaukosäädintä tai odota sääaseman lähetystä ja näet puretun datan."
       },
       "TPMS RX": {
         "description": "Rengaspaineen seurannan purkaja. Anturitunnukset, paine, lämpötila.",
-        "learn": "TPMS-anturit (Tire Pressure Monitoring System) ovat pakollisia kaikissa uusissa ajoneuvoissa Yhdysvalloissa (vuodesta 2007) ja EU:ssa (vuodesta 2014). Jokainen rengas sisältää pienen langattoman anturin, joka lähettää rengaspaineen ja lämpötilan noin 60 sekunnin välein taajuudella 315 MHz (Pohjois-Amerikka) tai 433 MHz (Eurooppa). Jokaisella anturilla on yksilöllinen 32-bittinen tunnus tiettyyn renkaaseen liitettynä. PortaPack purkaa nämä lähetykset ja näyttää anturitunnuksen, paineen (PSI tai kPa) ja lämpötilan lähellä oleville ajoneuvoille. Parkkipaikalla voit nähdä kymmeniä raportoivia antureita. Tämä on tunnettu yksityisyysongelma — TPMS-tunnuksia voidaan käyttää tiettyjen ajoneuvojen seuraamiseen, mikä on osoitettu akateemisessa tietoturvatutkimuksessa."
+        "learn": "TPMS-anturit (Tire Pressure Monitoring System) ovat pakollisia kaikissa uusissa ajoneuvoissa Yhdysvalloissa (vuodesta 2007) ja EU:ssa (vuodesta 2014). Jokainen rengas sisältää pienen langattoman anturin, joka lähettää rengaspaineen ja lämpötilan noin 60 sekunnin välein taajuudella 315 MHz (Pohjois-Amerikka) tai 433 MHz (Eurooppa). Jokaisella anturilla on yksilöllinen 32-bittinen tunnus tiettyyn renkaaseen liitettynä. PortaPack purkaa nämä lähetykset ja näyttää anturitunnuksen, paineen (PSI tai kPa) ja lämpötilan lähellä oleville ajoneuvoille. Parkkipaikalla voit nähdä kymmeniä raportoivia antureita. Tämä on tunnettu yksityisyysongelma  -  TPMS-tunnuksia voidaan käyttää tiettyjen ajoneuvojen seuraamiseen, mikä on osoitettu akateemisessa tietoturvatutkimuksessa."
       },
       "Weather": {
         "description": "Langattoman sääaseman purkaja. Lämpötila, kosteus, anturitunnus.",
-        "learn": "Kuluttajien langattomat sääasemat (Acurite, LaCrosse, Oregon Scientific, Ambient Weather jne.) käyttävät yksinkertaisia salaamattomia protokollia ISM-kaistoilla — tyypillisesti 433,92 MHz (maailmanlaajuisesti), 868 MHz (Eurooppa) tai 915 MHz (Pohjois-Amerikka). Ulkoanturit lähettävät lämpötilan, kosteuden, tuulen nopeuden, sademäärän ja UV-indeksin 30–60 sekunnin välein. Weather-sovellus purkaa nämä lähetykset ja näyttää lukemat anturin yksilöllisellä tunnuksella. Voit langattomasti seurata omaa sääasemaasi, tai missä tahansa naapurustossa todennäköisesti vastaanotat naapureiden asemien lukemia muutaman sadan metrin säteeltä. Protokollat ovat hyvin dokumentoituja ja käyttävät yksinkertaista OOK- tai FSK-modulaatiota."
+        "learn": "Kuluttajien langattomat sääasemat (Acurite, LaCrosse, Oregon Scientific, Ambient Weather jne.) käyttävät yksinkertaisia salaamattomia protokollia ISM-kaistoilla  -  tyypillisesti 433,92 MHz (maailmanlaajuisesti), 868 MHz (Eurooppa) tai 915 MHz (Pohjois-Amerikka). Ulkoanturit lähettävät lämpötilan, kosteuden, tuulen nopeuden, sademäärän ja UV-indeksin 30-60 sekunnin välein. Weather-sovellus purkaa nämä lähetykset ja näyttää lukemat anturin yksilöllisellä tunnuksella. Voit langattomasti seurata omaa sääasemaasi, tai missä tahansa naapurustossa todennäköisesti vastaanotat naapureiden asemien lukemia muutaman sadan metrin säteeltä. Protokollat ovat hyvin dokumentoituja ja käyttävät yksinkertaista OOK- tai FSK-modulaatiota."
       },
       "WeFax": {
         "description": "HF-sääfaksin vastaanotin/purkaja. Meri- ja ilmailulähetyksiä.",
-        "learn": "Radiofaksi (WeFax tai Weather Fax) on menetelmä säätietojen, meripinnan lämpötilakarttojen ja jääolosuhderaporttien lähettämiseen HF-radion kautta. 1940-luvulta käytössä sitä lähetetään yhä aktiivisesti rannikkoasemilta ympäri maailman merenkävijöille, jotka tarvitsevat sääkarttoja merellä ilman internetiä. Signaali koodaa kuvadatan vaihtelevina äänitaajuuksina (FM-modulaatio) rakentaen kuvan rivi kerrallaan — kuten faksi, mutta radion kautta. Keskeisiä asemia ovat NOAA (Boston, New Orleans, Kodiak), JMH Tokyo ja DWD Hamburg. Yleisiä taajuuksia: 3–25 MHz HF-kaistat. PortaPack purkaa äänen sääkartaksi näytölle. Parhaat tulokset HF-antennilla ja aseman suunniteltujen lähetysaikojen aikana (julkaistu virallisissa lähetysaikatauluissa)."
+        "learn": "Radiofaksi (WeFax tai Weather Fax) on menetelmä säätietojen, meripinnan lämpötilakarttojen ja jääolosuhderaporttien lähettämiseen HF-radion kautta. 1940-luvulta käytössä sitä lähetetään yhä aktiivisesti rannikkoasemilta ympäri maailman merenkävijöille, jotka tarvitsevat sääkarttoja merellä ilman internetiä. Signaali koodaa kuvadatan vaihtelevina äänitaajuuksina (FM-modulaatio) rakentaen kuvan rivi kerrallaan  -  kuten faksi, mutta radion kautta. Keskeisiä asemia ovat NOAA (Boston, New Orleans, Kodiak), JMH Tokyo ja DWD Hamburg. Yleisiä taajuuksia: 3-25 MHz HF-kaistat. PortaPack purkaa äänen sääkartaksi näytölle. Parhaat tulokset HF-antennilla ja aseman suunniteltujen lähetysaikojen aikana (julkaistu virallisissa lähetysaikatauluissa)."
       }
     },
     "vendors": {
       "Great Scott Gadgets": {
         "description": "HackRF One:n alkuperäinen luoja ja suunnittelija. Michael Ossmannin yritys. Ainoa varma lähde aidoille HackRF-levyille.",
-        "note": "Ei myy PortaPack-lisäosia — vain itse HackRF One."
+        "note": "Ei myy PortaPack-lisäosia  -  vain itse HackRF One."
       },
       "OpenSourceSDRLab": {
         "description": "PortaPack H4M:n (suosituin PortaPack-variantti) suunnittelija ja valmistaja. Myy suoraan ja jälleenmyyjien kautta.",
@@ -707,7 +707,7 @@
         "description": "Yksi suurimmista globaaleista elektroniikkajakelijoista. Valtuutettu HackRF One -lähde."
       },
       "Amazon": {
-        "description": "Saatavilla eri myyjiltä. Laatu vaihtelee merkittävästi — lue arvostelut huolellisesti ja tarkista myyjien arviot.",
+        "description": "Saatavilla eri myyjiltä. Laatu vaihtelee merkittävästi  -  lue arvostelut huolellisesti ja tarkista myyjien arviot.",
         "note": "Suuri riski klooneille ja väärennetyille levyille. Etsi myyjiä, joilla on vakiintunut historia ja positiiviset arvostelut, joissa mainitaan nimenomaan aito laitteisto."
       },
       "AliExpress": {
@@ -721,12 +721,12 @@
         "description": "Great Scott Gadgets suunnitteli ja myy HackRF One:a. OpenSourceSDRLab suunnitteli ja valmistaa PortaPack H4M:n. Ostaminen suoraan alkuperäiseltä valmistajalta on yleensä luotettavin tapa varmistaa aidon laitteiston saaminen."
       },
       "1": {
-        "title": "Klooneja on olemassa — ja ne ovat yleisiä",
+        "title": "Klooneja on olemassa  -  ja ne ovat yleisiä",
         "description": "HackRF on avoimen lähdekoodin laitteisto, joten kuka tahansa voi valmistaa sitä. Kloonit vaihtelevat 'toimii hyvin' ja 'kuollut saapuessaan' välillä. Riski on sinun."
       },
       "2": {
         "title": "Jos hinta vaikuttaa liian hyvältä ollakseen totta...",
-        "description": "Myyjästä, alueesta ja saatavuudesta riippuen aito HackRF One voi maksaa 200–350 USD tai enemmän vakiintuneilta lähteiltä. Hinnat vaihtelevat, mutta selvästi tyypillisen alueen alapuolelle hinnoitellut levyt ovat todennäköisemmin klooneja. Jotkut kloonit toimivat hyvin, monet eivät — kokemuksesi voi vaihdella."
+        "description": "Myyjästä, alueesta ja saatavuudesta riippuen aito HackRF One voi maksaa 200-350 USD tai enemmän vakiintuneilta lähteiltä. Hinnat vaihtelevat, mutta selvästi tyypillisen alueen alapuolelle hinnoitellut levyt ovat todennäköisemmin klooneja. Jotkut kloonit toimivat hyvin, monet eivät  -  kokemuksesi voi vaihdella."
       },
       "3": {
         "title": "Tarkista yhteisö ensin",
@@ -737,7 +737,7 @@
         "description": "H4M on tällä hetkellä suositeltu PortaPack parhaalla Mayhem-laiteohjelmistotuella. Vanhemmilla H1/H2-versioilla on vähemmän ominaisuuksia ja erilainen laitteisto."
       },
       "5": {
-        "title": "Marketplace-paketit — tarkasta huolellisesti",
+        "title": "Marketplace-paketit  -  tarkasta huolellisesti",
         "description": "Amazonin ja AliExpressin paketit sisältävät usein antenneja, koteloita ja lisävarusteita. Mukana tulevien lisävarusteiden laatu vaihtelee villisti riippumatta itse levystä."
       }
     },
@@ -773,18 +773,18 @@
     "safety": {
       "mistakes": {
         "Leaving the internal amp ON near strong signal sources": {
-          "description": "HackRF:n etuvahvistin (MGA-81563) ei sisällä kaistanpäästösuodatinta — se vahvistaa koko 1 MHz:stä 6 GHz:iin samanaikaisesti riippumatta siitä, mille taajuudelle olet virittänyt.",
+          "description": "HackRF:n etuvahvistin (MGA-81563) ei sisällä kaistanpäästösuodatinta  -  se vahvistaa koko 1 MHz:stä 6 GHz:iin samanaikaisesti riippumatta siitä, mille taajuudelle olet virittänyt.",
           "symptoms": [
             "AMP päällä tekee signaaleista heikompia vahvempien sijaan",
             "Alentunut herkkyys kaikilla kaistoilla",
-            "Ei näkyvää vahinkoa — vika on äänetön"
+            "Ei näkyvää vahinkoa  -  vika on äänetön"
           ],
           "prevention": [
             "Pidä AMP POIS PÄÄLTÄ, ellet nimenomaan tarvitse sitä",
             "Käytä ulkoista kaistanpäästösuodatinta ennen HackRF:n tuloa",
-            "Lisää 10–20 dB:n inline-vaimennin vahvojen lähettimien lähellä"
+            "Lisää 10-20 dB:n inline-vaimennin vahvojen lähettimien lähellä"
           ],
-          "technical": "Suurin turvallinen tulo AMP päällä on -5 dBm. Tukiasema 900 MHz:llä 100 m päässä tuottaa noin +5 - +10 dBm — tarpeeksi tuhoamaan MGA-81563:n vaikka olisit virittänyt 433 MHz:lle."
+          "technical": "Suurin turvallinen tulo AMP päällä on -5 dBm. Tukiasema 900 MHz:llä 100 m päässä tuottaa noin +5 - +10 dBm  -  tarpeeksi tuhoamaan MGA-81563:n vaikka olisit virittänyt 433 MHz:lle."
         },
         "Using a 5W handheld radio within inches": {
           "description": "Yleisimmin raportoitu vahinko HackRF-yhteisössä. Käsiradiot tuottavat 5W (37 dBm) ja lyhyellä etäisyydellä signaali kytkeytyy suoraan HackRF:n antenniporttiin.",
@@ -801,18 +801,18 @@
           "technical": "5W:n käsiradio 2,5 cm:n päässä tuottaa ~+7 - +10 dBm antenniportissa lähikentän kytkennän vuoksi. Absoluuttinen maksimitulo on +10 dBm (AMP POIS) tai -5 dBm (AMP PÄÄLLÄ). Yksittäinenkin lähetyspainallus voi olla tuhoisa."
         },
         "Connecting a satellite LNB directly": {
-          "description": "Satelliitti-LNB:t (Low-Noise Block -muuntimet) sisältävät 50–65 dB:n vahvistuksen ja on suunniteltu syöttämään satelliittivastaanotinta, ei SDR:ää. Suora kytkentä tuhoaa välittömästi tuloasteen.",
+          "description": "Satelliitti-LNB:t (Low-Noise Block -muuntimet) sisältävät 50-65 dB:n vahvistuksen ja on suunniteltu syöttämään satelliittivastaanotinta, ei SDR:ää. Suora kytkentä tuhoaa välittömästi tuloasteen.",
           "symptoms": [
             "Välitön ja täydellinen LNA-vika",
             "Laite saattaa näyttää toimivalta mutta ei vastaanota mitään",
             "Ei palautumismahdollisuutta ilman komponenttitason korjausta"
           ],
           "prevention": [
-            "Käytä aina 20–30 dB:n vaimenninta LNB:n ja HackRF:n välissä",
+            "Käytä aina 20-30 dB:n vaimenninta LNB:n ja HackRF:n välissä",
             "Tarkista LNB:n vahvistusspesifikaatio ennen kytkemistä",
             "Harkitse bias-tee:tä asianmukaisella tehoeristuksellä"
           ],
-          "technical": "60 dB:n vahvistuksella varustettu LNB syöttää +23 - +26 dBm laitteeseen, jonka maksimi on -5 dBm (AMP PÄÄLLÄ). Se on 28–31 dB yli absoluuttimaksimin — noin 1000-kertainen turvallinen tehotaso."
+          "technical": "60 dB:n vahvistuksella varustettu LNB syöttää +23 - +26 dBm laitteeseen, jonka maksimi on -5 dBm (AMP PÄÄLLÄ). Se on 28-31 dB yli absoluuttimaksimin  -  noin 1000-kertainen turvallinen tehotaso."
         },
         "Airport radar exposure": {
           "description": "Lentokentän valvontatutkat toimivat erittäin suurilla tehotasoilla. Pelkässä vastaanottotilassakin AMP POIS -asetuksella sähkömagneettisen kentän voimakkuus lentokentän lähellä voi ylittää HackRF:n tulorajat.",
@@ -843,7 +843,7 @@
           "technical": "Avoimella SMA:lla VSWR on ääretön (heijastusvaimennus 0 dB). 15 dBm:llä (~32 mW) kaikki teho heijastuu takaisin. HackRF:n RFFC5072 PA on mitoitettu rajoitetulle heijastetulle teholle eikä siinä ole sisäänrakennettua isolaattoria."
         },
         "ESD while connecting antennas": {
-          "description": "Staattinen purkaus kehostasi tai varatusta antennista kulkee suoraan RF-etupäähän SMA:n keskitapin kautta. Vahinko on usein hienovaraista ja etenevää — et ehkä huomaa sitä viikkoihin.",
+          "description": "Staattinen purkaus kehostasi tai varatusta antennista kulkee suoraan RF-etupäähän SMA:n keskitapin kautta. Vahinko on usein hienovaraista ja etenevää  -  et ehkä huomaa sitä viikkoihin.",
           "symptoms": [
             "AMP toimii vaimentimena vahvistuksen sijaan",
             "Asteittainen herkkyyden menetys ajan myötä",
@@ -854,7 +854,7 @@
             "Maadoita itsesi ja antenni ennen kytkemistä",
             "Käytä antistaattista rannehihnaa kuivissa ympäristöissä"
           ],
-          "technical": "Ihmiskehon ESD on tyypillisesti 2–15 kV huippuvirroilla 10–30 A nanosekunteina. MGA-81563 LNA:n ESD-kestoisuus on vain ~200 V (HBM). Pienikin staattinen purkaus, jota et tunne (<3 kV), voi heikentää vahvistinta."
+          "technical": "Ihmiskehon ESD on tyypillisesti 2-15 kV huippuvirroilla 10-30 A nanosekunteina. MGA-81563 LNA:n ESD-kestoisuus on vain ~200 V (HBM). Pienikin staattinen purkaus, jota et tunne (<3 kV), voi heikentää vahvistinta."
         },
         "TX at max gain with mismatched antenna": {
           "description": "Täyden TX-vahvistuksen käyttö antennilla, joka ei ole sovitettu taajuudellesi, aiheuttaa merkittävän tehoheijastuksen. Vaikka HackRF lähettää vain ~15 dBm, toistuva rasitus heijastuneesta tehosta heikentää PA:ta ajan myötä.",
@@ -865,13 +865,13 @@
           ],
           "prevention": [
             "Käytä kohdetaajuudellesi suunniteltua antennia",
-            "Tarkista SWR ennen lähettämistä — tavoite < 2:1",
+            "Tarkista SWR ennen lähettämistä  -  tavoite < 2:1",
             "Aloita alhaisella TX-vahvistuksella ja nosta asteittain seuraten"
           ],
           "technical": "15 dBm:llä 10:1 VSWR-epäsovituksella noin 70 % tehosta heijastuu takaisin. HackRF:ssä ei ole sirkulaattoria eikä isolaattoria, joten heijastunut teho menee suoraan takaisin PA-asteeseen."
         },
         "Not using a data-capable USB cable": {
-          "description": "Monet USB-kaapelit ovat vain lataukseen — niissä on virtajohdot mutta ei datalinjoja. Tämä on ylivoimaisesti yleisin 'HackRF ei toimi' -ongelma ja hukkaa tunteja virheenetsintää.",
+          "description": "Monet USB-kaapelit ovat vain lataukseen  -  niissä on virtajohdot mutta ei datalinjoja. Tämä on ylivoimaisesti yleisin 'HackRF ei toimi' -ongelma ja hukkaa tunteja virheenetsintää.",
           "symptoms": [
             "'Device not found' tai 'No HackRF boards found' -virheitä",
             "Laite käynnistyy (LED-valot palavat) mutta ohjelmisto ei tunnista sitä",
@@ -879,8 +879,8 @@
           ],
           "prevention": [
             "Merkitse tunnetut toimivat datakaapelit",
-            "Testaa 3–5 eri kaapelilla ennen laitteisto-ongelman epäilyä",
-            "Käytä lyhyitä kaapeleita (< 1 m) — USB 2.0 signaalinlaatu heikkenee pituuden myötä",
+            "Testaa 3-5 eri kaapelilla ennen laitteisto-ongelman epäilyä",
+            "Käytä lyhyitä kaapeleita (< 1 m)  -  USB 2.0 signaalinlaatu heikkenee pituuden myötä",
             "USB 3.0 -portit ja -kaapelit ovat yleensä luotettavampia"
           ],
           "technical": "HackRF vaatii USB 2.0 High Speed (480 Mbps). Pelkissä latauskaapeleissa ei ole lainkaan D+- ja D--datalinjoja. Joissakin halvoissa datakaapeleissa on riittämätön suojaus, joka aiheuttaa ajoittaisia yhteyksiä suurilla nopeuksilla."
@@ -1072,13 +1072,13 @@
       }
     },
     "quickStartSteps": {
-      "s1": "Varmista, että USB-kaapelisi tukee dataa (ei pelkkä lataus) — tämä on yleisin asennusongelma",
-      "s2": "Aseta MicroSD-kortti (FAT32, suositus 8–32 Gt) — tallentaa kaappaukset, asetukset ja sovellukset",
+      "s1": "Varmista, että USB-kaapelisi tukee dataa (ei pelkkä lataus)  -  tämä on yleisin asennusongelma",
+      "s2": "Aseta MicroSD-kortti (FAT32, suositus 8-32 Gt)  -  tallentaa kaappaukset, asetukset ja sovellukset",
       "s3": "Lataa uusin Mayhem-laiteohjelmisto GitHub-julkaisuista ja kopioi .ppfw.tar SD-kortin juureen",
-      "s4": "Kiinnitä teleskooppiantenni (40 MHz–6 GHz) SMA-porttiin — kiristä vain sormin, älä koskaan avaimella",
-      "s5": "Maadoita itsesi ennen käsittelyä — ESD SMA-keskitapissa voi vahingoittaa LNA:ta",
+      "s4": "Kiinnitä teleskooppiantenni (40 MHz-6 GHz) SMA-porttiin  -  kiristä vain sormin, älä koskaan avaimella",
+      "s5": "Maadoita itsesi ennen käsittelyä  -  ESD SMA-keskitapissa voi vahingoittaa LNA:ta",
       "s6": "Pidä 50 ohmin dummy load valmiina, jos aiot testata TX-sovelluksia",
-      "s7": "Liu'uta virtakytkin YLÖS — odota Mayhem-päävalikon ilmestymistä",
+      "s7": "Liu'uta virtakytkin YLÖS  -  odota Mayhem-päävalikon ilmestymistä",
       "s8": "Tarkista laiteohjelmiston versio tilariviltä (nykyinen: v2.3.2)",
       "s9": "Siirry kohtaan Settings → SD Card → Test varmistaaksesi, että SD-kortti tunnistetaan ja toimii",
       "s10": "Siirry kohtaan Settings → UI → aseta enkooderin herkkyys mieltymyksesi mukaan (matala/normaali/korkea)",
@@ -1086,18 +1086,18 @@
       "s12": "Siirry kohtaan Receive → Audio",
       "s13": "Aseta tilaksi 'WFM' (Wideband FM)",
       "s14": "Aseta taajuus paikalliselle FM-asemalle (esim. 101,1 MHz)",
-      "s15": "Aseta vahvistukset: LNA=16, VGA=20, AMP=0 (POIS) — aloita aina AMP pois päältä",
-      "s16": "Nosta äänenvoimakkuus tasolle 40–60 — sinun pitäisi kuulla asema",
-      "s17": "Tarkista RSSI-palkki ja waterfall — vahva signaali näkyy kirkkaan pystyraitana",
+      "s15": "Aseta vahvistukset: LNA=16, VGA=20, AMP=0 (POIS)  -  aloita aina AMP pois päältä",
+      "s16": "Nosta äänenvoimakkuus tasolle 40-60  -  sinun pitäisi kuulla asema",
+      "s17": "Tarkista RSSI-palkki ja waterfall  -  vahva signaali näkyy kirkkaan pystyraitana",
       "s18": "Jos heikko: nosta ensin VGA, sitten LNA. Jos leikkautumista/säröä: laske vahvistuksia",
       "s19": "Viritä tunnetulle FM-asemalle ja huomaa, onko taajuus hieman pielessä",
       "s20": "Siirry kohtaan Settings → Radio → Frequency Correction ja säädä, kunnes asema keskittyy oikein",
-      "s21": "Tämä korjaa TCXO-poikkeaman — parantaa tarkkuutta kaikissa sovelluksissa",
-      "s22": "Ennen mitään TX:ää: kytke 50 ohmin dummy load tai taajuussovitettu antenni — älä koskaan lähetä vapaaseen ilmaan",
+      "s21": "Tämä korjaa TCXO-poikkeaman  -  parantaa tarkkuutta kaikissa sovelluksissa",
+      "s22": "Ennen mitään TX:ää: kytke 50 ohmin dummy load tai taajuussovitettu antenni  -  älä koskaan lähetä vapaaseen ilmaan",
       "s23": "Opi TX:n hätäpysäytys: Stop-painike → Takaisin-nuoli → RESET → Virta POIS",
       "s24": "Älä koskaan käytä laitetta alle 3 metrin päässä aktiivisista lähettimistä (käsiradiot, reitittimet) vastaanoton aikana",
       "s25": "Napauta takaisin-nuolta palataksesi valikoihin",
-      "s26": "Liu'uta virtakytkin ALAS sammuttaaksesi — sammuta aina ennen antennin irrottamista"
+      "s26": "Liu'uta virtakytkin ALAS sammuttaaksesi  -  sammuta aina ennen antennin irrottamista"
     },
     "quickStartSections": {
       "beforePowerOn": "Ennen käynnistämistä",
