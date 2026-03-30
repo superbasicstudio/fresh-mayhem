@@ -372,7 +372,7 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
             <rect x={bx + bw - 68} y={by - 14} width="26" height="20" rx="0" fill="transparent" />
             <rect x={bx + bw - 64} y={by - 8} width="18" height="10" rx="3" fill={active === 'dfu' ? '#60a5fa' : '#2563eb'}
               stroke={st('dfu', '#93c5fd', '#3b82f6')} strokeWidth="0.8" />
-            <text x={bx + bw - 55} y={by} textAnchor="middle" fill="#fff" fontSize="5" fontWeight="bold">DFU</text>
+            <text x={bx + bw - 55} y={by} textAnchor="middle" fill="#000" fontSize="5" fontWeight="bold">DFU</text>
           </g>
 
           {/* RESET button (blue, far right) — enlarged hover area */}
@@ -380,7 +380,7 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
             <rect x={bx + bw - 42} y={by - 14} width="26" height="20" rx="0" fill="transparent" />
             <rect x={bx + bw - 38} y={by - 8} width="18" height="10" rx="3" fill={active === 'reset' ? '#60a5fa' : '#2563eb'}
               stroke={st('reset', '#93c5fd', '#3b82f6')} strokeWidth="0.8" />
-            <text x={bx + bw - 29} y={by} textAnchor="middle" fill="#fff" fontSize="5" fontWeight="bold">RST</text>
+            <text x={bx + bw - 29} y={by} textAnchor="middle" fill="#000" fontSize="5" fontWeight="bold">RST</text>
           </g>
 
           {/* MicroSD slot — below DFU/RST, centered between them */}
