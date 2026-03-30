@@ -237,18 +237,18 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
 
           {/* ── SMA CONNECTORS (drawn first = behind device body) ── */}
           {/* SMA — top-left */}
-          <g {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80'), cursor: 'pointer' }}>
+          <g {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#fbbf24'), cursor: 'pointer' }}>
             {/* Brass barrel */}
-            <rect x={bx + 15} y={by - 12} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#4ade80', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
+            <rect x={bx + 15} y={by - 12} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#fbbf24', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
             {/* Red protective cap — twists away on hover */}
             <rect x={bx + 14} y={by - 13} width="12" height="10" rx="2.5" fill="#dc2626" stroke="#b91c1c" strokeWidth="0.5"
               style={{ transform: active === 'sma' ? 'translate(-4px, -8px) rotate(-25deg)' : 'translate(0, 0) rotate(0deg)', transformOrigin: `${bx + 20}px ${by - 8}px`, transition: 'transform 0.4s ease' }} />
           </g>
           {/* SMA — 2 on bottom-left */}
           {[bx + 30, bx + 58].map((cx, i) => (
-            <g key={`sma-bot-${i}`} {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80'), cursor: 'pointer' }}>
+            <g key={`sma-bot-${i}`} {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#fbbf24'), cursor: 'pointer' }}>
               {/* Brass barrel */}
-              <rect x={cx - 5} y={by + bh - 2} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#4ade80', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
+              <rect x={cx - 5} y={by + bh - 2} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#fbbf24', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
               {/* Red protective cap — twists away on hover */}
               <rect x={cx - 6} y={by + bh + 3} width="12" height="10" rx="2.5" fill="#dc2626" stroke="#b91c1c" strokeWidth="0.5"
                 style={{ transform: active === 'sma' ? `translate(${i === 0 ? '-5px' : '5px'}, 8px) rotate(${i === 0 ? '-30' : '30'}deg)` : 'translate(0, 0) rotate(0deg)', transformOrigin: `${cx}px ${by + bh + 8}px`, transition: 'transform 0.4s ease' }} />
