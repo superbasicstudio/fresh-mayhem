@@ -30,6 +30,9 @@ const commonIssueCategories = [
     items: [
       { id: 'notRecognized' },
       { id: 'chargeOnly' },
+      { id: 'dataVsPower' },
+      { id: 'usb2vs3' },
+      { id: 'thunderbolt' },
       { id: 'sdOverUsb' },
     ]
   },

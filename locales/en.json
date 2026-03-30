@@ -104,7 +104,7 @@
       },
       "troubleshooting": {
         "label": "Troubleshooting",
-        "stat": "14 common fixes",
+        "stat": "17 common fixes",
         "desc": "SD card issues, boot problems, USB connections, reception and signal help"
       },
       "whereToBuy": {
@@ -383,15 +383,27 @@
         "items": {
           "notRecognized": {
             "problem": "Computer does not detect the HackRF over USB",
-            "fix": "Try a different USB cable and a different USB port. Many cables are charge-only and do not carry data. Use a known-good data cable. On Linux, run lsusb to check if the device appears (look for 1d50:6089). On Windows, check Device Manager. If using a USB hub, connect directly to the computer instead."
+            "fix": "Try a different USB cable and a different USB port. Many cables are charge-only and do not carry data. Use a known-good data cable (one you have used for file transfer before). On Linux, run lsusb to check if the device appears (look for 1d50:6089). On Windows, check Device Manager for unknown devices or yellow warning icons. If using a USB hub, connect directly to the computer instead. Try both USB 2.0 and USB 3.0 ports as some controllers handle the HackRF differently."
           },
           "chargeOnly": {
             "problem": "Device powers on via USB but no data connection",
-            "fix": "You are using a charge-only cable. USB cables that came with phone chargers or battery packs often lack the data wires. Use a cable that you have previously used for file transfer. USB-C to USB-C cables are more likely to be data-capable than USB-A to USB-C adapters."
+            "fix": "You are using a charge-only cable. This is the single most common USB issue. Charge-only cables have power wires but no data wires, and there is no way to tell by looking at the cable. Cables that came with phone chargers, battery packs, or cheap accessories are often charge-only. The device will power on and appear to work, but your computer will not see it at all. Test the cable by connecting a phone and checking if your computer can browse its files. If it cannot, the cable is charge-only. Use a cable you have previously used for data transfer."
+          },
+          "dataVsPower": {
+            "problem": "How to tell if a USB cable is data-capable or power-only",
+            "fix": "There is no reliable visual way to distinguish a data cable from a power-only cable. They look identical. The only test is to connect a device (phone, external drive) and check if your computer can access its storage. If the computer sees nothing but the device charges, it is power-only. Tips: cables that came with external hard drives are almost always data cables. Cables from phone charger boxes are often power-only. USB-C to USB-C cables are more likely to be data-capable. When in doubt, buy a cable specifically labeled as a data/sync cable. Keep one known-good data cable marked or tagged so you can always find it."
+          },
+          "usb2vs3": {
+            "problem": "HackRF behaves differently on USB 2.0 vs USB 3.0 ports",
+            "fix": "The HackRF One is a USB 2.0 High Speed device. It works on both USB 2.0 and USB 3.0 ports, but some USB 3.0 controllers have compatibility quirks. If the device is not recognized or disconnects intermittently, try a USB 2.0 port (usually the black-colored ports, while USB 3.0 ports are blue or red). On laptops with only USB 3.0 or USB-C ports, a powered USB 2.0 hub can sometimes resolve detection issues. If you experience buffer overflows or sample drops during high-bandwidth captures, a USB 3.0 port with a good controller may actually perform better due to lower latency."
+          },
+          "thunderbolt": {
+            "problem": "HackRF not working on Thunderbolt / USB-C ports",
+            "fix": "Thunderbolt 3 and Thunderbolt 4 ports are compatible with USB devices but use a different controller than standard USB ports. Some Thunderbolt controllers do not enumerate USB 2.0 devices correctly. If the HackRF is not detected on a Thunderbolt/USB-C port, try a USB-A port directly (use a simple USB-C to USB-A adapter if needed, not a dock or hub). On Macs with only Thunderbolt ports, a USB-C to USB-A adapter or dongle is recommended over connecting USB-C to USB-C directly. Thunderbolt docks and multi-port adapters add another layer of USB translation that can cause detection failures."
           },
           "sdOverUsb": {
             "problem": "SD over USB mode is not showing the SD card on computer",
-            "fix": "Navigate to Utilities > SD over USB on the PortaPack first. The device must be in this mode for the SD card to appear as a mass storage device on your computer. If the SD card still does not appear, check your USB cable (must be data-capable) and try a different USB port. On Linux, check dmesg for any mount errors."
+            "fix": "Navigate to Utilities > SD over USB on the PortaPack first. The device must be in this mode for the SD card to appear as a mass storage device on your computer. If the SD card still does not appear, check your USB cable (must be a data cable, not charge-only) and try a different USB port. Try a USB 2.0 port if USB 3.0 is not working. On Linux, check dmesg for any mount errors. On macOS, check Disk Utility. The SD card may mount as read-only on some systems."
           }
         }
       },

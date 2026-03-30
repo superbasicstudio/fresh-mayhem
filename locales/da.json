@@ -107,7 +107,7 @@
       },
       "troubleshooting": {
         "label": "Fejlfinding",
-        "stat": "14 almindelige losninger",
+        "stat": "17 almindelige losninger",
         "desc": "SD-kort problemer, opstartsproblemer, USB-forbindelser, modtagelse og signal"
       }
     }
@@ -393,15 +393,27 @@
         "items": {
           "notRecognized": {
             "problem": "Computer detekterer ikke HackRF over USB",
-            "fix": "Proev et andet USB-kabel og en anden USB-port. Mange kabler er kun til opladning og baerer ikke data. Brug et kendt fungerende datakabel. Paa Linux koer lsusb for at tjekke om enheden vises (kig efter 1d50:6089). Paa Windows tjek Enhedshhaandtering."
+            "fix": "Proev en annen USB-kabel og en annen USB-port. Mange kabler er kun til opladning og baerer ikke data. Brug et kendt fungerende datakabel. Paa Linux koer lsusb for at tjekke om enheden vises (kig efter 1d50:6089). Paa Windows tjek Enhedshhaandtering. Hvis du bruger en USB-hub, tilslut direkte til computeren. Proev baade USB 2.0 og USB 3.0 porte da nogle controllere haandterer HackRF anderledes."
           },
           "chargeOnly": {
             "problem": "Enheden taender via USB men ingen dataforbindelse",
-            "fix": "Du bruger et opladningskabel. USB-kabler der fulgte med telefonopladere mangler ofte dataledningerne. Brug et kabel du tidligere har brugt til filoverfoerelse."
+            "fix": "Du bruger et opladningskabel. Dette er det mest almindelige USB-problem. Opladningskabler har stroemledninger men ingen dataledninger, og der er ingen maade at se det paa kablet. Kabler der fulgte med telefonopladere, powerbanks eller billigt tilbehoer er ofte kun til opladning. Enheden taender og ser ud til at virke, men din computer ser den slet ikke. Test kablet ved at tilslutte en telefon og tjek om din computer kan gennemse dens filer. Hvis ikke, er kablet kun til opladning."
           },
           "sdOverUsb": {
             "problem": "SD over USB-tilstand viser ikke SD-kortet paa computeren",
-            "fix": "Naviger foerst til Utilities > SD over USB paa PortaPack. Enheden skal vaere i denne tilstand for at SD-kortet vises som masselagringsenhed paa din computer. Hvis SD-kortet stadig ikke vises, tjek dit USB-kabel (skal vaere datadygtigt) og proev en anden USB-port."
+            "fix": "Naviger foerst til Utilities > SD over USB paa PortaPack. Enheden skal vaere i denne tilstand for at SD-kortet vises som masselagringsenhed. Hvis SD-kortet stadig ikke vises, tjek dit USB-kabel (skal vaere datakabel, ikke kun opladning) og proev en anden USB-port. Proev USB 2.0 port hvis USB 3.0 ikke virker. Paa Linux tjek dmesg."
+          },
+          "dataVsPower": {
+            "problem": "Hvordan man kan se om et USB-kabel er datakompatibelt eller kun stroem",
+            "fix": "Der er ingen paalidelig visuel maade at skelne et datakabel fra et stroemkabel. De ser identiske ud. Den eneste test er at tilslutte en enhed (telefon, eksternt drev) og tjekke om computeren kan tilgaa dens lager. Hvis computeren ikke ser noget men enheden oplader, er det kun stroem. Tips: kabler der fulgte med eksterne harddiske er naesten altid datakabler. Kabler fra telefonoplader-bokse er ofte kun stroem. USB-C til USB-C kabler er mere tilboejelige til at vaere datakompatible."
+          },
+          "usb2vs3": {
+            "problem": "HackRF opfoerer sig anderledes paa USB 2.0 vs USB 3.0 porte",
+            "fix": "HackRF One er en USB 2.0 High Speed enhed. Den virker paa baade USB 2.0 og USB 3.0 porte, men nogle USB 3.0 controllere har kompatibilitetsproblemer. Hvis enheden ikke genkendes eller afbrydes periodisk, proev en USB 2.0 port (normalt de sorte porte, mens USB 3.0 er blaa eller roede). Paa baerbare computere med kun USB 3.0 eller USB-C porte kan en drevet USB 2.0 hub nogle gange loese detektionsproblemer."
+          },
+          "thunderbolt": {
+            "problem": "HackRF virker ikke paa Thunderbolt / USB-C porte",
+            "fix": "Thunderbolt 3 og 4 porte er kompatible med USB-enheder men bruger en anden controller end standard USB-porte. Nogle Thunderbolt-controllere opregner ikke USB 2.0 enheder korrekt. Hvis HackRF ikke detekteres paa en Thunderbolt/USB-C port, proev en USB-A port direkte (brug en simpel USB-C til USB-A adapter, ikke en dock eller hub). Paa Macs med kun Thunderbolt-porte anbefales en USB-C til USB-A adapter."
           }
         }
       },

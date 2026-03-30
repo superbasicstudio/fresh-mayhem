@@ -107,7 +107,7 @@
       },
       "troubleshooting": {
         "label": "Fehlerbehebung",
-        "stat": "14 haeufige Loesungen",
+        "stat": "17 haeufige Loesungen",
         "desc": "SD-Karten-Probleme, Boot-Probleme, USB-Verbindungen, Empfang und Signal"
       }
     }
@@ -393,15 +393,27 @@
         "items": {
           "notRecognized": {
             "problem": "Computer erkennt HackRF nicht ueber USB",
-            "fix": "Versuchen Sie ein anderes USB-Kabel und einen anderen USB-Port. Viele Kabel sind nur zum Laden und uebertragen keine Daten. Verwenden Sie ein bekannt funktionierendes Datenkabel. Unter Linux fuehren Sie lsusb aus, um zu pruefen, ob das Geraet erscheint (suchen Sie nach 1d50:6089). Unter Windows pruefen Sie den Geraete-Manager."
+            "fix": "Versuchen Sie ein anderes USB-Kabel und einen anderen USB-Port. Viele Kabel sind nur zum Laden und uebertragen keine Daten. Verwenden Sie ein bekannt funktionierendes Datenkabel. Unter Linux fuehren Sie lsusb aus (suchen Sie nach 1d50:6089). Unter Windows pruefen Sie den Geraete-Manager auf unbekannte Geraete. Wenn Sie einen USB-Hub verwenden, verbinden Sie direkt mit dem Computer. Versuchen Sie sowohl USB 2.0 als auch USB 3.0 Ports, da manche Controller den HackRF unterschiedlich behandeln."
           },
           "chargeOnly": {
             "problem": "Geraet wird ueber USB mit Strom versorgt, aber keine Datenverbindung",
-            "fix": "Sie verwenden ein reines Ladekabel. USB-Kabel, die mit Telefonladegeraeten geliefert werden, haben oft keine Datenleitungen. Verwenden Sie ein Kabel, das Sie zuvor fuer Datenuebertragung verwendet haben."
+            "fix": "Sie verwenden ein reines Ladekabel. Dies ist das haeufigste USB-Problem. Ladekabel haben Stromleitungen aber keine Datenleitungen, und man kann es dem Kabel nicht ansehen. Kabel von Telefonladegeraeten, Powerbanks oder billigem Zubehoer sind oft reine Ladekabel. Das Geraet schaltet sich ein und scheint zu funktionieren, aber der Computer sieht es ueberhaupt nicht. Testen Sie das Kabel, indem Sie ein Telefon anschliessen und pruefen, ob der Computer dessen Dateien sehen kann. Wenn nicht, ist es ein reines Ladekabel."
           },
           "sdOverUsb": {
             "problem": "SD over USB-Modus zeigt die SD-Karte nicht am Computer an",
-            "fix": "Navigieren Sie zuerst auf dem PortaPack zu Utilities > SD over USB. Das Geraet muss sich in diesem Modus befinden, damit die SD-Karte als Massenspeichergeraet am Computer erscheint. Wenn die SD-Karte immer noch nicht erscheint, pruefen Sie Ihr USB-Kabel (muss datenfaehig sein) und versuchen Sie einen anderen USB-Port."
+            "fix": "Navigieren Sie zuerst auf dem PortaPack zu Utilities > SD over USB. Das Geraet muss sich in diesem Modus befinden. Wenn die SD-Karte immer noch nicht erscheint, pruefen Sie Ihr USB-Kabel (muss Datenkabel sein, nicht nur Laden) und versuchen Sie einen anderen USB-Port. Versuchen Sie einen USB 2.0 Port wenn USB 3.0 nicht funktioniert. Unter Linux pruefen Sie dmesg."
+          },
+          "dataVsPower": {
+            "problem": "Wie erkennt man ob ein USB-Kabel datenfaehig oder nur zum Laden ist",
+            "fix": "Es gibt keinen zuverlaessigen visuellen Weg, ein Datenkabel von einem reinen Ladekabel zu unterscheiden. Sie sehen identisch aus. Der einzige Test ist, ein Geraet (Telefon, externe Festplatte) anzuschliessen und zu pruefen, ob der Computer auf den Speicher zugreifen kann. Wenn der Computer nichts sieht aber das Geraet laedt, ist es nur ein Ladekabel. Tipps: Kabel von externen Festplatten sind fast immer Datenkabel. Kabel aus Ladegeraet-Verpackungen sind oft nur Ladekabel. USB-C auf USB-C Kabel sind eher datenfaehig."
+          },
+          "usb2vs3": {
+            "problem": "HackRF verhaelt sich unterschiedlich an USB 2.0 vs USB 3.0 Ports",
+            "fix": "Der HackRF One ist ein USB 2.0 High Speed Geraet. Er funktioniert an USB 2.0 und USB 3.0 Ports, aber einige USB 3.0 Controller haben Kompatibilitaetsprobleme. Wenn das Geraet nicht erkannt wird oder sich zeitweise trennt, versuchen Sie einen USB 2.0 Port (normalerweise die schwarzen Ports, waehrend USB 3.0 blau oder rot sind). Bei Laptops mit nur USB 3.0 oder USB-C kann ein betriebener USB 2.0 Hub manchmal Erkennungsprobleme loesen."
+          },
+          "thunderbolt": {
+            "problem": "HackRF funktioniert nicht an Thunderbolt / USB-C Ports",
+            "fix": "Thunderbolt 3 und 4 Ports sind kompatibel mit USB-Geraeten, verwenden aber einen anderen Controller als Standard-USB-Ports. Einige Thunderbolt-Controller enumerieren USB 2.0 Geraete nicht korrekt. Wenn der HackRF an einem Thunderbolt/USB-C Port nicht erkannt wird, versuchen Sie einen USB-A Port direkt (verwenden Sie einen einfachen USB-C auf USB-A Adapter, keinen Dock oder Hub). Bei Macs mit nur Thunderbolt-Ports wird ein USB-C auf USB-A Adapter empfohlen."
           }
         }
       },

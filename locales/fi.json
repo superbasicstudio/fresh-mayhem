@@ -107,7 +107,7 @@
       },
       "troubleshooting": {
         "label": "Vianetsinta",
-        "stat": "14 yleista korjausta",
+        "stat": "17 yleista korjausta",
         "desc": "SD-korttiongelmat, kaynnistysongelmat, USB-yhteydet, vastaanotto ja signaali"
       }
     }
@@ -393,15 +393,27 @@
         "items": {
           "notRecognized": {
             "problem": "Tietokone ei tunnista HackRF:aa USB:n kautta",
-            "fix": "Kokeile eri USB-kaapelia ja eri USB-porttia. Monet kaapelit ovat vain lataukseen eivtka siirraa dataa. Kayta tunnettua toimivaa datakaapelia. Linuxissa suorita lsusb tarkistaaksesi nakyykoe laite (etsi 1d50:6089). Windowsissa tarkista Laitehallinta."
+            "fix": "Kokeile eri USB-kaapelia ja eri USB-porttia. Monet kaapelit ovat vain lataukseen eivatka siirraa dataa. Kayta tunnettua toimivaa datakaapelia. Linuxissa suorita lsusb (etsi 1d50:6089). Windowsissa tarkista Laitehallinta. Jos kaytat USB-hubia, yhdista suoraan tietokoneeseen. Kokeile seka USB 2.0 etta USB 3.0 portteja, silla jotkin ohjaimet kasittelevat HackRF:aa eri tavoin."
           },
           "chargeOnly": {
-            "problem": "Laite kaynnistyy USB:n kautta mutta ei datayhtytta",
-            "fix": "Kaytat pelkkaa latauskaapelia. Puhelinlaturien mukana tulevissa USB-kaapeleissa ei usein ole datajohtimia. Kayta kaapelia, jota olet aiemmin kayttanyt tiedostojen siirtoon."
+            "problem": "Laite kaynnistyy USB:n kautta mutta ei datayhteyttae",
+            "fix": "Kaytat pelkkaa latauskaapelia. Tama on yleisin USB-ongelma. Latauskaapeleissa on virtajohdot mutta ei datajohtoja, eika kaapelista voi nahdae eroa. Puhelinlaturien, varaakkujen tai halpojen lisavarusteiden mukana tulevat kaapelit ovat usein pelkkia latauskaapeleita. Laite kaynnistyy ja vaikuttaa toimivan, mutta tietokone ei nae sita lainkaan. Testaa kaapeli yhdistamalla puhelin ja tarkista, nakyvatko sen tiedostot tietokoneella."
           },
           "sdOverUsb": {
             "problem": "SD over USB -tila ei nayta SD-korttia tietokoneella",
-            "fix": "Siirry ensin PortaPackissa kohtaan Utilities > SD over USB. Laitteen tulee olla tassa tilassa, jotta SD-kortti nakyy massamuistilaitteena tietokoneellasi. Jos SD-kortti ei silti nay, tarkista USB-kaapelisi (datakelpoinen) ja kokeile eri USB-porttia."
+            "fix": "Siirry ensin PortaPackissa kohtaan Utilities > SD over USB. Laitteen tulee olla tassa tilassa. Jos SD-kortti ei silti nay, tarkista USB-kaapelisi (datakaapeli, ei pelkka lataus) ja kokeile eri USB-porttia. Kokeile USB 2.0 porttia jos USB 3.0 ei toimi."
+          },
+          "dataVsPower": {
+            "problem": "Miten erottaa USB-datakaapeli pelkasta latauskaapelista",
+            "fix": "Ei ole luotettavaa visuaalista tapaa erottaa datakaapelia latauskaapelista. Ne nayttavat identtisilta. Ainoa testi on yhdistaa laite (puhelin, ulkoinen levy) ja tarkistaa, paaseeko tietokone sen tallennustilaan. Jos tietokone ei nae mitaan mutta laite latautuu, se on pelkka latauskaapeli. Vinkkeja: ulkoisten kiintolevyjen mukana tulevat kaapelit ovat lahes aina datakaapeleita. USB-C - USB-C kaapelit ovat todennakoisemmin datakelpoisia."
+          },
+          "usb2vs3": {
+            "problem": "HackRF kaytettyy eri tavoin USB 2.0 vs USB 3.0 porteissa",
+            "fix": "HackRF One on USB 2.0 High Speed -laite. Se toimii seka USB 2.0 etta USB 3.0 porteissa, mutta joissakin USB 3.0 ohjaimissa on yhteensopivuusongelmia. Jos laitetta ei tunnisteta tai se katkeaa ajoittain, kokeile USB 2.0 porttia (yleensa mustat portit, kun taas USB 3.0 ovat sinisia tai punaisia). Kannettavissa, joissa on vain USB 3.0 tai USB-C portteja, virtalahteella varustettu USB 2.0 hubi voi joskus ratkaista tunnistusongelmia."
+          },
+          "thunderbolt": {
+            "problem": "HackRF ei toimi Thunderbolt / USB-C porteissa",
+            "fix": "Thunderbolt 3 ja 4 portit ovat yhteensopivia USB-laitteiden kanssa, mutta kayttavat eri ohjainta kuin tavalliset USB-portit. Jotkin Thunderbolt-ohjaimet eivat luettele USB 2.0 laitteita oikein. Jos HackRF:aa ei tunnisteta Thunderbolt/USB-C portissa, kokeile USB-A porttia suoraan (kayta yksinkertaista USB-C - USB-A adapteria, ei telakkaa tai hubia)."
           }
         }
       },

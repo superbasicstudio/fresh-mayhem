@@ -107,7 +107,7 @@
       },
       "troubleshooting": {
         "label": "Diagnostika",
-        "stat": "14 beznych oprav",
+        "stat": "17 beznych oprav",
         "desc": "Problemy s SD kartou, spousteni, USB pripojeni, prijem a signal"
       }
     }
@@ -393,15 +393,27 @@
         "items": {
           "notRecognized": {
             "problem": "Pocitac nedetekuje HackRF pres USB",
-            "fix": "Zkuste jiny USB kabel a jiny USB port. Mnoho kabelu je pouze nabijeci a neprenasi data. Pouzijte znamy funkcni datovy kabel. Na Linuxu spustte lsusb a zkontrolujte, zda se zarizeni objevi (hledejte 1d50:6089). Na Windows zkontrolujte Spravce zarizeni."
+            "fix": "Zkuste jiny USB kabel a jiny USB port. Mnoho kabelu je pouze nabijeci a neprenasi data. Pouzijte znamy funkcni datovy kabel (takovy, ktery jste drive pouzili pro prenos souboru). Na Linuxu spustte lsusb a zkontrolujte, zda se zarizeni objevi (hledejte 1d50:6089). Na Windows zkontrolujte Spravce zarizeni, zda neni nezname zarizeni nebo zluta varovani. Pokud pouzivate USB hub, pripojte primo k pocitaci. Zkuste USB 2.0 i USB 3.0 porty, nekteere kontrolery zachazi s HackRF jinak."
           },
           "chargeOnly": {
             "problem": "Zarizeni se napaji pres USB, ale neni datove pripojeni",
-            "fix": "Pouzivate pouze nabijeci kabel. USB kabely dodavane s nabijeckami telefonu casto nemaji datove vodice. Pouzijte kabel, ktery jste drive pouzili pro prenos souboru."
+            "fix": "Pouzivate pouze nabijeci kabel. To je nejcastejsi USB problem. Nabijeci kabely maji napajeci vodice, ale ne datove, a na kabelu to neni poznat. Kabely dodavane s nabijeckami telefonu, powerbankami nebo levnym prislusenstvim jsou casto pouze nabijeci. Zarizeni se zapne a zda se, ze funguje, ale pocitac ho vubec neuvidi. Otestujte kabel pripojenim telefonu a zkontrolujte, zda pocitac vidi jeho soubory. Pokud ne, kabel je pouze nabijeci. Pouzijte kabel, ktery jste drive pouzili pro prenos dat."
           },
           "sdOverUsb": {
             "problem": "Rezim SD over USB nezobrazuje SD kartu na pocitaci",
-            "fix": "Nejprve na PortaPacku prejdete do Utilities > SD over USB. Zarizeni musi byt v tomto rezimu, aby se SD karta objevila jako uloziste na pocitaci. Pokud se stale nezobrazuje, zkontrolujte USB kabel (musi byt datovy) a zkuste jiny USB port."
+            "fix": "Nejprve na PortaPacku prejdete do Utilities > SD over USB. Zarizeni musi byt v tomto rezimu, aby se SD karta objevila jako uloziste na pocitaci. Pokud se stale nezobrazuje, zkontrolujte USB kabel (musi byt datovy, ne pouze nabijeci) a zkuste jiny USB port. Zkuste USB 2.0 port, pokud USB 3.0 nefunguje. Na Linuxu zkontrolujte dmesg."
+          },
+          "dataVsPower": {
+            "problem": "Jak poznat, zda je USB kabel datovy nebo pouze napajeci",
+            "fix": "Neexistuje spolehlivy vizualni zpusob, jak odlisit datovy kabel od pouze napajeciho. Vypadi stejne. Jediny test je pripojit zarizeni (telefon, externi disk) a zkontrolovat, zda pocitac pristupuje k jeho ulozisti. Pokud pocitac nic nevidi, ale zarizeni se nabiji, je to pouze napajeci kabel. Tipy: kabely dodavane s externimi disky jsou temer vzdy datove. Kabely z krabicek nabijcek jsou casto pouze napajeci. USB-C na USB-C kabely jsou casteji datove. V pripade pochybnosti kupte kabel oznaceny jako datovy/sync kabel."
+          },
+          "usb2vs3": {
+            "problem": "HackRF se chova jinak na USB 2.0 vs USB 3.0 portech",
+            "fix": "HackRF One je USB 2.0 High Speed zarizeni. Funguje na USB 2.0 i USB 3.0 portech, ale nektere USB 3.0 kontrolery maji problemy s kompatibilitou. Pokud zarizeni neni rozpoznano nebo se obcas odpojuje, zkuste USB 2.0 port (obvykle cerne porty, zatimco USB 3.0 jsou modre nebo cervene). Na noteboocich pouze s USB 3.0 nebo USB-C porty muze napajeny USB 2.0 hub nekdy vyresit problemy s detekci."
+          },
+          "thunderbolt": {
+            "problem": "HackRF nefunguje na Thunderbolt / USB-C portech",
+            "fix": "Thunderbolt 3 a 4 porty jsou kompatibilni s USB zarizenimmi, ale pouzivaji jiny kontroler nez standardni USB porty. Nektere Thunderbolt kontrolery spravne neenumeruji USB 2.0 zarizeni. Pokud HackRF neni detekovano na Thunderbolt/USB-C portu, zkuste primy USB-A port (pouzijte jednoduchy USB-C na USB-A adapter, ne dok nebo hub). Na Macich pouze s Thunderbolt porty je doporucen USB-C na USB-A adapter."
           }
         }
       },

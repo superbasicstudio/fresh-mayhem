@@ -107,7 +107,7 @@
       },
       "troubleshooting": {
         "label": "Resolucao de problemas",
-        "stat": "14 solucoes comuns",
+        "stat": "17 solucoes comuns",
         "desc": "Problemas com cartao SD, arranque, ligacoes USB, rececao e sinal"
       }
     }
@@ -393,15 +393,27 @@
         "items": {
           "notRecognized": {
             "problem": "O computador nao deteta o HackRF por USB",
-            "fix": "Tente um cabo USB diferente e uma porta USB diferente. Muitos cabos sao apenas para carregamento e nao transportam dados. Use um cabo de dados conhecido como funcional. No Linux, execute lsusb para verificar se o dispositivo aparece (procure 1d50:6089). No Windows, verifique o Gestor de Dispositivos."
+            "fix": "Tente um cabo USB diferente e uma porta USB diferente. Muitos cabos sao apenas para carregamento. Use um cabo de dados conhecido como funcional. No Linux, execute lsusb (procure 1d50:6089). No Windows, verifique o Gestor de Dispositivos. Se usa um hub USB, ligue diretamente ao computador. Tente tanto portas USB 2.0 como USB 3.0 pois alguns controladores tratam o HackRF de forma diferente."
           },
           "chargeOnly": {
             "problem": "O dispositivo liga via USB mas sem ligacao de dados",
-            "fix": "Esta a usar um cabo apenas de carregamento. Cabos USB que vem com carregadores de telefone muitas vezes nao tem fios de dados. Use um cabo que tenha usado anteriormente para transferencia de ficheiros."
+            "fix": "Esta a usar um cabo apenas de carregamento. Este e o problema USB mais comum. Cabos de carregamento tem fios de alimentacao mas nao fios de dados, e nao ha forma de distinguir visualmente. Cabos que vem com carregadores de telefone, powerbanks ou acessorios baratos sao frequentemente apenas de carregamento. O dispositivo liga e parece funcionar, mas o computador nao o ve de todo. Teste o cabo ligando um telefone e verifique se o computador consegue aceder aos seus ficheiros."
           },
           "sdOverUsb": {
             "problem": "O modo SD over USB nao mostra o cartao SD no computador",
-            "fix": "Primeiro navegue ate Utilities > SD over USB no PortaPack. O dispositivo deve estar neste modo para que o cartao SD apareca como dispositivo de armazenamento em massa no computador. Se o cartao SD ainda nao aparecer, verifique o cabo USB (deve ser capaz de transferir dados) e tente outra porta USB."
+            "fix": "Primeiro navegue ate Utilities > SD over USB no PortaPack. O dispositivo deve estar neste modo. Se o cartao SD nao aparecer, verifique o cabo USB (deve ser cabo de dados, nao apenas carregamento) e tente outra porta USB. Tente porta USB 2.0 se USB 3.0 nao funciona."
+          },
+          "dataVsPower": {
+            "problem": "Como saber se um cabo USB e de dados ou apenas de alimentacao",
+            "fix": "Nao ha forma visual fiavel de distinguir um cabo de dados de um cabo de alimentacao. Sao identicos. O unico teste e ligar um dispositivo (telefone, disco externo) e verificar se o computador acede ao seu armazenamento. Se o computador nao ve nada mas o dispositivo carrega, e apenas de alimentacao. Dicas: cabos de discos externos sao quase sempre cabos de dados. Cabos USB-C para USB-C sao mais provavelmente capazes de transferir dados."
+          },
+          "usb2vs3": {
+            "problem": "HackRF comporta-se de forma diferente em portas USB 2.0 vs USB 3.0",
+            "fix": "O HackRF One e um dispositivo USB 2.0 High Speed. Funciona em portas USB 2.0 e USB 3.0, mas alguns controladores USB 3.0 tem problemas de compatibilidade. Se o dispositivo nao e reconhecido ou desliga intermitentemente, tente uma porta USB 2.0 (normalmente as portas pretas, enquanto USB 3.0 sao azuis ou vermelhas). Em portateis com apenas portas USB 3.0 ou USB-C, um hub USB 2.0 com alimentacao pode por vezes resolver problemas de detecao."
+          },
+          "thunderbolt": {
+            "problem": "HackRF nao funciona em portas Thunderbolt / USB-C",
+            "fix": "As portas Thunderbolt 3 e 4 sao compativeis com dispositivos USB mas usam um controlador diferente das portas USB padrao. Alguns controladores Thunderbolt nao enumeram corretamente dispositivos USB 2.0. Se o HackRF nao e detetado numa porta Thunderbolt/USB-C, tente uma porta USB-A diretamente (use um adaptador simples USB-C para USB-A, nao um dock ou hub)."
           }
         }
       },

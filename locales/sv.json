@@ -107,7 +107,7 @@
       },
       "troubleshooting": {
         "label": "Felsokning",
-        "stat": "14 vanliga losningar",
+        "stat": "17 vanliga losningar",
         "desc": "SD-kortsproblem, uppstartsproblem, USB-anslutningar, mottagning och signal"
       }
     }
@@ -393,15 +393,27 @@
         "items": {
           "notRecognized": {
             "problem": "Datorn detekterar inte HackRF over USB",
-            "fix": "Prova en annan USB-kabel och en annan USB-port. Manga kablar ar bara for laddning och overfor inte data. Anvand en kand fungerande datakabel. Pa Linux, kor lsusb for att kontrollera om enheten visas (leta efter 1d50:6089). Pa Windows, kontrollera Enhetshanteraren."
+            "fix": "Prova en annan USB-kabel och en annan USB-port. Manga kablar ar bara for laddning. Anvand en kand fungerande datakabel. Pa Linux, kor lsusb (leta efter 1d50:6089). Pa Windows, kontrollera Enhetshanteraren. Om du anvander en USB-hubb, anslut direkt till datorn. Prova bade USB 2.0 och USB 3.0 portar da vissa kontrollrar hanterar HackRF annorlunda."
           },
           "chargeOnly": {
             "problem": "Enheten startar via USB men ingen dataanslutning",
-            "fix": "Du anvander en laddningskabel. USB-kablar som foljde med telefonladdare saknar ofta dataledningar. Anvand en kabel du tidigare anvant for filoverforing."
+            "fix": "Du anvander en laddningskabel. Detta ar det vanligaste USB-problemet. Laddningskablar har stroemledningar men inga dataledningar, och det gar inte att se pa kabeln. Kablar som foljde med telefonladdare, powerbanks eller billiga tillbehor ar ofta bara for laddning. Enheten startar och verkar fungera, men din dator ser den inte alls. Testa kabeln genom att ansluta en telefon och kontrollera om din dator kan blaeddra bland dess filer."
           },
           "sdOverUsb": {
             "problem": "SD over USB-lage visar inte SD-kortet pa datorn",
-            "fix": "Navigera forst till Utilities > SD over USB pa PortaPack. Enheten maste vara i detta lage for att SD-kortet ska visas som masslagringsenhet pa din dator. Om SD-kortet fortfarande inte visas, kontrollera din USB-kabel (maste vara datakapabel) och prova en annan USB-port."
+            "fix": "Navigera forst till Utilities > SD over USB pa PortaPack. Enheten maste vara i detta lage. Om SD-kortet fortfarande inte visas, kontrollera din USB-kabel (maste vara datakabel, inte bara laddning) och prova en annan USB-port. Prova USB 2.0 port om USB 3.0 inte fungerar."
+          },
+          "dataVsPower": {
+            "problem": "Hur man ser om en USB-kabel ar datakapabel eller bara for stroem",
+            "fix": "Det finns inget paalitligt visuellt saett att skilja en datakabel fran en stroemkabel. De ser identiska ut. Det enda testet ar att ansluta en enhet (telefon, extern disk) och kontrollera om datorn kan komma at dess lagring. Om datorn inte ser nagot men enheten laddas, ar det bara en stroemkabel. Tips: kablar fran externa harddiskar ar naestan alltid datakablar. USB-C till USB-C kablar ar mer troligt datakapabla."
+          },
+          "usb2vs3": {
+            "problem": "HackRF beter sig annorlunda pa USB 2.0 vs USB 3.0 portar",
+            "fix": "HackRF One ar en USB 2.0 High Speed-enhet. Den fungerar pa bade USB 2.0 och USB 3.0 portar, men vissa USB 3.0 kontrollrar har kompatibilitetsproblem. Om enheten inte kaenns igen eller kopplas fran periodiskt, prova en USB 2.0 port (vanligtvis de svarta portarna, medan USB 3.0 ar blaa eller roeda). Pa baerbara datorer med bara USB 3.0 eller USB-C portar kan en driven USB 2.0 hubb ibland loesa detektionsproblem."
+          },
+          "thunderbolt": {
+            "problem": "HackRF fungerar inte pa Thunderbolt / USB-C portar",
+            "fix": "Thunderbolt 3 och 4 portar ar kompatibla med USB-enheter men anvander en annan kontroller aen standard USB-portar. Vissa Thunderbolt-kontrollrar raeknar inte upp USB 2.0 enheter korrekt. Om HackRF inte detekteras pa en Thunderbolt/USB-C port, prova en USB-A port direkt (anvand en enkel USB-C till USB-A adapter, inte en dock eller hubb). Pa Mac-datorer med bara Thunderbolt-portar rekommenderas en USB-C till USB-A adapter."
           }
         }
       },

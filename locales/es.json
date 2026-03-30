@@ -107,7 +107,7 @@
       },
       "troubleshooting": {
         "label": "Solucion de problemas",
-        "stat": "14 soluciones comunes",
+        "stat": "17 soluciones comunes",
         "desc": "Problemas con tarjeta SD, arranque, conexiones USB, recepcion y senal"
       }
     }
@@ -393,15 +393,27 @@
         "items": {
           "notRecognized": {
             "problem": "La computadora no detecta el HackRF por USB",
-            "fix": "Prueba un cable USB diferente y un puerto USB diferente. Muchos cables son solo de carga y no transmiten datos. Usa un cable de datos que sepas que funciona. En Linux, ejecuta lsusb para verificar si el dispositivo aparece (busca 1d50:6089). En Windows, revisa el Administrador de dispositivos."
+            "fix": "Prueba un cable USB diferente y un puerto USB diferente. Muchos cables son solo de carga y no transmiten datos. Usa un cable de datos que sepas que funciona. En Linux, ejecuta lsusb para verificar si el dispositivo aparece (busca 1d50:6089). En Windows, revisa el Administrador de dispositivos. Si usas un hub USB, conecta directamente a la computadora. Prueba tanto puertos USB 2.0 como USB 3.0 ya que algunos controladores manejan el HackRF de manera diferente."
           },
           "chargeOnly": {
             "problem": "El dispositivo se enciende via USB pero no hay conexion de datos",
-            "fix": "Estas usando un cable solo de carga. Los cables USB que vienen con cargadores de telefono a menudo carecen de los cables de datos. Usa un cable que hayas usado previamente para transferir archivos."
+            "fix": "Estas usando un cable solo de carga. Este es el problema USB mas comun. Los cables de carga tienen cables de alimentacion pero no de datos, y no hay forma de saberlo mirando el cable. Los cables que vienen con cargadores de telefono, baterias portatiles o accesorios baratos son frecuentemente solo de carga. El dispositivo se enciende y parece funcionar, pero tu computadora no lo ve en absoluto. Prueba el cable conectando un telefono y verifica si la computadora puede acceder a sus archivos. Si no puede, el cable es solo de carga."
           },
           "sdOverUsb": {
             "problem": "El modo SD over USB no muestra la tarjeta SD en la computadora",
-            "fix": "Primero navega a Utilities > SD over USB en el PortaPack. El dispositivo debe estar en este modo para que la tarjeta SD aparezca como dispositivo de almacenamiento masivo en tu computadora. Si la tarjeta SD aun no aparece, verifica tu cable USB (debe ser capaz de transmitir datos) e intenta un puerto USB diferente."
+            "fix": "Primero navega a Utilities > SD over USB en el PortaPack. El dispositivo debe estar en este modo. Si la tarjeta SD aun no aparece, verifica tu cable USB (debe ser cable de datos, no solo carga) e intenta un puerto USB diferente. Prueba un puerto USB 2.0 si USB 3.0 no funciona. En Linux, revisa dmesg."
+          },
+          "dataVsPower": {
+            "problem": "Como saber si un cable USB es de datos o solo de carga",
+            "fix": "No hay forma visual confiable de distinguir un cable de datos de uno solo de carga. Se ven identicos. La unica prueba es conectar un dispositivo (telefono, disco externo) y verificar si la computadora accede a su almacenamiento. Si la computadora no ve nada pero el dispositivo carga, es solo de carga. Consejos: los cables que vienen con discos externos casi siempre son de datos. Los cables de cajas de cargadores son frecuentemente solo de carga. Los cables USB-C a USB-C son mas propensos a ser de datos. En caso de duda, compra un cable etiquetado como cable de datos/sincronizacion."
+          },
+          "usb2vs3": {
+            "problem": "HackRF se comporta diferente en puertos USB 2.0 vs USB 3.0",
+            "fix": "El HackRF One es un dispositivo USB 2.0 High Speed. Funciona en puertos USB 2.0 y USB 3.0, pero algunos controladores USB 3.0 tienen problemas de compatibilidad. Si el dispositivo no es reconocido o se desconecta intermitentemente, prueba un puerto USB 2.0 (generalmente los puertos negros, mientras que USB 3.0 son azules o rojos). En laptops con solo puertos USB 3.0 o USB-C, un hub USB 2.0 con alimentacion puede resolver problemas de deteccion."
+          },
+          "thunderbolt": {
+            "problem": "HackRF no funciona en puertos Thunderbolt / USB-C",
+            "fix": "Los puertos Thunderbolt 3 y 4 son compatibles con dispositivos USB pero usan un controlador diferente a los puertos USB estandar. Algunos controladores Thunderbolt no enumeran correctamente dispositivos USB 2.0. Si el HackRF no es detectado en un puerto Thunderbolt/USB-C, prueba un puerto USB-A directamente (usa un adaptador simple USB-C a USB-A, no un dock o hub). En Macs con solo puertos Thunderbolt, se recomienda un adaptador USB-C a USB-A."
           }
         }
       },

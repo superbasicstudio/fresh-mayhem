@@ -107,7 +107,7 @@
       },
       "troubleshooting": {
         "label": "Probleemoplossing",
-        "stat": "14 veelvoorkomende oplossingen",
+        "stat": "17 veelvoorkomende oplossingen",
         "desc": "SD-kaartproblemen, opstartproblemen, USB-verbindingen, ontvangst en signaal"
       }
     }
@@ -393,15 +393,27 @@
         "items": {
           "notRecognized": {
             "problem": "Computer detecteert HackRF niet via USB",
-            "fix": "Probeer een andere USB-kabel en een andere USB-poort. Veel kabels zijn alleen voor opladen en dragen geen data over. Gebruik een bekende werkende datakabel. Op Linux, voer lsusb uit om te controleren of het apparaat verschijnt (zoek naar 1d50:6089). Op Windows, controleer Apparaatbeheer."
+            "fix": "Probeer een andere USB-kabel en een andere USB-poort. Veel kabels zijn alleen voor opladen. Gebruik een bekende werkende datakabel. Op Linux, voer lsusb uit (zoek naar 1d50:6089). Op Windows, controleer Apparaatbeheer. Als je een USB-hub gebruikt, sluit direct aan op de computer. Probeer zowel USB 2.0 als USB 3.0 poorten omdat sommige controllers de HackRF anders behandelen."
           },
           "chargeOnly": {
             "problem": "Apparaat gaat aan via USB maar geen dataverbinding",
-            "fix": "Je gebruikt een oplaadkabel. USB-kabels die bij telefoonladers worden geleverd missen vaak de datadraden. Gebruik een kabel die je eerder hebt gebruikt voor bestandsoverdracht."
+            "fix": "Je gebruikt een oplaadkabel. Dit is het meest voorkomende USB-probleem. Oplaadkabels hebben stroomdraden maar geen datadraden, en er is geen manier om het aan de kabel te zien. Kabels die bij telefoonladers, powerbanks of goedkope accessoires werden geleverd zijn vaak alleen voor opladen. Het apparaat gaat aan en lijkt te werken, maar je computer ziet het helemaal niet. Test de kabel door een telefoon aan te sluiten en te controleren of je computer de bestanden kan zien."
           },
           "sdOverUsb": {
             "problem": "SD over USB-modus toont SD-kaart niet op computer",
-            "fix": "Navigeer eerst naar Utilities > SD over USB op de PortaPack. Het apparaat moet in deze modus staan om de SD-kaart als massaopslagapparaat op je computer te laten verschijnen. Als de SD-kaart nog steeds niet verschijnt, controleer je USB-kabel (moet datageschikt zijn) en probeer een andere USB-poort."
+            "fix": "Navigeer eerst naar Utilities > SD over USB op de PortaPack. Het apparaat moet in deze modus staan. Als de SD-kaart nog steeds niet verschijnt, controleer je USB-kabel (moet datakabel zijn, niet alleen opladen) en probeer een andere USB-poort. Probeer USB 2.0 poort als USB 3.0 niet werkt."
+          },
+          "dataVsPower": {
+            "problem": "Hoe herken je of een USB-kabel data kan overdragen of alleen stroom levert",
+            "fix": "Er is geen betrouwbare visuele manier om een datakabel te onderscheiden van een stroomkabel. Ze zien er identiek uit. De enige test is een apparaat (telefon, externe schijf) aansluiten en controleren of de computer toegang heeft tot de opslag. Als de computer niets ziet maar het apparaat oplaadt, is het alleen een stroomkabel. Tips: kabels van externe harde schijven zijn bijna altijd datakabels. USB-C naar USB-C kabels zijn vaker datageschikt."
+          },
+          "usb2vs3": {
+            "problem": "HackRF gedraagt zich anders op USB 2.0 vs USB 3.0 poorten",
+            "fix": "De HackRF One is een USB 2.0 High Speed apparaat. Het werkt op zowel USB 2.0 als USB 3.0 poorten, maar sommige USB 3.0 controllers hebben compatibiliteitsproblemen. Als het apparaat niet wordt herkend of af en toe loskoppelt, probeer een USB 2.0 poort (meestal de zwarte poorten, terwijl USB 3.0 blauw of rood is). Op laptops met alleen USB 3.0 of USB-C poorten kan een gevoede USB 2.0 hub soms detectieproblemen oplossen."
+          },
+          "thunderbolt": {
+            "problem": "HackRF werkt niet op Thunderbolt / USB-C poorten",
+            "fix": "Thunderbolt 3 en 4 poorten zijn compatibel met USB-apparaten maar gebruiken een andere controller dan standaard USB-poorten. Sommige Thunderbolt-controllers enumereren USB 2.0 apparaten niet correct. Als de HackRF niet wordt gedetecteerd op een Thunderbolt/USB-C poort, probeer direct een USB-A poort (gebruik een eenvoudige USB-C naar USB-A adapter, geen dock of hub). Op Macs met alleen Thunderbolt-poorten wordt een USB-C naar USB-A adapter aanbevolen."
           }
         }
       },
