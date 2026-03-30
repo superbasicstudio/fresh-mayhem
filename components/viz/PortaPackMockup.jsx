@@ -249,8 +249,8 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
             <g key={`sma-bot-${i}`} {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80'), cursor: 'pointer' }}>
               {/* Brass barrel */}
               <rect x={cx - 5} y={by + bh - 2} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#4ade80', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
-              {/* Red protective cap — slides down on hover */}
-              <rect x={cx - 6} y={by + bh + 1} width="12" height="10" rx="2.5" fill="#dc2626" stroke="#b91c1c" strokeWidth="0.5"
+              {/* Red protective cap — covers outer end, slides down on hover */}
+              <rect x={cx - 6} y={by + bh + 3} width="12" height="10" rx="2.5" fill="#dc2626" stroke="#b91c1c" strokeWidth="0.5"
                 style={{ transform: `translateY(${active === 'sma' ? '6px' : '0px'})`, transition: 'transform 0.3s ease', opacity: active === 'sma' ? 0.6 : 1 }} />
             </g>
           ))}
