@@ -76,7 +76,7 @@ export default function Sidebar({ onSearchClick }) {
   }, [mobileOpen]);
 
   const navLinks = (isMobile) => (
-    <ul className="flex flex-col gap-0.5">
+    <ul className="flex flex-col gap-px">
       {sectionDefs.map(s => {
         const label = t(s.labelKey);
         return (
@@ -85,7 +85,7 @@ export default function Sidebar({ onSearchClick }) {
               to={s.path}
               end={s.path === '/'}
               className={({ isActive }) =>
-                `flex items-center ${!isMobile && collapsed ? 'justify-center px-0 py-2.5' : 'gap-2.5 px-3 py-2.5'} rounded-lg text-sm transition-colors ${
+                `flex items-center ${!isMobile && collapsed ? 'justify-center px-0 py-1.5' : 'gap-2.5 px-3 py-1.5'} rounded-lg text-[13px] transition-colors ${
                   isActive
                     ? 'text-primary bg-primary/10 border border-primary/30'
                     : 'text-base-content/70 hover:text-base-content hover:bg-base-300/60 border border-transparent'
