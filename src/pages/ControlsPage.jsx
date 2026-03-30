@@ -48,15 +48,20 @@ export default function ControlsPage() {
         </ExpandableCard>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-3 mt-3">
-        <div className="card bg-base-200 p-4">
-          <h3 className="font-semibold text-sm mb-2 text-error">{t('controls.emergencyStop')}</h3>
-          <ol className="text-sm space-y-1.5 text-base-content/60 leading-relaxed list-none">
-            <li className="flex gap-2"><span className="fm-badge-number shrink-0">1</span> {t('controls.emergencyStep1')}</li>
-            <li className="flex gap-2"><span className="fm-badge-number shrink-0">2</span> {t('controls.emergencyStep2')}</li>
-            <li className="flex gap-2"><span className="fm-badge-number shrink-0">3</span> {t('controls.emergencyStep3')}</li>
-            <li className="flex gap-2"><span className="fm-badge-number shrink-0">4</span> {t('controls.emergencyStep4')}</li>
-          </ol>
+      {/* Emergency TX Stop — full-width red CTA */}
+      <div className="mt-4 rounded-xl bg-error p-5">
+        <div className="flex flex-col md:flex-row md:items-center gap-4">
+          <div className="flex-1">
+            <h3 className="font-bold text-lg text-black mb-1">{t('controls.emergencyStop')}</h3>
+            <p className="text-sm text-black/60 mb-3">Currently transmitting and need to stop immediately? Follow these steps in order.</p>
+            <ol className="text-sm space-y-2 text-black/80 leading-relaxed list-none">
+              <li className="flex gap-3 items-center"><span className="w-6 h-6 rounded-full bg-black text-error text-xs font-bold flex items-center justify-center shrink-0">1</span> {t('controls.emergencyStep1')}</li>
+              <li className="flex gap-3 items-center"><span className="w-6 h-6 rounded-full bg-black text-error text-xs font-bold flex items-center justify-center shrink-0">2</span> {t('controls.emergencyStep2')}</li>
+              <li className="flex gap-3 items-center"><span className="w-6 h-6 rounded-full bg-black text-error text-xs font-bold flex items-center justify-center shrink-0">3</span> {t('controls.emergencyStep3')}</li>
+              <li className="flex gap-3 items-center"><span className="w-6 h-6 rounded-full bg-black text-error text-xs font-bold flex items-center justify-center shrink-0">4</span> {t('controls.emergencyStep4')}</li>
+            </ol>
+          </div>
+          <div className="text-black/20 text-6xl font-bold font-mono hidden md:block shrink-0">⚠</div>
         </div>
       </div>
     </PageSection>
