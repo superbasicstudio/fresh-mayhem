@@ -489,15 +489,15 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
 
 
           {/* USB-C — bottom-right of device, on bottom edge right of SMA connectors */}
-          <g {...hw('usbc')} style={{ ...hw('usbc').style, filter: glow('usbc', '#7fff00') }}>
-            <rect x={bx + bw - 52} y={by + bh - 6} width="20" height="7" rx="3" fill={active === 'usbc' ? '#7fff00' : '#1a1a1a'}
-              stroke={st('usbc', '#7fff00')} strokeWidth="0.8" />
+          <g {...hw('usbc')} style={{ ...hw('usbc').style, filter: glow('usbc', '#4ade80') }}>
+            <rect x={bx + bw - 52} y={by + bh - 6} width="20" height="7" rx="3" fill={active === 'usbc' ? '#4ade80' : '#555'}
+              stroke={st('usbc', '#4ade80', '#777')} strokeWidth="0.8" />
           </g>
 
           {/* 3.5mm audio jack — bottom-right of device, next to USB-C */}
-          <g {...hw('audio')} style={{ ...hw('audio').style, filter: glow('audio', '#facc15') }}>
-            <circle cx={bx + bw - 20} cy={by + bh - 3} r="4.5" fill={active === 'audio' ? '#facc15' : '#1a1a1a'}
-              stroke={st('audio', '#facc15')} strokeWidth="0.8" />
+          <g {...hw('audio')} style={{ ...hw('audio').style, filter: glow('audio', '#4ade80') }}>
+            <circle cx={bx + bw - 20} cy={by + bh - 3} r="4.5" fill={active === 'audio' ? '#4ade80' : '#555'}
+              stroke={st('audio', '#4ade80', '#777')} strokeWidth="0.8" />
           </g>
 
         </svg>
