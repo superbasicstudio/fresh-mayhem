@@ -89,21 +89,20 @@ export default function QuickStartPage() {
   return (
     <>
       <PageSection id="quickstart" title={t('quickstart.title')} subtitle={t('quickstart.subtitle')}>
-        <div className="flex items-center justify-between mb-3">
-          <button
-            onClick={handleClear}
-            disabled={completed === 0}
-            className={`btn btn-xs font-mono text-[10px] border-0 shrink-0 ml-4 ${completed > 0 ? 'text-error bg-error/10 hover:bg-error/20' : 'text-base-content/20 bg-base-300/30 cursor-not-allowed'}`}
-            aria-label="Clear checklist below"
-          >
-            {t('quickstart.clear')} ({completed})
-          </button>
-        </div>
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-3 mb-3">
           <div className="flex-1 bg-base-300 rounded-full h-1.5">
             <div className="bg-accent rounded-full h-1.5 transition-all" style={{ width: `${(completed / quickStartSteps.length) * 100}%` }} />
           </div>
-          <span className="text-[10px] font-mono text-accent">{completed}/{quickStartSteps.length}</span>
+          <span className="text-[10px] font-mono text-accent shrink-0">{completed}/{quickStartSteps.length}</span>
+          {completed > 0 && (
+            <button
+              onClick={handleClear}
+              className="btn btn-xs font-mono text-[10px] border-0 shrink-0 text-error bg-error/10 hover:bg-error/20"
+              title="Reset all checkboxes in this Quick Start checklist"
+            >
+              Reset checklist
+            </button>
+          )}
         </div>
         <div className="space-y-2" key={resetKey}>
           {translatedSteps.map((step, i) => (
@@ -112,13 +111,13 @@ export default function QuickStartPage() {
         </div>
       </PageSection>
 
-      <PageSection id="firmware-update" title={t('firmwareUpdate.title')} subtitle={t('firmwareUpdate.subtitle')}>
+      <PageSection id="firmware-update" title={<span className="text-warning">{t('firmwareUpdate.title')}</span>} subtitle={t('firmwareUpdate.subtitle')}>
         <div className="card bg-base-300/50 border border-warning/20 p-4 mb-4">
           <div className="flex gap-3">
             <TbAlertTriangle className="w-5 h-5 text-warning shrink-0 mt-0.5" />
             <div>
               <p className="text-sm font-semibold text-warning mb-1">{t('firmwareUpdate.beforeYouStart')}</p>
-              <ul className="text-xs text-base-content/50 leading-relaxed space-y-1">
+              <ul className="text-xs text-warning/70 leading-relaxed space-y-1.5 list-disc list-inside">
                 <li>{t('firmwareUpdate.prereq1')}</li>
                 <li>{t('firmwareUpdate.prereq2')}</li>
                 <li>{t('firmwareUpdate.prereq3')}</li>
@@ -132,27 +131,26 @@ export default function QuickStartPage() {
           href="https://github.com/portapack-mayhem/mayhem-firmware/releases"
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-sm btn-primary font-mono text-[11px] mb-4 gap-2"
+          className="btn btn-sm btn-warning text-black font-mono text-[11px] mb-4 gap-2"
         >
           <TbDownload className="w-4 h-4" />
           {t('firmwareUpdate.downloadButton')}
         </a>
 
-        <div className="flex items-center justify-between mb-3">
-          <button
-            onClick={handleUpdateClear}
-            disabled={updateCompleted === 0}
-            className={`btn btn-xs font-mono text-[10px] border-0 shrink-0 ml-4 ${updateCompleted > 0 ? 'text-error bg-error/10 hover:bg-error/20' : 'text-base-content/20 bg-base-300/30 cursor-not-allowed'}`}
-            aria-label="Clear checklist below"
-          >
-            {t('quickstart.clear')} ({updateCompleted})
-          </button>
-        </div>
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-3 mb-3">
           <div className="flex-1 bg-base-300 rounded-full h-1.5">
             <div className="bg-accent rounded-full h-1.5 transition-all" style={{ width: `${(updateCompleted / updateSteps.length) * 100}%` }} />
           </div>
-          <span className="text-[10px] font-mono text-accent">{updateCompleted}/{updateSteps.length}</span>
+          <span className="text-[10px] font-mono text-accent shrink-0">{updateCompleted}/{updateSteps.length}</span>
+          {updateCompleted > 0 && (
+            <button
+              onClick={handleUpdateClear}
+              className="btn btn-xs font-mono text-[10px] border-0 shrink-0 text-error bg-error/10 hover:bg-error/20"
+              title="Reset all checkboxes in this Firmware Update checklist"
+            >
+              Reset checklist
+            </button>
+          )}
         </div>
         <div className="space-y-2" key={updateResetKey}>
           {updateSteps.map((step, i) => {

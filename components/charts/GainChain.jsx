@@ -393,6 +393,19 @@ export default function GainChain({ expanded = false }) {
 
   return (
     <div>
+      {/* Educational intro */}
+      <div className="mb-4">
+        <p className="text-xs text-base-content/50 leading-relaxed mb-2">
+          This simulator shows how signals flow through the HackRF's receive chain. The signal enters through the antenna,
+          optionally passes through the RF amplifier (AMP), then gets boosted by the LNA and VGA stages before reaching the
+          8-bit ADC that digitizes it. Use the sliders below to adjust each stage and see how total gain affects signal quality.
+        </p>
+        <p className="text-xs text-base-content/40 leading-relaxed">
+          <strong className="text-base-content/60">Tip:</strong> Start with AMP OFF, LNA 16, VGA 20. Increase VGA first if the signal is weak.
+          Too much gain causes clipping — the gauge turns yellow/red when you're overdriving the front-end.
+        </p>
+      </div>
+
       {/* Signal Chain Flow */}
       <SignalChain lna={lna} vga={vga} amp={amp} totalGain={totalGain} expanded={expanded} />
 

@@ -88,7 +88,7 @@ export const damageStories = [
     outcome: "Permanent LNA damage. HackRF usable but with degraded receive performance.",
     prevention: "Never operate the HackRF near active transmitters. At minimum keep 10 feet (3 meters) of separation from any transmitter. Use an inline attenuator if operating near any RF source above 1W.",
     source: "hackrf-dev mailing list",
-    sourceUrl: "https://pairlist9.pair.net/mailman/listinfo/hackrf-dev",
+    sourceUrl: "https://groups.google.com/g/hackrf-dev",
     severity: "destroyed",
   },
   {

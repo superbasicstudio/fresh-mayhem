@@ -11,15 +11,26 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBrain, TbSearch, TbDownload, TbShoppingCart, TbRulerMeasure } from 'react-icons/tb';
+import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBrain, TbSearch, TbDownload, TbShoppingCart, TbRulerMeasure, TbGavel } from 'react-icons/tb';
+
+function PortaPackIcon({ className = 'w-6 h-6' }) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="5" y="1" width="14" height="22" rx="2" />
+      <rect x="7" y="3.5" width="10" height="10" rx="1" />
+      <circle cx="12" cy="18" r="3" />
+      <circle cx="12" cy="18" r="1" />
+    </svg>
+  );
+}
 
 const sectionDefs = [
   { path: '/', labelKey: 'nav.overview', icon: TbRadar },
-  { path: '/controls', labelKey: 'nav.controls', icon: TbDeviceGamepad },
+  { path: '/controls', labelKey: 'nav.controls', icon: PortaPackIcon },
   { path: '/receive', labelKey: 'nav.receive', icon: TbAntenna },
   { path: '/transmit', labelKey: 'nav.transmit', icon: TbBroadcast },
   { path: '/tools', labelKey: 'nav.tools', icon: TbRulerMeasure },
-  { path: '/safety', labelKey: 'nav.safety', icon: ShieldExclamationIcon },
+  { path: '/safety', labelKey: 'nav.safety', icon: TbGavel },
   { path: '/frequencies', labelKey: 'nav.frequencies', icon: TbWaveSine },
   { path: '/learn', labelKey: 'nav.learn', icon: TbBrain },
   { path: '/quickstart', labelKey: 'nav.quickstart', icon: RocketLaunchIcon },
@@ -151,8 +162,8 @@ export default function Sidebar({ onSearchClick }) {
           >
             <TbDownload className="w-[18px] h-[18px] shrink-0" />
             <span className="flex flex-col">
-              <span className="font-medium text-xs">Desktop App</span>
-              <span className="text-[10px] text-base-content/25 font-mono">Linux &middot; v0.9.3</span>
+              <span className="font-medium text-xs">Desktop App <span className="text-[9px] font-mono bg-warning text-black px-1.5 py-0.5 rounded ml-1.5">BETA</span></span>
+              <span className="text-[10px] text-base-content/25 font-mono">Linux Only &middot; v0.9.3</span>
             </span>
           </a>
         </div>
@@ -223,8 +234,8 @@ export default function Sidebar({ onSearchClick }) {
             <span className="w-[18px] h-[18px] shrink-0 flex items-center justify-center"><TbDownload className="w-full h-full" /></span>
             {!collapsed && (
               <span className="flex flex-col min-w-0">
-                <span className="font-medium text-xs whitespace-nowrap">Desktop App <span className="text-[9px] text-warning/60 font-mono">BETA</span></span>
-                <span className="text-[10px] text-base-content/25 font-mono">Linux &middot; v0.9.3</span>
+                <span className="font-medium text-xs whitespace-nowrap">Desktop App <span className="text-[9px] font-mono bg-warning text-black px-1.5 py-0.5 rounded ml-1.5">BETA</span></span>
+                <span className="text-[10px] text-base-content/25 font-mono">Linux Only &middot; v0.9.3</span>
               </span>
             )}
             {collapsed && (

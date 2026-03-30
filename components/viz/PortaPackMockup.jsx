@@ -1,10 +1,10 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
 import ContextPanel from './ContextPanel';
 
-/* ── Menu tree (mirrors real Mayhem v2.3.2 structure) ── */
+/* ── Menu tree (mirrors real Mayhem v2.4 structure) ── */
 const MENUS = {
   main: {
-    title: 'MAYHEM v2.3.2',
+    title: 'MAYHEM v2.4',
     items: [
       { label: 'Receive', color: '#7fff00', sub: 'receive' },
       { label: 'Transmit', color: '#f43f5e', sub: 'transmit' },
@@ -88,8 +88,8 @@ function wrapText(text, maxChars) {
   return lines;
 }
 
-export default function PortaPackMockup({ expanded = false }) {
-  const [stack, setStack] = useState(['main']);
+export default function PortaPackMockup({ expanded = false, initialMenu = 'main' }) {
+  const [stack, setStack] = useState(initialMenu === 'main' ? ['main'] : ['main', initialMenu]);
   const [cursor, setCursor] = useState(0);
   const [info, setInfo] = useState(null);     // { title, text }
   const [active, setActive] = useState(null); // hovered hardware zone
@@ -97,6 +97,7 @@ export default function PortaPackMockup({ expanded = false }) {
   const [pressBtn, setPressBtn] = useState(null); // pressed d-pad button
   const [powerOn, setPowerOn] = useState(true);   // power switch state
   const [powerTransition, setPowerTransition] = useState(null); // 'booting' | 'shutting-down' | null
+  const [micMode, setMicMode] = useState(true); // true = MIC, false = EXT
   const containerRef = useRef(null);
 
   const togglePower = () => {
@@ -185,6 +186,7 @@ export default function PortaPackMockup({ expanded = false }) {
     { id: 'sd', label: 'MicroSD', desc: 'FAT32, 16-32 GB. Stores apps, captures, frequency lists.' },
     { id: 'dfu', label: 'DFU Button', desc: 'Hold + RESET → DFU bootloader. ROM-based — never brickable.' },
     { id: 'reset', label: 'RESET', desc: 'Emergency stop. Kills all RF. Reboots instantly.' },
+    { id: 'gpio', label: 'GPIO Header', desc: 'General purpose I/O pins. Used for external hardware, add-ons, and debugging. Active low.' },
   ];
   const activeHw = ZONES.find(z => z.id === active);
   const lastHwRef = useRef(null);
@@ -198,18 +200,23 @@ export default function PortaPackMockup({ expanded = false }) {
     onMouseLeave: () => setActive(null),
   });
 
-  const glow = (id, c) => active === id ? `drop-shadow(0 0 6px ${c})` : 'none';
+  const glow = (id, c) => active === id ? `drop-shadow(0 0 8px ${c})` : 'none';
   const st = (id, c, fb = '#444') => active === id ? c : fb;
 
-  // SVG dimensions
-  const vw = 220, vh = 320;
-  const sx = 30, sy = 32, sw = 160, sh = 132; // screen bounds
-  const barH = 14;
-  const itemH = expanded ? 14 : 13;
-  const fontSize = expanded ? 8 : 7;
-  const infoChars = expanded ? 32 : 26;
+  // SVG dimensions — matched to real HackRF+PortaPack H4M proportions
+  const vw = 260, vh = 400;
+  const sx = 46, sy = 44, sw = 172, sh = 170; // screen bounds
+  const barH = 16;
+  const itemH = expanded ? 16 : 15;
+  const fontSize = expanded ? 9 : 8;
+  const infoChars = expanded ? 26 : 22;
 
   const infoLines = info ? wrapText(info.text, infoChars) : [];
+
+  // Device body coords — ~12px bezel each side
+  const bx = 24, by = 20, bw = 216, bh = 330, br = 12;
+  // Click wheel center
+  const wcx = bx + bw / 2, wcy = 285, wr = 42;
 
   return (
     <div className={`flex ${expanded ? 'flex-row gap-8 items-center justify-center min-h-[70vh]' : 'flex-col sm:flex-row gap-4 items-start'}`}>
@@ -228,30 +235,53 @@ export default function PortaPackMockup({ expanded = false }) {
             </linearGradient>
           </defs>
 
-          {/* Body */}
-          <rect x="16" y="12" width="188" height="296" rx="14" fill="url(#bz)" stroke="#333" strokeWidth="1.5" />
+          {/* ── SMA CONNECTORS (drawn first = behind device body) ── */}
+          {/* SMA — top-left */}
+          <g {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80') }}>
+            <rect x={bx + 15} y={by - 12} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#4ade80', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
+          </g>
+          {/* SMA — 2 on bottom-left */}
+          {[bx + 30, bx + 58].map((cx, i) => (
+            <g key={`sma-bot-${i}`} {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80') }}>
+              <rect x={cx - 5} y={by + bh - 2} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#4ade80', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
+            </g>
+          ))}
+
+          {/* Device body — accurate PortaPack proportions */}
+          <rect x={bx} y={by} width={bw} height={bh} rx={br} fill="url(#bz)" stroke="#333" strokeWidth="1.5" />
+          {/* Inner bezel lip */}
+          <rect x={bx + 6} y={by + 6} width={bw - 12} height={bh - 12} rx={br - 3} fill="none" stroke="#222" strokeWidth="0.5" />
+
+          {/* Corner screws — Phillips head (cross pattern) */}
+          {[[bx + 14, by + 14], [bx + bw - 14, by + 14], [bx + 14, by + bh - 14], [bx + bw - 14, by + bh - 14]].map(([cx, cy], i) => (
+            <g key={`screw-${i}`}>
+              <circle cx={cx} cy={cy} r="5" fill="#0e0e0e" stroke="#333" strokeWidth="0.8" />
+              <line x1={cx - 2.5} y1={cy} x2={cx + 2.5} y2={cy} stroke="#444" strokeWidth="0.7" />
+              <line x1={cx} y1={cy - 2.5} x2={cx} y2={cy + 2.5} stroke="#444" strokeWidth="0.7" />
+            </g>
+          ))}
 
           {/* Screen bezel */}
-          <rect x="28" y="28" width="164" height="140" rx="4" fill="#060606" stroke="#222" strokeWidth="0.5" />
+          <rect x={sx - 4} y={sy - 4} width={sw + 8} height={sh + 8} rx="5" fill="#060606" stroke="#222" strokeWidth="0.8" />
 
           {/* ── SCREEN CONTENT ── */}
-          <rect x={sx} y={sy} width={sw} height={sh} rx="2" fill="#080808" />
+          <rect x={sx} y={sy} width={sw} height={sh} rx="3" fill="#080808" />
 
           {/* Status bar */}
-          <rect x={sx} y={sy} width={sw} height={barH} fill="#111" />
-          <text x={sx + 4} y={sy + 10} fill="#4ade80" fontSize="6.5" fontFamily="monospace">MAYHEM</text>
-          <text x={sx + 42} y={sy + 10} fill="#555" fontSize="6.5" fontFamily="monospace">v2.3.2</text>
-          <text x={sx + sw - 4} y={sy + 10} fill="#4ade80" fontSize="6" fontFamily="monospace" textAnchor="end">▮▮▮ SD</text>
+          <rect x={sx} y={sy} width={sw} height={barH} rx="3" fill="#111" />
+          <text x={sx + 6} y={sy + 12} fill="#4ade80" fontSize="8" fontFamily="monospace" fontWeight="bold">MAYHEM</text>
+          <text x={sx + 52} y={sy + 12} fill="#555" fontSize="8" fontFamily="monospace">v2.4</text>
+          <text x={sx + sw - 6} y={sy + 12} fill="#4ade80" fontSize="7" fontFamily="monospace" textAnchor="end">▮▮▮ SD</text>
 
           {/* Title / breadcrumb */}
-          <rect x={sx} y={sy + barH} width={sw} height={14} fill="#0e0e0e" />
-          <line x1={sx} y1={sy + barH + 14} x2={sx + sw} y2={sy + barH + 14} stroke="#1a1a1a" strokeWidth={0.5} />
+          <rect x={sx} y={sy + barH} width={sw} height={16} fill="#0e0e0e" />
+          <line x1={sx} y1={sy + barH + 16} x2={sx + sw} y2={sy + barH + 16} stroke="#1a1a1a" strokeWidth={0.5} />
           {(stack.length > 1 || info) && (
-            <text x={sx + 4} y={sy + barH + 10} fill="#7fff00" fontSize="7" fontFamily="monospace"
+            <text x={sx + 6} y={sy + barH + 12} fill="#7fff00" fontSize="8" fontFamily="monospace"
               style={{ cursor: 'pointer' }} onClick={goBack}>{'←'}</text>
           )}
-          <text x={sx + (stack.length > 1 || info ? 16 : 4)} y={sy + barH + 10}
-            fill={info ? (info.color || '#ddd') : '#aaa'} fontSize="7" fontFamily="monospace" fontWeight="bold">
+          <text x={sx + (stack.length > 1 || info ? 20 : 6)} y={sy + barH + 12}
+            fill={info ? (info.color || '#ddd') : '#aaa'} fontSize="8" fontFamily="monospace" fontWeight="bold">
             {info ? info.title : currentMenu?.title}
           </text>
 
@@ -259,41 +289,41 @@ export default function PortaPackMockup({ expanded = false }) {
           {info ? (
             <>
               {infoLines.map((line, i) => (
-                <text key={i} x={sx + 6} y={sy + barH + 28 + i * 12}
+                <text key={i} x={sx + 8} y={sy + barH + 34 + i * 14}
                   fill="#bbb" fontSize={fontSize} fontFamily="monospace">{line}</text>
               ))}
-              <text x={sx + sw / 2} y={sy + sh - 4} textAnchor="middle"
-                fill="#555" fontSize="6" fontFamily="monospace">← back / click to return</text>
+              <text x={sx + sw / 2} y={sy + sh - 6} textAnchor="middle"
+                fill="#555" fontSize="7" fontFamily="monospace">← back / click to return</text>
             </>
           ) : (
             <>
               {visibleItems.map((item, vi) => {
                 const idx = vi + scrollOffset;
                 const isSel = idx === cursor;
-                const iy = sy + barH + 22 + vi * itemH;
+                const iy = sy + barH + 30 + vi * itemH;
                 return (
                   <g key={item.label} style={{ cursor: 'pointer' }} onClick={() => { setCursor(idx); select(); }}>
-                    {isSel && <rect x={sx + 2} y={iy - 9} width={sw - 4} height={itemH} rx="2" fill="#7fff00" opacity="0.1" />}
-                    <text x={sx + 6} y={iy - 1} fill={isSel ? '#7fff00' : '#666'} fontSize="7" fontFamily="monospace">
+                    {isSel && <rect x={sx + 3} y={iy - 10} width={sw - 6} height={itemH} rx="2" fill="#7fff00" opacity="0.1" />}
+                    <text x={sx + 8} y={iy} fill={isSel ? '#7fff00' : '#666'} fontSize="8" fontFamily="monospace">
                       {isSel ? '▸' : ' '}
                     </text>
-                    <text x={sx + 16} y={iy - 1} fill={isSel ? '#fff' : item.color} fontSize={fontSize}
+                    <text x={sx + 20} y={iy} fill={isSel ? '#fff' : item.color} fontSize={fontSize}
                       fontFamily="monospace" opacity={isSel ? 1 : 0.7} fontWeight={isSel ? 'bold' : 'normal'}>
                       {item.label}
                     </text>
-                    {item.sub && <text x={sx + sw - 8} y={iy - 1} fill="#444" fontSize="7" fontFamily="monospace">{'›'}</text>}
+                    {item.sub && <text x={sx + sw - 10} y={iy} fill="#444" fontSize="8" fontFamily="monospace">{'›'}</text>}
                   </g>
                 );
               })}
               {/* Scroll indicators */}
               {scrollOffset > 0 && (
-                <text x={sx + sw - 6} y={sy + barH + 18} fill="#555" fontSize="7" textAnchor="end">▲</text>
+                <text x={sx + sw - 8} y={sy + barH + 24} fill="#555" fontSize="8" textAnchor="end">▲</text>
               )}
               {scrollOffset + MAX_VISIBLE < items.length && (
-                <text x={sx + sw - 6} y={sy + sh - 4} fill="#555" fontSize="7" textAnchor="end">▼</text>
+                <text x={sx + sw - 8} y={sy + sh - 6} fill="#555" fontSize="8" textAnchor="end">▼</text>
               )}
               {/* Nav hint */}
-              <text x={sx + 6} y={sy + sh - 4} fill="#444" fontSize="5.5" fontFamily="monospace">
+              <text x={sx + 8} y={sy + sh - 6} fill="#444" fontSize="6" fontFamily="monospace">
                 {stack.length > 1 ? '▲▼ navigate  ● select  ← back' : '▲▼ navigate  ● select'}
               </text>
             </>
@@ -301,33 +331,32 @@ export default function PortaPackMockup({ expanded = false }) {
 
           {/* Power-off screen overlay */}
           {!powerOn && !powerTransition && (
-            <rect x={sx} y={sy} width={sw} height={sh} rx="2" fill="#050505" opacity="0.95" />
+            <rect x={sx} y={sy} width={sw} height={sh} rx="3" fill="#050505" opacity="0.95" />
           )}
 
-          {/* Shutdown animation — screen contracts to center line then off */}
+          {/* Shutdown animation */}
           {powerTransition === 'shutting-down' && (
             <g>
-              <rect x={sx} y={sy} width={sw} height={sh} rx="2" fill="#050505" opacity="0.85">
+              <rect x={sx} y={sy} width={sw} height={sh} rx="3" fill="#050505" opacity="0.85">
                 <animate attributeName="opacity" from="0" to="0.95" dur="0.6s" fill="freeze" />
               </rect>
-              {/* White center line flash then fade */}
-              <line x1={sx + 10} y1={sy + sh / 2} x2={sx + sw - 10} y2={sy + sh / 2} stroke="#fff" strokeWidth="1.5">
+              <line x1={sx + 12} y1={sy + sh / 2} x2={sx + sw - 12} y2={sy + sh / 2} stroke="#fff" strokeWidth="1.5">
                 <animate attributeName="opacity" values="0;0.8;0.6;0" dur="0.8s" fill="freeze" />
               </line>
             </g>
           )}
 
-          {/* Boot animation — dark screen with loading text */}
+          {/* Boot animation */}
           {powerTransition === 'booting' && (
             <g>
-              <rect x={sx} y={sy} width={sw} height={sh} rx="2" fill="#050505">
+              <rect x={sx} y={sy} width={sw} height={sh} rx="3" fill="#050505">
                 <animate attributeName="opacity" from="0.95" to="0" dur="1.4s" fill="freeze" />
               </rect>
-              <text x={sx + sw / 2} y={sy + sh / 2 - 6} textAnchor="middle" fill="#4ade80" fontSize="7" fontFamily="monospace" fontWeight="bold">
+              <text x={sx + sw / 2} y={sy + sh / 2 - 8} textAnchor="middle" fill="#4ade80" fontSize="9" fontFamily="monospace" fontWeight="bold">
                 MAYHEM
                 <animate attributeName="opacity" values="0;1;1;0" dur="1.4s" fill="freeze" />
               </text>
-              <text x={sx + sw / 2} y={sy + sh / 2 + 6} textAnchor="middle" fill="#333" fontSize="5" fontFamily="monospace">
+              <text x={sx + sw / 2} y={sy + sh / 2 + 8} textAnchor="middle" fill="#333" fontSize="6" fontFamily="monospace">
                 Loading...
                 <animate attributeName="opacity" values="0;0;0.5;0" dur="1.4s" fill="freeze" />
               </text>
@@ -336,116 +365,141 @@ export default function PortaPackMockup({ expanded = false }) {
 
           {/* ── HARDWARE ZONES ── */}
 
-          {/* SMA — antenna port (inside body top edge) */}
-          <g {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80') }}>
-            <circle cx="110" cy="20" r="6" fill="#333" stroke={st('sma', '#4ade80', '#555')} strokeWidth={active === 'sma' ? 2 : 1} />
-            <circle cx="110" cy="20" r="2" fill="#555" />
+
+          {/* Top-right area: DFU button, RESET button, MicroSD slot — on top edge of device */}
+          {/* DFU button (blue) — enlarged hover area */}
+          <g {...hw('dfu')} style={{ ...hw('dfu').style, filter: glow('dfu', '#60a5fa') }}>
+            <rect x={bx + bw - 68} y={by - 14} width="26" height="20" rx="0" fill="transparent" />
+            <rect x={bx + bw - 64} y={by - 8} width="18" height="10" rx="3" fill={active === 'dfu' ? '#60a5fa' : '#2563eb'}
+              stroke={st('dfu', '#93c5fd', '#3b82f6')} strokeWidth="0.8" />
+            <text x={bx + bw - 55} y={by} textAnchor="middle" fill="#fff" fontSize="5" fontWeight="bold">DFU</text>
           </g>
 
-          {/* DFU */}
-          <g {...hw('dfu')} style={{ ...hw('dfu').style, filter: glow('dfu', '#f43f5e') }}>
-            <rect x="36" y="16" width="18" height="10" rx="3" fill={active === 'dfu' ? '#f43f5e' : '#1a1a1a'}
-              stroke={st('dfu', '#f43f5e')} strokeWidth="0.5" />
-            <text x="45" y="24" textAnchor="middle" fill={active === 'dfu' ? '#fff' : '#555'} fontSize="6" fontWeight="bold">DFU</text>
+          {/* RESET button (blue, far right) — enlarged hover area */}
+          <g {...hw('reset')} style={{ ...hw('reset').style, filter: glow('reset', '#60a5fa') }}>
+            <rect x={bx + bw - 42} y={by - 14} width="26" height="20" rx="0" fill="transparent" />
+            <rect x={bx + bw - 38} y={by - 8} width="18" height="10" rx="3" fill={active === 'reset' ? '#60a5fa' : '#2563eb'}
+              stroke={st('reset', '#93c5fd', '#3b82f6')} strokeWidth="0.8" />
+            <text x={bx + bw - 29} y={by} textAnchor="middle" fill="#fff" fontSize="5" fontWeight="bold">RST</text>
           </g>
 
-          {/* RESET */}
-          <g {...hw('reset')} style={{ ...hw('reset').style, filter: glow('reset', '#f43f5e') }}>
-            <rect x="166" y="16" width="18" height="10" rx="3" fill={active === 'reset' ? '#f43f5e' : '#1a1a1a'}
-              stroke={st('reset', '#f43f5e')} strokeWidth="0.5" />
-            <text x="175" y="24" textAnchor="middle" fill={active === 'reset' ? '#fff' : '#555'} fontSize="6" fontWeight="bold">RST</text>
+          {/* MicroSD slot — below DFU/RST, centered between them */}
+          <g {...hw('sd')} style={{ ...hw('sd').style, filter: glow('sd', '#4ade80') }}>
+            <rect x={bx + bw - 55} y={by + 6} width="24" height="3" rx="1" fill={active === 'sd' ? '#4ade80' : '#555'}
+              stroke={st('sd', '#4ade80', '#777')} strokeWidth="0.8" />
           </g>
 
-          {/* Power — interactive toggle switch */}
+          {/* Power — toggle switch in right bezel, vertically centered on screen */}
+          {(() => { const rbcx = (sx + sw + bx + bw) / 2; return (
           <g className="hw-zone" style={{ cursor: powerTransition ? 'wait' : 'pointer', filter: glow('power', '#4ade80') }}
             onClick={togglePower}
             onMouseEnter={() => setActive('power')} onMouseLeave={() => setActive(null)}>
-            {/* Track (thinner) */}
-            <rect x="196" y="68" width="7" height="40" rx="3.5" fill="#111" stroke={st('power', '#4ade80')} strokeWidth="0.5" />
-            {/* ON indicator — IEC 5007 line symbol */}
-            <line x1="199.5" y1="60" x2="199.5" y2="64" stroke={powerOn ? '#4ade80' : '#333'} strokeWidth="1.5" strokeLinecap="round" />
-            {/* OFF indicator — IEC 5008 circle symbol */}
-            <circle cx="199.5" cy="115" r="2.5" fill="none" stroke={!powerOn ? '#666' : '#282828'} strokeWidth="1" />
-            {/* Sliding thumb */}
-            <rect x="197.5" y="70" width="5" height="14" rx="2.5"
+            <rect x={rbcx - 3.5} y={sy + sh / 2 - 15} width="7" height="30" rx="3.5" fill="#111" stroke={st('power', '#4ade80')} strokeWidth="0.8" />
+            <line x1={rbcx} y1={sy + sh / 2 - 21} x2={rbcx} y2={sy + sh / 2 - 17} stroke={powerOn ? '#4ade80' : '#333'} strokeWidth="1.2" strokeLinecap="round" />
+            <circle cx={rbcx} cy={sy + sh / 2 + 21} r="2" fill="none" stroke={!powerOn ? '#666' : '#282828'} strokeWidth="0.8" />
+            <rect x={rbcx - 2.5} y={sy + sh / 2 - 13} width="5" height="12" rx="2.5"
               fill={powerOn ? '#4ade80' : '#555'}
-              style={{ transform: `translateY(${powerOn ? 0 : 22}px)`, transition: 'transform 0.2s ease, fill 0.2s ease' }} />
+              style={{ transform: `translateY(${powerOn ? 0 : 16}px)`, transition: 'transform 0.2s ease, fill 0.2s ease' }} />
+          </g>
+          ); })()}
+
+          {/* MIC/EXT switch — left bezel, clickable toggle */}
+          {(() => { const lbcx = (bx + sx) / 2; return (
+          <g style={{ cursor: 'pointer' }} onClick={() => setMicMode(m => !m)}>
+            <rect x={lbcx - 3.5} y={sy + sh / 2 - 12} width="7" height="24" rx="3.5" fill="#111" stroke="#444" strokeWidth="0.8" />
+            <rect x={lbcx - 2} y={sy + sh / 2 - 8} width="4" height="10" rx="2" fill="#e0e0e0"
+              style={{ transform: `translateY(${micMode ? 0 : 10}px)`, transition: 'transform 0.2s ease' }} />
+            <text x={lbcx} y={sy + sh / 2 - 16} fill={micMode ? '#e0e0e0' : '#444'} fontSize="4" fontFamily="monospace" textAnchor="middle"
+              style={{ transition: 'fill 0.2s' }}>MIC</text>
+            <text x={lbcx} y={sy + sh / 2 + 20} fill={!micMode ? '#e0e0e0' : '#444'} fontSize="4" fontFamily="monospace" textAnchor="middle"
+              style={{ transition: 'fill 0.2s' }}>EXT</text>
+          </g>
+          ); })()}
+
+          {/* GPIO port — left side edge */}
+          <g {...hw('gpio')} style={{ ...hw('gpio').style, filter: glow('gpio', '#facc15') }}>
+            <rect x={bx - 4} y={sy + 20} width="6" height="50" rx="1.5" fill={active === 'gpio' ? '#1a1a1a' : '#0a0a0a'}
+              stroke={st('gpio', '#facc15', '#222')} strokeWidth="0.8" />
           </g>
 
           {/* ── CLICK WHEEL (interactive navigation) ── */}
-          <circle cx="110" cy="230" r="40" fill="#151515" stroke="#2a2a2a" strokeWidth="1.5" />
-          <circle cx="110" cy="230" r="38" fill="none" stroke="#1e1e1e" strokeWidth="0.5" />
+          <circle cx={wcx} cy={wcy} r={wr} fill="#080808" stroke="#222" strokeWidth="1.5" />
+          <circle cx={wcx} cy={wcy} r={wr - 2} fill="none" stroke="#151515" strokeWidth="0.5" />
+          {/* Inner ring around dots */}
+          <circle cx={wcx} cy={wcy} r={wr - 6} fill="none" stroke="#1a1a1a" strokeWidth="0.8" />
+          {/* Clock-like dot markers */}
+          {Array.from({ length: 24 }).map((_, i) => {
+            const angle = (i * 15) * Math.PI / 180;
+            const dotR = wr - 12;
+            return <circle key={`dot-${i}`} cx={wcx + Math.sin(angle) * dotR} cy={wcy - Math.cos(angle) * dotR} r="1" fill="#1a1a1a" />;
+          })}
+          {/* Inner ring inside dots */}
+          <circle cx={wcx} cy={wcy} r={wr - 18} fill="none" stroke="#1a1a1a" strokeWidth="0.8" />
 
           {/* UP */}
           <g onClick={() => navigate('up')} style={{ cursor: 'pointer' }}
             onMouseEnter={() => setHovBtn('up')} onMouseLeave={() => setHovBtn(null)}
             onMouseDown={() => setPressBtn('up')} onMouseUp={() => setPressBtn(null)}>
-            <circle cx="110" cy="200" r="12" fill={hovBtn === 'up' ? '#7fff0008' : 'transparent'} />
-            <polygon points="110,195 103,207 117,207"
-              fill={pressBtn === 'up' ? '#7fff00' : hovBtn === 'up' ? '#7fff00' : '#555'}
+            <circle cx={wcx} cy={wcy - 28} r="12" fill={hovBtn === 'up' ? '#7fff0008' : 'transparent'} />
+            <polygon points={`${wcx},${wcy - 34} ${wcx - 7},${wcy - 22} ${wcx + 7},${wcy - 22}`}
+              fill={pressBtn === 'up' ? '#7fff00' : hovBtn === 'up' ? '#7fff00' : '#444'}
               opacity={pressBtn === 'up' ? 1 : hovBtn === 'up' ? 0.9 : 0.6}
-              style={{ filter: hovBtn === 'up' ? 'drop-shadow(0 0 4px #7fff0060)' : 'none', transition: 'fill 0.12s, opacity 0.12s', transform: pressBtn === 'up' ? 'translateY(1px)' : 'none', transformOrigin: '110px 200px' }} />
+              style={{ filter: hovBtn === 'up' ? 'drop-shadow(0 0 4px #7fff0060)' : 'none', transition: 'fill 0.12s, opacity 0.12s', transform: pressBtn === 'up' ? 'translateY(1px)' : 'none', transformOrigin: `${wcx}px ${wcy - 28}px` }} />
           </g>
           {/* DOWN */}
           <g onClick={() => navigate('down')} style={{ cursor: 'pointer' }}
             onMouseEnter={() => setHovBtn('down')} onMouseLeave={() => setHovBtn(null)}
             onMouseDown={() => setPressBtn('down')} onMouseUp={() => setPressBtn(null)}>
-            <circle cx="110" cy="260" r="12" fill={hovBtn === 'down' ? '#7fff0008' : 'transparent'} />
-            <polygon points="110,265 103,253 117,253"
-              fill={pressBtn === 'down' ? '#7fff00' : hovBtn === 'down' ? '#7fff00' : '#555'}
+            <circle cx={wcx} cy={wcy + 28} r="12" fill={hovBtn === 'down' ? '#7fff0008' : 'transparent'} />
+            <polygon points={`${wcx},${wcy + 34} ${wcx - 7},${wcy + 22} ${wcx + 7},${wcy + 22}`}
+              fill={pressBtn === 'down' ? '#7fff00' : hovBtn === 'down' ? '#7fff00' : '#444'}
               opacity={pressBtn === 'down' ? 1 : hovBtn === 'down' ? 0.9 : 0.6}
-              style={{ filter: hovBtn === 'down' ? 'drop-shadow(0 0 4px #7fff0060)' : 'none', transition: 'fill 0.12s, opacity 0.12s', transform: pressBtn === 'down' ? 'translateY(-1px)' : 'none', transformOrigin: '110px 260px' }} />
+              style={{ filter: hovBtn === 'down' ? 'drop-shadow(0 0 4px #7fff0060)' : 'none', transition: 'fill 0.12s, opacity 0.12s', transform: pressBtn === 'down' ? 'translateY(-1px)' : 'none', transformOrigin: `${wcx}px ${wcy + 28}px` }} />
           </g>
           {/* LEFT (back) */}
           <g onClick={goBack} style={{ cursor: 'pointer' }}
             onMouseEnter={() => setHovBtn('left')} onMouseLeave={() => setHovBtn(null)}
             onMouseDown={() => setPressBtn('left')} onMouseUp={() => setPressBtn(null)}>
-            <circle cx="80" cy="230" r="12" fill={hovBtn === 'left' ? '#7fff0008' : 'transparent'} />
-            <polygon points="75,230 87,223 87,237"
-              fill={pressBtn === 'left' ? '#7fff00' : hovBtn === 'left' ? '#7fff00' : '#555'}
+            <circle cx={wcx - 28} cy={wcy} r="12" fill={hovBtn === 'left' ? '#7fff0008' : 'transparent'} />
+            <polygon points={`${wcx - 34},${wcy} ${wcx - 22},${wcy - 7} ${wcx - 22},${wcy + 7}`}
+              fill={pressBtn === 'left' ? '#7fff00' : hovBtn === 'left' ? '#7fff00' : '#444'}
               opacity={pressBtn === 'left' ? 1 : hovBtn === 'left' ? 0.9 : 0.6}
-              style={{ filter: hovBtn === 'left' ? 'drop-shadow(0 0 4px #7fff0060)' : 'none', transition: 'fill 0.12s, opacity 0.12s', transform: pressBtn === 'left' ? 'translateX(1px)' : 'none', transformOrigin: '80px 230px' }} />
+              style={{ filter: hovBtn === 'left' ? 'drop-shadow(0 0 4px #7fff0060)' : 'none', transition: 'fill 0.12s, opacity 0.12s', transform: pressBtn === 'left' ? 'translateX(1px)' : 'none', transformOrigin: `${wcx - 28}px ${wcy}px` }} />
           </g>
           {/* RIGHT */}
           <g onClick={select} style={{ cursor: 'pointer' }}
             onMouseEnter={() => setHovBtn('right')} onMouseLeave={() => setHovBtn(null)}
             onMouseDown={() => setPressBtn('right')} onMouseUp={() => setPressBtn(null)}>
-            <circle cx="140" cy="230" r="12" fill={hovBtn === 'right' ? '#7fff0008' : 'transparent'} />
-            <polygon points="145,230 133,223 133,237"
-              fill={pressBtn === 'right' ? '#7fff00' : hovBtn === 'right' ? '#7fff00' : '#555'}
+            <circle cx={wcx + 28} cy={wcy} r="12" fill={hovBtn === 'right' ? '#7fff0008' : 'transparent'} />
+            <polygon points={`${wcx + 34},${wcy} ${wcx + 22},${wcy - 7} ${wcx + 22},${wcy + 7}`}
+              fill={pressBtn === 'right' ? '#7fff00' : hovBtn === 'right' ? '#7fff00' : '#444'}
               opacity={pressBtn === 'right' ? 1 : hovBtn === 'right' ? 0.9 : 0.6}
-              style={{ filter: hovBtn === 'right' ? 'drop-shadow(0 0 4px #7fff0060)' : 'none', transition: 'fill 0.12s, opacity 0.12s', transform: pressBtn === 'right' ? 'translateX(-1px)' : 'none', transformOrigin: '140px 230px' }} />
+              style={{ filter: hovBtn === 'right' ? 'drop-shadow(0 0 4px #7fff0060)' : 'none', transition: 'fill 0.12s, opacity 0.12s', transform: pressBtn === 'right' ? 'translateX(-1px)' : 'none', transformOrigin: `${wcx + 28}px ${wcy}px` }} />
           </g>
           {/* CENTER (select) */}
           <g onClick={select} style={{ cursor: 'pointer' }}
             onMouseEnter={() => setHovBtn('center')} onMouseLeave={() => setHovBtn(null)}
             onMouseDown={() => setPressBtn('center')} onMouseUp={() => setPressBtn(null)}>
-            <circle cx="110" cy="230" r="13"
-              fill={pressBtn === 'center' ? '#7fff0015' : hovBtn === 'center' ? '#1a1a1a' : '#1e1e1e'}
-              stroke={hovBtn === 'center' ? '#7fff00' : '#333'}
-              strokeWidth={hovBtn === 'center' ? 2 : 1.5}
+            <circle cx={wcx} cy={wcy} r="14"
+              fill={pressBtn === 'center' ? '#7fff0015' : hovBtn === 'center' ? '#111' : '#080808'}
+              stroke={hovBtn === 'center' ? '#7fff00' : '#222'}
+              strokeWidth={hovBtn === 'center' ? 3 : 2.5}
               style={{ filter: hovBtn === 'center' ? 'drop-shadow(0 0 6px #7fff0040)' : 'none', transition: 'all 0.15s' }} />
-            <circle cx="110" cy="230" r="4"
-              fill={hovBtn === 'center' ? '#7fff00' : '#444'}
-              style={{ transition: 'fill 0.15s' }} />
           </g>
 
-          {/* Bottom ports — inside device body */}
+
+          {/* USB-C — bottom-right of device, on bottom edge right of SMA connectors */}
           <g {...hw('usbc')} style={{ ...hw('usbc').style, filter: glow('usbc', '#7fff00') }}>
-            <rect x="58" y="286" width="26" height="8" rx="3" fill={active === 'usbc' ? '#7fff00' : '#1a1a1a'}
-              stroke={st('usbc', '#7fff00')} strokeWidth="0.5" />
-            <text x="71" y="302" textAnchor="middle" fill={active === 'usbc' ? '#7fff00' : '#333'} fontSize="5">USB-C</text>
+            <rect x={bx + bw - 52} y={by + bh - 6} width="20" height="7" rx="3" fill={active === 'usbc' ? '#7fff00' : '#1a1a1a'}
+              stroke={st('usbc', '#7fff00')} strokeWidth="0.8" />
           </g>
+
+          {/* 3.5mm audio jack — bottom-right of device, next to USB-C */}
           <g {...hw('audio')} style={{ ...hw('audio').style, filter: glow('audio', '#facc15') }}>
-            <circle cx="110" cy="290" r="5" fill={active === 'audio' ? '#facc15' : '#1a1a1a'}
-              stroke={st('audio', '#facc15')} strokeWidth="0.5" />
-            <text x="110" y="302" textAnchor="middle" fill={active === 'audio' ? '#facc15' : '#333'} fontSize="5">3.5mm</text>
+            <circle cx={bx + bw - 20} cy={by + bh - 3} r="4.5" fill={active === 'audio' ? '#facc15' : '#1a1a1a'}
+              stroke={st('audio', '#facc15')} strokeWidth="0.8" />
           </g>
-          <g {...hw('sd')} style={{ ...hw('sd').style, filter: glow('sd', '#4ade80') }}>
-            <rect x="138" y="286" width="24" height="8" rx="2" fill={active === 'sd' ? '#4ade80' : '#1a1a1a'}
-              stroke={st('sd', '#4ade80')} strokeWidth="0.5" />
-            <text x="150" y="302" textAnchor="middle" fill={active === 'sd' ? '#4ade80' : '#333'} fontSize="5">SD</text>
-          </g>
+
         </svg>
         {/* Compact navigation hints below device in expanded mode */}
         {expanded && (
@@ -499,7 +553,7 @@ export default function PortaPackMockup({ expanded = false }) {
             role="status" aria-live="polite">
             <div className="bg-base-300/80 rounded-lg p-4">
               <h4 className="font-semibold text-sm text-primary">{displayHw?.label}</h4>
-              <p className="text-sm text-base-content/70 mt-1.5 leading-relaxed">{displayHw?.desc}</p>
+              <p className="text-xs text-base-content/70 mt-1.5 leading-relaxed">{displayHw?.desc}</p>
             </div>
           </div>
         </div>

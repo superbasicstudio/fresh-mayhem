@@ -119,7 +119,7 @@ export default function FrequencySpectrum() {
           content.append('text')
             .attr('x', bx + bw / 2).attr('y', yOff + ROW_H / 2 + 2)
             .text(b.name.replace('Aviation ', '').replace('Cellular ', 'Cell '))
-            .attr('fill', '#fff').attr('text-anchor', 'middle')
+            .attr('fill', '#000').attr('text-anchor', 'middle')
             .style('font-size', '7px').style('font-family', 'monospace').style('pointer-events', 'none');
         }
       });
@@ -181,7 +181,7 @@ export default function FrequencySpectrum() {
           content.append('text')
             .attr('x', bx + bw / 2).attr('y', yOff + i * 8 + 5)
             .text(b.app)
-            .attr('fill', '#fff').attr('text-anchor', 'middle')
+            .attr('fill', '#000').attr('text-anchor', 'middle')
             .style('font-size', '6px').style('font-family', 'monospace').style('pointer-events', 'none');
         }
       });

@@ -419,16 +419,16 @@
     }
   },
   "badges": {
-    "rx": "RX",
-    "rxTooltip": "Receive only — no transmission. Legality of listening varies by region.",
+    "rx": "RX ONLY",
+    "rxTooltip": "Receive only — no transmission. Generally considered low-risk, but listening laws vary by region. Check locally.",
     "caution": "CAUTION",
-    "cautionTooltip": "Use with caution — check local regulations",
-    "danger": "DANGER",
-    "dangerTooltip": "Dangerous — may cause harm or legal issues. Check local regulations.",
-    "extreme": "EXTREME",
-    "extremeTooltip": "Extreme risk — likely illegal in most jurisdictions. Not legal advice.",
-    "illegal": "ILLEGAL",
-    "illegalTooltip": "Illegal in most known jurisdictions. Verify your local laws."
+    "cautionTooltip": "May require a license or authorization depending on your region. Check local regulations before use.",
+    "danger": "HIGH RISK",
+    "dangerTooltip": "Could disrupt nearby devices or services. Likely restricted in most areas. Check local regulations.",
+    "extreme": "EXTREME RISK",
+    "extremeTooltip": "Widely considered extremely dangerous. Likely a serious offense in most jurisdictions. This is not legal advice — verify your local laws.",
+    "illegal": "RESTRICTED",
+    "illegalTooltip": "Targets systems you likely don't own. Generally considered unauthorized in most regions. Verify your local laws."
   },
   "footer": {
     "freshMayhem": "Fresh Mayhem",

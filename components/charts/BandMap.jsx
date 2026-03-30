@@ -132,7 +132,7 @@ export default function BandMap() {
         content.append('text')
           .attr('x', bx + bw / 2).attr('y', nogoY + BAR_H / 2 + 3)
           .text(b.name.replace('Aviation ', '').replace('Cellular ', 'Cell ').replace('Radar ', ''))
-          .attr('fill', '#fff').attr('text-anchor', 'middle')
+          .attr('fill', '#000').attr('text-anchor', 'middle')
           .style('font-size', '7px').style('font-family', 'monospace')
           .style('pointer-events', 'none');
       }

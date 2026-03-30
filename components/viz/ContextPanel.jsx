@@ -90,10 +90,10 @@ function FreqBar({ frequencies, width = 320 }) {
 /* ── Safety Indicator Badge ────────────────────────────────────── */
 
 const SAFETY_STYLES = {
-  safe:    { bg: 'bg-success/10', text: 'text-success', border: 'border-success/20', label: 'SAFE',    dot: 'bg-success' },
-  caution: { bg: 'bg-warning/10', text: 'text-warning', border: 'border-warning/20', label: 'CAUTION', dot: 'bg-warning' },
-  danger:  { bg: 'bg-error/10',   text: 'text-error',   border: 'border-error/20',   label: 'DANGER',  dot: 'bg-error' },
-  extreme: { bg: 'bg-error/15',   text: 'text-error',   border: 'border-error/30',   label: 'EXTREME', dot: 'bg-error' },
+  safe:    { bg: 'bg-success/10', text: 'text-success', border: 'border-success/20', label: 'RECEIVE ONLY',         dot: 'bg-success' },
+  caution: { bg: 'bg-warning/10', text: 'text-warning', border: 'border-warning/20', label: 'CHECK LOCAL LAWS',     dot: 'bg-warning' },
+  danger:  { bg: 'bg-error/10',   text: 'text-error',   border: 'border-error/20',   label: 'HIGH RISK',            dot: 'bg-error' },
+  extreme: { bg: 'bg-error/15',   text: 'text-error',   border: 'border-error/30',   label: 'EXTREME RISK',         dot: 'bg-error' },
 };
 
 function SafetyPill({ level }) {
@@ -143,7 +143,7 @@ function GainRec({ gain }) {
 
 function SectionLabel({ children }) {
   return (
-    <div className="flex items-center gap-2 mt-5 mb-2">
+    <div className="flex items-center gap-2 mt-6 mb-3">
       <span className="text-[9px] font-mono tracking-[0.2em] text-base-content/25 uppercase">{children}</span>
       <div className="flex-1 h-px bg-base-content/5" />
     </div>
@@ -158,7 +158,7 @@ function ItemPanel({ details, item }) {
   const isDanger = d.safety === 'danger' || isExtreme;
 
   return (
-    <div className="space-y-0">
+    <div className="space-y-4">
       {/* Header */}
       <div className="mb-4">
         <h3 className="font-display text-sm sm:text-base tracking-wide text-base-content/90 mb-2">{item.label}</h3>
@@ -310,7 +310,7 @@ function OverviewPanel({ menuId }) {
   if (!ov) return <DefaultPanel />;
 
   return (
-    <div className="space-y-0">
+    <div className="space-y-4">
       {/* Title */}
       <div className="mb-4">
         <h3 className="font-display text-sm sm:text-base tracking-wide text-base-content/90">{ov.title}</h3>

@@ -1,4 +1,20 @@
 import { useState, useEffect, useId } from 'react';
+import {
+  TbPlugConnected, TbPower, TbRadio, TbAdjustments, TbShieldCheck,
+  TbDownload, TbCpu, TbDeviceSdCard, TbRefresh,
+} from 'react-icons/tb';
+
+const SECTION_ICONS = {
+  'Before You Power On': TbPlugConnected,
+  'First Power-On': TbPower,
+  'Your First FM Receive': TbRadio,
+  'Frequency Calibration': TbAdjustments,
+  'Safety & Shutdown': TbShieldCheck,
+  'Download & Prepare': TbDownload,
+  'Flash the Firmware': TbCpu,
+  'Install on Device': TbDeviceSdCard,
+  'After Updating': TbRefresh,
+};
 
 export const quickStartSteps = [
   // Phase 1: Pre-Power Setup
@@ -50,11 +66,17 @@ export default function QuickStartStep({ num, text, storageKey, section, onToggl
     try { localStorage.setItem(storageKey, String(next)); } catch {}
     if (onToggle) onToggle();
   };
+
+  const Icon = section ? SECTION_ICONS[section] : null;
+
   return (
     <>
       {section && (
         <div className="pt-4 pb-1 first:pt-0">
-          <h3 className="text-xs font-mono font-semibold text-primary/70 tracking-wider uppercase">{section}</h3>
+          <h3 className="flex items-center gap-2 text-xs font-mono font-semibold text-primary/70 tracking-wider uppercase">
+            {Icon && <Icon className="w-4 h-4 text-primary/50" />}
+            {section}
+          </h3>
         </div>
       )}
       <div className={`flex items-start gap-3 px-3 py-2.5 rounded-lg transition-colors ${checked ? 'bg-success/10' : 'bg-base-200'}`}>

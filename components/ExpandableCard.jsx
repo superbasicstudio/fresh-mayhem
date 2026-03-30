@@ -1,7 +1,7 @@
 import { useState, useId, useEffect, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { ArrowsPointingOutIcon, XMarkIcon } from '@heroicons/react/24/outline';
-import { CursorArrowRaysIcon } from '@heroicons/react/20/solid';
+
 
 export default function ExpandableCard({ title, children, className = '', modalMaxWidth = 'max-w-5xl', titleColor = 'text-primary' }) {
   const [expanded, setExpanded] = useState(false);
@@ -84,7 +84,6 @@ export default function ExpandableCard({ title, children, className = '', modalM
       <div className={`card bg-[#0c0e14] shadow-md shadow-black/20 ${className}`}>
         <div className="flex items-center justify-between px-4 pt-4 pb-2">
           <div className="flex items-center gap-2">
-            <CursorArrowRaysIcon className="w-3.5 h-3.5 text-primary/40" />
             <h3 className={`font-semibold text-base ${titleColor}`}>{title}</h3>
           </div>
           <button
