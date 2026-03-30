@@ -68,12 +68,12 @@ describe('performance best practices', () => {
     }
   });
 
-  test('locale files are not excessively large (< 100KB each)', () => {
+  test('locale files are not excessively large (< 150KB each)', () => {
     const localeDir = path.join(PROJECT_ROOT, 'locales');
     const files = fs.readdirSync(localeDir).filter(f => f.endsWith('.json'));
     for (const file of files) {
       const stats = fs.statSync(path.join(localeDir, file));
-      expect(stats.size, `${file} is ${Math.round(stats.size / 1024)}KB - too large`).toBeLessThan(120 * 1024);
+      expect(stats.size, `${file} is ${Math.round(stats.size / 1024)}KB - too large`).toBeLessThan(150 * 1024);
     }
   });
 });

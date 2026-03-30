@@ -10,6 +10,7 @@ import SafetyPage from './pages/SafetyPage';
 import FrequenciesPage from './pages/FrequenciesPage';
 import LearnPage from './pages/LearnPage';
 import QuickStartPage from './pages/QuickStartPage';
+import TroubleshootingPage from './pages/CommonIssuesPage';
 import WhereToBuyPage from './pages/WhereToBuyPage';
 import NotFoundPage from './pages/NotFoundPage';
 
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="frequencies" element={<FrequenciesPage />} />
           <Route path="learn" element={<LearnPage />} />
           <Route path="quickstart" element={<QuickStartPage />} />
+          <Route path="troubleshooting" element={<TroubleshootingPage />} />
           <Route path="where-to-buy" element={<WhereToBuyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>

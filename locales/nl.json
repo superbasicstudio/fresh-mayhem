@@ -20,7 +20,8 @@
     "expandSidebar": "Zijbalk uitklappen",
     "collapseSidebar": "Zijbalk inklappen",
     "openMenu": "Menu openen",
-    "closeMenu": "Menu sluiten"
+    "closeMenu": "Menu sluiten",
+    "troubleshooting": "Probleemoplossing"
   },
   "brand": {
     "name": "FRESH MAYHEM",
@@ -313,11 +314,109 @@
       "s14": "Kalibreer het touchscreen opnieuw indien nodig: Utilities > Touch Calibrate."
     },
     "troubleshootingItems": {
-      "noFile": { "problem": "Flash Utility ziet het bestand niet", "fix": "Zorg ervoor dat het bestand in FIRMWARE/ staat (niet genest in een submap) en dat de bestandsnaam eindigt op .ppfw.tar" },
-      "noBoot": { "problem": "Apparaat start niet op na flash", "fix": "Houd de DFU-knop ingedrukt + druk op RESET om de DFU-herstelmodus te openen. De bootloader zit in ROM en kan niet gebrickt worden. Reflash via dfu-util + hackrf_spiflash vanaf een computer." },
-      "missingApps": { "problem": "Apps ontbreken na update", "fix": "SD-kaartinhoud is niet bijgewerkt. Pak de COPY_TO_SDCARD-zip opnieuw uit naar de root van de SD-kaart met overschrijven ingeschakeld." },
-      "noSd": { "problem": "SD-kaart niet gedetecteerd", "fix": "Herformatteer als FAT32 (niet exFAT). Kaarten groter dan 32 GB hebben mogelijk een hulpprogramma van derden nodig voor FAT32-formattering." },
-      "binFile": { "problem": "Ik zie een .bin bestand op de SD-kaart, moet ik dat gebruiken?", "fix": "Nee. Het .bin bestand is alleen voor PC-side flashing via hackrf_spiflash over USB. De ingebouwde Flash Utility accepteert alleen .ppfw.tar bestanden. Het .bin bestand kan rood of niet-selecteerbaar verschijnen in de bestandsbrowser. Het kan het apparaat niet beschadigen. Negeer het." }
+      "noFile": {
+        "problem": "Flash Utility ziet het bestand niet",
+        "fix": "Zorg ervoor dat het bestand in FIRMWARE/ staat (niet genest in een submap) en dat de bestandsnaam eindigt op .ppfw.tar"
+      },
+      "noBoot": {
+        "problem": "Apparaat start niet op na flash",
+        "fix": "Houd de DFU-knop ingedrukt + druk op RESET om de DFU-herstelmodus te openen. De bootloader zit in ROM en kan niet gebrickt worden. Reflash via dfu-util + hackrf_spiflash vanaf een computer."
+      },
+      "missingApps": {
+        "problem": "Apps ontbreken na update",
+        "fix": "SD-kaartinhoud is niet bijgewerkt. Pak de COPY_TO_SDCARD-zip opnieuw uit naar de root van de SD-kaart met overschrijven ingeschakeld."
+      },
+      "noSd": {
+        "problem": "SD-kaart niet gedetecteerd",
+        "fix": "Herformatteer als FAT32 (niet exFAT). Kaarten groter dan 32 GB hebben mogelijk een hulpprogramma van derden nodig voor FAT32-formattering."
+      },
+      "binFile": {
+        "problem": "Ik zie een .bin bestand op de SD-kaart, moet ik dat gebruiken?",
+        "fix": "Nee. Het .bin bestand is alleen voor PC-side flashing via hackrf_spiflash over USB. De ingebouwde Flash Utility accepteert alleen .ppfw.tar bestanden. Het .bin bestand kan rood of niet-selecteerbaar verschijnen in de bestandsbrowser. Het kan het apparaat niet beschadigen. Negeer het."
+      }
+    }
+  },
+  "commonIssues": {
+    "title": "Probleemoplossing",
+    "subtitle": "Veelvoorkomende problemen en hoe ze op te lossen. SD-kaarten zijn de meest voorkomende bron van problemen met PortaPack-apparaten.",
+    "footer": "Als geen van deze oplossingen werkt, bekijk de Mayhem firmware GitHub Discussions of de r/hackrf subreddit.",
+    "categories": {
+      "sdCard": {
+        "title": "SD-kaartproblemen",
+        "items": {
+          "stuckBoot": {
+            "problem": "Apparaat blijft hangen op opstartscherm na het plaatsen van SD-kaart",
+            "fix": "De SD-kaart bevat waarschijnlijk corrupte gegevens die de firmware laten vastlopen tijdens het opstarten. Verwijder de SD-kaart, herstart het apparaat en bevestig dat het opstart naar het menu zonder de kaart. Formatteer daarna de SD-kaart als FAT32 op je computer, kopieer de COPY_TO_SDCARD-inhoud opnieuw en plaats opnieuw. Als de kaart vuil was, veeg de gouden contacten schoon met een droge microvezeldoek voor het terugplaatsen."
+          },
+          "noMedia": {
+            "problem": "SD-kaart toont 'No SD card' of wordt niet gedetecteerd",
+            "fix": "Duw de kaart stevig naar binnen tot je een klik hoort of voelt van het veermechanisme. De gouden contacten moeten naar de PCB wijzen. Als deze nog steeds niet wordt gedetecteerd, verwijder de kaart, reinig de gouden contacten met een droge doek en plaats opnieuw. Controleer eerst of de kaart werkt op je computer."
+          },
+          "temperamental": {
+            "problem": "SD-kaart werkt soms maar niet altijd",
+            "fix": "MicroSD-kaarten kunnen grillig zijn met de PortaPack-sleuf. Het veermechanisme maakt niet altijd perfect contact. Verwijder de kaart, veeg de gouden contacten schoon met een droge microvezeldoek en plaats stevig terug. Als problemen aanhouden, probeer een ander merk kaart. SanDisk en Samsung EVO-kaarten worden breed gerapporteerd als betrouwbaar."
+          },
+          "corrupted": {
+            "problem": "SD-kaartinhoud lijkt corrupt of bestanden ontbreken",
+            "fix": "Schakel het apparaat uit voordat je de SD-kaart verwijdert. De kaart verwijderen terwijl het apparaat schrijft kan het bestandssysteem beschadigen. Herformatteer de kaart als FAT32 op je computer en pak de COPY_TO_SDCARD zip opnieuw uit op de kaart. Als corruptie blijft optreden, kan de kaart defect zijn."
+          },
+          "overSize": {
+            "problem": "SD-kaart groter dan 32 GB werkt niet",
+            "fix": "Kaarten groter dan 32 GB worden geleverd als exFAT, wat de PortaPack-firmware niet ondersteunt. Je moet formatteren als FAT32 met een tool van derden: guiformat (Windows), gparted of mkfs.vfat (Linux), of Schijfhulpprogramma met MS-DOS FAT geselecteerd (macOS). 32 GB of kleiner wordt aanbevolen."
+          }
+        }
+      },
+      "boot": {
+        "title": "Opstart- en startproblemen",
+        "items": {
+          "splashHang": {
+            "problem": "Apparaat hangt op het startscherm of Mayhem-logo",
+            "fix": "Probeer eerst op te starten zonder de SD-kaart. Als het normaal opstart, is de inhoud van de SD-kaart het probleem. Herformatteer en herflash de SD-kaart. Als het ook zonder SD-kaart hangt, houd de DFU-knop ingedrukt en druk op RESET om naar DFU-herstelmodus te gaan en herflash de firmware vanaf een computer."
+          },
+          "bootLoop": {
+            "problem": "Apparaat blijft herstarten in een lus",
+            "fix": "Een opstartlus betekent meestal dat de firmware-flash werd onderbroken of onvolledig was. Ga naar DFU-herstelmodus (houd DFU ingedrukt + druk RESET) en herflash vanaf een computer. De bootloader zit in ROM en kan niet worden beschadigd, dus herstel is altijd mogelijk."
+          },
+          "blackScreen": {
+            "problem": "Scherm blijft zwart na inschakelen",
+            "fix": "Bevestig dat de aan/uit-schakelaar volledig in de ON-positie staat (omhoog geschoven). Als de HackRF-LEDs oplichten maar het scherm donker blijft, moet de PortaPack-bordverbinding mogelijk opnieuw worden geplaatst. Schakel uit en druk dan voorzichtig op het PortaPack-bord om te zorgen dat het stevig op de HackRF-headerpennen zit."
+          }
+        }
+      },
+      "connection": {
+        "title": "USB- en verbindingsproblemen",
+        "items": {
+          "notRecognized": {
+            "problem": "Computer detecteert HackRF niet via USB",
+            "fix": "Probeer een andere USB-kabel en een andere USB-poort. Veel kabels zijn alleen voor opladen en dragen geen data over. Gebruik een bekende werkende datakabel. Op Linux, voer lsusb uit om te controleren of het apparaat verschijnt (zoek naar 1d50:6089). Op Windows, controleer Apparaatbeheer."
+          },
+          "chargeOnly": {
+            "problem": "Apparaat gaat aan via USB maar geen dataverbinding",
+            "fix": "Je gebruikt een oplaadkabel. USB-kabels die bij telefoonladers worden geleverd missen vaak de datadraden. Gebruik een kabel die je eerder hebt gebruikt voor bestandsoverdracht."
+          },
+          "sdOverUsb": {
+            "problem": "SD over USB-modus toont SD-kaart niet op computer",
+            "fix": "Navigeer eerst naar Utilities > SD over USB op de PortaPack. Het apparaat moet in deze modus staan om de SD-kaart als massaopslagapparaat op je computer te laten verschijnen. Als de SD-kaart nog steeds niet verschijnt, controleer je USB-kabel (moet datageschikt zijn) en probeer een andere USB-poort."
+          }
+        }
+      },
+      "reception": {
+        "title": "Ontvangst- en signaalproblemen",
+        "items": {
+          "noSignal": {
+            "problem": "Geen signalen zichtbaar in enige ontvangst-app",
+            "fix": "Zorg ervoor dat een antenne is aangesloten op de juiste SMA-poort (ANT op HackRF One). Controleer of de frequentie correct is ingesteld. Probeer een bekend sterk signaal zoals een lokaal FM-radiostation (88-108 MHz) om te verifieren dat de radio werkt."
+          },
+          "weakSignal": {
+            "problem": "Signalen zijn erg zwak of ruisig",
+            "fix": "Pas de LNA- en VGA-instellingen aan. Begin met LNA rond 32 dB en VGA rond 24 dB, pas dan aan. De AMP-optie voegt 14 dB versterking toe maar kan sterke nabije signalen oversturing. Zorg ervoor dat je antenne geschikt is voor het doelfrequentiebereik."
+          },
+          "noAudio": {
+            "problem": "Signaal wordt ontvangen maar geen audiouitvoer",
+            "fix": "Controleer of de audiouitvoer correct is ingesteld in de app. Sommige apps sturen naar de speaker, andere naar de 3,5mm koptelefoonaansluiting. Controleer of het volume is opgedraaid in de app-instellingen."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {

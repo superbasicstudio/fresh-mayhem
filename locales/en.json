@@ -15,6 +15,7 @@
     "learn": "Learn About RF",
     "quickstart": "Quick Start",
     "whereToBuy": "Where to Buy",
+    "troubleshooting": "Troubleshooting",
     "search": "Search",
     "navigation": "NAVIGATION",
     "expandSidebar": "Expand sidebar",
@@ -323,6 +324,89 @@
       "missingApps": { "problem": "Apps missing after update", "fix": "SD card content was not updated. Re-extract the COPY_TO_SDCARD zip to the SD root with overwrite enabled." },
       "noSd": { "problem": "SD card not detected", "fix": "Reformat as FAT32 (not exFAT). Cards over 32 GB may need a third-party FAT32 formatting tool." },
       "binFile": { "problem": "I see a .bin file on the SD card, should I use it?", "fix": "No. The .bin file is for PC-side flashing via hackrf_spiflash over USB only. The on-device Flash Utility only accepts .ppfw.tar files. The .bin may appear red or unselectable in the file browser. It cannot harm the device. Ignore it." }
+    }
+  },
+  "commonIssues": {
+    "title": "Troubleshooting",
+    "subtitle": "Frequently encountered problems and how to fix them. SD cards are the most common source of issues with PortaPack devices.",
+    "footer": "If none of these solve your problem, check the Mayhem firmware GitHub Discussions or the r/hackrf subreddit.",
+    "categories": {
+      "sdCard": {
+        "title": "SD Card Issues",
+        "items": {
+          "stuckBoot": {
+            "problem": "Device stuck on boot/splash screen after inserting SD card",
+            "fix": "The SD card likely has corrupt data that causes the firmware to hang during boot. Remove the SD card, power cycle the device, and confirm it boots to the menu without the card. Then reformat the SD card as FAT32 on your computer, re-copy the COPY_TO_SDCARD contents, and reinsert. If the card was dirty, wipe the gold contacts with a dry microfiber cloth before reinserting."
+          },
+          "noMedia": {
+            "problem": "SD card shows 'No SD card' or is not detected",
+            "fix": "Push the card in firmly until you hear or feel a click from the spring-loaded slot. Gold contacts should face toward the PCB. If it still does not detect, remove the card, clean the gold contacts with a dry cloth, and reinsert. Check the card works on your computer first. Some cards need to be reseated a couple of times before making good contact."
+          },
+          "temperamental": {
+            "problem": "SD card works sometimes but not always",
+            "fix": "MicroSD cards can be temperamental with the PortaPack slot. The spring-loaded mechanism does not always make perfect contact. Remove the card, wipe the gold contacts with a dry microfiber cloth, and reinsert firmly. If problems persist, try a different brand of card. SanDisk and Samsung EVO cards are widely reported as reliable. Avoid ultra-cheap no-name cards."
+          },
+          "corrupted": {
+            "problem": "SD card contents appear corrupted or files are missing",
+            "fix": "Power off the device before removing the SD card. Pulling the card while the device is writing can corrupt the filesystem. Reformat the card as FAT32 on your computer (not quick format if possible), then re-extract the COPY_TO_SDCARD zip to the card root. If corruption keeps happening, the card may be failing. Test it with a tool like H2testw (Windows) or f3 (Linux) to check for bad sectors."
+          },
+          "overSize": {
+            "problem": "SD card over 32 GB not working",
+            "fix": "Cards larger than 32 GB ship formatted as exFAT, which the PortaPack firmware does not support. You need to reformat as FAT32 using a third-party tool: guiformat (Windows), gparted or mkfs.vfat (Linux), or Disk Utility with MS-DOS FAT selected (macOS). 32 GB or smaller cards are recommended and will format as FAT32 by default."
+          }
+        }
+      },
+      "boot": {
+        "title": "Boot & Startup Issues",
+        "items": {
+          "splashHang": {
+            "problem": "Device hangs on splash screen or Mayhem logo",
+            "fix": "First, try booting without the SD card. If it boots fine, the SD card contents are the problem. Reformat and re-flash the SD card. If it hangs even without the SD card, hold the DFU button and press RESET to enter DFU recovery mode, then reflash the firmware from a computer using dfu-util and hackrf_spiflash."
+          },
+          "bootLoop": {
+            "problem": "Device keeps restarting in a loop",
+            "fix": "A boot loop usually means the firmware flash was interrupted or incomplete. Enter DFU recovery mode (hold DFU + press RESET) and reflash from a computer. The bootloader is in ROM and cannot be bricked, so recovery is always possible. Make sure to use a stable USB connection and do not interrupt the flash process."
+          },
+          "blackScreen": {
+            "problem": "Screen stays black after powering on",
+            "fix": "Confirm the power switch is fully in the ON position (slid UP). If the HackRF LEDs light up but the screen stays dark, the PortaPack board connection may need reseating. Power off, then gently press the PortaPack board to ensure it is seated firmly on the HackRF header pins. If you hear a faint click or startup sound, the screen backlight or ribbon cable may need attention."
+          }
+        }
+      },
+      "connection": {
+        "title": "USB & Connection Issues",
+        "items": {
+          "notRecognized": {
+            "problem": "Computer does not detect the HackRF over USB",
+            "fix": "Try a different USB cable and a different USB port. Many cables are charge-only and do not carry data. Use a known-good data cable. On Linux, run lsusb to check if the device appears (look for 1d50:6089). On Windows, check Device Manager. If using a USB hub, connect directly to the computer instead."
+          },
+          "chargeOnly": {
+            "problem": "Device powers on via USB but no data connection",
+            "fix": "You are using a charge-only cable. USB cables that came with phone chargers or battery packs often lack the data wires. Use a cable that you have previously used for file transfer. USB-C to USB-C cables are more likely to be data-capable than USB-A to USB-C adapters."
+          },
+          "sdOverUsb": {
+            "problem": "SD over USB mode is not showing the SD card on computer",
+            "fix": "Navigate to Utilities > SD over USB on the PortaPack first. The device must be in this mode for the SD card to appear as a mass storage device on your computer. If the SD card still does not appear, check your USB cable (must be data-capable) and try a different USB port. On Linux, check dmesg for any mount errors."
+          }
+        }
+      },
+      "reception": {
+        "title": "Reception & Signal Issues",
+        "items": {
+          "noSignal": {
+            "problem": "No signals showing in any receive app",
+            "fix": "Make sure an antenna is connected to the correct SMA port (ANT on HackRF One). The PortaPack has two SMA connectors but only the one connected through to the HackRF radio is for antenna use. Check that the frequency is set correctly and the bandwidth/sample rate is appropriate for what you are trying to receive. Try a known-strong signal like a local FM radio station (88-108 MHz) to verify the radio works."
+          },
+          "weakSignal": {
+            "problem": "Signals are very weak or noisy",
+            "fix": "Adjust the LNA (Low Noise Amplifier) and VGA (Variable Gain Amplifier) settings. Start with LNA around 32 dB and VGA around 24 dB, then adjust. The AMP option adds 14 dB of gain but can overdrive strong nearby signals. Ensure your antenna is appropriate for the frequency range you are targeting. A telescoping whip antenna works for general use but a tuned antenna will always perform better."
+          },
+          "noAudio": {
+            "problem": "Receiving a signal but no audio output",
+            "fix": "Check that the audio output is set correctly in the app. Some apps output to the speaker, some to the 3.5mm headphone jack. Verify the volume is turned up in the app settings. If using headphones, make sure they are fully inserted into the 3.5mm jack. Some demodulation modes (like AM or SSB) require fine-tuning to the exact carrier frequency to produce clean audio."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {

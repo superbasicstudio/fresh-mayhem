@@ -20,7 +20,8 @@
     "expandSidebar": "Laajenna sivupalkki",
     "collapseSidebar": "Pienennä sivupalkki",
     "openMenu": "Avaa valikko",
-    "closeMenu": "Sulje valikko"
+    "closeMenu": "Sulje valikko",
+    "troubleshooting": "Vianetsinta"
   },
   "brand": {
     "name": "FRESH MAYHEM",
@@ -313,11 +314,109 @@
       "s14": "Kalibroi kosketusnäyttö tarvittaessa uudelleen: Utilities > Touch Calibrate."
     },
     "troubleshootingItems": {
-      "noFile": { "problem": "Flash Utility ei näe tiedostoa", "fix": "Varmista, että tiedosto on FIRMWARE/-kansiossa (ei alikansiossa) ja tiedostonimi päättyy .ppfw.tar" },
-      "noBoot": { "problem": "Laite ei käynnisty flashauksen jälkeen", "fix": "Pidä DFU-painiketta pohjassa + paina RESET siirtyäksesi DFU-palautustilaan. Käynnistyslatain on ROM:ssa eikä sitä voi brickata. Flashaa uudelleen dfu-util + hackrf_spiflash -työkaluilla tietokoneelta." },
-      "missingApps": { "problem": "Sovelluksia puuttuu päivityksen jälkeen", "fix": "SD-kortin sisältöä ei päivitetty. Pura COPY_TO_SDCARD-zip uudelleen SD-kortin juureen ylikirjoitus sallittuna." },
-      "noSd": { "problem": "SD-korttia ei tunnisteta", "fix": "Alusta uudelleen FAT32-muotoon (ei exFAT). Yli 32 GB:n kortit saattavat vaatia kolmannen osapuolen FAT32-alustustyökalun." },
-      "binFile": { "problem": "Näen .bin-tiedoston SD-kortilla, pitäisikö sitä käyttää?", "fix": "Ei. .bin-tiedosto on tarkoitettu vain PC-puolen flashaukseen hackrf_spiflash-työkalulla USB:n kautta. Laitteen Flash Utility hyväksyy vain .ppfw.tar-tiedostoja. .bin-tiedosto voi näkyä punaisena tai ei-valittavana tiedostoselaimessa. Se ei voi vahingoittaa laitetta. Jätä se huomiotta." }
+      "noFile": {
+        "problem": "Flash Utility ei näe tiedostoa",
+        "fix": "Varmista, että tiedosto on FIRMWARE/-kansiossa (ei alikansiossa) ja tiedostonimi päättyy .ppfw.tar"
+      },
+      "noBoot": {
+        "problem": "Laite ei käynnisty flashauksen jälkeen",
+        "fix": "Pidä DFU-painiketta pohjassa + paina RESET siirtyäksesi DFU-palautustilaan. Käynnistyslatain on ROM:ssa eikä sitä voi brickata. Flashaa uudelleen dfu-util + hackrf_spiflash -työkaluilla tietokoneelta."
+      },
+      "missingApps": {
+        "problem": "Sovelluksia puuttuu päivityksen jälkeen",
+        "fix": "SD-kortin sisältöä ei päivitetty. Pura COPY_TO_SDCARD-zip uudelleen SD-kortin juureen ylikirjoitus sallittuna."
+      },
+      "noSd": {
+        "problem": "SD-korttia ei tunnisteta",
+        "fix": "Alusta uudelleen FAT32-muotoon (ei exFAT). Yli 32 GB:n kortit saattavat vaatia kolmannen osapuolen FAT32-alustustyökalun."
+      },
+      "binFile": {
+        "problem": "Näen .bin-tiedoston SD-kortilla, pitäisikö sitä käyttää?",
+        "fix": "Ei. .bin-tiedosto on tarkoitettu vain PC-puolen flashaukseen hackrf_spiflash-työkalulla USB:n kautta. Laitteen Flash Utility hyväksyy vain .ppfw.tar-tiedostoja. .bin-tiedosto voi näkyä punaisena tai ei-valittavana tiedostoselaimessa. Se ei voi vahingoittaa laitetta. Jätä se huomiotta."
+      }
+    }
+  },
+  "commonIssues": {
+    "title": "Vianetsinta",
+    "subtitle": "Usein esiintyvia ongelmia ja niiden ratkaisut. SD-kortit ovat yleisin ongelmien lahde PortaPack-laitteissa.",
+    "footer": "Jos mikaan naista ei ratkaise ongelmaasi, tarkista Mayhem-firmwaren GitHub Discussions tai r/hackrf subreddit.",
+    "categories": {
+      "sdCard": {
+        "title": "SD-korttiongelmat",
+        "items": {
+          "stuckBoot": {
+            "problem": "Laite jumiutuu kaynnistysruudulle SD-kortin asettamisen jalkeen",
+            "fix": "SD-kortilla on todennakoisesti vioittuneita tietoja, jotka saavat firmwaren jumiutumaan kaynnistyksen aikana. Poista SD-kortti, kaynnista laite uudelleen ja varmista, etta se kaynnistyy valikkoon ilman korttia. Alusta sitten SD-kortti FAT32-muotoon tietokoneellasi, kopioi COPY_TO_SDCARD-sisalto uudelleen ja aseta kortti takaisin. Jos kortti oli likainen, pyyhi kultakontaktit kuivalla mikrokuituliinalla ennen uudelleenasettamista."
+          },
+          "noMedia": {
+            "problem": "SD-kortti nayttaa 'No SD card' tai sita ei tunnisteta",
+            "fix": "Paina korttia tukevasti sisaan kunnes kuulet tai tunnet napsahduksen jousimekanismista. Kultakontaktien tulee osoittaa piirilevya kohti. Jos sita ei silti tunnisteta, poista kortti, puhdista kultakontaktit kuivalla liinalla ja aseta uudelleen. Tarkista ensin, etta kortti toimii tietokoneellasi."
+          },
+          "temperamental": {
+            "problem": "SD-kortti toimii joskus mutta ei aina",
+            "fix": "MicroSD-kortit voivat olla ailahtelevid PortaPack-korttipaikan kanssa. Jousimekanismi ei aina tee taydelliset kontaktia. Poista kortti, pyyhi kultakontaktit kuivalla mikrokuituliinalla ja aseta tukevasti takaisin. Jos ongelmat jatkuvat, kokeile eri merkkista korttia. SanDisk ja Samsung EVO -kortit raportoidaan laajalti luotettaviksi."
+          },
+          "corrupted": {
+            "problem": "SD-kortin sisalto vaikuttaa vioittuneelta tai tiedostoja puuttuu",
+            "fix": "Sammuta laite ennen SD-kortin poistamista. Kortin vetaminen pois laitteen kirjoittaessa voi vioittaa tiedostojarjestelmaa. Alusta kortti FAT32-muotoon tietokoneellasi ja pura COPY_TO_SDCARD zip uudelleen kortille. Jos vioittuminen jatkuu, kortti saattaa olla viallinen."
+          },
+          "overSize": {
+            "problem": "Yli 32 GB:n SD-kortti ei toimi",
+            "fix": "Yli 32 GB:n kortit toimitetaan exFAT-muodossa, jota PortaPack-firmware ei tue. Alusta FAT32-muotoon kolmannen osapuolen tyokalulla: guiformat (Windows), gparted tai mkfs.vfat (Linux), tai Levytyokalu MS-DOS FAT -valinnalla (macOS). 32 GB tai pienempia kortteja suositellaan."
+          }
+        }
+      },
+      "boot": {
+        "title": "Kaynnistys- ja aloitusongelmat",
+        "items": {
+          "splashHang": {
+            "problem": "Laite jumiutuu aloitusruudulle tai Mayhem-logoon",
+            "fix": "Kokeile ensin kaynnistaa ilman SD-korttia. Jos se kaynnistyy normaalisti, ongelma on SD-kortin sisallossa. Alusta ja paivita SD-kortti. Jos se jumiutuu myos ilman SD-korttia, pida DFU-painiketta pohjassa ja paina RESET siirtyaksesi DFU-palautustilaan ja paivita firmware tietokoneelta."
+          },
+          "bootLoop": {
+            "problem": "Laite kaynnistyy uudelleen jatkuvassa silmukassa",
+            "fix": "Kaynnistyssilmukka tarkoittaa yleensa, etta firmwaren paivitys keskeytyi tai oli epataydellinen. Siirry DFU-palautustilaan (pida DFU + paina RESET) ja paivita tietokoneelta. Kaynnistyslatain on ROM:ssa eika sita voi vahingoittaa, joten palautus on aina mahdollista."
+          },
+          "blackScreen": {
+            "problem": "Naytto pysyy mustana kaynnistyksen jalkeen",
+            "fix": "Varmista, etta virtakytkin on taydellisesti ON-asennossa (tyonnetty YLOS). Jos HackRF:n LEDit syttyvat mutta naytto pysyy pimeana, PortaPack-levyn liitos saattaa tarvita uudelleenistutusta. Sammuta, paina sitten varovasti PortaPack-levya varmistaaksesi, etta se istuu tukevasti HackRF:n liitinnastoissa."
+          }
+        }
+      },
+      "connection": {
+        "title": "USB- ja yhteysongelmat",
+        "items": {
+          "notRecognized": {
+            "problem": "Tietokone ei tunnista HackRF:aa USB:n kautta",
+            "fix": "Kokeile eri USB-kaapelia ja eri USB-porttia. Monet kaapelit ovat vain lataukseen eivtka siirraa dataa. Kayta tunnettua toimivaa datakaapelia. Linuxissa suorita lsusb tarkistaaksesi nakyykoe laite (etsi 1d50:6089). Windowsissa tarkista Laitehallinta."
+          },
+          "chargeOnly": {
+            "problem": "Laite kaynnistyy USB:n kautta mutta ei datayhtytta",
+            "fix": "Kaytat pelkkaa latauskaapelia. Puhelinlaturien mukana tulevissa USB-kaapeleissa ei usein ole datajohtimia. Kayta kaapelia, jota olet aiemmin kayttanyt tiedostojen siirtoon."
+          },
+          "sdOverUsb": {
+            "problem": "SD over USB -tila ei nayta SD-korttia tietokoneella",
+            "fix": "Siirry ensin PortaPackissa kohtaan Utilities > SD over USB. Laitteen tulee olla tassa tilassa, jotta SD-kortti nakyy massamuistilaitteena tietokoneellasi. Jos SD-kortti ei silti nay, tarkista USB-kaapelisi (datakelpoinen) ja kokeile eri USB-porttia."
+          }
+        }
+      },
+      "reception": {
+        "title": "Vastaanotto- ja signaaliongelmat",
+        "items": {
+          "noSignal": {
+            "problem": "Signaaleita ei nay missaan vastaanottosovelluksessa",
+            "fix": "Varmista, etta antenni on kytketty oikeaan SMA-porttiin (ANT HackRF One:ssa). Tarkista, etta taajuus on oikein asetettu. Kokeile tunnettua vahvaa signaalia kuten paikallista FM-radioasemaa (88-108 MHz) varmistaaksesi, etta radio toimii."
+          },
+          "weakSignal": {
+            "problem": "Signaalit ovat hyvin heikkoja tai kohinaisia",
+            "fix": "Saada LNA- ja VGA-asetuksia. Aloita LNA noin 32 dB ja VGA noin 24 dB, saada sitten. AMP-vaihtoehto lisaa 14 dB vahvistusta mutta voi yliajaa vahvoja lahisignaaleja. Varmista, etta antennisi sopii kohdetaajuusalueelle."
+          },
+          "noAudio": {
+            "problem": "Vastaanotan signaalia mutta ei audiolahtoa",
+            "fix": "Tarkista, etta audiolahto on oikein asetettu sovelluksessa. Jotkut sovellukset lahettavat kaiuttimeen, toiset 3,5 mm kuulokeliitantaan. Varmista, etta aanenvoimakkuus on saadettu sovelluksen asetuksissa."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {

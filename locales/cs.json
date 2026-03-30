@@ -20,7 +20,8 @@
     "expandSidebar": "Rozbalit postranní panel",
     "collapseSidebar": "Sbalit postranní panel",
     "openMenu": "Otevřít menu",
-    "closeMenu": "Zavřít menu"
+    "closeMenu": "Zavřít menu",
+    "troubleshooting": "Diagnostika"
   },
   "brand": {
     "name": "FRESH MAYHEM",
@@ -313,11 +314,109 @@
       "s14": "V případě potřeby překalibrujte dotykový displej: Utilities > Touch Calibrate."
     },
     "troubleshootingItems": {
-      "noFile": { "problem": "Flash Utility nevidí soubor", "fix": "Ujistěte se, že soubor je ve složce FIRMWARE/ (ne vnořený v podsložce) a název souboru končí na .ppfw.tar" },
-      "noBoot": { "problem": "Zařízení se po flashování nespustí", "fix": "Podržte tlačítko DFU + stiskněte RESET pro vstup do režimu obnovy DFU. Bootloader je v ROM a nelze jej poškodit. Přeflashujte pomocí dfu-util + hackrf_spiflash z počítače." },
-      "missingApps": { "problem": "Po aktualizaci chybí aplikace", "fix": "Obsah SD karty nebyl aktualizován. Znovu rozbalte zip COPY_TO_SDCARD do kořenového adresáře SD karty s povoleným přepisem." },
-      "noSd": { "problem": "SD karta není detekována", "fix": "Přeformátujte jako FAT32 (ne exFAT). Karty nad 32 GB mohou vyžadovat nástroj třetí strany pro formátování FAT32." },
-      "binFile": { "problem": "Na SD kartě vidím soubor .bin, mám ho použít?", "fix": "Ne. Soubor .bin je určen pouze pro flashování z počítače přes hackrf_spiflash přes USB. Nástroj Flash Utility na zařízení přijímá pouze soubory .ppfw.tar. Soubor .bin se může v prohlížeči souborů zobrazit červeně nebo jako nevybratelný. Zařízení nemůže poškodit. Ignorujte jej." }
+      "noFile": {
+        "problem": "Flash Utility nevidí soubor",
+        "fix": "Ujistěte se, že soubor je ve složce FIRMWARE/ (ne vnořený v podsložce) a název souboru končí na .ppfw.tar"
+      },
+      "noBoot": {
+        "problem": "Zařízení se po flashování nespustí",
+        "fix": "Podržte tlačítko DFU + stiskněte RESET pro vstup do režimu obnovy DFU. Bootloader je v ROM a nelze jej poškodit. Přeflashujte pomocí dfu-util + hackrf_spiflash z počítače."
+      },
+      "missingApps": {
+        "problem": "Po aktualizaci chybí aplikace",
+        "fix": "Obsah SD karty nebyl aktualizován. Znovu rozbalte zip COPY_TO_SDCARD do kořenového adresáře SD karty s povoleným přepisem."
+      },
+      "noSd": {
+        "problem": "SD karta není detekována",
+        "fix": "Přeformátujte jako FAT32 (ne exFAT). Karty nad 32 GB mohou vyžadovat nástroj třetí strany pro formátování FAT32."
+      },
+      "binFile": {
+        "problem": "Na SD kartě vidím soubor .bin, mám ho použít?",
+        "fix": "Ne. Soubor .bin je určen pouze pro flashování z počítače přes hackrf_spiflash přes USB. Nástroj Flash Utility na zařízení přijímá pouze soubory .ppfw.tar. Soubor .bin se může v prohlížeči souborů zobrazit červeně nebo jako nevybratelný. Zařízení nemůže poškodit. Ignorujte jej."
+      }
+    }
+  },
+  "commonIssues": {
+    "title": "Diagnostika",
+    "subtitle": "Casto se vyskytujici problemy a jak je vyresit. SD karty jsou nejcastejsim zdrojem problemu u zarizeni PortaPack.",
+    "footer": "Pokud nic z toho nepomohlo, podivejte se na GitHub Discussions firmwaru Mayhem nebo subreddit r/hackrf.",
+    "categories": {
+      "sdCard": {
+        "title": "Problemy s SD kartou",
+        "items": {
+          "stuckBoot": {
+            "problem": "Zarizeni se zasekne na uvodni obrazovce po vlozeni SD karty",
+            "fix": "SD karta pravdepodobne obsahuje poskozena data, ktera zpusobi zamrznuti firmwaru pri spousteni. Vyjmete SD kartu, restartujte zarizeni a overte, ze se bez karty spusti do menu. Potom SD kartu naformatujte jako FAT32 na pocitaci, znovu na ni zkopirujte obsah COPY_TO_SDCARD a znovu ji vlozte. Pokud byla karta spinava, pred vlozenim otrete zlate kontakty suchym hadrikem z mikrovlakna."
+          },
+          "noMedia": {
+            "problem": "SD karta zobrazuje 'No SD card' nebo neni detekovana",
+            "fix": "Zatlacte kartu pevne dovnitr, dokud neucitite nebo neuslysite cvaknutu pruzinoveho slotu. Zlate kontakty by mely smerovat k PCB. Pokud se stale nedetekuje, vyjmete kartu, ocistete zlate kontakty suchym hadrikem a znovu vlozte. Nejprve overte, ze karta funguje na pocitaci. Nektere karty je treba zasunout vicekrat, nez dojde ke spravnemu kontaktu."
+          },
+          "temperamental": {
+            "problem": "SD karta funguje obcas, ale ne vzdy",
+            "fix": "MicroSD karty mohou byt nespolehilve v slotu PortaPacku. Pruzinovy mechanismus ne vzdy dosahne dokonaleho kontaktu. Vyjmete kartu, otrete zlate kontakty suchym hadrikem z mikrovlakna a pevne znovu vlozte. Pokud problemy pretrvavaji, zkuste jinou znacku karty. Karty SanDisk a Samsung EVO jsou siroke oznacovany jako spolehive. Vyhnete se levnym bezejmynnym kartam."
+          },
+          "corrupted": {
+            "problem": "Obsah SD karty se jevi jako poskozeny nebo soubory chybi",
+            "fix": "Pred vyjmutim SD karty zarizeni vypnete. Vytazeni karty behem zapisu muze poskodit souborovy system. Naformatujte kartu jako FAT32 na pocitaci (pokud mozno ne rychle formatovani) a znovu na ni rozbalte COPY_TO_SDCARD zip. Pokud se poskozeni opakuje, karta muze byt vadna. Otestujte ji nastroji H2testw (Windows) nebo f3 (Linux)."
+          },
+          "overSize": {
+            "problem": "SD karta vetsi nez 32 GB nefunguje",
+            "fix": "Karty vetsi nez 32 GB jsou z vyroby formatovane jako exFAT, coz firmware PortaPacku nepodporuje. Naformatujte jako FAT32 pomoci nastroju tretich stran: guiformat (Windows), gparted nebo mkfs.vfat (Linux), nebo Disk Utility s vyberem MS-DOS FAT (macOS). Doporucene jsou karty 32 GB nebo mensi."
+          }
+        }
+      },
+      "boot": {
+        "title": "Problemy se spoustenim",
+        "items": {
+          "splashHang": {
+            "problem": "Zarizeni zamrzne na uvodni obrazovce nebo logu Mayhem",
+            "fix": "Nejprve zkuste nastartovat bez SD karty. Pokud se spusti spravne, problem je v obsahu SD karty. Naformatujte a znovu nahrajte SD kartu. Pokud zamrzne i bez SD karty, podrzte tlacitko DFU a stisknete RESET pro vstup do DFU rezimu obnovy a znovu nahrajte firmware z pocitace pomoci dfu-util a hackrf_spiflash."
+          },
+          "bootLoop": {
+            "problem": "Zarizeni se porad restartuje ve smycce",
+            "fix": "Smycka restartu obvykle znamena, ze nahravaini firmwaru bylo preruseno nebo nedokonceno. Vstupte do rezimu DFU (podrzte DFU + stisknete RESET) a znovu nahrajte z pocitace. Bootloader je v ROM a nemuze byt poskozen, takze obnova je vzdy mozna."
+          },
+          "blackScreen": {
+            "problem": "Obrazovka zustava cerna po zapnuti",
+            "fix": "Overte, ze prepinac napajeni je plne v poloze ON (posunuto NAHORU). Pokud LED diody HackRF sviti, ale obrazovka zustava tmava, pripojeni desky PortaPack muze potrebovat znovu usadit. Vypnete, pak jemne pritlacte desku PortaPack, aby byla pevne nasazena na koliky HackRF."
+          }
+        }
+      },
+      "connection": {
+        "title": "Problemy s USB a pripojenim",
+        "items": {
+          "notRecognized": {
+            "problem": "Pocitac nedetekuje HackRF pres USB",
+            "fix": "Zkuste jiny USB kabel a jiny USB port. Mnoho kabelu je pouze nabijeci a neprenasi data. Pouzijte znamy funkcni datovy kabel. Na Linuxu spustte lsusb a zkontrolujte, zda se zarizeni objevi (hledejte 1d50:6089). Na Windows zkontrolujte Spravce zarizeni."
+          },
+          "chargeOnly": {
+            "problem": "Zarizeni se napaji pres USB, ale neni datove pripojeni",
+            "fix": "Pouzivate pouze nabijeci kabel. USB kabely dodavane s nabijeckami telefonu casto nemaji datove vodice. Pouzijte kabel, ktery jste drive pouzili pro prenos souboru."
+          },
+          "sdOverUsb": {
+            "problem": "Rezim SD over USB nezobrazuje SD kartu na pocitaci",
+            "fix": "Nejprve na PortaPacku prejdete do Utilities > SD over USB. Zarizeni musi byt v tomto rezimu, aby se SD karta objevila jako uloziste na pocitaci. Pokud se stale nezobrazuje, zkontrolujte USB kabel (musi byt datovy) a zkuste jiny USB port."
+          }
+        }
+      },
+      "reception": {
+        "title": "Problemy s prijem a signalem",
+        "items": {
+          "noSignal": {
+            "problem": "V zadne prijimaci aplikaci se nezobrazuji zadne signaly",
+            "fix": "Ujistete se, ze antena je pripojena ke spravnemu SMA portu (ANT na HackRF One). Zkontrolujte, ze frekvence je spravne nastavena. Zkuste znamy silny signal jako mistni FM stanici (88-108 MHz) pro overeni, ze radio funguje."
+          },
+          "weakSignal": {
+            "problem": "Signaly jsou velmi slabe nebo zasumlene",
+            "fix": "Upravte nastaveni LNA a VGA. Zacnete s LNA kolem 32 dB a VGA kolem 24 dB, pak doladete. Moznost AMP pridava 14 dB zisku, ale muze presytit silne blizke signaly. Ujistete se, ze vase antena je vhodna pro cilovy frekvencni rozsah."
+          },
+          "noAudio": {
+            "problem": "Prijimam signal, ale zadny zvukovy vystup",
+            "fix": "Zkontrolujte, ze zvukovy vystup je v aplikaci spravne nastaven. Nektere aplikace vystupi na reproduktor, nektere na 3,5mm jack. Overte, ze hlasitost je v nastaveni aplikace zapnuta."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {

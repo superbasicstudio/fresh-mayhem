@@ -20,7 +20,8 @@
     "expandSidebar": "Udvid sidepanel",
     "collapseSidebar": "Skjul sidepanel",
     "openMenu": "Åbn menu",
-    "closeMenu": "Luk menu"
+    "closeMenu": "Luk menu",
+    "troubleshooting": "Fejlfinding"
   },
   "brand": {
     "name": "FRESH MAYHEM",
@@ -313,11 +314,109 @@
       "s14": "Kalibrer touchskærmen igen, hvis det er nødvendigt: Utilities > Touch Calibrate."
     },
     "troubleshootingItems": {
-      "noFile": { "problem": "Flash Utility kan ikke se filen", "fix": "Sørg for, at filen er i FIRMWARE/ (ikke indlejret i en undermappe), og at filnavnet ender på .ppfw.tar" },
-      "noBoot": { "problem": "Enheden starter ikke efter flash", "fix": "Hold DFU-knappen nede + tryk RESET for at gå ind i DFU-gendannelsestilstand. Bootloaderen er i ROM og kan ikke brickes. Reflash via dfu-util + hackrf_spiflash fra en computer." },
-      "missingApps": { "problem": "Apps mangler efter opdatering", "fix": "SD-kortindholdet blev ikke opdateret. Udpak COPY_TO_SDCARD-zip'en igen til SD-kortets rod med overskrivning aktiveret." },
-      "noSd": { "problem": "SD-kort ikke registreret", "fix": "Omformater som FAT32 (ikke exFAT). Kort over 32 GB kan kræve et tredjepartsværktøj til FAT32-formatering." },
-      "binFile": { "problem": "Jeg ser en .bin-fil på SD-kortet, skal jeg bruge den?", "fix": "Nej. .bin-filen er kun til PC-side flashing via hackrf_spiflash over USB. Den indbyggede Flash Utility accepterer kun .ppfw.tar-filer. .bin-filen kan vises rødt eller som ikke-valgbar i filbrowseren. Den kan ikke skade enheden. Ignorer den." }
+      "noFile": {
+        "problem": "Flash Utility kan ikke se filen",
+        "fix": "Sørg for, at filen er i FIRMWARE/ (ikke indlejret i en undermappe), og at filnavnet ender på .ppfw.tar"
+      },
+      "noBoot": {
+        "problem": "Enheden starter ikke efter flash",
+        "fix": "Hold DFU-knappen nede + tryk RESET for at gå ind i DFU-gendannelsestilstand. Bootloaderen er i ROM og kan ikke brickes. Reflash via dfu-util + hackrf_spiflash fra en computer."
+      },
+      "missingApps": {
+        "problem": "Apps mangler efter opdatering",
+        "fix": "SD-kortindholdet blev ikke opdateret. Udpak COPY_TO_SDCARD-zip'en igen til SD-kortets rod med overskrivning aktiveret."
+      },
+      "noSd": {
+        "problem": "SD-kort ikke registreret",
+        "fix": "Omformater som FAT32 (ikke exFAT). Kort over 32 GB kan kræve et tredjepartsværktøj til FAT32-formatering."
+      },
+      "binFile": {
+        "problem": "Jeg ser en .bin-fil på SD-kortet, skal jeg bruge den?",
+        "fix": "Nej. .bin-filen er kun til PC-side flashing via hackrf_spiflash over USB. Den indbyggede Flash Utility accepterer kun .ppfw.tar-filer. .bin-filen kan vises rødt eller som ikke-valgbar i filbrowseren. Den kan ikke skade enheden. Ignorer den."
+      }
+    }
+  },
+  "commonIssues": {
+    "title": "Fejlfinding",
+    "subtitle": "Hyppigt forekommende problemer og hvordan de loses. SD-kort er den mest almindelige kilde til problemer med PortaPack-enheder.",
+    "footer": "Hvis ingen af disse losninger hjaelper, tjek Mayhem firmware GitHub Discussions eller r/hackrf subreddit.",
+    "categories": {
+      "sdCard": {
+        "title": "SD-kort problemer",
+        "items": {
+          "stuckBoot": {
+            "problem": "Enheden sidder fast paa opstartsskaermen efter isaetn af SD-kort",
+            "fix": "SD-kortet har sandsynligvis korrupte data, der faar firmwaren til at haenge under opstart. Fjern SD-kortet, genstart enheden og bekraeft at den starter til menuen uden kortet. Formater derefter SD-kortet som FAT32 paa din computer, kopier COPY_TO_SDCARD indholdet igen og saet det i igen. Hvis kortet var snavset, tor guldkontakterne af med en tor mikrofiberklud foer genindsaettelse."
+          },
+          "noMedia": {
+            "problem": "SD-kort viser 'No SD card' eller detekteres ikke",
+            "fix": "Skub kortet fast ind til du hoerer eller maerker et klik fra fjederspaerreslottet. Guldkontakterne skal vende mod PCB'en. Hvis det stadig ikke detekteres, fjern kortet, rengoer guldkontakterne med en tor klud og saet det i igen. Tjek foerst at kortet virker paa din computer."
+          },
+          "temperamental": {
+            "problem": "SD-kort virker nogle gange men ikke altid",
+            "fix": "MicroSD-kort kan vaere lunefulde med PortaPack-slottet. Fjerdermekanismen laver ikke altid perfekt kontakt. Fjern kortet, tor guldkontakterne af med en tor mikrofiberklud og saet det fast i igen. Hvis problemerne fortsaetter, prov et andet maerke kort. SanDisk og Samsung EVO kort er bredt rapporteret som palidelige."
+          },
+          "corrupted": {
+            "problem": "SD-kort indhold ser ud til at vaere korrupt eller filer mangler",
+            "fix": "Sluk enheden foer du fjerner SD-kortet. At traekke kortet ud mens enheden skriver kan korrumpere filsystemet. Formater kortet som FAT32 paa din computer og pak COPY_TO_SDCARD zip ud igen paa kortet. Hvis korruption bliver ved med at ske, kan kortet vaere defekt."
+          },
+          "overSize": {
+            "problem": "SD-kort over 32 GB virker ikke",
+            "fix": "Kort stoerre end 32 GB leveres formateret som exFAT, som PortaPack firmwaren ikke understoetter. Du skal formatere som FAT32 med et tredjepartsvaerktoej: guiformat (Windows), gparted eller mkfs.vfat (Linux), eller Disk Utility med MS-DOS FAT valgt (macOS). 32 GB eller mindre kort anbefales."
+          }
+        }
+      },
+      "boot": {
+        "title": "Opstart og opstartsproblemer",
+        "items": {
+          "splashHang": {
+            "problem": "Enheden haenger paa splashskaermen eller Mayhem-logoet",
+            "fix": "Proev foerst at starte uden SD-kortet. Hvis det starter fint, er SD-kortets indhold problemet. Formater og gen-flash SD-kortet. Hvis det haenger selv uden SD-kortet, hold DFU-knappen nede og tryk RESET for at gaa i DFU-gendannelsestilstand og gen-flash firmwaren fra en computer."
+          },
+          "bootLoop": {
+            "problem": "Enheden bliver ved med at genstarte i en loekke",
+            "fix": "En opstartslookke betyder normalt at firmware-flashen blev afbrudt eller var ufuldstaendig. Gaa i DFU-gendannelsestilstand (hold DFU + tryk RESET) og gen-flash fra en computer. Bootloaderen er i ROM og kan ikke odelaegges, saa gendannelse er altid mulig."
+          },
+          "blackScreen": {
+            "problem": "Skaermen forbliver sort efter taending",
+            "fix": "Bekraeft at stroemafbryderen er helt i ON-position (skubbet OP). Hvis HackRF LED'erne lyser men skaermen forbliver moerk, kan PortaPack-bordtilslutningen have brug for genplacering. Sluk, tryk derefter forsigtigt paa PortaPack-bordet for at sikre at det sidder fast paa HackRF header-pins."
+          }
+        }
+      },
+      "connection": {
+        "title": "USB og forbindelsesproblemer",
+        "items": {
+          "notRecognized": {
+            "problem": "Computer detekterer ikke HackRF over USB",
+            "fix": "Proev et andet USB-kabel og en anden USB-port. Mange kabler er kun til opladning og baerer ikke data. Brug et kendt fungerende datakabel. Paa Linux koer lsusb for at tjekke om enheden vises (kig efter 1d50:6089). Paa Windows tjek Enhedshhaandtering."
+          },
+          "chargeOnly": {
+            "problem": "Enheden taender via USB men ingen dataforbindelse",
+            "fix": "Du bruger et opladningskabel. USB-kabler der fulgte med telefonopladere mangler ofte dataledningerne. Brug et kabel du tidligere har brugt til filoverfoerelse."
+          },
+          "sdOverUsb": {
+            "problem": "SD over USB-tilstand viser ikke SD-kortet paa computeren",
+            "fix": "Naviger foerst til Utilities > SD over USB paa PortaPack. Enheden skal vaere i denne tilstand for at SD-kortet vises som masselagringsenhed paa din computer. Hvis SD-kortet stadig ikke vises, tjek dit USB-kabel (skal vaere datadygtigt) og proev en anden USB-port."
+          }
+        }
+      },
+      "reception": {
+        "title": "Modtagelse og signalproblemer",
+        "items": {
+          "noSignal": {
+            "problem": "Ingen signaler vises i nogen modtageapp",
+            "fix": "Soerg for at en antenne er tilsluttet den korrekte SMA-port (ANT paa HackRF One). Tjek at frekvensen er korrekt indstillet. Proev et kendt staerkt signal som en lokal FM-radiostation (88-108 MHz) for at verificere at radioen virker."
+          },
+          "weakSignal": {
+            "problem": "Signaler er meget svage eller stoejende",
+            "fix": "Juster LNA og VGA indstillingerne. Start med LNA omkring 32 dB og VGA omkring 24 dB, juster derefter. AMP-muligheden tilfoej 14 dB forstaerkning men kan overdrive staerke naerliggende signaler. Soerg for at din antenne er passende til det frekvensomraade du maalretter."
+          },
+          "noAudio": {
+            "problem": "Modtager signal men ingen lydudgang",
+            "fix": "Tjek at lydudgangen er korrekt indstillet i appen. Nogle apps sender lyd til hoejtaleren, andre til 3,5mm hovedtelefonjakket. Bekraeft at lydstyrken er skruet op i app-indstillingerne."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {

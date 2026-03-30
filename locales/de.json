@@ -20,7 +20,8 @@
     "expandSidebar": "Seitenleiste ausklappen",
     "collapseSidebar": "Seitenleiste einklappen",
     "openMenu": "Menü öffnen",
-    "closeMenu": "Menü schließen"
+    "closeMenu": "Menü schließen",
+    "troubleshooting": "Fehlerbehebung"
   },
   "brand": {
     "name": "FRESH MAYHEM",
@@ -303,7 +304,7 @@
       "s4": "Verbinde die SD-Karte mit deinem Computer. Sie sollte als FAT32-Volumen mit vorhandenen Mayhem-Ordnern erscheinen.",
       "s5": "Kopiere die .ppfw.tar-Firmwaredatei in den Ordner FIRMWARE/ auf der SD-Karte. Erstelle den Ordner, falls er nicht existiert.",
       "s6": "Entpacke die COPY_TO_SDCARD-Zip in das Stammverzeichnis der SD-Karte. Wähle bei Aufforderung Überschreiben/Alles ersetzen. Deine persönlichen Einstellungen und Aufnahmen werden nicht überschrieben.",
-      "s7": "Wirf die SD-Karte sicher aus. Unter Linux zuerst sync ausführen. Unter Windows/macOS \u201ESicher entfernen\u201C oder \u201EAuswerfen\u201C verwenden.",
+      "s7": "Wirf die SD-Karte sicher aus. Unter Linux zuerst sync ausführen. Unter Windows/macOS „Sicher entfernen“ oder „Auswerfen“ verwenden.",
       "s8": "Setze die SD-Karte wieder in den PortaPack ein, bis sie einrastet. Goldkontakte zeigen zur PCB.",
       "s9": "Einschalten und zu Utilities > Flash Utility navigieren. Verwende das Drehrad oder den Touchscreen.",
       "s10": "Wähle die .ppfw.tar-Datei aus dem Ordner FIRMWARE/. Nur .ppfw.tar-Dateien funktionieren mit dem integrierten Flash Utility. Auf der SD-Karte aus der Zip siehst du möglicherweise auch eine .bin-Datei. Diese ist nur für PC-seitiges Flashen über hackrf_spiflash per USB. Das Flash Utility akzeptiert sie nicht. Ignoriere sie. Das Gerät flasht 15 bis 30 Sekunden. Nicht ausschalten und die SD-Karte nicht während des Flashens entfernen.",
@@ -313,11 +314,109 @@
       "s14": "Kalibriere bei Bedarf den Touchscreen neu: Utilities > Touch Calibrate."
     },
     "troubleshootingItems": {
-      "noFile": { "problem": "Flash Utility sieht die Datei nicht", "fix": "Stelle sicher, dass die Datei in FIRMWARE/ liegt (nicht in einem Unterordner) und der Dateiname auf .ppfw.tar endet" },
-      "noBoot": { "problem": "Gerät startet nach dem Flash nicht", "fix": "Halte die DFU-Taste gedrückt + drücke RESET, um in den DFU-Wiederherstellungsmodus zu gelangen. Der Bootloader liegt im ROM und kann nicht gebrickt werden. Flashe erneut über dfu-util + hackrf_spiflash von einem Computer." },
-      "missingApps": { "problem": "Apps fehlen nach dem Update", "fix": "Der SD-Karten-Inhalt wurde nicht aktualisiert. Entpacke die COPY_TO_SDCARD-Zip erneut in das Stammverzeichnis der SD-Karte mit aktiviertem Überschreiben." },
-      "noSd": { "problem": "SD-Karte wird nicht erkannt", "fix": "Formatiere als FAT32 (nicht exFAT). Karten über 32 GB benötigen möglicherweise ein Drittanbieter-Tool zur FAT32-Formatierung." },
-      "binFile": { "problem": "Ich sehe eine .bin-Datei auf der SD-Karte, soll ich sie verwenden?", "fix": "Nein. Die .bin-Datei ist nur für PC-seitiges Flashen über hackrf_spiflash per USB. Das integrierte Flash Utility akzeptiert nur .ppfw.tar-Dateien. Die .bin-Datei kann im Dateibrowser rot oder nicht auswählbar erscheinen. Sie kann das Gerät nicht beschädigen. Ignoriere sie." }
+      "noFile": {
+        "problem": "Flash Utility sieht die Datei nicht",
+        "fix": "Stelle sicher, dass die Datei in FIRMWARE/ liegt (nicht in einem Unterordner) und der Dateiname auf .ppfw.tar endet"
+      },
+      "noBoot": {
+        "problem": "Gerät startet nach dem Flash nicht",
+        "fix": "Halte die DFU-Taste gedrückt + drücke RESET, um in den DFU-Wiederherstellungsmodus zu gelangen. Der Bootloader liegt im ROM und kann nicht gebrickt werden. Flashe erneut über dfu-util + hackrf_spiflash von einem Computer."
+      },
+      "missingApps": {
+        "problem": "Apps fehlen nach dem Update",
+        "fix": "Der SD-Karten-Inhalt wurde nicht aktualisiert. Entpacke die COPY_TO_SDCARD-Zip erneut in das Stammverzeichnis der SD-Karte mit aktiviertem Überschreiben."
+      },
+      "noSd": {
+        "problem": "SD-Karte wird nicht erkannt",
+        "fix": "Formatiere als FAT32 (nicht exFAT). Karten über 32 GB benötigen möglicherweise ein Drittanbieter-Tool zur FAT32-Formatierung."
+      },
+      "binFile": {
+        "problem": "Ich sehe eine .bin-Datei auf der SD-Karte, soll ich sie verwenden?",
+        "fix": "Nein. Die .bin-Datei ist nur für PC-seitiges Flashen über hackrf_spiflash per USB. Das integrierte Flash Utility akzeptiert nur .ppfw.tar-Dateien. Die .bin-Datei kann im Dateibrowser rot oder nicht auswählbar erscheinen. Sie kann das Gerät nicht beschädigen. Ignoriere sie."
+      }
+    }
+  },
+  "commonIssues": {
+    "title": "Fehlerbehebung",
+    "subtitle": "Haeufig auftretende Probleme und wie man sie behebt. SD-Karten sind die haeufigste Ursache fuer Probleme mit PortaPack-Geraeten.",
+    "footer": "Wenn nichts davon hilft, schauen Sie in den Mayhem Firmware GitHub Discussions oder im r/hackrf Subreddit nach.",
+    "categories": {
+      "sdCard": {
+        "title": "SD-Karten-Probleme",
+        "items": {
+          "stuckBoot": {
+            "problem": "Geraet bleibt nach Einlegen der SD-Karte am Startbildschirm haengen",
+            "fix": "Die SD-Karte enthaelt wahrscheinlich beschaedigte Daten, die die Firmware beim Booten zum Haengen bringen. Entfernen Sie die SD-Karte, starten Sie das Geraet neu und bestaetige Sie, dass es ohne Karte ins Menue bootet. Formatieren Sie dann die SD-Karte als FAT32 am Computer, kopieren Sie den COPY_TO_SDCARD-Inhalt erneut und setzen Sie sie wieder ein. War die Karte verschmutzt, wischen Sie die Goldkontakte vor dem Einsetzen mit einem trockenen Mikrofasertuch ab."
+          },
+          "noMedia": {
+            "problem": "SD-Karte zeigt 'No SD card' oder wird nicht erkannt",
+            "fix": "Druecken Sie die Karte fest hinein, bis Sie ein Klicken des Federmechanismus hoeren oder spueren. Die Goldkontakte sollten zur Platine zeigen. Wenn sie immer noch nicht erkannt wird, entfernen Sie die Karte, reinigen Sie die Goldkontakte mit einem trockenen Tuch und setzen Sie sie erneut ein. Pruefen Sie zuerst, ob die Karte am Computer funktioniert."
+          },
+          "temperamental": {
+            "problem": "SD-Karte funktioniert manchmal, aber nicht immer",
+            "fix": "MicroSD-Karten koennen mit dem PortaPack-Slot launisch sein. Der Federmechanismus stellt nicht immer perfekten Kontakt her. Entfernen Sie die Karte, wischen Sie die Goldkontakte mit einem trockenen Mikrofasertuch ab und setzen Sie sie fest wieder ein. Bei anhaltenden Problemen versuchen Sie eine andere Kartenmarke. SanDisk und Samsung EVO Karten werden weithin als zuverlaessig berichtet."
+          },
+          "corrupted": {
+            "problem": "SD-Karteninhalt erscheint beschaedigt oder Dateien fehlen",
+            "fix": "Schalten Sie das Geraet aus, bevor Sie die SD-Karte entfernen. Das Herausziehen der Karte waehrend das Geraet schreibt, kann das Dateisystem beschaedigen. Formatieren Sie die Karte als FAT32 am Computer und entpacken Sie die COPY_TO_SDCARD-Zip erneut auf die Karte. Wenn die Beschaedigung wiederholt auftritt, koennte die Karte defekt sein."
+          },
+          "overSize": {
+            "problem": "SD-Karte ueber 32 GB funktioniert nicht",
+            "fix": "Karten groesser als 32 GB werden als exFAT ausgeliefert, was die PortaPack-Firmware nicht unterstuetzt. Formatieren Sie als FAT32 mit einem Drittanbieter-Tool: guiformat (Windows), gparted oder mkfs.vfat (Linux), oder Festplattendienstprogramm mit MS-DOS FAT (macOS). 32 GB oder kleinere Karten werden empfohlen."
+          }
+        }
+      },
+      "boot": {
+        "title": "Boot- und Startprobleme",
+        "items": {
+          "splashHang": {
+            "problem": "Geraet haengt am Startbildschirm oder Mayhem-Logo",
+            "fix": "Versuchen Sie zuerst ohne SD-Karte zu booten. Wenn es normal startet, liegt das Problem am SD-Karteninhalt. Formatieren und flashen Sie die SD-Karte neu. Wenn es auch ohne SD-Karte haengt, halten Sie die DFU-Taste gedrueckt und druecken Sie RESET, um in den DFU-Wiederherstellungsmodus zu gelangen, und flashen Sie die Firmware vom Computer neu."
+          },
+          "bootLoop": {
+            "problem": "Geraet startet in einer Schleife immer wieder neu",
+            "fix": "Eine Boot-Schleife bedeutet normalerweise, dass der Firmware-Flash unterbrochen oder unvollstaendig war. Gehen Sie in den DFU-Wiederherstellungsmodus (DFU halten + RESET druecken) und flashen Sie vom Computer neu. Der Bootloader ist im ROM und kann nicht beschaedigt werden, daher ist eine Wiederherstellung immer moeglich."
+          },
+          "blackScreen": {
+            "problem": "Bildschirm bleibt nach dem Einschalten schwarz",
+            "fix": "Stellen Sie sicher, dass der Netzschalter vollstaendig in der ON-Position ist (nach OBEN geschoben). Wenn die HackRF-LEDs leuchten, aber der Bildschirm dunkel bleibt, muss moeglicherweise die PortaPack-Platine neu eingesetzt werden. Schalten Sie aus und druecken Sie dann vorsichtig auf die PortaPack-Platine, um sicherzustellen, dass sie fest auf den HackRF-Header-Pins sitzt."
+          }
+        }
+      },
+      "connection": {
+        "title": "USB- und Verbindungsprobleme",
+        "items": {
+          "notRecognized": {
+            "problem": "Computer erkennt HackRF nicht ueber USB",
+            "fix": "Versuchen Sie ein anderes USB-Kabel und einen anderen USB-Port. Viele Kabel sind nur zum Laden und uebertragen keine Daten. Verwenden Sie ein bekannt funktionierendes Datenkabel. Unter Linux fuehren Sie lsusb aus, um zu pruefen, ob das Geraet erscheint (suchen Sie nach 1d50:6089). Unter Windows pruefen Sie den Geraete-Manager."
+          },
+          "chargeOnly": {
+            "problem": "Geraet wird ueber USB mit Strom versorgt, aber keine Datenverbindung",
+            "fix": "Sie verwenden ein reines Ladekabel. USB-Kabel, die mit Telefonladegeraeten geliefert werden, haben oft keine Datenleitungen. Verwenden Sie ein Kabel, das Sie zuvor fuer Datenuebertragung verwendet haben."
+          },
+          "sdOverUsb": {
+            "problem": "SD over USB-Modus zeigt die SD-Karte nicht am Computer an",
+            "fix": "Navigieren Sie zuerst auf dem PortaPack zu Utilities > SD over USB. Das Geraet muss sich in diesem Modus befinden, damit die SD-Karte als Massenspeichergeraet am Computer erscheint. Wenn die SD-Karte immer noch nicht erscheint, pruefen Sie Ihr USB-Kabel (muss datenfaehig sein) und versuchen Sie einen anderen USB-Port."
+          }
+        }
+      },
+      "reception": {
+        "title": "Empfangs- und Signalprobleme",
+        "items": {
+          "noSignal": {
+            "problem": "Keine Signale in irgendeiner Empfangs-App sichtbar",
+            "fix": "Stellen Sie sicher, dass eine Antenne am richtigen SMA-Port angeschlossen ist (ANT am HackRF One). Pruefen Sie, ob die Frequenz richtig eingestellt ist. Versuchen Sie ein bekannt starkes Signal wie einen lokalen FM-Radiosender (88-108 MHz), um zu ueberpruefen, ob das Radio funktioniert."
+          },
+          "weakSignal": {
+            "problem": "Signale sind sehr schwach oder verrauscht",
+            "fix": "Passen Sie die LNA- und VGA-Einstellungen an. Beginnen Sie mit LNA bei etwa 32 dB und VGA bei etwa 24 dB und justieren Sie dann nach. Die AMP-Option fuegt 14 dB Verstaerkung hinzu, kann aber starke nahe Signale uebersteuern. Stellen Sie sicher, dass Ihre Antenne fuer den Zielfrequenzbereich geeignet ist."
+          },
+          "noAudio": {
+            "problem": "Signal wird empfangen, aber keine Audioausgabe",
+            "fix": "Pruefen Sie, ob der Audioausgang in der App richtig eingestellt ist. Einige Apps geben ueber den Lautsprecher aus, andere ueber die 3,5mm Kopfhoererbuchse. Stellen Sie sicher, dass die Lautstaerke in den App-Einstellungen aufgedreht ist."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {

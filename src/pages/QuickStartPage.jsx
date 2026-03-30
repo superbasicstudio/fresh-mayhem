@@ -30,6 +30,7 @@ const troubleshooting = [
   { problem: "I see a .bin file on the SD card, should I use it?", fix: "No. The .bin file is for PC-side flashing via hackrf_spiflash over USB only. The on-device Flash Utility only accepts .ppfw.tar files. The .bin may appear red or unselectable in the file browser. It cannot harm the device. Ignore it." },
 ];
 
+
 function getCompleted() {
   let count = 0;
   try {
@@ -177,6 +178,7 @@ export default function QuickStartPage() {
           {t('firmwareUpdate.dfuNote')}
         </p>
       </PageSection>
+
     </>
   );
 }

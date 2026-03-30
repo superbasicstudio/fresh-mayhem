@@ -20,7 +20,8 @@
     "expandSidebar": "Espandi barra laterale",
     "collapseSidebar": "Comprimi barra laterale",
     "openMenu": "Apri menu",
-    "closeMenu": "Chiudi menu"
+    "closeMenu": "Chiudi menu",
+    "troubleshooting": "Risoluzione problemi"
   },
   "brand": {
     "name": "FRESH MAYHEM",
@@ -313,11 +314,109 @@
       "s14": "Ricalibra il touchscreen se necessario: Utilities > Touch Calibrate."
     },
     "troubleshootingItems": {
-      "noFile": { "problem": "Il Flash Utility non vede il file", "fix": "Assicurati che il file sia in FIRMWARE/ (non annidato in una sottocartella) e che il nome del file termini con .ppfw.tar" },
-      "noBoot": { "problem": "Il dispositivo non si avvia dopo il flash", "fix": "Tieni premuto il pulsante DFU + premi RESET per entrare in modalità di ripristino DFU. Il bootloader è in ROM e non può essere danneggiato. Riflasha via dfu-util + hackrf_spiflash da un computer." },
-      "missingApps": { "problem": "App mancanti dopo l'aggiornamento", "fix": "Il contenuto della scheda SD non è stato aggiornato. Riesegui l'estrazione dello zip COPY_TO_SDCARD nella radice della scheda SD con sovrascrittura abilitata." },
-      "noSd": { "problem": "Scheda SD non rilevata", "fix": "Riformatta come FAT32 (non exFAT). Le schede oltre 32 GB potrebbero necessitare di uno strumento di terze parti per la formattazione FAT32." },
-      "binFile": { "problem": "Vedo un file .bin sulla scheda SD, dovrei usarlo?", "fix": "No. Il file .bin è solo per il flash lato PC via hackrf_spiflash tramite USB. Il Flash Utility integrato accetta solo file .ppfw.tar. Il .bin potrebbe apparire rosso o non selezionabile nel file browser. Non può danneggiare il dispositivo. Ignoralo." }
+      "noFile": {
+        "problem": "Il Flash Utility non vede il file",
+        "fix": "Assicurati che il file sia in FIRMWARE/ (non annidato in una sottocartella) e che il nome del file termini con .ppfw.tar"
+      },
+      "noBoot": {
+        "problem": "Il dispositivo non si avvia dopo il flash",
+        "fix": "Tieni premuto il pulsante DFU + premi RESET per entrare in modalità di ripristino DFU. Il bootloader è in ROM e non può essere danneggiato. Riflasha via dfu-util + hackrf_spiflash da un computer."
+      },
+      "missingApps": {
+        "problem": "App mancanti dopo l'aggiornamento",
+        "fix": "Il contenuto della scheda SD non è stato aggiornato. Riesegui l'estrazione dello zip COPY_TO_SDCARD nella radice della scheda SD con sovrascrittura abilitata."
+      },
+      "noSd": {
+        "problem": "Scheda SD non rilevata",
+        "fix": "Riformatta come FAT32 (non exFAT). Le schede oltre 32 GB potrebbero necessitare di uno strumento di terze parti per la formattazione FAT32."
+      },
+      "binFile": {
+        "problem": "Vedo un file .bin sulla scheda SD, dovrei usarlo?",
+        "fix": "No. Il file .bin è solo per il flash lato PC via hackrf_spiflash tramite USB. Il Flash Utility integrato accetta solo file .ppfw.tar. Il .bin potrebbe apparire rosso o non selezionabile nel file browser. Non può danneggiare il dispositivo. Ignoralo."
+      }
+    }
+  },
+  "commonIssues": {
+    "title": "Risoluzione problemi",
+    "subtitle": "Problemi frequenti e come risolverli. Le schede SD sono la fonte piu comune di problemi con i dispositivi PortaPack.",
+    "footer": "Se nessuna di queste soluzioni funziona, controlla le GitHub Discussions del firmware Mayhem o il subreddit r/hackrf.",
+    "categories": {
+      "sdCard": {
+        "title": "Problemi con la scheda SD",
+        "items": {
+          "stuckBoot": {
+            "problem": "Il dispositivo si blocca sulla schermata di avvio dopo l'inserimento della scheda SD",
+            "fix": "La scheda SD probabilmente contiene dati corrotti che causano il blocco del firmware durante l'avvio. Rimuovi la scheda SD, riavvia il dispositivo e conferma che si avvia nel menu senza la scheda. Poi formatta la scheda SD come FAT32 sul computer, ricopia il contenuto COPY_TO_SDCARD e reinserisci. Se la scheda era sporca, pulisci i contatti dorati con un panno in microfibra asciutto prima di reinserirla."
+          },
+          "noMedia": {
+            "problem": "La scheda SD mostra 'No SD card' o non viene rilevata",
+            "fix": "Spingi la scheda saldamente finche non senti o percepisci un clic dal meccanismo a molla. I contatti dorati devono essere rivolti verso il PCB. Se non viene ancora rilevata, rimuovi la scheda, pulisci i contatti dorati con un panno asciutto e reinserisci. Verifica prima che la scheda funzioni sul computer."
+          },
+          "temperamental": {
+            "problem": "La scheda SD funziona a volte ma non sempre",
+            "fix": "Le schede MicroSD possono essere capricciose con lo slot del PortaPack. Il meccanismo a molla non sempre fa contatto perfetto. Rimuovi la scheda, pulisci i contatti dorati con un panno in microfibra asciutto e reinserisci saldamente. Se i problemi persistono, prova una marca diversa. Le schede SanDisk e Samsung EVO sono ampiamente segnalate come affidabili."
+          },
+          "corrupted": {
+            "problem": "Il contenuto della scheda SD appare corrotto o mancano file",
+            "fix": "Spegni il dispositivo prima di rimuovere la scheda SD. Rimuovere la scheda mentre il dispositivo sta scrivendo puo corrompere il file system. Riformatta la scheda come FAT32 sul computer e riesegui l'estrazione dello zip COPY_TO_SDCARD sulla scheda. Se la corruzione continua, la scheda potrebbe essere difettosa."
+          },
+          "overSize": {
+            "problem": "La scheda SD oltre 32 GB non funziona",
+            "fix": "Le schede piu grandi di 32 GB vengono fornite formattate come exFAT, che il firmware del PortaPack non supporta. Devi riformattare come FAT32 usando uno strumento di terze parti: guiformat (Windows), gparted o mkfs.vfat (Linux), o Utility Disco con MS-DOS FAT selezionato (macOS). Si raccomandano schede da 32 GB o inferiori."
+          }
+        }
+      },
+      "boot": {
+        "title": "Problemi di avvio",
+        "items": {
+          "splashHang": {
+            "problem": "Il dispositivo si blocca sulla schermata iniziale o sul logo Mayhem",
+            "fix": "Prima, prova ad avviare senza la scheda SD. Se si avvia normalmente, il problema e nel contenuto della scheda SD. Riformatta e riflasha la scheda SD. Se si blocca anche senza scheda SD, tieni premuto il pulsante DFU e premi RESET per entrare in modalita di recupero DFU, poi riflasha il firmware da un computer."
+          },
+          "bootLoop": {
+            "problem": "Il dispositivo continua a riavviarsi in un ciclo",
+            "fix": "Un ciclo di avvio di solito significa che il flash del firmware e stato interrotto o incompleto. Entra in modalita di recupero DFU (tieni DFU + premi RESET) e riflasha da un computer. Il bootloader e in ROM e non puo essere danneggiato, quindi il recupero e sempre possibile."
+          },
+          "blackScreen": {
+            "problem": "Lo schermo rimane nero dopo l'accensione",
+            "fix": "Conferma che l'interruttore di alimentazione sia completamente in posizione ON (spostato verso l'ALTO). Se i LED del HackRF si accendono ma lo schermo rimane scuro, il collegamento della scheda PortaPack potrebbe dover essere riposizionato. Spegni, poi premi delicatamente sulla scheda PortaPack per assicurarti che sia ben inserita sui pin del connettore HackRF."
+          }
+        }
+      },
+      "connection": {
+        "title": "Problemi USB e di connessione",
+        "items": {
+          "notRecognized": {
+            "problem": "Il computer non rileva l'HackRF tramite USB",
+            "fix": "Prova un cavo USB diverso e una porta USB diversa. Molti cavi sono solo per la ricarica e non trasportano dati. Usa un cavo dati noto come funzionante. Su Linux, esegui lsusb per verificare se il dispositivo appare (cerca 1d50:6089). Su Windows, controlla Gestione Dispositivi."
+          },
+          "chargeOnly": {
+            "problem": "Il dispositivo si accende via USB ma nessuna connessione dati",
+            "fix": "Stai usando un cavo solo per la ricarica. I cavi USB forniti con i caricatori del telefono spesso mancano dei fili dati. Usa un cavo che hai usato in precedenza per il trasferimento file."
+          },
+          "sdOverUsb": {
+            "problem": "La modalita SD over USB non mostra la scheda SD sul computer",
+            "fix": "Prima naviga a Utilities > SD over USB sul PortaPack. Il dispositivo deve essere in questa modalita perche la scheda SD appaia come dispositivo di archiviazione di massa sul computer. Se la scheda SD non appare ancora, controlla il cavo USB (deve essere capace di trasferire dati) e prova una porta USB diversa."
+          }
+        }
+      },
+      "reception": {
+        "title": "Problemi di ricezione e segnale",
+        "items": {
+          "noSignal": {
+            "problem": "Nessun segnale visibile in nessuna app di ricezione",
+            "fix": "Assicurati che un'antenna sia collegata alla porta SMA corretta (ANT sull'HackRF One). Verifica che la frequenza sia impostata correttamente. Prova un segnale forte noto come una stazione radio FM locale (88-108 MHz) per verificare che la radio funzioni."
+          },
+          "weakSignal": {
+            "problem": "I segnali sono molto deboli o rumorosi",
+            "fix": "Regola le impostazioni LNA e VGA. Inizia con LNA intorno a 32 dB e VGA intorno a 24 dB, poi regola. L'opzione AMP aggiunge 14 dB di guadagno ma puo saturare segnali forti vicini. Assicurati che la tua antenna sia appropriata per la gamma di frequenze target."
+          },
+          "noAudio": {
+            "problem": "Ricevo un segnale ma nessuna uscita audio",
+            "fix": "Verifica che l'uscita audio sia configurata correttamente nell'app. Alcune app emettono dall'altoparlante, altre dal jack cuffie da 3,5 mm. Verifica che il volume sia alzato nelle impostazioni dell'app."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {

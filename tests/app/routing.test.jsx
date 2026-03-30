@@ -78,6 +78,11 @@ describe('App routing', () => {
     expect(document.body.textContent.length).toBeGreaterThan(0);
   });
 
+  test('renders troubleshooting page at /troubleshooting', () => {
+    renderWithRouter('/troubleshooting');
+    expect(document.body.textContent.length).toBeGreaterThan(0);
+  });
+
   test('renders where-to-buy page at /where-to-buy', () => {
     renderWithRouter('/where-to-buy');
     expect(document.body.textContent.length).toBeGreaterThan(0);

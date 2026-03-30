@@ -11,7 +11,7 @@ import {
   Bars3Icon,
   XMarkIcon,
 } from '@heroicons/react/24/outline';
-import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBrain, TbSearch, TbDownload, TbShoppingCart, TbRulerMeasure, TbGavel } from 'react-icons/tb';
+import { TbRadar, TbDeviceGamepad, TbAntenna, TbBroadcast, TbWaveSine, TbBrain, TbSearch, TbDownload, TbShoppingCart, TbRulerMeasure, TbGavel, TbLifebuoy } from 'react-icons/tb';
 
 function PortaPackIcon({ className = 'w-6 h-6' }) {
   return (
@@ -34,6 +34,7 @@ const sectionDefs = [
   { path: '/frequencies', labelKey: 'nav.frequencies', icon: TbWaveSine },
   { path: '/learn', labelKey: 'nav.learn', icon: TbBrain },
   { path: '/quickstart', labelKey: 'nav.quickstart', icon: RocketLaunchIcon },
+  { path: '/troubleshooting', labelKey: 'nav.troubleshooting', icon: TbLifebuoy },
   { path: '/where-to-buy', labelKey: 'nav.whereToBuy', icon: TbShoppingCart },
 ];
 

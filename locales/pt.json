@@ -20,7 +20,8 @@
     "expandSidebar": "Expandir barra lateral",
     "collapseSidebar": "Recolher barra lateral",
     "openMenu": "Abrir menu",
-    "closeMenu": "Fechar menu"
+    "closeMenu": "Fechar menu",
+    "troubleshooting": "Resolucao de problemas"
   },
   "brand": {
     "name": "FRESH MAYHEM",
@@ -313,11 +314,109 @@
       "s14": "Recalibre o ecrã tátil se necessário: Utilities > Touch Calibrate."
     },
     "troubleshootingItems": {
-      "noFile": { "problem": "O Flash Utility não vê o ficheiro", "fix": "Certifique-se de que o ficheiro está em FIRMWARE/ (não dentro de uma subpasta) e que o nome do ficheiro termina em .ppfw.tar" },
-      "noBoot": { "problem": "O dispositivo não arranca após o flash", "fix": "Mantenha o botão DFU premido + pressione RESET para entrar no modo de recuperação DFU. O bootloader está em ROM e não pode ser danificado. Faça reflash via dfu-util + hackrf_spiflash a partir de um computador." },
-      "missingApps": { "problem": "Aplicações em falta após a atualização", "fix": "O conteúdo do cartão SD não foi atualizado. Re-extraia o zip COPY_TO_SDCARD para a raiz do cartão SD com substituição ativada." },
-      "noSd": { "problem": "Cartão SD não detetado", "fix": "Reformate como FAT32 (não exFAT). Cartões acima de 32 GB podem necessitar de uma ferramenta de terceiros para formatação FAT32." },
-      "binFile": { "problem": "Vejo um ficheiro .bin no cartão SD, devo usá-lo?", "fix": "Não. O ficheiro .bin destina-se apenas a flash pelo PC via hackrf_spiflash por USB. O Flash Utility integrado só aceita ficheiros .ppfw.tar. O .bin pode aparecer a vermelho ou não selecionável no explorador de ficheiros. Não pode danificar o dispositivo. Ignore-o." }
+      "noFile": {
+        "problem": "O Flash Utility não vê o ficheiro",
+        "fix": "Certifique-se de que o ficheiro está em FIRMWARE/ (não dentro de uma subpasta) e que o nome do ficheiro termina em .ppfw.tar"
+      },
+      "noBoot": {
+        "problem": "O dispositivo não arranca após o flash",
+        "fix": "Mantenha o botão DFU premido + pressione RESET para entrar no modo de recuperação DFU. O bootloader está em ROM e não pode ser danificado. Faça reflash via dfu-util + hackrf_spiflash a partir de um computador."
+      },
+      "missingApps": {
+        "problem": "Aplicações em falta após a atualização",
+        "fix": "O conteúdo do cartão SD não foi atualizado. Re-extraia o zip COPY_TO_SDCARD para a raiz do cartão SD com substituição ativada."
+      },
+      "noSd": {
+        "problem": "Cartão SD não detetado",
+        "fix": "Reformate como FAT32 (não exFAT). Cartões acima de 32 GB podem necessitar de uma ferramenta de terceiros para formatação FAT32."
+      },
+      "binFile": {
+        "problem": "Vejo um ficheiro .bin no cartão SD, devo usá-lo?",
+        "fix": "Não. O ficheiro .bin destina-se apenas a flash pelo PC via hackrf_spiflash por USB. O Flash Utility integrado só aceita ficheiros .ppfw.tar. O .bin pode aparecer a vermelho ou não selecionável no explorador de ficheiros. Não pode danificar o dispositivo. Ignore-o."
+      }
+    }
+  },
+  "commonIssues": {
+    "title": "Resolucao de problemas",
+    "subtitle": "Problemas frequentes e como resolve-los. Os cartoes SD sao a fonte mais comum de problemas com dispositivos PortaPack.",
+    "footer": "Se nenhuma destas solucoes funcionar, consulte as GitHub Discussions do firmware Mayhem ou o subreddit r/hackrf.",
+    "categories": {
+      "sdCard": {
+        "title": "Problemas com cartao SD",
+        "items": {
+          "stuckBoot": {
+            "problem": "Dispositivo fica preso no ecra de arranque apos inserir o cartao SD",
+            "fix": "O cartao SD provavelmente tem dados corrompidos que fazem o firmware bloquear durante o arranque. Remova o cartao SD, reinicie o dispositivo e confirme que arranca no menu sem o cartao. Depois formate o cartao SD como FAT32 no computador, copie novamente o conteudo COPY_TO_SDCARD e reinsira. Se o cartao estava sujo, limpe os contactos dourados com um pano de microfibra seco antes de reinserir."
+          },
+          "noMedia": {
+            "problem": "O cartao SD mostra 'No SD card' ou nao e detetado",
+            "fix": "Empurre o cartao firmemente ate ouvir ou sentir um clique do mecanismo de mola. Os contactos dourados devem ficar virados para o PCB. Se ainda nao for detetado, remova o cartao, limpe os contactos dourados com um pano seco e reinsira. Verifique primeiro se o cartao funciona no computador."
+          },
+          "temperamental": {
+            "problem": "O cartao SD funciona as vezes mas nem sempre",
+            "fix": "Os cartoes MicroSD podem ser caprichosos com a ranhura do PortaPack. O mecanismo de mola nem sempre faz contacto perfeito. Remova o cartao, limpe os contactos dourados com um pano de microfibra seco e reinsira firmemente. Se os problemas persistirem, tente outra marca de cartao. Os cartoes SanDisk e Samsung EVO sao amplamente reportados como fiaveis."
+          },
+          "corrupted": {
+            "problem": "O conteudo do cartao SD parece corrompido ou faltam ficheiros",
+            "fix": "Desligue o dispositivo antes de remover o cartao SD. Remover o cartao enquanto o dispositivo esta a escrever pode corromper o sistema de ficheiros. Reformate o cartao como FAT32 no computador e extraia novamente o zip COPY_TO_SDCARD para o cartao. Se a corrupcao continuar, o cartao pode estar defeituoso."
+          },
+          "overSize": {
+            "problem": "O cartao SD acima de 32 GB nao funciona",
+            "fix": "Cartoes maiores que 32 GB vem formatados como exFAT, que o firmware do PortaPack nao suporta. Precisa reformatar como FAT32 usando uma ferramenta de terceiros: guiformat (Windows), gparted ou mkfs.vfat (Linux), ou Utilitario de Disco com MS-DOS FAT selecionado (macOS). Recomendam-se cartoes de 32 GB ou menos."
+          }
+        }
+      },
+      "boot": {
+        "title": "Problemas de arranque e inicio",
+        "items": {
+          "splashHang": {
+            "problem": "Dispositivo bloqueia no ecra inicial ou logo do Mayhem",
+            "fix": "Primeiro, tente arrancar sem o cartao SD. Se arrancar normalmente, o conteudo do cartao SD e o problema. Reformate e reflash o cartao SD. Se bloquear mesmo sem cartao SD, mantenha o botao DFU premido e prima RESET para entrar no modo de recuperacao DFU, depois reflash o firmware a partir de um computador."
+          },
+          "bootLoop": {
+            "problem": "Dispositivo reinicia constantemente num ciclo",
+            "fix": "Um ciclo de arranque normalmente significa que o flash do firmware foi interrompido ou incompleto. Entre no modo de recuperacao DFU (mantenha DFU + prima RESET) e reflash a partir de um computador. O bootloader esta em ROM e nao pode ser danificado, portanto a recuperacao e sempre possivel."
+          },
+          "blackScreen": {
+            "problem": "O ecra permanece preto apos ligar",
+            "fix": "Confirme que o interruptor de alimentacao esta completamente na posicao ON (deslizado para CIMA). Se os LEDs do HackRF acendem mas o ecra permanece escuro, a ligacao da placa PortaPack pode precisar de ser recolocada. Desligue, depois pressione suavemente a placa PortaPack para garantir que esta firmemente assente nos pinos do conector do HackRF."
+          }
+        }
+      },
+      "connection": {
+        "title": "Problemas de USB e ligacao",
+        "items": {
+          "notRecognized": {
+            "problem": "O computador nao deteta o HackRF por USB",
+            "fix": "Tente um cabo USB diferente e uma porta USB diferente. Muitos cabos sao apenas para carregamento e nao transportam dados. Use um cabo de dados conhecido como funcional. No Linux, execute lsusb para verificar se o dispositivo aparece (procure 1d50:6089). No Windows, verifique o Gestor de Dispositivos."
+          },
+          "chargeOnly": {
+            "problem": "O dispositivo liga via USB mas sem ligacao de dados",
+            "fix": "Esta a usar um cabo apenas de carregamento. Cabos USB que vem com carregadores de telefone muitas vezes nao tem fios de dados. Use um cabo que tenha usado anteriormente para transferencia de ficheiros."
+          },
+          "sdOverUsb": {
+            "problem": "O modo SD over USB nao mostra o cartao SD no computador",
+            "fix": "Primeiro navegue ate Utilities > SD over USB no PortaPack. O dispositivo deve estar neste modo para que o cartao SD apareca como dispositivo de armazenamento em massa no computador. Se o cartao SD ainda nao aparecer, verifique o cabo USB (deve ser capaz de transferir dados) e tente outra porta USB."
+          }
+        }
+      },
+      "reception": {
+        "title": "Problemas de rececao e sinal",
+        "items": {
+          "noSignal": {
+            "problem": "Nenhum sinal visivel em nenhuma app de rececao",
+            "fix": "Certifique-se de que uma antena esta ligada a porta SMA correta (ANT no HackRF One). Verifique se a frequencia esta corretamente definida. Tente um sinal forte conhecido como uma estacao de radio FM local (88-108 MHz) para verificar que o radio funciona."
+          },
+          "weakSignal": {
+            "problem": "Sinais muito fracos ou ruidosos",
+            "fix": "Ajuste as definicoes de LNA e VGA. Comece com LNA por volta de 32 dB e VGA por volta de 24 dB, depois ajuste. A opcao AMP adiciona 14 dB de ganho mas pode sobrecarregar sinais fortes proximos. Certifique-se de que a sua antena e apropriada para a gama de frequencias alvo."
+          },
+          "noAudio": {
+            "problem": "A receber sinal mas sem saida de audio",
+            "fix": "Verifique se a saida de audio esta corretamente configurada na app. Algumas apps emitem pelo altifalante, outras pelo jack de auscultadores de 3,5 mm. Verifique se o volume esta aumentado nas definicoes da app."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {

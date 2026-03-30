@@ -20,7 +20,8 @@
     "expandSidebar": "Développer la barre latérale",
     "collapseSidebar": "Réduire la barre latérale",
     "openMenu": "Ouvrir le menu",
-    "closeMenu": "Fermer le menu"
+    "closeMenu": "Fermer le menu",
+    "troubleshooting": "Depannage"
   },
   "brand": {
     "name": "FRESH MAYHEM",
@@ -313,11 +314,109 @@
       "s14": "Recalibrez l'écran tactile si nécessaire : Utilities > Touch Calibrate."
     },
     "troubleshootingItems": {
-      "noFile": { "problem": "Le Flash Utility ne voit pas le fichier", "fix": "Assurez-vous que le fichier est dans FIRMWARE/ (pas imbriqué dans un sous-dossier) et que le nom du fichier se termine par .ppfw.tar" },
-      "noBoot": { "problem": "L'appareil ne démarre pas après le flash", "fix": "Maintenez le bouton DFU enfoncé + appuyez sur RESET pour entrer en mode de récupération DFU. Le bootloader est en ROM et ne peut pas être briqué. Reflachez via dfu-util + hackrf_spiflash depuis un ordinateur." },
-      "missingApps": { "problem": "Applications manquantes après la mise à jour", "fix": "Le contenu de la carte SD n'a pas été mis à jour. Ré-extrayez le zip COPY_TO_SDCARD à la racine de la carte SD avec l'écrasement activé." },
-      "noSd": { "problem": "Carte SD non détectée", "fix": "Reformatez en FAT32 (pas exFAT). Les cartes de plus de 32 Go peuvent nécessiter un outil tiers pour le formatage FAT32." },
-      "binFile": { "problem": "Je vois un fichier .bin sur la carte SD, dois-je l'utiliser ?", "fix": "Non. Le fichier .bin est uniquement pour le flash côté PC via hackrf_spiflash par USB. Le Flash Utility intégré n'accepte que les fichiers .ppfw.tar. Le .bin peut apparaître en rouge ou non sélectionnable dans l'explorateur de fichiers. Il ne peut pas endommager l'appareil. Ignorez-le." }
+      "noFile": {
+        "problem": "Le Flash Utility ne voit pas le fichier",
+        "fix": "Assurez-vous que le fichier est dans FIRMWARE/ (pas imbriqué dans un sous-dossier) et que le nom du fichier se termine par .ppfw.tar"
+      },
+      "noBoot": {
+        "problem": "L'appareil ne démarre pas après le flash",
+        "fix": "Maintenez le bouton DFU enfoncé + appuyez sur RESET pour entrer en mode de récupération DFU. Le bootloader est en ROM et ne peut pas être briqué. Reflachez via dfu-util + hackrf_spiflash depuis un ordinateur."
+      },
+      "missingApps": {
+        "problem": "Applications manquantes après la mise à jour",
+        "fix": "Le contenu de la carte SD n'a pas été mis à jour. Ré-extrayez le zip COPY_TO_SDCARD à la racine de la carte SD avec l'écrasement activé."
+      },
+      "noSd": {
+        "problem": "Carte SD non détectée",
+        "fix": "Reformatez en FAT32 (pas exFAT). Les cartes de plus de 32 Go peuvent nécessiter un outil tiers pour le formatage FAT32."
+      },
+      "binFile": {
+        "problem": "Je vois un fichier .bin sur la carte SD, dois-je l'utiliser ?",
+        "fix": "Non. Le fichier .bin est uniquement pour le flash côté PC via hackrf_spiflash par USB. Le Flash Utility intégré n'accepte que les fichiers .ppfw.tar. Le .bin peut apparaître en rouge ou non sélectionnable dans l'explorateur de fichiers. Il ne peut pas endommager l'appareil. Ignorez-le."
+      }
+    }
+  },
+  "commonIssues": {
+    "title": "Depannage",
+    "subtitle": "Problemes frequemment rencontres et comment les resoudre. Les cartes SD sont la source la plus courante de problemes avec les appareils PortaPack.",
+    "footer": "Si aucune de ces solutions ne fonctionne, consultez les GitHub Discussions du firmware Mayhem ou le subreddit r/hackrf.",
+    "categories": {
+      "sdCard": {
+        "title": "Problemes de carte SD",
+        "items": {
+          "stuckBoot": {
+            "problem": "L'appareil reste bloque sur l'ecran de demarrage apres insertion de la carte SD",
+            "fix": "La carte SD contient probablement des donnees corrompues qui font planter le firmware au demarrage. Retirez la carte SD, redemarrez l'appareil et confirmez qu'il demarre dans le menu sans la carte. Formatez ensuite la carte SD en FAT32 sur votre ordinateur, recopiez le contenu COPY_TO_SDCARD et reinserer. Si la carte etait sale, essuyez les contacts dores avec un chiffon microfibre sec avant de la reinserer."
+          },
+          "noMedia": {
+            "problem": "La carte SD affiche 'No SD card' ou n'est pas detectee",
+            "fix": "Poussez fermement la carte jusqu'a entendre ou sentir un clic du mecanisme a ressort. Les contacts dores doivent faire face au PCB. Si elle n'est toujours pas detectee, retirez la carte, nettoyez les contacts dores avec un chiffon sec et reinserez. Verifiez d'abord que la carte fonctionne sur votre ordinateur."
+          },
+          "temperamental": {
+            "problem": "La carte SD fonctionne parfois mais pas toujours",
+            "fix": "Les cartes MicroSD peuvent etre capricieuses avec le slot du PortaPack. Le mecanisme a ressort ne fait pas toujours un contact parfait. Retirez la carte, essuyez les contacts dores avec un chiffon microfibre sec et reinserez fermement. Si les problemes persistent, essayez une autre marque de carte. Les cartes SanDisk et Samsung EVO sont largement considerees comme fiables."
+          },
+          "corrupted": {
+            "problem": "Le contenu de la carte SD semble corrompu ou des fichiers manquent",
+            "fix": "Eteignez l'appareil avant de retirer la carte SD. Retirer la carte pendant que l'appareil ecrit peut corrompre le systeme de fichiers. Reformatez la carte en FAT32 sur votre ordinateur et re-extrayez le zip COPY_TO_SDCARD sur la carte. Si la corruption persiste, la carte peut etre defectueuse."
+          },
+          "overSize": {
+            "problem": "La carte SD de plus de 32 Go ne fonctionne pas",
+            "fix": "Les cartes de plus de 32 Go sont livrees formatees en exFAT, que le firmware du PortaPack ne prend pas en charge. Vous devez reformater en FAT32 avec un outil tiers : guiformat (Windows), gparted ou mkfs.vfat (Linux), ou Utilitaire de disque avec MS-DOS FAT selectionne (macOS). Les cartes de 32 Go ou moins sont recommandees."
+          }
+        }
+      },
+      "boot": {
+        "title": "Problemes de demarrage",
+        "items": {
+          "splashHang": {
+            "problem": "L'appareil se fige sur l'ecran de demarrage ou le logo Mayhem",
+            "fix": "Essayez d'abord de demarrer sans la carte SD. S'il demarre normalement, le contenu de la carte SD est le probleme. Reformatez et reflashez la carte SD. S'il se fige meme sans carte SD, maintenez le bouton DFU et appuyez sur RESET pour entrer en mode de recuperation DFU, puis reflashez le firmware depuis un ordinateur."
+          },
+          "bootLoop": {
+            "problem": "L'appareil redmarre en boucle continuellement",
+            "fix": "Une boucle de demarrage signifie generalement que le flash du firmware a ete interrompu ou incomplet. Entrez en mode de recuperation DFU (maintenez DFU + appuyez sur RESET) et reflashez depuis un ordinateur. Le bootloader est en ROM et ne peut pas etre endommage, la recuperation est donc toujours possible."
+          },
+          "blackScreen": {
+            "problem": "L'ecran reste noir apres l'allumage",
+            "fix": "Confirmez que l'interrupteur d'alimentation est completement en position ON (glisse vers le HAUT). Si les LEDs du HackRF s'allument mais l'ecran reste sombre, la connexion de la carte PortaPack peut necessiter un repositionnement. Eteignez, puis appuyez doucement sur la carte PortaPack pour vous assurer qu'elle est bien enfoncee sur les broches du connecteur HackRF."
+          }
+        }
+      },
+      "connection": {
+        "title": "Problemes USB et de connexion",
+        "items": {
+          "notRecognized": {
+            "problem": "L'ordinateur ne detecte pas le HackRF via USB",
+            "fix": "Essayez un cable USB different et un port USB different. De nombreux cables sont uniquement pour la charge et ne transportent pas de donnees. Utilisez un cable de donnees connu comme fonctionnel. Sous Linux, executez lsusb pour verifier si l'appareil apparait (cherchez 1d50:6089). Sous Windows, verifiez le Gestionnaire de peripheriques."
+          },
+          "chargeOnly": {
+            "problem": "L'appareil s'allume via USB mais pas de connexion de donnees",
+            "fix": "Vous utilisez un cable de charge uniquement. Les cables USB fournis avec les chargeurs de telephone n'ont souvent pas les fils de donnees. Utilisez un cable que vous avez deja utilise pour le transfert de fichiers."
+          },
+          "sdOverUsb": {
+            "problem": "Le mode SD over USB n'affiche pas la carte SD sur l'ordinateur",
+            "fix": "Naviguez d'abord vers Utilities > SD over USB sur le PortaPack. L'appareil doit etre dans ce mode pour que la carte SD apparaisse comme peripherique de stockage de masse sur votre ordinateur. Si la carte SD n'apparait toujours pas, verifiez votre cable USB (doit etre capable de transfert de donnees) et essayez un autre port USB."
+          }
+        }
+      },
+      "reception": {
+        "title": "Problemes de reception et de signal",
+        "items": {
+          "noSignal": {
+            "problem": "Aucun signal visible dans aucune application de reception",
+            "fix": "Assurez-vous qu'une antenne est connectee au bon port SMA (ANT sur le HackRF One). Verifiez que la frequence est correctement reglee. Essayez un signal fort connu comme une station de radio FM locale (88-108 MHz) pour verifier que la radio fonctionne."
+          },
+          "weakSignal": {
+            "problem": "Les signaux sont tres faibles ou bruyants",
+            "fix": "Ajustez les parametres LNA et VGA. Commencez avec le LNA a environ 32 dB et le VGA a environ 24 dB, puis ajustez. L'option AMP ajoute 14 dB de gain mais peut saturer les signaux forts proches. Assurez-vous que votre antenne est appropriee pour la plage de frequences visee."
+          },
+          "noAudio": {
+            "problem": "Je recois un signal mais pas de sortie audio",
+            "fix": "Verifiez que la sortie audio est correctement configuree dans l'application. Certaines applications sortent sur le haut-parleur, d'autres sur la prise casque 3,5 mm. Verifiez que le volume est monte dans les parametres de l'application."
+          }
+        }
+      }
     }
   },
   "whereToBuy": {
