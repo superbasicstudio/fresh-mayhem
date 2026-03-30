@@ -237,13 +237,21 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
 
           {/* ── SMA CONNECTORS (drawn first = behind device body) ── */}
           {/* SMA — top-left */}
-          <g {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80') }}>
+          <g {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80'), cursor: 'pointer' }}>
+            {/* Brass barrel */}
             <rect x={bx + 15} y={by - 12} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#4ade80', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
+            {/* Red protective cap — slides up on hover */}
+            <rect x={bx + 14} y={by - 13} width="12" height="10" rx="2.5" fill="#dc2626" stroke="#b91c1c" strokeWidth="0.5"
+              style={{ transform: `translateY(${active === 'sma' ? '-6px' : '0px'})`, transition: 'transform 0.3s ease', opacity: active === 'sma' ? 0.6 : 1 }} />
           </g>
           {/* SMA — 2 on bottom-left */}
           {[bx + 30, bx + 58].map((cx, i) => (
-            <g key={`sma-bot-${i}`} {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80') }}>
+            <g key={`sma-bot-${i}`} {...hw('sma')} style={{ ...hw('sma').style, filter: glow('sma', '#4ade80'), cursor: 'pointer' }}>
+              {/* Brass barrel */}
               <rect x={cx - 5} y={by + bh - 2} width="10" height="14" rx="2" fill="#b8860b" stroke={st('sma', '#4ade80', '#cd9b1d')} strokeWidth={active === 'sma' ? 1.5 : 0.8} />
+              {/* Red protective cap — slides down on hover */}
+              <rect x={cx - 6} y={by + bh + 1} width="12" height="10" rx="2.5" fill="#dc2626" stroke="#b91c1c" strokeWidth="0.5"
+                style={{ transform: `translateY(${active === 'sma' ? '6px' : '0px'})`, transition: 'transform 0.3s ease', opacity: active === 'sma' ? 0.6 : 1 }} />
             </g>
           ))}
 
