@@ -320,7 +320,10 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
       const isHovered = hovIcon === icon.id;
       const bitmapKey = TITLE_ICON_MAP[icon.id];
       const pathData = bitmapKey ? ICON_PATHS[bitmapKey] : null;
-      const iconScale = ih / 16; // scale 16px bitmap to fit title bar height
+      const iconScale = ih / 16;
+      const cx = ix + iw / 2;
+      const cy = iy + ih / 2;
+      const hoverScale = 2.2;
 
       return (
         <g key={icon.id}
@@ -333,22 +336,39 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
           }}
           style={{ cursor: icon.type === 'toggle' || icon.type === 'button' ? 'pointer' : 'default' }}
         >
-          <rect x={ix} y={iy} width={iw} height={ih} fill="transparent" />
+          {/* Enlarged icon when hovered (rendered behind normal to catch mouse) */}
+          <rect x={ix - 4} y={iy - 4} width={iw + 8} height={ih + 8} fill="transparent" />
+          {isHovered && (
+            <g>
+              {/* Enlarged glow background */}
+              <circle cx={cx} cy={cy} r={iw * 0.9} fill={theme.bgDarkest} fillOpacity="0.85"
+                stroke={fill} strokeWidth="0.4" strokeOpacity="0.5" />
+              {/* Enlarged icon */}
+              {pathData ? (
+                <path d={pathData} fill={fill}
+                  transform={`translate(${cx},${cy}) scale(${iconScale * hoverScale}) translate(-8,-8)`}
+                  shapeRendering="crispEdges" />
+              ) : icon.id === 'batteryPct' ? (
+                <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
+                  fill={theme.fgMedium} fontSize="7" fontFamily="monospace" fontWeight="bold">87%</text>
+              ) : icon.id === 'clock' ? (
+                <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
+                  fill={fill} fontSize="7" fontFamily="monospace" fontWeight="bold">{iconStates.clock ? 'EX' : 'IN'}</text>
+              ) : null}
+            </g>
+          )}
+          {/* Normal size icon */}
           {icon.id === 'batteryPct' ? (
-            <text x={ix + iw / 2} y={iy + ih / 2 + 1} textAnchor="middle" dominantBaseline="middle"
+            <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
               fill={theme.fgMedium} fontSize="3.5" fontFamily="monospace">87%</text>
           ) : icon.id === 'clock' ? (
-            // Clock is 8x16 - use text fallback
-            <text x={ix + iw / 2} y={iy + ih / 2 + 1} textAnchor="middle" dominantBaseline="middle"
+            <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
               fill={fill} fontSize="4" fontFamily="monospace">{iconStates.clock ? 'EX' : 'IN'}</text>
           ) : pathData ? (
             <path d={pathData} fill={fill}
               transform={`translate(${ix},${iy}) scale(${iconScale})`}
               shapeRendering="crispEdges" />
           ) : null}
-          {isHovered && (
-            <rect x={ix} y={iy} width={iw} height={ih} fill="#fff" opacity="0.15" rx="0.5" />
-          )}
         </g>
       );
     });
