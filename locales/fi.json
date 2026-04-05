@@ -575,6 +575,15 @@
     "stickyFooter": "<1>Super Basic Studion</1> avoimen lähdekoodin projekti",
     "lastUpdated": "Sivusto päivitetty viimeksi:"
   },
+  "liveVisitors": {
+    "label_one": "{{count}} käyttäjä aktiivinen nyt",
+    "label_other": "{{count}} käyttäjää aktiivisena nyt",
+    "tooltipTitle": "Reaaliaikainen toiminta",
+    "tooltipDesc_one": "{{count}} henkilö selaa Fresh Mayhemia juuri nyt.",
+    "tooltipDesc_other": "{{count}} henkilöä selaa Fresh Mayhemia juuri nyt.",
+    "countriesLabel_one": "Vierailijoita {{count}} maasta:",
+    "countriesLabel_other": "Vierailijoita {{count}} maasta:"
+  },
   "common": {
     "learnMore": "Lue lisää",
     "less": "Vähemmän",

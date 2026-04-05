@@ -575,6 +575,15 @@
     "stickyFooter": "<1>Super Basic Studio</1> のオープンソースプロジェクト",
     "lastUpdated": "サイト最終更新:"
   },
+  "liveVisitors": {
+    "label_one": "{{count}}人がアクティブ",
+    "label_other": "{{count}}人がアクティブ",
+    "tooltipTitle": "リアルタイム",
+    "tooltipDesc_one": "{{count}}人がFresh Mayhemを閲覧中です。",
+    "tooltipDesc_other": "{{count}}人がFresh Mayhemを閲覧中です。",
+    "countriesLabel_one": "{{count}}か国からアクセス中:",
+    "countriesLabel_other": "{{count}}か国からアクセス中:"
+  },
   "common": {
     "learnMore": "詳しく見る",
     "less": "閉じる",

@@ -575,6 +575,15 @@
     "stickyFooter": "Un proyecto de código abierto de <1>Super Basic Studio</1>",
     "lastUpdated": "Última actualización del sitio:"
   },
+  "liveVisitors": {
+    "label_one": "{{count}} usuario activo ahora",
+    "label_other": "{{count}} usuarios activos ahora",
+    "tooltipTitle": "Actividad en vivo",
+    "tooltipDesc_one": "{{count}} persona está navegando Fresh Mayhem ahora mismo.",
+    "tooltipDesc_other": "{{count}} personas están navegando Fresh Mayhem ahora mismo.",
+    "countriesLabel_one": "Visitando desde {{count}} país:",
+    "countriesLabel_other": "Visitando desde {{count}} países:"
+  },
   "common": {
     "learnMore": "Más información",
     "less": "Menos",

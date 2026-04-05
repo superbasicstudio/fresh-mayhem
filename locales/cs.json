@@ -575,6 +575,15 @@
     "stickyFooter": "Open-source projekt <1>Super Basic Studio</1>",
     "lastUpdated": "Poslední aktualizace webu:"
   },
+  "liveVisitors": {
+    "label_one": "{{count}} uživatel aktivní",
+    "label_other": "{{count}} uživatelů aktivních",
+    "tooltipTitle": "Živá aktivita",
+    "tooltipDesc_one": "{{count}} osoba si právě prohlíží Fresh Mayhem.",
+    "tooltipDesc_other": "{{count}} osob si právě prohlíží Fresh Mayhem.",
+    "countriesLabel_one": "Návštěvy z {{count}} země:",
+    "countriesLabel_other": "Návštěvy z {{count}} zemí:"
+  },
   "common": {
     "learnMore": "Více informací",
     "less": "Méně",

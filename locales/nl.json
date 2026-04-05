@@ -575,6 +575,15 @@
     "stickyFooter": "Een <1>Super Basic Studio</1> open-source project",
     "lastUpdated": "Site Laatst Bijgewerkt:"
   },
+  "liveVisitors": {
+    "label_one": "{{count}} gebruiker nu actief",
+    "label_other": "{{count}} gebruikers nu actief",
+    "tooltipTitle": "Live activiteit",
+    "tooltipDesc_one": "{{count}} persoon bekijkt Fresh Mayhem op dit moment.",
+    "tooltipDesc_other": "{{count}} personen bekijken Fresh Mayhem op dit moment.",
+    "countriesLabel_one": "Op bezoek vanuit {{count}} land:",
+    "countriesLabel_other": "Op bezoek vanuit {{count}} landen:"
+  },
   "common": {
     "learnMore": "Meer info",
     "less": "Minder",
