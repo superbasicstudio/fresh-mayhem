@@ -163,7 +163,10 @@
     "emergencyStep1": "Tryk Start/Stop i TX-appen",
     "emergencyStep2": "Tryk på tilbagepil for at forlade TX-appen",
     "emergencyStep3": "Tryk på RESET-knappen (panik)",
-    "emergencyStep4": "Strømafbryder til OFF (sidste udvej)"
+    "emergencyStep4": "Strømafbryder til OFF (sidste udvej)",
+    "simMove": "Flyt",
+    "simOpen": "Abn",
+    "simBack": "Tilbage"
   },
   "receive": {
     "title": "Modtage (RX) apps",
@@ -559,7 +562,8 @@
     "all": "Alle",
     "apps": "apps",
     "vendors": "forhandlere",
-    "language": "Sprog"
+    "language": "Sprog",
+    "openInteractiveView": "Abn Interaktiv Visning"
   },
   "data": {
     "txApps": {

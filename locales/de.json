@@ -163,7 +163,10 @@
     "emergencyStep1": "Start/Stopp in der TX-App drücken",
     "emergencyStep2": "Zurück-Pfeil antippen, um die TX-App zu verlassen",
     "emergencyStep3": "RESET-Taste drücken (Notfall)",
-    "emergencyStep4": "Netzschalter AUS (letzte Rettung)"
+    "emergencyStep4": "Netzschalter AUS (letzte Rettung)",
+    "simMove": "Bewegen",
+    "simOpen": "Offnen",
+    "simBack": "Zuruck"
   },
   "receive": {
     "title": "Empfangs (RX) Apps",
@@ -559,7 +562,8 @@
     "all": "Alle",
     "apps": "Apps",
     "vendors": "Händler",
-    "language": "Sprache"
+    "language": "Sprache",
+    "openInteractiveView": "Interaktive Ansicht"
   },
   "data": {
     "txApps": {

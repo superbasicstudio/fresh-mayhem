@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import ContextPanel from './ContextPanel';
 import { MENUS, TITLE_BAR_ICONS, FW_COLORS, LAYOUT, THEMES, THEME_ORDER } from '../../data/mayhemMenus';
 import ICON_PATHS from '../../data/mayhemIcons';
@@ -26,6 +27,7 @@ function truncLabel(label, maxChars) {
 }
 
 export default function PortaPackMockup({ expanded = false, initialMenu = 'main' }) {
+  const { t } = useTranslation();
   const [stack, setStack] = useState(initialMenu === 'main' ? ['main'] : ['main', initialMenu]);
   const [cursor, setCursor] = useState(0);
   const [info, setInfo] = useState(null);
@@ -756,35 +758,42 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
               stroke={st('audio', '#4ade80', '#777')} strokeWidth="0.8" />
           </g>
 
+          {/* Title bar icon tooltip overlay (inside SVG, near left bezel) */}
+          {hoveredIcon && powerOn && !powerTransition && (
+            <g>
+              <rect x={sx - 2} y={sy + tbH + 4} width={sw + 4} height={sh * 0.28}
+                rx="3" fill="#000" fillOpacity="0.95" stroke={theme.fgLight} strokeWidth="0.4" />
+              <text x={sx + 4} y={sy + tbH + 14} fill={theme.statusActive} fontSize="5.5"
+                fontFamily="monospace" fontWeight="bold">{hoveredIcon.label}</text>
+              {hoveredIcon.type === 'toggle' && (
+                <text x={sx + sw - 4} y={sy + tbH + 14} fill={theme.fgLight} fontSize="4"
+                  fontFamily="monospace" textAnchor="end" opacity="0.6">[toggle]</text>
+              )}
+              {/* Wrap description manually into lines */}
+              {wrapText(hoveredIcon.desc, 34).slice(0, 4).map((line, i) => (
+                <text key={i} x={sx + 4} y={sy + tbH + 24 + i * 8} fill={theme.fgLight} fontSize="4"
+                  fontFamily="monospace" opacity="0.7">{line}</text>
+              ))}
+            </g>
+          )}
+
         </svg>
 
-        {/* Fixed-height area below device for tooltip / keyboard hints (prevents layout shift) */}
-        <div className={expanded ? 'h-16' : 'h-0'}>
-          {hoveredIcon && powerOn && !powerTransition ? (
-            <div className="mt-1 bg-base-300/90 rounded-lg px-3 py-2 max-w-[280px] border border-base-content/10">
-              <div className="flex items-center gap-2 mb-1">
-                <span className="text-xs font-bold text-primary">{hoveredIcon.label}</span>
-                {hoveredIcon.type === 'toggle' && (
-                  <span className="badge badge-xs badge-outline">Toggle</span>
-                )}
-              </div>
-              <p className="text-[10px] text-base-content/60 leading-relaxed line-clamp-2">{hoveredIcon.desc}</p>
+        {/* Keyboard hints (static, no layout shift) */}
+        {expanded && (
+          <div className="mt-2 h-6">
+            <div className="flex items-center gap-2 flex-wrap">
+              <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">WASD</kbd>
+              <span className="text-[10px] text-base-content/30">or</span>
+              <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">{'\u2191\u2193\u2190\u2192'}</kbd>
+              <span className="text-[10px] text-base-content/30">{t('controls.simMove', 'Move')}</span>
+              <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">Enter</kbd>
+              <span className="text-[10px] text-base-content/30">{t('controls.simOpen', 'Open')}</span>
+              <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">Esc</kbd>
+              <span className="text-[10px] text-base-content/30">{t('controls.simBack', 'Back')}</span>
             </div>
-          ) : expanded ? (
-            <div className="mt-3">
-              <div className="flex items-center gap-2 flex-wrap">
-                <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">WASD</kbd>
-                <span className="text-[10px] text-base-content/30">or</span>
-                <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">{'\u2191\u2193\u2190\u2192'}</kbd>
-                <span className="text-[10px] text-base-content/30">Move</span>
-                <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">Enter</kbd>
-                <span className="text-[10px] text-base-content/30">Open</span>
-                <kbd className="kbd kbd-xs bg-base-300 border-base-content/10">Esc</kbd>
-                <span className="text-[10px] text-base-content/30">Back</span>
-              </div>
-            </div>
-          ) : null}
-        </div>
+          </div>
+        )}
       </div>
 
       {/* Right panel */}

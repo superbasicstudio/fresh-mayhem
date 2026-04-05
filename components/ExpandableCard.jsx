@@ -1,9 +1,11 @@
 import { useState, useId, useEffect, useCallback, useRef } from 'react';
 import { createPortal } from 'react-dom';
+import { useTranslation } from 'react-i18next';
 import { ArrowsPointingOutIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 
 export default function ExpandableCard({ title, children, className = '', modalMaxWidth = 'max-w-5xl', titleColor = 'text-primary' }) {
+  const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const contentId = useId();
   const headerId = useId();
@@ -104,7 +106,7 @@ export default function ExpandableCard({ title, children, className = '', modalM
             className="w-full btn btn-sm btn-outline btn-primary gap-2 font-mono text-xs tracking-wider"
           >
             <ArrowsPointingOutIcon className="w-3.5 h-3.5" />
-            Open Interactive View
+            {t('common.openInteractiveView', 'Open Interactive View')}
           </button>
         </div>
       </div>

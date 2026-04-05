@@ -163,7 +163,10 @@
     "emergencyStep1": "TX アプリでスタート/ストップを押す",
     "emergencyStep2": "戻る矢印をタップして TX アプリを終了",
     "emergencyStep3": "RESET ボタンを押す（パニック時）",
-    "emergencyStep4": "電源スイッチ OFF（最終手段）"
+    "emergencyStep4": "電源スイッチ OFF（最終手段）",
+    "simMove": "移動",
+    "simOpen": "開く",
+    "simBack": "戻る"
   },
   "receive": {
     "title": "受信 (RX) アプリ",
@@ -559,7 +562,8 @@
     "all": "すべて",
     "apps": "アプリ",
     "vendors": "販売店",
-    "language": "言語"
+    "language": "言語",
+    "openInteractiveView": "インタラクティブビューを開く"
   },
   "data": {
     "txApps": {

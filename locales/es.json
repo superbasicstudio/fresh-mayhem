@@ -163,7 +163,10 @@
     "emergencyStep1": "Pulsar Inicio/Parada en la app TX",
     "emergencyStep2": "Tocar la flecha atrás para salir de la app TX",
     "emergencyStep3": "Pulsar botón RESET (pánico)",
-    "emergencyStep4": "Interruptor de encendido APAGAR (último recurso)"
+    "emergencyStep4": "Interruptor de encendido APAGAR (último recurso)",
+    "simMove": "Mover",
+    "simOpen": "Abrir",
+    "simBack": "Atras"
   },
   "receive": {
     "title": "Aplicaciones de recepcion (RX)",
@@ -559,7 +562,8 @@
     "all": "Todos",
     "apps": "apps",
     "vendors": "proveedores",
-    "language": "Idioma"
+    "language": "Idioma",
+    "openInteractiveView": "Abrir Vista Interactiva"
   },
   "data": {
     "txApps": {

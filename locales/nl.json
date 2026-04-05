@@ -163,7 +163,10 @@
     "emergencyStep1": "Druk op Start/Stop in de TX app",
     "emergencyStep2": "Tik op de terugpijl om de TX app te verlaten",
     "emergencyStep3": "Druk op de RESET knop (paniek)",
-    "emergencyStep4": "Aan/uit schakelaar UIT (noodgeval)"
+    "emergencyStep4": "Aan/uit schakelaar UIT (noodgeval)",
+    "simMove": "Bewegen",
+    "simOpen": "Openen",
+    "simBack": "Terug"
   },
   "receive": {
     "title": "Ontvangst (RX) apps",
@@ -559,7 +562,8 @@
     "all": "Alles",
     "apps": "apps",
     "vendors": "leveranciers",
-    "language": "Taal"
+    "language": "Taal",
+    "openInteractiveView": "Open Interactieve Weergave"
   },
   "data": {
     "txApps": {

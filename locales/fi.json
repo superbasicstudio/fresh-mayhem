@@ -163,7 +163,10 @@
     "emergencyStep1": "Paina Start/Stop TX-sovelluksessa",
     "emergencyStep2": "Napauta takaisin-nuolta poistuaksesi TX-sovelluksesta",
     "emergencyStep3": "Paina RESET-painiketta (paniikki)",
-    "emergencyStep4": "Virtakytkin OFF-asentoon (viimeinen keino)"
+    "emergencyStep4": "Virtakytkin OFF-asentoon (viimeinen keino)",
+    "simMove": "Siirra",
+    "simOpen": "Avaa",
+    "simBack": "Takaisin"
   },
   "receive": {
     "title": "Vastaanotto (RX) sovellukset",
@@ -559,7 +562,8 @@
     "all": "Kaikki",
     "apps": "sovellusta",
     "vendors": "jälleenmyyjää",
-    "language": "Kieli"
+    "language": "Kieli",
+    "openInteractiveView": "Avaa Interaktiivinen"
   },
   "data": {
     "txApps": {

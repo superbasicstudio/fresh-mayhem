@@ -163,7 +163,10 @@
     "emergencyStep1": "Tryck Start/Stopp i TX-appen",
     "emergencyStep2": "Tryck på bakåtpilen för att lämna TX-appen",
     "emergencyStep3": "Tryck på RESET-knappen (panik)",
-    "emergencyStep4": "Strömbrytare till OFF (sista utväg)"
+    "emergencyStep4": "Strömbrytare till OFF (sista utväg)",
+    "simMove": "Flytta",
+    "simOpen": "Oppna",
+    "simBack": "Tillbaka"
   },
   "receive": {
     "title": "Mottagnings (RX) appar",
@@ -559,7 +562,8 @@
     "all": "Alla",
     "apps": "appar",
     "vendors": "återförsäljare",
-    "language": "Språk"
+    "language": "Språk",
+    "openInteractiveView": "Oppna Interaktiv Vy"
   },
   "data": {
     "txApps": {

@@ -163,7 +163,10 @@
     "emergencyStep1": "Pressionar Iniciar/Parar na app TX",
     "emergencyStep2": "Tocar na seta de retrocesso para sair da app TX",
     "emergencyStep3": "Pressionar o botão RESET (pânico)",
-    "emergencyStep4": "Interruptor de alimentação DESLIGADO (último recurso)"
+    "emergencyStep4": "Interruptor de alimentação DESLIGADO (último recurso)",
+    "simMove": "Mover",
+    "simOpen": "Abrir",
+    "simBack": "Voltar"
   },
   "receive": {
     "title": "Aplicacoes de rececao (RX)",
@@ -559,7 +562,8 @@
     "all": "Todos",
     "apps": "aplicações",
     "vendors": "fornecedores",
-    "language": "Idioma"
+    "language": "Idioma",
+    "openInteractiveView": "Abrir Vista Interativa"
   },
   "data": {
     "txApps": {

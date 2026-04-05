@@ -163,7 +163,10 @@
     "emergencyStep1": "Stiskněte Start/Stop v TX aplikaci",
     "emergencyStep2": "Klepněte na šipku zpět pro opuštění TX aplikace",
     "emergencyStep3": "Stiskněte tlačítko RESET (panika)",
-    "emergencyStep4": "Vypínač do polohy OFF (poslední možnost)"
+    "emergencyStep4": "Vypínač do polohy OFF (poslední možnost)",
+    "simMove": "Pohyb",
+    "simOpen": "Otevrit",
+    "simBack": "Zpet"
   },
   "receive": {
     "title": "Prijimaci (RX) aplikace",
@@ -559,7 +562,8 @@
     "all": "Vše",
     "apps": "aplikací",
     "vendors": "prodejců",
-    "language": "Jazyk"
+    "language": "Jazyk",
+    "openInteractiveView": "Otevrit Interaktivni"
   },
   "data": {
     "txApps": {
