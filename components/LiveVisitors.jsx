@@ -32,11 +32,15 @@ export default function LiveVisitors() {
     async function fetchData() {
       try {
         const res = await fetch('/api/visitors');
+        console.log('[LiveVisitors] fetch status:', res.status, 'ok:', res.ok);
         if (res.ok) {
           const json = await res.json();
+          console.log('[LiveVisitors] data:', JSON.stringify(json));
           if (active) setData(json);
         }
-      } catch {}
+      } catch (err) {
+        console.error('[LiveVisitors] fetch error:', err);
+      }
     }
 
     fetchData();

@@ -30,7 +30,7 @@ async function getToken() {
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Cache-Control', 's-maxage=30, stale-while-revalidate=60');
+  res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate, s-maxage=30, stale-while-revalidate=60');
 
   if (Date.now() - cached.ts < CACHE_TTL) {
     return res.json({ count: cached.count, countries: cached.countries });
