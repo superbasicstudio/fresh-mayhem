@@ -3,6 +3,7 @@ import {
   TbPlugConnected, TbPower, TbRadio, TbAdjustments, TbShieldCheck,
   TbDownload, TbCpu, TbDeviceSdCard, TbRefresh,
 } from 'react-icons/tb';
+import { FALLBACK_VERSION } from '../data/firmware';
 
 const SECTION_ICONS = {
   'Before You Power On': TbPlugConnected,
@@ -27,7 +28,7 @@ export const quickStartSteps = [
 
   // Phase 2: First Power-On
   { text: "Slide the power switch UP  -  wait for the Mayhem main menu to appear", section: "First Power-On" },
-  { text: "Check firmware version on the status bar (current: v2.3.2)" },
+  { text: `Check firmware version on the status bar (current: v${FALLBACK_VERSION})` },
   { text: "Go to Settings → SD Card → Test to verify your SD card is detected and working" },
   { text: "Go to Settings → UI → set encoder sensitivity to your preference (low/normal/high)" },
   { text: "Go to Settings → Date/Time → set the real-time clock for accurate capture timestamps" },

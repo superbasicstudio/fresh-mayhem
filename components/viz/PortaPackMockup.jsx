@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import ContextPanel from './ContextPanel';
 import { MENUS, TITLE_BAR_ICONS, FW_COLORS, LAYOUT, THEMES, THEME_ORDER } from '../../data/mayhemMenus';
 import ICON_PATHS from '../../data/mayhemIcons';
+import { FALLBACK_VERSION } from '../../data/firmware';
 
 /* ── Text helpers ── */
 function wrapText(text, maxChars) {
@@ -569,7 +570,7 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
                   <rect x={sx} y={sy + sh - ibH} width={sw} height={ibH} fill={theme.bgDarker} />
                   <rect x={sx} y={sy + sh - 2} width={sw} height="2" fill={theme.bgDarker} rx="2" />
                   <text x={sx + 3} y={sy + sh - ibH / 2 + 1} fill={theme.fgMedium} fontSize="4.5"
-                    fontFamily="monospace" dominantBaseline="middle">v2.4.0</text>
+                    fontFamily="monospace" dominantBaseline="middle">v{FALLBACK_VERSION}</text>
                   <text x={sx + sw - 3} y={sy + sh - ibH / 2 + 1} fill={theme.fgMedium} fontSize="4.5"
                     fontFamily="monospace" textAnchor="end" dominantBaseline="middle">
                     {new Date().toLocaleDateString('en-US', { month: '2-digit', day: '2-digit' })} {new Date().toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit' })}

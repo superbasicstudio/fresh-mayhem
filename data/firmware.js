@@ -1,5 +1,5 @@
 // Central firmware version  -  auto-fetched from GitHub, cached in sessionStorage
-const FALLBACK_VERSION = '2.3.2';
+export const FALLBACK_VERSION = '2.4.0';
 const CACHE_KEY = 'fm-mayhem-latest';
 const CACHE_TTL = 1000 * 60 * 60; // 1 hour
 const REPO = 'portapack-mayhem/mayhem-firmware';

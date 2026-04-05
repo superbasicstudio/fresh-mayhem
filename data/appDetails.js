@@ -1,5 +1,6 @@
 // Rich educational details for Mayhem menu items
 // Used by ContextPanel when navigating the PortaPack simulator
+import { FALLBACK_VERSION } from './firmware';
 
 export const appDetails = {
   // ═══════════════════════════════════════════════
@@ -700,7 +701,7 @@ export const hardwareDetails = {
       'Must be FAT32  -  exFAT will NOT work',
       'Green icon in title bar confirms detection',
       'Always sync before removing (or power off first)',
-      'Current card: 32 GB with Mayhem v2.3.2 SD pack',
+      `Current card: 32 GB with Mayhem v${FALLBACK_VERSION} SD pack`,
     ],
   },
   dfu: {

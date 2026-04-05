@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { FALLBACK_VERSION } from '../data/firmware';
 
 /**
  * Hook that returns data arrays with translated fields merged in.
@@ -63,7 +64,7 @@ export function useTranslatedQuickStart(steps) {
       }` : null;
       return {
         ...step,
-        text: t(textKey, { defaultValue: step.text }),
+        text: t(textKey, { defaultValue: step.text, version: FALLBACK_VERSION }),
         section: sectionKey ? t(sectionKey, { defaultValue: step.section }) : step.section,
       };
     });
