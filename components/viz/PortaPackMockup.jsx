@@ -340,9 +340,9 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
           <rect x={ix - 4} y={iy - 4} width={iw + 8} height={ih + 8} fill="transparent" />
           {isHovered && (
             <g>
-              {/* Enlarged glow background */}
-              <circle cx={cx} cy={cy} r={iw * 0.9} fill={theme.bgDarkest} fillOpacity="0.85"
-                stroke={fill} strokeWidth="0.4" strokeOpacity="0.5" />
+              {/* Solid background so enlarged icon doesn't overlap neighbors */}
+              <rect x={cx - iw * 1.1} y={cy - ih * 1.1} width={iw * 2.2} height={ih * 2.2}
+                rx="2" fill="#000" stroke={fill} strokeWidth="0.5" strokeOpacity="0.6" />
               {/* Enlarged icon */}
               {pathData ? (
                 <path d={pathData} fill={fill}
