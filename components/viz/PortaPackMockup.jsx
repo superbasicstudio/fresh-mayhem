@@ -469,7 +469,7 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
                       fill={theme.fgLight} fontSize={fontSize} fontFamily="monospace">{line}</text>
                   ))}
                   <text x={sx + sw / 2} y={contentBot - 4} textAnchor="middle"
-                    fill={theme.bgLight} fontSize="4.5" fontFamily="monospace" opacity="0.5">press back to return</text>
+                    fill={theme.bgLight} fontSize="4.5" fontFamily="monospace" opacity="0.5">{t('controls.simPressBack', 'press back to return')}</text>
                 </g>
               ) : (
                 /* Grid menu */
@@ -620,11 +620,11 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
                 rx="3" fill="#000" fillOpacity="0.9" stroke={theme.statusActive} strokeWidth="0.5" />
               <text x={sx + sw / 2} y={sy + sh * 0.47} textAnchor="middle" dominantBaseline="middle"
                 fill={theme.statusActive} fontSize="5" fontFamily="monospace" fontWeight="bold">
-                {micMode ? 'MIC: Internal' : 'MIC: External (3.5mm)'}
+                {micMode ? t('controls.simMicInternal', 'MIC: Internal') : t('controls.simMicExternal', 'MIC: External (3.5mm)')}
               </text>
               <text x={sx + sw / 2} y={sy + sh * 0.54} textAnchor="middle" dominantBaseline="middle"
                 fill={theme.fgLight} fontSize="4" fontFamily="monospace">
-                {micMode ? 'Using built-in board microphone' : 'Using 3.5mm jack line input'}
+                {micMode ? t('controls.simMicInternalDesc', 'Using built-in board microphone') : t('controls.simMicExternalDesc', 'Using 3.5mm jack line input')}
               </text>
             </g>
           )}
@@ -784,7 +784,7 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
                 fontFamily="monospace" fontWeight="bold">{hoveredIcon.label}</text>
               {hoveredIcon.type === 'toggle' && (
                 <text x={sx + sw - 4} y={sy + tbH + 14} fill={theme.fgLight} fontSize="4"
-                  fontFamily="monospace" textAnchor="end" opacity="0.6">[toggle]</text>
+                  fontFamily="monospace" textAnchor="end" opacity="0.6">[{t('controls.simToggle', 'toggle')}]</text>
               )}
               {/* Wrap description manually into lines */}
               {wrapText(hoveredIcon.desc, 34).slice(0, 4).map((line, i) => (

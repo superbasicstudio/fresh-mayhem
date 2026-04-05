@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { noGoBands, legalBands } from '../../data/frequencyMap';
 import { lookupDetails, menuOverviews, hardwareDetails } from '../../data/appDetails';
 
@@ -167,6 +168,7 @@ function SectionLabel({ children }) {
 /* ── Item Detail Panel ────────────────────────────────────────── */
 
 function ItemPanel({ details, item }) {
+  const { t } = useTranslation();
   const d = details;
   const isExtreme = d.safety === 'extreme';
   const isDanger = d.safety === 'danger' || isExtreme;
@@ -205,7 +207,7 @@ function ItemPanel({ details, item }) {
       {/* Why dangerous (extreme TX apps) */}
       {d.whyDangerous && (
         <>
-          <SectionLabel>Why This Is Dangerous</SectionLabel>
+          <SectionLabel>{t('controls.simWhyDangerous', 'Why This Is Dangerous')}</SectionLabel>
           <ul className="space-y-1.5">
             {d.whyDangerous.map((reason, i) => (
               <li key={i} className="flex items-start gap-2 text-xs text-error/60 leading-relaxed">
@@ -227,7 +229,7 @@ function ItemPanel({ details, item }) {
       {/* Frequency section */}
       {d.frequencyDisplay && (
         <>
-          <SectionLabel>Frequency</SectionLabel>
+          <SectionLabel>{t('controls.simFrequency', 'Frequency')}</SectionLabel>
           <div className="bg-base-300/40 rounded-lg p-3">
             <div className="flex items-baseline justify-between mb-2">
               <span className="font-mono text-sm font-bold text-primary">{d.frequencyDisplay}</span>
@@ -247,7 +249,7 @@ function ItemPanel({ details, item }) {
       {/* Recommended settings */}
       {(d.gain || d.antenna) && (
         <>
-          <SectionLabel>Recommended Settings</SectionLabel>
+          <SectionLabel>{t('controls.simRecommendedSettings', 'Recommended Settings')}</SectionLabel>
           <div className="bg-base-300/40 rounded-lg p-3 space-y-2">
             {d.gain && <GainRec gain={d.gain} />}
             {d.antenna && (
@@ -263,7 +265,7 @@ function ItemPanel({ details, item }) {
       {/* Tips */}
       {d.tips && d.tips.length > 0 && (
         <>
-          <SectionLabel>Tips</SectionLabel>
+          <SectionLabel>{t('controls.simTips', 'Tips')}</SectionLabel>
           <ul className="space-y-1.5">
             {d.tips.map((tip, i) => (
               <li key={i} className="flex items-start gap-2 text-xs text-base-content/50 leading-relaxed">
@@ -278,7 +280,7 @@ function ItemPanel({ details, item }) {
       {/* Did You Know */}
       {d.didYouKnow && (
         <>
-          <SectionLabel>Did You Know?</SectionLabel>
+          <SectionLabel>{t('controls.simDidYouKnow', 'Did You Know?')}</SectionLabel>
           <div className="bg-primary/3 rounded-lg p-3 border border-primary/8">
             <p className="text-xs text-base-content/50 leading-relaxed italic">{d.didYouKnow}</p>
           </div>
@@ -308,12 +310,13 @@ function ItemPanel({ details, item }) {
 /* ── Basic Panel (no rich details, shows info text with context) ── */
 
 function BasicPanel({ item }) {
+  const { t } = useTranslation();
   return (
     <div className="space-y-4">
       <div className="mb-4">
         <h3 className="font-display text-sm sm:text-base tracking-wide text-base-content/90">{item.label}</h3>
         {item.external && (
-          <span className="text-[10px] font-mono tracking-wider text-base-content/25 mt-1 block">External App (SD Card)</span>
+          <span className="text-[10px] font-mono tracking-wider text-base-content/25 mt-1 block">{t('controls.simExternalApp', 'External App (SD Card)')}</span>
         )}
       </div>
 
@@ -333,7 +336,7 @@ function BasicPanel({ item }) {
 
       {item.sub && (
         <div className="rounded-lg p-3 bg-primary/5 border border-primary/10 mt-3">
-          <p className="text-xs font-mono text-primary/50">Press Enter to explore this category</p>
+          <p className="text-xs font-mono text-primary/50">{t('controls.simExploreCategory', 'Press Enter to explore this category')}</p>
         </div>
       )}
     </div>
@@ -343,12 +346,13 @@ function BasicPanel({ item }) {
 /* ── Related Links Component ──────────────────────────────────── */
 
 function RelatedLinks({ menuId }) {
+  const { t } = useTranslation();
   const links = RELATED_LINKS[menuId];
   if (!links || links.length === 0) return null;
 
   return (
     <>
-      <SectionLabel>Explore in Fresh Mayhem</SectionLabel>
+      <SectionLabel>{t('controls.simExploreInFM', 'Explore in Fresh Mayhem')}</SectionLabel>
       <div className="space-y-1.5">
         {links.map(link => (
           <Link key={link.to} to={link.to}
@@ -370,6 +374,7 @@ function RelatedLinks({ menuId }) {
 /* ── Menu Overview Panel ──────────────────────────────────────── */
 
 function OverviewPanel({ menuId }) {
+  const { t } = useTranslation();
   const ov = menuOverviews[menuId];
   if (!ov) return <DefaultPanel />;
 
@@ -406,7 +411,7 @@ function OverviewPanel({ menuId }) {
       {/* Stats grid (main menu) */}
       {ov.stats && (
         <>
-          <SectionLabel>At a Glance</SectionLabel>
+          <SectionLabel>{t('controls.simAtAGlance', 'At a Glance')}</SectionLabel>
           <div className="grid grid-cols-4 gap-2">
             {ov.stats.map(s => (
               <div key={s.label} className="rounded-lg p-3 text-center relative overflow-hidden"
@@ -422,7 +427,7 @@ function OverviewPanel({ menuId }) {
       {/* Spectrum coverage bar (main menu) */}
       {menuId === 'main' && (
         <>
-          <SectionLabel>Spectrum Coverage</SectionLabel>
+          <SectionLabel>{t('controls.simSpectrumCoverage', 'Spectrum Coverage')}</SectionLabel>
           <div className="bg-base-300/30 rounded-lg p-3">
             <div className="flex items-baseline justify-between mb-2">
               <span className="font-mono text-sm font-bold text-primary">1 MHz  -  6 GHz</span>
@@ -441,7 +446,7 @@ function OverviewPanel({ menuId }) {
       {/* Features list (main menu) */}
       {ov.features && (
         <>
-          <SectionLabel>Capabilities</SectionLabel>
+          <SectionLabel>{t('controls.simCapabilities', 'Capabilities')}</SectionLabel>
           <ul className="space-y-1.5">
             {ov.features.map((f, i) => (
               <li key={i} className="flex items-start gap-2 text-xs text-base-content/40 leading-relaxed">
@@ -478,7 +483,7 @@ function OverviewPanel({ menuId }) {
       {/* TX breakdown (transmit menu) */}
       {ov.breakdown && (
         <>
-          <SectionLabel>Danger Breakdown</SectionLabel>
+          <SectionLabel>{t('controls.simDangerBreakdown', 'Danger Breakdown')}</SectionLabel>
           <div className="space-y-2">
             {ov.breakdown.map(b => {
               const pct = Math.round((b.count / 22) * 100);
@@ -517,6 +522,7 @@ function OverviewPanel({ menuId }) {
 /* ── Hardware Zone Panel ──────────────────────────────────────── */
 
 function HardwarePanel({ hwId }) {
+  const { t } = useTranslation();
   const hw = hardwareDetails[hwId];
   if (!hw) return null;
 
@@ -530,7 +536,7 @@ function HardwarePanel({ hwId }) {
 
       {hw.details && (
         <>
-          <SectionLabel>Details</SectionLabel>
+          <SectionLabel>{t('controls.simDetails', 'Details')}</SectionLabel>
           <ul className="space-y-1.5">
             {hw.details.map((d, i) => (
               <li key={i} className="flex items-start gap-2 text-xs text-base-content/50 leading-relaxed">
@@ -554,10 +560,11 @@ function HardwarePanel({ hwId }) {
 /* ── Default Panel ────────────────────────────────────────────── */
 
 function DefaultPanel() {
+  const { t } = useTranslation();
   return (
     <div className="text-center py-8">
       <div className="text-base-content/10 text-4xl mb-3">📡</div>
-      <p className="text-xs text-base-content/25 font-mono">Navigate the menu to explore apps</p>
+      <p className="text-xs text-base-content/25 font-mono">{t('controls.simNavigateToExplore', 'Navigate the menu to explore apps')}</p>
     </div>
   );
 }
