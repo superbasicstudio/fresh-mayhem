@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import Sidebar from '../../components/Sidebar';
 import CommandPalette from '../../components/CommandPalette';
+import LiveVisitors from '../../components/LiveVisitors';
 
 const STORAGE_KEY = 'fm-sidebar-collapsed';
 
@@ -62,7 +63,11 @@ export default function DashboardLayout() {
       </main>
       {/* Sticky bottom bar */}
       <div className={`fixed bottom-0 right-0 z-40 bg-base-200/90 backdrop-blur-sm border-t border-base-content/5 py-1.5 text-center left-0 transition-[left] duration-300 ease-in-out ${collapsed ? 'lg:left-[68px]' : 'lg:left-64'}`}>
-        <p className="text-[10px] text-base-content/25 font-mono">A <a href="https://superbasic.studio/projects" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 transition-colors underline underline-offset-2">Super Basic Studio</a> open-source project <span className="text-base-content/15 mx-1">·</span> {t('footer.lastUpdated')} {buildDate}</p>
+        <p className="text-[10px] text-base-content/25 font-mono flex items-center justify-center gap-0 flex-wrap">
+          <span>A <a href="https://superbasic.studio/projects" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-400 transition-colors underline underline-offset-2">Super Basic Studio</a> open-source project <span className="text-base-content/15 mx-1">&middot;</span> {t('footer.lastUpdated')} {buildDate}</span>
+          <span className="text-base-content/15 mx-1.5">&middot;</span>
+          <LiveVisitors />
+        </p>
       </div>
     </div>
   );
