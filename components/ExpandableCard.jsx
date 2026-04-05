@@ -95,8 +95,17 @@ export default function ExpandableCard({ title, children, className = '', modalM
             <ArrowsPointingOutIcon className="w-4 h-4" />
           </button>
         </div>
-        <div className="px-4 pb-4">
+        <div className="px-4 pb-2">
           {typeof children === 'function' ? children({ expanded: false }) : children}
+        </div>
+        <div className="px-4 pb-4">
+          <button
+            onClick={() => setExpanded(true)}
+            className="w-full btn btn-sm btn-outline btn-primary gap-2 font-mono text-xs tracking-wider"
+          >
+            <ArrowsPointingOutIcon className="w-3.5 h-3.5" />
+            Open Interactive View
+          </button>
         </div>
       </div>
       {modal}

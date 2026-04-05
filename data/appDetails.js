@@ -559,12 +559,12 @@ export const appDetails = {
 // Menu-level overviews (shown when highlighting a submenu or viewing main menu)
 export const menuOverviews = {
   main: {
-    title: 'PortaPack Mayhem v2.3.2',
+    title: 'PortaPack Mayhem v2.4',
     subtitle: 'Portable RF Multi-Tool',
     description: 'Receive, analyze, and transmit across 1 MHz to 6 GHz  -  entirely standalone, no computer required.',
     stats: [
-      { label: 'RX Apps', value: '29', color: '#7fff00', desc: 'Passive receive' },
-      { label: 'TX Apps', value: '22', color: '#f43f5e', desc: 'Active transmit' },
+      { label: 'RX Apps', value: '33', color: '#7fff00', desc: 'Passive receive' },
+      { label: 'TX Apps', value: '34', color: '#f43f5e', desc: 'Active transmit' },
       { label: 'Tools', value: '19', color: '#fb923c', desc: 'Utilities' },
       { label: 'Games', value: '10', color: '#4ade80', desc: 'Entertainment' },
     ],
@@ -583,12 +583,12 @@ export const menuOverviews = {
     safety: 'safe',
     note: 'The only RX damage vector is an external high-power transmitter overwhelming the input. Your desk equipment poses zero risk.',
     categories: [
-      { name: 'Aviation', count: 2, apps: 'ADS-B, ACARS', color: '#4ade80' },
-      { name: 'Wireless', count: 2, apps: 'BLE RX, NRF', color: '#7fff00' },
-      { name: 'ISM / Sub-GHz', count: 2, apps: 'SubGhzD, ProtoView', color: '#fb923c' },
-      { name: 'Weather / Auto', count: 3, apps: 'Weather, TPMS, Radiosonde', color: '#38bdf8' },
-      { name: 'Pager', count: 2, apps: 'POCSAG, Flex', color: '#e879f9' },
-      { name: 'General', count: 5, apps: 'Audio, Scanner, Looking Glass...', color: '#737373' },
+      { name: 'Aviation', count: 3, apps: 'ADS-B, ACARS, EPIRB RX', color: '#4ade80' },
+      { name: 'Wireless', count: 3, apps: 'BLE RX, NRF, ProtoView', color: '#7fff00' },
+      { name: 'ISM / Sub-GHz', count: 3, apps: 'SubGhzD, Scanner, Fox hunt', color: '#fb923c' },
+      { name: 'Weather / Auto', count: 4, apps: 'Weather, TPMS, Radiosonde, ERT', color: '#38bdf8' },
+      { name: 'Pager', count: 2, apps: 'POCSAG, FLEX RX', color: '#e879f9' },
+      { name: 'General', count: 6, apps: 'Audio, Looking Glass, Morse, RTTY...', color: '#737373' },
     ],
   },
   transmit: {
@@ -598,13 +598,23 @@ export const menuOverviews = {
     safety: 'danger',
     warning: 'Never transmit without a load. Never TX on frequencies you aren\'t authorized to use.',
     breakdown: [
-      { level: 'EXTREME', count: 4, desc: 'Jammer, GPS Sim, ADS-B TX, Hopper', color: '#f43f5e' },
-      { level: 'DANGER', count: 3, desc: 'POCSAG TX, BLESpam, CVS Spam', color: '#f43f5e' },
-      { level: 'ILLEGAL', count: 4, desc: 'TouchTunes, Burger Pager, BHT, TEDI', color: '#facc15' },
-      { level: 'CAUTION', count: 11, desc: 'OOK, BLE, Flipper, Morse, RDS...', color: '#facc15' },
+      { level: 'EXTREME', count: 4, desc: 'Jammer, GPS Sim, ADS-B TX, EPIRB TX', color: '#f43f5e' },
+      { level: 'DANGER', count: 5, desc: 'POCSAG TX, BLESpam, CVS Spam, SAME TX, P25 TX', color: '#f43f5e' },
+      { level: 'CAUTION', count: 14, desc: 'OOK, BLE, Flipper, Morse, RDS, KeeLoq...', color: '#facc15' },
+      { level: 'Licensed', count: 5, desc: 'APRS TX, RTTY TX, Morse TX, SSTV...', color: '#fb923c' },
     ],
   },
+  transceiver: {
+    title: 'Transceiver Apps',
+    subtitle: 'Two-Way Communication',
+    description: 'Apps that both transmit and receive. Mic mode works like a walkie-talkie with push-to-talk. KISS TNC provides packet radio connectivity.',
+  },
   tools: {
+    title: 'Tools & Utilities',
+    subtitle: 'Built-in Utilities',
+    description: 'Frequency management, file operations, signal generation, antenna calculation, and more. Signal Gen requires antenna/load.',
+  },
+  utilities: {
     title: 'Tools & Utilities',
     subtitle: 'Built-in Utilities',
     description: 'Frequency management, file operations, signal generation, antenna calculation, and more. Signal Gen requires antenna/load.',
@@ -614,6 +624,16 @@ export const menuOverviews = {
     subtitle: 'Device Configuration',
     description: 'Configure audio, radio, UI, touchscreen, themes, and app visibility. First stop: App Manager to hide dangerous TX apps.',
     recommendation: 'Use App Manager to hide Jammer, GPS Sim, and ADS-B TX immediately.',
+  },
+  games: {
+    title: 'Games',
+    subtitle: 'Entertainment',
+    description: 'Mini-games playable on the PortaPack screen using the D-pad and click wheel. All loaded from the SD card as external apps.',
+  },
+  debug: {
+    title: 'Debug Tools',
+    subtitle: 'System Diagnostics',
+    description: 'Hardware testing, memory inspection, peripheral status, and system diagnostics. For advanced users and firmware developers.',
   },
 };
 

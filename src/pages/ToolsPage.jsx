@@ -27,8 +27,8 @@ export default function ToolsPage() {
             </div>
           </div>
 
-          <ExpandableCard title="Utilities & Games on Device" modalMaxWidth="max-w-7xl">
-            {({ expanded }) => <PortaPackMockup expanded={expanded} initialMenu="tools" />}
+          <ExpandableCard title="Games on Device" modalMaxWidth="max-w-7xl">
+            {({ expanded }) => <PortaPackMockup expanded={expanded} initialMenu="games" />}
           </ExpandableCard>
         </div>
 

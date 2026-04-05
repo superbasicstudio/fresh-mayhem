@@ -1,6 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { noGoBands, legalBands } from '../../data/frequencyMap';
 import { lookupDetails, menuOverviews, hardwareDetails } from '../../data/appDetails';
+
+/* ── Cross-links to relevant pages in the app ── */
+const RELATED_LINKS = {
+  receive:     [{ to: '/receive', label: 'RX Apps Catalog', desc: 'Full searchable catalog with screenshots' }, { to: '/frequencies', label: 'Frequency Reference', desc: 'Band allocations and spectrum map' }, { to: '/safety', label: 'Safety Center', desc: 'RX is safe, but know the boundaries' }],
+  transmit:    [{ to: '/transmit', label: 'TX Apps Catalog', desc: 'Danger ratings and legal guidance' }, { to: '/safety', label: 'Safety Center', desc: 'Damage scenarios and legal risks' }, { to: '/frequencies', label: 'Frequency Reference', desc: 'Know which bands are restricted' }],
+  transceiver: [{ to: '/controls', label: 'Device Controls', desc: 'Gain chain and hardware settings' }, { to: '/safety', label: 'Safety Center', desc: 'TX safety and antenna requirements' }],
+  main:        [{ to: '/quickstart', label: 'Quick Start Guide', desc: 'Firmware install and first steps' }, { to: '/controls', label: 'Device Controls', desc: 'Hardware interface and gain settings' }, { to: '/learn', label: 'Learn About RF', desc: 'Videos and educational resources' }],
+  utilities:   [{ to: '/tools', label: 'Tools Reference', desc: 'Full tools catalog with details' }, { to: '/controls', label: 'Device Controls', desc: 'Hardware settings and gain chain' }],
+  tools:       [{ to: '/tools', label: 'Tools Reference', desc: 'Full tools catalog with details' }],
+  settings:    [{ to: '/controls', label: 'Device Controls', desc: 'Gain chain and hardware walkthrough' }, { to: '/quickstart', label: 'Quick Start Guide', desc: 'Initial setup and firmware update' }, { to: '/troubleshooting', label: 'Troubleshooting', desc: 'Common issues and fixes' }],
+  games:       [{ to: '/tools', label: 'Tools & Games', desc: 'Full catalog of utilities and games' }],
+  debug:       [{ to: '/troubleshooting', label: 'Troubleshooting', desc: 'Common issues and diagnostic steps' }, { to: '/controls', label: 'Device Controls', desc: 'Hardware reference' }],
+};
 
 /* ── Frequency Position Bar (mini SVG) ─────────────────────────── */
 
@@ -283,23 +297,73 @@ function ItemPanel({ details, item }) {
           </a>
         </div>
       )}
+
+      {/* Cross-links based on app type */}
+      {d.type === 'rx' && <RelatedLinks menuId="receive" />}
+      {(d.type === 'tx' && d.safety !== 'safe') && <RelatedLinks menuId="transmit" />}
     </div>
   );
 }
 
-/* ── Basic Panel (no rich details, just MENUS info) ───────────── */
+/* ── Basic Panel (no rich details, shows info text with context) ── */
 
 function BasicPanel({ item }) {
   return (
-    <div>
-      <h3 className="font-display text-sm tracking-wide text-base-content/90 mb-3">{item.label}</h3>
+    <div className="space-y-4">
+      <div className="mb-4">
+        <h3 className="font-display text-sm sm:text-base tracking-wide text-base-content/90">{item.label}</h3>
+        {item.external && (
+          <span className="text-[10px] font-mono tracking-wider text-base-content/25 mt-1 block">External App (SD Card)</span>
+        )}
+      </div>
+
       {item.info && (
         <p className="text-sm text-base-content/50 leading-relaxed">{item.info}</p>
       )}
+
+      {/* Color-coded category hint based on item color */}
+      {item.color && (
+        <div className="flex items-center gap-2 mt-2">
+          <span className="w-2 h-2 rounded-full shrink-0" style={{ backgroundColor: item.color }} />
+          <span className="text-[10px] font-mono text-base-content/25 tracking-wider">
+            {item.color === '#00FF00' ? 'Stable' : item.color === '#FFFF00' ? 'Beta' : item.color === '#FFAF00' ? 'Experimental' : item.color === '#FF0000' ? 'Destructive' : item.color === '#00FFFF' ? 'Category' : item.color === '#00BFBF' ? 'Setting' : 'App'}
+          </span>
+        </div>
+      )}
+
       {item.sub && (
-        <p className="text-xs text-base-content/30 mt-3 font-mono">Press Enter or → to open submenu</p>
+        <div className="rounded-lg p-3 bg-primary/5 border border-primary/10 mt-3">
+          <p className="text-xs font-mono text-primary/50">Press Enter to explore this category</p>
+        </div>
       )}
     </div>
+  );
+}
+
+/* ── Related Links Component ──────────────────────────────────── */
+
+function RelatedLinks({ menuId }) {
+  const links = RELATED_LINKS[menuId];
+  if (!links || links.length === 0) return null;
+
+  return (
+    <>
+      <SectionLabel>Explore in Fresh Mayhem</SectionLabel>
+      <div className="space-y-1.5">
+        {links.map(link => (
+          <Link key={link.to} to={link.to}
+            className="flex items-center gap-3 py-2 px-3 rounded-lg bg-base-300/30 border border-base-content/5 hover:border-primary/20 hover:bg-primary/5 transition-all group">
+            <svg className="w-3.5 h-3.5 text-primary/40 group-hover:text-primary/70 transition-colors shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" role="img" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+            </svg>
+            <div className="min-w-0">
+              <div className="text-xs font-semibold text-base-content/60 group-hover:text-primary/80 transition-colors">{link.label}</div>
+              <div className="text-[10px] text-base-content/25">{link.desc}</div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -443,6 +507,9 @@ function OverviewPanel({ menuId }) {
           <p className="text-xs font-mono text-warning/60">{ov.recommendation}</p>
         </div>
       )}
+
+      {/* Cross-links to related pages in the app */}
+      <RelatedLinks menuId={menuId} />
     </div>
   );
 }
@@ -497,7 +564,7 @@ function DefaultPanel() {
 
 /* ── Breadcrumb Trail ──────────────────────────────────────────── */
 
-const MENU_LABELS = { main: 'Main', receive: 'Receive', transmit: 'Transmit', tools: 'Tools', settings: 'Settings' };
+const MENU_LABELS = { main: 'Main', receive: 'Receive', transmit: 'Transmit', transceiver: 'Transceiver', utilities: 'Utilities', tools: 'Tools', settings: 'Settings', games: 'Games', debug: 'Debug' };
 
 function Breadcrumb({ breadcrumb, currentItem }) {
   if (!breadcrumb || breadcrumb.length === 0) return null;
@@ -534,12 +601,20 @@ export default function ContextPanel({ menuId, highlightedItem, activeHardwareId
     const details = label ? lookupDetails(menuId, label) : null;
 
     if (details) {
+      // Rich app details panel (apps with full educational info)
       content = <ItemPanel details={details} item={highlightedItem} />;
       contentKey = `item-${menuId}-${label}`;
+    } else if (highlightedItem?.sub && menuOverviews[highlightedItem.sub]) {
+      // Submenu item highlighted: show the overview for that submenu
+      // (e.g. hovering "Transmit" shows the transmit overview with danger breakdown)
+      content = <OverviewPanel menuId={highlightedItem.sub} />;
+      contentKey = `overview-${highlightedItem.sub}`;
     } else if (label && (highlightedItem?.info || highlightedItem?.sub)) {
+      // Item with info text but no rich details
       content = <BasicPanel item={highlightedItem} />;
       contentKey = `basic-${label}`;
     } else if (menuOverviews[menuId]) {
+      // No item highlighted or no content: show current menu overview
       content = <OverviewPanel menuId={menuId} />;
       contentKey = `overview-${menuId}`;
     } else {
