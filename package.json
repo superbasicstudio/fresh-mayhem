@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Interactive learning dashboard for HackRF One + PortaPack H4M running Mayhem v2.4.0",
   "license": "GPL-3.0",
-  "homepage": "https://fresh-mayhem.vercel.app",
+  "homepage": "https://freshmayhem.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/superbasicstudio/fresh-mayhem"
