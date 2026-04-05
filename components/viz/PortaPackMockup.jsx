@@ -294,20 +294,17 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
     sdCard: 'sdcard',
   };
 
-  // Title bar icon rendering using actual firmware bitmaps
-  const renderTitleBarIcons = () => {
+  // Pre-compute title bar icon positions and colors for two-pass rendering
+  const titleBarIconData = (() => {
     const icons = TITLE_BAR_ICONS;
     let rx = sx + sw - 2;
     const iy = sy + 1;
     const ih = tbH - 2;
-
     return icons.slice().reverse().map((icon) => {
       const iw = icon.width * scaleX;
       rx -= iw;
       const ix = rx;
-      rx -= 0.5; // tight gap like real firmware
-
-      // Determine icon color
+      rx -= 0.5;
       let fill = theme.fgLight;
       if (icon.id === 'stealth' && iconStates.stealth) fill = theme.statusActive;
       if (icon.id === 'converter' && iconStates.converter) fill = FW_COLORS.red;
@@ -316,62 +313,59 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
       if (icon.id === 'mute' && iconStates.mute) fill = theme.statusActive;
       if (icon.id === 'speaker' && iconStates.speaker) fill = theme.statusActive;
       if (icon.id === 'brightness' && iconStates.brightness > 0) fill = theme.statusActive;
-
-      const isHovered = hovIcon === icon.id;
       const bitmapKey = TITLE_ICON_MAP[icon.id];
       const pathData = bitmapKey ? ICON_PATHS[bitmapKey] : null;
-      const iconScale = ih / 16;
-      const cx = ix + iw / 2;
-      const cy = iy + ih / 2;
-      const hoverScale = 2.2;
-
-      return (
-        <g key={icon.id}
-          onMouseEnter={() => setHovIcon(icon.id)}
-          onMouseLeave={() => setHovIcon(null)}
-          onClick={() => {
-            if (icon.type === 'toggle') {
-              setIconStates(prev => ({ ...prev, [icon.id]: !prev[icon.id] }));
-            }
-          }}
-          style={{ cursor: icon.type === 'toggle' || icon.type === 'button' ? 'pointer' : 'default' }}
-        >
-          {/* Enlarged icon when hovered (rendered behind normal to catch mouse) */}
-          <rect x={ix - 4} y={iy - 4} width={iw + 8} height={ih + 8} fill="transparent" />
-          {isHovered && (
-            <g>
-              {/* Solid background so enlarged icon doesn't overlap neighbors */}
-              <rect x={cx - iw * 1.1} y={cy - ih * 1.1} width={iw * 2.2} height={ih * 2.2}
-                rx="2" fill="#000" stroke={fill} strokeWidth="0.5" strokeOpacity="0.6" />
-              {/* Enlarged icon */}
-              {pathData ? (
-                <path d={pathData} fill={fill}
-                  transform={`translate(${cx},${cy}) scale(${iconScale * hoverScale}) translate(-8,-8)`}
-                  shapeRendering="crispEdges" />
-              ) : icon.id === 'batteryPct' ? (
-                <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
-                  fill={theme.fgMedium} fontSize="7" fontFamily="monospace" fontWeight="bold">87%</text>
-              ) : icon.id === 'clock' ? (
-                <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
-                  fill={fill} fontSize="7" fontFamily="monospace" fontWeight="bold">{iconStates.clock ? 'EX' : 'IN'}</text>
-              ) : null}
-            </g>
-          )}
-          {/* Normal size icon */}
-          {icon.id === 'batteryPct' ? (
-            <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
-              fill={theme.fgMedium} fontSize="3.5" fontFamily="monospace">87%</text>
-          ) : icon.id === 'clock' ? (
-            <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
-              fill={fill} fontSize="4" fontFamily="monospace">{iconStates.clock ? 'EX' : 'IN'}</text>
-          ) : pathData ? (
-            <path d={pathData} fill={fill}
-              transform={`translate(${ix},${iy}) scale(${iconScale})`}
-              shapeRendering="crispEdges" />
-          ) : null}
-        </g>
-      );
+      return { icon, ix, iy, iw, ih, fill, pathData, iconScale: ih / 16, cx: ix + iw / 2, cy: iy + ih / 2 };
     });
+  })();
+
+  // Pass 1: render all normal-sized icons
+  const renderTitleBarIcons = () => titleBarIconData.map(({ icon, ix, iy, iw, ih, fill, pathData, iconScale, cx, cy }) => (
+    <g key={icon.id}
+      onMouseEnter={() => setHovIcon(icon.id)}
+      onMouseLeave={() => setHovIcon(null)}
+      onClick={() => { if (icon.type === 'toggle') setIconStates(prev => ({ ...prev, [icon.id]: !prev[icon.id] })); }}
+      style={{ cursor: icon.type === 'toggle' || icon.type === 'button' ? 'pointer' : 'default' }}
+    >
+      <rect x={ix - 4} y={iy - 4} width={iw + 8} height={ih + 8} fill="transparent" />
+      {icon.id === 'batteryPct' ? (
+        <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
+          fill={theme.fgMedium} fontSize="3.5" fontFamily="monospace">87%</text>
+      ) : icon.id === 'clock' ? (
+        <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
+          fill={fill} fontSize="4" fontFamily="monospace">{iconStates.clock ? 'EX' : 'IN'}</text>
+      ) : pathData ? (
+        <path d={pathData} fill={fill} transform={`translate(${ix},${iy}) scale(${iconScale})`} shapeRendering="crispEdges" />
+      ) : null}
+    </g>
+  ));
+
+  // Pass 2: render enlarged hovered icon ON TOP of everything (last in SVG = highest z-order)
+  const renderHoveredIconOverlay = () => {
+    if (!hovIcon) return null;
+    const d = titleBarIconData.find(d => d.icon.id === hovIcon);
+    if (!d) return null;
+    const { icon, iw, ih, fill, pathData, iconScale, cx, cy } = d;
+    const hoverScale = 2.2;
+    const halfW = iw * 1.2;
+    const halfH = ih * 1.2;
+    return (
+      <g key="hovered-icon-overlay" style={{ pointerEvents: 'none' }}>
+        <rect x={cx - halfW} y={cy - halfH} width={halfW * 2} height={halfH * 2}
+          rx="2" fill="#000" stroke={fill} strokeWidth="0.5" strokeOpacity="0.6" />
+        {icon.id === 'batteryPct' ? (
+          <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
+            fill={theme.fgMedium} fontSize="7" fontFamily="monospace" fontWeight="bold">87%</text>
+        ) : icon.id === 'clock' ? (
+          <text x={cx} y={cy + 1} textAnchor="middle" dominantBaseline="middle"
+            fill={fill} fontSize="7" fontFamily="monospace" fontWeight="bold">{iconStates.clock ? 'EX' : 'IN'}</text>
+        ) : pathData ? (
+          <path d={pathData} fill={fill}
+            transform={`translate(${cx},${cy}) scale(${iconScale * hoverScale}) translate(-8,-8)`}
+            shapeRendering="crispEdges" />
+        ) : null}
+      </g>
+    );
   };
 
   // Title bar icon tooltip (shown below screen when hovered)
@@ -777,6 +771,9 @@ export default function PortaPackMockup({ expanded = false, initialMenu = 'main'
             <circle cx={bx + bw - 20} cy={by + bh - 3} r="4.5" fill={active === 'audio' ? '#4ade80' : '#555'}
               stroke={st('audio', '#4ade80', '#777')} strokeWidth="0.8" />
           </g>
+
+          {/* Enlarged hovered icon (rendered last = on top of all other icons) */}
+          {powerOn && !powerTransition && renderHoveredIconOverlay()}
 
           {/* Title bar icon tooltip overlay (inside SVG, near left bezel) */}
           {hoveredIcon && powerOn && !powerTransition && (
